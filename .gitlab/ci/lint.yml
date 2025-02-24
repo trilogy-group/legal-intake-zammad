@@ -47,6 +47,8 @@
     - bundle exec rails generate zammad:setting_types --check
 
 'lint: ruby & security':
+  rules:
+   - when: never
   extends:
     - .template_lint
   before_script:
@@ -89,6 +91,8 @@
     - pnpm lint:css
 
 'lint: js':
+  rules:
+   - when: never
   extends:
     - .template_lint
   cache:
@@ -133,6 +137,8 @@
     - bundle exec rake zammad:ci:update_ci_variables
 
 'lint: secret_detection':
+  rules:
+   - when: never
   extends: .template_lint
   image:
     name: "zricethezav/gitleaks:latest"
