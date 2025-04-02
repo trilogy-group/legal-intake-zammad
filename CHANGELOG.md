@@ -1,5 +1,5 @@
 # Change Log
-
+ 
 ## [6.4.2](https://github.com/zammad/zammad/tree/6.4.2) (2025-04-02)
 [Full Changelog](https://github.com/zammad/zammad/compare/6.4.1...6.4.2)
 
