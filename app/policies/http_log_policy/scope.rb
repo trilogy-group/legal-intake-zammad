@@ -12,7 +12,7 @@ class HttpLogPolicy < ApplicationPolicy
       end
 
       facilities = (HttpLog.facilities_permission_lookup.values.uniq & user.permissions_with_child_names)
-        .flat_map { |permission| HttpLog.facilities_by_permission[permission] }
+        .flat_map { |p| HttpLog.facilities_by_permission[p] }
         .compact
 
       facilities.any? ? scope.where(facility: facilities) : scope.none
