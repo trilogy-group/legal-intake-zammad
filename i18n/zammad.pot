@@ -14483,11 +14483,11 @@ msgstr ""
 msgid "The 'gpg-agent' process could not be stopped."
 msgstr ""
 
-#: app/controllers/concerns/handles_oidc_authorization.rb:20
+#: app/controllers/concerns/handles_oidc_authorization.rb:19
 msgid "The 'logout_token' does not contain any session information."
 msgstr ""
 
-#: app/controllers/concerns/handles_oidc_authorization.rb:17
+#: app/controllers/concerns/handles_oidc_authorization.rb:16
 msgid "The 'logout_token' is invalid."
 msgstr ""
 
@@ -19056,6 +19056,10 @@ msgstr ""
 
 #: app/assets/javascripts/app/views/ticket_overview/batch_overlay.jst.eco:3
 msgid "drag here to cancel"
+msgstr ""
+
+#: app/assets/javascripts/app/index.coffee:215
+msgid "due"
 msgstr ""
 
 #: app/assets/javascripts/app/views/integration/placetel.jst.eco:140
