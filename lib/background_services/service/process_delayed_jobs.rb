@@ -24,9 +24,13 @@ class BackgroundServices
 
           realtime = Benchmark.realtime do
             Rails.logger.debug { "*** worker thread, #{::Delayed::Job.count} in queue" }
-            # ::Delayed::Worker#stop? is monkey patched by config/initializers/delayed_worker_stop.rb
-            #   to ensure an early exit even during work_off().
-            result = ::Delayed::Worker.new.work_off
+
+            # DelayedJob does not support SQL Query caching correctly
+            ActiveRecord::Base.uncached do
+              # ::Delayed::Worker#stop? is monkey patched by config/initializers/delayed_worker_stop.rb
+              #   to ensure an early exit even during work_off().
+              result = ::Delayed::Worker.new.work_off
+            end
           end
 
           process_results(result, realtime)
