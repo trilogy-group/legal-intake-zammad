@@ -56,6 +56,7 @@ optional you can put the max oldest chat entries as argument
       'sipagte.io'         => 'admin.integration', # typo in facility name, keep for backward compatibility
       'sipgate.io'         => 'admin.integration',
       'webhook'            => 'admin.webhook',
+      'slack_webhook'      => 'admin.integration',
       'WhatsApp::Business' => 'admin.channel_whatsapp',
     }
   end
