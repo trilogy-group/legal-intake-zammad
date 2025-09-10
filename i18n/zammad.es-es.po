@@ -6353,7 +6353,7 @@ msgid "Do not use the proxy for the following hosts."
 msgstr "No utilizar proxy para los siguientes hosts."
 
 #: app/assets/javascripts/app/controllers/knowledge_base/delete_action.coffee:24
-#: app/assets/javascripts/app/controllers/knowledge_base/sidebar/attachments.coffee:122
+#: app/assets/javascripts/app/controllers/knowledge_base/sidebar/attachments.coffee:123
 msgid "Do you really want to delete \"%s\"?"
 msgstr "¿Confirma que desea eliminar el objeto \"%s\"?"
 
@@ -15755,6 +15755,7 @@ msgstr "Casos parecidos encontrados"
 msgid "Simple Line Icons"
 msgstr "Iconos Simple Line"
 
+#: app/assets/javascripts/app/views/settings/storage_provider.jst.eco:22
 #: db/seeds/settings.rb:379
 msgid "Simple Storage (S3)"
 msgstr "Simple Storage (S3)"
@@ -16573,11 +16574,11 @@ msgstr "Gracias por unirte. Enviamos un email para \"%s\"."
 msgid "The 'gpg-agent' process could not be stopped."
 msgstr "No se ha podido detener el proceso 'gpg-agent'."
 
-#: app/controllers/concerns/handles_oidc_authorization.rb:20
+#: app/controllers/concerns/handles_oidc_authorization.rb:19
 msgid "The 'logout_token' does not contain any session information."
 msgstr ""
 
-#: app/controllers/concerns/handles_oidc_authorization.rb:17
+#: app/controllers/concerns/handles_oidc_authorization.rb:16
 #, fuzzy
 #| msgid "The provided 'oauth_token' is invalid."
 msgid "The 'logout_token' is invalid."
@@ -16898,7 +16899,7 @@ msgstr "No se han encontrado los certificados para %s."
 #: app/assets/javascripts/app/controllers/knowledge_base/content_can_be_published_dialog.coffee:36
 #: app/assets/javascripts/app/controllers/knowledge_base/editor_coordinator.coffee:61
 #: app/assets/javascripts/app/controllers/knowledge_base/public_menu_form.coffee:68
-#: app/assets/javascripts/app/controllers/knowledge_base/sidebar/attachments.coffee:142
+#: app/assets/javascripts/app/controllers/knowledge_base/sidebar/attachments.coffee:143
 msgid "The changes could not be saved."
 msgstr "No se ha podido guardar los cambios."
 
@@ -21895,7 +21896,7 @@ msgstr "no puede quedar vacío"
 msgid "can't be used because *_id and *_ids are not allowed"
 msgstr "no puede ser usado porque *_id y *_ids no están permitidos"
 
-#: app/models/knowledge_base/category.rb:139
+#: app/models/knowledge_base/category.rb:140
 msgid "cannot be a subcategory of the parent category"
 msgstr "no puede ser subcategoría de la categoría padre"
 
@@ -22124,6 +22125,12 @@ msgstr "borrador"
 #: app/assets/javascripts/app/views/ticket_overview/batch_overlay.jst.eco:3
 msgid "drag here to cancel"
 msgstr "arrastras aquí para cancelar"
+
+#: app/assets/javascripts/app/index.coffee:215
+#, fuzzy
+#| msgid "Tue"
+msgid "due"
+msgstr "Mar"
 
 #: app/assets/javascripts/app/views/integration/placetel.jst.eco:140
 #: app/assets/javascripts/app/views/integration/sipgate.jst.eco:124

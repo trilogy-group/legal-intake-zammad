@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zammad\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-07-26 19:00+0000\n"
+"PO-Revision-Date: 2025-09-08 22:00+0000\n"
 "Last-Translator: Anael Mobilia <contrib@anael.eu>\n"
 "Language-Team: French <https://translations.zammad.org/projects/zammad/"
 "zammad-stable/fr/>\n"
@@ -57,8 +57,8 @@ msgstr ""
 "(non recommandé pour stocker de grandes quantités de données). \"Système de "
 "fichiers\" stocke les données sur le système de fichiers. \"Simple Storage "
 "(S3)\" stocke les données dans un système de fichiers objet distant "
-"compatible S3. Vous pouvez passer d'un backend à l'autre même sur un système "
-"déjà en production sans aucune perte de données."
+"compatible S3. Vous pouvez passer d'une méthode de stockage à une autre même "
+"sur un système déjà en production sans aucune perte de données."
 
 #. This is the template file app/views/messaging/ticket_create/en.md.erb in ERB/Markdown format.
 #. Please make sure to translate it to a valid corresponding output structure.
@@ -6369,7 +6369,7 @@ msgid "Do not use the proxy for the following hosts."
 msgstr "Ne pas utiliser de proxy pour les hôtes suivants."
 
 #: app/assets/javascripts/app/controllers/knowledge_base/delete_action.coffee:24
-#: app/assets/javascripts/app/controllers/knowledge_base/sidebar/attachments.coffee:122
+#: app/assets/javascripts/app/controllers/knowledge_base/sidebar/attachments.coffee:123
 msgid "Do you really want to delete \"%s\"?"
 msgstr "Voulez-vous vraiment supprimer \"%s\" ?"
 
@@ -11476,7 +11476,7 @@ msgstr "Nouvelle tâche de suppression"
 
 #: app/frontend/apps/desktop/composables/useBetaDisclaimer.ts:47
 msgid "New Desktop UI — Alpha Version"
-msgstr ""
+msgstr "Nouvelle interface utilisateur de bureau — Version alpha"
 
 #: app/assets/javascripts/app/controllers/group.coffee:27
 msgid "New Group"
@@ -15707,6 +15707,7 @@ msgstr "Tickets similaires trouvés"
 msgid "Simple Line Icons"
 msgstr "Icônes Simple Line"
 
+#: app/assets/javascripts/app/views/settings/storage_provider.jst.eco:22
 #: db/seeds/settings.rb:379
 msgid "Simple Storage (S3)"
 msgstr "Simple Storage (S3)"
@@ -16523,11 +16524,11 @@ msgstr "Merci de nous rejoindre. E-mail envoyé à \"%s\"."
 msgid "The 'gpg-agent' process could not be stopped."
 msgstr "Le processus 'gpg-agent' n'a pas pu être arrêté."
 
-#: app/controllers/concerns/handles_oidc_authorization.rb:20
+#: app/controllers/concerns/handles_oidc_authorization.rb:19
 msgid "The 'logout_token' does not contain any session information."
 msgstr "Le 'logout_token' ne contient aucune information de session."
 
-#: app/controllers/concerns/handles_oidc_authorization.rb:17
+#: app/controllers/concerns/handles_oidc_authorization.rb:16
 msgid "The 'logout_token' is invalid."
 msgstr "Le 'logout_token' n'est pas valide."
 
@@ -16850,7 +16851,7 @@ msgstr "Les certificats pour %s n'ont pas été trouvés."
 #: app/assets/javascripts/app/controllers/knowledge_base/content_can_be_published_dialog.coffee:36
 #: app/assets/javascripts/app/controllers/knowledge_base/editor_coordinator.coffee:61
 #: app/assets/javascripts/app/controllers/knowledge_base/public_menu_form.coffee:68
-#: app/assets/javascripts/app/controllers/knowledge_base/sidebar/attachments.coffee:142
+#: app/assets/javascripts/app/controllers/knowledge_base/sidebar/attachments.coffee:143
 msgid "The changes could not be saved."
 msgstr "Les modifications n'ont pas pu être enregistrées."
 
@@ -18365,6 +18366,9 @@ msgid ""
 "This new desktop UI is currently in development and not ready for production "
 "use. It may contain bugs or incomplete features."
 msgstr ""
+"Cette nouvelle interface utilisateur est actuellement en développement et "
+"n'est pas encore prête pour une utilisation en production. Elle peut "
+"contenir des bugs ou des fonctionnalités incomplètes."
 
 #: app/controllers/application_controller/handles_errors.rb:99
 #: app/graphql/gql/zammad_schema.rb:116
@@ -21833,7 +21837,7 @@ msgstr "ne peut pas être vide"
 msgid "can't be used because *_id and *_ids are not allowed"
 msgstr "ne peut pas être utilisé car *_id et *_ids ne sont pas autorisés"
 
-#: app/models/knowledge_base/category.rb:139
+#: app/models/knowledge_base/category.rb:140
 msgid "cannot be a subcategory of the parent category"
 msgstr "ne peut pas être une sous-catégorie de la catégorie parent"
 
@@ -22060,6 +22064,12 @@ msgstr "brouillon"
 #: app/assets/javascripts/app/views/ticket_overview/batch_overlay.jst.eco:3
 msgid "drag here to cancel"
 msgstr "déposer ici pour annuler"
+
+#: app/assets/javascripts/app/index.coffee:215
+#, fuzzy
+#| msgid "Tue"
+msgid "due"
+msgstr "Mar"
 
 #: app/assets/javascripts/app/views/integration/placetel.jst.eco:140
 #: app/assets/javascripts/app/views/integration/sipgate.jst.eco:124

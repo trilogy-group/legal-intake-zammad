@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zammad\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-05-06 22:00+0000\n"
-"Last-Translator: Dmjorge <duartemjorge@gmail.com>\n"
+"PO-Revision-Date: 2025-09-05 22:00+0000\n"
+"Last-Translator: Carlos Lindo <carloslindo@gmail.com>\n"
 "Language-Team: Portuguese (Portugal) <https://translations.zammad.org/"
 "projects/zammad/zammad-stable/pt_PT/>\n"
 "Language: pt-pt\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.11\n"
+"X-Generator: Weblate 5.11.4\n"
 
 #. Default date format to use for the current locale.
 #. These placeholders are supported:
@@ -361,13 +361,11 @@ msgstr "%s (confirmar)"
 
 #: app/frontend/apps/mobile/components/Form/fields/FieldSecurity/FieldSecurityInput.vue:108
 msgid "%s (method)"
-msgstr ""
+msgstr "%s (método)"
 
 #: app/frontend/apps/mobile/components/Form/fields/FieldSecurity/FieldSecurityInput.vue:143
-#, fuzzy
-#| msgid "set optional"
 msgid "%s (option)"
-msgstr "Definir como opcional"
+msgstr "%s (opção)"
 
 #: app/frontend/apps/desktop/components/CommonSelect/CommonSelect.vue:304
 #: app/frontend/apps/desktop/components/Form/fields/FieldAutoComplete/FieldAutoCompleteInput.vue:595
@@ -394,20 +392,16 @@ msgstr "%s Atributo"
 #: app/assets/javascripts/app/controllers/ticket_zoom/sidebar_checklist/show.coffee:34
 #: app/assets/javascripts/app/views/ticket_zoom/sidebar_checklist/title_edit.jst.eco:6
 #: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarChecklist/TicketSidebarChecklistContent.vue:53
-#, fuzzy
-#| msgid "Checksum"
 msgid "%s Checklist"
-msgstr "Checksum"
+msgstr "%s Checklist"
 
 #: app/assets/javascripts/app/views/integration/ldap_wizard.jst.eco:203
 msgid "%s Group"
 msgstr "%s Grupo"
 
 #: app/frontend/apps/desktop/pages/guided-setup/views/GuidedSetupImport/GuidedSetupImportSource/GuidedSetupImportSourceStatus.vue:51
-#, fuzzy
-#| msgid "Import"
 msgid "%s Import Status"
-msgstr "Importar"
+msgstr "%s Estado da Importação"
 
 #: app/assets/javascripts/app/views/import/freshdesk.jst.eco:61
 #: app/assets/javascripts/app/views/import/kayako.jst.eco:65
@@ -531,10 +525,8 @@ msgid "%s is inactive, please select an active one."
 msgstr "%s está inativo, por favor selecione um ativo."
 
 #: app/frontend/shared/form/i18n/locales.ts:533
-#, fuzzy
-#| msgid "%s required!"
 msgid "%s is required."
-msgstr "%s requerido!"
+msgstr "%s é obrigatório."
 
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_action/whatsapp_reply.coffee:67
 msgid "%s is sent without text caption"
@@ -581,10 +573,8 @@ msgstr "%s objeto(s) será(ão) atualizado(s)."
 #: app/assets/javascripts/app/views/ticket_zoom/meta.jst.eco:19
 #: app/frontend/apps/desktop/pages/guided-setup/views/GuidedSetupImport/GuidedSetupImportSource/GuidedSetupImportSourceStatus.vue:234
 #: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/TicketDetailTopBar/TopBarHeader/TicketInformation/TicketInformationBadgeList/ChecklistBadgeList.vue:54
-#, fuzzy
-#| msgid "Manage %s"
 msgid "%s of %s"
-msgstr "Manage %s"
+msgstr "%s de %s"
 
 #: app/assets/javascripts/app/views/dashboard/stats/ticket_in_process.jst.eco:11
 msgid "%s of my tickets are currently in process."
@@ -768,12 +758,16 @@ msgid ""
 "take some additional time depending on the number of objects that will be "
 "deleted."
 msgstr ""
-"** Privacidade de Dados **, ajuda você a apagar e verificar a remoção de "
-"dados existentes no sistema. Ele pode ser usado para eliminar tickets, "
-"organizações e utilizadores. A atribuição do proprietário não será definida "
-"caso o utilizador eliminado seja um agente. As tarefas de privacidade de "
-"dados serão executadas a cada 10 minutos. A execução pode levar algum tempo "
-"adicional, dependendo do número de objetos que devem ser eliminados."
+"** Privacidade de Dados**, ajuda-o a eliminar e a verificar a remoção de "
+"dados existentes do sistema.\n"
+"\n"
+"Pode ser utilizada para eliminar tickets, organizações e utilizadores. A "
+"atribuição de proprietário será removida no caso de o utilizador eliminado "
+"ser um agente.\n"
+"\n"
+"As tarefas de Privacidade de Dados serão executadas a cada 10 minutos. A "
+"execução poderá demorar algum tempo adicional, dependendo do número de "
+"objetos que serão eliminados."
 
 #: app/assets/javascripts/app/models/sla.coffee
 msgid ""
@@ -2184,10 +2178,8 @@ msgid "Apply current defaults to all agents"
 msgstr "Aplicar os padrões atuais a todos os agentes"
 
 #: app/frontend/apps/desktop/components/NavigationMenu/NavigationMenuFilter.vue:76
-#, fuzzy
-#| msgid "Apply Draft"
 msgid "Apply filter…"
-msgstr "Aplicar Rascunho"
+msgstr "Aplicar filtro…"
 
 #: app/assets/javascripts/app/controllers/_ui_element/basedate.coffee:160
 #: app/assets/javascripts/app/controllers/report.coffee:220
@@ -3482,10 +3474,8 @@ msgid "Changed reaction to %s on message %s from %s"
 msgstr "%s terminada alteração para |%s|!"
 
 #: app/assets/javascripts/app/views/object_manager/index.jst.eco:31
-#, fuzzy
-#| msgid "Changed"
 msgid "Changed:"
-msgstr "Alterado"
+msgstr "Alterado:"
 
 #: app/assets/javascripts/app/views/object_manager/index.jst.eco:17
 #: app/views/mailer/ticket_update/zh-cn.html.erb:11
@@ -4028,10 +4018,8 @@ msgid "Completed Tasks"
 msgstr "Tarefas concluídas"
 
 #: public/assets/chat/views/chat.eco:24
-#, fuzzy
-#| msgid "Change your language."
 msgid "Compose your message…"
-msgstr "Trocar idioma"
+msgstr "Escreva a sua mensagem…"
 
 #: app/assets/javascripts/app/controllers/_manage/ticket_auto_assignment.coffee:25
 #: app/assets/javascripts/app/controllers/time_accounting_settings.coffee:26
@@ -4101,10 +4089,8 @@ msgstr "Para configurar o seu sistema."
 
 #: app/assets/javascripts/app/controllers/_manage/ticket_notification.coffee:45
 #: app/frontend/apps/desktop/composables/useBetaDisclaimer.ts:54
-#, fuzzy
-#| msgid "Config"
 msgid "Confirm"
-msgstr "Configuração"
+msgstr "Confirmar"
 
 #: app/assets/javascripts/app/controllers/widget/two_factor_configuration/modal/password_check.coffee:4
 #: app/frontend/apps/desktop/components/TwoFactor/TwoFactorConfiguration/TwoFactorConfigurationPasswordCheck.vue:41
@@ -4788,10 +4774,8 @@ msgid "Create your first ticket"
 msgstr "Criar seu primeiro ticket"
 
 #: app/assets/javascripts/app/views/object_manager/index.jst.eco:27
-#, fuzzy
-#| msgid "Create"
 msgid "Create:"
-msgstr "Criar"
+msgstr "Criar:"
 
 #: app/assets/javascripts/app/models/application.coffee:10
 #: app/assets/javascripts/app/models/calendar.coffee:12
@@ -4869,10 +4853,8 @@ msgid "Created at"
 msgstr "Created at"
 
 #: app/assets/javascripts/app/views/customer_chat/chat_window.jst.eco:37
-#, fuzzy
-#| msgid "Created at"
 msgid "Created at:"
-msgstr "Created at"
+msgstr "Criado em:"
 
 #: app/assets/javascripts/app/models/calendar.coffee:12
 #: app/assets/javascripts/app/models/chat.coffee:258
@@ -6361,22 +6343,16 @@ msgid "Delete this recent search"
 msgstr "Deletar Usuário"
 
 #: app/assets/javascripts/app/views/object_manager/index.jst.eco:29
-#, fuzzy
-#| msgid "Delete"
 msgid "Delete:"
-msgstr "Eliminar"
+msgstr "Eliminar:"
 
 #: app/assets/javascripts/app/views/data_privacy/tasks.jst.eco:20
-#, fuzzy
-#| msgid "Deleted Organization"
 msgid "Deleted Organization:"
-msgstr "Organização deletada"
+msgstr "Organização eliminada:"
 
 #: app/assets/javascripts/app/views/data_privacy/tasks.jst.eco:38
-#, fuzzy
-#| msgid "Deleted tickets (%s in total)"
 msgid "Deleted tickets (%s in total):"
-msgstr "Tickets deletados (%s no total)"
+msgstr "Tickets eliminados (%s no total):"
 
 #: app/assets/javascripts/app/controllers/knowledge_base/delete.coffee:50
 msgid ""
@@ -6395,10 +6371,8 @@ msgid "Deletion failed."
 msgstr "Falha na entrega"
 
 #: app/assets/javascripts/app/views/ticket_zoom/article_view_delivery_failed.jst.eco:4
-#, fuzzy
-#| msgid "Delivery failed"
 msgid "Delivery failed:"
-msgstr "Falha na entrega"
+msgstr "Falha na entrega:"
 
 #: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/DeliveryMessage.vue:13
 #: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/ArticleDeliveryMessage.vue:33
@@ -6726,7 +6700,7 @@ msgid "Do not use the proxy for the following hosts."
 msgstr "Nenhum proxy para os seguintes hosts."
 
 #: app/assets/javascripts/app/controllers/knowledge_base/delete_action.coffee:24
-#: app/assets/javascripts/app/controllers/knowledge_base/sidebar/attachments.coffee:122
+#: app/assets/javascripts/app/controllers/knowledge_base/sidebar/attachments.coffee:123
 #, fuzzy
 #| msgid "Sure to delete this object?"
 msgid "Do you really want to delete \"%s\"?"
@@ -7007,7 +6981,7 @@ msgstr "Editar"
 
 #: app/assets/javascripts/app/controllers/knowledge_base/content_controller.coffee:173
 msgid "Edit Answer"
-msgstr "Editar resposta "
+msgstr "Editar resposta"
 
 #: app/assets/javascripts/app/controllers/knowledge_base/content_controller.coffee:175
 #, fuzzy
@@ -7586,10 +7560,8 @@ msgstr "Encrypt"
 #: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/ArticleBubble/ArticleBubbleSecurityWarning.vue:27
 #: app/frontend/apps/mobile/components/Form/fields/FieldSecurity/FieldSecurityInput.vue:79
 #: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/ArticleSecurityBadge.vue:201
-#, fuzzy
-#| msgid "Encrypt"
 msgid "Encryption:"
-msgstr "Encrypt"
+msgstr "Encriptação:"
 
 #: app/assets/javascripts/app/models/webhook.coffee:7
 #: app/assets/javascripts/app/views/integration/check_mk.jst.eco:16
@@ -7968,20 +7940,16 @@ msgid "Example Payload"
 msgstr ""
 
 #: app/assets/javascripts/app/views/api.jst.eco:17
-#, fuzzy
-#| msgid "Example"
 msgid "Example:"
-msgstr "Exemplo"
+msgstr "Exemplo:"
 
 #: app/assets/javascripts/app/views/integration/check_mk.jst.eco:27
 msgid "Examples"
 msgstr ""
 
 #: app/assets/javascripts/app/views/settings/storage_provider.jst.eco:16
-#, fuzzy
-#| msgid "Example"
 msgid "Examples:"
-msgstr "Exemplo"
+msgstr "Exemplos:"
 
 #: app/assets/javascripts/app/controllers/_manage/ticket_auto_assignment.coffee:39
 #, fuzzy
@@ -8419,10 +8387,8 @@ msgid "Folder"
 msgstr "Folder"
 
 #: app/assets/javascripts/app/views/channel/email_account_overview.jst.eco:70
-#, fuzzy
-#| msgid "Folder"
 msgid "Folder:"
-msgstr "Folder"
+msgstr "Pasta:"
 
 #: app/assets/javascripts/app/views/integration/exchange.jst.eco:62
 #: app/assets/javascripts/app/views/integration/exchange_wizard.jst.eco:80
@@ -9455,7 +9421,7 @@ msgstr "How to use it"
 #: app/assets/javascripts/app/views/integration/idoit_object_result.jst.eco:8
 #: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarExternalReferences/TicketSidebarIdoit/TicketSidebarIdoitContent.vue:217
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #: app/assets/javascripts/app/views/ticket_zoom/sidebar_idoit.jst.eco:4
 msgid "ID:"
@@ -9811,11 +9777,9 @@ msgid "Imported"
 msgstr ""
 
 #: app/assets/javascripts/app/views/integration/placetel.jst.eco:22
-#, fuzzy
-#| msgid ""
-#| "In order for Zammad to access %s, the %s API token must be stored here"
 msgid "In order for Zammad to access %s, the %s API token must be stored here:"
-msgstr "Para que Zammad acesse% s, o token de API% s deve ser armazenado aqui"
+msgstr ""
+"Para que o Zammad tenha acesso %s, o token de API% deve ser armazenado aqui:"
 
 #: app/assets/javascripts/app/controllers/_integration/ldap.coffee:7
 msgid ""
@@ -9848,10 +9812,8 @@ msgid "Inbound Call"
 msgstr ""
 
 #: app/assets/javascripts/app/views/dashboard/stats/ticket_channel_distribution.jst.eco:15
-#, fuzzy
-#| msgid "Inbound"
 msgid "Inbound:"
-msgstr "Inbound"
+msgstr "Entrada:"
 
 #: db/seeds/object_manager_attributes.rb:129
 msgid "Incident"
@@ -10039,9 +10001,9 @@ msgid ""
 "visible on. It should be placed at the end of the page's source code before "
 "the §</body>§ closing tag."
 msgstr ""
-"Insira o código do widget no código-fonte de todas as páginas em que o bate-"
-"papo estiver visível. Ele deve ser colocado no final do código-fonte da "
-"página antes da tag de fechamento  § </ body> § ."
+"Insira o código do widget no código-fonte de todas as páginas em que o chat "
+"estiver visível. Ele deve ser colocado no final do código-fonte da página "
+"antes da tag de fecho § </ body> §."
 
 #: app/assets/javascripts/app/controllers/_plugin/keyboard_shortcuts.coffee:623
 msgid "Inserts a horizontal rule"
@@ -10693,10 +10655,8 @@ msgid "Last sync"
 msgstr "Last sync"
 
 #: app/assets/javascripts/app/views/calendar/index.jst.eco:25
-#, fuzzy
-#| msgid "Last sync at"
 msgid "Last sync at:"
-msgstr "Última sincronização em"
+msgstr "Última sincronização em:"
 
 #: app/assets/javascripts/app/views/profile/token_access.jst.eco:20
 msgid "Last used"
@@ -10950,10 +10910,8 @@ msgstr ""
 #: app/assets/javascripts/app/controllers/ticket_zoom/sidebar_idoit.coffee:76
 #: app/assets/javascripts/app/controllers/widget/payload_example.coffee:34
 #: app/assets/javascripts/app/models/knowledge_base_answer_translation.coffee:51
-#, fuzzy
-#| msgid "Loading..."
 msgid "Loading failed."
-msgstr "A carregar..."
+msgstr "Falhar ao carregar."
 
 #: app/assets/javascripts/app/lib/app_post/task_manager.coffee:151
 #: app/assets/javascripts/app/lib/base/jquery.textmodule.js:647
@@ -13017,10 +12975,8 @@ msgid "Note - default visibility"
 msgstr "Nota - visualização padrão"
 
 #: app/assets/javascripts/app/views/generic/object_import/index.jst.eco:28
-#, fuzzy
-#| msgid "Note"
 msgid "Note:"
-msgstr "Note"
+msgstr "Nota:"
 
 #: app/assets/javascripts/app/views/system_report.jst.eco:9
 msgid ""
@@ -13051,10 +13007,8 @@ msgstr "Aviso"
 #: app/assets/javascripts/app/views/google/list.jst.eco:16
 #: app/assets/javascripts/app/views/microsoft365/list.jst.eco:17
 #: app/assets/javascripts/app/views/microsoft_graph/list.jst.eco:17
-#, fuzzy
-#| msgid "Notice"
 msgid "Notice:"
-msgstr "Aviso"
+msgstr "Aviso:"
 
 #: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:59
 #: app/assets/javascripts/app/controllers/_ui_element/object_perform_action.coffee:24
@@ -13789,10 +13743,8 @@ msgid "Outbound Call: %s"
 msgstr "Ligação de saída"
 
 #: app/assets/javascripts/app/views/dashboard/stats/ticket_channel_distribution.jst.eco:16
-#, fuzzy
-#| msgid "Outbound"
 msgid "Outbound:"
-msgstr "saída"
+msgstr "Saída:"
 
 #: app/assets/javascripts/app/lib/app_post/browser.coffee:119
 #, fuzzy
@@ -14554,10 +14506,8 @@ msgid "Previous year"
 msgstr "Anterior"
 
 #: app/assets/javascripts/app/views/data_privacy/tasks.jst.eco:49
-#, fuzzy
-#| msgid "Previously owned tickets (%s in total)"
 msgid "Previously owned tickets (%s in total):"
-msgstr "Tíquetes de propriedade anterior (% s no total)"
+msgstr "Tickets anteriormente atribuídos (%s no total):"
 
 #: app/assets/javascripts/app/controllers/widget/two_factor_configuration/modal/recovery_codes.coffee:7
 msgid "Print"
@@ -17081,6 +17031,7 @@ msgstr "assign tickets"
 msgid "Simple Line Icons"
 msgstr ""
 
+#: app/assets/javascripts/app/views/settings/storage_provider.jst.eco:22
 #: db/seeds/settings.rb:379
 msgid "Simple Storage (S3)"
 msgstr ""
@@ -17951,11 +17902,11 @@ msgstr "Obrigado por se juntar. Email enviado para \"% s\"."
 msgid "The 'gpg-agent' process could not be stopped."
 msgstr "%s Object(s) estão criados."
 
-#: app/controllers/concerns/handles_oidc_authorization.rb:20
+#: app/controllers/concerns/handles_oidc_authorization.rb:19
 msgid "The 'logout_token' does not contain any session information."
 msgstr ""
 
-#: app/controllers/concerns/handles_oidc_authorization.rb:17
+#: app/controllers/concerns/handles_oidc_authorization.rb:16
 #, fuzzy
 #| msgid "Signature"
 msgid "The 'logout_token' is invalid."
@@ -18329,7 +18280,7 @@ msgstr "Som de Notificação"
 #: app/assets/javascripts/app/controllers/knowledge_base/content_can_be_published_dialog.coffee:36
 #: app/assets/javascripts/app/controllers/knowledge_base/editor_coordinator.coffee:61
 #: app/assets/javascripts/app/controllers/knowledge_base/public_menu_form.coffee:68
-#: app/assets/javascripts/app/controllers/knowledge_base/sidebar/attachments.coffee:142
+#: app/assets/javascripts/app/controllers/knowledge_base/sidebar/attachments.coffee:143
 msgid "The changes could not be saved."
 msgstr ""
 
@@ -23565,7 +23516,7 @@ msgstr ""
 msgid "can't be used because *_id and *_ids are not allowed"
 msgstr ""
 
-#: app/models/knowledge_base/category.rb:139
+#: app/models/knowledge_base/category.rb:140
 msgid "cannot be a subcategory of the parent category"
 msgstr ""
 
@@ -23813,6 +23764,12 @@ msgstr "Rascunho"
 #: app/assets/javascripts/app/views/ticket_overview/batch_overlay.jst.eco:3
 msgid "drag here to cancel"
 msgstr "arraste aqui para cancelar"
+
+#: app/assets/javascripts/app/index.coffee:215
+#, fuzzy
+#| msgid "Tue"
+msgid "due"
+msgstr "Terça"
 
 #: app/assets/javascripts/app/views/integration/placetel.jst.eco:140
 #: app/assets/javascripts/app/views/integration/sipgate.jst.eco:124

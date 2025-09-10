@@ -2,16 +2,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zammad\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-02-25 06:58+0000\n"
-"Last-Translator: Dominik Klein <dk@zammad.com>\n"
+"PO-Revision-Date: 2025-09-08 22:00+0000\n"
+"Last-Translator: Ferenc Kutas <ferenc@kutasferenc.hu>\n"
 "Language-Team: Hungarian <https://translations.zammad.org/projects/zammad/"
-"zammad-development/hu/>\n"
+"zammad-stable/hu/>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.9.2\n"
+"X-Generator: Weblate 5.11.4\n"
 
 #. Default date format to use for the current locale.
 #. These placeholders are supported:
@@ -46,12 +46,6 @@ msgid "FORMAT_DATETIME"
 msgstr "yyyy.mm.dd HH:MM:SS"
 
 #: db/seeds/settings.rb:368
-#, fuzzy
-#| msgid ""
-#| "\"Database\" stores all attachments in the database (not recommended for "
-#| "storing large amounts of data). \"Filesystem\" stores the data in the "
-#| "filesystem. You can switch between the modules even on a system that is "
-#| "already in production without any loss of data."
 msgid ""
 "\"Database\" stores all attachments in the database (not recommended for "
 "storing large amounts of data). \"Filesystem\" stores the data in the "
@@ -59,10 +53,11 @@ msgid ""
 "compatible object filesystem. You can switch between the modules even on a "
 "system that is already in production without any loss of data."
 msgstr ""
-"Az \"Adatbázis\" az összes csatolmányt az adatbázisban tárolja (nem ajánlott "
-"nagy mennyiségű adat tárolására). A \" Fájlrendszer\" az adatokat a "
-"fájlrendszerben tárolja. A modulok között adatvesztés nélkül lehet váltani "
-"akár egy már üzemelő rendszeren is."
+"\"Adatbázis\": a rendszer az összes csatolmányt az adatbázisban tárolja (nem "
+"ajánlott nagy mennyiségű adat tárolására). \" Fájlrendszer\": a rendszer az "
+"adatokat a fájlrendszerben tárolja (ez javasolt nagyobb mennyiségű adat "
+"tárolására). A modulok között adatvesztés nélkül lehet váltani akár egy már "
+"üzemelő (éles) rendszeren is."
 
 #. This is the template file app/views/messaging/ticket_create/en.md.erb in ERB/Markdown format.
 #. Please make sure to translate it to a valid corresponding output structure.
@@ -401,10 +396,8 @@ msgstr "%s tulajdonság"
 #: app/assets/javascripts/app/controllers/ticket_zoom/sidebar_checklist/show.coffee:34
 #: app/assets/javascripts/app/views/ticket_zoom/sidebar_checklist/title_edit.jst.eco:6
 #: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarChecklist/TicketSidebarChecklistContent.vue:53
-#, fuzzy
-#| msgid "Checksum"
 msgid "%s Checklist"
-msgstr "Ellenőrző összeg"
+msgstr "%s Ellenőrzőlista"
 
 #: app/assets/javascripts/app/views/integration/ldap_wizard.jst.eco:203
 msgid "%s Group"
@@ -538,7 +531,7 @@ msgstr "%s kötelező."
 
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_action/whatsapp_reply.coffee:67
 msgid "%s is sent without text caption"
-msgstr ""
+msgstr "%s szövegfelirat nélkül lett elküldve."
 
 #: app/frontend/shared/i18n/dates.ts:120
 msgid "%s minutes ago"
@@ -549,10 +542,8 @@ msgid "%s months ago"
 msgstr "%s hónappal ezelőtt"
 
 #: app/frontend/apps/desktop/components/QuickSearch/QuickSearchResultList/QuickSearchResultList.vue:164
-#, fuzzy
-#| msgid "show more"
 msgid "%s more"
-msgstr "mutasson többet"
+msgstr "%s több"
 
 #: app/assets/javascripts/app/views/generic/object_import/imported.jst.eco:21
 msgid "%s object(s) have been created."
@@ -602,7 +593,7 @@ msgstr "emberek"
 #, fuzzy
 #| msgid "%s ended switch to |%s|!"
 msgid "%s reacted with a %s to message from %s |%s|"
-msgstr "%s befejezte az átváltást erre: |%s|!"
+msgstr "%s reagált: %s egy üzenetre %s -től |%s|!"
 
 #: app/assets/javascripts/app/views/channel/email_account_overview.jst.eco:49
 msgid ""
@@ -6522,7 +6513,7 @@ msgid "Do not use the proxy for the following hosts."
 msgstr "Ne használja a proxyt a következő gazdagépek esetében."
 
 #: app/assets/javascripts/app/controllers/knowledge_base/delete_action.coffee:24
-#: app/assets/javascripts/app/controllers/knowledge_base/sidebar/attachments.coffee:122
+#: app/assets/javascripts/app/controllers/knowledge_base/sidebar/attachments.coffee:123
 msgid "Do you really want to delete \"%s\"?"
 msgstr "Valóban törölni szeretné a következőt: \"%s\"?"
 
@@ -16240,6 +16231,7 @@ msgstr "Hasonló jegyek találhatók"
 msgid "Simple Line Icons"
 msgstr "Egyszerű vonalas ikonok"
 
+#: app/assets/javascripts/app/views/settings/storage_provider.jst.eco:22
 #: db/seeds/settings.rb:379
 msgid "Simple Storage (S3)"
 msgstr "Simple Storage (S3)"
@@ -17059,11 +17051,11 @@ msgstr ""
 msgid "The 'gpg-agent' process could not be stopped."
 msgstr "A 'gpg-agent' folyamatot nem sikerült leállítani."
 
-#: app/controllers/concerns/handles_oidc_authorization.rb:20
+#: app/controllers/concerns/handles_oidc_authorization.rb:19
 msgid "The 'logout_token' does not contain any session information."
 msgstr ""
 
-#: app/controllers/concerns/handles_oidc_authorization.rb:17
+#: app/controllers/concerns/handles_oidc_authorization.rb:16
 #, fuzzy
 #| msgid "The provided 'oauth_token' is invalid."
 msgid "The 'logout_token' is invalid."
@@ -17422,7 +17414,7 @@ msgstr "Nem található tanúsítvány %s számára."
 #: app/assets/javascripts/app/controllers/knowledge_base/content_can_be_published_dialog.coffee:36
 #: app/assets/javascripts/app/controllers/knowledge_base/editor_coordinator.coffee:61
 #: app/assets/javascripts/app/controllers/knowledge_base/public_menu_form.coffee:68
-#: app/assets/javascripts/app/controllers/knowledge_base/sidebar/attachments.coffee:142
+#: app/assets/javascripts/app/controllers/knowledge_base/sidebar/attachments.coffee:143
 msgid "The changes could not be saved."
 msgstr "A változtatásokat nem lehetett elmenteni."
 
@@ -18764,7 +18756,7 @@ msgstr ""
 #, fuzzy
 #| msgid "This article is not part of the ticket."
 msgid "This article does not have a raw copy available."
-msgstr "Ez a cikk nem része a jegynek."
+msgstr "Ehhez a cikkhez nem áll rendelkezésre nyers másolat."
 
 #: app/models/ticket/time_accounting.rb:44
 msgid "This article is not part of the ticket."
@@ -18776,7 +18768,7 @@ msgstr "Ez a bot már létezik."
 
 #: app/assets/javascripts/app/views/knowledge_base/feed_dialog.jst.eco:11
 msgid "This category including sub-categories feed:"
-msgstr "Ez a kategória, beleértve az alkategóriák hírfolyamát:"
+msgstr "Ez a kategória az alábbi alkategóriákat tartalmazza:"
 
 #: app/assets/javascripts/app/controllers/knowledge_base/reader_list_controller.coffee:33
 msgid "This category is empty"
@@ -18837,23 +18829,23 @@ msgstr "Ez a mező nem tartalmazhatja a \"%s\" értéket."
 
 #: app/frontend/shared/form/i18n/locales.ts:469
 msgid "This field can't have less than %s entries."
-msgstr "Ez a mező nem tartalmazhat kevesebb mint %s bejegyzést."
+msgstr "Ez a mező nem tartalmazhat kevesebb mint %s értéket."
 
 #: app/frontend/shared/form/i18n/locales.ts:436
 msgid "This field can't have more than %s entries."
-msgstr "Ez a mező nem tartalmazhat több mint %s bejegyzést."
+msgstr "Ez a mező nem tartalmazhat több mint %s értéket."
 
 #: app/frontend/shared/form/i18n/locales.ts:381
 msgid "This field doesn't contain an allowed value."
-msgstr "Ez a mező nem tartalmaz megengedett értéket."
+msgstr "Ez a mező nem megengedett értéket tartalmaz."
 
 #: app/frontend/shared/form/i18n/locales.ts:318
 msgid "This field doesn't correspond to the expected value."
-msgstr "Ez a mező nem felel meg a várt értéknek."
+msgstr "E mező tartalma nem felel meg a várt értéknek."
 
 #: app/frontend/shared/form/i18n/locales.ts:369
 msgid "This field doesn't end with \"%s\"."
-msgstr "Ez a mező nem a következővel végződik: \"%s\"."
+msgstr "Ez a mező nem a következőre végződik: \"%s\"."
 
 #: app/frontend/shared/form/i18n/locales.ts:548
 msgid "This field doesn't start with \"%s\"."
@@ -18861,13 +18853,13 @@ msgstr "Ez a mező nem a következővel kezdődik: \"%s\"."
 
 #: app/frontend/shared/form/i18n/locales.ts:509
 msgid "This field is required."
-msgstr "Ennek a mezőnek a kitöltése kötelező."
+msgstr "E mező kitöltése kötelező."
 
 #: app/frontend/shared/form/i18n/locales.ts:330
 msgid "This field isn't a valid date, please use the format \"%s\"."
 msgstr ""
-"Ez a mező nem érvényes dátum, kérjük, használja a következő formátumot: "
-"\"%s\"."
+"Ez a mező érvénytelen dátumot tartalmaz, kérjük, használja a következő "
+"formátumot: \"%s\"."
 
 #: app/frontend/shared/form/i18n/locales.ts:245
 msgid "This field must be a symbol."
@@ -18875,16 +18867,16 @@ msgstr "Ennek a mezőnek tartalmaznia kell szimbólumot."
 
 #: app/frontend/shared/form/i18n/locales.ts:458
 msgid "This field must be of the type \"%s\"."
-msgstr "Ennek a mezőnek \"%s\" típusúnak kell lennie."
+msgstr "E mező \"%s\" típusú kell legyen."
 
 #: app/frontend/shared/form/i18n/locales.ts:225
 msgid "This field must contain a lowercase letter."
-msgstr "Ennek a mezőnek tartalmaznia kell kisbetűt."
+msgstr "Ennek a mezőnek kisbetűt kell tartalmaznia."
 
 #: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/TimeAccountingFlyout.vue:93
 #: app/frontend/shared/form/i18n/locales.ts:499
 msgid "This field must contain a number."
-msgstr "Ennek a mezőnek egy számot kell tartalmaznia."
+msgstr "Ennek a mezőnek legalább egy számot kell tartalmaznia."
 
 #: app/frontend/shared/form/i18n/locales.ts:205
 msgid "This field must contain a symbol."
@@ -22629,7 +22621,7 @@ msgstr "nem lehet üres"
 msgid "can't be used because *_id and *_ids are not allowed"
 msgstr "nem használható, mert *_id és *_ids nem engedélyezettek"
 
-#: app/models/knowledge_base/category.rb:139
+#: app/models/knowledge_base/category.rb:140
 msgid "cannot be a subcategory of the parent category"
 msgstr "nem lehet a szülő kategória alkategóriája"
 
@@ -22869,6 +22861,12 @@ msgstr "piszkozat"
 msgid "drag here to cancel"
 msgstr "húzza ide a visszavonáshoz"
 
+#: app/assets/javascripts/app/index.coffee:215
+#, fuzzy
+#| msgid "Tue"
+msgid "due"
+msgstr "esedékes"
+
 #: app/assets/javascripts/app/views/integration/placetel.jst.eco:140
 #: app/assets/javascripts/app/views/integration/sipgate.jst.eco:124
 msgid "e. g. user@example.com"
@@ -22879,10 +22877,8 @@ msgid "e.g."
 msgstr "pl."
 
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingOutOfOffice.vue:47
-#, fuzzy
-#| msgid "Easter holiday"
 msgid "e.g. Easter holiday"
-msgstr "Húsvét"
+msgstr "pl.: Húsvét"
 
 #: app/assets/javascripts/app/views/generic/drox.jst.eco:7
 msgid "edit"
@@ -22893,8 +22889,9 @@ msgid "edited %s"
 msgstr "szerkesztett %s"
 
 #: app/frontend/apps/mobile/composables/useEditedBy.ts:44
+#, fuzzy
 msgid "edited %s by %s"
-msgstr ""
+msgstr "szerkesztve %s szerkesztette %s"
 
 #: app/frontend/apps/mobile/composables/useEditedBy.ts:41
 msgid "edited %s by me"
@@ -22906,29 +22903,34 @@ msgstr "e-mail"
 
 #: app/assets/javascripts/app/controllers/_application_controller/_modal_generic_history.coffee:99
 msgid "email sent to '%s'"
-msgstr "e-mail elküldve '%s' részére"
+msgstr "e-mail elküldve '%s részére"
 
 #: app/assets/javascripts/app/controllers/_ui_element/core_workflow_condition.coffee:186
+#, fuzzy
 msgid "ends with"
-msgstr ""
+msgstr "végződik"
 
 #: app/assets/javascripts/app/controllers/_ui_element/_application_selector.coffee:36
 #: app/assets/javascripts/app/controllers/_ui_element/core_workflow_condition.coffee:186
 #: app/assets/javascripts/app/controllers/_ui_element/object_selector.coffee:63
+#, fuzzy
 msgid "ends with one of"
-msgstr ""
+msgstr "az egyikkel végződik"
 
 #: app/assets/javascripts/app/models/ticket.coffee:84
+#, fuzzy
 msgid "escalated"
 msgstr "eszkalált"
 
 #: app/assets/javascripts/app/controllers/_profile/calendar_subscriptions.coffee:19
 #: app/assets/javascripts/app/views/ticket_zoom/meta.jst.eco:9
+#, fuzzy
 msgid "escalation"
 msgstr "eszkaláció"
 
 #: app/frontend/apps/desktop/components/CommonTicketEscalationIndicator/CommonTicketEscalationIndicator.vue:31
 #: app/frontend/apps/mobile/components/CommonTicketEscalationIndicator/CommonTicketEscalationIndicator.vue:38
+#, fuzzy
 msgid "escalation %s"
 msgstr "eszkaláció %s"
 
@@ -22969,6 +22971,7 @@ msgstr "töltse ki az üres helyet"
 
 #: app/assets/javascripts/app/views/generic/sla_times.jst.eco:50
 #: app/assets/javascripts/app/views/sla/index.jst.eco:41
+#, fuzzy
 msgid "for an agent to respond"
 msgstr "egy ügynök számára, hogy válaszoljon"
 
@@ -22984,6 +22987,7 @@ msgstr "feladó"
 #: app/assets/javascripts/app/controllers/_ui_element/_application_selector.coffee:25
 #: app/assets/javascripts/app/controllers/_ui_element/core_workflow_condition.coffee:73
 #: app/assets/javascripts/app/controllers/_ui_element/object_selector.coffee:52
+#, fuzzy
 msgid "from (relative)"
 msgstr "ettől (relatív)"
 
@@ -22992,11 +22996,13 @@ msgid "gpg (GnuPG) 2.2.0 or newer is required"
 msgstr "gpg (GnuPG) 2.2.0 vagy újabb szükséges"
 
 #: app/assets/javascripts/app/lib/app_post/pretty_date.coffee:98
+#, fuzzy
 msgid "h"
-msgstr "ó"
+msgstr "h"
 
+#, fuzzy
 msgid "has already been taken"
-msgstr "már foglalt"
+msgstr "már megtörtént"
 
 #: app/assets/javascripts/app/controllers/_ui_element/_application_selector.coffee:43
 #: app/assets/javascripts/app/controllers/_ui_element/object_selector.coffee:70
@@ -23006,13 +23012,15 @@ msgstr "megváltozott"
 
 #: app/assets/javascripts/app/controllers/_ui_element/_application_selector.coffee:157
 #: app/assets/javascripts/app/controllers/_ui_element/object_selector.coffee:184
+#, fuzzy
 msgid "has reached"
 msgstr "elérte"
 
 #: app/assets/javascripts/app/controllers/_ui_element/_application_selector.coffee:159
 #: app/assets/javascripts/app/controllers/_ui_element/object_selector.coffee:186
+#, fuzzy
 msgid "has reached warning"
-msgstr "elérte a figyelmeztetést"
+msgstr "elérte azt a szintet, ahol figyelmeztetést kap"
 
 #: app/assets/javascripts/app/views/login.jst.eco:98
 msgid "here"
@@ -23034,8 +23042,9 @@ msgstr "óra"
 
 #: app/assets/javascripts/app/lib/app_post/pretty_date.coffee:98
 #: app/assets/javascripts/app/views/sla/index.jst.eco:37
+#, fuzzy
 msgid "hours"
-msgstr "óra"
+msgstr "órák"
 
 #: db/seeds/settings.rb:2087
 #, fuzzy

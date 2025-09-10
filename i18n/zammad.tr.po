@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zammad\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-08-04 22:00+0000\n"
+"PO-Revision-Date: 2025-09-08 22:00+0000\n"
 "Last-Translator: Murat Duman <mduman@metu.edu.tr>\n"
 "Language-Team: Turkish <https://translations.zammad.org/projects/zammad/"
 "zammad-stable/tr/>\n"
@@ -6309,7 +6309,7 @@ msgid "Do not use the proxy for the following hosts."
 msgstr "Aşağıdaki ana bilgisayarlar için proxy kullanmayın."
 
 #: app/assets/javascripts/app/controllers/knowledge_base/delete_action.coffee:24
-#: app/assets/javascripts/app/controllers/knowledge_base/sidebar/attachments.coffee:122
+#: app/assets/javascripts/app/controllers/knowledge_base/sidebar/attachments.coffee:123
 msgid "Do you really want to delete \"%s\"?"
 msgstr "\"%s\" dosyasını gerçekten silmek istiyor musunuz ?"
 
@@ -15570,6 +15570,7 @@ msgstr "Benzer destek talepleri bulundu"
 msgid "Simple Line Icons"
 msgstr "Basit Çizgi Simgeleri"
 
+#: app/assets/javascripts/app/views/settings/storage_provider.jst.eco:22
 #: db/seeds/settings.rb:379
 msgid "Simple Storage (S3)"
 msgstr "Basit Depolama (S3)"
@@ -16375,11 +16376,11 @@ msgstr "Katıldığınız için teşekkürler. E-posta \"%s\" adresine gönderil
 msgid "The 'gpg-agent' process could not be stopped."
 msgstr "'gpg-agent' işlemi durdurulamadı."
 
-#: app/controllers/concerns/handles_oidc_authorization.rb:20
+#: app/controllers/concerns/handles_oidc_authorization.rb:19
 msgid "The 'logout_token' does not contain any session information."
 msgstr "'logout_token' herhangi bir oturum bilgisi içermiyor."
 
-#: app/controllers/concerns/handles_oidc_authorization.rb:17
+#: app/controllers/concerns/handles_oidc_authorization.rb:16
 msgid "The 'logout_token' is invalid."
 msgstr "'logout_token' geçersiz."
 
@@ -16692,7 +16693,7 @@ msgstr "%s için sertifika bulunamadı."
 #: app/assets/javascripts/app/controllers/knowledge_base/content_can_be_published_dialog.coffee:36
 #: app/assets/javascripts/app/controllers/knowledge_base/editor_coordinator.coffee:61
 #: app/assets/javascripts/app/controllers/knowledge_base/public_menu_form.coffee:68
-#: app/assets/javascripts/app/controllers/knowledge_base/sidebar/attachments.coffee:142
+#: app/assets/javascripts/app/controllers/knowledge_base/sidebar/attachments.coffee:143
 msgid "The changes could not be saved."
 msgstr "Değişiklikler kaydedilemedi."
 
@@ -21598,7 +21599,7 @@ msgstr "boş olamaz"
 msgid "can't be used because *_id and *_ids are not allowed"
 msgstr "kullanılamaz çünkü *_id ve *_ids'ye izin verilmez"
 
-#: app/models/knowledge_base/category.rb:139
+#: app/models/knowledge_base/category.rb:140
 msgid "cannot be a subcategory of the parent category"
 msgstr "ana kategorinin bir alt kategorisi olamaz"
 
@@ -21826,6 +21827,10 @@ msgstr "taslak"
 #: app/assets/javascripts/app/views/ticket_overview/batch_overlay.jst.eco:3
 msgid "drag here to cancel"
 msgstr "drag here to cancel"
+
+#: app/assets/javascripts/app/index.coffee:215
+msgid "due"
+msgstr "beklenen"
 
 #: app/assets/javascripts/app/views/integration/placetel.jst.eco:140
 #: app/assets/javascripts/app/views/integration/sipgate.jst.eco:124

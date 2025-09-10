@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zammad\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-03-06 22:00+0000\n"
-"Last-Translator: JPB <JPB@users.noreply.translations.zammad.org>\n"
+"PO-Revision-Date: 2025-09-02 22:00+0000\n"
+"Last-Translator: Shadowdenim <mikebeelen111@gmail.com>\n"
 "Language-Team: Dutch <https://translations.zammad.org/projects/zammad/zammad-"
 "stable/nl/>\n"
 "Language: nl-nl\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.9.2\n"
+"X-Generator: Weblate 5.11.4\n"
 
 #. Default date format to use for the current locale.
 #. These placeholders are supported:
@@ -4098,6 +4098,8 @@ msgid ""
 "Could not create user and send verification email because import_mode "
 "setting is on."
 msgstr ""
+"Kon geen gebruiker aanmaken en controle email sturen, doordat import_modus "
+"instelling op aan staat."
 
 #: app/services/service/channel/whatsapp/base.rb:37
 msgid "Could not fetch WhatsApp phone number details."
@@ -4159,6 +4161,8 @@ msgstr "Kan twee-factor-authenticatiemethode niet verwijderen."
 msgid ""
 "Could not send user verification email because import_mode setting is on."
 msgstr ""
+"Kon geen gebruikers verificatie email sturen , doordat import_modus "
+"instelling op aan staat."
 
 #: app/assets/javascripts/app/controllers/_profile/password.coffee:228
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingTwoFactorAuth.vue:92
@@ -6288,7 +6292,7 @@ msgid "Do not use the proxy for the following hosts."
 msgstr "Gebruik geen Proxy voor de volgende hosts."
 
 #: app/assets/javascripts/app/controllers/knowledge_base/delete_action.coffee:24
-#: app/assets/javascripts/app/controllers/knowledge_base/sidebar/attachments.coffee:122
+#: app/assets/javascripts/app/controllers/knowledge_base/sidebar/attachments.coffee:123
 msgid "Do you really want to delete \"%s\"?"
 msgstr "Wil je echt \"%s\" verwijderen?"
 
@@ -11348,7 +11352,7 @@ msgstr "Nieuwe verwijder taak"
 
 #: app/frontend/apps/desktop/composables/useBetaDisclaimer.ts:47
 msgid "New Desktop UI — Alpha Version"
-msgstr ""
+msgstr "Nieuwe desktop gebruikersinterface - Alfa versie"
 
 #: app/assets/javascripts/app/controllers/group.coffee:27
 msgid "New Group"
@@ -15550,6 +15554,7 @@ msgstr "Vergelijkbare tickets gevonden"
 msgid "Simple Line Icons"
 msgstr "Simple Line Icons"
 
+#: app/assets/javascripts/app/views/settings/storage_provider.jst.eco:22
 #: db/seeds/settings.rb:379
 msgid "Simple Storage (S3)"
 msgstr "Simple Storage (S3)"
@@ -16357,11 +16362,11 @@ msgstr "Bedankt om deel te nemen. E-mail verzonden naar \"%s\"."
 msgid "The 'gpg-agent' process could not be stopped."
 msgstr "Het proces 'gpg-agent' kon niet worden gestopt."
 
-#: app/controllers/concerns/handles_oidc_authorization.rb:20
+#: app/controllers/concerns/handles_oidc_authorization.rb:19
 msgid "The 'logout_token' does not contain any session information."
 msgstr "De 'logout_token' bevat geen sessie-informatie."
 
-#: app/controllers/concerns/handles_oidc_authorization.rb:17
+#: app/controllers/concerns/handles_oidc_authorization.rb:16
 msgid "The 'logout_token' is invalid."
 msgstr "De 'logout_token' is ongeldig."
 
@@ -16674,7 +16679,7 @@ msgstr "De certificaten voor %s zijn niet gevonden."
 #: app/assets/javascripts/app/controllers/knowledge_base/content_can_be_published_dialog.coffee:36
 #: app/assets/javascripts/app/controllers/knowledge_base/editor_coordinator.coffee:61
 #: app/assets/javascripts/app/controllers/knowledge_base/public_menu_form.coffee:68
-#: app/assets/javascripts/app/controllers/knowledge_base/sidebar/attachments.coffee:142
+#: app/assets/javascripts/app/controllers/knowledge_base/sidebar/attachments.coffee:143
 msgid "The changes could not be saved."
 msgstr "De wijzigingen konden niet worden opgeslagen."
 
@@ -16772,11 +16777,11 @@ msgid "The email address |%s| is already in use by another account."
 msgstr "Het e-mailadres |%s| is al in gebruik door een ander account."
 
 #: app/services/service/user/password_reset/send.rb:41
-#, fuzzy
-#| msgid "The email could not be sent to the user."
 msgid ""
 "The email could not be sent to the user because import_mode setting is on."
-msgstr "De e-mail kon niet naar de gebruiker worden verzonden."
+msgstr ""
+"De e-mail kon niet naar de gebruiker worden verzonden, doordat import_modus "
+"instelling op aan staat."
 
 #: app/services/service/auth/send_admin_token.rb:39
 #: app/services/service/user/password_reset/update.rb:42
@@ -17875,10 +17880,8 @@ msgstr ""
 "Deze PGP e-mail is versleuteld met een mogelijk onbekend encryptie-algoritme."
 
 #: app/controllers/ticket_articles_controller.rb:186
-#, fuzzy
-#| msgid "This article is not part of the ticket."
 msgid "This article does not have a raw copy available."
-msgstr "Dit artikel maakt geen deel uit van het ticket."
+msgstr "Dit artikel heeft geen originele kopie beschikbaar."
 
 #: app/models/ticket/time_accounting.rb:44
 msgid "This article is not part of the ticket."
@@ -18163,6 +18166,8 @@ msgid ""
 "This new desktop UI is currently in development and not ready for production "
 "use. It may contain bugs or incomplete features."
 msgstr ""
+"Deze nieuwe desktop gebruikersinterface is momenteel in ontwikkeling en nog "
+"niet gereed voor gebruik. Het kan nog fouten of incomplete functies bevatten."
 
 #: app/controllers/application_controller/handles_errors.rb:99
 #: app/graphql/gql/zammad_schema.rb:116
@@ -18285,14 +18290,8 @@ msgstr ""
 #: app/services/service/system/import/apply_configuration_base.rb:46
 #: app/services/service/system/import/run.rb:28
 #: app/services/service/system/run_auto_wizard.rb:6
-#, fuzzy
-#| msgid ""
-#| "This system has already been configured and an administrator account "
-#| "exists."
 msgid "This system has already been configured."
-msgstr ""
-"Dit systeem is al geconfigureerd en er bestaat al een account voor de "
-"beheerder."
+msgstr "Dit systeem is al geconfigureerd."
 
 #: app/frontend/apps/desktop/pages/guided-setup/views/GuidedSetupAutomated/GuidedSetupAutomatedInfo.vue:11
 msgid "This system is configured for automated setup."
@@ -21610,7 +21609,7 @@ msgstr "mag niet leeg zijn"
 msgid "can't be used because *_id and *_ids are not allowed"
 msgstr "kan niet worden gebruikt omdat *_id en *_ids niet zijn toegestaan"
 
-#: app/models/knowledge_base/category.rb:139
+#: app/models/knowledge_base/category.rb:140
 msgid "cannot be a subcategory of the parent category"
 msgstr "mag geen subcategorie van de bovenliggende categorie zijn"
 
@@ -21837,6 +21836,12 @@ msgstr "concept"
 #: app/assets/javascripts/app/views/ticket_overview/batch_overlay.jst.eco:3
 msgid "drag here to cancel"
 msgstr "sleep hierheen om te anuleren"
+
+#: app/assets/javascripts/app/index.coffee:215
+#, fuzzy
+#| msgid "Tue"
+msgid "due"
+msgstr "di"
 
 #: app/assets/javascripts/app/views/integration/placetel.jst.eco:140
 #: app/assets/javascripts/app/views/integration/sipgate.jst.eco:124

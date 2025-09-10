@@ -2,16 +2,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zammad\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-02-25 06:59+0000\n"
-"Last-Translator: 두리아범 <laislavonita@gmail.com>\n"
+"PO-Revision-Date: 2025-09-05 22:00+0000\n"
+"Last-Translator: newsam202 <newsam202@naver.com>\n"
 "Language-Team: Korean <https://translations.zammad.org/projects/zammad/"
-"zammad-development/ko/>\n"
+"zammad-stable/ko/>\n"
 "Language: ko-kr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.9.2\n"
+"X-Generator: Weblate 5.11.4\n"
 
 #. Default date format to use for the current locale.
 #. These placeholders are supported:
@@ -2626,10 +2626,8 @@ msgstr "%s을 통해 인증"
 
 #: app/assets/javascripts/app/views/widget/two_factor_configuration/authenticator_app.jst.eco:24
 #: app/frontend/apps/desktop/components/TwoFactor/TwoFactorConfiguration/TwoFactorConfigurationAuthenticatorApp.vue:281
-#, fuzzy
-#| msgid "Authentication via %s"
 msgid "Authenticator app secret"
-msgstr "%s을 통해 인증"
+msgstr "인증 앱 보"
 
 #: app/assets/javascripts/app/views/ticket_shared_draft_modal.jst.eco:3
 #: app/frontend/apps/desktop/pages/ticket/components/TicketSharedDraftFlyout.vue:198
@@ -6567,7 +6565,7 @@ msgid "Do not use the proxy for the following hosts."
 msgstr "다음 호스트에 대한 프록시 없습니다."
 
 #: app/assets/javascripts/app/controllers/knowledge_base/delete_action.coffee:24
-#: app/assets/javascripts/app/controllers/knowledge_base/sidebar/attachments.coffee:122
+#: app/assets/javascripts/app/controllers/knowledge_base/sidebar/attachments.coffee:123
 #, fuzzy
 #| msgid "Sure to delete this object?"
 msgid "Do you really want to delete \"%s\"?"
@@ -16725,6 +16723,7 @@ msgstr "%s Tickets"
 msgid "Simple Line Icons"
 msgstr ""
 
+#: app/assets/javascripts/app/views/settings/storage_provider.jst.eco:22
 #: db/seeds/settings.rb:379
 msgid "Simple Storage (S3)"
 msgstr ""
@@ -17589,11 +17588,11 @@ msgstr "등록해주셔서 감사합니다. 이메일을 \"%s\"로 보넸습니�
 msgid "The 'gpg-agent' process could not be stopped."
 msgstr "%s 객체 (들)이 생성된다."
 
-#: app/controllers/concerns/handles_oidc_authorization.rb:20
+#: app/controllers/concerns/handles_oidc_authorization.rb:19
 msgid "The 'logout_token' does not contain any session information."
 msgstr ""
 
-#: app/controllers/concerns/handles_oidc_authorization.rb:17
+#: app/controllers/concerns/handles_oidc_authorization.rb:16
 #, fuzzy
 #| msgid "Signature"
 msgid "The 'logout_token' is invalid."
@@ -17968,7 +17967,7 @@ msgstr "알림 소리"
 #: app/assets/javascripts/app/controllers/knowledge_base/content_can_be_published_dialog.coffee:36
 #: app/assets/javascripts/app/controllers/knowledge_base/editor_coordinator.coffee:61
 #: app/assets/javascripts/app/controllers/knowledge_base/public_menu_form.coffee:68
-#: app/assets/javascripts/app/controllers/knowledge_base/sidebar/attachments.coffee:142
+#: app/assets/javascripts/app/controllers/knowledge_base/sidebar/attachments.coffee:143
 msgid "The changes could not be saved."
 msgstr ""
 
@@ -23105,7 +23104,7 @@ msgstr ""
 msgid "can't be used because *_id and *_ids are not allowed"
 msgstr ""
 
-#: app/models/knowledge_base/category.rb:139
+#: app/models/knowledge_base/category.rb:140
 msgid "cannot be a subcategory of the parent category"
 msgstr ""
 
@@ -23353,6 +23352,12 @@ msgstr "초안"
 #: app/assets/javascripts/app/views/ticket_overview/batch_overlay.jst.eco:3
 msgid "drag here to cancel"
 msgstr "취소하려면 여기를 드래그"
+
+#: app/assets/javascripts/app/index.coffee:215
+#, fuzzy
+#| msgid "Tue"
+msgid "due"
+msgstr "화"
 
 #: app/assets/javascripts/app/views/integration/placetel.jst.eco:140
 #: app/assets/javascripts/app/views/integration/sipgate.jst.eco:124

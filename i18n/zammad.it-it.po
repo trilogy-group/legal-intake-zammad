@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zammad\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-08-04 22:00+0000\n"
-"Last-Translator: Random <random_r@users.noreply.translations.zammad.org>\n"
+"PO-Revision-Date: 2025-09-05 22:00+0000\n"
+"Last-Translator: Rudolfet <hermy.t.m1997@gmail.com>\n"
 "Language-Team: Italian <https://translations.zammad.org/projects/zammad/"
 "zammad-stable/it/>\n"
 "Language: it-it\n"
@@ -6337,7 +6337,7 @@ msgid "Do not use the proxy for the following hosts."
 msgstr "Non utilizzare il proxy per i seguenti host."
 
 #: app/assets/javascripts/app/controllers/knowledge_base/delete_action.coffee:24
-#: app/assets/javascripts/app/controllers/knowledge_base/sidebar/attachments.coffee:122
+#: app/assets/javascripts/app/controllers/knowledge_base/sidebar/attachments.coffee:123
 msgid "Do you really want to delete \"%s\"?"
 msgstr "Vuoi davvero eliminare \"%s\"?"
 
@@ -15610,6 +15610,7 @@ msgstr "Trovati ticket simili"
 msgid "Simple Line Icons"
 msgstr "Icone con linee semplici"
 
+#: app/assets/javascripts/app/views/settings/storage_provider.jst.eco:22
 #: db/seeds/settings.rb:379
 msgid "Simple Storage (S3)"
 msgstr "Simple Storage (S3)"
@@ -16419,11 +16420,11 @@ msgstr "Grazie per esserti unito a noi. Email inviata a \"%s\"."
 msgid "The 'gpg-agent' process could not be stopped."
 msgstr "Non è stato possibile arrestare il processo 'gpg-agent'."
 
-#: app/controllers/concerns/handles_oidc_authorization.rb:20
+#: app/controllers/concerns/handles_oidc_authorization.rb:19
 msgid "The 'logout_token' does not contain any session information."
 msgstr "Il 'logout_token' non contiene informazioni su nessuna sessione."
 
-#: app/controllers/concerns/handles_oidc_authorization.rb:17
+#: app/controllers/concerns/handles_oidc_authorization.rb:16
 msgid "The 'logout_token' is invalid."
 msgstr "Il 'logout_token' non è valido."
 
@@ -16742,7 +16743,7 @@ msgstr "Non sono stati trovati i certificati per %s."
 #: app/assets/javascripts/app/controllers/knowledge_base/content_can_be_published_dialog.coffee:36
 #: app/assets/javascripts/app/controllers/knowledge_base/editor_coordinator.coffee:61
 #: app/assets/javascripts/app/controllers/knowledge_base/public_menu_form.coffee:68
-#: app/assets/javascripts/app/controllers/knowledge_base/sidebar/attachments.coffee:142
+#: app/assets/javascripts/app/controllers/knowledge_base/sidebar/attachments.coffee:143
 msgid "The changes could not be saved."
 msgstr "Non è stato possibile salvare le modifiche."
 
@@ -21686,7 +21687,7 @@ msgstr "non può essere vuoto"
 msgid "can't be used because *_id and *_ids are not allowed"
 msgstr "non può essere usato perché *_id e *_ids non sono consentiti"
 
-#: app/models/knowledge_base/category.rb:139
+#: app/models/knowledge_base/category.rb:140
 msgid "cannot be a subcategory of the parent category"
 msgstr "non può essere una sottocategoria della categoria padre"
 
@@ -21912,6 +21913,10 @@ msgstr "bozza"
 #: app/assets/javascripts/app/views/ticket_overview/batch_overlay.jst.eco:3
 msgid "drag here to cancel"
 msgstr "trascina qui per cancellare"
+
+#: app/assets/javascripts/app/index.coffee:215
+msgid "due"
+msgstr "Dovuto"
 
 #: app/assets/javascripts/app/views/integration/placetel.jst.eco:140
 #: app/assets/javascripts/app/views/integration/sipgate.jst.eco:124
