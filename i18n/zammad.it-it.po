@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zammad\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-09-05 22:00+0000\n"
-"Last-Translator: Rudolfet <hermy.t.m1997@gmail.com>\n"
+"PO-Revision-Date: 2025-09-17 22:00+0000\n"
+"Last-Translator: Random <random_r@users.noreply.translations.zammad.org>\n"
 "Language-Team: Italian <https://translations.zammad.org/projects/zammad/"
 "zammad-stable/it/>\n"
 "Language: it-it\n"
@@ -8413,23 +8413,23 @@ msgstr "Saluti"
 msgid "Group"
 msgstr "Gruppo"
 
-#: app/assets/javascripts/app/controllers/_ui_element/core_workflow_condition.coffee:306
+#: app/assets/javascripts/app/controllers/_ui_element/core_workflow_condition.coffee:346
 msgid "Group (change)"
 msgstr "Gruppo (Modifica)"
 
-#: app/assets/javascripts/app/controllers/_ui_element/core_workflow_condition.coffee:297
+#: app/assets/javascripts/app/controllers/_ui_element/core_workflow_condition.coffee:337
 msgid "Group (create)"
 msgstr "Gruppo (Crea)"
 
-#: app/assets/javascripts/app/controllers/_ui_element/core_workflow_condition.coffee:324
+#: app/assets/javascripts/app/controllers/_ui_element/core_workflow_condition.coffee:364
 msgid "Group (full)"
 msgstr "Gruppo (Completo)"
 
-#: app/assets/javascripts/app/controllers/_ui_element/core_workflow_condition.coffee:315
+#: app/assets/javascripts/app/controllers/_ui_element/core_workflow_condition.coffee:355
 msgid "Group (overview)"
 msgstr "Gruppo (panoramica)"
 
-#: app/assets/javascripts/app/controllers/_ui_element/core_workflow_condition.coffee:288
+#: app/assets/javascripts/app/controllers/_ui_element/core_workflow_condition.coffee:328
 msgid "Group (read)"
 msgstr "Gruppo (lettura)"
 
@@ -10179,7 +10179,7 @@ msgstr "Links"
 
 #: app/frontend/apps/desktop/components/UserTaskbarTabs/UserTaskbarTabs.vue:220
 msgid "List of all user taskbar tabs"
-msgstr "Lista di tutte le schede della barra delle applicazioni dell'utente"
+msgstr "Elenco di tutte le schede nella barra delle attività dell'utente"
 
 #: app/models/system_report/plugin/addons.rb:4
 msgid "List of installed addons"
@@ -13026,7 +13026,7 @@ msgstr "Elimina permanentemente la base di conoscenza"
 msgid "Permission level for looking up tickets"
 msgstr "Livello di permessi per la ricerca dei ticket"
 
-#: app/assets/javascripts/app/controllers/_ui_element/core_workflow_condition.coffee:333
+#: app/assets/javascripts/app/controllers/_ui_element/core_workflow_condition.coffee:373
 #: app/assets/javascripts/app/controllers/knowledge_base/content_can_be_published_form.coffee:96
 #: app/assets/javascripts/app/models/role.coffee:7
 #: app/assets/javascripts/app/views/object_manager/screens.jst.eco:5
@@ -14289,7 +14289,7 @@ msgstr "I retweet sono convertiti in ticket."
 msgid "Rocket Chat Notifications"
 msgstr "Notifiche Rocket Chat"
 
-#: app/assets/javascripts/app/controllers/_ui_element/core_workflow_condition.coffee:279
+#: app/assets/javascripts/app/controllers/_ui_element/core_workflow_condition.coffee:319
 #: app/assets/javascripts/app/controllers/_ui_element/object_selector.coffee:216
 #: app/assets/javascripts/app/controllers/role.coffee:3
 #: app/assets/javascripts/app/views/integration/ldap.jst.eco:81
@@ -14575,7 +14575,7 @@ msgstr "Salva condizioni"
 #: app/assets/javascripts/app/controllers/_integration/github.coffee:63
 #: app/assets/javascripts/app/controllers/_integration/gitlab.coffee:80
 #: app/assets/javascripts/app/controllers/_integration/idoit.coffee:93
-#: app/assets/javascripts/app/controllers/ticket_zoom.coffee:1135
+#: app/assets/javascripts/app/controllers/ticket_zoom.coffee:1137
 msgid "Saving failed."
 msgstr "Salvataggio fallito."
 
@@ -16049,7 +16049,7 @@ msgstr "Invia"
 
 #: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:139
 #: app/assets/javascripts/app/controllers/_ui_element/_application_selector.coffee:178
-#: app/assets/javascripts/app/controllers/_ui_element/core_workflow_condition.coffee:369
+#: app/assets/javascripts/app/controllers/_ui_element/core_workflow_condition.coffee:307
 #: app/assets/javascripts/app/controllers/_ui_element/object_perform_action.coffee:148
 #: app/assets/javascripts/app/controllers/_ui_element/object_selector.coffee:206
 #: app/assets/javascripts/app/views/widget/mention.jst.eco:4
