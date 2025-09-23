@@ -115,7 +115,7 @@ module CanPerformChanges
     action_checks = %w[notification additional_object object attribute_update]
     actions = {}
 
-    perform_changes_data[:performable].perform.each do |attribute, action_value|
+    perform_changes_data[:performable].perform.deep_dup.each do |attribute, action_value|
       (object_name, object_key) = attribute.split('.', 2)
 
       action = nil
