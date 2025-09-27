@@ -3892,7 +3892,7 @@ msgstr "Podmínky pro dotčené objekty"
 msgid "Conditions for shown tickets"
 msgstr "Podmínky pro zobrazení tiketů"
 
-#: app/assets/javascripts/app/controllers/widget/placeholder.coffee:130
+#: app/assets/javascripts/app/controllers/widget/placeholder.coffee:134
 msgid "Config"
 msgstr "Konfigurace"
 
@@ -13678,7 +13678,9 @@ msgid "Pagination links"
 msgstr "Tickety organizace"
 
 #: app/controllers/integration/smime_controller.rb:77
-msgid "Parameter 'data' or 'file' required."
+#, fuzzy
+#| msgid "Parameter 'data' or 'file' required."
+msgid "Parameter 'private_key' or 'file' required."
 msgstr "Je vyžadován parametr 'data' nebo 'file'."
 
 #: app/assets/javascripts/app/controllers/widget/link/ticket.coffee:4
@@ -23583,7 +23585,7 @@ msgstr "od"
 msgid "from (relative)"
 msgstr "od (relativní)"
 
-#: app/controllers/integration/pgp_controller.rb:48
+#: app/controllers/integration/pgp_controller.rb:46
 msgid "gpg (GnuPG) 2.2.0 or newer is required"
 msgstr ""
 

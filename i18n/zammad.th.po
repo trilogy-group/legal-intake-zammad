@@ -3657,7 +3657,7 @@ msgstr "เงื่อนไขสำหรับวัตถุที่ได
 msgid "Conditions for shown tickets"
 msgstr "เงื่อนไขการแสดง Tickets"
 
-#: app/assets/javascripts/app/controllers/widget/placeholder.coffee:130
+#: app/assets/javascripts/app/controllers/widget/placeholder.coffee:134
 msgid "Config"
 msgstr "การกำหนดค่า"
 
@@ -13154,7 +13154,7 @@ msgid "Pagination links"
 msgstr "Tickets องค์กรของฉัน"
 
 #: app/controllers/integration/smime_controller.rb:77
-msgid "Parameter 'data' or 'file' required."
+msgid "Parameter 'private_key' or 'file' required."
 msgstr ""
 
 #: app/assets/javascripts/app/controllers/widget/link/ticket.coffee:4
@@ -22811,7 +22811,7 @@ msgstr "จาก"
 msgid "from (relative)"
 msgstr "จาก (relative)"
 
-#: app/controllers/integration/pgp_controller.rb:48
+#: app/controllers/integration/pgp_controller.rb:46
 msgid "gpg (GnuPG) 2.2.0 or newer is required"
 msgstr ""
 

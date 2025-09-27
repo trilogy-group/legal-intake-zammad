@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zammad\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-09-19 22:00+0000\n"
+"PO-Revision-Date: 2025-09-22 08:21+0000\n"
 "Last-Translator: Carlos Lindo <carloslindo@gmail.com>\n"
 "Language-Team: Portuguese (Portugal) <https://translations.zammad.org/"
 "projects/zammad/zammad-stable/pt_PT/>\n"
@@ -4036,7 +4036,7 @@ msgstr "Condições para objetos efetuados"
 msgid "Conditions for shown tickets"
 msgstr "Condições para bilhetes exibidos"
 
-#: app/assets/javascripts/app/controllers/widget/placeholder.coffee:130
+#: app/assets/javascripts/app/controllers/widget/placeholder.coffee:134
 msgid "Config"
 msgstr "Configuração"
 
@@ -11869,11 +11869,11 @@ msgstr ""
 #: app/assets/javascripts/app/views/channel/chat.jst.eco:23
 #: db/seeds/object_manager_attributes.rb:1034
 msgid "Mobile"
-msgstr "Movel"
+msgstr "Telemóvel"
 
 #: app/assets/javascripts/app/views/maintenance.jst.eco:14
 msgid "Mode"
-msgstr "Mode"
+msgstr "Modo"
 
 #: app/assets/javascripts/app/controllers/_ui_element/core_workflow_condition.coffee:268
 #: app/assets/javascripts/app/controllers/_ui_element/core_workflow_perform.coffee:66
@@ -11889,7 +11889,7 @@ msgstr "Segunda"
 #: app/assets/javascripts/app/lib/app_post/business_hours.coffee:15
 #: app/assets/javascripts/app/views/calendar/index.jst.eco:44
 msgid "Monday"
-msgstr "Segunda"
+msgstr "Segunda-Feira"
 
 #: app/assets/javascripts/app/controllers/_integration/monit.coffee:3
 msgid "Monit"
@@ -13874,7 +13874,7 @@ msgid "Pagination links"
 msgstr "My Organization Tickets"
 
 #: app/controllers/integration/smime_controller.rb:77
-msgid "Parameter 'data' or 'file' required."
+msgid "Parameter 'private_key' or 'file' required."
 msgstr ""
 
 #: app/assets/javascripts/app/controllers/widget/link/ticket.coffee:4
@@ -23874,7 +23874,7 @@ msgstr "from"
 msgid "from (relative)"
 msgstr "de (relativo)"
 
-#: app/controllers/integration/pgp_controller.rb:48
+#: app/controllers/integration/pgp_controller.rb:46
 msgid "gpg (GnuPG) 2.2.0 or newer is required"
 msgstr ""
 

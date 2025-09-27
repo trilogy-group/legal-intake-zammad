@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zammad\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-09-22 06:42+0000\n"
+"PO-Revision-Date: 2025-09-25 07:19+0000\n"
 "Last-Translator: mathew-uems <mathew.chen@edgentauems.com.tw>\n"
 "Language-Team: Chinese (Traditional Han script) <https://"
 "translations.zammad.org/projects/zammad/zammad-stable/zh_Hant/>\n"
@@ -4131,7 +4131,7 @@ msgstr "關聯事件的條件"
 msgid "Conditions for shown tickets"
 msgstr "顯示滿足以下條件的工單"
 
-#: app/assets/javascripts/app/controllers/widget/placeholder.coffee:130
+#: app/assets/javascripts/app/controllers/widget/placeholder.coffee:134
 msgid "Config"
 msgstr "配置"
 
@@ -13890,7 +13890,7 @@ msgid "Pagination links"
 msgstr "我所在機構的工單"
 
 #: app/controllers/integration/smime_controller.rb:77
-msgid "Parameter 'data' or 'file' required."
+msgid "Parameter 'private_key' or 'file' required."
 msgstr ""
 
 #: app/assets/javascripts/app/controllers/widget/link/ticket.coffee:4
@@ -23633,7 +23633,7 @@ msgstr "日"
 
 #: app/assets/javascripts/app/lib/app_post/pretty_date.coffee:76
 msgid "days"
-msgstr "日"
+msgstr "天"
 
 #: app/assets/javascripts/app/views/integration/ldap_last_import.jst.eco:36
 #: app/assets/javascripts/app/views/integration/ldap_summary.jst.eco:4
@@ -23853,7 +23853,7 @@ msgstr "from"
 msgid "from (relative)"
 msgstr "from (相關)"
 
-#: app/controllers/integration/pgp_controller.rb:48
+#: app/controllers/integration/pgp_controller.rb:46
 msgid "gpg (GnuPG) 2.2.0 or newer is required"
 msgstr ""
 

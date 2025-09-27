@@ -3695,7 +3695,7 @@ msgstr "受影响对象的情况"
 msgid "Conditions for shown tickets"
 msgstr "显示满足以下条件的工单"
 
-#: app/assets/javascripts/app/controllers/widget/placeholder.coffee:130
+#: app/assets/javascripts/app/controllers/widget/placeholder.coffee:134
 msgid "Config"
 msgstr "配置"
 
@@ -12935,7 +12935,9 @@ msgid "Pagination links"
 msgstr "所在组织的工单"
 
 #: app/controllers/integration/smime_controller.rb:77
-msgid "Parameter 'data' or 'file' required."
+#, fuzzy
+#| msgid "Parameter 'data' or 'file' required."
+msgid "Parameter 'private_key' or 'file' required."
 msgstr "需要参数“数据”或“文件”。"
 
 #: app/assets/javascripts/app/controllers/widget/link/ticket.coffee:4
@@ -22654,7 +22656,7 @@ msgstr "從"
 msgid "from (relative)"
 msgstr "来自（相对）"
 
-#: app/controllers/integration/pgp_controller.rb:48
+#: app/controllers/integration/pgp_controller.rb:46
 msgid "gpg (GnuPG) 2.2.0 or newer is required"
 msgstr "GPG（GNUPG）2.2.0或需要更新"
 

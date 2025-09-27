@@ -3744,7 +3744,7 @@ msgstr "Təsirə məruz qalan obyektlər üçün şərtlər"
 msgid "Conditions for shown tickets"
 msgstr "Təqdim olunan biletlər üçün şərtlər"
 
-#: app/assets/javascripts/app/controllers/widget/placeholder.coffee:130
+#: app/assets/javascripts/app/controllers/widget/placeholder.coffee:134
 msgid "Config"
 msgstr "Konfiqurasiya"
 
@@ -13460,7 +13460,9 @@ msgid "Pagination links"
 msgstr "Təşkilat biletləri"
 
 #: app/controllers/integration/smime_controller.rb:77
-msgid "Parameter 'data' or 'file' required."
+#, fuzzy
+#| msgid "Parameter 'data' or 'file' required."
+msgid "Parameter 'private_key' or 'file' required."
 msgstr "\"Məlumat\" və ya \"fayl\" parametrini göstərməlisiniz."
 
 #: app/assets/javascripts/app/controllers/widget/link/ticket.coffee:4
@@ -22406,7 +22408,7 @@ msgstr ""
 msgid "from (relative)"
 msgstr ""
 
-#: app/controllers/integration/pgp_controller.rb:48
+#: app/controllers/integration/pgp_controller.rb:46
 msgid "gpg (GnuPG) 2.2.0 or newer is required"
 msgstr ""
 

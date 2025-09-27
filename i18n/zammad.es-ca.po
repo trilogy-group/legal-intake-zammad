@@ -4123,7 +4123,7 @@ msgstr "Condicions per als objectes"
 msgid "Conditions for shown tickets"
 msgstr "Condicions per als tiquets mostrats"
 
-#: app/assets/javascripts/app/controllers/widget/placeholder.coffee:130
+#: app/assets/javascripts/app/controllers/widget/placeholder.coffee:134
 msgid "Config"
 msgstr "Configuració"
 
@@ -14497,7 +14497,7 @@ msgstr "Tiquets de la meva organització"
 
 #: app/controllers/integration/smime_controller.rb:77
 #, fuzzy
-msgid "Parameter 'data' or 'file' required."
+msgid "Parameter 'private_key' or 'file' required."
 msgstr "Parameter 'data' or 'file' required."
 
 #: app/assets/javascripts/app/controllers/widget/link/ticket.coffee:4
@@ -24916,7 +24916,7 @@ msgstr "de"
 msgid "from (relative)"
 msgstr "from (relative)"
 
-#: app/controllers/integration/pgp_controller.rb:48
+#: app/controllers/integration/pgp_controller.rb:46
 #, fuzzy
 msgid "gpg (GnuPG) 2.2.0 or newer is required"
 msgstr "gpg (GnuPG) 2.2.0 or newer is required"

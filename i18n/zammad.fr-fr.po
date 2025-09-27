@@ -3781,7 +3781,7 @@ msgstr "Conditions pour les éléments concernés"
 msgid "Conditions for shown tickets"
 msgstr "Conditions d'affichage des tickets"
 
-#: app/assets/javascripts/app/controllers/widget/placeholder.coffee:130
+#: app/assets/javascripts/app/controllers/widget/placeholder.coffee:134
 msgid "Config"
 msgstr "Configuration"
 
@@ -12937,7 +12937,9 @@ msgid "Pagination links"
 msgstr "Liens de pagination"
 
 #: app/controllers/integration/smime_controller.rb:77
-msgid "Parameter 'data' or 'file' required."
+#, fuzzy
+#| msgid "Parameter 'data' or 'file' required."
+msgid "Parameter 'private_key' or 'file' required."
 msgstr "Le paramètre 'data' ou 'file' est requis."
 
 #: app/assets/javascripts/app/controllers/widget/link/ticket.coffee:4
@@ -22185,7 +22187,7 @@ msgstr "de"
 msgid "from (relative)"
 msgstr "A partir du (valeur relative)"
 
-#: app/controllers/integration/pgp_controller.rb:48
+#: app/controllers/integration/pgp_controller.rb:46
 msgid "gpg (GnuPG) 2.2.0 or newer is required"
 msgstr "la version gpg (GnuPG) 2.2.0 ou plus récente est requise"
 

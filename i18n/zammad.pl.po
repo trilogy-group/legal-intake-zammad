@@ -3745,7 +3745,7 @@ msgstr "Warunki dla zmienianych obiektów"
 msgid "Conditions for shown tickets"
 msgstr "Warunki dla wyświetlanych zgłoszeń"
 
-#: app/assets/javascripts/app/controllers/widget/placeholder.coffee:130
+#: app/assets/javascripts/app/controllers/widget/placeholder.coffee:134
 msgid "Config"
 msgstr "Config"
 
@@ -13212,7 +13212,9 @@ msgid "Pagination links"
 msgstr "Zgłoszenia organizacji"
 
 #: app/controllers/integration/smime_controller.rb:77
-msgid "Parameter 'data' or 'file' required."
+#, fuzzy
+#| msgid "Parameter 'data' or 'file' required."
+msgid "Parameter 'private_key' or 'file' required."
 msgstr "Wymagany parametr „dane” lub „plik”."
 
 #: app/assets/javascripts/app/controllers/widget/link/ticket.coffee:4
@@ -22756,7 +22758,7 @@ msgstr "od"
 msgid "from (relative)"
 msgstr "od (względny)"
 
-#: app/controllers/integration/pgp_controller.rb:48
+#: app/controllers/integration/pgp_controller.rb:46
 msgid "gpg (GnuPG) 2.2.0 or newer is required"
 msgstr "gpg (GnuPG) 2.2.0 lub nowszy jest wymagany"
 

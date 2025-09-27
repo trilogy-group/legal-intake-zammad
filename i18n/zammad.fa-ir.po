@@ -3585,7 +3585,7 @@ msgstr "شرایط آبجکت‌های موردنظر"
 msgid "Conditions for shown tickets"
 msgstr "شرایط برای تیک‌تهای نمایش‌داده‌شده"
 
-#: app/assets/javascripts/app/controllers/widget/placeholder.coffee:130
+#: app/assets/javascripts/app/controllers/widget/placeholder.coffee:134
 msgid "Config"
 msgstr "تنظیم کردن"
 
@@ -12649,7 +12649,7 @@ msgid "Pagination links"
 msgstr "تیکت‌های سازمان"
 
 #: app/controllers/integration/smime_controller.rb:77
-msgid "Parameter 'data' or 'file' required."
+msgid "Parameter 'private_key' or 'file' required."
 msgstr ""
 
 #: app/assets/javascripts/app/controllers/widget/link/ticket.coffee:4
@@ -21687,7 +21687,7 @@ msgstr "از"
 msgid "from (relative)"
 msgstr "از (نسبی)"
 
-#: app/controllers/integration/pgp_controller.rb:48
+#: app/controllers/integration/pgp_controller.rb:46
 msgid "gpg (GnuPG) 2.2.0 or newer is required"
 msgstr ""
 

@@ -3763,7 +3763,7 @@ msgstr "Условия отбора объектов"
 msgid "Conditions for shown tickets"
 msgstr "Условия для отображения заявок"
 
-#: app/assets/javascripts/app/controllers/widget/placeholder.coffee:130
+#: app/assets/javascripts/app/controllers/widget/placeholder.coffee:134
 msgid "Config"
 msgstr "Настройки"
 
@@ -12888,7 +12888,9 @@ msgid "Pagination links"
 msgstr "Ссылки пагинации"
 
 #: app/controllers/integration/smime_controller.rb:77
-msgid "Parameter 'data' or 'file' required."
+#, fuzzy
+#| msgid "Parameter 'data' or 'file' required."
+msgid "Parameter 'private_key' or 'file' required."
 msgstr "Параметр «данные» (data) или «файл» (file) обязателен."
 
 #: app/assets/javascripts/app/controllers/widget/link/ticket.coffee:4
@@ -22102,7 +22104,7 @@ msgstr "от"
 msgid "from (relative)"
 msgstr "от (относительно)"
 
-#: app/controllers/integration/pgp_controller.rb:48
+#: app/controllers/integration/pgp_controller.rb:46
 msgid "gpg (GnuPG) 2.2.0 or newer is required"
 msgstr "Требуется gpg (GnuPG) 2.2.0 или новее"
 
