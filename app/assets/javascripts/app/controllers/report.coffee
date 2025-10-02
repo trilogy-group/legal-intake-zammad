@@ -469,6 +469,9 @@ class TimePicker extends App.Controller
     @el.find('.time-slot').removeClass('active')
     @el.find('.time-slot[data-type="' + @ui.params.timeRange + '"]').addClass('active')
 
+  currentMonthEndDay: ->
+    new Date(@ui.params.year, @ui.params.month, 0).getDate()
+
   selectTimeDay: (e) =>
     e.preventDefault()
     @ui.params.day = $(e.target).data('type')
@@ -480,6 +483,8 @@ class TimePicker extends App.Controller
   selectTimeMonth: (e) =>
     e.preventDefault()
     @ui.params.month = $(e.target).data('type')
+    @ui.params.day   = Math.min(@ui.params.day, @currentMonthEndDay())
+    @_timeSlotPicker()
     $(e.target).parent().parent().find('li').removeClass('active')
     $(e.target).parent().addClass('active')
     App.Event.trigger('ui:report:rerender')
@@ -496,6 +501,7 @@ class TimePicker extends App.Controller
   selectTimeYear: (e) =>
     e.preventDefault()
     @ui.params.year = $(e.target).data('type')
+    @ui.params.day  = Math.min(@ui.params.day, @currentMonthEndDay())
     @_timeSlotPicker()
     $(e.target).parent().parent().find('li').removeClass('active')
     $(e.target).parent().addClass('active')
@@ -575,7 +581,7 @@ class TimePicker extends App.Controller
       @timeRangeWeek.push record
 
     @timeRangeDay = []
-    for item in [1..31]
+    for item in [1..@currentMonthEndDay()]
       record = {
         display: item
         value: item
