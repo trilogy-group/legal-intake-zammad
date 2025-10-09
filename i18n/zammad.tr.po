@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zammad\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-09-08 22:00+0000\n"
+"PO-Revision-Date: 2025-10-02 07:00+0000\n"
 "Last-Translator: Murat Duman <mduman@metu.edu.tr>\n"
 "Language-Team: Turkish <https://translations.zammad.org/projects/zammad/"
 "zammad-stable/tr/>\n"
@@ -12820,10 +12820,8 @@ msgid "Pagination links"
 msgstr "Sayfalandırma bağlantıları"
 
 #: app/controllers/integration/smime_controller.rb:77
-#, fuzzy
-#| msgid "Parameter 'data' or 'file' required."
 msgid "Parameter 'private_key' or 'file' required."
-msgstr "'data' veya 'file' parametresi gereklidir."
+msgstr "'private_key' veya 'file' parametresi gereklidir."
 
 #: app/assets/javascripts/app/controllers/widget/link/ticket.coffee:4
 #: app/assets/javascripts/app/models/knowledge_base_category.coffee:87
@@ -13771,7 +13769,6 @@ msgstr "Beni hatırla"
 msgid "Reminder message"
 msgstr "Hatırlatma mesajı"
 
-#: app/assets/javascripts/app/views/generic/postmaster_match.jst.eco:18
 #: app/assets/javascripts/app/views/generic/postmaster_set_row.jst.eco:17
 msgid "Remote"
 msgstr "Uzak"
@@ -13783,6 +13780,7 @@ msgstr "Uzak"
 #: app/assets/javascripts/app/views/channel/topics.jst.eco:32
 #: app/assets/javascripts/app/views/generic/application_selector_row.jst.eco:28
 #: app/assets/javascripts/app/views/generic/application_selector_subclause.jst.eco:15
+#: app/assets/javascripts/app/views/generic/postmaster_match.jst.eco:18
 #: app/assets/javascripts/app/views/generic/ticket_perform_action/row.jst.eco:13
 #: app/assets/javascripts/app/views/generic/user_permission_group.jst.eco:25
 #: app/assets/javascripts/app/views/integration/clearbit.jst.eco:39
@@ -17563,7 +17561,7 @@ msgstr ""
 "The text at the beginning of the subject in an email reply, e.g. RE, AW, or "
 "AS."
 
-#: app/services/service/ticket/update/validator/checklist_completed.rb:16
+#: app/services/service/ticket/update/validator/checklist_completed.rb:17
 msgid "The ticket checklist is incomplete."
 msgstr "Destek talebi kontrol listesi eksik."
 

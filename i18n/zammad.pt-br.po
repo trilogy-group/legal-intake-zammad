@@ -13773,7 +13773,6 @@ msgstr "Lembrar de mim"
 msgid "Reminder message"
 msgstr "Mensagem de lembrete"
 
-#: app/assets/javascripts/app/views/generic/postmaster_match.jst.eco:18
 #: app/assets/javascripts/app/views/generic/postmaster_set_row.jst.eco:17
 msgid "Remote"
 msgstr "Remoto"
@@ -13785,6 +13784,7 @@ msgstr "Remoto"
 #: app/assets/javascripts/app/views/channel/topics.jst.eco:32
 #: app/assets/javascripts/app/views/generic/application_selector_row.jst.eco:28
 #: app/assets/javascripts/app/views/generic/application_selector_subclause.jst.eco:15
+#: app/assets/javascripts/app/views/generic/postmaster_match.jst.eco:18
 #: app/assets/javascripts/app/views/generic/ticket_perform_action/row.jst.eco:13
 #: app/assets/javascripts/app/views/generic/user_permission_group.jst.eco:25
 #: app/assets/javascripts/app/views/integration/clearbit.jst.eco:39
@@ -17592,7 +17592,7 @@ msgstr ""
 "O texto no início do campo assunto quando é feita uma resposta (ex: RE: "
 "RES:, etc)."
 
-#: app/services/service/ticket/update/validator/checklist_completed.rb:16
+#: app/services/service/ticket/update/validator/checklist_completed.rb:17
 msgid "The ticket checklist is incomplete."
 msgstr "A lista de verificação do chamado está incompleta."
 

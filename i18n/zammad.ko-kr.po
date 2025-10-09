@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zammad\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-09-05 22:00+0000\n"
-"Last-Translator: newsam202 <newsam202@naver.com>\n"
+"PO-Revision-Date: 2025-10-08 22:00+0000\n"
+"Last-Translator: kdh949 <donghyun.kim@chungbuk.ac.kr>\n"
 "Language-Team: Korean <https://translations.zammad.org/projects/zammad/"
 "zammad-stable/ko/>\n"
 "Language: ko-kr\n"
@@ -46,12 +46,6 @@ msgid "FORMAT_DATETIME"
 msgstr "yyyy-mm-dd HH:MM"
 
 #: db/seeds/settings.rb:368
-#, fuzzy
-#| msgid ""
-#| "\"Database\" stores all attachments in the database (not recommended for "
-#| "storing large amounts of data). \"Filesystem\" stores the data in the "
-#| "filesystem. You can switch between the modules even on a system that is "
-#| "already in production without any loss of data."
 msgid ""
 "\"Database\" stores all attachments in the database (not recommended for "
 "storing large amounts of data). \"Filesystem\" stores the data in the "
@@ -59,9 +53,9 @@ msgid ""
 "compatible object filesystem. You can switch between the modules even on a "
 "system that is already in production without any loss of data."
 msgstr ""
-"'데이터베이스'는 모든 첨부파일을 데이터베이스에 저장합니다(대량의 데이터를 저"
-"장할 때는 권장하지 않음). '파일시스템'은 파일시스템에 데이터를 저장합니다. 이"
-"미 운영 중인 시스템에서도 데이터 손실 없이 모듈 간에 전환할 수 있습니다."
+"'데이터베이스'는 모든 첨부파일을 데이터베이스에 저장합니다(대량의 데이터를 "
+"저장할 때는 권장하지 않음). '파일시스템'은 파일시스템에 데이터를 저장합니다. "
+"이미 운영 중인 시스템에서도 데이터 손실 없이 모듈 간에 전환할 수 있습니다."
 
 #. This is the template file app/views/messaging/ticket_create/en.md.erb in ERB/Markdown format.
 #. Please make sure to translate it to a valid corresponding output structure.
@@ -381,7 +375,6 @@ msgstr "%s (알수없음)"
 
 #: app/assets/javascripts/app/views/telegram/bot_add.jst.eco:9
 #: app/assets/javascripts/app/views/telegram/bot_edit.jst.eco:6
-#, fuzzy
 msgid "%s API Token"
 msgstr "%s API Token"
 
@@ -393,8 +386,6 @@ msgstr "%s 속성"
 #: app/assets/javascripts/app/controllers/ticket_zoom/sidebar_checklist/show.coffee:34
 #: app/assets/javascripts/app/views/ticket_zoom/sidebar_checklist/title_edit.jst.eco:6
 #: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarChecklist/TicketSidebarChecklistContent.vue:53
-#, fuzzy
-#| msgid "Checksum"
 msgid "%s Checklist"
 msgstr "체크섬"
 
@@ -403,10 +394,8 @@ msgid "%s Group"
 msgstr "%s 그룹"
 
 #: app/frontend/apps/desktop/pages/guided-setup/views/GuidedSetupImport/GuidedSetupImportSource/GuidedSetupImportSourceStatus.vue:51
-#, fuzzy
-#| msgid "Import"
 msgid "%s Import Status"
-msgstr "가져오기"
+msgstr "%s 정보 가져오기"
 
 #: app/assets/javascripts/app/views/import/freshdesk.jst.eco:61
 #: app/assets/javascripts/app/views/import/kayako.jst.eco:65
@@ -422,7 +411,6 @@ msgstr "%s 역할"
 #: app/assets/javascripts/app/views/import/freshdesk.jst.eco:5
 #: app/assets/javascripts/app/views/import/kayako.jst.eco:5
 #: app/assets/javascripts/app/views/import/zendesk.jst.eco:5
-#, fuzzy
 msgid "%s URL"
 msgstr "%s URL"
 
@@ -438,7 +426,7 @@ msgstr "%s 첨부 파일"
 #: app/assets/javascripts/app/models/data_privacy_task.coffee:32
 #: app/frontend/shared/composables/activity-message/activityMessageBuilder/builders/data-privacy-task.ts:39
 msgid "%s completed data privacy task to delete user ID |%s|"
-msgstr ""
+msgstr "%s가 사용자 ID |%s|를 삭제하기 위한 개인정보 보호 작업을 완료했습니다"
 
 #: app/assets/javascripts/app/models/ticket_article.coffee:49
 #: app/frontend/shared/composables/activity-message/activityMessageBuilder/builders/ticket-article.ts:26
@@ -489,16 +477,11 @@ msgstr "%s 이전"
 #: app/assets/javascripts/app/controllers/getting_started/channel_email.coffee:260
 #: app/assets/javascripts/app/views/channel/email_archive.jst.eco:7
 #: app/frontend/apps/desktop/entities/channel-email/composables/useEmailInboundMessagesForm.ts:27
-#, fuzzy
-#| msgid ""
-#| "We have already found %s email(s) in your mailbox. Zammad will move it "
-#| "all from your mailbox into Zammad."
 msgid ""
 "%s email(s) were found in your mailbox. They will all be moved from your "
 "mailbox into Zammad."
-msgstr ""
-"우리는 이미 사서함 %s 이메일 (들)을 발견했다. Zammad는 Zammad에 사서함에서 모"
-"든 이동합니다."
+msgstr "%s개의 이메일이 귀하의 사서함에서 발견되었습니다. 모두 사서함에서 Zammad로 "
+"이동됩니다."
 
 #: app/assets/javascripts/app/models/user.coffee:222
 #: app/frontend/shared/composables/activity-message/activityMessageBuilder/builders/user.ts:33
@@ -528,14 +511,12 @@ msgid "%s is inactive, please select an active one."
 msgstr "%s 가 비활성 상태입니다. 활성 항목을 선택하십시오."
 
 #: app/frontend/shared/form/i18n/locales.ts:533
-#, fuzzy
-#| msgid "%s required!"
 msgid "%s is required."
-msgstr "%S가 필요합니다!"
+msgstr "%s는 필수입니다."
 
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_action/whatsapp_reply.coffee:67
 msgid "%s is sent without text caption"
-msgstr ""
+msgstr "%s가 텍스트 캡션 없이 전송되었습니다"
 
 #: app/frontend/shared/i18n/dates.ts:120
 msgid "%s minutes ago"
@@ -546,10 +527,8 @@ msgid "%s months ago"
 msgstr "%s 달전"
 
 #: app/frontend/apps/desktop/components/QuickSearch/QuickSearchResultList/QuickSearchResultList.vue:164
-#, fuzzy
-#| msgid "See more"
 msgid "%s more"
-msgstr "더보기"
+msgstr "%s개 더"
 
 #: app/assets/javascripts/app/views/generic/object_import/imported.jst.eco:21
 msgid "%s object(s) have been created."
@@ -578,20 +557,16 @@ msgstr "%s 객체가 업데이트됩니다."
 #: app/assets/javascripts/app/views/ticket_zoom/meta.jst.eco:19
 #: app/frontend/apps/desktop/pages/guided-setup/views/GuidedSetupImport/GuidedSetupImportSource/GuidedSetupImportSourceStatus.vue:234
 #: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/TicketDetailTopBar/TopBarHeader/TicketInformation/TicketInformationBadgeList/ChecklistBadgeList.vue:54
-#, fuzzy
-#| msgid "Manage %s"
 msgid "%s of %s"
-msgstr "%s 관리"
+msgstr "%s / %s"
 
 #: app/assets/javascripts/app/views/dashboard/stats/ticket_in_process.jst.eco:11
 msgid "%s of my tickets are currently in process."
 msgstr "티켓의 %s 는 현재 진행 중입니다."
 
 #: app/assets/javascripts/app/views/dashboard/stats/ticket_escalation.jst.eco:11
-#, fuzzy
-#| msgid "%s of my tickets escalated."
 msgid "%s of my tickets escalated"
-msgstr "내 Ticket %s은 (는) 에스컬레이션."
+msgstr "내 티켓의 %s가 상위 단계로 이관되었습니다."
 
 #: app/assets/javascripts/app/views/ticket_overview/batch_overlay_user_group.jst.eco:11
 #: app/graphql/gql/queries/autocomplete_search/generic.rb:61
@@ -600,10 +575,8 @@ msgstr "%s 사람들"
 
 #: app/assets/javascripts/app/models/ticket_article.coffee:53
 #: app/frontend/shared/composables/activity-message/activityMessageBuilder/builders/ticket-article.ts:31
-#, fuzzy
-#| msgid "%s ended switch to |%s|!"
 msgid "%s reacted with a %s to message from %s |%s|"
-msgstr "%에의 종료 스위치 |%s|!"
+msgstr "%s가 %s | %s의 메시지에 %s로 응답했습니다"
 
 #: app/assets/javascripts/app/views/channel/email_account_overview.jst.eco:49
 msgid ""
@@ -640,36 +613,28 @@ msgid "%s tickets"
 msgstr "%s Tickets"
 
 #: app/frontend/apps/mobile/pages/ticket/components/TicketList/TicketList.vue:121
-#, fuzzy
-#| msgid "%s tickets"
 msgid "%s tickets found"
-msgstr "%s Tickets"
+msgstr "%s 티켓 발견"
 
 #: app/assets/javascripts/app/models/ticket_article.coffee:51
 #: app/frontend/shared/composables/activity-message/activityMessageBuilder/builders/ticket-article.ts:28
-#, fuzzy
-#| msgid "%s created Article for |%s|"
 msgid "%s updated article for |%s|"
-msgstr "%s |에 대한 %s 생성 제 |"
+msgstr "%s 업데이트된 |%s|"
 
 #: app/assets/javascripts/app/models/data_privacy_task.coffee:30
 #: app/frontend/shared/composables/activity-message/activityMessageBuilder/builders/data-privacy-task.ts:33
 msgid "%s updated data privacy task to delete user ID |%s|"
-msgstr ""
+msgstr "사용자 ID |%s|를 삭제하기 위해 데이터 개인정보 보호 작업을 업데이트했습니다"
 
 #: app/assets/javascripts/app/models/group.coffee:32
 #: app/frontend/shared/composables/activity-message/activityMessageBuilder/builders/group.ts:28
-#, fuzzy
-#| msgid "%s updated Group |%s|"
 msgid "%s updated group |%s|"
 msgstr "%s에 업데이트 된 그룹 |%s|"
 
 #: app/assets/javascripts/app/models/organization.coffee:89
 #: app/frontend/shared/composables/activity-message/activityMessageBuilder/builders/organization.ts:27
-#, fuzzy
-#| msgid "%s updated Organization |%s|"
 msgid "%s updated organization |%s|"
-msgstr "%s 업데이트기구 |%s|"
+msgstr "%s 업데이트 조직 |%s|"
 
 #: app/assets/javascripts/app/models/role.coffee:29
 #: app/frontend/shared/composables/activity-message/activityMessageBuilder/builders/role.ts:28
@@ -700,22 +665,16 @@ msgid "%s user to %s user"
 msgstr "%s 사용자의 사용자 %"
 
 #: lib/whatsapp/webhook/message.rb:53
-#, fuzzy
-#| msgid "Channel"
 msgid "%s via WhatsApp"
-msgstr "채널"
+msgstr "WhatsApp을 통해 %s"
 
 #: app/frontend/shared/i18n/dates.ts:99
-#, fuzzy
-#| msgid "%s ago"
 msgid "%s weeks ago"
-msgstr "%s 전"
+msgstr "%s 주 전"
 
 #: app/frontend/shared/i18n/dates.ts:85
-#, fuzzy
-#| msgid "%s ago"
 msgid "%s years ago"
-msgstr "%s 전"
+msgstr "%s 년 전"
 
 #: app/assets/javascripts/app/views/dashboard/stats/ticket_in_process.jst.eco:11
 msgid "%s% are currently in process"
@@ -727,29 +686,23 @@ msgstr "%s %가 재개되었다"
 
 #: app/models/concerns/has_group_relation_definition.rb:51
 msgid "%{model} can have full or granular access to group"
-msgstr ""
+msgstr "%{model}은 그룹에 대한 전체 또는 세분화된 액세스 권한을 가질 수 있습니다"
 
 #: app/models/object_manager/attribute.rb:635
-#, fuzzy
-#| msgid "%s Object(s) are deleted."
 msgid "%{name} already exists"
-msgstr "%s 객체 (들) 삭제됩니다."
+msgstr "%{name} 이(가) 이미 존재합니다."
 
 #: app/models/object_manager/attribute.rb:619
 msgid "%{name} is a reserved word"
-msgstr ""
+msgstr "%{name} 은 예약어입니다"
 
 #: app/frontend/apps/mobile/components/CommonTicketStateIndicator/CommonTicketStateIndicator.vue:63
-#, fuzzy
-#| msgid "Total: %s"
 msgid "(state: %s)"
-msgstr "총 : %s"
+msgstr "(상태: %s)"
 
 #: app/frontend/apps/desktop/components/CommonTicketStateIndicator/CommonTicketStateIndicatorIcon.vue:58
-#, fuzzy
-#| msgid "Total: %s"
 msgid "(ticket status: %s)"
-msgstr "총 : %s"
+msgstr "(티켓 상태: %s)"
 
 #: app/assets/javascripts/app/models/ticket_time_accounting_type.coffee
 msgid ""
@@ -805,64 +758,52 @@ msgid "1 day"
 msgstr "1일"
 
 #: app/frontend/shared/i18n/dates.ts:105
-#, fuzzy
-#| msgid "1 day"
 msgid "1 day ago"
-msgstr "1일"
+msgstr "1 일 전"
 
 #: db/seeds/settings.rb:1130
 msgid "1 hour"
 msgstr "1시간"
 
 #: app/frontend/shared/i18n/dates.ts:112
-#, fuzzy
-#| msgid "1 hour"
 msgid "1 hour ago"
-msgstr "1시간"
+msgstr "1 시간 전"
 
 #: db/seeds/ticket_priorities.rb:3
 msgid "1 low"
 msgstr "1 low"
 
 #: app/frontend/shared/i18n/dates.ts:119
-#, fuzzy
-#| msgid "minute"
 msgid "1 minute ago"
-msgstr "분"
+msgstr "1 분 전"
 
 #: app/frontend/shared/i18n/dates.ts:91
 msgid "1 month ago"
-msgstr ""
+msgstr "1개월 전"
 
 #: db/seeds/settings.rb:1130
 msgid "1 week"
 msgstr "일주일"
 
 #: app/frontend/shared/i18n/dates.ts:98
-#, fuzzy
-#| msgid "1 week"
 msgid "1 week ago"
-msgstr "일주일"
+msgstr "1주일 전"
 
 #: app/frontend/shared/i18n/dates.ts:84
 msgid "1 year ago"
-msgstr ""
+msgstr "1 년 전"
 
 #: app/assets/javascripts/app/controllers/_integration/slack.coffee:22
-#, fuzzy
-#| msgid "Ticket %s created!"
 msgid "1. Ticket Create"
-msgstr "Ticket %s이 (가) 작성!"
+msgstr "1. 티켓 생성"
 
 #: db/seeds/settings.rb:1130
 msgid "2 hours"
 msgstr "2시간"
 
 #: db/seeds/settings.rb:2176
-#, fuzzy
-#| msgid "2 lower and 2 upper characters"
 msgid "2 lower case and 2 upper case characters"
-msgstr "하위 2 개와 2 위 문자"
+msgstr "소문자 2개, 대문자 2개"
 
 #: db/seeds/ticket_priorities.rb:4
 msgid "2 normal"
@@ -873,10 +814,8 @@ msgid "2 weeks"
 msgstr "2주"
 
 #: app/assets/javascripts/app/controllers/_integration/slack.coffee:23
-#, fuzzy
-#| msgid "Ticket update"
 msgid "2. Ticket Update"
-msgstr "Ticket 업데이트"
+msgstr "2. 티켓 업데이트"
 
 #: db/seeds/ticket_priorities.rb:5
 msgid "3 high"
@@ -887,26 +826,20 @@ msgid "3 weeks"
 msgstr "3주"
 
 #: app/assets/javascripts/app/controllers/_integration/slack.coffee:24
-#, fuzzy
-#| msgid "Ticket reminder reached"
 msgid "3. Ticket Reminder Reached"
-msgstr "Ticket 알림에 도달"
+msgstr "3. 티켓 알림 도달"
 
 #: db/seeds/settings.rb:1130
 msgid "4 weeks"
 msgstr "4주"
 
 #: app/assets/javascripts/app/controllers/_integration/slack.coffee:25
-#, fuzzy
-#| msgid "Ticket escalation"
 msgid "4. Ticket Escalation"
-msgstr "Ticket 에스컬레이션"
+msgstr "4. 티켓 에스컬레이션"
 
 #: app/assets/javascripts/app/controllers/_integration/slack.coffee:26
-#, fuzzy
-#| msgid "Ticket escalation"
 msgid "5. Ticket Escalation Warning"
-msgstr "Ticket 에스컬레이션"
+msgstr "5. 티켓 에스컬레이션 경고"
 
 #: public/assets/chat/chat-no-jquery.coffee:167
 #: public/assets/chat/chat.coffee:165
@@ -4013,10 +3946,8 @@ msgstr "시스템을 구성합니다."
 
 #: app/assets/javascripts/app/controllers/_manage/ticket_notification.coffee:45
 #: app/frontend/apps/desktop/composables/useBetaDisclaimer.ts:54
-#, fuzzy
-#| msgid "Config"
 msgid "Confirm"
-msgstr "구성"
+msgstr "확인"
 
 #: app/assets/javascripts/app/controllers/widget/two_factor_configuration/modal/password_check.coffee:4
 #: app/frontend/apps/desktop/components/TwoFactor/TwoFactorConfiguration/TwoFactorConfigurationPasswordCheck.vue:41
@@ -14719,7 +14650,6 @@ msgstr "날 기억해"
 msgid "Reminder message"
 msgstr "환영 메세지"
 
-#: app/assets/javascripts/app/views/generic/postmaster_match.jst.eco:18
 #: app/assets/javascripts/app/views/generic/postmaster_set_row.jst.eco:17
 msgid "Remote"
 msgstr ""
@@ -14731,6 +14661,7 @@ msgstr ""
 #: app/assets/javascripts/app/views/channel/topics.jst.eco:32
 #: app/assets/javascripts/app/views/generic/application_selector_row.jst.eco:28
 #: app/assets/javascripts/app/views/generic/application_selector_subclause.jst.eco:15
+#: app/assets/javascripts/app/views/generic/postmaster_match.jst.eco:18
 #: app/assets/javascripts/app/views/generic/ticket_perform_action/row.jst.eco:13
 #: app/assets/javascripts/app/views/generic/user_permission_group.jst.eco:25
 #: app/assets/javascripts/app/views/integration/clearbit.jst.eco:39
@@ -18902,7 +18833,7 @@ msgid ""
 msgstr ""
 "AW, 또는 AS 이메일 답장, 예를 들면 RE에서 피사체의 시작 부분에 텍스트입니다."
 
-#: app/services/service/ticket/update/validator/checklist_completed.rb:16
+#: app/services/service/ticket/update/validator/checklist_completed.rb:17
 #, fuzzy
 #| msgid "Enter the URL of your %s system"
 msgid "The ticket checklist is incomplete."

@@ -14340,7 +14340,6 @@ msgstr "Ține-mă minte"
 msgid "Reminder message"
 msgstr "Mesaj de bun venit"
 
-#: app/assets/javascripts/app/views/generic/postmaster_match.jst.eco:18
 #: app/assets/javascripts/app/views/generic/postmaster_set_row.jst.eco:17
 msgid "Remote"
 msgstr "La distanță"
@@ -14352,6 +14351,7 @@ msgstr "La distanță"
 #: app/assets/javascripts/app/views/channel/topics.jst.eco:32
 #: app/assets/javascripts/app/views/generic/application_selector_row.jst.eco:28
 #: app/assets/javascripts/app/views/generic/application_selector_subclause.jst.eco:15
+#: app/assets/javascripts/app/views/generic/postmaster_match.jst.eco:18
 #: app/assets/javascripts/app/views/generic/ticket_perform_action/row.jst.eco:13
 #: app/assets/javascripts/app/views/generic/user_permission_group.jst.eco:25
 #: app/assets/javascripts/app/views/integration/clearbit.jst.eco:39
@@ -18333,7 +18333,7 @@ msgstr ""
 "Textul de la începutul subiectului într-un răspuns prin email, de exemplu, "
 "RE, AW sau AS."
 
-#: app/services/service/ticket/update/validator/checklist_completed.rb:16
+#: app/services/service/ticket/update/validator/checklist_completed.rb:17
 #, fuzzy
 #| msgid "Enter the URL of your %s system"
 msgid "The ticket checklist is incomplete."

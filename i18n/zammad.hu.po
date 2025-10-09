@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zammad\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-09-22 08:21+0000\n"
+"PO-Revision-Date: 2025-10-02 07:00+0000\n"
 "Last-Translator: Ferenc Kutas <ferenc@kutasferenc.hu>\n"
 "Language-Team: Hungarian <https://translations.zammad.org/projects/zammad/"
 "zammad-stable/hu/>\n"
@@ -13401,10 +13401,8 @@ msgid "Pagination links"
 msgstr "Szervezet jegyek"
 
 #: app/controllers/integration/smime_controller.rb:77
-#, fuzzy
-#| msgid "Parameter 'data' or 'file' required."
 msgid "Parameter 'private_key' or 'file' required."
-msgstr "A 'data' vagy 'file' paraméter megadása szükséges."
+msgstr "A 'személyes kulcs' vagy 'file' paraméter megadása szükséges."
 
 #: app/assets/javascripts/app/controllers/widget/link/ticket.coffee:4
 #: app/assets/javascripts/app/models/knowledge_base_category.coffee:87
@@ -13452,11 +13450,11 @@ msgstr "Jelszó hozzáférés"
 
 #: db/seeds/settings.rb:1051
 msgid "Password Login"
-msgstr "Jelszó bejelentkezés"
+msgstr "Jelszóval történő bejelentkezés"
 
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingPassword.vue:32
 msgid "Password change has been disabled by the administrator."
-msgstr ""
+msgstr "A jelszó megváltoztatását az adminisztrátor letiltotta."
 
 #: app/assets/javascripts/app/controllers/_profile/password.coffee:125
 msgid "Password changed successfully!"
@@ -13468,7 +13466,7 @@ msgstr "A jelszó sikeresen megváltoztatva."
 
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingPassword.vue:95
 msgid "Password could not be changed."
-msgstr "A jelszót nem sikerült megváltoztatni."
+msgstr "A jelszó nem módosítható."
 
 #: app/frontend/apps/desktop/components/TwoFactor/TwoFactorConfiguration/TwoFactorConfigurationPasswordCheck.vue:37
 msgid "Password could not be checked"
@@ -13496,14 +13494,13 @@ msgstr "A jelszónak legalább egy speciális karaktert kell tartalmaznia."
 
 #: db/seeds/settings.rb:2139
 msgid "Password needs to have at least a minimal number of characters."
-msgstr "A jelszónak legalább minimális számú karakterből kell állnia."
+msgstr "A jelszónak legalább a minimális számú karakterből kell állnia."
 
 #: app/assets/javascripts/app/views/password/reset_sent.jst.eco:4
 #: app/frontend/apps/desktop/pages/authentication/views/PasswordReset.vue:102
 msgid "Password reset instructions were sent to your email address."
 msgstr ""
-"A jelszó visszaállítására vonatkozó utasítások elküldésre kerültek az Ön e-"
-"mail címére."
+"A jelszó visszaállításához szükséges lépéseket elküldtük az Ön e-mail címére."
 
 #: app/assets/javascripts/app/controllers/_plugin/electron_events.coffee:34
 msgid "Paste"
@@ -13525,7 +13522,7 @@ msgstr "Beillesztés a vágólapról"
 
 #: app/assets/javascripts/app/controllers/_plugin/keyboard_shortcuts.coffee:605
 msgid "Paste from clipboard (plain text)"
-msgstr "Beillesztés a vágólapról (egyszerű szöveg)"
+msgstr "Beillesztés a vágólapról (egyszerű szövegként)"
 
 #: app/assets/javascripts/app/views/generic/object_import/index.jst.eco:25
 msgid "Paste in CSV data"
@@ -13546,7 +13543,7 @@ msgstr "Függőben lévő jegyek"
 #: app/assets/javascripts/app/models/ticket.coffee:113
 #: app/frontend/shared/composables/activity-message/activityMessageBuilder/builders/ticket.ts:29
 msgid "Pending reminder reached for ticket |%s|"
-msgstr "Függőben lévő emlékeztető a |%s| jegyhez"
+msgstr "Emlékeztető a |%s| Függőben lévő jegyhez"
 
 #: app/assets/javascripts/app/models/ticket.coffee:13
 #: app/graphql/gql/types/overview_type.rb:98
@@ -13556,7 +13553,7 @@ msgstr "Függőben a következő időpontig"
 
 #: db/seeds/roles.rb:24
 msgid "People who create Tickets ask for help."
-msgstr "Azok az emberek, akik Jegyeket hoznak létre segítségkéréshez."
+msgstr "A jegyeket létrehozó emberek segítséget kérnek."
 
 #: app/assets/javascripts/app/models/postmaster_filter.coffee:10
 msgid "Perform actions"
@@ -13568,6 +13565,7 @@ msgstr "Tudásbázis végleges törlése"
 
 #: app/assets/javascripts/app/controllers/_manage/ticket_duplicate_detection.coffee:37
 #: db/seeds/settings.rb:2807
+#, fuzzy
 msgid "Permission level for looking up tickets"
 msgstr "Jegyek keresésének engedélyezési szintje"
 
@@ -13606,11 +13604,11 @@ msgstr "Telefon"
 
 #: app/models/report.rb:91
 msgid "Phone (in)"
-msgstr "Telefon (bejövő)"
+msgstr "Telefon (bejövő hívás)"
 
 #: app/models/report.rb:111
 msgid "Phone (out)"
-msgstr "Telefon (kimenő)"
+msgstr "Telefon (kimenő hívás)"
 
 #: app/assets/javascripts/app/views/integration/placetel.jst.eco:119
 #: app/assets/javascripts/app/views/integration/sipgate.jst.eco:103
@@ -14376,7 +14374,6 @@ msgstr "Emlékezzen rám"
 msgid "Reminder message"
 msgstr "Üdvözlő üzenet"
 
-#: app/assets/javascripts/app/views/generic/postmaster_match.jst.eco:18
 #: app/assets/javascripts/app/views/generic/postmaster_set_row.jst.eco:17
 msgid "Remote"
 msgstr "Távoli"
@@ -14388,6 +14385,7 @@ msgstr "Távoli"
 #: app/assets/javascripts/app/views/channel/topics.jst.eco:32
 #: app/assets/javascripts/app/views/generic/application_selector_row.jst.eco:28
 #: app/assets/javascripts/app/views/generic/application_selector_subclause.jst.eco:15
+#: app/assets/javascripts/app/views/generic/postmaster_match.jst.eco:18
 #: app/assets/javascripts/app/views/generic/ticket_perform_action/row.jst.eco:13
 #: app/assets/javascripts/app/views/generic/user_permission_group.jst.eco:25
 #: app/assets/javascripts/app/views/integration/clearbit.jst.eco:39
@@ -18389,7 +18387,7 @@ msgid ""
 "AS."
 msgstr "Az e-mail válasz tárgyának elején lévő szöveg, pl. RE, AW vagy AS."
 
-#: app/services/service/ticket/update/validator/checklist_completed.rb:16
+#: app/services/service/ticket/update/validator/checklist_completed.rb:17
 #, fuzzy
 #| msgid "Enter the URL of your %s system"
 msgid "The ticket checklist is incomplete."

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zammad\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-09-22 08:21+0000\n"
+"PO-Revision-Date: 2025-10-02 07:00+0000\n"
 "Last-Translator: Carlos Lindo <carloslindo@gmail.com>\n"
 "Language-Team: Portuguese (Portugal) <https://translations.zammad.org/"
 "projects/zammad/zammad-stable/pt_PT/>\n"
@@ -13875,18 +13875,16 @@ msgstr "My Organization Tickets"
 
 #: app/controllers/integration/smime_controller.rb:77
 msgid "Parameter 'private_key' or 'file' required."
-msgstr ""
+msgstr "Parâmetro 'private_key' ou 'file' obrigatório."
 
 #: app/assets/javascripts/app/controllers/widget/link/ticket.coffee:4
 #: app/assets/javascripts/app/models/knowledge_base_category.coffee:87
 msgid "Parent"
-msgstr "Ascendente"
+msgstr "Principal"
 
 #: db/seeds/object_manager_attributes.rb:2054
-#, fuzzy
-#| msgid "Parent"
 msgid "Parent group"
-msgstr "Ascendente"
+msgstr "Grupo principal"
 
 #: app/assets/javascripts/app/controllers/_channel/email.coffee:393
 #: app/assets/javascripts/app/controllers/_manage/security.coffee:10
@@ -13916,62 +13914,50 @@ msgstr "Palavra-passe"
 
 #: app/assets/javascripts/app/controllers/_profile/password.coffee:3
 #: app/assets/javascripts/app/views/profile/password.jst.eco:3
-#, fuzzy
-#| msgid "Authentication"
 msgid "Password & Authentication"
-msgstr "Authentication"
+msgstr "Palavra-passe e Autenticação"
 
 #: app/assets/javascripts/app/views/api.jst.eco:30
 msgid "Password Access"
-msgstr "Password Access"
+msgstr "Acesso com palavra-passe"
 
 #: db/seeds/settings.rb:1051
-#, fuzzy
-#| msgid "Password"
 msgid "Password Login"
-msgstr "Palavra-passe"
+msgstr "Início de sessão com palavra-passe"
 
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingPassword.vue:32
 msgid "Password change has been disabled by the administrator."
-msgstr ""
+msgstr "A alteração da palavra-passe foi desativada pelo administrador."
 
 #: app/assets/javascripts/app/controllers/_profile/password.coffee:125
 msgid "Password changed successfully!"
-msgstr ""
+msgstr "Palavra-passe alterada com sucesso!"
 
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingPassword.vue:110
-#, fuzzy
-#| msgid "The test run was successful."
 msgid "Password changed successfully."
-msgstr "O teste executou com sucesso."
+msgstr "Palavra-passe alterada com sucesso."
 
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingPassword.vue:95
-#, fuzzy
-#| msgid "%s Object(s) are created."
 msgid "Password could not be changed."
-msgstr "%s Object(s) estão criados."
+msgstr "Não foi possível alterar a palavra-passe."
 
 #: app/frontend/apps/desktop/components/TwoFactor/TwoFactorConfiguration/TwoFactorConfigurationPasswordCheck.vue:37
-#, fuzzy
-#| msgid "%s Object(s) are created."
 msgid "Password could not be checked"
-msgstr "%s Object(s) estão criados."
+msgstr "Não foi possível verificar a palavra-passe."
 
 #: app/assets/javascripts/app/views/settings/proxy.jst.eco:15
-#, fuzzy
-#| msgid "Password for proxy connection."
 msgid "Password for proxy connection"
-msgstr "Senha para conexão de proxy."
+msgstr "Palavra-passe para a ligação proxy"
 
 #: db/seeds/settings.rb:556
 msgid "Password for proxy connection."
-msgstr "Senha para conexão de proxy."
+msgstr "Palavra-passe para a ligação proxy."
 
 #: db/seeds/settings.rb:2179
-#, fuzzy
-#| msgid "Password needs to contain 2 lower and 2 upper characters."
 msgid "Password needs to contain 2 lower case and 2 upper case characters."
-msgstr "A senha precisa conter 2 caracteres minúsculos e 2 maiúsculos."
+msgstr ""
+"A palavra-passe precisa de conter 2 caracteres minúsculos e 2 caracteres "
+"maiúsculos."
 
 #: db/seeds/settings.rb:2205
 msgid "Password needs to contain at least one digit."
@@ -14923,7 +14909,6 @@ msgstr "Remember me"
 msgid "Reminder message"
 msgstr "Mensagem de Boas Vindas"
 
-#: app/assets/javascripts/app/views/generic/postmaster_match.jst.eco:18
 #: app/assets/javascripts/app/views/generic/postmaster_set_row.jst.eco:17
 msgid "Remote"
 msgstr ""
@@ -14935,6 +14920,7 @@ msgstr ""
 #: app/assets/javascripts/app/views/channel/topics.jst.eco:32
 #: app/assets/javascripts/app/views/generic/application_selector_row.jst.eco:28
 #: app/assets/javascripts/app/views/generic/application_selector_subclause.jst.eco:15
+#: app/assets/javascripts/app/views/generic/postmaster_match.jst.eco:18
 #: app/assets/javascripts/app/views/generic/ticket_perform_action/row.jst.eco:13
 #: app/assets/javascripts/app/views/generic/user_permission_group.jst.eco:25
 #: app/assets/javascripts/app/views/integration/clearbit.jst.eco:39
@@ -19214,7 +19200,7 @@ msgid ""
 msgstr ""
 "O texto no início do assunto de uma resposta de email. EX: RE, AW. ou AS"
 
-#: app/services/service/ticket/update/validator/checklist_completed.rb:16
+#: app/services/service/ticket/update/validator/checklist_completed.rb:17
 #, fuzzy
 #| msgid "Enter the URL of your %s system"
 msgid "The ticket checklist is incomplete."

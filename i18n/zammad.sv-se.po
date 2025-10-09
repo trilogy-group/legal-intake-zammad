@@ -13677,7 +13677,6 @@ msgstr "Kom ihåg mig"
 msgid "Reminder message"
 msgstr "Påminnelsemeddelande"
 
-#: app/assets/javascripts/app/views/generic/postmaster_match.jst.eco:18
 #: app/assets/javascripts/app/views/generic/postmaster_set_row.jst.eco:17
 msgid "Remote"
 msgstr "Fjärråtkomst"
@@ -13689,6 +13688,7 @@ msgstr "Fjärråtkomst"
 #: app/assets/javascripts/app/views/channel/topics.jst.eco:32
 #: app/assets/javascripts/app/views/generic/application_selector_row.jst.eco:28
 #: app/assets/javascripts/app/views/generic/application_selector_subclause.jst.eco:15
+#: app/assets/javascripts/app/views/generic/postmaster_match.jst.eco:18
 #: app/assets/javascripts/app/views/generic/ticket_perform_action/row.jst.eco:13
 #: app/assets/javascripts/app/views/generic/user_permission_group.jst.eco:25
 #: app/assets/javascripts/app/views/integration/clearbit.jst.eco:39
@@ -17461,7 +17461,7 @@ msgid ""
 "AS."
 msgstr "Texten i början av ämnet i ett e-postsvar, t.ex. RE, AW eller AS."
 
-#: app/services/service/ticket/update/validator/checklist_completed.rb:16
+#: app/services/service/ticket/update/validator/checklist_completed.rb:17
 msgid "The ticket checklist is incomplete."
 msgstr "Ärendets checklista är ofullständig."
 
@@ -19699,8 +19699,8 @@ msgstr ""
 "<div>Hej #{recipient.firstname},</div>\n"
 "<br>\n"
 "<div>\n"
-"Ärende (#{ticket.title}) har uppdaterats av "
-"\"<b>#{current_user.longname}</b>\".\n"
+"Ärende (#{ticket.title}) har uppdaterats av \"<b>#{current_user.longname}</"
+"b>\".\n"
 "</div>\n"
 "<br>\n"
 "<% if @objects[:changes].present? %>\n"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zammad\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-09-25 07:19+0000\n"
+"PO-Revision-Date: 2025-10-09 22:00+0000\n"
 "Last-Translator: mathew-uems <mathew.chen@edgentauems.com.tw>\n"
 "Language-Team: Chinese (Traditional Han script) <https://"
 "translations.zammad.org/projects/zammad/zammad-stable/zh_Hant/>\n"
@@ -2607,15 +2607,15 @@ msgstr ""
 msgid ""
 "At least one identifier (firstname, lastname, phone, mobile or email) for "
 "user is required."
-msgstr ""
+msgstr "至少需要一個使用者識別（名字、姓氏、電話、手機或電子郵件）。"
 
 #: app/models/postmaster_filter.rb:29
 msgid "At least one match rule is required, but none was provided."
-msgstr ""
+msgstr "至少需要符合一個規則，但未提供。"
 
 #: app/assets/javascripts/app/controllers/widget/ticket_bulk_form.coffee:155
 msgid "At least one object must be selected."
-msgstr ""
+msgstr "至少選擇一個物件。"
 
 #: app/models/role.rb:128 app/models/user.rb:710
 msgid "At least one user needs to have admin permissions."
@@ -11280,10 +11280,8 @@ msgid "Manage public links of your system."
 msgstr ""
 
 #: db/seeds/permissions.rb:102
-#, fuzzy
-#| msgid "To configure your system."
 msgid "Manage report profiles of your system."
-msgstr "配置系統。"
+msgstr "管理您的系統報告配置文件。"
 
 #: db/seeds/permissions.rb:24
 #, fuzzy
@@ -11302,10 +11300,8 @@ msgid "Manage security settings of your system."
 msgstr ""
 
 #: db/seeds/permissions.rb:300
-#, fuzzy
-#| msgid "Enter the URL of your %s system"
 msgid "Manage system report of your system."
-msgstr "輸入您的 %s 系統的網址 URL"
+msgstr "管理您的系統報告配置文件。"
 
 #: db/seeds/permissions.rb:42
 #, fuzzy
@@ -13891,7 +13887,7 @@ msgstr "我所在機構的工單"
 
 #: app/controllers/integration/smime_controller.rb:77
 msgid "Parameter 'private_key' or 'file' required."
-msgstr ""
+msgstr "需要 'private_key' 或 'file' 參數。"
 
 #: app/assets/javascripts/app/controllers/widget/link/ticket.coffee:4
 #: app/assets/javascripts/app/models/knowledge_base_category.coffee:87
@@ -14281,58 +14277,55 @@ msgstr ""
 msgid ""
 "Please note that this attribute is deprecated within one of the next "
 "versions of Zammad. Use the IDP certificate instead."
-msgstr ""
+msgstr "請注意，此屬性在 Zammad 的後續版本中已棄用。 請改用 IDP 憑證。"
 
 #: app/frontend/apps/desktop/components/CommonError/CommonError.vue:45
 msgid "Please proceed to login"
-msgstr ""
+msgstr "請繼續登入"
 
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_action/email_reply.coffee:385
 msgid "Please provide a recipient in \"TO\" or \"CC\"."
-msgstr ""
+msgstr "請在「TO」或「CC」提供收件人。"
 
 #: app/controllers/users_controller.rb:381
-#, fuzzy
-#| msgid "Choose your new password."
 msgid "Please provide your current password."
-msgstr "選擇您的新密碼。"
+msgstr "請提供您目前的密碼。"
 
 #: app/assets/javascripts/app/controllers/_profile/password.coffee:105
 #: app/assets/javascripts/app/controllers/password_reset_verify.coffee:87
 #: app/controllers/users_controller.rb:386
-#, fuzzy
-#| msgid "Choose your new password."
 msgid "Please provide your new password."
-msgstr "選擇您的新密碼。"
+msgstr "請提供您新的密碼。"
 
 #: app/assets/javascripts/app/views/widget/two_factor_configuration/recovery_codes.jst.eco:2
 #: app/frontend/apps/desktop/components/TwoFactor/TwoFactorConfiguration/TwoFactorConfigurationRecoveryCodes.vue:100
 msgid ""
 "Please save your recovery codes listed below somewhere safe. You can use "
 "them to sign in if you lose access to another two-factor method:"
-msgstr ""
+msgstr "請將下列的恢復碼保存在安全的地方。 "
+"如果您無法使用其他雙重驗證方法，可以使用恢復碼登入："
 
 #: app/assets/javascripts/app/controllers/ticket_zoom/sidebar_checklist/start.coffee:76
 msgid "Please select a checklist template."
-msgstr ""
+msgstr "請選擇一個確認清單範本。"
 
 #: app/frontend/apps/mobile/pages/ticket/composable/useTicketsMerge.ts:60
 msgid "Please select a ticket to merge into."
-msgstr ""
+msgstr "請選擇要合併的工單。"
 
 #: app/controllers/integration/exchange_controller.rb:52
 msgid "Please select at least one folder."
-msgstr ""
+msgstr "請選擇至少一個資料夾。"
 
 #: app/frontend/apps/mobile/pages/home/views/FavoriteTicketOverviewsEdit.vue:75
 msgid "Please select at least one ticket overview"
-msgstr ""
+msgstr "請選擇至少一個工單概覽"
 
 #: app/assets/javascripts/app/views/integration/exchange.jst.eco:5
 msgid ""
 "Please select the authentication method that should be used to establish the "
 "connection to your Exchange server."
-msgstr ""
+msgstr "請選擇用於建立與 Exchange 伺服器連線的驗證方法。"
 
 #: app/assets/javascripts/app/views/microsoft365/user_mismatch.jst.eco:4
 msgid ""
@@ -14345,11 +14338,11 @@ msgstr ""
 
 #: app/frontend/apps/desktop/pages/guided-setup/views/GuidedSetupAutomated/GuidedSetupAutomatedInfo.vue:13
 msgid "Please use the provided URL."
-msgstr ""
+msgstr "請使用提供的URL。"
 
 #: app/frontend/apps/desktop/components/CommonSkeleton/CommonSkeleton.vue:28
 msgid "Please wait until content is loaded"
-msgstr ""
+msgstr "請等待內容載入完成"
 
 #: app/assets/javascripts/app/views/exchange/admin_consent.jst.eco:3
 #: app/assets/javascripts/app/views/microsoft365/admin_consent.jst.eco:3
@@ -14925,7 +14918,6 @@ msgstr "記住我 (請不要在公共電腦勾選此選項)"
 msgid "Reminder message"
 msgstr "歡迎訊息"
 
-#: app/assets/javascripts/app/views/generic/postmaster_match.jst.eco:18
 #: app/assets/javascripts/app/views/generic/postmaster_set_row.jst.eco:17
 msgid "Remote"
 msgstr ""
@@ -14937,6 +14929,7 @@ msgstr ""
 #: app/assets/javascripts/app/views/channel/topics.jst.eco:32
 #: app/assets/javascripts/app/views/generic/application_selector_row.jst.eco:28
 #: app/assets/javascripts/app/views/generic/application_selector_subclause.jst.eco:15
+#: app/assets/javascripts/app/views/generic/postmaster_match.jst.eco:18
 #: app/assets/javascripts/app/views/generic/ticket_perform_action/row.jst.eco:13
 #: app/assets/javascripts/app/views/generic/user_permission_group.jst.eco:25
 #: app/assets/javascripts/app/views/integration/clearbit.jst.eco:39
@@ -16813,10 +16806,8 @@ msgid "Show ticket actions"
 msgstr "總覽"
 
 #: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketDetailViewHeader.vue:82
-#, fuzzy
-#| msgid "Overviews"
 msgid "Show ticket viewers"
-msgstr "總覽"
+msgstr "顯示工單總覽"
 
 #: app/assets/javascripts/app/views/time_accounting/settings.jst.eco:6
 #: db/seeds/settings.rb:4089
@@ -17564,10 +17555,8 @@ msgstr ""
 #: app/assets/javascripts/app/controllers/system_report.coffee:3
 #: app/assets/javascripts/app/views/system_report.jst.eco:2
 #: db/seeds/permissions.rb:299
-#, fuzzy
-#| msgid "System URL"
 msgid "System Report"
-msgstr "系統 URL"
+msgstr "系統報告"
 
 #: app/assets/javascripts/app/views/getting_started/base.jst.eco:22
 #: app/frontend/apps/desktop/pages/guided-setup/views/GuidedSetupManual/GuidedSetupManualSystemInformation.vue:57
@@ -18418,7 +18407,7 @@ msgstr "已進行以下更動："
 
 #: app/assets/javascripts/app/views/system_report.jst.eco:13
 msgid "The following contents are provided in the system report:"
-msgstr ""
+msgstr "以下內容由系統報告提供："
 
 #: app/assets/javascripts/app/controllers/_application_controller/_modal.coffee:196
 msgid ""
@@ -19120,6 +19109,9 @@ msgid ""
 "you can see in the preview below. If you get in touch with the Zammad "
 "support, this JSON file is helpful identifying your issue."
 msgstr ""
+"系統報告提供了用於支援和分析的系統狀態和配置的總結版本。您可以點選「下載」按"
+"鈕下載報告。 Zammad 隨後會提供一個 JSON 文件如下面的預覽所示。如果您聯絡 "
+"Zammad 支援團隊，此 JSON 檔案將有助於您識別問題。"
 
 #: app/services/service/system/check_setup.rb:18
 msgid ""
@@ -19158,7 +19150,7 @@ msgid ""
 "AS."
 msgstr "電子郵件回覆中主旨的開頭文字，例如 RE, AW 或 AS。"
 
-#: app/services/service/ticket/update/validator/checklist_completed.rb:16
+#: app/services/service/ticket/update/validator/checklist_completed.rb:17
 msgid "The ticket checklist is incomplete."
 msgstr "工單確認清單尚未完成。"
 
