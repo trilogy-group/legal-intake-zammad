@@ -34,6 +34,13 @@ FactoryBot.define do
       to   { "#{ticket.customer.fullname} <#{ticket.customer.email}>" }
     end
 
+    trait :system_outbound_email do
+      transient do
+        type_name   { 'email' }
+        sender_name { 'System' }
+      end
+    end
+
     trait :inbound_phone do
       transient do
         type_name { 'phone' }
