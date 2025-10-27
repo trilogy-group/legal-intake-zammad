@@ -962,7 +962,7 @@ msgid ""
 "A test ticket has been created, you can find it in your overview \"%s\" %l."
 msgstr "Testni ticket je kreiran, možete ga naći u pregledu \"%s\" %l."
 
-#: app/models/ticket.rb:279
+#: app/models/ticket.rb:285
 msgid "A ticket cannot be merged into itself."
 msgstr "Ticket se ne može spojiti sa samim sobom."
 
@@ -3019,7 +3019,7 @@ msgstr ""
 #: app/assets/javascripts/app/controllers/_application_controller/after_auth_modal.coffee:9
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_action/email_reply.coffee:382
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_action/twitter_reply.coffee:177
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:342
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:354
 #: app/assets/javascripts/app/views/integration/exchange_certificate_issue.jst.eco:18
 #: app/assets/javascripts/app/views/integration/exchange_wizard.jst.eco:236
 #: app/assets/javascripts/app/views/integration/ldap_wizard.jst.eco:286
@@ -3103,7 +3103,7 @@ msgstr "Vanjski izvor podataka %s nije moguće obraditi. %s"
 msgid "Cannot set online notifications as seen"
 msgstr "Nije moguće označiti obavijesti kao pročitane"
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:800
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:814
 msgid "Cannot upload file"
 msgstr "Nije moguće prenijeti datoteku"
 
@@ -3931,7 +3931,7 @@ msgstr "Sadržaj nije moguće učitati."
 msgid "Content loader"
 msgstr "Učitavanje sadržaja"
 
-#: app/models/store.rb:82
+#: app/models/store.rb:83
 msgid "Content preview could not be generated."
 msgstr "Pretpregled sadržaja nije moguće stvoriti."
 
@@ -7675,7 +7675,7 @@ msgstr "Datoteka '%s' se učitava"
 msgid "File format is not allowed: %s"
 msgstr "Format datoteke nije dopušten: %s"
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:861
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:875
 #: app/frontend/shared/components/Form/fields/FieldFile/composable/useFileValidation.ts:26
 #: lib/validations/ticket_article_validator/whatsapp_message.rb:38
 msgid "File is too big. %s has to be %s or smaller."
@@ -9207,7 +9207,7 @@ msgstr ""
 "napredak migracije na ovoj stranici kako biste bili obaviješteni čim uvoz "
 "uspješno završi."
 
-#: app/models/store.rb:94
+#: app/models/store.rb:95
 msgid "Inline content could not be generated."
 msgstr "Neposredni sadržaj nije moguće generirati."
 
@@ -9583,7 +9583,7 @@ msgstr "Nije moguće obrisati sustavskog korisnika."
 msgid "It is not possible to delete your current account."
 msgstr "Nije moguće obrisati svoj trenutni račun."
 
-#: app/models/ticket.rb:277
+#: app/models/ticket.rb:283
 msgid "It is not possible to merge into an already merged ticket."
 msgstr "Nije moguće spajanje u već spojeni ticket."
 
@@ -11780,7 +11780,7 @@ msgstr "Nema tokena!"
 msgid "No translation for this locale available"
 msgstr "Nema prijevoda za ovaj jezik"
 
-#: app/models/ticket.rb:400
+#: app/models/ticket.rb:408
 msgid "No triggers active"
 msgstr "Nema aktivnih okidača"
 
@@ -12180,7 +12180,7 @@ msgstr "Internetska usluga"
 msgid "Only %s attachment allowed"
 msgstr "Dopušten samo %s prilog"
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:826
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:840
 msgid "Only %s attachment allowed."
 msgstr "Samo %s prilog dopušten."
 
@@ -13028,7 +13028,7 @@ msgstr ""
 "Molimo, omogućite korištenje execution_time funkcije (trenutno je dopuštena "
 "samo za okidače i automatizacije)"
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:345
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:357
 msgid "Please enter a text."
 msgstr "Molimo, unesite tekst."
 
@@ -14926,7 +14926,7 @@ msgstr "Pošiljatelj zadnjeg članka"
 msgid "Sending Email Address"
 msgstr "E-mail adresa odgovora"
 
-#: app/models/ticket/article.rb:308
+#: app/models/ticket/article.rb:317
 msgid "Sending an email without a valid recipient is not possible."
 msgstr "Slanje maila bez ispravnog primatelja nije moguće."
 
@@ -16200,7 +16200,7 @@ msgstr "Tekstualno polje"
 
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_action/email_reply.coffee:381
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_action/twitter_reply.coffee:176
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:341
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:353
 msgid "Text missing"
 msgstr "Nedostaje tekst"
 
@@ -16730,7 +16730,7 @@ msgstr "Datoteku nije moguće prenijeti."
 msgid "The file does not belong to the specified article."
 msgstr "Datoteka ne pripada navedenom članku."
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:855
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:869
 #: app/frontend/shared/components/Form/fields/FieldFile/features/filesTypeError.ts:22
 msgid "The file type %s is not allowed."
 msgstr "Vrsta datoteke %s nije dopuštena."
@@ -21011,7 +21011,7 @@ msgid "You reached the table limit of %s tickets (%s remaining)."
 msgstr "Dosegnuli ste ograničenje od %s ticketa (%s preostalih)."
 
 #: app/assets/javascripts/app/controllers/agent_ticket_create.coffee:760
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:357
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:369
 msgid ""
 "You used %s in the text but no attachment could be found. Do you want to "
 "continue?"

@@ -933,7 +933,7 @@ msgstr ""
 "Un tiquet de test ha sigut creat, pots trobar-lo a la teva vista general "
 "\"%s\" %l."
 
-#: app/models/ticket.rb:279
+#: app/models/ticket.rb:285
 #, fuzzy
 #| msgid "%s Object(s) are created."
 msgid "A ticket cannot be merged into itself."
@@ -3292,7 +3292,7 @@ msgstr ""
 #: app/assets/javascripts/app/controllers/_application_controller/after_auth_modal.coffee:9
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_action/email_reply.coffee:382
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_action/twitter_reply.coffee:177
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:342
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:354
 #: app/assets/javascripts/app/views/integration/exchange_certificate_issue.jst.eco:18
 #: app/assets/javascripts/app/views/integration/exchange_wizard.jst.eco:236
 #: app/assets/javascripts/app/views/integration/ldap_wizard.jst.eco:286
@@ -3386,7 +3386,7 @@ msgstr "Cannot process external data source %s. %s"
 msgid "Cannot set online notifications as seen"
 msgstr "Gestiona la configuració de les notificacions"
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:800
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:814
 #, fuzzy
 msgid "Cannot upload file"
 msgstr "Cannot upload file"
@@ -4365,7 +4365,7 @@ msgstr "Objecte %s han sigut creats."
 msgid "Content loader"
 msgstr "Contingut"
 
-#: app/models/store.rb:82
+#: app/models/store.rb:83
 #, fuzzy
 #| msgid "%s Object(s) are created."
 msgid "Content preview could not be generated."
@@ -8521,7 +8521,7 @@ msgstr "File '%s' is uploading"
 msgid "File format is not allowed: %s"
 msgstr "File format is not allowed: %s"
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:861
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:875
 #: app/frontend/shared/components/Form/fields/FieldFile/composable/useFileValidation.ts:26
 #: lib/validations/ticket_article_validator/whatsapp_message.rb:38
 #, fuzzy
@@ -10328,7 +10328,7 @@ msgid ""
 "successfully finished."
 msgstr ""
 
-#: app/models/store.rb:94
+#: app/models/store.rb:95
 #, fuzzy
 #| msgid "%s Object(s) are created."
 msgid "Inline content could not be generated."
@@ -10750,7 +10750,7 @@ msgstr "It is not possible to delete the system user."
 msgid "It is not possible to delete your current account."
 msgstr "Estàs segur d'eliminar aquest objecte?"
 
-#: app/models/ticket.rb:277
+#: app/models/ticket.rb:283
 #, fuzzy
 msgid "It is not possible to merge into an already merged ticket."
 msgstr "It is not possible to merge into an already merged ticket."
@@ -13389,7 +13389,7 @@ msgstr "No token!"
 msgid "No translation for this locale available"
 msgstr "Cap traducció per aquesta regió disponible"
 
-#: app/models/ticket.rb:400
+#: app/models/ticket.rb:408
 #, fuzzy
 msgid "No triggers active"
 msgstr "No triggers active"
@@ -13847,7 +13847,7 @@ msgstr "Online Service"
 msgid "Only %s attachment allowed"
 msgstr "Adjunta fitxers"
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:826
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:840
 #, fuzzy
 msgid "Only %s attachment allowed."
 msgstr "Only %s attachment allowed."
@@ -14865,7 +14865,7 @@ msgid ""
 "triggers and schedulers)"
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:345
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:357
 #, fuzzy
 msgid "Please enter a text."
 msgstr "Please enter a text."
@@ -17061,7 +17061,7 @@ msgstr "Respon a l'últim article"
 msgid "Sending Email Address"
 msgstr "Adreça de correu"
 
-#: app/models/ticket/article.rb:308
+#: app/models/ticket/article.rb:317
 #, fuzzy
 msgid "Sending an email without a valid recipient is not possible."
 msgstr "Sending an email without a valid recipient is not possible."
@@ -18561,7 +18561,7 @@ msgstr "Edició de text"
 
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_action/email_reply.coffee:381
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_action/twitter_reply.coffee:176
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:341
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:353
 msgid "Text missing"
 msgstr "Falta el text"
 
@@ -19211,7 +19211,7 @@ msgstr "Objecte %s han sigut creats."
 msgid "The file does not belong to the specified article."
 msgstr "The file does not belong to the specified article."
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:855
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:869
 #: app/frontend/shared/components/Form/fields/FieldFile/features/filesTypeError.ts:22
 #, fuzzy
 #| msgid "Time Accounting"
@@ -24042,7 +24042,7 @@ msgid "You reached the table limit of %s tickets (%s remaining)."
 msgstr "The limit of %s displayable tickets was reached (%s remaining)"
 
 #: app/assets/javascripts/app/controllers/agent_ticket_create.coffee:760
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:357
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:369
 #, fuzzy
 #| msgid ""
 #| "You use %s in text but no attachment is attached. Do you want to continue?"

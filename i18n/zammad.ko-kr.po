@@ -53,9 +53,9 @@ msgid ""
 "compatible object filesystem. You can switch between the modules even on a "
 "system that is already in production without any loss of data."
 msgstr ""
-"'데이터베이스'는 모든 첨부파일을 데이터베이스에 저장합니다(대량의 데이터를 "
-"저장할 때는 권장하지 않음). '파일시스템'은 파일시스템에 데이터를 저장합니다. "
-"이미 운영 중인 시스템에서도 데이터 손실 없이 모듈 간에 전환할 수 있습니다."
+"'데이터베이스'는 모든 첨부파일을 데이터베이스에 저장합니다(대량의 데이터를 저"
+"장할 때는 권장하지 않음). '파일시스템'은 파일시스템에 데이터를 저장합니다. 이"
+"미 운영 중인 시스템에서도 데이터 손실 없이 모듈 간에 전환할 수 있습니다."
 
 #. This is the template file app/views/messaging/ticket_create/en.md.erb in ERB/Markdown format.
 #. Please make sure to translate it to a valid corresponding output structure.
@@ -480,8 +480,9 @@ msgstr "%s 이전"
 msgid ""
 "%s email(s) were found in your mailbox. They will all be moved from your "
 "mailbox into Zammad."
-msgstr "%s개의 이메일이 귀하의 사서함에서 발견되었습니다. 모두 사서함에서 Zammad로 "
-"이동됩니다."
+msgstr ""
+"%s개의 이메일이 귀하의 사서함에서 발견되었습니다. 모두 사서함에서 Zammad로 이"
+"동됩니다."
 
 #: app/assets/javascripts/app/models/user.coffee:222
 #: app/frontend/shared/composables/activity-message/activityMessageBuilder/builders/user.ts:33
@@ -624,7 +625,8 @@ msgstr "%s 업데이트된 |%s|"
 #: app/assets/javascripts/app/models/data_privacy_task.coffee:30
 #: app/frontend/shared/composables/activity-message/activityMessageBuilder/builders/data-privacy-task.ts:33
 msgid "%s updated data privacy task to delete user ID |%s|"
-msgstr "사용자 ID |%s|를 삭제하기 위해 데이터 개인정보 보호 작업을 업데이트했습니다"
+msgstr ""
+"사용자 ID |%s|를 삭제하기 위해 데이터 개인정보 보호 작업을 업데이트했습니다"
 
 #: app/assets/javascripts/app/models/group.coffee:32
 #: app/frontend/shared/composables/activity-message/activityMessageBuilder/builders/group.ts:28
@@ -686,7 +688,8 @@ msgstr "%s %가 재개되었다"
 
 #: app/models/concerns/has_group_relation_definition.rb:51
 msgid "%{model} can have full or granular access to group"
-msgstr "%{model}은 그룹에 대한 전체 또는 세분화된 액세스 권한을 가질 수 있습니다"
+msgstr ""
+"%{model}은 그룹에 대한 전체 또는 세분화된 액세스 권한을 가질 수 있습니다"
 
 #: app/models/object_manager/attribute.rb:635
 msgid "%{name} already exists"
@@ -922,7 +925,7 @@ msgstr ""
 "테스트 Ticket은 당신이 당신의 Overview \"%s\"%s 리터에서 찾을 수 있습니다, 작"
 "성되었습니다."
 
-#: app/models/ticket.rb:279
+#: app/models/ticket.rb:285
 #, fuzzy
 #| msgid "%s Object(s) are created."
 msgid "A ticket cannot be merged into itself."
@@ -3128,7 +3131,7 @@ msgstr ""
 #: app/assets/javascripts/app/controllers/_application_controller/after_auth_modal.coffee:9
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_action/email_reply.coffee:382
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_action/twitter_reply.coffee:177
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:342
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:354
 #: app/assets/javascripts/app/views/integration/exchange_certificate_issue.jst.eco:18
 #: app/assets/javascripts/app/views/integration/exchange_wizard.jst.eco:236
 #: app/assets/javascripts/app/views/integration/ldap_wizard.jst.eco:286
@@ -3216,7 +3219,7 @@ msgstr ""
 msgid "Cannot set online notifications as seen"
 msgstr "알림 설정 관리"
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:800
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:814
 msgid "Cannot upload file"
 msgstr ""
 
@@ -4121,7 +4124,7 @@ msgstr "%s 객체 (들)이 생성된다."
 msgid "Content loader"
 msgstr "컨텐츠"
 
-#: app/models/store.rb:82
+#: app/models/store.rb:83
 #, fuzzy
 #| msgid "%s Object(s) are created."
 msgid "Content preview could not be generated."
@@ -8021,7 +8024,7 @@ msgstr ""
 msgid "File format is not allowed: %s"
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:861
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:875
 #: app/frontend/shared/components/Form/fields/FieldFile/composable/useFileValidation.ts:26
 #: lib/validations/ticket_article_validator/whatsapp_message.rb:38
 msgid "File is too big. %s has to be %s or smaller."
@@ -9677,7 +9680,7 @@ msgid ""
 "successfully finished."
 msgstr ""
 
-#: app/models/store.rb:94
+#: app/models/store.rb:95
 #, fuzzy
 #| msgid "%s Object(s) are created."
 msgid "Inline content could not be generated."
@@ -10059,7 +10062,7 @@ msgstr ""
 msgid "It is not possible to delete your current account."
 msgstr "이 개체를 삭제해야?"
 
-#: app/models/ticket.rb:277
+#: app/models/ticket.rb:283
 msgid "It is not possible to merge into an already merged ticket."
 msgstr ""
 
@@ -12556,7 +12559,7 @@ msgstr ""
 msgid "No translation for this locale available"
 msgstr ""
 
-#: app/models/ticket.rb:400
+#: app/models/ticket.rb:408
 msgid "No triggers active"
 msgstr ""
 
@@ -12994,7 +12997,7 @@ msgstr ""
 msgid "Only %s attachment allowed"
 msgstr "%s 첨부 파일"
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:826
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:840
 msgid "Only %s attachment allowed."
 msgstr ""
 
@@ -13959,7 +13962,7 @@ msgid ""
 "triggers and schedulers)"
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:345
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:357
 msgid "Please enter a text."
 msgstr ""
 
@@ -16036,7 +16039,7 @@ msgstr "마지막 기사에 회신"
 msgid "Sending Email Address"
 msgstr "이메일 주소"
 
-#: app/models/ticket/article.rb:308
+#: app/models/ticket/article.rb:317
 msgid "Sending an email without a valid recipient is not possible."
 msgstr ""
 
@@ -17455,7 +17458,7 @@ msgstr "텍스트 편집"
 
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_action/email_reply.coffee:381
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_action/twitter_reply.coffee:176
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:341
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:353
 msgid "Text missing"
 msgstr "텍스트 누락"
 
@@ -18061,7 +18064,7 @@ msgstr "%s 객체 (들)이 생성된다."
 msgid "The file does not belong to the specified article."
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:855
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:869
 #: app/frontend/shared/components/Form/fields/FieldFile/features/filesTypeError.ts:22
 #, fuzzy
 #| msgid "Time Accounting"
@@ -22586,7 +22589,7 @@ msgid "You reached the table limit of %s tickets (%s remaining)."
 msgstr ""
 
 #: app/assets/javascripts/app/controllers/agent_ticket_create.coffee:760
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:357
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:369
 #, fuzzy
 #| msgid ""
 #| "You use %s in text but no attachment is attached. Do you want to continue?"

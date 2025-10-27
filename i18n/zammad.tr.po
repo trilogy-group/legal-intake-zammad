@@ -976,7 +976,7 @@ msgstr ""
 "Bir test destek talebi oluşturuldu, bunu \"%s\" genel bakışınızda "
 "bulabilirsiniz %l."
 
-#: app/models/ticket.rb:279
+#: app/models/ticket.rb:285
 msgid "A ticket cannot be merged into itself."
 msgstr "Bir destek talebi kendi içinde birleştirilemez."
 
@@ -3044,7 +3044,7 @@ msgstr ""
 #: app/assets/javascripts/app/controllers/_application_controller/after_auth_modal.coffee:9
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_action/email_reply.coffee:382
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_action/twitter_reply.coffee:177
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:342
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:354
 #: app/assets/javascripts/app/views/integration/exchange_certificate_issue.jst.eco:18
 #: app/assets/javascripts/app/views/integration/exchange_wizard.jst.eco:236
 #: app/assets/javascripts/app/views/integration/ldap_wizard.jst.eco:286
@@ -3128,7 +3128,7 @@ msgstr "%s harici veri kaynağı işlenemiyor. %S"
 msgid "Cannot set online notifications as seen"
 msgstr "Çevrimiçi bildirimler görüldü olarak ayarlanamıyor"
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:800
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:814
 msgid "Cannot upload file"
 msgstr "Dosya yüklenemiyor"
 
@@ -3965,7 +3965,7 @@ msgstr "İçerik yüklenemedi."
 msgid "Content loader"
 msgstr "İçerik yükleyici"
 
-#: app/models/store.rb:82
+#: app/models/store.rb:83
 msgid "Content preview could not be generated."
 msgstr "İçerik önizlemesi oluşturulamadı."
 
@@ -7754,7 +7754,7 @@ msgstr "Dosya yükleniyor '%s'"
 msgid "File format is not allowed: %s"
 msgstr "Dosya biçimine izin verilmiyor: %s"
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:861
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:875
 #: app/frontend/shared/components/Form/fields/FieldFile/composable/useFileValidation.ts:26
 #: lib/validations/ticket_article_validator/whatsapp_message.rb:38
 msgid "File is too big. %s has to be %s or smaller."
@@ -9305,7 +9305,7 @@ msgstr ""
 "aktarma başarıyla tamamlanır tamamlanmaz bilgilendirilmek için bu sayfadan "
 "geçiş ilerlemesini takip edin."
 
-#: app/models/store.rb:94
+#: app/models/store.rb:95
 msgid "Inline content could not be generated."
 msgstr "Satır içi içerik oluşturulamadı."
 
@@ -9677,7 +9677,7 @@ msgstr "Sistem kullanıcısını silmek mümkün değildir."
 msgid "It is not possible to delete your current account."
 msgstr "Mevcut hesabınızı silmeniz mümkün değildir."
 
-#: app/models/ticket.rb:277
+#: app/models/ticket.rb:283
 msgid "It is not possible to merge into an already merged ticket."
 msgstr ""
 "Zaten birleştirilmiş bir destek talebiyle birleştirmek mümkün değildir."
@@ -11877,7 +11877,7 @@ msgstr "Belirteç yok!"
 msgid "No translation for this locale available"
 msgstr "No translation for this locale available"
 
-#: app/models/ticket.rb:400
+#: app/models/ticket.rb:408
 msgid "No triggers active"
 msgstr "Etkin tetikleyici yok"
 
@@ -12277,7 +12277,7 @@ msgstr "Çevrimiçi Servis"
 msgid "Only %s attachment allowed"
 msgstr "Yalnızca %s ekine izin verilir"
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:826
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:840
 msgid "Only %s attachment allowed."
 msgstr "Yalnızca %s ekine izin verilir."
 
@@ -13133,7 +13133,7 @@ msgstr ""
 "Kullanmak için lütfen execution_time özelliğini etkinleştirin (şu anda "
 "yalnızca tetikleyiciler ve zamanlayıcılar için izin verilmektedir)"
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:345
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:357
 msgid "Please enter a text."
 msgstr "Lütfen bir metin girin."
 
@@ -15042,7 +15042,7 @@ msgstr "Son yazının göndericisi"
 msgid "Sending Email Address"
 msgstr "Gönderen Eposta Adresi"
 
-#: app/models/ticket/article.rb:308
+#: app/models/ticket/article.rb:317
 msgid "Sending an email without a valid recipient is not possible."
 msgstr "Geçerli bir alıcı olmadan e-posta göndermek mümkün değildir."
 
@@ -16319,7 +16319,7 @@ msgstr "Metin alanı"
 
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_action/email_reply.coffee:381
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_action/twitter_reply.coffee:176
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:341
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:353
 msgid "Text missing"
 msgstr "Text missing"
 
@@ -16850,7 +16850,7 @@ msgstr "Dosya yüklenemedi."
 msgid "The file does not belong to the specified article."
 msgstr "Dosya belirtilen yazıya ait değil."
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:855
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:869
 #: app/frontend/shared/components/Form/fields/FieldFile/features/filesTypeError.ts:22
 msgid "The file type %s is not allowed."
 msgstr "Dosya türü %s'ye izin verilmiyor."
@@ -21167,7 +21167,7 @@ msgstr ""
 "Tablo limitiniz olan %s destek talebine ulaştınız (%s destek talebi kaldı)."
 
 #: app/assets/javascripts/app/controllers/agent_ticket_create.coffee:760
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:357
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:369
 msgid ""
 "You used %s in the text but no attachment could be found. Do you want to "
 "continue?"

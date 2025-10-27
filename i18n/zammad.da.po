@@ -962,7 +962,7 @@ msgid ""
 "A test ticket has been created, you can find it in your overview \"%s\" %l."
 msgstr "Der er oprettet en testsag, du kan finde den i dit overblik \"%s\" %l."
 
-#: app/models/ticket.rb:279
+#: app/models/ticket.rb:285
 msgid "A ticket cannot be merged into itself."
 msgstr "En sag kan ikke flettes med sig selv."
 
@@ -3016,7 +3016,7 @@ msgstr ""
 #: app/assets/javascripts/app/controllers/_application_controller/after_auth_modal.coffee:9
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_action/email_reply.coffee:382
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_action/twitter_reply.coffee:177
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:342
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:354
 #: app/assets/javascripts/app/views/integration/exchange_certificate_issue.jst.eco:18
 #: app/assets/javascripts/app/views/integration/exchange_wizard.jst.eco:236
 #: app/assets/javascripts/app/views/integration/ldap_wizard.jst.eco:286
@@ -3098,7 +3098,7 @@ msgstr "Kan ikke behandle den ekstern datakilde %s. %s"
 msgid "Cannot set online notifications as seen"
 msgstr "Kan ikke indstille online notifikationer som set"
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:800
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:814
 msgid "Cannot upload file"
 msgstr "Kan ikke uploade fil"
 
@@ -3925,7 +3925,7 @@ msgstr "Indhold kunne ikke læses."
 msgid "Content loader"
 msgstr "Indhold indlæser"
 
-#: app/models/store.rb:82
+#: app/models/store.rb:83
 msgid "Content preview could not be generated."
 msgstr "Indholdseksempel kunne ikke genereres."
 
@@ -7640,7 +7640,7 @@ msgstr ""
 msgid "File format is not allowed: %s"
 msgstr "Fil er for stor, max. %s MB tilladt."
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:861
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:875
 #: app/frontend/shared/components/Form/fields/FieldFile/composable/useFileValidation.ts:26
 #: lib/validations/ticket_article_validator/whatsapp_message.rb:38
 #, fuzzy
@@ -9199,7 +9199,7 @@ msgid ""
 "successfully finished."
 msgstr ""
 
-#: app/models/store.rb:94
+#: app/models/store.rb:95
 #, fuzzy
 #| msgid "%s Object(s) are created."
 msgid "Inline content could not be generated."
@@ -9595,7 +9595,7 @@ msgstr "Det er ikke muligt at slette systembrugeren."
 msgid "It is not possible to delete your current account."
 msgstr "Er du sikker på at dette objekt skal slettes?"
 
-#: app/models/ticket.rb:277
+#: app/models/ticket.rb:283
 msgid "It is not possible to merge into an already merged ticket."
 msgstr ""
 
@@ -11950,7 +11950,7 @@ msgstr "Ingen token!"
 msgid "No translation for this locale available"
 msgstr "Der er ingen tilgængelig oversættelse til dette sted"
 
-#: app/models/ticket.rb:400
+#: app/models/ticket.rb:408
 msgid "No triggers active"
 msgstr ""
 
@@ -12375,7 +12375,7 @@ msgstr "Online Service"
 msgid "Only %s attachment allowed"
 msgstr "%s vedhæftede filer"
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:826
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:840
 msgid "Only %s attachment allowed."
 msgstr ""
 
@@ -13304,7 +13304,7 @@ msgid ""
 "triggers and schedulers)"
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:345
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:357
 msgid "Please enter a text."
 msgstr ""
 
@@ -15323,7 +15323,7 @@ msgstr "Besvar den sidste artikel"
 msgid "Sending Email Address"
 msgstr "Email adresse"
 
-#: app/models/ticket/article.rb:308
+#: app/models/ticket/article.rb:317
 msgid "Sending an email without a valid recipient is not possible."
 msgstr ""
 
@@ -16698,7 +16698,7 @@ msgstr "Tekstfelt"
 
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_action/email_reply.coffee:381
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_action/twitter_reply.coffee:176
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:341
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:353
 msgid "Text missing"
 msgstr "Tekst mangler"
 
@@ -17299,7 +17299,7 @@ msgstr "Fil kunne ikke uploades."
 msgid "The file does not belong to the specified article."
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:855
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:869
 #: app/frontend/shared/components/Form/fields/FieldFile/features/filesTypeError.ts:22
 #, fuzzy
 #| msgid "Feature not enabled!"
@@ -21729,7 +21729,7 @@ msgid "You reached the table limit of %s tickets (%s remaining)."
 msgstr ""
 
 #: app/assets/javascripts/app/controllers/agent_ticket_create.coffee:760
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:357
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:369
 msgid ""
 "You used %s in the text but no attachment could be found. Do you want to "
 "continue?"

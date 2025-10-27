@@ -979,7 +979,7 @@ msgstr ""
 "Um tíquete de teste foi criado, você pode procurar na sua Visão Geral \"%s\" "
 "%l."
 
-#: app/models/ticket.rb:279
+#: app/models/ticket.rb:285
 msgid "A ticket cannot be merged into itself."
 msgstr "Um tíquete não poder ser agrupado com ele mesmo."
 
@@ -3045,7 +3045,7 @@ msgstr ""
 #: app/assets/javascripts/app/controllers/_application_controller/after_auth_modal.coffee:9
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_action/email_reply.coffee:382
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_action/twitter_reply.coffee:177
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:342
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:354
 #: app/assets/javascripts/app/views/integration/exchange_certificate_issue.jst.eco:18
 #: app/assets/javascripts/app/views/integration/exchange_wizard.jst.eco:236
 #: app/assets/javascripts/app/views/integration/ldap_wizard.jst.eco:286
@@ -3130,7 +3130,7 @@ msgstr "Não é possível processar a fonte de dados externa %s. %s"
 msgid "Cannot set online notifications as seen"
 msgstr "Não é possível definir notificações online como lidas"
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:800
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:814
 msgid "Cannot upload file"
 msgstr "Não é possível enviar o arquivo"
 
@@ -3964,7 +3964,7 @@ msgstr "O conteúdo não pode ser carregado."
 msgid "Content loader"
 msgstr "Carregador de conteúdo"
 
-#: app/models/store.rb:82
+#: app/models/store.rb:83
 msgid "Content preview could not be generated."
 msgstr "A prévia do conteúdo não pôde ser gerada."
 
@@ -7748,7 +7748,7 @@ msgstr "O arquivo '%s' está sendo carregado"
 msgid "File format is not allowed: %s"
 msgstr "Formato de arquivo não permitido: %s"
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:861
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:875
 #: app/frontend/shared/components/Form/fields/FieldFile/composable/useFileValidation.ts:26
 #: lib/validations/ticket_article_validator/whatsapp_message.rb:38
 msgid "File is too big. %s has to be %s or smaller."
@@ -9294,7 +9294,7 @@ msgstr ""
 "Acompanhe o progresso da migração nesta página para ser notificado assim que "
 "a importação for concluída com sucesso."
 
-#: app/models/store.rb:94
+#: app/models/store.rb:95
 msgid "Inline content could not be generated."
 msgstr "O conteúdo Inline não pôde ser gerado."
 
@@ -9670,7 +9670,7 @@ msgstr "Não é possível excluir o usuário do sistema."
 msgid "It is not possible to delete your current account."
 msgstr "Não é possível excluir sua conta atual."
 
-#: app/models/ticket.rb:277
+#: app/models/ticket.rb:283
 msgid "It is not possible to merge into an already merged ticket."
 msgstr "Não é possível mesclar em um ticket já mesclado."
 
@@ -11875,7 +11875,7 @@ msgstr "Sem token!"
 msgid "No translation for this locale available"
 msgstr "Nenhuma tradução para esta localidade disponível"
 
-#: app/models/ticket.rb:400
+#: app/models/ticket.rb:408
 msgid "No triggers active"
 msgstr "Nenhum acionador ativo"
 
@@ -12277,7 +12277,7 @@ msgstr "Serviço on-line"
 msgid "Only %s attachment allowed"
 msgstr "Apenas %s anexo é permitido"
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:826
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:840
 msgid "Only %s attachment allowed."
 msgstr "Apenas %s anexo permitido."
 
@@ -13137,7 +13137,7 @@ msgstr ""
 "Ative o recurso de execução_tempo para usá-lo (atualmente permitido apenas "
 "para gatilhos e agendadores)"
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:345
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:357
 msgid "Please enter a text."
 msgstr "Por favor, digite um texto."
 
@@ -15043,7 +15043,7 @@ msgstr "Rementente do último artigo"
 msgid "Sending Email Address"
 msgstr "Endereço de E-mail do Remetente"
 
-#: app/models/ticket/article.rb:308
+#: app/models/ticket/article.rb:317
 msgid "Sending an email without a valid recipient is not possible."
 msgstr "Não é possível enviar um e-mail sem um destinatário válido."
 
@@ -16328,7 +16328,7 @@ msgstr "Campo de texto"
 
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_action/email_reply.coffee:381
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_action/twitter_reply.coffee:176
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:341
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:353
 msgid "Text missing"
 msgstr "Texto faltando"
 
@@ -16868,7 +16868,7 @@ msgstr "O arquivo não pôde ser enviado."
 msgid "The file does not belong to the specified article."
 msgstr "O arquivo não pertence ao artigo especificado."
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:855
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:869
 #: app/frontend/shared/components/Form/fields/FieldFile/features/filesTypeError.ts:22
 msgid "The file type %s is not allowed."
 msgstr "O tipo de arquivo %s não é permitido."
@@ -21225,7 +21225,7 @@ msgid "You reached the table limit of %s tickets (%s remaining)."
 msgstr "Você atingiu o limite da tabela de %s chamados (%s restantes)."
 
 #: app/assets/javascripts/app/controllers/agent_ticket_create.coffee:760
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:357
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:369
 msgid ""
 "You used %s in the text but no attachment could be found. Do you want to "
 "continue?"

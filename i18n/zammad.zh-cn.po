@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zammad\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-05-27 22:00+0000\n"
-"Last-Translator: horizonxh <horizonxh@163.com>\n"
+"PO-Revision-Date: 2025-10-23 22:00+0000\n"
+"Last-Translator: Phoenix <phoenix.yu@vesoft.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://"
 "translations.zammad.org/projects/zammad/zammad-stable/zh_Hans/>\n"
 "Language: zh-cn\n"
@@ -525,10 +525,8 @@ msgid "%s months ago"
 msgstr "%s 个月之前"
 
 #: app/frontend/apps/desktop/components/QuickSearch/QuickSearchResultList/QuickSearchResultList.vue:164
-#, fuzzy
-#| msgid "show more"
 msgid "%s more"
-msgstr "显示更多"
+msgstr "%s 更多"
 
 #: app/assets/javascripts/app/views/generic/object_import/imported.jst.eco:21
 msgid "%s object(s) have been created."
@@ -695,10 +693,8 @@ msgid "(state: %s)"
 msgstr "(状态: %s)"
 
 #: app/frontend/apps/desktop/components/CommonTicketStateIndicator/CommonTicketStateIndicatorIcon.vue:58
-#, fuzzy
-#| msgid "(state: %s)"
 msgid "(ticket status: %s)"
-msgstr "(状态: %s)"
+msgstr "（ 工单状态：%s）"
 
 #: app/assets/javascripts/app/models/ticket_time_accounting_type.coffee
 msgid ""
@@ -894,7 +890,8 @@ msgid ""
 "A group's email address determines which address should be used for outgoing "
 "mails, e.g. when an agent is composing an email or a trigger is sending an "
 "auto-reply"
-msgstr ""
+msgstr "群组的电子邮件地址决定了应使用哪个地址进行外发邮件，例如，当代理撰写电子邮件"
+"或触发器发送自动回复时"
 
 #: db/seeds/settings.rb:4014
 msgid "A list of active import backends that gets scheduled automatically."
@@ -938,7 +935,7 @@ msgid ""
 "A test ticket has been created, you can find it in your overview \"%s\" %l."
 msgstr "测试工单已建立，您可以在工单概览 \"%s\" %l 中找到它。"
 
-#: app/models/ticket.rb:279
+#: app/models/ticket.rb:285
 msgid "A ticket cannot be merged into itself."
 msgstr "一个工单不能与它本身合并。"
 
@@ -2980,7 +2977,7 @@ msgstr "无法更新密码，您输入的密码错误。请再试一次。"
 #: app/assets/javascripts/app/controllers/_application_controller/after_auth_modal.coffee:9
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_action/email_reply.coffee:382
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_action/twitter_reply.coffee:177
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:342
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:354
 #: app/assets/javascripts/app/views/integration/exchange_certificate_issue.jst.eco:18
 #: app/assets/javascripts/app/views/integration/exchange_wizard.jst.eco:236
 #: app/assets/javascripts/app/views/integration/ldap_wizard.jst.eco:286
@@ -3062,7 +3059,7 @@ msgstr "无法处理外部数据源%s. %s"
 msgid "Cannot set online notifications as seen"
 msgstr "无法设置在线通知，如图所示"
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:800
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:814
 msgid "Cannot upload file"
 msgstr "无法上传文件"
 
@@ -3909,7 +3906,7 @@ msgstr "无法加载内容。"
 msgid "Content loader"
 msgstr "内容侧边栏"
 
-#: app/models/store.rb:82
+#: app/models/store.rb:83
 msgid "Content preview could not be generated."
 msgstr "无法生成内容预览。"
 
@@ -7533,7 +7530,7 @@ msgstr "文件“％s”正在上传"
 msgid "File format is not allowed: %s"
 msgstr "不允许文件格式：％s"
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:861
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:875
 #: app/frontend/shared/components/Form/fields/FieldFile/composable/useFileValidation.ts:26
 #: lib/validations/ticket_article_validator/whatsapp_message.rb:38
 msgid "File is too big. %s has to be %s or smaller."
@@ -9049,7 +9046,7 @@ msgstr ""
 "启动导入过程将数据传输到Zammad中。跟踪此页面上的迁移进度，一旦导入成功完成，"
 "请立即通知。"
 
-#: app/models/store.rb:94
+#: app/models/store.rb:95
 msgid "Inline content could not be generated."
 msgstr "无法生成内联内容。"
 
@@ -9423,7 +9420,7 @@ msgstr "无法删除系统用户。"
 msgid "It is not possible to delete your current account."
 msgstr "无法删除您当前的帐户。"
 
-#: app/models/ticket.rb:277
+#: app/models/ticket.rb:283
 msgid "It is not possible to merge into an already merged ticket."
 msgstr "不可能合并成已经合并的票。"
 
@@ -11898,7 +11895,7 @@ msgstr "不象征！"
 msgid "No translation for this locale available"
 msgstr "無法翻譯此語言環境"
 
-#: app/models/ticket.rb:400
+#: app/models/ticket.rb:408
 msgid "No triggers active"
 msgstr "没有触发器活动"
 
@@ -12343,7 +12340,7 @@ msgstr "在线服务"
 msgid "Only %s attachment allowed"
 msgstr "附件"
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:826
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:840
 msgid "Only %s attachment allowed."
 msgstr "仅允许％s附件。"
 
@@ -13255,7 +13252,7 @@ msgid ""
 "triggers and schedulers)"
 msgstr "请启用execution_time功能可以使用它（目前仅适用于触发器和调度程序）"
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:345
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:357
 msgid "Please enter a text."
 msgstr "请输入文字。"
 
@@ -15215,7 +15212,7 @@ msgstr "上一篇文章的发件人"
 msgid "Sending Email Address"
 msgstr "电子邮件"
 
-#: app/models/ticket/article.rb:308
+#: app/models/ticket/article.rb:317
 msgid "Sending an email without a valid recipient is not possible."
 msgstr ""
 
@@ -16519,7 +16516,7 @@ msgstr "文本域"
 
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_action/email_reply.coffee:381
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_action/twitter_reply.coffee:176
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:341
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:353
 msgid "Text missing"
 msgstr "文字遺失"
 
@@ -17037,7 +17034,7 @@ msgstr "文件无法上传。"
 msgid "The file does not belong to the specified article."
 msgstr "该文件不属于指定的文章。"
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:855
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:869
 #: app/frontend/shared/components/Form/fields/FieldFile/features/filesTypeError.ts:22
 msgid "The file type %s is not allowed."
 msgstr "不允许使用文件类型 %s。"
@@ -21813,7 +21810,7 @@ msgid "You reached the table limit of %s tickets (%s remaining)."
 msgstr "达到了百分比可显示票的限额（剩余％S）"
 
 #: app/assets/javascripts/app/controllers/agent_ticket_create.coffee:760
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:357
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:369
 #, fuzzy
 #| msgid ""
 #| "You use %s in text but no attachment is attached. Do you want to continue?"

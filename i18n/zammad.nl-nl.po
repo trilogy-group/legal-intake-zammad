@@ -973,7 +973,7 @@ msgid ""
 msgstr ""
 "Er is een test-ticket aangemaakt, je vindt het in jouw overzicht \"%s\" %l\"."
 
-#: app/models/ticket.rb:279
+#: app/models/ticket.rb:285
 msgid "A ticket cannot be merged into itself."
 msgstr "Een ticket kan niet met zichzelf worden samengevoegd."
 
@@ -3038,7 +3038,7 @@ msgstr ""
 #: app/assets/javascripts/app/controllers/_application_controller/after_auth_modal.coffee:9
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_action/email_reply.coffee:382
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_action/twitter_reply.coffee:177
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:342
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:354
 #: app/assets/javascripts/app/views/integration/exchange_certificate_issue.jst.eco:18
 #: app/assets/javascripts/app/views/integration/exchange_wizard.jst.eco:236
 #: app/assets/javascripts/app/views/integration/ldap_wizard.jst.eco:286
@@ -3126,7 +3126,7 @@ msgstr "Externe databron %s kan niet verwerkt worden. %s"
 msgid "Cannot set online notifications as seen"
 msgstr "Kan online meldingen niet instellen zoals gezien"
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:800
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:814
 msgid "Cannot upload file"
 msgstr "Kan bestand niet uploaden"
 
@@ -3954,7 +3954,7 @@ msgstr "Inhoud kan niet geladen worden."
 msgid "Content loader"
 msgstr "Inhoud lader"
 
-#: app/models/store.rb:82
+#: app/models/store.rb:83
 msgid "Content preview could not be generated."
 msgstr "Inhoudvoorbeeld kan niet gemaakt werd."
 
@@ -7737,7 +7737,7 @@ msgstr "Bestand '%s' wordt geüpload"
 msgid "File format is not allowed: %s"
 msgstr "Bestandsformaat is niet toegestaan: %s"
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:861
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:875
 #: app/frontend/shared/components/Form/fields/FieldFile/composable/useFileValidation.ts:26
 #: lib/validations/ticket_article_validator/whatsapp_message.rb:38
 msgid "File is too big. %s has to be %s or smaller."
@@ -9282,7 +9282,7 @@ msgstr ""
 "voortgang van de migratie bij op deze pagina en ontvang een melding zodra "
 "het importeren is voltooid."
 
-#: app/models/store.rb:94
+#: app/models/store.rb:95
 msgid "Inline content could not be generated."
 msgstr "Inline-inhoud kon niet gegenereerd worden."
 
@@ -9661,7 +9661,7 @@ msgstr "Het is niet mogelijk om de systeemgebruiker te verwijderen."
 msgid "It is not possible to delete your current account."
 msgstr "Het is niet mogelijk om je huidige account te verwijderen."
 
-#: app/models/ticket.rb:277
+#: app/models/ticket.rb:283
 msgid "It is not possible to merge into an already merged ticket."
 msgstr ""
 "Het is niet mogelijk om samen te voegen met een reeds samengevoegd ticket."
@@ -11860,7 +11860,7 @@ msgstr "Geen token!"
 msgid "No translation for this locale available"
 msgstr "Geen vertaling voor dit land beschikbaar"
 
-#: app/models/ticket.rb:400
+#: app/models/ticket.rb:408
 msgid "No triggers active"
 msgstr "Geen triggers actief"
 
@@ -12263,7 +12263,7 @@ msgstr "Online Service"
 msgid "Only %s attachment allowed"
 msgstr "Alleen %s bijlage toegestaan"
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:826
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:840
 msgid "Only %s attachment allowed."
 msgstr "Alleen %s bijlage toegestaan."
 
@@ -13117,7 +13117,7 @@ msgstr ""
 "Schakel de functie execution_time in om deze te gebruiken (momenteel alleen "
 "toegestaan voor triggers en taakplanners)"
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:345
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:357
 msgid "Please enter a text."
 msgstr "Voer een tekst in."
 
@@ -15025,7 +15025,7 @@ msgstr "Afzender van laatste notitie"
 msgid "Sending Email Address"
 msgstr "Verzend e-mailadres"
 
-#: app/models/ticket/article.rb:308
+#: app/models/ticket/article.rb:317
 msgid "Sending an email without a valid recipient is not possible."
 msgstr "Een e-mail versturen zonder geldige ontvanger is niet mogelijk."
 
@@ -16306,7 +16306,7 @@ msgstr "Tekstveld"
 
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_action/email_reply.coffee:381
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_action/twitter_reply.coffee:176
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:341
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:353
 msgid "Text missing"
 msgstr "Tekst ontbreekt"
 
@@ -16843,7 +16843,7 @@ msgstr "Het bestand kon niet worden geupload."
 msgid "The file does not belong to the specified article."
 msgstr "Het bestand behoort niet tot de opgegeven notitie."
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:855
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:869
 #: app/frontend/shared/components/Form/fields/FieldFile/features/filesTypeError.ts:22
 msgid "The file type %s is not allowed."
 msgstr "Het bestandstype %s is niet toegestaan."
@@ -21180,7 +21180,7 @@ msgid "You reached the table limit of %s tickets (%s remaining)."
 msgstr "Je hebt de tabellimiet van %s tickets bereikt (%s over)."
 
 #: app/assets/javascripts/app/controllers/agent_ticket_create.coffee:760
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:357
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:369
 msgid ""
 "You used %s in the text but no attachment could be found. Do you want to "
 "continue?"

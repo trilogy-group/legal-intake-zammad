@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zammad\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-10-02 07:00+0000\n"
-"Last-Translator: Benicio <vonfeben@init7.net>\n"
+"PO-Revision-Date: 2025-10-13 07:00+0000\n"
+"Last-Translator: Martin Gruner <mg@zammad.com>\n"
 "Language-Team: German <https://translations.zammad.org/projects/zammad/"
 "zammad-stable/de/>\n"
 "Language: de-de\n"
@@ -977,7 +977,7 @@ msgid ""
 msgstr ""
 "Ein Test-Ticket wurde erstellt. Sie finden es in der Übersicht \"%s\" %l."
 
-#: app/models/ticket.rb:279
+#: app/models/ticket.rb:285
 msgid "A ticket cannot be merged into itself."
 msgstr "Ein Ticket kann nicht mit sich selbst zusammengefasst werden."
 
@@ -3063,7 +3063,7 @@ msgstr ""
 #: app/assets/javascripts/app/controllers/_application_controller/after_auth_modal.coffee:9
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_action/email_reply.coffee:382
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_action/twitter_reply.coffee:177
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:342
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:354
 #: app/assets/javascripts/app/views/integration/exchange_certificate_issue.jst.eco:18
 #: app/assets/javascripts/app/views/integration/exchange_wizard.jst.eco:236
 #: app/assets/javascripts/app/views/integration/ldap_wizard.jst.eco:286
@@ -3147,7 +3147,7 @@ msgstr "Externe Datenquelle %s kann nicht verarbeitet werden. %s"
 msgid "Cannot set online notifications as seen"
 msgstr "Online-Benachrichtigungen können nicht als gelesen markiert werden"
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:800
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:814
 msgid "Cannot upload file"
 msgstr "Hochladen von Datei fehlgeschlagen"
 
@@ -3985,7 +3985,7 @@ msgstr "Inhalt konnte nicht geladen werden."
 msgid "Content loader"
 msgstr "Inhalts-Ladeanzeige"
 
-#: app/models/store.rb:82
+#: app/models/store.rb:83
 msgid "Content preview could not be generated."
 msgstr "Die Inhaltsvorschau konnte nicht erzeugt werden."
 
@@ -7819,7 +7819,7 @@ msgstr "Datei '%s' wird hochgeladen"
 msgid "File format is not allowed: %s"
 msgstr "Das Dateiformat ist nicht zulässig: %s"
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:861
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:875
 #: app/frontend/shared/components/Form/fields/FieldFile/composable/useFileValidation.ts:26
 #: lib/validations/ticket_article_validator/whatsapp_message.rb:38
 msgid "File is too big. %s has to be %s or smaller."
@@ -9376,7 +9376,7 @@ msgstr ""
 "Verfolgen Sie den Fortschritt der Migration auf dieser Seite, um "
 "benachrichtigt zu werden, sobald der Import erfolgreich abgeschlossen ist."
 
-#: app/models/store.rb:94
+#: app/models/store.rb:95
 msgid "Inline content could not be generated."
 msgstr "Der Inline-Inhalt konnte nicht generiert werden."
 
@@ -9758,7 +9758,7 @@ msgstr "Es ist nicht möglich, den Systembenutzer zu löschen."
 msgid "It is not possible to delete your current account."
 msgstr "Es ist nicht möglich, Ihr aktuelles Konto zu löschen."
 
-#: app/models/ticket.rb:277
+#: app/models/ticket.rb:283
 msgid "It is not possible to merge into an already merged ticket."
 msgstr ""
 "Mit einem bereits zusammengefassten Ticket kann nicht zusammengefasst werden."
@@ -11967,7 +11967,7 @@ msgstr "Kein Token!"
 msgid "No translation for this locale available"
 msgstr "Keine Übersetzung für dieses Gebietsschema verfügbar"
 
-#: app/models/ticket.rb:400
+#: app/models/ticket.rb:408
 msgid "No triggers active"
 msgstr "Keine Trigger aktiv"
 
@@ -12370,7 +12370,7 @@ msgstr "Online-Dienst"
 msgid "Only %s attachment allowed"
 msgstr "Nur %s Anhang erlaubt"
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:826
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:840
 msgid "Only %s attachment allowed."
 msgstr "Nur %s Anhang erlaubt."
 
@@ -13231,7 +13231,7 @@ msgstr ""
 "Bitte aktivieren Sie die Funktion execution_time, um sie zu verwenden "
 "(derzeit nur für Trigger und Scheduler zulässig)"
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:345
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:357
 msgid "Please enter a text."
 msgstr "Geben Sie einen Text ein."
 
@@ -15155,7 +15155,7 @@ msgstr "Sender des letzten Artikels"
 msgid "Sending Email Address"
 msgstr "Versand-E-Mail-Adresse"
 
-#: app/models/ticket/article.rb:308
+#: app/models/ticket/article.rb:317
 msgid "Sending an email without a valid recipient is not possible."
 msgstr "Das Versenden einer E-Mail ohne gültigen Empfänger ist nicht möglich."
 
@@ -16443,7 +16443,7 @@ msgstr "Textfeld"
 
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_action/email_reply.coffee:381
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_action/twitter_reply.coffee:176
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:341
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:353
 msgid "Text missing"
 msgstr "Text fehlt"
 
@@ -16991,7 +16991,7 @@ msgstr "Die Datei konnte nicht hochgeladen werden."
 msgid "The file does not belong to the specified article."
 msgstr "Die Datei gehört nicht zu dem angegebenen Artikel."
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:855
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:869
 #: app/frontend/shared/components/Form/fields/FieldFile/features/filesTypeError.ts:22
 msgid "The file type %s is not allowed."
 msgstr "Der Dateityp %s ist nicht erlaubt."
@@ -21390,7 +21390,7 @@ msgid "You reached the table limit of %s tickets (%s remaining)."
 msgstr "Sie haben das Tabellenlimit von %s Tickets erreicht (%s verbleibend)."
 
 #: app/assets/javascripts/app/controllers/agent_ticket_create.coffee:760
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:357
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:369
 msgid ""
 "You used %s in the text but no attachment could be found. Do you want to "
 "continue?"

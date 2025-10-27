@@ -959,7 +959,7 @@ msgid ""
 "A test ticket has been created, you can find it in your overview \"%s\" %l."
 msgstr "Bol vytvorený skúšobný tiket, ktorý nájdete v vašom prehľade \"%s\"%l."
 
-#: app/models/ticket.rb:279
+#: app/models/ticket.rb:285
 msgid "A ticket cannot be merged into itself."
 msgstr "Tiket nemôže byť zlúčený sám so sebou."
 
@@ -3042,7 +3042,7 @@ msgstr ""
 #: app/assets/javascripts/app/controllers/_application_controller/after_auth_modal.coffee:9
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_action/email_reply.coffee:382
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_action/twitter_reply.coffee:177
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:342
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:354
 #: app/assets/javascripts/app/views/integration/exchange_certificate_issue.jst.eco:18
 #: app/assets/javascripts/app/views/integration/exchange_wizard.jst.eco:236
 #: app/assets/javascripts/app/views/integration/ldap_wizard.jst.eco:286
@@ -3126,7 +3126,7 @@ msgstr "Nemožno spracovať externý zdroj dát %s. %s"
 msgid "Cannot set online notifications as seen"
 msgstr "Nie je možné nastaviť online upozornenia ako videné"
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:800
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:814
 msgid "Cannot upload file"
 msgstr "Nie je možné nahrať súbor"
 
@@ -3972,7 +3972,7 @@ msgstr "Obsah sa nepodarilo načítať."
 msgid "Content loader"
 msgstr "Bočný panel obsah"
 
-#: app/models/store.rb:82
+#: app/models/store.rb:83
 msgid "Content preview could not be generated."
 msgstr "Náhľad obsahu sa nepodarilo vygenerovať."
 
@@ -7682,7 +7682,7 @@ msgstr "Súbor '%s' sa nahráva"
 msgid "File format is not allowed: %s"
 msgstr "Formát súboru nie je povolený: %s"
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:861
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:875
 #: app/frontend/shared/components/Form/fields/FieldFile/composable/useFileValidation.ts:26
 #: lib/validations/ticket_article_validator/whatsapp_message.rb:38
 msgid "File is too big. %s has to be %s or smaller."
@@ -9274,7 +9274,7 @@ msgstr ""
 "priebeh migrácie na tejto stránke, aby ste boli informovaní hneď, ako bude "
 "import úspešne dokončený."
 
-#: app/models/store.rb:94
+#: app/models/store.rb:95
 msgid "Inline content could not be generated."
 msgstr "Vložený obsah sa nepodarilo vygenerovať."
 
@@ -9654,7 +9654,7 @@ msgstr ""
 msgid "It is not possible to delete your current account."
 msgstr ""
 
-#: app/models/ticket.rb:277
+#: app/models/ticket.rb:283
 msgid "It is not possible to merge into an already merged ticket."
 msgstr "Nie je možné zlúčiť do už zlúčeného tiketu."
 
@@ -11958,7 +11958,7 @@ msgstr ""
 msgid "No translation for this locale available"
 msgstr ""
 
-#: app/models/ticket.rb:400
+#: app/models/ticket.rb:408
 msgid "No triggers active"
 msgstr "Žiadne aktívne spúšťače"
 
@@ -12369,7 +12369,7 @@ msgstr ""
 msgid "Only %s attachment allowed"
 msgstr "Len %s príloh povolených"
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:826
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:840
 msgid "Only %s attachment allowed."
 msgstr "Povolená je iba %s príloha."
 
@@ -13281,7 +13281,7 @@ msgid ""
 "triggers and schedulers)"
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:345
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:357
 msgid "Please enter a text."
 msgstr "Zadajte prosím text."
 
@@ -15253,7 +15253,7 @@ msgstr "Odosielateľ posledného článku"
 msgid "Sending Email Address"
 msgstr "E-mailová adresa"
 
-#: app/models/ticket/article.rb:308
+#: app/models/ticket/article.rb:317
 msgid "Sending an email without a valid recipient is not possible."
 msgstr "Odoslanie e-mailu bez platného príjemcu nie je možné."
 
@@ -16584,7 +16584,7 @@ msgstr "Textové pole"
 
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_action/email_reply.coffee:381
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_action/twitter_reply.coffee:176
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:341
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:353
 msgid "Text missing"
 msgstr ""
 
@@ -17121,7 +17121,7 @@ msgstr "Súbor sa nepodarilo nahrať."
 msgid "The file does not belong to the specified article."
 msgstr "Súbor nepatrí do zadaného článku."
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:855
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:869
 #: app/frontend/shared/components/Form/fields/FieldFile/features/filesTypeError.ts:22
 msgid "The file type %s is not allowed."
 msgstr "Typ súboru %s nie je povolený."
@@ -21537,7 +21537,7 @@ msgid "You reached the table limit of %s tickets (%s remaining)."
 msgstr "Bol dosiahnutý limit %s zobrazených tiketov (%s zostávajúcich)"
 
 #: app/assets/javascripts/app/controllers/agent_ticket_create.coffee:760
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:357
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:369
 msgid ""
 "You used %s in the text but no attachment could be found. Do you want to "
 "continue?"

@@ -837,7 +837,7 @@ msgid ""
 "A test ticket has been created, you can find it in your overview \"%s\" %l."
 msgstr "Test bileti yaradıldı, onu \"%s\" %l nəzərdən keçirə bilərsiniz."
 
-#: app/models/ticket.rb:279
+#: app/models/ticket.rb:285
 msgid "A ticket cannot be merged into itself."
 msgstr "Bilet öz-özünə birləşdirilə bilməz."
 
@@ -3002,7 +3002,7 @@ msgstr ""
 #: app/assets/javascripts/app/controllers/_application_controller/after_auth_modal.coffee:9
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_action/email_reply.coffee:382
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_action/twitter_reply.coffee:177
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:342
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:354
 #: app/assets/javascripts/app/views/integration/exchange_certificate_issue.jst.eco:18
 #: app/assets/javascripts/app/views/integration/exchange_wizard.jst.eco:236
 #: app/assets/javascripts/app/views/integration/ldap_wizard.jst.eco:286
@@ -3089,7 +3089,7 @@ msgid "Cannot set online notifications as seen"
 msgstr ""
 "Şəkildə göstərildiyi kimi onlayn bildirişlər konfiqurasiya edilə bilməz"
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:800
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:814
 msgid "Cannot upload file"
 msgstr "Faylı yükləmək mümkün deyil"
 
@@ -3968,7 +3968,7 @@ msgstr "Məzmunu yükləmək mümkün olmadı."
 msgid "Content loader"
 msgstr "Məzmun"
 
-#: app/models/store.rb:82
+#: app/models/store.rb:83
 #, fuzzy
 msgid "Content preview could not be generated."
 msgstr "Məzmunun önizləməsini yaratmaq mümkün olmadı."
@@ -7951,7 +7951,7 @@ msgstr "\"%s\" faylı yüklənir"
 msgid "File format is not allowed: %s"
 msgstr "Fayl formatı düzgün deyil: %s"
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:861
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:875
 #: app/frontend/shared/components/Form/fields/FieldFile/composable/useFileValidation.ts:26
 #: lib/validations/ticket_article_validator/whatsapp_message.rb:38
 msgid "File is too big. %s has to be %s or smaller."
@@ -9595,7 +9595,7 @@ msgstr ""
 "başa çatdıqdan sonra bildirişlər almaq üçün bu səhifədəki köçürmənin "
 "gedişini izləyin."
 
-#: app/models/store.rb:94
+#: app/models/store.rb:95
 msgid "Inline content could not be generated."
 msgstr "Daxili məzmun yaradıla bilmədi."
 
@@ -9970,7 +9970,7 @@ msgstr "Sistem istifadəçisini silmək mümkün deyil."
 msgid "It is not possible to delete your current account."
 msgstr "Cari hesabınızı silmək mümkün deyil."
 
-#: app/models/ticket.rb:277
+#: app/models/ticket.rb:283
 #, fuzzy
 msgid "It is not possible to merge into an already merged ticket."
 msgstr "Artıq birləşdirilmiş biletlə birləşmək mümkün deyil."
@@ -12427,7 +12427,7 @@ msgstr "Token yoxdur!"
 msgid "No translation for this locale available"
 msgstr "Bu dil üçün tərcümə mövcud deyil"
 
-#: app/models/ticket.rb:400
+#: app/models/ticket.rb:408
 #, fuzzy
 msgid "No triggers active"
 msgstr "Tətikləyicilər aktiv deyil"
@@ -12865,7 +12865,7 @@ msgstr "Onlayn xidmət"
 msgid "Only %s attachment allowed"
 msgstr "Yalnız %s qoşmasına icazə verilir"
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:826
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:840
 msgid "Only %s attachment allowed."
 msgstr "Yalnız %s qoşmasına icazə verilir."
 
@@ -13793,7 +13793,7 @@ msgstr ""
 "Zəhmət olmasa istifadə etmək üçün execution_time funksiyasını aktivləşdirin "
 "(hazırda yalnız tətikləyicilər və planlaşdırıcılar üçün icazə verilir)."
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:345
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:357
 msgid "Please enter a text."
 msgstr "Zəhmət olmasa mətn daxil edin."
 
@@ -15764,7 +15764,7 @@ msgstr ""
 msgid "Sending Email Address"
 msgstr "E-poçt ünvanı"
 
-#: app/models/ticket/article.rb:308
+#: app/models/ticket/article.rb:317
 msgid "Sending an email without a valid recipient is not possible."
 msgstr ""
 
@@ -17033,7 +17033,7 @@ msgstr ""
 
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_action/email_reply.coffee:381
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_action/twitter_reply.coffee:176
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:341
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:353
 msgid "Text missing"
 msgstr ""
 
@@ -17534,7 +17534,7 @@ msgstr ""
 msgid "The file does not belong to the specified article."
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:855
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:869
 #: app/frontend/shared/components/Form/fields/FieldFile/features/filesTypeError.ts:22
 msgid "The file type %s is not allowed."
 msgstr ""
@@ -21662,7 +21662,7 @@ msgid "You reached the table limit of %s tickets (%s remaining)."
 msgstr ""
 
 #: app/assets/javascripts/app/controllers/agent_ticket_create.coffee:760
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:357
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:369
 msgid ""
 "You used %s in the text but no attachment could be found. Do you want to "
 "continue?"
