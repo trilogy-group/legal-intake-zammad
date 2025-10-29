@@ -21890,7 +21890,7 @@ msgstr "nėra"
 msgid "is not a color. Only Hex, RGB and HSL colors are supported."
 msgstr "nėra spalva. Palaikomos tik hex, RGB ir HSL spalvos."
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/time_accounting_modal.coffee:93
+#: app/assets/javascripts/app/controllers/ticket_zoom/time_accounting_modal.coffee:94
 msgid "is not a number"
 msgstr "nėra skaičius"
 

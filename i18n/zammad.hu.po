@@ -7067,7 +7067,8 @@ msgstr "Engedélyezi a konzol naplózását."
 
 #: db/seeds/settings.rb:1000
 msgid "Enables display of ticket priority icons in UI."
-msgstr "Engedélyezi a prioritás ikonok megjelenítését a felhasználói felületen."
+msgstr ""
+"Engedélyezi a prioritás ikonok megjelenítését a felhasználói felületen."
 
 #: db/seeds/settings.rb:820
 msgid "Enables preview of attachments."
@@ -9305,7 +9306,8 @@ msgstr "Tartalmazott jegyek áttekintése"
 
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingCalendar.vue:309
 msgid "Includes escalated, new & open and pending tickets."
-msgstr "Eszkalált, új & nyitott és függő jegyek belefoglalása a feliratkozásba."
+msgstr ""
+"Eszkalált, új & nyitott és függő jegyek belefoglalása a feliratkozásba."
 
 #: app/assets/javascripts/app/views/integration/pgp_list.jst.eco:26
 #: app/assets/javascripts/app/views/integration/smime_list.jst.eco:22
@@ -20023,8 +20025,8 @@ msgstr ""
 "<% end %>\n"
 "<br>\n"
 "<div>\n"
-"  <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/"
-"#{ticket.id}/#{article.id}\" target=\"zammad_app\">Tekintse meg itt: "
+"  <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}/"
+"#{article.id}\" target=\"zammad_app\">Tekintse meg itt: "
 "#{config.product_name}</a>\n"
 "</div>\n"
 
@@ -22304,7 +22306,7 @@ msgstr "≠"
 msgid "is not a color. Only Hex, RGB and HSL colors are supported."
 msgstr "nem egy szín. Csak a Hex, RGB és HSL színek támogatottak."
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/time_accounting_modal.coffee:93
+#: app/assets/javascripts/app/controllers/ticket_zoom/time_accounting_modal.coffee:94
 msgid "is not a number"
 msgstr "nem egy szám"
 

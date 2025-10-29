@@ -890,7 +890,8 @@ msgid ""
 "A group's email address determines which address should be used for outgoing "
 "mails, e.g. when an agent is composing an email or a trigger is sending an "
 "auto-reply"
-msgstr "群组的电子邮件地址决定了应使用哪个地址进行外发邮件，例如，当代理撰写电子邮件"
+msgstr ""
+"群组的电子邮件地址决定了应使用哪个地址进行外发邮件，例如，当代理撰写电子邮件"
 "或触发器发送自动回复时"
 
 #: db/seeds/settings.rb:4014
@@ -22908,7 +22909,7 @@ msgstr "非"
 msgid "is not a color. Only Hex, RGB and HSL colors are supported."
 msgstr "不是一种颜色。仅支持 Hex、RGB 和 HSL 颜色。"
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/time_accounting_modal.coffee:93
+#: app/assets/javascripts/app/controllers/ticket_zoom/time_accounting_modal.coffee:94
 #, fuzzy
 #| msgid "Min. size of number"
 msgid "is not a number"

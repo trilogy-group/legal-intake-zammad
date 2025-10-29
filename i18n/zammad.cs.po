@@ -23814,7 +23814,7 @@ msgstr "není"
 msgid "is not a color. Only Hex, RGB and HSL colors are supported."
 msgstr "není barva. Pouze Hex, RGB nebo HSL barvy jsou podporované."
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/time_accounting_modal.coffee:93
+#: app/assets/javascripts/app/controllers/ticket_zoom/time_accounting_modal.coffee:94
 msgid "is not a number"
 msgstr "není číslo"
 

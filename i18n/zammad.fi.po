@@ -22648,7 +22648,7 @@ msgstr "ei ole"
 msgid "is not a color. Only Hex, RGB and HSL colors are supported."
 msgstr "ei ole väri. Vain heksadesimaali-, RGB- ja HSL-värejä tuetaan."
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/time_accounting_modal.coffee:93
+#: app/assets/javascripts/app/controllers/ticket_zoom/time_accounting_modal.coffee:94
 #, fuzzy
 #| msgid "Min. size of number"
 msgid "is not a number"

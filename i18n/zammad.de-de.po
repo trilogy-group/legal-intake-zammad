@@ -22391,7 +22391,7 @@ msgstr "ist nicht"
 msgid "is not a color. Only Hex, RGB and HSL colors are supported."
 msgstr "ist keine Farbe. Nur Hex-, RGB- und HSL-Farben sind erlaubt."
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/time_accounting_modal.coffee:93
+#: app/assets/javascripts/app/controllers/ticket_zoom/time_accounting_modal.coffee:94
 msgid "is not a number"
 msgstr "ist keine Zahl"
 
