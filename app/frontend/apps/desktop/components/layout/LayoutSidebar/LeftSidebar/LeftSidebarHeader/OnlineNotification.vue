@@ -74,6 +74,10 @@ onMounted(() => {
   // If notificationPermission is undefined, we never have asked for permission
   if (isEnabled.value && !notificationPermission.value) requestNotification()
 })
+
+defineOptions({
+  inheritAttrs: false,
+})
 </script>
 
 <template>
@@ -83,8 +87,13 @@ onMounted(() => {
     :aria-label="$t('Notifications')"
     class="relative"
   >
-    <NotificationButton :unseen-count="unseenCount" @show="toggle(true)" />
-
+    <NotificationButton
+      v-bind="$attrs"
+      :unseen-count="unseenCount"
+      @show="toggle(true)"
+    >
+      <slot />
+    </NotificationButton>
     <CommonPopover ref="popover" orientation="right" :owner="popoverTarget">
       <NotificationPopover
         :unseen-count="unseenCount"
