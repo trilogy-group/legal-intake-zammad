@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zammad\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-10-29 22:00+0000\n"
+"PO-Revision-Date: 2025-11-19 12:41+0000\n"
 "Last-Translator: Andi Chandler <andi@gowling.com>\n"
 "Language-Team: English (United Kingdom) <https://translations.zammad.org/"
 "projects/zammad/zammad-stable/en_GB/>\n"
@@ -1718,6 +1718,10 @@ msgid ""
 "tickets will be deleted and a history entry preserved. There is no rollback "
 "of this deletion possible."
 msgstr ""
+"All affected users and their customer tickets will be scheduled for deletion "
+"when this job is run. Once the data privacy task is executed, users and "
+"tickets will be deleted, and a history entry preserved. There is no rollback "
+"of this deletion possible."
 
 #: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:506
 msgid "All agents"
@@ -1725,137 +1729,141 @@ msgstr ""
 
 #: public/assets/chat/views/waiting.eco:7
 msgid "All colleagues are busy."
-msgstr ""
+msgstr "All colleagues are busy."
 
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingDevices.vue:138
 msgid ""
 "All computers and browsers from which you logged in to Zammad appear here."
 msgstr ""
+"All computers and browsers from which you logged in to Zammad appear here."
 
 #: app/assets/javascripts/app/views/profile/devices.jst.eco:7
 msgid "All computers and browsers that have access to your Zammad appear here."
-msgstr ""
+msgstr "All computers and browsers that have access to your Zammad appear here."
 
 #: app/assets/javascripts/app/controllers/_manage/ticket_duplicate_detection.coffee:38
 #: app/frontend/apps/desktop/components/Form/fields/FieldNotifications/FieldNotificationsInput.vue:56
 msgid "All tickets"
-msgstr ""
+msgstr "All tickets"
 
 #: app/assets/javascripts/app/controllers/user/manage_two_factor.coffee:128
 msgid "All two-factor authentication methods were removed for this user."
-msgstr ""
+msgstr "All two-factor authentication methods were removed for this user."
 
 #: app/assets/javascripts/app/controllers/_ui_element/object_manager_attribute.coffee:325
 msgid "Allow future"
-msgstr ""
+msgstr "Allow future"
 
 #: app/models/object_manager/attribute/data_option_validator.rb:65
 msgid "Allow future dates toggle value is required."
-msgstr ""
+msgstr "Allow future dates toggle value is required."
 
 #: app/assets/javascripts/app/controllers/_ui_element/object_manager_attribute.coffee:334
 msgid "Allow past"
-msgstr ""
+msgstr "Allow past"
 
 #: app/models/object_manager/attribute/data_option_validator.rb:71
 msgid "Allow past dates toggle value is required."
-msgstr ""
+msgstr "Allow past dates toggle value is required."
 
 #: db/seeds/object_manager_attributes.rb:2164
 msgid "Allow reopening of tickets within a certain time."
-msgstr ""
+msgstr "Allow reopening of tickets within a certain time."
 
 #: app/assets/javascripts/app/views/tag/index.jst.eco:16
 msgid "Allow users to add new tags."
-msgstr ""
+msgstr "Allow users to add new tags."
 
 #: db/seeds/settings.rb:4179
 msgid "Allow users to create new tags."
-msgstr ""
+msgstr "Allow users to create new tags."
 
 #: db/seeds/settings.rb:1187
 msgid "Allow using one email address for multiple users."
-msgstr ""
+msgstr "Allow using one email address for multiple users."
 
 #: app/assets/javascripts/app/models/chat.coffee:255
 msgid "Allow websites (separated by ;)"
-msgstr ""
+msgstr "Allow websites (separated by ;)"
 
 #: app/assets/javascripts/app/views/generic/notification_matrix.jst.eco:9
 #: app/frontend/apps/desktop/components/Form/fields/FieldNotifications/FieldNotificationsInput.vue:64
 msgid "Also notify via email"
-msgstr ""
+msgstr "Also notify via email"
 
 #: db/seeds/settings.rb:5207
 msgid ""
 "Alternative FQDN for callbacks if you operate Zammad in an internal network."
 msgstr ""
+"Alternative FQDN for callbacks if you operate Zammad in an internal network."
 
 #: app/helpers/knowledge_base_breadcrumb_helper.rb:20
 #: app/helpers/knowledge_base_public_page_title_helper.rb:27
 msgid "Alternative Translations"
-msgstr ""
+msgstr "Alternative Translations"
 
 #: app/assets/javascripts/app/views/customer_chat/setting.jst.eco:16
 msgid "Alternative name"
-msgstr ""
+msgstr "Alternative name"
 
 #: app/assets/javascripts/app/views/generic/object_import/index.jst.eco:9
 msgid "Alternatively, you can use the Zammad API to import data."
-msgstr ""
+msgstr "Alternatively, you can use the Zammad API to import data."
 
 #: app/assets/javascripts/app/models/trigger.coffee:8
 msgid "Always"
-msgstr ""
+msgstr "Always"
 
 #: app/assets/javascripts/app/controllers/_plugin/user_signup_check.coffee:46
 msgid ""
 "An email was sent to _%s_. Click the link in the email to verify your "
 "account."
 msgstr ""
+"An email was sent to _%s_. Click the link in the email to verify your "
+"account."
 
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_calendar_view.coffee:50
 msgid "An error has occurred"
-msgstr ""
+msgstr "An error has occurred"
 
 #: app/frontend/shared/server/apollo/handler/BaseHandler.ts:150
 msgid "An error occured during the operation."
-msgstr ""
+msgstr "An error occurred during the operation."
 
 #: app/assets/javascripts/app/controllers/_ui_element/object_manager_attribute.coffee:997
 #: app/assets/javascripts/app/views/integration/exchange_last_import.jst.eco:5
 #: app/assets/javascripts/app/views/integration/ldap_last_import.jst.eco:5
 msgid "An error occurred: %s"
-msgstr ""
+msgstr "An error occurred: %s"
 
 #: app/assets/javascripts/app/controllers/_integration/check_mk.coffee:57
 #: app/assets/javascripts/app/controllers/_integration/icinga.coffee:26
 #: app/assets/javascripts/app/controllers/_integration/monit.coffee:26
 #: app/assets/javascripts/app/controllers/_integration/nagios.coffee:26
 msgid "An open-source monitoring tool."
-msgstr ""
+msgstr "An open-source monitoring tool."
 
 #: app/frontend/shared/components/Form/utils.ts:23
 msgid "An unexpected error has occurred."
-msgstr ""
+msgstr "An unexpected error has occurred."
 
 #: app/graphql/gql/mutations/system/setup/run_auto_wizard.rb:26
 msgid "An unexpected error occurred during system setup."
-msgstr ""
+msgstr "An unexpected error occurred during system setup."
 
 #: lib/calendar_subscriptions.rb:31
 msgid "An unknown method name was requested."
-msgstr ""
+msgstr "An unknown method name was requested."
 
 #: app/assets/javascripts/app/views/integration/exchange_wizard.jst.eco:187
 #: app/assets/javascripts/app/views/integration/ldap_wizard.jst.eco:147
 msgid "Analyzing entries with given configuration…"
-msgstr ""
+msgstr "Analysing entries with given configuration…"
 
 #: app/assets/javascripts/app/views/integration/exchange_wizard.jst.eco:116
 #: app/assets/javascripts/app/views/integration/ldap_wizard.jst.eco:123
 msgid "Analyzing structure…"
-msgstr ""
+msgstr "Analysing structure…"
 
 #. This is the template file app/views/mailer/ticket_update_received_merge/en.html.erb in ERB/HTML format.
 #. Please make sure to translate it to a valid corresponding output structure.
@@ -4564,7 +4572,7 @@ msgstr ""
 msgid "Decrement seconds value"
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/article_view/item.coffee:293
+#: app/assets/javascripts/app/controllers/article_view/item.coffee:297
 msgid "Decryption failed!"
 msgstr ""
 
@@ -4573,7 +4581,7 @@ msgstr ""
 msgid "Decryption failed! %s"
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/article_view/item.coffee:291
+#: app/assets/javascripts/app/controllers/article_view/item.coffee:295
 #: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/ArticleSecurityBadge.vue:107
 #: app/frontend/shared/composables/useArticleSecurity.ts:118
 msgid "Decryption was successful."
@@ -6039,7 +6047,7 @@ msgstr ""
 msgid "Download raw email"
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/article_view/item.coffee:319
+#: app/assets/javascripts/app/controllers/article_view/item.coffee:323
 msgid "Downloading attachments…"
 msgstr ""
 
@@ -11438,7 +11446,7 @@ msgstr ""
 #: app/assets/javascripts/app/views/profile/notification.jst.eco:2
 #: app/assets/javascripts/app/views/widget/mention.jst.eco:1
 #: app/assets/javascripts/app/views/widget/online_notification.jst.eco:3
-#: app/frontend/apps/desktop/components/layout/LayoutSidebar/LeftSidebar/LeftSidebarHeader/OnlineNotification.vue:83
+#: app/frontend/apps/desktop/components/layout/LayoutSidebar/LeftSidebar/LeftSidebarHeader/OnlineNotification.vue:87
 #: app/frontend/apps/desktop/components/layout/LayoutSidebar/LeftSidebar/LeftSidebarHeader/OnlineNotification/NotificationPopover/NotificationHeader.vue:20
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSetting/plugins/notifications.ts:6
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingNotifications.vue:34
@@ -12940,7 +12948,7 @@ msgstr ""
 msgid "Recently Viewed Tickets"
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/_plugin/navigation.coffee:487
+#: app/assets/javascripts/app/controllers/_plugin/navigation.coffee:492
 #: app/frontend/apps/desktop/components/QuickSearch/QuickSearch.vue:119
 msgid "Recently viewed"
 msgstr ""
@@ -14036,7 +14044,7 @@ msgid "See HTTPLog for details."
 msgstr ""
 
 #: app/assets/javascripts/app/controllers/_ui_element/ticket_duplicate_detection.coffee:71
-#: app/assets/javascripts/app/controllers/article_view/item.coffee:447
+#: app/assets/javascripts/app/controllers/article_view/item.coffee:451
 #: app/assets/javascripts/app/controllers/data_privacy.coffee:111
 #: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/ArticleBubble/ArticleBubbleBody.vue:129
 #: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/ArticleBubble.vue:280
@@ -14044,7 +14052,7 @@ msgid "See less"
 msgstr "See less"
 
 #: app/assets/javascripts/app/controllers/_ui_element/ticket_duplicate_detection.coffee:68
-#: app/assets/javascripts/app/controllers/article_view/item.coffee:443
+#: app/assets/javascripts/app/controllers/article_view/item.coffee:447
 #: app/assets/javascripts/app/controllers/data_privacy.coffee:108
 #: app/assets/javascripts/app/views/data_privacy/tasks.jst.eco:41
 #: app/assets/javascripts/app/views/generic/ticket_duplicate_detection/warning.jst.eco:21
@@ -14719,7 +14727,7 @@ msgstr ""
 msgid "Signature"
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/article_view/item.coffee:282
+#: app/assets/javascripts/app/controllers/article_view/item.coffee:286
 msgid "Signature verification failed!"
 msgstr ""
 
@@ -16504,7 +16512,7 @@ msgstr ""
 msgid "The retried attachment download failed."
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/article_view/item.coffee:302
+#: app/assets/javascripts/app/controllers/article_view/item.coffee:306
 #: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/ArticleSecurityBadge.vue:67
 #: app/frontend/shared/composables/useArticleSecurity.ts:83
 msgid "The retried security process failed!"
@@ -16575,7 +16583,7 @@ msgid ""
 "according to RFC 3156."
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/article_view/item.coffee:280
+#: app/assets/javascripts/app/controllers/article_view/item.coffee:284
 #: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/ArticleSecurityBadge.vue:90
 #: app/frontend/shared/composables/useArticleSecurity.ts:102
 msgid "The signature was successfully verified."
@@ -18496,7 +18504,7 @@ msgstr ""
 msgid "Unsaved Changes"
 msgstr ""
 
-#: app/frontend/apps/desktop/components/layout/LayoutSidebar/LeftSidebar/LeftSidebarHeader/OnlineNotification/NotificationButton.vue:35
+#: app/frontend/apps/desktop/components/layout/LayoutSidebar/LeftSidebar/LeftSidebarHeader/OnlineNotification/NotificationButton.vue:34
 msgid "Unseen notifications count"
 msgstr ""
 

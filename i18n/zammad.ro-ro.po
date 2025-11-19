@@ -4823,7 +4823,7 @@ msgstr "Scade valoarea minutelor"
 msgid "Decrement seconds value"
 msgstr "Scade valoarea secundelor"
 
-#: app/assets/javascripts/app/controllers/article_view/item.coffee:293
+#: app/assets/javascripts/app/controllers/article_view/item.coffee:297
 msgid "Decryption failed!"
 msgstr "Decriptarea a eșuat!"
 
@@ -4832,7 +4832,7 @@ msgstr "Decriptarea a eșuat!"
 msgid "Decryption failed! %s"
 msgstr "Decriptarea a eșuat! %s"
 
-#: app/assets/javascripts/app/controllers/article_view/item.coffee:291
+#: app/assets/javascripts/app/controllers/article_view/item.coffee:295
 #: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/ArticleSecurityBadge.vue:107
 #: app/frontend/shared/composables/useArticleSecurity.ts:118
 msgid "Decryption was successful."
@@ -6546,7 +6546,7 @@ msgstr ""
 msgid "Download raw email"
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/article_view/item.coffee:319
+#: app/assets/javascripts/app/controllers/article_view/item.coffee:323
 msgid "Downloading attachments…"
 msgstr "Descarc atașamentele…"
 
@@ -12574,7 +12574,7 @@ msgstr "Sunet de notificare"
 #: app/assets/javascripts/app/views/profile/notification.jst.eco:2
 #: app/assets/javascripts/app/views/widget/mention.jst.eco:1
 #: app/assets/javascripts/app/views/widget/online_notification.jst.eco:3
-#: app/frontend/apps/desktop/components/layout/LayoutSidebar/LeftSidebar/LeftSidebarHeader/OnlineNotification.vue:83
+#: app/frontend/apps/desktop/components/layout/LayoutSidebar/LeftSidebar/LeftSidebarHeader/OnlineNotification.vue:87
 #: app/frontend/apps/desktop/components/layout/LayoutSidebar/LeftSidebar/LeftSidebarHeader/OnlineNotification/NotificationPopover/NotificationHeader.vue:20
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSetting/plugins/notifications.ts:6
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingNotifications.vue:34
@@ -14231,7 +14231,7 @@ msgstr "Tichetul a fost creat cu succes."
 msgid "Recently Viewed Tickets"
 msgstr "Tichete vizualizate recent"
 
-#: app/assets/javascripts/app/controllers/_plugin/navigation.coffee:487
+#: app/assets/javascripts/app/controllers/_plugin/navigation.coffee:492
 #: app/frontend/apps/desktop/components/QuickSearch/QuickSearch.vue:119
 msgid "Recently viewed"
 msgstr "Vizualizate recent"
@@ -15443,7 +15443,7 @@ msgid "See HTTPLog for details."
 msgstr "Consultă HTTPLog pentru detalii."
 
 #: app/assets/javascripts/app/controllers/_ui_element/ticket_duplicate_detection.coffee:71
-#: app/assets/javascripts/app/controllers/article_view/item.coffee:447
+#: app/assets/javascripts/app/controllers/article_view/item.coffee:451
 #: app/assets/javascripts/app/controllers/data_privacy.coffee:111
 #: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/ArticleBubble/ArticleBubbleBody.vue:129
 #: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/ArticleBubble.vue:280
@@ -15451,7 +15451,7 @@ msgid "See less"
 msgstr "Vezi mai puțin"
 
 #: app/assets/javascripts/app/controllers/_ui_element/ticket_duplicate_detection.coffee:68
-#: app/assets/javascripts/app/controllers/article_view/item.coffee:443
+#: app/assets/javascripts/app/controllers/article_view/item.coffee:447
 #: app/assets/javascripts/app/controllers/data_privacy.coffee:108
 #: app/assets/javascripts/app/views/data_privacy/tasks.jst.eco:41
 #: app/assets/javascripts/app/views/generic/ticket_duplicate_detection/warning.jst.eco:21
@@ -16199,7 +16199,7 @@ msgstr "Semnează:"
 msgid "Signature"
 msgstr "Semnătură"
 
-#: app/assets/javascripts/app/controllers/article_view/item.coffee:282
+#: app/assets/javascripts/app/controllers/article_view/item.coffee:286
 msgid "Signature verification failed!"
 msgstr "Verificare semnătură eșuată!"
 
@@ -18177,7 +18177,7 @@ msgstr "Valoarea necesară external_credential nu a fost găsită în cache."
 msgid "The retried attachment download failed."
 msgstr "Reîncercarea de descărcare a atașamentului a eșuat."
 
-#: app/assets/javascripts/app/controllers/article_view/item.coffee:302
+#: app/assets/javascripts/app/controllers/article_view/item.coffee:306
 #: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/ArticleSecurityBadge.vue:67
 #: app/frontend/shared/composables/useArticleSecurity.ts:83
 msgid "The retried security process failed!"
@@ -18254,7 +18254,7 @@ msgstr ""
 "Partea de semnătură a acestui email PGP lipsește sau are un tip de conținut "
 "incorect conform RFC 3156."
 
-#: app/assets/javascripts/app/controllers/article_view/item.coffee:280
+#: app/assets/javascripts/app/controllers/article_view/item.coffee:284
 #: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/ArticleSecurityBadge.vue:90
 #: app/frontend/shared/composables/useArticleSecurity.ts:102
 msgid "The signature was successfully verified."
@@ -20463,7 +20463,7 @@ msgstr "Notificări necitite"
 msgid "Unsaved Changes"
 msgstr "Renunță la modificări"
 
-#: app/frontend/apps/desktop/components/layout/LayoutSidebar/LeftSidebar/LeftSidebarHeader/OnlineNotification/NotificationButton.vue:35
+#: app/frontend/apps/desktop/components/layout/LayoutSidebar/LeftSidebar/LeftSidebarHeader/OnlineNotification/NotificationButton.vue:34
 #, fuzzy
 #| msgid "Unread notifications"
 msgid "Unseen notifications count"

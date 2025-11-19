@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zammad\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-10-23 22:00+0000\n"
-"Last-Translator: Mantikor <nhyuga.r@gmail.com>\n"
+"PO-Revision-Date: 2025-11-11 22:00+0000\n"
+"Last-Translator: Anntoo <jdoomm@gmail.com>\n"
 "Language-Team: Ukrainian <https://translations.zammad.org/projects/zammad/"
 "zammad-stable/uk/>\n"
 "Language: uk\n"
@@ -78,8 +78,8 @@ msgid ""
 "<% end %>\n"
 msgstr ""
 "# #{ticket.title}\n"
-"_<#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}|"
-"Ticket##{ticket.number}>: Створено #{current_user.longname} at "
+"_<#{config.http_type}://#{config.fqdn}/#ticket/zoom/"
+"#{ticket.id}|Заявку№#{ticket.number}>: Створено #{current_user.longname} о "
 "#{ticket.updated_at}_\n"
 "* Група: #{ticket.group.name}\n"
 "* Власник: #{ticket.owner.fullname}\n"
@@ -104,8 +104,9 @@ msgid ""
 "<% end %>\n"
 msgstr ""
 "# #{ticket.title}\n"
-"_<#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}|Заявка "
-"№#{ticket.number}>: Ескальовано о #{ticket.escalation_at}_\n"
+"_<#{config.http_type}://#{config.fqdn}/#ticket/zoom/"
+"#{ticket.id}|Заявку№#{ticket.number}>: Ескальовано о #{ticket.escalation_at}"
+"_\n"
 "Заявку (#{ticket.title}) від \"#{ticket.customer.longname}\" було "
 "ескальовано з \"#{ticket.escalation_at}\"!\n"
 "\n"
@@ -129,8 +130,9 @@ msgid ""
 "<% end %>\n"
 msgstr ""
 "# #{ticket.title}\n"
-"_<#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}|"
-"Ticket##{ticket.number}>: Останній раз оновлено о #{ticket.updated_at}_\n"
+"_<#{config.http_type}://#{config.fqdn}/#ticket/zoom/"
+"#{ticket.id}|Заявку№#{ticket.number}>: Останній раз оновлено о "
+"#{ticket.updated_at}_\n"
 "* Група: #{ticket.group.name}\n"
 "* Власник: #{ticket.owner.fullname}\n"
 "* Статус: #{t(ticket.state.name)}\n"
@@ -154,9 +156,9 @@ msgid ""
 "<% end %>\n"
 msgstr ""
 "# #{ticket.title}\n"
-"_<#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}|Заявка "
-"№#{ticket.number}>: Досягнула нагадування!_\n"
-"Заявка потребує уваги: досягнуто нагадування для (#{ticket.title}) від "
+"_<#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}|В заявці "
+"№#{ticket.number}>: Спрацювало нагадування!_\n"
+"Потрібна увага до заявки: спрацювало нагадування для (#{ticket.title}) від "
 "клієнта \"*#{ticket.customer.longname}*\".\n"
 "\n"
 "<% if @objects[:article] %>\n"
@@ -182,9 +184,9 @@ msgid ""
 "<% end %>\n"
 msgstr ""
 "# #{ticket.title}\n"
-"_<#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}|Заявка "
-"№#{ticket.number}>: Оновлено #{current_user.longname} о #{ticket.updated_at}"
-"_\n"
+"_<#{config.http_type}://#{config.fqdn}/#ticket/zoom/"
+"#{ticket.id}|Заявку№#{ticket.number}>: Оновлено #{current_user.longname} о "
+"#{ticket.updated_at}_\n"
 "<% if @objects[:changes].present? %>\n"
 "  <% @objects[:changes].each do |key, value| %>\n"
 "  * <%= t key %>: <%= h value[0] %> -> <%= h value[1] %>\n"
@@ -210,10 +212,11 @@ msgid ""
 "<% end %>\n"
 msgstr ""
 "# #{ticket.title}\n"
-"_<#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}|Заявка "
-"№#{ticket.number}>: Буде ескальовано о #{ticket.escalation_at}_\n"
-"Заявка (#{ticket.title}) від\"#{ticket.customer.longname}\" буде ескальована "
-"о \"#{ticket.escalation_at}\"!\n"
+"_<#{config.http_type}://#{config.fqdn}/#ticket/zoom/"
+"#{ticket.id}|Заявка№#{ticket.number}>: Буде ескальовано о "
+"#{ticket.escalation_at}_\n"
+"Заявка (#{ticket.title}) від\"#{ticket.customer.longname}"
+"\" буде ескальована о \"#{ticket.escalation_at}\"!\n"
 "\n"
 "<% if @objects[:article] %>\n"
 "#{article.body_as_text}\n"
@@ -436,7 +439,7 @@ msgstr "%s вкладених файлів"
 #: app/frontend/shared/composables/activity-message/activityMessageBuilder/builders/data-privacy-task.ts:39
 msgid "%s completed data privacy task to delete user ID |%s|"
 msgstr ""
-"%s виконав(ла) завдання знеособлення даних для видалення ідентифікатора "
+"%s створив(ла) завдання конфіденційності даних для видалення ідентифікатора "
 "користувача |%s|"
 
 #: app/assets/javascripts/app/models/ticket_article.coffee:49
@@ -505,7 +508,7 @@ msgstr "%s завершив(-ла) перемикання на |%s|!"
 #: app/assets/javascripts/app/views/integration/exchange_last_import.jst.eco:40
 #: app/assets/javascripts/app/views/integration/exchange_summary.jst.eco:8
 msgid "%s folders"
-msgstr "Теки %s"
+msgstr "Папки %s"
 
 #: app/assets/javascripts/app/views/integration/ldap_last_import.jst.eco:39
 #: app/assets/javascripts/app/views/integration/ldap_summary.jst.eco:8
@@ -4763,7 +4766,7 @@ msgstr "Значення зменшення хвилин"
 msgid "Decrement seconds value"
 msgstr "Значення зменшення секунд"
 
-#: app/assets/javascripts/app/controllers/article_view/item.coffee:293
+#: app/assets/javascripts/app/controllers/article_view/item.coffee:297
 msgid "Decryption failed!"
 msgstr "Дешифрування не вдалося!"
 
@@ -4772,7 +4775,7 @@ msgstr "Дешифрування не вдалося!"
 msgid "Decryption failed! %s"
 msgstr "Не вдалося дешифрувати! %s"
 
-#: app/assets/javascripts/app/controllers/article_view/item.coffee:291
+#: app/assets/javascripts/app/controllers/article_view/item.coffee:295
 #: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/ArticleSecurityBadge.vue:107
 #: app/frontend/shared/composables/useArticleSecurity.ts:118
 msgid "Decryption was successful."
@@ -6420,7 +6423,7 @@ msgstr "Завантажити оригінал листа"
 msgid "Download raw email"
 msgstr "Завантажити необроблений лист"
 
-#: app/assets/javascripts/app/controllers/article_view/item.coffee:319
+#: app/assets/javascripts/app/controllers/article_view/item.coffee:323
 msgid "Downloading attachments…"
 msgstr "Завантаження вкладень…"
 
@@ -12134,7 +12137,7 @@ msgstr "Звук сповіщення"
 #: app/assets/javascripts/app/views/profile/notification.jst.eco:2
 #: app/assets/javascripts/app/views/widget/mention.jst.eco:1
 #: app/assets/javascripts/app/views/widget/online_notification.jst.eco:3
-#: app/frontend/apps/desktop/components/layout/LayoutSidebar/LeftSidebar/LeftSidebarHeader/OnlineNotification.vue:83
+#: app/frontend/apps/desktop/components/layout/LayoutSidebar/LeftSidebar/LeftSidebarHeader/OnlineNotification.vue:87
 #: app/frontend/apps/desktop/components/layout/LayoutSidebar/LeftSidebar/LeftSidebarHeader/OnlineNotification/NotificationPopover/NotificationHeader.vue:20
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSetting/plugins/notifications.ts:6
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingNotifications.vue:34
@@ -13687,7 +13690,7 @@ msgstr "Останні пошуки успішно очищені."
 msgid "Recently Viewed Tickets"
 msgstr "Нещодавно переглянуті заявки"
 
-#: app/assets/javascripts/app/controllers/_plugin/navigation.coffee:487
+#: app/assets/javascripts/app/controllers/_plugin/navigation.coffee:492
 #: app/frontend/apps/desktop/components/QuickSearch/QuickSearch.vue:119
 msgid "Recently viewed"
 msgstr "Нещодавно переглянуті"
@@ -14846,7 +14849,7 @@ msgid "See HTTPLog for details."
 msgstr "Дивіться HTTPLog для отримання додаткової інформації."
 
 #: app/assets/javascripts/app/controllers/_ui_element/ticket_duplicate_detection.coffee:71
-#: app/assets/javascripts/app/controllers/article_view/item.coffee:447
+#: app/assets/javascripts/app/controllers/article_view/item.coffee:451
 #: app/assets/javascripts/app/controllers/data_privacy.coffee:111
 #: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/ArticleBubble/ArticleBubbleBody.vue:129
 #: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/ArticleBubble.vue:280
@@ -14854,7 +14857,7 @@ msgid "See less"
 msgstr "Бачити менше"
 
 #: app/assets/javascripts/app/controllers/_ui_element/ticket_duplicate_detection.coffee:68
-#: app/assets/javascripts/app/controllers/article_view/item.coffee:443
+#: app/assets/javascripts/app/controllers/article_view/item.coffee:447
 #: app/assets/javascripts/app/controllers/data_privacy.coffee:108
 #: app/assets/javascripts/app/views/data_privacy/tasks.jst.eco:41
 #: app/assets/javascripts/app/views/generic/ticket_duplicate_detection/warning.jst.eco:21
@@ -15551,7 +15554,7 @@ msgstr "Увійти:"
 msgid "Signature"
 msgstr "Підпис"
 
-#: app/assets/javascripts/app/controllers/article_view/item.coffee:282
+#: app/assets/javascripts/app/controllers/article_view/item.coffee:286
 msgid "Signature verification failed!"
 msgstr "Перевірка підпису не вдалася!"
 
@@ -17453,7 +17456,7 @@ msgstr ""
 msgid "The retried attachment download failed."
 msgstr "Повторна спроба завантаження вкладення виявилася невдалою."
 
-#: app/assets/javascripts/app/controllers/article_view/item.coffee:302
+#: app/assets/javascripts/app/controllers/article_view/item.coffee:306
 #: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/ArticleSecurityBadge.vue:67
 #: app/frontend/shared/composables/useArticleSecurity.ts:83
 msgid "The retried security process failed!"
@@ -17531,7 +17534,7 @@ msgstr ""
 "Частина підпису цього PGP-листа відсутня або має неправильний тип вмісту "
 "відповідно до RFC 3156."
 
-#: app/assets/javascripts/app/controllers/article_view/item.coffee:280
+#: app/assets/javascripts/app/controllers/article_view/item.coffee:284
 #: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/ArticleSecurityBadge.vue:90
 #: app/frontend/shared/composables/useArticleSecurity.ts:102
 msgid "The signature was successfully verified."
@@ -19633,7 +19636,7 @@ msgstr "Непрочитані сповіщення"
 msgid "Unsaved Changes"
 msgstr "Незбережені зміни"
 
-#: app/frontend/apps/desktop/components/layout/LayoutSidebar/LeftSidebar/LeftSidebarHeader/OnlineNotification/NotificationButton.vue:35
+#: app/frontend/apps/desktop/components/layout/LayoutSidebar/LeftSidebar/LeftSidebarHeader/OnlineNotification/NotificationButton.vue:34
 msgid "Unseen notifications count"
 msgstr "Кількість непрочитаних сповіщень"
 
