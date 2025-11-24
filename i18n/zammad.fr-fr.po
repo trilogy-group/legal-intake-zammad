@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zammad\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-11-19 12:41+0000\n"
+"PO-Revision-Date: 2025-11-24 01:00+0000\n"
 "Last-Translator: Anael Mobilia <contrib@anael.eu>\n"
 "Language-Team: French <https://translations.zammad.org/projects/zammad/"
 "zammad-stable/fr/>\n"
@@ -2861,7 +2861,7 @@ msgstr "Navigateur"
 
 #: app/assets/javascripts/app/lib/mixins/ticket_mass_updatable.coffee:22
 msgid "Bulk action executed!"
-msgstr "Action en masse effectué !"
+msgstr "Action en masse effectuée !"
 
 #: app/assets/javascripts/app/lib/mixins/ticket_mass_updatable.coffee:38
 msgid "Bulk action failed"
@@ -3760,7 +3760,7 @@ msgstr "Terminez l'enregistrement avec votre clé de sécurité."
 
 #: app/assets/javascripts/app/controllers/_plugin/translation_support.coffee:38
 msgid "Complete translations"
-msgstr "Compléter la traduction"
+msgstr "Compléter les traductions"
 
 #: app/assets/javascripts/app/views/data_privacy/index.jst.eco:29
 msgid "Completed Tasks"
@@ -10298,7 +10298,7 @@ msgstr "Échec du chargement, veuillez réessayer ultérieurement."
 msgid "Loading failed."
 msgstr "Échec du chargement."
 
-#: app/assets/javascripts/app/lib/app_post/task_manager.coffee:151
+#: app/assets/javascripts/app/lib/app_post/task_manager/singleton.coffee:55
 #: app/assets/javascripts/app/lib/base/jquery.textmodule.js:647
 #: app/assets/javascripts/app/views/generic/page_loading.jst.eco:3
 #: app/frontend/apps/desktop/components/CommonLoader/CommonLoader.vue:63
@@ -12753,7 +12753,7 @@ msgstr "Autres paramètres"
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingOutOfOffice.vue:126
 #: db/seeds/permissions.rb:422
 msgid "Out of Office"
-msgstr "Notification d'absence"
+msgstr "Gestion des absences"
 
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingOutOfOffice.vue:157
 msgid "Out of Office settings could not be saved."
@@ -16498,11 +16498,11 @@ msgstr "Texte ou identifiant du ticket"
 
 #: app/assets/javascripts/app/views/translation/description.jst.eco:12
 msgid "Text with disabled inline translations looks like"
-msgstr "Du texte avec des traductions en ligne désactivées apparait comme"
+msgstr "Du texte avec des traductions à la volée désactivées apparait comme"
 
 #: app/assets/javascripts/app/views/translation/description.jst.eco:13
 msgid "Text with enabled inline translations looks like"
-msgstr "Du texte avec des traductions en ligne activées apparait comme"
+msgstr "Du texte avec des traductions à la volée activées apparait comme"
 
 #: app/assets/javascripts/app/controllers/_ui_element/object_manager_attribute.coffee:37
 msgid "Textarea field"

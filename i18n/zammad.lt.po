@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zammad\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-10-31 22:00+0000\n"
+"PO-Revision-Date: 2025-11-20 22:00+0000\n"
 "Last-Translator: Mantas Masalskis <mantas@idev.lt>\n"
 "Language-Team: Lithuanian <https://translations.zammad.org/projects/zammad/"
 "zammad-stable/lt/>\n"
@@ -535,7 +535,7 @@ msgstr "prieš %s mėnesių(-į)"
 
 #: app/frontend/apps/desktop/components/QuickSearch/QuickSearchResultList/QuickSearchResultList.vue:164
 msgid "%s more"
-msgstr "%s daugiau"
+msgstr "dar %s"
 
 #: app/assets/javascripts/app/views/generic/object_import/imported.jst.eco:21
 msgid "%s object(s) have been created."
@@ -7872,7 +7872,7 @@ msgstr "Formatuoti kaip pabrauktą"
 
 #: app/assets/javascripts/app/controllers/_plugin/keyboard_shortcuts.coffee:629
 msgid "Format as unordered list"
-msgstr "Formatuoti kaip neeiliuotą sąrašą"
+msgstr "Formatuoti kaip nerikiuotą sąrašą"
 
 #: app/assets/javascripts/app/controllers/_plugin/keyboard_shortcuts.coffee:580
 msgid "Format as |bold|"
@@ -10029,7 +10029,7 @@ msgstr "Įkėlimas nepavyko, bandykite vėliau."
 msgid "Loading failed."
 msgstr "Nepavyko įkelti."
 
-#: app/assets/javascripts/app/lib/app_post/task_manager.coffee:151
+#: app/assets/javascripts/app/lib/app_post/task_manager/singleton.coffee:55
 #: app/assets/javascripts/app/lib/base/jquery.textmodule.js:647
 #: app/assets/javascripts/app/views/generic/page_loading.jst.eco:3
 #: app/frontend/apps/desktop/components/CommonLoader/CommonLoader.vue:63

@@ -10541,7 +10541,7 @@ msgstr "Yükləmə uğursuz oldu, zəhmət olmasa yenidən cəhd edin."
 msgid "Loading failed."
 msgstr "Yükləmə uğursuz oldu."
 
-#: app/assets/javascripts/app/lib/app_post/task_manager.coffee:151
+#: app/assets/javascripts/app/lib/app_post/task_manager/singleton.coffee:55
 #: app/assets/javascripts/app/lib/base/jquery.textmodule.js:647
 #: app/assets/javascripts/app/views/generic/page_loading.jst.eco:3
 #: app/frontend/apps/desktop/components/CommonLoader/CommonLoader.vue:63
