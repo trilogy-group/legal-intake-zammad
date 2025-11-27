@@ -2,10 +2,11 @@
 
 require 'vcr'
 
-VCR_IGNORE_MATCHING_HOSTS = %w[build elasticsearch selenium ci-service- zammad.org zammad.com znuny.com google.com login.microsoftonline.com github.com badssl.com].freeze
+VCR_IGNORE_MATCHING_HOSTS = %w[build elasticsearch selenium ci-service- zammad.org zammad.com znuny.com login.microsoftonline.com github.com badssl.com].freeze
 VCR_IGNORE_MATCHING_REGEXPS = [
-  %r{^192\.168\.\d+\.\d+$},   # typical home network address
-  %r{^172\.17\.0\.\d+$},      # docker
+  %r{^192\.168\.\d+\.\d+$},         # typical home network address
+  %r{^172\.17\.0\.\d+$},            # docker
+  %r{(?<!^calendar\.)google\.com$}, # *.google.com excl. calendar.google.com
 ].freeze
 
 VCR.configure do |config|
