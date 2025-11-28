@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zammad\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-11-20 22:00+0000\n"
+"PO-Revision-Date: 2025-11-27 15:00+0000\n"
 "Last-Translator: Mantas Masalskis <mantas@idev.lt>\n"
 "Language-Team: Lithuanian <https://translations.zammad.org/projects/zammad/"
 "zammad-stable/lt/>\n"
@@ -4065,6 +4065,8 @@ msgid ""
 "Could not create user and send verification email because import_mode "
 "setting is on."
 msgstr ""
+"Nepavyko sukurti naudotojo ir išsiųsti patvirtinimo el. laiško, nes įjungtas "
+"import_mode nustatymas."
 
 #: app/services/service/channel/whatsapp/base.rb:37
 msgid "Could not fetch WhatsApp phone number details."
@@ -4125,6 +4127,8 @@ msgstr "Nepavyko pašalinti dviejų veiksnių autentifikavimo metodo."
 msgid ""
 "Could not send user verification email because import_mode setting is on."
 msgstr ""
+"Nepavyko išsiųsti naudotojo patvirtinimo el. laiško, nes įjungtas "
+"import_mode nustatymas."
 
 #: app/assets/javascripts/app/controllers/_profile/password.coffee:228
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingTwoFactorAuth.vue:92
@@ -11201,7 +11205,7 @@ msgstr "Nauja šalinimo užduotis"
 
 #: app/frontend/apps/desktop/composables/useBetaDisclaimer.ts:47
 msgid "New Desktop UI — Alpha Version"
-msgstr ""
+msgstr "Nauja darbalaukio naudotojo sąsaja - Alfa versija"
 
 #: app/assets/javascripts/app/controllers/group.coffee:27
 msgid "New Group"
@@ -12036,7 +12040,7 @@ msgstr "Objektas"
 #: app/assets/javascripts/app/controllers/object_manager.coffee:114
 #: app/assets/javascripts/app/views/object_manager/index.jst.eco:3
 msgid "Object Manager"
-msgstr "Objektų tvarkymas"
+msgstr "Objektų tvarkyklė"
 
 #: app/services/service/history/list.rb:52
 msgid "Object does not support history"
@@ -12635,10 +12639,8 @@ msgid "Pagination links"
 msgstr "Puslapių nuorodos"
 
 #: app/controllers/integration/smime_controller.rb:77
-#, fuzzy
-#| msgid "Parameter 'data' or 'file' required."
 msgid "Parameter 'private_key' or 'file' required."
-msgstr "Būtinas „data“ arba „file“ parametras."
+msgstr "Būtinas „ private_key“ arba „file“ parametras."
 
 #: app/assets/javascripts/app/controllers/widget/link/ticket.coffee:4
 #: app/assets/javascripts/app/models/knowledge_base_category.coffee:87
@@ -16571,11 +16573,9 @@ msgid "The email address |%s| is already in use by another account."
 msgstr "El. pašto adresas |%s| jau naudojamas kitos paskyros."
 
 #: app/services/service/user/password_reset/send.rb:41
-#, fuzzy
-#| msgid "The email could not be sent to the user."
 msgid ""
 "The email could not be sent to the user because import_mode setting is on."
-msgstr "Nepavyko išsiųsti laiško naudotojui."
+msgstr "Nepavyko išsiųsti el. laiško, nes įjungtas import_mode nustatymas."
 
 #: app/services/service/auth/send_admin_token.rb:39
 #: app/services/service/user/password_reset/update.rb:42
@@ -17648,10 +17648,8 @@ msgid ""
 msgstr "PGP laiškas buvo užšifruotas su nežinomu algoritmu."
 
 #: app/controllers/ticket_articles_controller.rb:186
-#, fuzzy
-#| msgid "This article is not part of the ticket."
 msgid "This article does not have a raw copy available."
-msgstr "Šis įrašas nėra nurodytos trikties dalis."
+msgstr "Šio įrašo neapdorotos kopijos nėra."
 
 #: app/models/ticket/time_accounting.rb:44
 msgid "This article is not part of the ticket."
@@ -17936,6 +17934,8 @@ msgid ""
 "This new desktop UI is currently in development and not ready for production "
 "use. It may contain bugs or incomplete features."
 msgstr ""
+"Naujoji naudotojo sąsaja šiuo metu vystoma ir dar netinka kasdieniam "
+"naudojimui. Joje gali būti klaidų ir neišbaigtų funkcijų."
 
 #: app/controllers/application_controller/handles_errors.rb:99
 #: app/graphql/gql/zammad_schema.rb:116
@@ -18045,12 +18045,8 @@ msgstr "Ši sistema jau sukonfigūruota ir administratoriaus paskyra jau yra."
 #: app/services/service/system/import/apply_configuration_base.rb:46
 #: app/services/service/system/import/run.rb:28
 #: app/services/service/system/run_auto_wizard.rb:6
-#, fuzzy
-#| msgid ""
-#| "This system has already been configured and an administrator account "
-#| "exists."
 msgid "This system has already been configured."
-msgstr "Ši sistema jau sukonfigūruota ir administratoriaus paskyra jau yra."
+msgstr "Ši sistema jau sukonfigūruota."
 
 #: app/frontend/apps/desktop/pages/guided-setup/views/GuidedSetupAutomated/GuidedSetupAutomatedInfo.vue:11
 msgid "This system is configured for automated setup."
@@ -21552,10 +21548,8 @@ msgid "drag here to cancel"
 msgstr "tempkite čia, kad atšauktumėte"
 
 #: app/assets/javascripts/app/index.coffee:215
-#, fuzzy
-#| msgid "Tue"
 msgid "due"
-msgstr "A"
+msgstr "laikas suėjo"
 
 #: app/assets/javascripts/app/views/integration/placetel.jst.eco:140
 #: app/assets/javascripts/app/views/integration/sipgate.jst.eco:124
