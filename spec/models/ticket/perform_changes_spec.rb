@@ -319,10 +319,13 @@ RSpec.describe 'Ticket::PerformChanges', :aggregate_failures do
       end
 
       let(:objects) do
+        all_articles = object.articles
+        first_article = all_articles.first
+        first_internal_article = all_articles.find(&:internal?)
+        first_external_article = all_articles.find { |a| !a.internal? }
         last_article = nil
         last_internal_article = nil
         last_external_article = nil
-        all_articles = object.articles
 
         if article.nil?
           last_article = all_articles.last
@@ -337,6 +340,9 @@ RSpec.describe 'Ticket::PerformChanges', :aggregate_failures do
         {
           ticket:                   object,
           article:                  last_article,
+          first_article:            first_article,
+          first_internal_article:   first_internal_article,
+          first_external_article:   first_external_article,
           last_article:             last_article,
           last_internal_article:    last_internal_article,
           last_external_article:    last_external_article,
