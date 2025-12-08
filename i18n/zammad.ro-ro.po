@@ -18196,7 +18196,7 @@ msgstr "Data selectată este invalidă."
 msgid "The server presented a certificate that could not be verified."
 msgstr "Serverul a prezentat un certificat care nu poate fi verificat."
 
-#: lib/user_agent.rb:235
+#: lib/user_agent.rb:236
 msgid ""
 "The server returned a redirect response, but the current operation does not "
 "allow redirects."
@@ -20004,7 +20004,7 @@ msgstr "Token-ul este invalid!"
 msgid "Token-based API access has been disabled by the administrator."
 msgstr ""
 
-#: lib/user_agent.rb:239
+#: lib/user_agent.rb:240
 msgid "Too many redirections for the original URL, halting."
 msgstr "Prea multe redirecționări pentru URL-ul original, opresc."
 
@@ -22301,7 +22301,7 @@ msgstr "Fundația Zammad"
 msgid "Zammad Helpdesk"
 msgstr "Zammad Helpdesk"
 
-#: lib/user_agent.rb:126
+#: lib/user_agent.rb:127
 msgid "Zammad User Agent"
 msgstr "Zammad User Agent"
 

@@ -17452,7 +17452,7 @@ msgstr "A data selecionada é inválida."
 msgid "The server presented a certificate that could not be verified."
 msgstr "O servidor apresentou um certificado que não pôde ser verificado."
 
-#: lib/user_agent.rb:235
+#: lib/user_agent.rb:236
 msgid ""
 "The server returned a redirect response, but the current operation does not "
 "allow redirects."
@@ -19207,7 +19207,7 @@ msgstr "O token é inválido!"
 msgid "Token-based API access has been disabled by the administrator."
 msgstr "O acesso à API baseado em token foi desativado pelo administrador."
 
-#: lib/user_agent.rb:239
+#: lib/user_agent.rb:240
 msgid "Too many redirections for the original URL, halting."
 msgstr "Muitos redirecionamentos para o URL original, parando."
 
@@ -21421,7 +21421,7 @@ msgstr "Fundação Zammad"
 msgid "Zammad Helpdesk"
 msgstr "Zammad Helpdesk"
 
-#: lib/user_agent.rb:126
+#: lib/user_agent.rb:127
 msgid "Zammad User Agent"
 msgstr "Usuário agente do Zammad"
 

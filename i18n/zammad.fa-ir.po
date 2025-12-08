@@ -17296,7 +17296,7 @@ msgstr "تاریخ انتخاب‌شده معتبر نیست."
 msgid "The server presented a certificate that could not be verified."
 msgstr "سرور گواهینامه‌ای ارائه کرده که قابل تایید نیست."
 
-#: lib/user_agent.rb:235
+#: lib/user_agent.rb:236
 msgid ""
 "The server returned a redirect response, but the current operation does not "
 "allow redirects."
@@ -18933,7 +18933,7 @@ msgstr "توکن نامعتبر است!"
 msgid "Token-based API access has been disabled by the administrator."
 msgstr ""
 
-#: lib/user_agent.rb:239
+#: lib/user_agent.rb:240
 msgid "Too many redirections for the original URL, halting."
 msgstr ""
 
@@ -21107,7 +21107,7 @@ msgstr ""
 msgid "Zammad Helpdesk"
 msgstr "میز خدمت"
 
-#: lib/user_agent.rb:126
+#: lib/user_agent.rb:127
 msgid "Zammad User Agent"
 msgstr ""
 

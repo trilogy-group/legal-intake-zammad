@@ -17629,7 +17629,7 @@ msgstr "选定的日期无效。"
 msgid "The server presented a certificate that could not be verified."
 msgstr "服务器提供了无法验证的证书。"
 
-#: lib/user_agent.rb:235
+#: lib/user_agent.rb:236
 msgid ""
 "The server returned a redirect response, but the current operation does not "
 "allow redirects."
@@ -19616,7 +19616,7 @@ msgstr "令牌无效！"
 msgid "Token-based API access has been disabled by the administrator."
 msgstr ""
 
-#: lib/user_agent.rb:239
+#: lib/user_agent.rb:240
 msgid "Too many redirections for the original URL, halting."
 msgstr "URL 重定向过多，已停止。"
 
@@ -22028,7 +22028,7 @@ msgstr "Zammad基金会"
 msgid "Zammad Helpdesk"
 msgstr "Zammad Helpdesk"
 
-#: lib/user_agent.rb:126
+#: lib/user_agent.rb:127
 msgid "Zammad User Agent"
 msgstr "Zammad用户代理"
 

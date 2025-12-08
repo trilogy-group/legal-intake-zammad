@@ -17470,7 +17470,7 @@ msgstr "Обрана дата є недійсною."
 msgid "The server presented a certificate that could not be verified."
 msgstr "Сервер надав сертифікат, який неможливо було перевірити."
 
-#: lib/user_agent.rb:235
+#: lib/user_agent.rb:236
 msgid ""
 "The server returned a redirect response, but the current operation does not "
 "allow redirects."
@@ -19206,7 +19206,7 @@ msgstr "Токен недійсний!"
 msgid "Token-based API access has been disabled by the administrator."
 msgstr "Доступ до API на основі токенів вимкнено адміністратором."
 
-#: lib/user_agent.rb:239
+#: lib/user_agent.rb:240
 msgid "Too many redirections for the original URL, halting."
 msgstr "Збій надто багато перенаправлень для вихідного URL."
 
@@ -21425,7 +21425,7 @@ msgstr "Фонд Zammad"
 msgid "Zammad Helpdesk"
 msgstr "Служба підтримки Zammad"
 
-#: lib/user_agent.rb:126
+#: lib/user_agent.rb:127
 msgid "Zammad User Agent"
 msgstr "Агент користувача (User Agent) Zammad"
 

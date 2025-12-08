@@ -17542,7 +17542,7 @@ msgstr "A kiválasztott dátum érvénytelen."
 msgid "The server presented a certificate that could not be verified."
 msgstr "A szerver által küldött tanúsítványt nem sikerült ellenőrizni."
 
-#: lib/user_agent.rb:235
+#: lib/user_agent.rb:236
 msgid ""
 "The server returned a redirect response, but the current operation does not "
 "allow redirects."
@@ -19290,7 +19290,7 @@ msgstr "A token érvénytelen!"
 msgid "Token-based API access has been disabled by the administrator."
 msgstr "A token alapú API-hozzáférést a rendszergazda letiltotta."
 
-#: lib/user_agent.rb:239
+#: lib/user_agent.rb:240
 msgid "Too many redirections for the original URL, halting."
 msgstr "Túl sok átirányítás az eredeti URL címre, megállás."
 
@@ -21503,7 +21503,7 @@ msgstr "Zammad Alapítvány"
 msgid "Zammad Helpdesk"
 msgstr "Zammad Ügyfélszolgálat"
 
-#: lib/user_agent.rb:126
+#: lib/user_agent.rb:127
 msgid "Zammad User Agent"
 msgstr "Zammad felhasználói ügynök"
 

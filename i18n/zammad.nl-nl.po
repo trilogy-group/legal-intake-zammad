@@ -17424,7 +17424,7 @@ msgstr "De geselecteerde datum is ongeldig."
 msgid "The server presented a certificate that could not be verified."
 msgstr "De server geeft een certificaat dat niet kan worden geverifieerd."
 
-#: lib/user_agent.rb:235
+#: lib/user_agent.rb:236
 msgid ""
 "The server returned a redirect response, but the current operation does not "
 "allow redirects."
@@ -19165,7 +19165,7 @@ msgstr "Token ongeldig!"
 msgid "Token-based API access has been disabled by the administrator."
 msgstr "Op Token gebaseerde API-toegang is uitgeschakeld door de beheerder."
 
-#: lib/user_agent.rb:239
+#: lib/user_agent.rb:240
 msgid "Too many redirections for the original URL, halting."
 msgstr "Te veel omleidingen voor de originele URL, aangehouden."
 
@@ -21376,7 +21376,7 @@ msgstr "Zammad Foundation"
 msgid "Zammad Helpdesk"
 msgstr "Zammad Helpdesk"
 
-#: lib/user_agent.rb:126
+#: lib/user_agent.rb:127
 msgid "Zammad User Agent"
 msgstr "Zammad Gebruiker Behandelaar"
 

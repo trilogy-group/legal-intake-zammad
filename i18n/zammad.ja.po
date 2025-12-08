@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zammad\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-12-03 12:41+0000\n"
+"PO-Revision-Date: 2025-12-03 22:00+0000\n"
 "Last-Translator: jeysunit <jeysunit@bcamp.net>\n"
 "Language-Team: Japanese <https://translations.zammad.org/projects/zammad/"
 "zammad-stable/ja/>\n"
@@ -634,10 +634,8 @@ msgid "%{model} can have full or granular access to group"
 msgstr ""
 
 #: app/models/object_manager/attribute.rb:635
-#, fuzzy
-#| msgid "%s Object(s) are deleted."
 msgid "%{name} already exists"
-msgstr "%s オブジェクトを削除。"
+msgstr "%{name} は既に存在します"
 
 #: app/models/object_manager/attribute.rb:619
 msgid "%{name} is a reserved word"
@@ -892,7 +890,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Retweets are converted to Tickets"
 msgid "A ticket cannot be merged into itself."
-msgstr "リツイートはチケットに変換されました"
+msgstr "チケットはそれ自身にマージすることはできません。"
 
 #: app/assets/javascripts/app/models/ticket_priority.coffee
 msgid ""
@@ -938,10 +936,8 @@ msgid "API Token Access"
 msgstr ""
 
 #: lib/whatsapp/webhook/payload.rb:22
-#, fuzzy
-#| msgid "Sign out"
 msgid "API error."
-msgstr "サインアウト"
+msgstr "APIエラー"
 
 #: app/assets/javascripts/app/views/import/freshdesk.jst.eco:42
 #: app/assets/javascripts/app/views/import/zendesk.jst.eco:43
@@ -18680,7 +18676,7 @@ msgstr ""
 msgid "The server presented a certificate that could not be verified."
 msgstr "%s オブジェクトを作成。"
 
-#: lib/user_agent.rb:235
+#: lib/user_agent.rb:236
 msgid ""
 "The server returned a redirect response, but the current operation does not "
 "allow redirects."
@@ -20491,7 +20487,7 @@ msgstr ""
 msgid "Token-based API access has been disabled by the administrator."
 msgstr ""
 
-#: lib/user_agent.rb:239
+#: lib/user_agent.rb:240
 msgid "Too many redirections for the original URL, halting."
 msgstr ""
 
@@ -22750,7 +22746,7 @@ msgstr ""
 msgid "Zammad Helpdesk"
 msgstr ""
 
-#: lib/user_agent.rb:126
+#: lib/user_agent.rb:127
 msgid "Zammad User Agent"
 msgstr ""
 

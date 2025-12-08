@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zammad\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-10-31 22:00+0000\n"
+"PO-Revision-Date: 2025-12-05 22:00+0000\n"
 "Last-Translator: Dusan Vuckovic <dv@zammad.com>\n"
 "Language-Team: Serbian (Cyrillic script) <https://translations.zammad.org/"
 "projects/zammad/zammad-stable/sr_Cyrl/>\n"
@@ -17282,7 +17282,7 @@ msgstr "Одабран датум је неважећи."
 msgid "The server presented a certificate that could not be verified."
 msgstr "Сервер користи сертификат који није било могуће проверити."
 
-#: lib/user_agent.rb:235
+#: lib/user_agent.rb:236
 msgid ""
 "The server returned a redirect response, but the current operation does not "
 "allow redirects."
@@ -18988,7 +18988,7 @@ msgstr "Неисправан кључ!"
 msgid "Token-based API access has been disabled by the administrator."
 msgstr "Администратор је искључио могућност приступа API путем кључа."
 
-#: lib/user_agent.rb:239
+#: lib/user_agent.rb:240
 msgid "Too many redirections for the original URL, halting."
 msgstr "Превише преусмеравања за изворни URL, радња је заустављена."
 
@@ -21179,7 +21179,7 @@ msgstr "Zammad фондација"
 msgid "Zammad Helpdesk"
 msgstr "Zammad Helpdesk"
 
-#: lib/user_agent.rb:126
+#: lib/user_agent.rb:127
 msgid "Zammad User Agent"
 msgstr "Zammad User Agent"
 
@@ -21551,7 +21551,7 @@ msgstr "дан"
 
 #: app/assets/javascripts/app/lib/app_post/pretty_date.coffee:76
 msgid "days"
-msgstr "дан(а)"
+msgstr "дана"
 
 #: app/assets/javascripts/app/views/integration/ldap_last_import.jst.eco:36
 #: app/assets/javascripts/app/views/integration/ldap_summary.jst.eco:4

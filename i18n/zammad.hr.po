@@ -17301,7 +17301,7 @@ msgstr "Odabrani datum nije ispravan."
 msgid "The server presented a certificate that could not be verified."
 msgstr "Server je ispostavio certifikat koji se nije mogao provjeriti."
 
-#: lib/user_agent.rb:235
+#: lib/user_agent.rb:236
 msgid ""
 "The server returned a redirect response, but the current operation does not "
 "allow redirects."
@@ -19011,7 +19011,7 @@ msgstr "Token nije valjan!"
 msgid "Token-based API access has been disabled by the administrator."
 msgstr "Administrator je onemogućio API pristup putem tokena."
 
-#: lib/user_agent.rb:239
+#: lib/user_agent.rb:240
 msgid "Too many redirections for the original URL, halting."
 msgstr "Previše preusmjeravanja za izvorni URL, radnja je zaustavljena."
 
@@ -21202,7 +21202,7 @@ msgstr "Zammad zaklada"
 msgid "Zammad Helpdesk"
 msgstr "Zammad služba za pomoć"
 
-#: lib/user_agent.rb:126
+#: lib/user_agent.rb:127
 msgid "Zammad User Agent"
 msgstr "Zammad korisnik agent"
 

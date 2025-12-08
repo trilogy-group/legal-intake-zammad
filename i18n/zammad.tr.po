@@ -17420,7 +17420,7 @@ msgstr "Seçilen tarih geçersizdir."
 msgid "The server presented a certificate that could not be verified."
 msgstr "Sunucu doğrulanamayan bir sertifika sundu."
 
-#: lib/user_agent.rb:235
+#: lib/user_agent.rb:236
 msgid ""
 "The server returned a redirect response, but the current operation does not "
 "allow redirects."
@@ -19152,7 +19152,7 @@ msgstr "Belirteç geçersiz!"
 msgid "Token-based API access has been disabled by the administrator."
 msgstr "Belirteç tabanlı API erişimi yönetici tarafından devre dışı bırakıldı."
 
-#: lib/user_agent.rb:239
+#: lib/user_agent.rb:240
 msgid "Too many redirections for the original URL, halting."
 msgstr "Orijinal URL için çok fazla yönlendirme, durduruluyor."
 
@@ -21363,7 +21363,7 @@ msgstr "Zammad Vakfı"
 msgid "Zammad Helpdesk"
 msgstr "Zammad Yardım Masası"
 
-#: lib/user_agent.rb:126
+#: lib/user_agent.rb:127
 msgid "Zammad User Agent"
 msgstr "Zammad Kullanıcı Temsilcisi"
 

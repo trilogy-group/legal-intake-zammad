@@ -19290,7 +19290,7 @@ msgstr "La imagen redimensionada no es válida."
 msgid "The server presented a certificate that could not be verified."
 msgstr "No se pudo guardar el problema."
 
-#: lib/user_agent.rb:235
+#: lib/user_agent.rb:236
 msgid ""
 "The server returned a redirect response, but the current operation does not "
 "allow redirects."
@@ -21180,7 +21180,7 @@ msgstr "¡El token no es válido!"
 msgid "Token-based API access has been disabled by the administrator."
 msgstr ""
 
-#: lib/user_agent.rb:239
+#: lib/user_agent.rb:240
 msgid "Too many redirections for the original URL, halting."
 msgstr "Demasiadas redirecciones para la URL original, deteniéndose."
 
@@ -23554,7 +23554,7 @@ msgstr "Fundación Zammad"
 msgid "Zammad Helpdesk"
 msgstr "Servicio de asistencia de Zammad"
 
-#: lib/user_agent.rb:126
+#: lib/user_agent.rb:127
 msgid "Zammad User Agent"
 msgstr "Agente de usuario de Zammad"
 

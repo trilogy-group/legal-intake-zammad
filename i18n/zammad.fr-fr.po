@@ -17606,7 +17606,7 @@ msgstr "La date sélectionnée n'est pas valide."
 msgid "The server presented a certificate that could not be verified."
 msgstr "Le serveur a présenté un certificat qui n'a pas pu être vérifié."
 
-#: lib/user_agent.rb:235
+#: lib/user_agent.rb:236
 msgid ""
 "The server returned a redirect response, but the current operation does not "
 "allow redirects."
@@ -19370,7 +19370,7 @@ msgstr ""
 "L'accès à l'API basé sur des jetons d'accès a été désactivé par "
 "l'administrateur."
 
-#: lib/user_agent.rb:239
+#: lib/user_agent.rb:240
 msgid "Too many redirections for the original URL, halting."
 msgstr "Trop de redirections pour l'URL d'origine, arrêt."
 
@@ -21601,7 +21601,7 @@ msgstr "Fondation Zammad"
 msgid "Zammad Helpdesk"
 msgstr "Support Zammad"
 
-#: lib/user_agent.rb:126
+#: lib/user_agent.rb:127
 msgid "Zammad User Agent"
 msgstr "User Agent Zammad"
 
