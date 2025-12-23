@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zammad\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-11-24 01:00+0000\n"
+"PO-Revision-Date: 2025-12-12 09:00+0000\n"
 "Last-Translator: Anael Mobilia <contrib@anael.eu>\n"
 "Language-Team: French <https://translations.zammad.org/projects/zammad/"
 "zammad-stable/fr/>\n"
@@ -4313,7 +4313,7 @@ msgid ""
 "To select placeholders from a list, just enter \"::\"."
 msgstr ""
 "Créez des modèles de texte pour **passer moins de temps à écrire des "
-"réponses**. Les modèles de texte peuvent inclure des variables intelligentes "
+"réponses**. Les modèles de texte peuvent inclure des variables dynamiques "
 "telles que le nom de l'utilisateur ou son adresse email.\n"
 "\n"
 "Voici quelques exemples de modèles :\n"
@@ -8454,7 +8454,6 @@ msgstr "Salutations"
 #: app/graphql/gql/types/overview_type.rb:95
 #: app/views/mailer/ticket_create/fr.html.erb:8
 #: app/views/mailer/ticket_create/zh-cn.html.erb:8
-#: app/views/mailer/ticket_create/zh-tw.html.erb:8
 #: app/views/messaging/ticket_create/pt-br.md.erb:3
 #: app/views/messaging/ticket_create/zh-tw.md.erb:3
 #: app/views/messaging/ticket_info/pt-br.md.erb:3
@@ -9368,7 +9367,6 @@ msgstr "Info : %s"
 #: app/views/mailer/ticket_create/fr.html.erb:15
 #: app/views/mailer/ticket_create/it.html.erb:15
 #: app/views/mailer/ticket_create/zh-cn.html.erb:15
-#: app/views/mailer/ticket_create/zh-tw.html.erb:15
 #: app/views/mailer/ticket_escalation/de.html.erb:9
 #: app/views/mailer/ticket_escalation/fr.html.erb:9
 #: app/views/mailer/ticket_escalation/it.html.erb:9
@@ -12865,7 +12863,6 @@ msgstr "Écraser le brouillon"
 #: app/graphql/gql/types/overview_type.rb:96
 #: app/views/mailer/ticket_create/fr.html.erb:9
 #: app/views/mailer/ticket_create/zh-cn.html.erb:9
-#: app/views/mailer/ticket_create/zh-tw.html.erb:9
 #: app/views/messaging/ticket_create/pt-br.md.erb:4
 #: app/views/messaging/ticket_create/zh-tw.md.erb:4
 #: app/views/messaging/ticket_info/pt-br.md.erb:4
@@ -15993,7 +15990,6 @@ msgstr "Lancement de l'import…"
 #: app/graphql/gql/types/overview_type.rb:97
 #: app/views/mailer/ticket_create/fr.html.erb:10
 #: app/views/mailer/ticket_create/zh-cn.html.erb:10
-#: app/views/mailer/ticket_create/zh-tw.html.erb:10
 #: app/views/messaging/ticket_create/pt-br.md.erb:5
 #: app/views/messaging/ticket_create/zh-tw.md.erb:5
 #: app/views/messaging/ticket_info/pt-br.md.erb:5
@@ -20596,14 +20592,10 @@ msgid "View from user's perspective"
 msgstr "Voir depuis la perspective utilisateur"
 
 #: app/views/mailer/ticket_create/zh-cn.html.erb:23
-#: app/views/mailer/ticket_create/zh-tw.html.erb:23
 #: app/views/mailer/ticket_escalation/it.html.erb:17
 #: app/views/mailer/ticket_escalation_warning/zh-cn.html.erb:17
-#: app/views/mailer/ticket_escalation_warning/zh-tw.html.erb:17
 #: app/views/mailer/ticket_reminder_reached/zh-cn.html.erb:17
-#: app/views/mailer/ticket_reminder_reached/zh-tw.html.erb:17
 #: app/views/mailer/ticket_update/zh-cn.html.erb:28
-#: app/views/mailer/ticket_update/zh-tw.html.erb:28
 msgid "View this in Zammad"
 msgstr "Voir dans Zammad"
 

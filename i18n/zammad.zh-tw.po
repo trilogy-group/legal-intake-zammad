@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zammad\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-12-08 06:41+0000\n"
+"PO-Revision-Date: 2025-12-23 05:32+0000\n"
 "Last-Translator: mathew-uems <mathew.chen@edgentauems.com.tw>\n"
 "Language-Team: Chinese (Traditional Han script) <https://"
 "translations.zammad.org/projects/zammad/zammad-stable/zh_Hant/>\n"
@@ -1897,7 +1897,7 @@ msgstr "回答：%s"
 
 #: app/assets/javascripts/app/lib/app_post/iconset_picker.coffee:9
 msgid "Anticon"
-msgstr ""
+msgstr "Anticon"
 
 #: app/assets/javascripts/app/controllers/_ui_element/postmaster_match.coffee:22
 msgid "Any recipient"
@@ -1907,7 +1907,7 @@ msgstr "任何收件者"
 msgid ""
 "Apologies, we're unable to process this kind of message due to restrictions "
 "within WhatsApp Business."
-msgstr ""
+msgstr "抱歉，由於 WhatsApp Business 的限制，我們無法處理這類訊息。"
 
 #: db/seeds/settings.rb:1450
 msgid "App ID"
@@ -1919,7 +1919,7 @@ msgstr "App Secret"
 
 #: db/seeds/settings.rb:1789
 msgid "App Tenant ID"
-msgstr ""
+msgstr "App 租用戶 ID"
 
 #: db/seeds/settings.rb:27
 msgid "App Version"
@@ -1982,7 +1982,7 @@ msgstr "套用草稿"
 #: app/assets/javascripts/app/controllers/ticket_shared_draft_modal.coffee:2
 #: app/frontend/apps/desktop/pages/ticket/components/TicketSharedDraftFlyout.vue:170
 msgid "Apply Shared Draft"
-msgstr ""
+msgstr "應用共享草稿"
 
 #: app/frontend/apps/desktop/pages/ticket/components/TicketCreate/ApplyTemplate.vue:40
 msgid "Apply Template"
@@ -2022,7 +2022,7 @@ msgstr "封存信件"
 #: app/assets/javascripts/app/controllers/getting_started/channel_email.coffee:289
 #: app/frontend/apps/desktop/entities/channel-email/composables/useEmailInboundMessagesForm.ts:57
 msgid "Archive cut-off time"
-msgstr ""
+msgstr "封存截止時間"
 
 #: app/assets/javascripts/app/controllers/_channel/email.coffee:738
 #: app/assets/javascripts/app/controllers/_channel/email_archive.coffee:42
@@ -2060,12 +2060,12 @@ msgstr "您確定要刪除這個物件嗎？"
 
 #: app/frontend/apps/mobile/pages/ticket/composable/useTicketsMerge.ts:67
 msgid "Are you sure you want to merge this ticket (#%s) into #%s?"
-msgstr ""
+msgstr "您確定要將此工單 (#%s) 合併到 #%s 中嗎？"
 
 #: app/assets/javascripts/app/controllers/knowledge_base/content_controller.coffee:78
 msgid ""
 "Are you sure you want to reload? You have unsaved changes that will get lost"
-msgstr ""
+msgstr "您確定要重新載入嗎？重新載入後未儲存的變更將會遺失"
 
 #: app/assets/javascripts/app/controllers/_application_controller/table.coffee:734
 msgid "Are you sure you want to set \"%s\" as default?"
@@ -2102,23 +2102,23 @@ msgstr "您確定嗎？"
 msgid ""
 "Are you sure? Default notifications settings will be applied to all active "
 "agents. This operation may take some time."
-msgstr ""
+msgstr "您確定嗎？預設通知設定將套用於所有啟用的客服人員。此操作可能需要一些時間。"
 
 #: app/assets/javascripts/app/controllers/_manage/ticket_notification.coffee:34
 msgid ""
 "Are you sure? The agent default notifications settings will be reset to the "
 "system default."
-msgstr ""
+msgstr "您確定嗎？代理程式的預設通知設定將被重設為系統預設值。"
 
 #: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/ArticleReplyDialog.vue:86
 msgid "Are you sure? The prepared article will be removed."
-msgstr ""
+msgstr "你確定嗎？準備好的文章將被刪除。"
 
 #: app/assets/javascripts/app/controllers/user/manage_two_factor.coffee:113
 msgid ""
 "Are you sure? The user will have to to reconfigure all two-factor "
 "authentication methods."
-msgstr ""
+msgstr "您確定嗎？使用者需要重新設置所有兩步驟認證方式。"
 
 #: app/frontend/apps/desktop/components/QuickSearch/QuickSearch.vue:71
 msgid "Are you sure? This recent search will get lost."
@@ -2126,7 +2126,7 @@ msgstr ""
 
 #: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/ArticleReplyDialog.vue:64
 msgid "Are you sure? You have changes that will get lost."
-msgstr ""
+msgstr "你確定嗎？你做的修改會遺失。"
 
 #: app/frontend/apps/desktop/components/CommonConfirmationDialog/CommonConfirmationDialog.vue:57
 #: app/frontend/apps/mobile/components/CommonDialogObjectForm/CommonDialogObjectForm.vue:79
@@ -2135,12 +2135,12 @@ msgstr ""
 #: app/frontend/apps/mobile/pages/ticket/views/TicketDetailView.vue:268
 #: app/frontend/apps/mobile/pages/ticket/views/TicketInformation/TicketInformationDetails.vue:50
 msgid "Are you sure? You have unsaved changes that will get lost."
-msgstr ""
+msgstr "你確定嗎？你未儲存的更改將會遺失。"
 
 #: app/assets/javascripts/app/controllers/_profile/notification.coffee:150
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingNotifications.vue:162
 msgid "Are you sure? Your notifications settings will be reset to default."
-msgstr ""
+msgstr "您確定嗎？您的通知設定將被重設為預設值。"
 
 #: app/frontend/apps/desktop/components/QuickSearch/QuickSearch.vue:88
 msgid "Are you sure? Your recent searches will get lost."
@@ -2161,7 +2161,7 @@ msgstr "文章"
 
 #: db/seeds/settings.rb:682
 msgid "Article - visibility confirmation dialog"
-msgstr ""
+msgstr "文章 - 可見性確認對話框"
 
 #: app/assets/javascripts/app/controllers/widget/placeholder.coffee:96
 msgid "Article > Text (HTML)"
@@ -2191,7 +2191,7 @@ msgstr "文章 meta 資訊"
 #: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/ArticleSecurityBadge.vue:77
 #: app/frontend/shared/composables/useArticleSecurity.ts:93
 msgid "Article uses different security mechanism."
-msgstr ""
+msgstr "文章採用了不同的安全機制。"
 
 #: app/assets/javascripts/app/models/ticket.coffee:15
 #: app/graphql/gql/types/overview_type.rb:100
@@ -2205,7 +2205,7 @@ msgstr "指派追蹤"
 #: app/assets/javascripts/app/models/group.coffee:11
 #: db/seeds/object_manager_attributes.rb:2195
 msgid "Assign follow-up to latest agent again."
-msgstr ""
+msgstr "再次指派後續人員給上一位客服。"
 
 #: app/assets/javascripts/app/models/group.coffee:11
 msgid "Assign follow-ups"
@@ -2266,7 +2266,7 @@ msgstr "至少選擇一個物件。"
 
 #: app/models/role.rb:128 app/models/user.rb:710
 msgid "At least one user needs to have admin permissions."
-msgstr ""
+msgstr "至少需要一名擁有管理員權限的使用者。"
 
 #: app/frontend/shared/components/Form/fields/FieldFile/FieldFileInput.vue:193
 msgid "Attach another file"
@@ -2293,7 +2293,7 @@ msgstr "附件"
 
 #: db/seeds/settings.rb:3358
 msgid "Attachment - Search for follow-up also in attachments."
-msgstr ""
+msgstr "附件 - 也可在附件中尋找後續資訊。"
 
 #: app/assets/javascripts/app/controllers/ticket_zoom/sidebar_article_attachments.coffee:15
 #: app/assets/javascripts/app/views/knowledge_base/_answer_attachments.jst.eco:3
@@ -2306,26 +2306,26 @@ msgstr "附件"
 
 #: app/assets/javascripts/app/views/settings/storage_provider.jst.eco:10
 msgid "Attachments are stored in a Simple Storage Service."
-msgstr ""
+msgstr "附件儲存在 Simple Storage Service 中。"
 
 #: app/assets/javascripts/app/views/settings/storage_provider.jst.eco:8
 msgid "Attachments are stored in the database."
-msgstr ""
+msgstr "附件儲存在資料庫中。"
 
 #: app/assets/javascripts/app/views/settings/storage_provider.jst.eco:6
 msgid "Attachments are stored in the filesystem."
-msgstr ""
+msgstr "附件儲存在檔案系統中。"
 
 #: app/assets/javascripts/app/views/generic/calender_preview.jst.eco:28
 msgid "Attendees"
-msgstr ""
+msgstr "參與者"
 
 #: app/assets/javascripts/app/models/user.coffee:12
 #: app/frontend/apps/mobile/entities/user/composables/useUserEdit.ts:72
 msgid ""
 "Attention! Changing the organization will update the user's most recent "
 "tickets to the new organization."
-msgstr ""
+msgstr "注意！更改機構會將使用者最近的工單更新到新機構。"
 
 #: app/assets/javascripts/app/views/import/kayako.jst.eco:39
 msgid ""
@@ -2342,17 +2342,18 @@ msgstr "注意：匯入完成後，這些是您的登入名稱和密碼。"
 
 #: app/assets/javascripts/app/controllers/object_manager.coffee:154
 msgid "Attribute"
-msgstr ""
+msgstr "屬性"
 
 #: app/assets/javascripts/app/controllers/_integration/ldap.coffee:618
 msgid "Attribute '%s' is required in the mapping"
-msgstr ""
+msgstr "在對應中必須包含屬性 '%s'"
 
 #: db/seeds/settings.rb:1962
 msgid ""
 "Attribute that uniquely identifies the user. If unset, the name identifier "
 "returned by the IDP is used."
-msgstr ""
+msgstr "用於唯一標識使用者的屬性。如果未設定，則使用身分提供者 (IDP) "
+"傳回的名稱識別碼。"
 
 #: app/assets/javascripts/app/controllers/ticket_overview/settings.coffee:31
 #: app/assets/javascripts/app/models/overview.coffee:15
@@ -2395,11 +2396,11 @@ msgstr "驗證 Token"
 
 #: lib/email_helper/probe.rb:276
 msgid "Authentication failed due to incorrect credentials."
-msgstr ""
+msgstr "身份驗證失敗，憑證錯誤。"
 
 #: lib/email_helper/probe.rb:274
 msgid "Authentication failed due to incorrect username."
-msgstr ""
+msgstr "身份驗證失敗，使用者名稱不正確。"
 
 #: app/controllers/import_otrs_controller.rb:17 lib/email_helper/probe.rb:272
 msgid "Authentication failed."
@@ -2407,13 +2408,13 @@ msgstr "驗證失敗。"
 
 #: lib/email_helper/probe.rb:277
 msgid "Authentication not possible (not offered by the service)"
-msgstr ""
+msgstr "無法驗證（該服務不提供）"
 
 #: app/controllers/application_controller/authenticates.rb:17
 #: app/graphql/gql/context/current_user_aware.rb:7
 #: app/policies/pundit_policy.rb:21 lib/user_context.rb:26
 msgid "Authentication required"
-msgstr ""
+msgstr "需要驗證"
 
 #: db/seeds/settings.rb:1209
 msgid "Authentication via %s"
@@ -2438,20 +2439,20 @@ msgstr "Authenticator app 秘密"
 #: app/assets/javascripts/app/views/ticket_shared_draft_modal.jst.eco:3
 #: app/frontend/apps/desktop/pages/ticket/components/TicketSharedDraftFlyout.vue:198
 msgid "Author"
-msgstr ""
+msgstr "作者"
 
 #: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/ArticleBubble/ArticleBubbleBody.vue:92
 msgid "Author name and article creation date"
-msgstr ""
+msgstr "作者姓名和文章建立日期"
 
 #: app/controllers/application_controller/handles_errors.rb:106
 msgid "Authorization failed"
-msgstr ""
+msgstr "授權失敗"
 
 #: app/assets/javascripts/app/views/widget/two_factor_configuration/authenticator_app.jst.eco:11
 #: app/frontend/apps/desktop/components/TwoFactor/TwoFactorConfiguration/TwoFactorConfigurationAuthenticatorApp.vue:159
 msgid "Authy"
-msgstr ""
+msgstr "Authy"
 
 #: app/assets/javascripts/app/controllers/_manage/ticket.coffee:11
 #: app/assets/javascripts/app/views/settings/ticket_auto_assignment.jst.eco:7
@@ -2469,11 +2470,11 @@ msgstr "自動指派選擇器"
 
 #: db/seeds/settings.rb:5974
 msgid "Auto Shutdown"
-msgstr ""
+msgstr "自動關機"
 
 #: app/assets/javascripts/app/controllers/getting_started/auto_wizard.coffee:16
 msgid "Auto Wizard"
-msgstr ""
+msgstr "Auto Wizard"
 
 #: db/seeds/settings.rb:4503
 msgid "Auto close"
@@ -2489,13 +2490,13 @@ msgstr "自動關閉狀態"
 
 #: lib/auto_wizard.rb:127
 msgid "AutoWizard is disabled"
-msgstr ""
+msgstr "AutoWizard 已停用"
 
 #: app/frontend/apps/desktop/pages/guided-setup/routes.ts:30
 #: app/frontend/apps/desktop/pages/guided-setup/views/GuidedSetupAutomated/GuidedSetupAutomatedInfo.vue:8
 #: app/frontend/apps/desktop/pages/guided-setup/views/GuidedSetupAutomated/GuidedSetupAutomatedRun.vue:82
 msgid "Automated Setup"
-msgstr ""
+msgstr "自動化設定"
 
 #: db/seeds/settings.rb:1272
 msgid "Automatic account link on initial logon"
@@ -2507,7 +2508,7 @@ msgstr "自動帳戶關聯通知"
 
 #: app/assets/javascripts/app/controllers/_channel/whatsapp.coffee:180
 msgid "Automatic reminders"
-msgstr ""
+msgstr "自動提醒"
 
 #: app/assets/javascripts/app/controllers/_integration/clearbit.coffee:6
 msgid ""
@@ -2523,11 +2524,11 @@ msgstr "自動加載 chat.css 文件。如果要使用自己的 CSS，請將其�
 
 #: app/frontend/shared/components/Form/Form.vue:1290
 msgid "Autosave in progress…"
-msgstr ""
+msgstr "自動保存進行中…"
 
 #: app/frontend/shared/components/Form/Form.vue:1299
 msgid "Autosaving is taking longer than expected…"
-msgstr ""
+msgstr "自動保存所需時間比預期長…"
 
 #: app/assets/javascripts/app/controllers/_manage/ticket_duplicate_detection.coffee:35
 #: app/assets/javascripts/app/models/overview.coffee:8
@@ -2540,7 +2541,7 @@ msgstr "可用方式"
 
 #: db/seeds/settings.rb:915
 msgid "Available types for a new ticket"
-msgstr ""
+msgstr "新工單的可用類型"
 
 #: app/assets/javascripts/app/controllers/_profile/avatar.coffee:3
 #: app/assets/javascripts/app/models/user.coffee:29
@@ -2585,7 +2586,7 @@ msgstr "平均：%s%"
 
 #: db/seeds/settings.rb:3500
 msgid "BCC address for all outgoing emails"
-msgstr ""
+msgstr "所有外寄郵件的密件副本"
 
 #: app/assets/javascripts/app/views/generic/object_search/item_organization_members.jst.eco:5
 #: app/frontend/apps/desktop/components/CommonSelect/CommonSelect.vue:439
@@ -2622,7 +2623,7 @@ msgstr "背景色"
 msgid ""
 "Background process did not start or has not finished! Please contact your "
 "support."
-msgstr ""
+msgstr "後台進程未啟動或尚未完成！請聯絡您的支援團隊。"
 
 #: app/models/report.rb:38
 msgid "Backlog"
@@ -3374,7 +3375,7 @@ msgstr "清除'HttpLog'。"
 
 #: db/seeds/schedulers.rb:115
 msgid "Clean up ActiveJob locks."
-msgstr "清除ActiveJob鎖定。"
+msgstr "清除啟用工作鎖定。"
 
 #: db/seeds/schedulers.rb:224
 msgid "Clean up cache."
@@ -4476,7 +4477,7 @@ msgstr "機構內的客戶可以查看彼此的項目。"
 msgid ""
 "Customize the default locale and timezone during replacement of template "
 "variables."
-msgstr ""
+msgstr "在代理範本變數時，自訂預設語言環境和時區。"
 
 #: app/assets/javascripts/app/controllers/_plugin/electron_events.coffee:26
 msgid "Cut"
@@ -5091,7 +5092,8 @@ msgstr ""
 msgid ""
 "Defines postmaster filter to identify out-of-office emails for follow-up "
 "detection and keeping current ticket state."
-msgstr ""
+msgstr "定義郵件管理員過濾器識別不再辦公室郵件，以便進行後續後續追蹤並保持工單的當前"
+"狀態。"
 
 #: db/seeds/settings.rb:4358
 msgid ""
@@ -7934,7 +7936,6 @@ msgstr "問候語"
 #: app/graphql/gql/types/overview_type.rb:95
 #: app/views/mailer/ticket_create/fr.html.erb:8
 #: app/views/mailer/ticket_create/zh-cn.html.erb:8
-#: app/views/mailer/ticket_create/zh-tw.html.erb:8
 #: app/views/messaging/ticket_create/pt-br.md.erb:3
 #: app/views/messaging/ticket_create/zh-tw.md.erb:3
 #: app/views/messaging/ticket_info/pt-br.md.erb:3
@@ -8787,7 +8788,6 @@ msgstr ""
 #: app/views/mailer/ticket_create/fr.html.erb:15
 #: app/views/mailer/ticket_create/it.html.erb:15
 #: app/views/mailer/ticket_create/zh-cn.html.erb:15
-#: app/views/mailer/ticket_create/zh-tw.html.erb:15
 #: app/views/mailer/ticket_escalation/de.html.erb:9
 #: app/views/mailer/ticket_escalation/fr.html.erb:9
 #: app/views/mailer/ticket_escalation/it.html.erb:9
@@ -9997,7 +9997,7 @@ msgstr "管理個人通知設定。"
 
 #: db/seeds/permissions.rb:423
 msgid "Manage personal out of office settings."
-msgstr "管理個人休假設定。"
+msgstr "管理個人不在辦公室設定。"
 
 #: db/seeds/permissions.rb:478
 msgid "Manage personal overviews."
@@ -10614,7 +10614,7 @@ msgstr "我的待處理工單"
 
 #: db/seeds/overviews.rb:184
 msgid "My Replacement Tickets"
-msgstr "我替換的工單"
+msgstr "我代理的工單"
 
 #: app/assets/javascripts/app/views/dashboard.jst.eco:3
 msgid "My Stats"
@@ -11040,7 +11040,7 @@ msgstr ""
 #: app/frontend/apps/desktop/pages/authentication/views/Login.vue:202
 #: app/frontend/apps/mobile/pages/authentication/components/LoginCredentialsForm.vue:140
 msgid "New user?"
-msgstr "新的使用者?"
+msgstr "新增使用者?"
 
 #: app/assets/javascripts/app/controllers/_channel/whatsapp.coffee:112
 #: app/assets/javascripts/app/controllers/webhook.coffee:126
@@ -11137,7 +11137,7 @@ msgstr "無總覽"
 
 #: db/seeds/settings.rb:577
 msgid "No Proxy"
-msgstr ""
+msgstr "無Proxy"
 
 #: app/assets/javascripts/app/controllers/_channel/email.coffee:431
 #: app/assets/javascripts/app/controllers/_integration/ldap.coffee:203
@@ -11148,12 +11148,12 @@ msgstr "無SSL"
 
 #: app/assets/javascripts/app/controllers/_plugin/translation_support.coffee:37
 msgid "No Thanks!"
-msgstr ""
+msgstr "不，謝謝！"
 
 #: app/frontend/shared/entities/ticket-article/action/plugins/whatsapp.ts:123
 msgid ""
 "No additional text can be sent with this media type. Please remove the text."
-msgstr ""
+msgstr "此媒體類型無法傳送附加文字。請刪除文字。"
 
 #: app/assets/javascripts/app/controllers/knowledge_base/sidebar/answers.coffee:4
 msgid "No answers"
@@ -11165,7 +11165,7 @@ msgstr "無附件檔案"
 
 #: app/assets/javascripts/app/controllers/_profile/avatar.coffee:327
 msgid "No camera found."
-msgstr ""
+msgstr "找不到相機。"
 
 #: app/assets/javascripts/app/controllers/knowledge_base/sidebar/categories.coffee:4
 msgid "No categories"
@@ -11196,11 +11196,11 @@ msgstr "無配置設定。"
 #: app/views/knowledge_base/public/categories/index.html.erb:16
 #: app/views/knowledge_base/public/tags/show.html.erb:15
 msgid "No content to show"
-msgstr ""
+msgstr "沒有內容可以顯示"
 
 #: app/models/group.rb:36
 msgid "No double colons (::) allowed, reserved delimiter"
-msgstr ""
+msgstr "不允許使用雙冒號 (::)，這是保留分隔符號"
 
 #: app/assets/javascripts/app/views/widget/shared_draft.jst.eco:21
 msgid "No drafts"
@@ -11227,7 +11227,7 @@ msgstr "沒有選擇檔案。"
 
 #: app/frontend/shared/form/i18n/locales.ts:454
 msgid "No file formats allowed."
-msgstr ""
+msgstr "不允許無副檔名。"
 
 #: app/assets/javascripts/app/controllers/_ui_element/_application_selector.coffee:654
 #: app/assets/javascripts/app/controllers/_ui_element/_application_selector_expert.coffee:803
@@ -11745,27 +11745,19 @@ msgid ""
 msgstr "目前本語言只有 %s% 已翻譯。請協助完善 Zammad 並完成翻譯。"
 
 #: db/seeds/settings.rb:1984
-#, fuzzy
-#| msgid "Encrypt"
 msgid "Only Encrypting"
-msgstr "加密"
+msgstr "僅加密"
 
 #: db/seeds/settings.rb:1983
-#, fuzzy
-#| msgid "Sign in"
 msgid "Only Signing"
-msgstr "登入"
+msgstr "僅登入"
 
 #: app/assets/javascripts/app/models/overview.coffee:11
-#, fuzzy
-#| msgid "Only available for Users which are replacements for other users."
 msgid ""
 "Only available for users which are absence replacements for other users."
-msgstr "只適用於代理其他使用者的使用者。"
+msgstr "只適用於代理其他使用者。"
 
 #: app/assets/javascripts/app/models/overview.coffee:10
-#, fuzzy
-#| msgid "Only available for Users with shared Organization"
 msgid "Only available for users with shared organizations"
 msgstr "僅適用於屬於共享機構的使用者"
 
@@ -11797,17 +11789,13 @@ msgstr "只有編輯者可見"
 
 #: app/assets/javascripts/app/models/user_overview_sorting_overview.coffee:19
 #: app/frontend/apps/desktop/pages/personal-setting/components/PersonalSettingOverviewOrder.vue:83
-#, fuzzy
-#| msgid "Out of office replacement"
 msgid "Only when out of office replacement"
-msgstr "外出代理人"
+msgstr "僅在不在辦公室時才需要職務代理人"
 
 #: app/assets/javascripts/app/models/user_overview_sorting_overview.coffee:12
 #: app/frontend/apps/desktop/pages/personal-setting/components/PersonalSettingOverviewOrder.vue:80
-#, fuzzy
-#| msgid "Shared organization"
 msgid "Only when shared organization member"
-msgstr "共享的機構"
+msgstr "僅限共享機構成員"
 
 #: app/assets/javascripts/app/views/generic/error/not_found.jst.eco:3
 msgid "Oops.. I'm sorry, but I can't find this %s."
@@ -12136,7 +12124,7 @@ msgstr "外出代理人"
 #: app/assets/javascripts/app/controllers/_ui_element/_application_selector.coffee:165
 #: app/assets/javascripts/app/controllers/_ui_element/object_selector.coffee:192
 msgid "Out of office replacement"
-msgstr "職務代理人"
+msgstr "不在辦公室職務代理"
 
 #: app/assets/javascripts/app/views/channel/email_account_overview.jst.eco:99
 #: app/assets/javascripts/app/views/channel/sms_account_overview.jst.eco:24
@@ -12223,7 +12211,6 @@ msgstr ""
 #: app/graphql/gql/types/overview_type.rb:96
 #: app/views/mailer/ticket_create/fr.html.erb:9
 #: app/views/mailer/ticket_create/zh-cn.html.erb:9
-#: app/views/mailer/ticket_create/zh-tw.html.erb:9
 #: app/views/messaging/ticket_create/pt-br.md.erb:4
 #: app/views/messaging/ticket_create/zh-tw.md.erb:4
 #: app/views/messaging/ticket_info/pt-br.md.erb:4
@@ -13483,13 +13470,11 @@ msgstr "排序"
 
 #: app/assets/javascripts/app/views/profile/out_of_office.jst.eco:26
 msgid "Replacement"
-msgstr "代理人"
+msgstr "職務代理"
 
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingOutOfOffice.vue:61
-#, fuzzy
-#| msgid "Replacement"
 msgid "Replacement agent"
-msgstr "代理人"
+msgstr "職務代理人"
 
 #: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/ArticleReply.vue:248
 #: app/frontend/shared/entities/ticket-article/action/plugins/email.ts:87
@@ -14421,41 +14406,33 @@ msgstr "安全性"
 #: app/frontend/apps/desktop/components/TwoFactor/TwoFactorConfiguration/TwoFactorConfigurationAuthenticatorApp.vue:312
 #: app/frontend/apps/desktop/pages/authentication/components/LoginTwoFactor.vue:43
 #: app/frontend/apps/mobile/pages/authentication/components/LoginTwoFactor.vue:50
-#, fuzzy
-#| msgid "Security"
 msgid "Security Code"
-msgstr "安全性"
+msgstr "安全碼"
 
 #: app/assets/javascripts/app/views/ticket_zoom/article_view.jst.eco:90
 #: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/ArticleBubble/ArticleBubbleSecurityWarning.vue:24
 #: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/ArticleSecurityBadge.vue:149
 msgid "Security Error"
-msgstr ""
+msgstr "安全錯誤"
 
 #: app/frontend/apps/mobile/components/Form/fields/FieldSecurity/FieldSecurityInput.vue:135
-#, fuzzy
-#| msgid "Block Notifications"
 msgid "Security Information"
-msgstr "封鎖通知"
+msgstr "安全通知"
 
 #: app/assets/javascripts/app/controllers/widget/two_factor_configuration/modal/security_keys.coffee:4
-#, fuzzy
-#| msgid "Security"
 msgid "Security Key"
-msgstr "安全性"
+msgstr "安全金鑰"
 
 #: app/assets/javascripts/app/controllers/widget/two_factor_configuration/modal/security_keys.coffee:4
 #: app/assets/javascripts/app/lib/app_post/two_factor_methods/security_keys.coffee:5
 #: app/frontend/shared/entities/two-factor/plugins/security-keys.ts:10
 #: db/seeds/settings.rb:5803
-#, fuzzy
-#| msgid "Security"
 msgid "Security Keys"
-msgstr "安全性"
+msgstr "安全金鑰"
 
 #: app/assets/javascripts/app/controllers/widget/two_factor_configuration/modal/security_keys.coffee:74
 msgid "Security key \"%s\" will be removed."
-msgstr ""
+msgstr "安全金鑰「%s」將被移除。"
 
 #: app/assets/javascripts/app/controllers/widget/two_factor_configuration/modal/security_keys.coffee:204
 #: app/frontend/apps/desktop/entities/two-factor-configuration/plugins/security-keys.ts:54
@@ -14468,10 +14445,8 @@ msgid "Security key verification failed."
 msgstr "安全金鑰驗證失敗。"
 
 #: app/frontend/apps/desktop/components/TwoFactor/TwoFactorConfiguration/TwoFactorConfigurationSecurityKeys.vue:389
-#, fuzzy
-#| msgid "Security"
 msgid "Security keys"
-msgstr "安全性"
+msgstr "安全金鑰"
 
 #: app/assets/javascripts/app/views/widget/two_factor_configuration/security_keys/index.jst.eco:1
 #: app/frontend/apps/desktop/components/TwoFactor/TwoFactorConfiguration/TwoFactorConfigurationSecurityKeys.vue:389
@@ -14482,7 +14457,7 @@ msgstr "安全金鑰是實體或軟體憑證，可用作您的雙重驗證方式
 
 #: lib/external_data_source/errors.rb:28
 msgid "See HTTPLog for details."
-msgstr ""
+msgstr "請查看 HTTP 日誌以了解詳情。"
 
 #: app/assets/javascripts/app/controllers/_ui_element/ticket_duplicate_detection.coffee:71
 #: app/assets/javascripts/app/controllers/article_view/item.coffee:451
@@ -14511,18 +14486,14 @@ msgid ""
 msgstr "在您最喜歡的行事曆查看您的工單，透過以下的 URL 加入您的行事曆 App。"
 
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingCalendar.vue:299
-#, fuzzy
-#| msgid ""
-#| "See your tickets from within your favorite calendar by adding the "
-#| "following URL to your calendar app."
 msgid ""
 "See your tickets from within your favorite calendar by adding the "
 "subscription URL to your calendar app."
-msgstr "在您最喜歡的行事曆查看您的工單，透過以下的 URL 加入您的行事曆 App。"
+msgstr "在您最喜歡的行事曆查看您的工單，透過以下的 訂閱 URL 加到您的行事曆 App。"
 
 #: app/assets/javascripts/app/controllers/_plugin/electron_events.coffee:38
 msgid "Select All"
-msgstr ""
+msgstr "選擇全部"
 
 #: app/assets/javascripts/app/views/generic/object_import/index.jst.eco:22
 msgid "Select CSV file"
@@ -14530,7 +14501,7 @@ msgstr "選擇 CSV 檔案"
 
 #: app/assets/javascripts/app/views/widget/shared_draft.jst.eco:17
 msgid "Select Shared Draft"
-msgstr ""
+msgstr "選擇共享草稿"
 
 #: app/assets/javascripts/app/controllers/ticket_zoom/sidebar_checklist/start.coffee:17
 #: app/assets/javascripts/app/views/widget/template.jst.eco:4
@@ -14539,14 +14510,12 @@ msgstr "選擇模板"
 
 #: app/frontend/apps/desktop/components/CommonTable/CommonAdvancedTable.vue:481
 #: app/frontend/apps/desktop/components/CommonTable/CommonSimpleTable.vue:92
-#, fuzzy
-#| msgid "set optional"
 msgid "Select all entries"
-msgstr "設定為可選"
+msgstr "選擇所有條目"
 
 #: db/seeds/settings.rb:890
 msgid "Select default ticket type"
-msgstr ""
+msgstr "選擇預設工單類型"
 
 #: app/assets/javascripts/app/controllers/_plugin/keyboard_shortcuts.coffee:345
 msgid "Select item"
@@ -14557,10 +14526,8 @@ msgid "Select locale…"
 msgstr "選擇語系…"
 
 #: app/frontend/apps/desktop/components/CommonTable/TableRow.vue:74
-#, fuzzy
-#| msgid "Delete File"
 msgid "Select table row"
-msgstr "删除檔案"
+msgstr "選擇表格行"
 
 #: app/assets/javascripts/app/controllers/_application_controller/form.coffee:216
 msgid "Select the customer of the ticket or create one."
@@ -14576,10 +14543,8 @@ msgstr "選擇這個頭像"
 
 #: app/frontend/apps/desktop/components/CommonTable/CommonAdvancedTable.vue:649
 #: app/frontend/apps/desktop/components/CommonTable/CommonSimpleTable.vue:152
-#, fuzzy
-#| msgid "Delete User"
 msgid "Select this entry"
-msgstr "删除使用者"
+msgstr "選擇此條目"
 
 #: app/assets/javascripts/app/models/core_workflow.coffee:9
 msgid "Selected conditions"
@@ -14587,17 +14552,15 @@ msgstr "已選擇的條件"
 
 #: lib/validations/data_privacy_task_validator.rb:57
 msgid "Selected object is already queued for deletion."
-msgstr ""
+msgstr "選擇的物件已加入刪除佇列。"
 
 #: app/assets/javascripts/app/controllers/widget/ticket_batch.coffee:68
 msgid "Selected tickets do not match any macros."
-msgstr ""
+msgstr "選擇的工單沒有任何相符的巨集。"
 
 #: app/assets/javascripts/app/models/trigger.coffee:8
-#, fuzzy
-#| msgid "Selector"
 msgid "Selective (default)"
-msgstr "選擇器"
+msgstr "選擇性（預設）"
 
 #: app/assets/javascripts/app/views/time_accounting/settings.jst.eco:4
 msgid "Selector"
@@ -14646,8 +14609,6 @@ msgid "Send a message to all logged in users."
 msgstr "傳送一條訊息給所有登入的使用者。"
 
 #: app/frontend/apps/desktop/entities/channel-email/composables/useEmailOutboundForm.ts:52
-#, fuzzy
-#| msgid "Send Mails via"
 msgid "Send mails via"
 msgstr "寄送郵件透過"
 
@@ -14655,15 +14616,15 @@ msgstr "寄送郵件透過"
 msgid ""
 "Send out automatic reminders to customers asking them for reply if the 24-"
 "hour window is about to expire."
-msgstr ""
+msgstr "如果 24 小時期限即將到期，則自動向客戶發送回覆提醒。"
 
 #: db/seeds/settings.rb:3427
 msgid "Send postmaster mail if mail too large"
-msgstr ""
+msgstr "如果郵件太大，請寄信給郵件管理員"
 
 #: db/seeds/settings.rb:3430
 msgid "Send postmaster reject mail to sender of mail if mail is too large."
-msgstr ""
+msgstr "如果郵件過大，則向寄件者發送郵件拒收通知。"
 
 #: app/assets/javascripts/app/views/maintenance.jst.eco:56
 msgid "Send to clients"
@@ -14696,20 +14657,16 @@ msgid "Sender based on Reply-To header"
 msgstr "基於 Reply-To 標頭的寄件人"
 
 #: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:503
-#, fuzzy
-#| msgid "Reply to last article"
 msgid "Sender of last article"
-msgstr "回覆最新文章"
+msgstr "最後一篇文章的發送者"
 
 #: db/seeds/object_manager_attributes.rb:2222
-#, fuzzy
-#| msgid "Email Address"
 msgid "Sending Email Address"
-msgstr "電子郵件地址"
+msgstr "發送電子郵件地址"
 
 #: app/models/ticket/article.rb:317
 msgid "Sending an email without a valid recipient is not possible."
-msgstr ""
+msgstr "沒有有效收件者的電子郵件是無法寄送的。"
 
 #: app/assets/javascripts/app/views/widget/invite_user.jst.eco:35
 msgid "Sending…"
@@ -14717,7 +14674,7 @@ msgstr "送出.…"
 
 #: app/assets/javascripts/app/controllers/maintenance.coffee:99
 msgid "Sent successfully!"
-msgstr ""
+msgstr "寄送成功！"
 
 #: app/assets/javascripts/app/controllers/_ui_element/basedate.coffee:161
 #: app/assets/javascripts/app/controllers/report.coffee:220
@@ -14727,7 +14684,7 @@ msgstr "九月"
 
 #: app/assets/javascripts/app/views/customer_chat/setting.jst.eco:36
 msgid "Separate multiple values by ;"
-msgstr ""
+msgstr "多個值之間以分號分隔：;"
 
 #: app/assets/javascripts/app/controllers/_ui_element/basedate.coffee:161
 msgid "September"
@@ -14735,7 +14692,7 @@ msgstr "九月"
 
 #: db/seeds/settings.rb:4024
 msgid "Sequencer log level"
-msgstr ""
+msgstr "定序日誌級別"
 
 #: app/assets/javascripts/app/controllers/_integration/exchange.coffee:410
 #: app/assets/javascripts/app/controllers/_integration/ldap.coffee:483
@@ -14780,7 +14737,7 @@ msgstr "工作階段"
 #: app/frontend/apps/desktop/components/TwoFactor/TwoFactorConfiguration/TwoFactorConfigurationAuthenticatorApp.vue:171
 #: app/frontend/apps/desktop/components/TwoFactor/TwoFactorConfiguration/TwoFactorConfigurationSecurityKeys.vue:62
 msgid "Set Up"
-msgstr ""
+msgstr "設定"
 
 #: app/frontend/apps/desktop/pages/authentication/after-auth/plugins/twoFactorSetup.ts:12
 msgid "Set Up Two-factor Authentication"
@@ -14818,7 +14775,7 @@ msgstr "將authenticator設為預設"
 
 #: db/seeds/settings.rb:918
 msgid "Set available ticket types"
-msgstr ""
+msgstr "設定可用的工單類型"
 
 #: db/seeds/settings.rb:3759
 msgid "Set backend which is being used for import."
@@ -14827,41 +14784,33 @@ msgstr ""
 #: app/assets/javascripts/app/views/integration/cti.jst.eco:52
 #: app/assets/javascripts/app/views/integration/placetel.jst.eco:68
 #: app/assets/javascripts/app/views/integration/sipgate.jst.eco:55
-#, fuzzy
-#| msgid "Set caller id of outbound calls based on destination caller id."
 msgid "Set caller ID of outbound calls based on destination caller ID."
 msgstr "根據目標 Caller ID 設置外撥電話的 Caller ID。"
 
 #: app/assets/javascripts/app/controllers/ticket_state.coffee:39
 msgid "Set default for follow-ups"
-msgstr ""
+msgstr "設定後續操作的預設值"
 
 #: app/assets/javascripts/app/controllers/ticket_priority.coffee:25
 #: app/assets/javascripts/app/controllers/ticket_state.coffee:29
-#, fuzzy
-#| msgid "Create your first ticket"
 msgid "Set default for new tickets"
-msgstr "建立您的第一筆工單"
+msgstr "設定新工單的預設值"
 
 #: app/assets/javascripts/app/views/integration/cti.jst.eco:59
 #: app/assets/javascripts/app/views/integration/placetel.jst.eco:75
 #: app/assets/javascripts/app/views/integration/sipgate.jst.eco:62
-#, fuzzy
-#| msgid "Set outbound caller id"
 msgid "Set outbound caller ID"
 msgstr "設定外撥電話 Caller ID"
 
 #: app/frontend/apps/desktop/entities/two-factor-configuration/plugins/security-keys.ts:20
-#, fuzzy
-#| msgid "Set as Default"
 msgid "Set security keys as default"
-msgstr "設為預設值"
+msgstr "將安全金鑰設定為預設值"
 
 #: db/seeds/settings.rb:5592
 msgid ""
 "Set timeframe in seconds. If it's set to 0 you can delete notes without time "
 "limits"
-msgstr ""
+msgstr "設定時間範圍（以秒為單位）。如果設定為 0，則可以不受時間限制地刪除筆記"
 
 #: app/frontend/shared/entities/ticket-article/action/plugins/changeVisibility.ts:33
 msgid "Set to internal"
@@ -15558,7 +15507,6 @@ msgstr "開始匯入…"
 #: app/graphql/gql/types/overview_type.rb:97
 #: app/views/mailer/ticket_create/fr.html.erb:10
 #: app/views/mailer/ticket_create/zh-cn.html.erb:10
-#: app/views/mailer/ticket_create/zh-tw.html.erb:10
 #: app/views/messaging/ticket_create/pt-br.md.erb:5
 #: app/views/messaging/ticket_create/zh-tw.md.erb:5
 #: app/views/messaging/ticket_info/pt-br.md.erb:5
@@ -16122,7 +16070,7 @@ msgstr ""
 
 #: app/controllers/user_access_token_controller.rb:41
 msgid "The API token could not be found."
-msgstr ""
+msgstr "找不到API token。"
 
 #: app/assets/javascripts/app/controllers/knowledge_base/new_controller.coffee:56
 #, fuzzy
@@ -18001,7 +17949,7 @@ msgstr ""
 #: app/frontend/apps/mobile/pages/home/components/TicketOverviewEditItem.vue:55
 msgid ""
 "This overview is visible only when you are an out of office replacement."
-msgstr ""
+msgstr "只有當您是不再辦公室的職務代理人時，您才能看到此概覽。"
 
 #: app/frontend/shared/router/error.ts:25
 msgid "This page doesn't exist."
@@ -20009,10 +19957,8 @@ msgid "User is on mobile"
 msgstr ""
 
 #: app/frontend/shared/composables/useAvatarIndicator.ts:84
-#, fuzzy
-#| msgid "Out of Office"
 msgid "User is out of office"
-msgstr "外出"
+msgstr "使用者不再辦公室"
 
 #: app/assets/javascripts/app/controllers/_channel/microsoft_graph.coffee:386
 #, fuzzy
@@ -20230,14 +20176,10 @@ msgid "View from user's perspective"
 msgstr "切換為使用者視角"
 
 #: app/views/mailer/ticket_create/zh-cn.html.erb:23
-#: app/views/mailer/ticket_create/zh-tw.html.erb:23
 #: app/views/mailer/ticket_escalation/it.html.erb:17
 #: app/views/mailer/ticket_escalation_warning/zh-cn.html.erb:17
-#: app/views/mailer/ticket_escalation_warning/zh-tw.html.erb:17
 #: app/views/mailer/ticket_reminder_reached/zh-cn.html.erb:17
-#: app/views/mailer/ticket_reminder_reached/zh-tw.html.erb:17
 #: app/views/mailer/ticket_update/zh-cn.html.erb:28
-#: app/views/mailer/ticket_update/zh-tw.html.erb:28
 msgid "View this in Zammad"
 msgstr "到 Zammad 系統查看"
 
@@ -20675,7 +20617,8 @@ msgstr ""
 msgid ""
 "You are receiving this because you are out-of-office replacement for a "
 "participant of this ticket."
-msgstr ""
+msgstr "您收到此通知是因為您是此工單中某位參與者的職務代理人，該參與者目前不在辦公室"
+"。"
 
 #: app/models/transaction/notification.rb:85
 msgid "You are receiving this because you are the owner of this ticket."
@@ -22786,7 +22729,7 @@ msgstr "user@your-organization.tld"
 
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSetting/plugins/outOfOffice.ts:24
 msgid "vacation,holiday,replacement,time off"
-msgstr ""
+msgstr "假日,假日,職務代理,休假"
 
 #: db/seeds/ticket_article_types.rb:13
 msgid "web"
