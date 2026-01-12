@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zammad\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-12-23 05:32+0000\n"
+"PO-Revision-Date: 2026-01-08 22:00+0000\n"
 "Last-Translator: Karoly Nagy <cpt.charlesg@gmail.com>\n"
 "Language-Team: Hungarian <https://translations.zammad.org/projects/zammad/"
 "zammad-stable/hu/>\n"
@@ -1120,7 +1120,7 @@ msgstr "Fiók SID"
 #: app/assets/javascripts/app/controllers/ticket_zoom/time_accounting_modal.coffee:6
 #: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/TimeAccountingFlyout.vue:136
 msgid "Account Time"
-msgstr "Fiókidő"
+msgstr "Idő elszámolása"
 
 #: app/assets/javascripts/app/controllers/_channel/email.coffee:622
 #: app/assets/javascripts/app/controllers/getting_started/channel_email.coffee:197

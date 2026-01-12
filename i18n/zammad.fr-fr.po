@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zammad\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-12-12 09:00+0000\n"
+"PO-Revision-Date: 2026-01-12 12:00+0000\n"
 "Last-Translator: Anael Mobilia <contrib@anael.eu>\n"
 "Language-Team: French <https://translations.zammad.org/projects/zammad/"
 "zammad-stable/fr/>\n"
@@ -3017,7 +3017,9 @@ msgstr "URL de callback"
 #: app/assets/javascripts/app/controllers/_integration/placetel.coffee:7
 #: app/assets/javascripts/app/controllers/_integration/sipgate_io.coffee:7
 msgid "Caller ID of outbound calls can be changed as well."
-msgstr "L'ID de l'émetteur des appels sortants peut également être modifié."
+msgstr ""
+"L'identification d'appelant pour les appels émis peut également être "
+"modifiée."
 
 #: app/assets/javascripts/app/views/integration/cti.jst.eco:31
 #: app/assets/javascripts/app/views/integration/placetel.jst.eco:47
@@ -4861,7 +4863,7 @@ msgstr "Calendrier par défaut des souscriptions de tickets"
 #: app/assets/javascripts/app/views/integration/placetel.jst.eco:110
 #: app/assets/javascripts/app/views/integration/sipgate.jst.eco:95
 msgid "Default caller ID for outbound calls."
-msgstr "Identification d'appelant par défaut pour les appels sortants."
+msgstr "Identification d'appelant par défaut pour les appels émis."
 
 #: app/assets/javascripts/app/models/ticket_state.coffee:35
 msgid "Default for follow-ups"
@@ -6798,7 +6800,7 @@ msgstr "Canal e-mail"
 #: app/assets/javascripts/app/views/getting_started/email.jst.eco:67
 #: app/frontend/apps/desktop/entities/channel-email/composables/useEmailChannelConfiguration.ts:67
 msgid "Email Inbound"
-msgstr "Email entrant"
+msgstr "E-mail reçu"
 
 #: app/assets/javascripts/app/views/channel/email_account_overview.jst.eco:162
 #: app/assets/javascripts/app/views/channel/email_notification_wizard.jst.eco:8
@@ -6816,7 +6818,7 @@ msgstr "Notifications email"
 #: app/assets/javascripts/app/views/getting_started/email.jst.eco:105
 #: app/frontend/apps/desktop/entities/channel-email/composables/useEmailChannelConfiguration.ts:71
 msgid "Email Outbound"
-msgstr "Email sortant"
+msgstr "E-mail émis"
 
 #: app/frontend/apps/desktop/pages/authentication/routes.ts:113
 #: app/frontend/apps/desktop/pages/authentication/views/SignupVerify.vue:116
@@ -7674,7 +7676,7 @@ msgstr "Expire le"
 
 #: app/assets/javascripts/app/controllers/search.coffee:57
 msgid "Extended Search"
-msgstr "Recherche étendue"
+msgstr "Recherche avancée"
 
 #: app/assets/javascripts/app/controllers/_ui_element/object_manager_attribute.coffee:73
 msgid "External data source field"
@@ -9256,18 +9258,18 @@ msgstr "Inactif"
 #: app/assets/javascripts/app/views/microsoft365/list.jst.eco:45
 #: app/assets/javascripts/app/views/microsoft_graph/list.jst.eco:45
 msgid "Inbound"
-msgstr "Entrant"
+msgstr "Reçu"
 
 #: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:131
 #: app/assets/javascripts/app/controllers/_ui_element/object_perform_action.coffee:140
 #: app/assets/javascripts/app/controllers/agent_ticket_create.coffee:34
 #: app/assets/javascripts/app/views/navigation/menu_cti_ringing.jst.eco:6
 msgid "Inbound Call"
-msgstr "Appel entrant"
+msgstr "Appel reçu"
 
 #: app/assets/javascripts/app/views/dashboard/stats/ticket_channel_distribution.jst.eco:15
 msgid "Inbound:"
-msgstr "Entrant :"
+msgstr "Reçu :"
 
 #: db/seeds/object_manager_attributes.rb:129
 msgid "Incident"
@@ -9725,7 +9727,7 @@ msgstr "Inviter des agents"
 #: app/frontend/apps/desktop/pages/guided-setup/routes.ts:157
 #: app/frontend/apps/desktop/pages/guided-setup/views/GuidedSetupManual/GuidedSetupManualInviteColleagues.vue:34
 msgid "Invite Colleagues"
-msgstr "Inviter des collaborateurs"
+msgstr "Inviter des collègues"
 
 #: app/assets/javascripts/app/controllers/_dashboard/first_steps.coffee:49
 msgid "Invite Customer"
@@ -9733,8 +9735,7 @@ msgstr "Inviter un client"
 
 #: app/controllers/first_steps_controller.rb:64
 msgid "Invite agents/colleagues to help working on tickets"
-msgstr ""
-"Inviter des agents/collaborateurs pour aider à travailler sur les tickets"
+msgstr "Inviter des collègues pour aider à travailler sur les tickets"
 
 #: app/controllers/first_steps_controller.rb:70
 msgid "Invite customers to create issues in Zammad"
@@ -12791,14 +12792,14 @@ msgstr "Remplaçant lors d'une absence"
 #: app/assets/javascripts/app/views/microsoft365/list.jst.eco:71
 #: app/assets/javascripts/app/views/microsoft_graph/list.jst.eco:81
 msgid "Outbound"
-msgstr "Sortant"
+msgstr "Émis"
 
 #: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:132
 #: app/assets/javascripts/app/controllers/_ui_element/object_perform_action.coffee:141
 #: app/assets/javascripts/app/controllers/agent_ticket_create.coffee:22
 #: app/frontend/shared/entities/ticket/composables/useTicketCreateArticleType.ts:21
 msgid "Outbound Call"
-msgstr "Appel sortant"
+msgstr "Appel émis"
 
 #: app/frontend/shared/entities/ticket/composables/useTicketCreateArticleType.ts:22
 msgid "Outbound Call: %s"
@@ -12806,7 +12807,7 @@ msgstr "Appel sortant : %s"
 
 #: app/assets/javascripts/app/views/dashboard/stats/ticket_channel_distribution.jst.eco:16
 msgid "Outbound:"
-msgstr "Sortant :"
+msgstr "Émis :"
 
 #: app/assets/javascripts/app/lib/app_post/browser.coffee:119
 msgid "Outdated Browser"
@@ -15290,7 +15291,7 @@ msgstr "Définir le backend qui sera utilisé pour l'import."
 #: app/assets/javascripts/app/views/integration/sipgate.jst.eco:55
 msgid "Set caller ID of outbound calls based on destination caller ID."
 msgstr ""
-"Définir l'identifiant des appels sortants basé sur l'identifiant du "
+"Définir l'identifiant des appels émis en se basant sur l'identifiant du "
 "destinataire de l'appel."
 
 #: app/assets/javascripts/app/controllers/ticket_state.coffee:39
@@ -15306,7 +15307,7 @@ msgstr "Définir par défaut pour les nouveaux tickets"
 #: app/assets/javascripts/app/views/integration/placetel.jst.eco:75
 #: app/assets/javascripts/app/views/integration/sipgate.jst.eco:62
 msgid "Set outbound caller ID"
-msgstr "Définir l'identifiant d'appel sortant"
+msgstr "Définir l'identifiant des appels émis"
 
 #: app/frontend/apps/desktop/entities/two-factor-configuration/plugins/security-keys.ts:20
 msgid "Set security keys as default"

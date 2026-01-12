@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zammad\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-12-08 06:41+0000\n"
-"Last-Translator: albanobattistella <albanobattistella@gmail.com>\n"
+"PO-Revision-Date: 2026-01-08 22:00+0000\n"
+"Last-Translator: Random <random_r@users.noreply.translations.zammad.org>\n"
 "Language-Team: Italian <https://translations.zammad.org/projects/zammad/"
 "zammad-stable/it/>\n"
 "Language: it-it\n"
@@ -7046,7 +7046,7 @@ msgstr ""
 "Abilita il collegamento automatico di un account esistente al primo accesso "
 "con un'app di terze parti. Se è disabilitato, un utente già esistente deve "
 "prima accedere a Zammad e quindi collegare il suo account \"Terze Parti\" al "
-"suo account Zammad, andando in Profilo -> Account Collegati."
+"suo account Zammad, andando in Profilo -> Account collegati."
 
 #: db/seeds/settings.rb:1212
 msgid "Enables user authentication via %s."
@@ -10144,7 +10144,7 @@ msgstr "Tipo di associazione"
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingLinkedAccounts.vue:56
 #: db/seeds/permissions.rb:460
 msgid "Linked Accounts"
-msgstr "Linked Accounts"
+msgstr "Account collegati"
 
 #: app/assets/javascripts/app/views/knowledge_base/_reader_linked_tickets.jst.eco:5
 #: app/assets/javascripts/app/views/knowledge_base/sidebar/linked_tickets.jst.eco:2

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zammad\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-12-23 05:32+0000\n"
+"PO-Revision-Date: 2026-01-08 22:00+0000\n"
 "Last-Translator: mathew-uems <mathew.chen@edgentauems.com.tw>\n"
 "Language-Team: Chinese (Traditional Han script) <https://"
 "translations.zammad.org/projects/zammad/zammad-stable/zh_Hant/>\n"
@@ -2627,7 +2627,7 @@ msgstr "後台進程未啟動或尚未完成！請聯絡您的支援團隊。"
 
 #: app/models/report.rb:38
 msgid "Backlog"
-msgstr ""
+msgstr "Backlog"
 
 #: app/assets/javascripts/app/controllers/_manage/branding.coffee:9
 #: app/assets/javascripts/app/controllers/_manage/security.coffee:9
@@ -2665,16 +2665,16 @@ msgstr "在提及用戶之前，請選擇一個群組。"
 msgid ""
 "Before you start, make sure to check the following points to ensure a smooth "
 "migration and usage of your Zammad instance:"
-msgstr ""
+msgstr "在開始之前，請務必檢查以下需求，以確保 Zammad 實例能順利遷移和使用："
 
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_action/email_reply.coffee:261
 #: app/frontend/shared/entities/ticket-article/action/plugins/email/forward.ts:97
 msgid "Begin forwarded message"
-msgstr ""
+msgstr "開始轉寄訊息"
 
 #: app/frontend/apps/desktop/pages/guided-setup/views/GuidedSetupImport/GuidedSetupImportSelection.vue:53
 msgid "Beta"
-msgstr ""
+msgstr "Beta"
 
 #: app/assets/javascripts/app/views/integration/ldap.jst.eco:41
 #: app/assets/javascripts/app/views/integration/ldap_wizard.jst.eco:97
@@ -2730,7 +2730,7 @@ msgstr "內文為必填"
 
 #: app/assets/javascripts/app/controllers/_ui_element/object_manager_attribute.coffee:41
 msgid "Boolean field"
-msgstr ""
+msgstr "布林值欄位"
 
 #: app/assets/javascripts/app/views/telegram/index.jst.eco:3
 msgid "Bots"
@@ -2759,7 +2759,7 @@ msgstr "批次操作失敗"
 
 #: app/assets/javascripts/app/controllers/widget/ticket_bulk_form.coffee:199
 msgid "Bulk action stopped by error(s): %s!"
-msgstr ""
+msgstr "批量操作因錯誤而停止：%s！"
 
 #: app/assets/javascripts/app/views/generic/object_import/index.jst.eco:5
 msgid "Bulk import allows you to create and update many records at once."
@@ -2772,7 +2772,7 @@ msgstr "工作日"
 
 #: app/views/knowledge_base/public/show_alternatives.html.erb:5
 msgid "But it's only available in these languages:"
-msgstr ""
+msgstr "但它僅提供以下幾種語言版本："
 
 #: db/seeds/settings.rb:3347
 msgid ""
@@ -2789,6 +2789,9 @@ msgid ""
 "Zammad can support your agents by opening either a new ticket dialogue or "
 "the user profile upon picking up a new call."
 msgstr ""
+"透過將您代理的 Placetel SIP 使用者對應到他們的 Zammad 使用者帳戶，Zammad "
+"可以在接聽新電話時，透過開啟新的工單對話方塊或使用者個人資料來為您的客服人員"
+"提供支援。"
 
 #: app/assets/javascripts/app/views/integration/sipgate.jst.eco:105
 msgid ""
@@ -2796,10 +2799,13 @@ msgid ""
 "can support your agents by opening either a new ticket dialogue or the user "
 "profile upon picking up a new call."
 msgstr ""
+"透過將您代理的 sipgate 使用者對應到他們的 Zammad 使用者帳戶，Zammad "
+"可以在接聽新電話時，透過開啟新的工單對話方塊或使用者個人資料來為您的客服人員"
+"提供支援。"
 
 #: app/assets/javascripts/app/views/ssl_certificates_list.jst.eco:13
 msgid "CA"
-msgstr ""
+msgstr "CA"
 
 #: app/assets/javascripts/app/controllers/_ui_element/postmaster_match.coffee:18
 #: app/assets/javascripts/app/controllers/agent_ticket_create.coffee:501
@@ -2814,7 +2820,7 @@ msgstr ""
 #: app/frontend/shared/entities/ticket/composables/useTicketEditForm.ts:184
 #: db/seeds/object_manager_attributes.rb:508
 msgid "CC"
-msgstr ""
+msgstr "CC"
 
 #: app/assets/javascripts/app/controllers/_integration/idoit.coffee:112
 msgid "CMDB to document complex relations of your network components."
@@ -2839,7 +2845,7 @@ msgstr "CTI (通用)"
 
 #: db/seeds/settings.rb:5266
 msgid "CTI Token"
-msgstr ""
+msgstr "CTI Token"
 
 #: db/seeds/settings.rb:5253
 msgid "CTI config"
@@ -2847,7 +2853,7 @@ msgstr "CTI 配置"
 
 #: db/seeds/settings.rb:5287
 msgid "CTI customer last activity"
-msgstr ""
+msgstr "CTI 客戶上次活動"
 
 #: db/seeds/settings.rb:5225
 msgid "CTI integration"
@@ -2925,21 +2931,21 @@ msgstr "可以是任何 CSS 顏色格式。"
 
 #: app/assets/javascripts/app/controllers/getting_started/agent.coffee:87
 msgid "Can't create user!"
-msgstr ""
+msgstr "無法建立使用者！"
 
 #: app/controllers/application_controller/renders_models.rb:150
 msgid "Can't delete, object has references."
-msgstr ""
+msgstr "無法刪除，物件已被引用。"
 
 #: app/controllers/application_controller/authenticates.rb:90
 msgid "Can't find User for Token"
-msgstr ""
+msgstr "無法從 Token 找到使用者"
 
 #: app/assets/javascripts/app/controllers/_profile/password.coffee:98
 #: app/assets/javascripts/app/controllers/password_reset_verify.coffee:79
 msgid ""
 "Can't update password, your entered passwords do not match. Please try again."
-msgstr ""
+msgstr "無法更新密碼，您輸入的密碼不相符。請再試一次。"
 
 #: app/assets/javascripts/app/controllers/_application_controller/after_auth_modal.coffee:9
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_action/email_reply.coffee:382
@@ -3028,11 +3034,11 @@ msgstr "無法設定線上通知"
 
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:814
 msgid "Cannot upload file"
-msgstr ""
+msgstr "無法上傳檔案"
 
 #: app/frontend/apps/desktop/pages/personal-setting/components/PersonalSettingAvatarCameraFlyout.vue:168
 msgid "Capture From Camera"
-msgstr ""
+msgstr "從相機拍攝"
 
 #: app/assets/javascripts/app/controllers/knowledge_base/sidebar/categories.coffee:3
 msgid "Categories"
@@ -3057,7 +3063,7 @@ msgstr "Certificate (PEM)"
 
 #: app/assets/javascripts/app/views/integration/smime.jst.eco:2
 msgid "Certificates & Private Keys"
-msgstr ""
+msgstr "憑證和私鑰"
 
 #: app/assets/javascripts/app/models/group.coffee:46
 #: app/assets/javascripts/app/views/generic/login_preview.jst.eco:26
@@ -3196,15 +3202,15 @@ msgstr "文字對談標題"
 #: public/assets/chat/chat-no-jquery.coffee:203
 #: public/assets/chat/chat.coffee:201
 msgid "Chat closed by %s"
-msgstr ""
+msgstr "%s 已關閉文字對談"
 
 #: app/assets/javascripts/app/controllers/chat.coffee:371
 msgid "Chat not answered, automatically set to offline."
-msgstr ""
+msgstr "文字對談沒有回覆，自動設定為離線狀態。"
 
 #: app/assets/javascripts/app/controllers/_channel/chat.coffee:381
 msgid "Chats"
-msgstr ""
+msgstr "文字對談"
 
 #: app/assets/javascripts/app/controllers/chat.coffee:297
 #: app/assets/javascripts/app/views/customer_chat/chat_header.jst.eco:29
@@ -11852,38 +11858,28 @@ msgid "Open quick search"
 msgstr "開啟快速搜尋"
 
 #: app/frontend/shared/components/Form/fields/FieldDate/useDateTime.ts:77
-#, fuzzy
-#| msgid "Open note box"
 msgid "Open the hours overlay"
-msgstr "開啟備註輸入框"
+msgstr "打開小時疊加"
 
 #: app/frontend/shared/components/Form/fields/FieldDate/useDateTime.ts:79
-#, fuzzy
-#| msgid "Open note box"
 msgid "Open the minutes overlay"
-msgstr "開啟備註輸入框"
+msgstr "開啟分鐘疊加"
 
 #: app/frontend/shared/components/Form/fields/FieldDate/useDateTime.ts:87
-#, fuzzy
-#| msgid "Open note box"
 msgid "Open the months overlay"
-msgstr "開啟備註輸入框"
+msgstr "開啟月份疊加"
 
 #: app/frontend/shared/components/Form/fields/FieldDate/useDateTime.ts:82
-#, fuzzy
-#| msgid "Open note box"
 msgid "Open the seconds overlay"
-msgstr "開啟備註輸入框"
+msgstr "開啟秒數疊加"
 
 #: app/frontend/shared/components/Form/fields/FieldDate/useDateTime.ts:50
 msgid "Open the time picker"
 msgstr "開啟時間選擇器"
 
 #: app/frontend/shared/components/Form/fields/FieldDate/useDateTime.ts:86
-#, fuzzy
-#| msgid "Open note box"
 msgid "Open the years overlay"
-msgstr "開啟備註輸入框"
+msgstr "開啟年份疊加"
 
 #: db/seeds/settings.rb:943
 msgid "Open ticket indicator"
@@ -11950,8 +11946,6 @@ msgstr "或從另一個系統遷移。"
 
 #: app/frontend/apps/desktop/pages/authentication/components/LoginThirdParty.vue:24
 #: app/frontend/apps/mobile/pages/authentication/components/LoginThirdParty.vue:24
-#, fuzzy
-#| msgid "or sign in using"
 msgid "Or sign in using"
 msgstr "或登入使用"
 
@@ -11965,16 +11959,12 @@ msgid "Or, use one of your"
 msgstr ""
 
 #: app/assets/javascripts/app/controllers/_profile/overviews.coffee:3
-#, fuzzy
-#| msgid "New Overview"
 msgid "Order of Overviews"
-msgstr "新增工單總覽"
+msgstr "總覽排序"
 
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingOverviews.vue:133
-#, fuzzy
-#| msgid "Overviews"
 msgid "Order of ticket overviews"
-msgstr "總覽"
+msgstr "工單總覽排序"
 
 #: app/assets/javascripts/app/controllers/_ui_element/_application_selector.coffee:17
 #: app/assets/javascripts/app/controllers/_ui_element/core_workflow_condition.coffee:32

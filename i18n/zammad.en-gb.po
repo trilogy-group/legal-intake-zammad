@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zammad\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-12-12 09:00+0000\n"
+"PO-Revision-Date: 2026-01-08 22:00+0000\n"
 "Last-Translator: Andi Chandler <andi@gowling.com>\n"
 "Language-Team: English (United Kingdom) <https://translations.zammad.org/"
 "projects/zammad/zammad-stable/en_GB/>\n"
@@ -1937,15 +1937,15 @@ msgstr "App ID"
 
 #: db/seeds/settings.rb:1456
 msgid "App Secret"
-msgstr ""
+msgstr "App Secret"
 
 #: db/seeds/settings.rb:1789
 msgid "App Tenant ID"
-msgstr ""
+msgstr "App Tenant ID"
 
 #: db/seeds/settings.rb:27
 msgid "App Version"
-msgstr ""
+msgstr "App Version"
 
 #: app/assets/javascripts/app/controllers/_channel/facebook.coffee:186
 #: app/assets/javascripts/app/controllers/_channel/google.coffee:487
@@ -1954,19 +1954,19 @@ msgstr ""
 #: app/assets/javascripts/app/controllers/_channel/twitter.coffee:193
 #: app/assets/javascripts/app/controllers/_integration/exchange.coffee:721
 msgid "App could not be verified."
-msgstr ""
+msgstr "App could not be verified."
 
 #: db/seeds/settings.rb:1446
 msgid "App credentials for Facebook."
-msgstr ""
+msgstr "App credentials for Facebook."
 
 #: db/seeds/settings.rb:1382
 msgid "App credentials for Twitter."
-msgstr ""
+msgstr "App credentials for Twitter."
 
 #: app/assets/javascripts/app/views/whatsapp/account_cloud_api.jst.eco:28
 msgid "App secret"
-msgstr ""
+msgstr "App secret"
 
 #: app/assets/javascripts/app/controllers/_plugin/keyboard_shortcuts.coffee:433
 #: app/assets/javascripts/app/controllers/_profile/appearance.coffee:3
@@ -1976,47 +1976,47 @@ msgstr ""
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingAppearance.vue:59
 #: db/seeds/permissions.rb:401
 msgid "Appearance"
-msgstr ""
+msgstr "Appearance"
 
 #: app/assets/javascripts/app/controllers/api.coffee:127
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingLinkedAccounts.vue:84
 msgid "Application"
-msgstr ""
+msgstr "Application"
 
 #: db/seeds/settings.rb:4
 msgid "Application secret"
-msgstr ""
+msgstr "Application secret"
 
 #: app/assets/javascripts/app/views/api.jst.eco:44
 msgid "Applications"
-msgstr ""
+msgstr "Applications"
 
 #: app/assets/javascripts/app/views/widget/template.jst.eco:8
 #: app/frontend/apps/desktop/pages/ticket/components/TicketSharedDraftFlyout.vue:143
 msgid "Apply"
-msgstr ""
+msgstr "Apply"
 
 #: app/assets/javascripts/app/controllers/ticket_shared_draft_modal.coffee:56
 #: app/frontend/apps/desktop/pages/ticket/components/TicketSharedDraftFlyout.vue:143
 msgid "Apply Draft"
-msgstr ""
+msgstr "Apply Draft"
 
 #: app/assets/javascripts/app/controllers/ticket_shared_draft_modal.coffee:2
 #: app/frontend/apps/desktop/pages/ticket/components/TicketSharedDraftFlyout.vue:170
 msgid "Apply Shared Draft"
-msgstr ""
+msgstr "Apply Shared Draft"
 
 #: app/frontend/apps/desktop/pages/ticket/components/TicketCreate/ApplyTemplate.vue:40
 msgid "Apply Template"
-msgstr ""
+msgstr "Apply Template"
 
 #: app/assets/javascripts/app/views/settings/ticket_notifications.jst.eco:10
 msgid "Apply current defaults to all agents"
-msgstr ""
+msgstr "Apply current defaults to all agents"
 
 #: app/frontend/apps/desktop/components/NavigationMenu/NavigationMenuFilter.vue:76
 msgid "Apply filter…"
-msgstr ""
+msgstr "Apply filter…"
 
 #: app/assets/javascripts/app/controllers/_ui_element/basedate.coffee:160
 #: app/assets/javascripts/app/controllers/report.coffee:220
