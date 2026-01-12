@@ -1,4 +1,12 @@
 GIT
+  remote: https://github.com/fliebe92/ruby-keycloak-admin
+  revision: ef2cf3a24f98fdfad3aa1a4872bc63f52761a29e
+  specs:
+    ruby-keycloak-admin (26.0.8)
+      hashie (>= 5.0.0)
+      httparty (>= 0.21, < 0.25)
+
+GIT
   remote: https://github.com/zammad-deps/autodiscover
   revision: ee9b53dfa797ce6d4f970b82beea7fbdd2df56bb
   specs:
@@ -139,7 +147,7 @@ GEM
       aws-eventstream (~> 1, >= 1.0.2)
     base64 (0.3.0)
     benchmark (0.4.1)
-    bigdecimal (3.1.9)
+    bigdecimal (3.3.1)
     bindata (2.5.0)
     binding_of_caller (1.0.1)
       debug_inspector (>= 1.2.0)
@@ -193,7 +201,7 @@ GEM
       bigdecimal
       rexml
     crass (1.0.6)
-    csv (3.3.2)
+    csv (3.3.5)
     daemons (1.4.1)
     dalli (3.2.8)
     date (3.4.1)
@@ -304,7 +312,8 @@ GEM
     http-parser (1.2.3)
       ffi-compiler (>= 1.0, < 2.0)
     http_parser.rb (0.6.0)
-    httparty (0.21.0)
+    httparty (0.24.0)
+      csv
       mini_mime (>= 1.0.0)
       multi_xml (>= 0.5.2)
     httpclient (2.8.3)
@@ -381,8 +390,8 @@ GEM
     minitest (5.25.5)
     msgpack (1.7.5)
     multi_json (1.15.0)
-    multi_xml (0.7.1)
-      bigdecimal (~> 3.1)
+    multi_xml (0.8.1)
+      bigdecimal (>= 3.1, < 5)
     multipart-post (2.4.1)
     mutex_m (0.3.0)
     mysql2 (0.5.6)
@@ -661,9 +670,6 @@ GEM
     rubocop-rspec_rails (2.30.0)
       rubocop (~> 1.61)
       rubocop-rspec (~> 3, >= 3.0.1)
-    ruby-keycloak-admin (26.0.8)
-      hashie (~> 5.0.0)
-      httparty (~> 0.21.0)
     ruby-progressbar (1.13.0)
     ruby-saml (1.18.1)
       nokogiri (>= 1.13.10)
@@ -939,7 +945,7 @@ DEPENDENCIES
   rubocop-rails
   rubocop-rspec
   rubocop-rspec_rails
-  ruby-keycloak-admin
+  ruby-keycloak-admin!
   sass-rails (~> 5)
   selenium-webdriver
   shoulda-matchers
