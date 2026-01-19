@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zammad\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-10-13 07:00+0000\n"
-"Last-Translator: Martin Gruner <mg@zammad.com>\n"
+"PO-Revision-Date: 2026-01-18 09:00+0000\n"
+"Last-Translator: Ralf Schmid <rsc@zammad.com>\n"
 "Language-Team: German <https://translations.zammad.org/projects/zammad/"
 "zammad-stable/de/>\n"
 "Language: de-de\n"
@@ -20520,7 +20520,7 @@ msgstr ""
 
 #: app/assets/javascripts/app/views/whatsapp/account_webhook.jst.eco:24
 msgid "Verify Token"
-msgstr "Token verifizieren"
+msgstr "Verifizierungs-Token"
 
 #: app/assets/javascripts/app/views/channel/email_account_wizard.jst.eco:71
 #: app/assets/javascripts/app/views/getting_started/email.jst.eco:59
