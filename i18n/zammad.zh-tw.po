@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zammad\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2026-01-18 09:00+0000\n"
+"PO-Revision-Date: 2026-01-20 22:00+0000\n"
 "Last-Translator: mathew-uems <mathew.chen@edgentauems.com.tw>\n"
 "Language-Team: Chinese (Traditional Han script) <https://"
 "translations.zammad.org/projects/zammad/zammad-stable/zh_Hant/>\n"
@@ -1487,7 +1487,7 @@ msgstr "新增標籤"
 msgid "Add third level heading"
 msgstr "新增第三級標題"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:85
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:86
 msgid "Add this class to a button on your page that should open the chat."
 msgstr "將此 class 新增到頁面的按鈕上即可開啟文字對談。"
 
@@ -1802,6 +1802,12 @@ msgstr "發生錯誤"
 msgid "An error occured during the operation."
 msgstr "操作過程中出現錯誤。"
 
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:251
+#, fuzzy
+#| msgid "An error occured during the operation."
+msgid "An error occurred while fetching the website preview."
+msgstr "操作過程中出現錯誤。"
+
 #: app/assets/javascripts/app/controllers/_ui_element/object_manager_attribute.coffee:997
 #: app/assets/javascripts/app/views/integration/exchange_last_import.jst.eco:5
 #: app/assets/javascripts/app/views/integration/ldap_last_import.jst.eco:5
@@ -2092,7 +2098,8 @@ msgstr "您確定嗎？"
 msgid ""
 "Are you sure? Default notifications settings will be applied to all active "
 "agents. This operation may take some time."
-msgstr "您確定嗎？預設通知設定將套用於所有啟用的客服人員。此操作可能需要一些時間。"
+msgstr ""
+"您確定嗎？預設通知設定將套用於所有啟用的客服人員。此操作可能需要一些時間。"
 
 #: app/assets/javascripts/app/controllers/_manage/ticket_notification.coffee:34
 msgid ""
@@ -2342,8 +2349,9 @@ msgstr "在對應中必須包含屬性 '%s'"
 msgid ""
 "Attribute that uniquely identifies the user. If unset, the name identifier "
 "returned by the IDP is used."
-msgstr "用於唯一標識使用者的屬性。如果未設定，則使用身分提供者 (IDP) "
-"傳回的名稱識別碼。"
+msgstr ""
+"用於唯一標識使用者的屬性。如果未設定，則使用身分提供者 (IDP) 傳回的名稱識別"
+"碼。"
 
 #: app/assets/javascripts/app/controllers/ticket_overview/settings.coffee:31
 #: app/assets/javascripts/app/models/overview.coffee:15
@@ -2506,7 +2514,7 @@ msgid ""
 "intel. Map data directly to object fields."
 msgstr "自動使用最新的情報滿足您的客戶和機構。將資料直接對應到物件欄位上。"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:97
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:98
 msgid ""
 "Automatically loads the chat.css file. If you want to use your own css, just "
 "set it to false."
@@ -2602,7 +2610,7 @@ msgstr "返回預覽頁"
 msgid "Back to search results"
 msgstr "返回搜尋結果"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:98
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:99
 msgid "Background color"
 msgstr "背景色"
 
@@ -2655,7 +2663,8 @@ msgstr "在提及用戶之前，請選擇一個群組。"
 msgid ""
 "Before you start, make sure to check the following points to ensure a smooth "
 "migration and usage of your Zammad instance:"
-msgstr "在開始之前，請務必檢查以下需求，以確保 Zammad 實例能順利遷移和使用："
+msgstr ""
+"在開始之前，請務必檢查以下需求，以確保 Zammad 執行個體能順利遷移和使用："
 
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_action/email_reply.coffee:261
 #: app/frontend/shared/entities/ticket-article/action/plugins/email/forward.ts:97
@@ -2779,9 +2788,9 @@ msgid ""
 "Zammad can support your agents by opening either a new ticket dialogue or "
 "the user profile upon picking up a new call."
 msgstr ""
-"透過將您代理的 Placetel SIP 使用者對應到他們的 Zammad 使用者帳戶，Zammad "
-"可以在接聽新電話時，透過開啟新的工單對話方塊或使用者個人資料來為您的客服人員"
-"提供支援。"
+"透過將您代理的 Placetel SIP 使用者對應到他們的 Zammad 使用者帳戶，Zammad 可以"
+"在接聽新電話時，透過開啟新的工單對話方塊或使用者個人資料來為您的客服人員提供"
+"支援。"
 
 #: app/assets/javascripts/app/views/integration/sipgate.jst.eco:105
 msgid ""
@@ -2789,9 +2798,9 @@ msgid ""
 "can support your agents by opening either a new ticket dialogue or the user "
 "profile upon picking up a new call."
 msgstr ""
-"透過將您代理的 sipgate 使用者對應到他們的 Zammad 使用者帳戶，Zammad "
-"可以在接聽新電話時，透過開啟新的工單對話方塊或使用者個人資料來為您的客服人員"
-"提供支援。"
+"透過將您代理的 sipgate 使用者對應到他們的 Zammad 使用者帳戶，Zammad 可以在接"
+"聽新電話時，透過開啟新的工單對話方塊或使用者個人資料來為您的客服人員提供支"
+"援。"
 
 #: app/assets/javascripts/app/views/ssl_certificates_list.jst.eco:13
 msgid "CA"
@@ -2816,7 +2825,7 @@ msgstr "CC"
 msgid "CMDB to document complex relations of your network components."
 msgstr "CMDB 記載您的網路組件間的複雜關係。"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:73
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:74
 msgid ""
 "CSS font-size with a unit like 12px, 1.5em. If left undefined it inherits "
 "the font-size of the website."
@@ -2915,7 +2924,7 @@ msgstr "通聯日誌記錄"
 msgid "Camera"
 msgstr "攝影機"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:109
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:110
 msgid "Can be in any CSS color format."
 msgstr "可以是任何 CSS 顏色格式。"
 
@@ -3185,7 +3194,7 @@ msgstr "文字對談 ID"
 msgid "Chat Session"
 msgstr "文字對談階段"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:89
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:90
 msgid "Chat Title"
 msgstr "文字對談標題"
 
@@ -3198,7 +3207,7 @@ msgstr "%s 已關閉文字對談"
 msgid "Chat not answered, automatically set to offline."
 msgstr "文字對談沒有回覆，自動設定為離線狀態。"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:381
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:397
 msgid "Chats"
 msgstr "文字對談"
 
@@ -3595,9 +3604,8 @@ msgid ""
 "channels, we suggest using the Graph API implementation instead. More "
 "information can be found here %l."
 msgstr ""
-"與 Microsoft 365 Graph API 電子郵件通道相比，這是使用 OAuth 和 IMAP "
-"的傳統實作方式。設定新通道時，我們建議使用 Graph API 實作。更多資訊請參閱 "
-"%l。"
+"與 Microsoft 365 Graph API 電子郵件通道相比，這是使用 OAuth 和 IMAP 的傳統實"
+"作方式。設定新通道時，我們建議使用 Graph API 實作。更多資訊請參閱 %l。"
 
 #: app/assets/javascripts/app/lib/app_post/two_factor_methods/security_keys.coffee:6
 #: app/frontend/shared/entities/two-factor/plugins/security-keys.ts:11
@@ -4605,7 +4613,7 @@ msgstr "解密成功。"
 
 #: app/assets/javascripts/app/controllers/_ui_element/object_manager_attribute.coffee:239
 #: app/assets/javascripts/app/views/calendar/index.jst.eco:32
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:228
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:229
 #: app/assets/javascripts/app/views/generic/multi_locales.jst.eco:5
 #: app/assets/javascripts/app/views/generic/table_row.jst.eco:78
 #: app/assets/javascripts/app/views/object_manager/attribute/boolean.jst.eco:8
@@ -5091,7 +5099,8 @@ msgstr ""
 msgid ""
 "Defines postmaster filter to identify out-of-office emails for follow-up "
 "detection and keeping current ticket state."
-msgstr "定義郵件管理員過濾器識別不再辦公室郵件，以便進行後續後續追蹤並保持工單的當前"
+msgstr ""
+"定義郵件管理員過濾器識別不再辦公室郵件，以便進行後續後續追蹤並保持工單的當前"
 "狀態。"
 
 #: db/seeds/settings.rb:4358
@@ -5197,7 +5206,7 @@ msgstr "定義 Exchange 配置。"
 
 #: db/seeds/settings.rb:340
 msgid "Defines the HTTP protocol of your instance."
-msgstr "定義實例的HTTP協定。"
+msgstr "定義執行個體的HTTP協定。"
 
 #: db/seeds/settings.rb:5723
 msgid "Defines the PGP config."
@@ -5395,7 +5404,7 @@ msgid ""
 "follow-ups (useful when communicating between two instances of Zammad)."
 msgstr ""
 "定義系統識別 ID。每個工單號碼都包含此 ID。這樣可以確保只將屬於您系統的工單作"
-"為後續工單處理 (在兩個 Zammad 系統之間進行通信時很有用)。"
+"為後續工單處理 (在兩個 Zammad 執行個體之間進行通信時很有用)。"
 
 #: db/seeds/settings.rb:3032
 msgid "Defines the tab behaviour after a ticket action."
@@ -5684,7 +5693,7 @@ msgstr "部門"
 #: app/assets/javascripts/app/controllers/translation.coffee:183
 #: app/assets/javascripts/app/views/calendar/holiday_selector.jst.eco:6
 #: app/assets/javascripts/app/views/calendar/index.jst.eco:8
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:230
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:231
 #: app/assets/javascripts/app/views/data_privacy/index.jst.eco:7
 #: app/assets/javascripts/app/views/generic/admin/index.jst.eco:7
 #: app/assets/javascripts/app/views/integration/clearbit.jst.eco:9
@@ -5795,7 +5804,8 @@ msgstr ""
 msgid ""
 "Did you check the validity of the configured mailbox? Or consider removing "
 "this channel and switch to using a different mailbox type. %l"
-msgstr "您是否檢查過已設定郵箱的有效性？或考慮移除此管道並改用其他類型的信箱。 %l"
+msgstr ""
+"您是否檢查過已設定郵箱的有效性？或考慮移除此管道並改用其他類型的信箱。 %l"
 
 #: app/assets/javascripts/app/controllers/_channel/microsoft_graph.coffee:468
 msgid ""
@@ -6063,7 +6073,7 @@ msgstr ""
 #: app/assets/javascripts/app/views/import/otrs.jst.eco:8
 #: app/frontend/apps/desktop/pages/guided-setup/components/GuidedSetupImport/GuidedSetupImportSource/GuidedSetupImportSourceOTRS.vue:104
 msgid "Download and install the %s Migration Plugin on your %s instance."
-msgstr "在您的 %s 系統上下載並安裝 %s 遷移插件。"
+msgstr "在您的 %s 執行個體下載並安裝 %s 遷移插件。"
 
 #: app/frontend/shared/entities/ticket-article/action/plugins/email.ts:123
 msgid "Download original email"
@@ -6597,7 +6607,7 @@ msgid ""
 "auth/sso on user interaction."
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:61
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:62
 msgid "Enables console logging."
 msgstr "啟用控制台日誌記錄。"
 
@@ -7433,7 +7443,7 @@ msgstr "第一次回應"
 msgid "Fixed Email Accounts"
 msgstr "固定電子郵件帳號"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:122
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:123
 msgid "Flat Design"
 msgstr "扁平風格"
 
@@ -7470,7 +7480,7 @@ msgstr "追蹤可能性"
 msgid "Font Awesome"
 msgstr "Font Awesome"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:113
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:114
 msgid "Font size"
 msgstr "字體大小"
 
@@ -8133,7 +8143,7 @@ msgstr "健康檢測"
 msgid "Health information can be retrieved as JSON using:"
 msgstr "可以透過 JSON 格式的取得健康資訊："
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:69
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:70
 msgid "Hello! I need help with your product."
 msgstr "您好！ 我需要產品方面的協助。"
 
@@ -8221,7 +8231,7 @@ msgstr "您在這裏可以快速總覽您和其他客服人員的工作情況。
 msgid "Here you will find the latest activities of your system."
 msgstr "在此，您將找到系統的最新動態。"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:72
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:73
 msgid "Hi! Which one of our products?"
 msgstr "嗨！我們的哪一款產品？"
 
@@ -8408,7 +8418,7 @@ msgstr "圖示"
 msgid "Identifier"
 msgstr "識別碼"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:36
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:37
 msgid "Identifier of the chat topic."
 msgstr "Chat topic 的識別碼。"
 
@@ -8426,7 +8436,7 @@ msgid ""
 "synchronisation will win."
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:54
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:55
 msgid ""
 "If left empty, the host gets auto-detected - in this case %s. The auto-"
 "detection reads out the host from the <script> tag. If you don't include it "
@@ -8454,7 +8464,7 @@ msgstr "如果寄件人是客服人員，則將收件人列表中的第一個使
 msgid "If this regex matches, no notification will be sent by the sender."
 msgstr "如果此正規表達式符合匹配，則不會有這個寄件人所發送的通知。"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:178
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:179
 msgid ""
 "If you don't already use jQuery on your website, you can add it like this:"
 msgstr "如果你的網站還沒有使用 jQuery，你可以像這樣加入它："
@@ -8502,7 +8512,7 @@ msgstr ""
 "如果要將已儲存的附件從一個後台移動到另一個後台，則需要通過 rails/rake 任務執"
 "行以下操作。"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:162
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:163
 msgid ""
 "If you want to open the chat by clicking a button, set the option §show§ to "
 "§false§ and add the class §open-zammad-chat§ to the button."
@@ -8851,7 +8861,7 @@ msgstr "從知識庫文章插入文字"
 msgid "Insert text from text module"
 msgstr "從文字模組插入文字"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:138
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:139
 msgid ""
 "Insert the widget code into the source code of every page the chat shall be "
 "visible on. It should be placed at the end of the page's source code before "
@@ -9197,7 +9207,7 @@ msgstr "一月"
 msgid "Job is waiting to get started…"
 msgstr "工作等待開始中…"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:58
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:59
 msgid "John Smith"
 msgstr "John Smith"
 
@@ -9723,7 +9733,7 @@ msgstr "本地化變更執行"
 msgid "Location"
 msgstr "位置"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:103
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:104
 msgid "Location of an external chat.css file."
 msgstr "自定義的外部 chat.css 檔案位置。"
 
@@ -10112,7 +10122,7 @@ msgstr "管理您的通知設置"
 msgid "Management"
 msgstr "管理"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:161
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:162
 msgid "Manually open chat"
 msgstr "手動開啟文字對談"
 
@@ -11716,7 +11726,7 @@ msgstr "一旦完成…"
 msgid "One of the required parameters must be provided, but none was found."
 msgstr ""
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:49
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:50
 #: public/assets/chat/chat.coffee:207
 msgid "Online"
 msgstr "線上"
@@ -11907,7 +11917,7 @@ msgid "Operating system"
 msgstr "作業系統"
 
 #: app/assets/javascripts/app/views/agent_ticket_view/content.jst.eco:7
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:222
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:223
 #: app/assets/javascripts/app/views/channel/form.jst.eco:60
 #: app/assets/javascripts/app/views/object_manager/screens.jst.eco:7
 #: app/assets/javascripts/app/views/profile/calendar_subscriptions.jst.eco:42
@@ -12544,7 +12554,8 @@ msgid ""
 "Please click on the link in the verification email. If you don't see the "
 "email, check other places it might be, like your junk, spam, social, or "
 "other folders."
-msgstr "點選驗證郵件中的連結。如果你看不到郵件，可以查看其他地方，比如垃圾桶、垃圾郵"
+msgstr ""
+"點選驗證郵件中的連結。如果你看不到郵件，可以查看其他地方，比如垃圾桶、垃圾郵"
 "件、社交通訊或其他資料夾。"
 
 #: app/services/service/system/import/run.rb:33
@@ -12908,7 +12919,8 @@ msgstr "個人資料"
 msgid ""
 "Proof Key for Code Exchange is currently only supporting SHA256 as code "
 "challenge method."
-msgstr "交換驗證碼用的驗證密鑰(Proof Key for Code Exchange)目前僅支援 SHA256 。"
+msgstr ""
+"交換驗證碼用的驗證密鑰(Proof Key for Code Exchange)目前僅支援 SHA256 。"
 
 #: app/assets/javascripts/app/views/channel/email_account_overview.jst.eco:76
 msgid "Protocol"
@@ -13340,7 +13352,7 @@ msgstr "移除任何超連結"
 msgid "Removes the formatting"
 msgstr "移除格式"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:79
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:80
 msgid "Removes the shadows for a flat look."
 msgstr "移除陰影以獲得平坦外觀。"
 
@@ -13478,7 +13490,7 @@ msgstr ""
 msgid "Required parameter 'profile' is missing."
 msgstr ""
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:177
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:178
 #: app/assets/javascripts/app/views/channel/form.jst.eco:147
 msgid "Requirements"
 msgstr "需求"
@@ -14398,7 +14410,8 @@ msgstr "在您最喜歡的行事曆查看您的工單，透過以下的 URL 加�
 msgid ""
 "See your tickets from within your favorite calendar by adding the "
 "subscription URL to your calendar app."
-msgstr "在您最喜歡的行事曆查看您的工單，透過以下的 訂閱 URL 加到您的行事曆 App。"
+msgstr ""
+"在您最喜歡的行事曆查看您的工單，透過以下的 訂閱 URL 加到您的行事曆 App。"
 
 #: app/assets/javascripts/app/controllers/_plugin/electron_events.coffee:38
 msgid "Select All"
@@ -14488,7 +14501,7 @@ msgstr "選擇工單號碼產生器模組。"
 msgid "Select…"
 msgstr "選擇…"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:77
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:78
 #: app/assets/javascripts/app/views/customer_chat/chat_window.jst.eco:58
 #: public/assets/chat/views/chat.eco:25
 msgid "Send"
@@ -14898,7 +14911,7 @@ msgstr "透過 %s 進行身份驗證"
 msgid "Show calendar weeks in the picker of date/datetime fields"
 msgstr ""
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:149
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:150
 msgid "Show chat automatically"
 msgstr ""
 
@@ -14936,7 +14949,7 @@ msgstr ""
 msgid "Show previous tab"
 msgstr "顯示上一個頁籤"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:42
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:43
 msgid "Show the chat when ready."
 msgstr "準備好後顯示文字對談。"
 
@@ -14982,7 +14995,7 @@ msgstr "總覽"
 msgid "Shown records in caller log."
 msgstr "在來電日誌顯示記錄."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:94
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:95
 msgid "Shown when the chat is closed."
 msgstr "文字對談關閉時顯示。"
 
@@ -16205,7 +16218,7 @@ msgstr "無法選擇頭像。"
 msgid "The avatar could not be uploaded."
 msgstr "無法上傳頭像。"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:212
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:213
 msgid ""
 "The browser is outdated. It does not support WebSocket - the technology we "
 "use for the chat."
@@ -16313,11 +16326,11 @@ msgstr "未找到 %s 的證書。"
 msgid "The changes could not be saved."
 msgstr ""
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:214
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:215
 msgid "The chat is turned off."
 msgstr "文字對談功能已關閉。"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:150
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:151
 #, fuzzy
 #| msgid ""
 #| "The chat will show up once the connection to the server got established "
@@ -16386,7 +16399,7 @@ msgstr ""
 "下面輸入目標網址（例如：\"/support\"、\"example.com\" 或 \"example.com/"
 "support\"）。 然後，按照 \"Web伺服器配置\" 下的說明完成過程。"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:118
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:119
 msgid "The default font size is 12px."
 msgstr "預設的字體大小是 12px。"
 
@@ -17400,11 +17413,11 @@ msgstr ""
 msgid "There are no enabled two-factor authentication methods."
 msgstr "尚未啟用任何兩階段認證方式."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:210
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:211
 msgid "There are several possible reasons why the chat won't show up:"
 msgstr "文字對談無法顯示的原因可能有以下幾種可能："
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:215
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:216
 msgid "There are too many people in the chat queue."
 msgstr "文字對談排隊的人數過多。"
 
@@ -17429,7 +17442,7 @@ msgstr "沒有設定Google APP。"
 msgid "There is no Twitter app configured."
 msgstr "Twitter app 未配置。"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:213
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:214
 msgid "There is no agent online."
 msgstr "沒有客服人員在線上."
 
@@ -17566,7 +17579,7 @@ msgstr "此類別包含子類別："
 msgid "This category is empty"
 msgstr "此類別為空值"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:91
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:92
 #, fuzzy
 #| msgid ""
 #| "This class gets added to the button on initialization and gets removed "
@@ -18790,7 +18803,7 @@ msgstr "開啟備註輸入框"
 #: app/models/channel/driver/sms/message_bird.rb:91
 #: app/models/channel/driver/sms/twilio.rb:105
 msgid "Token"
-msgstr ""
+msgstr "Token"
 
 #: app/assets/javascripts/app/controllers/_profile/token_access.coffee:3
 #: app/assets/javascripts/app/views/api.jst.eco:12
@@ -18819,7 +18832,7 @@ msgstr ""
 
 #: app/assets/javascripts/app/controllers/password_reset_verify.coffee:59
 msgid "Token is invalid!"
-msgstr ""
+msgstr "無效的 Token！"
 
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingTokenAccess.vue:47
 msgid "Token-based API access has been disabled by the administrator."
@@ -18843,10 +18856,8 @@ msgstr "主題"
 
 #: app/assets/javascripts/app/views/ticket_zoom/time_unit.jst.eco:5
 #: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarInformation/TicketSidebarInformationContent/TicketAccountedTime.vue:26
-#, fuzzy
-#| msgid "Total: %s"
 msgid "Total"
-msgstr "總和：%s"
+msgstr "總和"
 
 #: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketObjectAttributes.vue:53
 #, fuzzy
@@ -18884,16 +18895,12 @@ msgid "Translate field contents"
 msgstr "翻譯"
 
 #: app/assets/javascripts/app/controllers/translation.coffee:3
-#, fuzzy
-#| msgid "Translations"
 msgid "Translation"
 msgstr "翻譯"
 
 #: app/assets/javascripts/app/controllers/translation.coffee:80
-#, fuzzy
-#| msgid "Translations"
 msgid "Translation Source"
-msgstr "翻譯"
+msgstr "翻譯來源"
 
 #: app/assets/javascripts/app/controllers/_plugin/keyboard_shortcuts.coffee:414
 #: app/assets/javascripts/app/controllers/translation.coffee:3
@@ -19157,7 +19164,7 @@ msgstr "兩步驟驗證方法已配置成功。"
 #: app/assets/javascripts/app/controllers/widget/ticket_bulk_form.coffee:70
 #: app/assets/javascripts/app/models/ticket_article.coffee:12
 #: app/assets/javascripts/app/models/ticket_state.coffee:7
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:229
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:230
 #: app/assets/javascripts/app/views/generic/sla_times.jst.eco:5
 #: app/assets/javascripts/app/views/integration/check_mk.jst.eco:11
 #: app/assets/javascripts/app/views/integration/cti.jst.eco:11
@@ -19643,7 +19650,7 @@ msgstr "上傳"
 msgid "Uploading"
 msgstr "上傳中"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:136
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:137
 #: app/assets/javascripts/app/views/integration/check_mk.jst.eco:3
 msgid "Usage"
 msgstr "如何使用"
@@ -20261,7 +20268,7 @@ msgstr "微博"
 msgid "Weibo App Credentials"
 msgstr "微博 App 證書"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:67
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:68
 msgid "Welcome Title shown on the closed chat. Can contain HTML."
 msgstr "關閉的文字對談中顯示的歡迎標題。可以包含HTML。"
 
@@ -20343,7 +20350,7 @@ msgstr "何時會發送通知。"
 msgid "When should the job run?"
 msgstr "何時開始執行工作 ?"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:217
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:218
 msgid ""
 "When you turn on debugging by setting the option §debug§ to §true§ the "
 "reason gets printed to the javascript console."
@@ -20355,11 +20362,11 @@ msgstr ""
 msgid "Where"
 msgstr "何處"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:48
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:49
 msgid "Where to append the chat to."
 msgstr "文字對談附加的位置。"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:208
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:209
 msgid "Why doesn't the chat show up?"
 msgstr "為什麼文字對談不會顯示？"
 
@@ -20526,8 +20533,9 @@ msgstr ""
 msgid ""
 "You are receiving this because you are out-of-office replacement for a "
 "participant of this ticket."
-msgstr "您收到此通知是因為您是此工單中某位參與者的職務代理人，該參與者目前不在辦公室"
-"。"
+msgstr ""
+"您收到此通知是因為您是此工單中某位參與者的職務代理人，該參與者目前不在辦公"
+"室。"
 
 #: app/models/transaction/notification.rb:85
 msgid "You are receiving this because you are the owner of this ticket."
@@ -20594,6 +20602,8 @@ msgid ""
 "screen. These have many purposes, such as displaying a data privacy page for "
 "all people using your Zammad instance."
 msgstr ""
+"您可以定義一些連接，例如顯示在 Zammad 登入畫面的底部中。這些連結用途廣泛，例"
+"如可以向所有使用您 Zammad 執行個體的使用者顯示資料隱私頁面。"
 
 #: app/assets/javascripts/app/views/facebook/app_config.jst.eco:3
 #: app/assets/javascripts/app/views/google/app_config.jst.eco:3
@@ -21436,7 +21446,7 @@ msgstr "天"
 msgid "deactivated"
 msgstr "已停用"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:149
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:150
 #: db/seeds/signatures.rb:5
 msgid "default"
 msgstr "預設"
@@ -21636,7 +21646,7 @@ msgstr ""
 
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_action/email_reply.coffee:61
 msgid "forward"
-msgstr ""
+msgstr "轉寄"
 
 #: app/assets/javascripts/app/controllers/_application_controller/_modal_generic_history.coffee:158
 msgid "from"
@@ -21651,7 +21661,7 @@ msgstr "from (相關)"
 
 #: app/controllers/integration/pgp_controller.rb:46
 msgid "gpg (GnuPG) 2.2.0 or newer is required"
-msgstr ""
+msgstr "需求 gpg (GnuPG) 2.2.0 或更新的版本"
 
 #: app/assets/javascripts/app/lib/app_post/pretty_date.coffee:98
 msgid "h"
@@ -22552,7 +22562,7 @@ msgstr "返回首頁。"
 #: app/assets/javascripts/app/controllers/_ui_element/core_workflow_condition.coffee:65
 #: app/assets/javascripts/app/controllers/_ui_element/object_selector.coffee:52
 #: app/assets/javascripts/app/controllers/chat.coffee:757
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:67
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:68
 msgid "today"
 msgstr "今天"
 

@@ -1519,7 +1519,7 @@ msgstr "Dodaj oznaku"
 msgid "Add third level heading"
 msgstr "Dodaj naslov treće razine"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:85
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:86
 msgid "Add this class to a button on your page that should open the chat."
 msgstr "Dodaj ovu razinu gumbu na stranici koji bi trebao otvoriti chat."
 
@@ -1846,6 +1846,12 @@ msgstr "Došlo je do greške"
 
 #: app/frontend/shared/server/apollo/handler/BaseHandler.ts:150
 msgid "An error occured during the operation."
+msgstr "Došlo je do greške prilikom izvođenja promjena."
+
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:251
+#, fuzzy
+#| msgid "An error occured during the operation."
+msgid "An error occurred while fetching the website preview."
 msgstr "Došlo je do greške prilikom izvođenja promjena."
 
 #: app/assets/javascripts/app/controllers/_ui_element/object_manager_attribute.coffee:997
@@ -2576,7 +2582,7 @@ msgstr ""
 "Automatsko obogaćivanje Vaših klijenata i organizacija novim, ažurnim "
 "informacijama. Povežite podatke izravno sa poljima objekata."
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:97
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:98
 msgid ""
 "Automatically loads the chat.css file. If you want to use your own css, just "
 "set it to false."
@@ -2674,7 +2680,7 @@ msgstr "Natrag na prethodnu stranicu"
 msgid "Back to search results"
 msgstr "Natrag na rezultate pretraživanja"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:98
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:99
 msgid "Background color"
 msgstr "Boja pozadine"
 
@@ -2893,7 +2899,7 @@ msgstr "CC"
 msgid "CMDB to document complex relations of your network components."
 msgstr "CMDB za dokumentiranje kompleksnih odnosa dijelova Vaše mreže."
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:73
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:74
 msgid ""
 "CSS font-size with a unit like 12px, 1.5em. If left undefined it inherits "
 "the font-size of the website."
@@ -2992,7 +2998,7 @@ msgstr "Lista poziva"
 msgid "Camera"
 msgstr "Kamera"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:109
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:110
 msgid "Can be in any CSS color format."
 msgstr "Može biti u bilo kojem CSS formatu boja."
 
@@ -3266,7 +3272,7 @@ msgstr "Chat ID"
 msgid "Chat Session"
 msgstr "Sesija chata"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:89
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:90
 msgid "Chat Title"
 msgstr "Naslov chata"
 
@@ -3280,7 +3286,7 @@ msgid "Chat not answered, automatically set to offline."
 msgstr ""
 "Na chat nije odgovoreno, automatski postavljen na bezmrežan način rada."
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:381
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:397
 msgid "Chats"
 msgstr "Chatovi"
 
@@ -4742,7 +4748,7 @@ msgstr "Dešifriranje je bilo uspješno."
 
 #: app/assets/javascripts/app/controllers/_ui_element/object_manager_attribute.coffee:239
 #: app/assets/javascripts/app/views/calendar/index.jst.eco:32
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:228
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:229
 #: app/assets/javascripts/app/views/generic/multi_locales.jst.eco:5
 #: app/assets/javascripts/app/views/generic/table_row.jst.eco:78
 #: app/assets/javascripts/app/views/object_manager/attribute/boolean.jst.eco:8
@@ -5963,7 +5969,7 @@ msgstr "Odjel"
 #: app/assets/javascripts/app/controllers/translation.coffee:183
 #: app/assets/javascripts/app/views/calendar/holiday_selector.jst.eco:6
 #: app/assets/javascripts/app/views/calendar/index.jst.eco:8
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:230
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:231
 #: app/assets/javascripts/app/views/data_privacy/index.jst.eco:7
 #: app/assets/javascripts/app/views/generic/admin/index.jst.eco:7
 #: app/assets/javascripts/app/views/integration/clearbit.jst.eco:9
@@ -6919,7 +6925,7 @@ msgstr ""
 "Aktivira polje za verifikaciju korisnika putem %s. Polje preusmjerava na /"
 "auth/sso za interakciju s korisnikom."
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:61
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:62
 msgid "Enables console logging."
 msgstr "Omogućava zapisivanje konzole."
 
@@ -7782,7 +7788,7 @@ msgstr "Prvi odgovor"
 msgid "Fixed Email Accounts"
 msgstr "Fiksni e-mail računi"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:122
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:123
 msgid "Flat Design"
 msgstr "Ravni dizajn"
 
@@ -7819,7 +7825,7 @@ msgstr "Naknadni upit je moguć"
 msgid "Font Awesome"
 msgstr "Font Super"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:113
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:114
 msgid "Font size"
 msgstr "Veličina fonta"
 
@@ -8488,7 +8494,7 @@ msgstr "Provjera stanja"
 msgid "Health information can be retrieved as JSON using:"
 msgstr "Provjeru stanja može se preuzeti kao JSON putem:"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:69
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:70
 msgid "Hello! I need help with your product."
 msgstr "Pozdrav! Trebam pomoć u vezi Vašeg proizvoda."
 
@@ -8593,7 +8599,7 @@ msgstr "Brzi pregled vlastitih i performansi drugih agenata."
 msgid "Here you will find the latest activities of your system."
 msgstr "Ovdje ćete pronaći najnovije aktivnosti Vašeg sustava."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:72
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:73
 msgid "Hi! Which one of our products?"
 msgstr "Bok! Koji od naših proizvoda?"
 
@@ -8784,7 +8790,7 @@ msgstr "URL ikone"
 msgid "Identifier"
 msgstr "Identifikator"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:36
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:37
 msgid "Identifier of the chat topic."
 msgstr "Identifikator teme chata."
 
@@ -8806,7 +8812,7 @@ msgstr ""
 "Ako je korisnik pronađen u više LDAP izvora, posljednja provedena "
 "sinkronizacija će biti korištena."
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:54
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:55
 msgid ""
 "If left empty, the host gets auto-detected - in this case %s. The auto-"
 "detection reads out the host from the <script> tag. If you don't include it "
@@ -8838,7 +8844,7 @@ msgstr ""
 msgid "If this regex matches, no notification will be sent by the sender."
 msgstr "Ako se regex podudara, obavijest neće biti poslana pošiljatelju."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:178
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:179
 msgid ""
 "If you don't already use jQuery on your website, you can add it like this:"
 msgstr ""
@@ -8891,7 +8897,7 @@ msgstr ""
 "Ako želite premjestiti već pohranjene privitke iz jednog u drugi pozadinski "
 "sustav, morate upisati sljedeće rails/rake zapovijedi."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:162
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:163
 msgid ""
 "If you want to open the chat by clicking a button, set the option §show§ to "
 "§false§ and add the class §open-zammad-chat§ to the button."
@@ -9248,7 +9254,7 @@ msgstr "Umetni tekst iz članka baze podataka"
 msgid "Insert text from text module"
 msgstr "Umetni tekst iz tekstnog modula"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:138
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:139
 msgid ""
 "Insert the widget code into the source code of every page the chat shall be "
 "visible on. It should be placed at the end of the page's source code before "
@@ -9608,7 +9614,7 @@ msgstr "Siječanj"
 msgid "Job is waiting to get started…"
 msgstr "Zadatak čeka na izvršenje…"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:58
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:59
 msgid "John Smith"
 msgstr "Ivan Horvat"
 
@@ -10137,7 +10143,7 @@ msgstr "Lokalizacija promjena izvršenja"
 msgid "Location"
 msgstr "Lokacija"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:103
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:104
 msgid "Location of an external chat.css file."
 msgstr "Lokacija eksterne chat.css datoteke."
 
@@ -10537,7 +10543,7 @@ msgstr "Upravljajte svojim postavkama obavijesti"
 msgid "Management"
 msgstr "Upravljanje"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:161
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:162
 msgid "Manually open chat"
 msgstr "Ručno otvaranje chata"
 
@@ -12160,7 +12166,7 @@ msgid "One of the required parameters must be provided, but none was found."
 msgstr ""
 "Jedan od potrebnih parametara mora biti naveden, ali nijedan nije pronađen."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:49
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:50
 #: public/assets/chat/chat.coffee:207
 msgid "Online"
 msgstr "Dostupan(a)"
@@ -12358,7 +12364,7 @@ msgid "Operating system"
 msgstr "Operativni sustav"
 
 #: app/assets/javascripts/app/views/agent_ticket_view/content.jst.eco:7
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:222
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:223
 #: app/assets/javascripts/app/views/channel/form.jst.eco:60
 #: app/assets/javascripts/app/views/object_manager/screens.jst.eco:7
 #: app/assets/javascripts/app/views/profile/calendar_subscriptions.jst.eco:42
@@ -13772,7 +13778,7 @@ msgstr "Uklanja hiperveze"
 msgid "Removes the formatting"
 msgstr "Uklanja formatiranje"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:79
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:80
 msgid "Removes the shadows for a flat look."
 msgstr "Uklanja sjene za ravan dizajn."
 
@@ -13894,7 +13900,7 @@ msgstr "Nedostaje obavezan parametar ’downloadBackendSelected’."
 msgid "Required parameter 'profile' is missing."
 msgstr "Nedostaje obavezan parametar ’profile’."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:177
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:178
 #: app/assets/javascripts/app/views/channel/form.jst.eco:147
 msgid "Requirements"
 msgstr "Preduvjeti"
@@ -14832,7 +14838,7 @@ msgstr "Odabire način generiranja broja ticketa."
 msgid "Select…"
 msgstr "Odaberi…"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:77
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:78
 #: app/assets/javascripts/app/views/customer_chat/chat_window.jst.eco:58
 #: public/assets/chat/views/chat.eco:25
 msgid "Send"
@@ -15247,7 +15253,7 @@ msgstr "Pokaži tajnu autentifikacijske aplikacije"
 msgid "Show calendar weeks in the picker of date/datetime fields"
 msgstr "Prikaz tjedana kalendara u polju za odabir datuma (i vremena)"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:149
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:150
 msgid "Show chat automatically"
 msgstr "Automatski pokaži chat"
 
@@ -15287,7 +15293,7 @@ msgstr ""
 msgid "Show previous tab"
 msgstr "Pokaži prethodnu karticu"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:42
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:43
 msgid "Show the chat when ready."
 msgstr "Pokažite chat čim bude spreman."
 
@@ -15329,7 +15335,7 @@ msgstr "Pokaži praćene tickete"
 msgid "Shown records in caller log."
 msgstr "Pokazani unosi u zapisniku poziva."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:94
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:95
 msgid "Shown when the chat is closed."
 msgstr "Pokazuje se kada je chat zatvoren."
 
@@ -16458,7 +16464,7 @@ msgstr "Avatar nije moguće odabrati."
 msgid "The avatar could not be uploaded."
 msgstr "Nije moguće učitati avatar."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:212
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:213
 msgid ""
 "The browser is outdated. It does not support WebSocket - the technology we "
 "use for the chat."
@@ -16568,11 +16574,11 @@ msgstr "Certifikati za %s nisu pronađeni."
 msgid "The changes could not be saved."
 msgstr "Promjene nisu spremljene."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:214
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:215
 msgid "The chat is turned off."
 msgstr "Chat je isključen."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:150
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:151
 msgid ""
 "The chat will show up once the connection to the server got established and "
 "if there is an operator online to chat with."
@@ -16644,7 +16650,7 @@ msgstr ""
 "\"example.com\" ili \"example.com/support\"). Zatim slijedite upute u "
 "odjeljku \"Konfiguracija web-servera\" da biste dovršili postupak."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:118
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:119
 msgid "The default font size is 12px."
 msgstr "Zadana veličina fonta je 12px."
 
@@ -17598,11 +17604,11 @@ msgstr "Nema aktivnih autentifikacija trećih strana."
 msgid "There are no enabled two-factor authentication methods."
 msgstr "Nema aktivnih dvofaktorskih autentifikacijskih metoda."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:210
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:211
 msgid "There are several possible reasons why the chat won't show up:"
 msgstr "Postoji nekoliko mogućih razloga zašto se chat ne pojavljuje:"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:215
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:216
 msgid "There are too many people in the chat queue."
 msgstr "Previše je ljudi u redu čekanja za chat."
 
@@ -17627,7 +17633,7 @@ msgstr "Ne postoji konfigurirana Googleova aplikacija."
 msgid "There is no Twitter app configured."
 msgstr "Twitter aplikacija nije konfigurirana."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:213
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:214
 msgid "There is no agent online."
 msgstr "Nema dostupnih agenata."
 
@@ -17762,7 +17768,7 @@ msgstr "Ova kategorija sadrži sažetak sadržaja podkategorija:"
 msgid "This category is empty"
 msgstr "Ova kategorija je prazna"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:91
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:92
 msgid ""
 "This class gets added to the button on initialization and will be removed "
 "once the chat connection is established."
@@ -19312,7 +19318,7 @@ msgstr "Metoda dvofaktorske autentifikacije je uspješno konfigurirana."
 #: app/assets/javascripts/app/controllers/widget/ticket_bulk_form.coffee:70
 #: app/assets/javascripts/app/models/ticket_article.coffee:12
 #: app/assets/javascripts/app/models/ticket_state.coffee:7
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:229
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:230
 #: app/assets/javascripts/app/views/generic/sla_times.jst.eco:5
 #: app/assets/javascripts/app/views/integration/check_mk.jst.eco:11
 #: app/assets/javascripts/app/views/integration/cti.jst.eco:11
@@ -19783,7 +19789,7 @@ msgstr "Prenesi ključ"
 msgid "Uploading"
 msgstr "Prenosim"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:136
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:137
 #: app/assets/javascripts/app/views/integration/check_mk.jst.eco:3
 msgid "Usage"
 msgstr "Korištenje"
@@ -20386,7 +20392,7 @@ msgstr "Weibo"
 msgid "Weibo App Credentials"
 msgstr "Weibo prijavni podaci"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:67
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:68
 msgid "Welcome Title shown on the closed chat. Can contain HTML."
 msgstr ""
 "Naslov dobrodošlice prikazan na zatvorenom chatu. Može sadržavati HTML."
@@ -20473,7 +20479,7 @@ msgstr "Kada se šalju obavijesti."
 msgid "When should the job run?"
 msgstr "Kada zadatak treba biti pokrenut?"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:217
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:218
 msgid ""
 "When you turn on debugging by setting the option §debug§ to §true§ the "
 "reason gets printed to the javascript console."
@@ -20485,11 +20491,11 @@ msgstr ""
 msgid "Where"
 msgstr "Gdje"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:48
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:49
 msgid "Where to append the chat to."
 msgstr "Gdje se prilaže chat."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:208
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:209
 msgid "Why doesn't the chat show up?"
 msgstr "Zašto se chat ne pojavljuje?"
 
@@ -21575,7 +21581,7 @@ msgstr "dani"
 msgid "deactivated"
 msgstr "deaktiviran"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:149
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:150
 #: db/seeds/signatures.rb:5
 msgid "default"
 msgstr "standard"
@@ -22639,7 +22645,7 @@ msgstr "za povratak na početnu stranicu."
 #: app/assets/javascripts/app/controllers/_ui_element/core_workflow_condition.coffee:65
 #: app/assets/javascripts/app/controllers/_ui_element/object_selector.coffee:52
 #: app/assets/javascripts/app/controllers/chat.coffee:757
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:67
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:68
 msgid "today"
 msgstr "danas"
 

@@ -1537,7 +1537,7 @@ msgstr "Címke hozzáadása"
 msgid "Add third level heading"
 msgstr "Harmadik szintű címsor hozzáadása"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:85
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:86
 msgid "Add this class to a button on your page that should open the chat."
 msgstr ""
 "Adja hozzá ezt az osztályt egy gombhoz az oldalán, amely megnyitja a "
@@ -1875,6 +1875,12 @@ msgstr "Hiba történt"
 
 #: app/frontend/shared/server/apollo/handler/BaseHandler.ts:150
 msgid "An error occured during the operation."
+msgstr "Hiba történt a művelet során."
+
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:251
+#, fuzzy
+#| msgid "An error occured during the operation."
+msgid "An error occurred while fetching the website preview."
 msgstr "Hiba történt a művelet során."
 
 #: app/assets/javascripts/app/controllers/_ui_element/object_manager_attribute.coffee:997
@@ -2610,7 +2616,7 @@ msgstr ""
 "Automatikusan gazdagítsa ügyfeleit és szervezeteit friss, naprakész "
 "információkkal. Rendelje hozzá az adatokat közvetlenül az objektum mezőihez."
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:97
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:98
 msgid ""
 "Automatically loads the chat.css file. If you want to use your own css, just "
 "set it to false."
@@ -2708,7 +2714,7 @@ msgstr "Vissza az előző oldalra"
 msgid "Back to search results"
 msgstr "Vissza a keresési eredményekhez"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:98
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:99
 msgid "Background color"
 msgstr "Háttérszín"
 
@@ -2933,7 +2939,7 @@ msgstr "Másolat"
 msgid "CMDB to document complex relations of your network components."
 msgstr "CMDB a hálózati összetevők összetett kapcsolatainak dokumentálásához."
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:73
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:74
 msgid ""
 "CSS font-size with a unit like 12px, 1.5em. If left undefined it inherits "
 "the font-size of the website."
@@ -3032,7 +3038,7 @@ msgstr "Hívásnapló"
 msgid "Camera"
 msgstr "Kamera"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:109
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:110
 msgid "Can be in any CSS color format."
 msgstr "Bármilyen CSS színformátumban lehet."
 
@@ -3305,7 +3311,7 @@ msgstr "Csevegés azonosító"
 msgid "Chat Session"
 msgstr "Csevegés munkamenet"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:89
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:90
 msgid "Chat Title"
 msgstr "Csevegés cím"
 
@@ -3318,7 +3324,7 @@ msgstr "A csevegés %s által lezárva"
 msgid "Chat not answered, automatically set to offline."
 msgstr "A csevegés nem válaszolt, automatikusan offline állapotba került."
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:381
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:397
 msgid "Chats"
 msgstr "Csevegések"
 
@@ -4797,7 +4803,7 @@ msgstr "A dekódolás sikeres volt."
 
 #: app/assets/javascripts/app/controllers/_ui_element/object_manager_attribute.coffee:239
 #: app/assets/javascripts/app/views/calendar/index.jst.eco:32
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:228
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:229
 #: app/assets/javascripts/app/views/generic/multi_locales.jst.eco:5
 #: app/assets/javascripts/app/views/generic/table_row.jst.eco:78
 #: app/assets/javascripts/app/views/object_manager/attribute/boolean.jst.eco:8
@@ -6085,7 +6091,7 @@ msgstr "Részleg"
 #: app/assets/javascripts/app/controllers/translation.coffee:183
 #: app/assets/javascripts/app/views/calendar/holiday_selector.jst.eco:6
 #: app/assets/javascripts/app/views/calendar/index.jst.eco:8
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:230
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:231
 #: app/assets/javascripts/app/views/data_privacy/index.jst.eco:7
 #: app/assets/javascripts/app/views/generic/admin/index.jst.eco:7
 #: app/assets/javascripts/app/views/integration/clearbit.jst.eco:9
@@ -7061,7 +7067,7 @@ msgstr ""
 "Engedélyezi a gombot a felhasználó hitelesítéséhez %s használatával. A gomb "
 "átirányít az /auth/sso oldalra a felhasználó interakciója során."
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:61
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:62
 msgid "Enables console logging."
 msgstr "Engedélyezi a konzol naplózását."
 
@@ -7940,7 +7946,7 @@ msgstr "Első válasz"
 msgid "Fixed Email Accounts"
 msgstr "Fix e-mail fiókok"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:122
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:123
 msgid "Flat Design"
 msgstr "Flat Design"
 
@@ -7977,7 +7983,7 @@ msgstr "Utánkövetés lehetséges"
 msgid "Font Awesome"
 msgstr "Font Awesome"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:113
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:114
 msgid "Font size"
 msgstr "Betűméret"
 
@@ -8649,7 +8655,7 @@ msgstr ""
 "Az állapotra vonatkozó információk JSON formátumban is lekérdezhetők a "
 "következőkkel:"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:69
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:70
 msgid "Hello! I need help with your product."
 msgstr "Üdvözlöm! Segítségre van szükségem a termékkel kapcsolatban."
 
@@ -8756,7 +8762,7 @@ msgstr ""
 msgid "Here you will find the latest activities of your system."
 msgstr "Itt találja a rendszere legfrissebb tevékenységeit."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:72
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:73
 msgid "Hi! Which one of our products?"
 msgstr "Üdvözlöm! Melyik termékünk?"
 
@@ -8946,7 +8952,7 @@ msgstr "Ikon URL"
 msgid "Identifier"
 msgstr "Azonosító"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:36
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:37
 msgid "Identifier of the chat topic."
 msgstr "A csevegés témájának azonosítója."
 
@@ -8968,7 +8974,7 @@ msgstr ""
 "Amennyiben egy felhasználó két (vagy több) konfigurált LDAP-forrásban is "
 "megtalálható, akkor az utolsó szinkronizáció nyer."
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:54
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:55
 msgid ""
 "If left empty, the host gets auto-detected - in this case %s. The auto-"
 "detection reads out the host from the <script> tag. If you don't include it "
@@ -9002,7 +9008,7 @@ msgstr ""
 msgid "If this regex matches, no notification will be sent by the sender."
 msgstr "Amennyiben ez a regex egyezik, a feladó nem küld értesítést."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:178
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:179
 msgid ""
 "If you don't already use jQuery on your website, you can add it like this:"
 msgstr ""
@@ -9058,7 +9064,7 @@ msgstr ""
 "háttérrendszerből a másikba, akkor rails/rake feladatként a következőket "
 "kell végrehajtania."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:162
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:163
 msgid ""
 "If you want to open the chat by clicking a button, set the option §show§ to "
 "§false§ and add the class §open-zammad-chat§ to the button."
@@ -9429,7 +9435,7 @@ msgstr "Szöveg beszúrása Tudásbázis cikkből"
 msgid "Insert text from text module"
 msgstr "Szöveg beszúrása szövegmodulból"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:138
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:139
 msgid ""
 "Insert the widget code into the source code of every page the chat shall be "
 "visible on. It should be placed at the end of the page's source code before "
@@ -9788,7 +9794,7 @@ msgstr "január"
 msgid "Job is waiting to get started…"
 msgstr "A feladat arra vár, hogy elkezdődjön…"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:58
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:59
 msgid "John Smith"
 msgstr "John Smith"
 
@@ -10319,7 +10325,7 @@ msgstr "A végrehajtási változások fordítása"
 msgid "Location"
 msgstr "Hely"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:103
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:104
 msgid "Location of an external chat.css file."
 msgstr "Egy külső chat.css fájl helye."
 
@@ -10721,7 +10727,7 @@ msgstr "Értesítési beállításainak kezelése"
 msgid "Management"
 msgstr "Kezelés"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:161
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:162
 msgid "Manually open chat"
 msgstr "Csevegés manuális megnyitása"
 
@@ -12347,7 +12353,7 @@ msgstr "Miután elkészült…"
 msgid "One of the required parameters must be provided, but none was found."
 msgstr "A szükséges paraméterek egyikét meg kell adni, de egyik sem található."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:49
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:50
 #: public/assets/chat/chat.coffee:207
 msgid "Online"
 msgstr "Online"
@@ -12552,7 +12558,7 @@ msgid "Operating system"
 msgstr "Operációs rendszer"
 
 #: app/assets/javascripts/app/views/agent_ticket_view/content.jst.eco:7
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:222
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:223
 #: app/assets/javascripts/app/views/channel/form.jst.eco:60
 #: app/assets/javascripts/app/views/object_manager/screens.jst.eco:7
 #: app/assets/javascripts/app/views/profile/calendar_subscriptions.jst.eco:42
@@ -13979,7 +13985,7 @@ msgstr "Eltávolít minden hiperhivatkozást"
 msgid "Removes the formatting"
 msgstr "Eltávolítja a formázást"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:79
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:80
 msgid "Removes the shadows for a flat look."
 msgstr "Eltávolítja az árnyékokat a lapos megjelenésért."
 
@@ -14101,7 +14107,7 @@ msgstr "A kötelező 'downloadBackendSelected' paraméter hiányzik."
 msgid "Required parameter 'profile' is missing."
 msgstr "A kötelező 'profile' paraméter hiányzik."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:177
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:178
 #: app/assets/javascripts/app/views/channel/form.jst.eco:147
 msgid "Requirements"
 msgstr "Követelmények"
@@ -15045,7 +15051,7 @@ msgstr "Kiválasztja a jegyszámgenerátor modult."
 msgid "Select…"
 msgstr "Választás…"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:77
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:78
 #: app/assets/javascripts/app/views/customer_chat/chat_window.jst.eco:58
 #: public/assets/chat/views/chat.eco:25
 msgid "Send"
@@ -15463,7 +15469,7 @@ msgstr "Hitelesítő alkalmazás titkának megjelenítése"
 msgid "Show calendar weeks in the picker of date/datetime fields"
 msgstr "Naptári hetek megjelenítése a dátum/idő mezők kiválasztójában"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:149
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:150
 msgid "Show chat automatically"
 msgstr "A csevegés automatikus megjelenítése"
 
@@ -15504,7 +15510,7 @@ msgstr ""
 msgid "Show previous tab"
 msgstr "Előző lap megjelenítése"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:42
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:43
 msgid "Show the chat when ready."
 msgstr "A csevegés megjelenítése, ha készen áll."
 
@@ -15544,7 +15550,7 @@ msgstr "Jegyek követésének megjelenítése"
 msgid "Shown records in caller log."
 msgstr "Megjelenített bejegyzések a hívásnaplóban."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:94
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:95
 msgid "Shown when the chat is closed."
 msgstr "Akkor jelenik meg, amikor a csevegés zárva van."
 
@@ -16686,7 +16692,7 @@ msgstr "Az avatárt nem sikerült kijelölni."
 msgid "The avatar could not be uploaded."
 msgstr "Az avatárt nem sikerült feltölteni."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:212
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:213
 msgid ""
 "The browser is outdated. It does not support WebSocket - the technology we "
 "use for the chat."
@@ -16798,11 +16804,11 @@ msgstr "%s tanúsítványok nem találhatóak."
 msgid "The changes could not be saved."
 msgstr "A változtatásokat nem lehetett elmenteni."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:214
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:215
 msgid "The chat is turned off."
 msgstr "A chat ki van kapcsolva."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:150
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:151
 msgid ""
 "The chat will show up once the connection to the server got established and "
 "if there is an operator online to chat with."
@@ -16874,7 +16880,7 @@ msgstr ""
 "support\"). Ezután a folyamat befejezéséhez kövesse a \"Webkiszolgáló "
 "konfigurálása\" című fejezetben található utasításokat."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:118
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:119
 msgid "The default font size is 12px."
 msgstr "Az alapértelmezett betűméret 12px."
 
@@ -17857,11 +17863,11 @@ msgstr ""
 msgid "There are no enabled two-factor authentication methods."
 msgstr "Nincs engedélyezett kétfaktoros hitelesítési mód."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:210
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:211
 msgid "There are several possible reasons why the chat won't show up:"
 msgstr "Több oka is lehet annak, hogy a csevegés nem jelenik meg:"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:215
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:216
 msgid "There are too many people in the chat queue."
 msgstr "Túl sokan vannak a csevegési sorban."
 
@@ -17886,7 +17892,7 @@ msgstr "Nincs konfigurálva Google alkalmazás."
 msgid "There is no Twitter app configured."
 msgstr "Nincs konfigurálva Twitter alkalmazás."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:213
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:214
 msgid "There is no agent online."
 msgstr "Nincs online ügynök."
 
@@ -18022,7 +18028,7 @@ msgstr "Ez a kategória az alábbi alkategóriákat tartalmazza:"
 msgid "This category is empty"
 msgstr "Ez a kategória üres"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:91
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:92
 msgid ""
 "This class gets added to the button on initialization and will be removed "
 "once the chat connection is established."
@@ -19592,7 +19598,7 @@ msgstr "Kétfaktoros módszer sikeresen beállítva."
 #: app/assets/javascripts/app/controllers/widget/ticket_bulk_form.coffee:70
 #: app/assets/javascripts/app/models/ticket_article.coffee:12
 #: app/assets/javascripts/app/models/ticket_state.coffee:7
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:229
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:230
 #: app/assets/javascripts/app/views/generic/sla_times.jst.eco:5
 #: app/assets/javascripts/app/views/integration/check_mk.jst.eco:11
 #: app/assets/javascripts/app/views/integration/cti.jst.eco:11
@@ -20067,7 +20073,7 @@ msgstr "Kulcs feltöltése"
 msgid "Uploading"
 msgstr "Feltöltés"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:136
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:137
 #: app/assets/javascripts/app/views/integration/check_mk.jst.eco:3
 msgid "Usage"
 msgstr "Használat"
@@ -20674,7 +20680,7 @@ msgstr "Weibo"
 msgid "Weibo App Credentials"
 msgstr "Weibo alkalmazás hitelesítő adatok"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:67
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:68
 msgid "Welcome Title shown on the closed chat. Can contain HTML."
 msgstr "Az üdvözlő cím a bezárt csevegésen jelenik meg. HTML-t tartalmazhat."
 
@@ -20760,7 +20766,7 @@ msgstr "Amikor az értesítés elküldésre kerül."
 msgid "When should the job run?"
 msgstr "Mikor kell lefutnia a munkának?"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:217
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:218
 msgid ""
 "When you turn on debugging by setting the option §debug§ to §true§ the "
 "reason gets printed to the javascript console."
@@ -20772,11 +20778,11 @@ msgstr ""
 msgid "Where"
 msgstr "Hol"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:48
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:49
 msgid "Where to append the chat to."
 msgstr "Hová kell illeszteni a csevegést."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:208
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:209
 msgid "Why doesn't the chat show up?"
 msgstr "Miért nem jelenik meg a csevegés?"
 
@@ -21876,7 +21882,7 @@ msgstr "nap"
 msgid "deactivated"
 msgstr "deaktivált"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:149
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:150
 #: db/seeds/signatures.rb:5
 msgid "default"
 msgstr "alapértelmezett"
@@ -22942,7 +22948,7 @@ msgstr "a kezdőlapra való lépéshez."
 #: app/assets/javascripts/app/controllers/_ui_element/core_workflow_condition.coffee:65
 #: app/assets/javascripts/app/controllers/_ui_element/object_selector.coffee:52
 #: app/assets/javascripts/app/controllers/chat.coffee:757
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:67
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:68
 msgid "today"
 msgstr "ma"
 

@@ -1510,7 +1510,7 @@ msgstr "新增标签"
 msgid "Add third level heading"
 msgstr "添加三级标题"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:85
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:86
 msgid "Add this class to a button on your page that should open the chat."
 msgstr "将此类添加到页面上应该打开聊天的按钮。"
 
@@ -1824,6 +1824,12 @@ msgstr "发生了错误"
 
 #: app/frontend/shared/server/apollo/handler/BaseHandler.ts:150
 msgid "An error occured during the operation."
+msgstr "操作过程中发生错误。"
+
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:251
+#, fuzzy
+#| msgid "An error occured during the operation."
+msgid "An error occurred while fetching the website preview."
 msgstr "操作过程中发生错误。"
 
 #: app/assets/javascripts/app/controllers/_ui_element/object_manager_attribute.coffee:997
@@ -2546,7 +2552,7 @@ msgid ""
 "intel. Map data directly to object fields."
 msgstr "使用最新的情报自动丰富您的客户和组织。 将数据直接映射到对象字段。"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:97
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:98
 msgid ""
 "Automatically loads the chat.css file. If you want to use your own css, just "
 "set it to false."
@@ -2642,7 +2648,7 @@ msgstr "返回上一页"
 msgid "Back to search results"
 msgstr "返回搜索结果"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:98
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:99
 msgid "Background color"
 msgstr "背景颜色"
 
@@ -2856,7 +2862,7 @@ msgstr "抄送（CC）"
 msgid "CMDB to document complex relations of your network components."
 msgstr "CMDB記錄您的網路組件間的複雜關係。"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:73
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:74
 msgid ""
 "CSS font-size with a unit like 12px, 1.5em. If left undefined it inherits "
 "the font-size of the website."
@@ -2953,7 +2959,7 @@ msgstr "通聯記錄"
 msgid "Camera"
 msgstr "摄像头"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:109
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:110
 msgid "Can be in any CSS color format."
 msgstr "可以是任何CSS颜色格式。"
 
@@ -3231,7 +3237,7 @@ msgstr "对话 ID"
 msgid "Chat Session"
 msgstr "聊天会话"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:89
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:90
 msgid "Chat Title"
 msgstr "对话标题"
 
@@ -3244,7 +3250,7 @@ msgstr "对话已被 %s 关闭"
 msgid "Chat not answered, automatically set to offline."
 msgstr "对话没有回复，已自动设置为离线。"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:381
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:397
 msgid "Chats"
 msgstr "对话"
 
@@ -4706,7 +4712,7 @@ msgstr "解密成功。"
 
 #: app/assets/javascripts/app/controllers/_ui_element/object_manager_attribute.coffee:239
 #: app/assets/javascripts/app/views/calendar/index.jst.eco:32
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:228
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:229
 #: app/assets/javascripts/app/views/generic/multi_locales.jst.eco:5
 #: app/assets/javascripts/app/views/generic/table_row.jst.eco:78
 #: app/assets/javascripts/app/views/object_manager/attribute/boolean.jst.eco:8
@@ -5813,7 +5819,7 @@ msgstr "部门"
 #: app/assets/javascripts/app/controllers/translation.coffee:183
 #: app/assets/javascripts/app/views/calendar/holiday_selector.jst.eco:6
 #: app/assets/javascripts/app/views/calendar/index.jst.eco:8
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:230
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:231
 #: app/assets/javascripts/app/views/data_privacy/index.jst.eco:7
 #: app/assets/javascripts/app/views/generic/admin/index.jst.eco:7
 #: app/assets/javascripts/app/views/integration/clearbit.jst.eco:9
@@ -6776,7 +6782,7 @@ msgid ""
 msgstr ""
 "启用通过％s进行用户身份验证的按钮。该按钮将在用户交互时重定向到 /auth /sso。"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:61
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:62
 msgid "Enables console logging."
 msgstr "启用控制台日志记录。"
 
@@ -7638,7 +7644,7 @@ msgstr "第一次回應"
 msgid "Fixed Email Accounts"
 msgstr "固定電子郵件帳號"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:122
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:123
 msgid "Flat Design"
 msgstr "扁平风格"
 
@@ -7675,7 +7681,7 @@ msgstr "可以跟进"
 msgid "Font Awesome"
 msgstr "字体很棒"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:113
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:114
 msgid "Font size"
 msgstr "字体大小"
 
@@ -8357,7 +8363,7 @@ msgstr "健康检测"
 msgid "Health information can be retrieved as JSON using:"
 msgstr "可以使用以下方法以 JSON 格式检索健康信息："
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:69
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:70
 msgid "Hello! I need help with your product."
 msgstr "你好！ 我需要产品方面的帮助。"
 
@@ -8446,7 +8452,7 @@ msgstr "您可以在这里快速查看您和其他服务人员的工作情况."
 msgid "Here you will find the latest activities of your system."
 msgstr "在这里您可以找到系统的最新活动。"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:72
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:73
 msgid "Hi! Which one of our products?"
 msgstr "嗨！ 我们的哪一款产品？"
 
@@ -8633,7 +8639,7 @@ msgstr "图标URL"
 msgid "Identifier"
 msgstr "收到通知"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:36
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:37
 msgid "Identifier of the chat topic."
 msgstr "聊天主题的标识符。"
 
@@ -8653,7 +8659,7 @@ msgid ""
 "synchronisation will win."
 msgstr "如果在两个（或多个）配置的LDAP源中找到一个用户，最后一次同步将优先。"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:54
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:55
 msgid ""
 "If left empty, the host gets auto-detected - in this case %s. The auto-"
 "detection reads out the host from the <script> tag. If you don't include it "
@@ -8681,7 +8687,7 @@ msgstr "如果发件人是客服人员，则将收件人列表中的第一个用
 msgid "If this regex matches, no notification will be sent by the sender."
 msgstr "如果此正则表达式匹配，发件人将不会发送任何通知。"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:178
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:179
 msgid ""
 "If you don't already use jQuery on your website, you can add it like this:"
 msgstr "如果您的网站上尚未使用 jQuery，您可以按如下方式添加："
@@ -8733,7 +8739,7 @@ msgstr ""
 "如果您想将已存储的附件从一个后端移动到另一个后端，您需要通过控制台执行以下命"
 "令。"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:162
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:163
 msgid ""
 "If you want to open the chat by clicking a button, set the option §show§ to "
 "§false§ and add the class §open-zammad-chat§ to the button."
@@ -9088,7 +9094,7 @@ msgstr "插入知识库文章中的文本"
 msgid "Insert text from text module"
 msgstr "从文本模块插入文本"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:138
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:139
 msgid ""
 "Insert the widget code into the source code of every page the chat shall be "
 "visible on. It should be placed at the end of the page's source code before "
@@ -9446,7 +9452,7 @@ msgstr "一月"
 msgid "Job is waiting to get started…"
 msgstr "任务正等待开始…"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:58
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:59
 msgid "John Smith"
 msgstr "John Smith"
 
@@ -10012,7 +10018,7 @@ msgstr "执行变更的本地化"
 msgid "Location"
 msgstr "位置"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:103
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:104
 msgid "Location of an external chat.css file."
 msgstr "自定义即时聊天css样式"
 
@@ -10499,7 +10505,7 @@ msgstr "管理您的通知设置"
 msgid "Management"
 msgstr "管理"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:161
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:162
 msgid "Manually open chat"
 msgstr "手动开启聊天"
 
@@ -12319,7 +12325,7 @@ msgstr "一旦完成…"
 msgid "One of the required parameters must be provided, but none was found."
 msgstr "必须提供所需参数之一，但未找到任何参数。"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:49
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:50
 #: public/assets/chat/chat.coffee:207
 msgid "Online"
 msgstr "在线"
@@ -12550,7 +12556,7 @@ msgid "Operating system"
 msgstr "操作系统"
 
 #: app/assets/javascripts/app/views/agent_ticket_view/content.jst.eco:7
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:222
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:223
 #: app/assets/javascripts/app/views/channel/form.jst.eco:60
 #: app/assets/javascripts/app/views/object_manager/screens.jst.eco:7
 #: app/assets/javascripts/app/views/profile/calendar_subscriptions.jst.eco:42
@@ -14045,7 +14051,7 @@ msgstr "刪除任何超連結"
 msgid "Removes the formatting"
 msgstr "刪除格式"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:79
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:80
 msgid "Removes the shadows for a flat look."
 msgstr "去除陰影以獲得平坦外觀"
 
@@ -14173,7 +14179,7 @@ msgstr "缺少必需的参数“下载backendselectected”。"
 msgid "Required parameter 'profile' is missing."
 msgstr "缺少必需的参数“配置文件”。"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:177
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:178
 #: app/assets/javascripts/app/views/channel/form.jst.eco:147
 msgid "Requirements"
 msgstr "要求"
@@ -15118,7 +15124,7 @@ msgstr "選擇工單產生器模組"
 msgid "Select…"
 msgstr "选择…"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:77
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:78
 #: app/assets/javascripts/app/views/customer_chat/chat_window.jst.eco:58
 #: public/assets/chat/views/chat.eco:25
 msgid "Send"
@@ -15558,7 +15564,7 @@ msgstr "显示身份验证器应用程序密码"
 msgid "Show calendar weeks in the picker of date/datetime fields"
 msgstr "在日期/dateTime字段的选择器中显示日历周"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:149
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:150
 msgid "Show chat automatically"
 msgstr "自动显示聊天"
 
@@ -15598,7 +15604,7 @@ msgstr "在登录页面上显示用户的密码登录。仅当启用第三方身
 msgid "Show previous tab"
 msgstr "显示上一个选项卡"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:42
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:43
 msgid "Show the chat when ready."
 msgstr "自动显示即时聊天"
 
@@ -15642,7 +15648,7 @@ msgstr "显示工单操作"
 msgid "Shown records in caller log."
 msgstr "来电记录中显示的记录。"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:94
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:95
 msgid "Shown when the chat is closed."
 msgstr "聊天关闭时显示。"
 
@@ -16783,7 +16789,7 @@ msgstr "％s 对象已更新。"
 msgid "The avatar could not be uploaded."
 msgstr "头像无法上传。"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:212
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:213
 msgid ""
 "The browser is outdated. It does not support WebSocket - the technology we "
 "use for the chat."
@@ -16886,11 +16892,11 @@ msgstr "未找到 %s 的证书。"
 msgid "The changes could not be saved."
 msgstr "更改无法保存。"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:214
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:215
 msgid "The chat is turned off."
 msgstr "对话功能已关闭."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:150
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:151
 msgid ""
 "The chat will show up once the connection to the server got established and "
 "if there is an operator online to chat with."
@@ -16953,7 +16959,7 @@ msgstr ""
 "廣告，請在下面輸入目標網址（例如“ /support”、“example.com”或“ example.com/"
 "support”）。 然後，按照“ Web服務器配置”下的說明完成過程。"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:118
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:119
 msgid "The default font size is 12px."
 msgstr "默认的字体大小是 12px"
 
@@ -17952,13 +17958,13 @@ msgstr ""
 msgid "There are no enabled two-factor authentication methods."
 msgstr "无法删除双因素身份验证方法"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:210
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:211
 #, fuzzy
 #| msgid "There can be several reasons for the chat to not show up:"
 msgid "There are several possible reasons why the chat won't show up:"
 msgstr "文字對話無法顯示的原因可能有以下幾種："
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:215
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:216
 #, fuzzy
 #| msgid "There are too many people in queue for the chat."
 msgid "There are too many people in the chat queue."
@@ -17989,7 +17995,7 @@ msgstr "沒有客服人員在線上"
 msgid "There is no Twitter app configured."
 msgstr "没有配置 Twitter 应用！"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:213
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:214
 msgid "There is no agent online."
 msgstr "沒有客服人員在線上"
 
@@ -18153,7 +18159,7 @@ msgstr "此类别包括子类别提要："
 msgid "This category is empty"
 msgstr "此类别为空"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:91
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:92
 #, fuzzy
 #| msgid ""
 #| "This class gets added to the button on initialization and gets removed "
@@ -19958,7 +19964,7 @@ msgstr "測試運行成功"
 #: app/assets/javascripts/app/controllers/widget/ticket_bulk_form.coffee:70
 #: app/assets/javascripts/app/models/ticket_article.coffee:12
 #: app/assets/javascripts/app/models/ticket_state.coffee:7
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:229
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:230
 #: app/assets/javascripts/app/views/generic/sla_times.jst.eco:5
 #: app/assets/javascripts/app/views/integration/check_mk.jst.eco:11
 #: app/assets/javascripts/app/views/integration/cti.jst.eco:11
@@ -20501,7 +20507,7 @@ msgstr "上传"
 msgid "Uploading"
 msgstr "上传中"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:136
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:137
 #: app/assets/javascripts/app/views/integration/check_mk.jst.eco:3
 msgid "Usage"
 msgstr "如何使用"
@@ -21165,7 +21171,7 @@ msgstr "微博"
 msgid "Weibo App Credentials"
 msgstr "微博应用凭据"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:67
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:68
 msgid "Welcome Title shown on the closed chat. Can contain HTML."
 msgstr "關閉文字對話中顯示的歡迎標題 可以包含HTML"
 
@@ -21255,7 +21261,7 @@ msgstr "触发该通知的事件."
 msgid "When should the job run?"
 msgstr "何時開始執行任務 ?"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:217
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:218
 msgid ""
 "When you turn on debugging by setting the option §debug§ to §true§ the "
 "reason gets printed to the javascript console."
@@ -21267,11 +21273,11 @@ msgstr ""
 msgid "Where"
 msgstr "當"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:48
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:49
 msgid "Where to append the chat to."
 msgstr "文字對話附加的位置"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:208
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:209
 msgid "Why doesn't the chat show up?"
 msgstr "為什麼文字對話不顯示？"
 
@@ -22425,7 +22431,7 @@ msgstr "天"
 msgid "deactivated"
 msgstr "已取消激活"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:149
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:150
 #: db/seeds/signatures.rb:5
 msgid "default"
 msgstr "默认"
@@ -23621,7 +23627,7 @@ msgstr "转到主页。"
 #: app/assets/javascripts/app/controllers/_ui_element/core_workflow_condition.coffee:65
 #: app/assets/javascripts/app/controllers/_ui_element/object_selector.coffee:52
 #: app/assets/javascripts/app/controllers/chat.coffee:757
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:67
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:68
 msgid "today"
 msgstr "今天"
 

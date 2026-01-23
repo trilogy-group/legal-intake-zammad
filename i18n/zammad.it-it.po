@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zammad\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2026-01-08 22:00+0000\n"
+"PO-Revision-Date: 2026-01-21 22:00+0000\n"
 "Last-Translator: Random <random_r@users.noreply.translations.zammad.org>\n"
 "Language-Team: Italian <https://translations.zammad.org/projects/zammad/"
 "zammad-stable/it/>\n"
@@ -1540,7 +1540,7 @@ msgstr "Aggiungi tag"
 msgid "Add third level heading"
 msgstr "Aggiungi intestazione di terzo livello"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:85
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:86
 msgid "Add this class to a button on your page that should open the chat."
 msgstr "Aggiungi questa classe al pulsante nella tua pagina che apre la chat."
 
@@ -1877,6 +1877,10 @@ msgstr "Si è verificato un errore"
 #: app/frontend/shared/server/apollo/handler/BaseHandler.ts:150
 msgid "An error occured during the operation."
 msgstr "Si è verificato un errore durante l'operazione."
+
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:251
+msgid "An error occurred while fetching the website preview."
+msgstr "Si è verificato un errore durante il recupero dell'anteprima del sito."
 
 #: app/assets/javascripts/app/controllers/_ui_element/object_manager_attribute.coffee:997
 #: app/assets/javascripts/app/views/integration/exchange_last_import.jst.eco:5
@@ -2609,7 +2613,7 @@ msgstr ""
 "Automatically enrich your customers and organizations with fresh, up-to-date "
 "intel. Map data directly to object fields."
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:97
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:98
 msgid ""
 "Automatically loads the chat.css file. If you want to use your own css, just "
 "set it to false."
@@ -2707,7 +2711,7 @@ msgstr "Torna alla pagina precedente"
 msgid "Back to search results"
 msgstr "Torna ai risultati di ricerca"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:98
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:99
 msgid "Background color"
 msgstr "Colore di sfondo"
 
@@ -2928,7 +2932,7 @@ msgstr "CC"
 msgid "CMDB to document complex relations of your network components."
 msgstr "CMDB per documentare relazioni complesse dei componenti della rete."
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:73
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:74
 msgid ""
 "CSS font-size with a unit like 12px, 1.5em. If left undefined it inherits "
 "the font-size of the website."
@@ -3027,7 +3031,7 @@ msgstr "Registro chiamate"
 msgid "Camera"
 msgstr "Fotocamera"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:109
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:110
 msgid "Can be in any CSS color format."
 msgstr "Può essere in qualsiasi formato di colore CSS."
 
@@ -3304,7 +3308,7 @@ msgstr "Identificativo Chat"
 msgid "Chat Session"
 msgstr "Sessioni di chat"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:89
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:90
 msgid "Chat Title"
 msgstr "Titolo Chat"
 
@@ -3317,7 +3321,7 @@ msgstr "Chat chiusa da %s"
 msgid "Chat not answered, automatically set to offline."
 msgstr "Nessuna risposta dalla chat, scollegato automaticamente."
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:381
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:397
 msgid "Chats"
 msgstr "Chat"
 
@@ -4796,7 +4800,7 @@ msgstr "La decrittazione è riuscita."
 
 #: app/assets/javascripts/app/controllers/_ui_element/object_manager_attribute.coffee:239
 #: app/assets/javascripts/app/views/calendar/index.jst.eco:32
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:228
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:229
 #: app/assets/javascripts/app/views/generic/multi_locales.jst.eco:5
 #: app/assets/javascripts/app/views/generic/table_row.jst.eco:78
 #: app/assets/javascripts/app/views/object_manager/attribute/boolean.jst.eco:8
@@ -6046,7 +6050,7 @@ msgstr "Dipartimento"
 #: app/assets/javascripts/app/controllers/translation.coffee:183
 #: app/assets/javascripts/app/views/calendar/holiday_selector.jst.eco:6
 #: app/assets/javascripts/app/views/calendar/index.jst.eco:8
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:230
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:231
 #: app/assets/javascripts/app/views/data_privacy/index.jst.eco:7
 #: app/assets/javascripts/app/views/generic/admin/index.jst.eco:7
 #: app/assets/javascripts/app/views/integration/clearbit.jst.eco:9
@@ -7016,7 +7020,7 @@ msgstr ""
 "Abilita il pulsante per l'autenticazione utente via %s. Il pulsante "
 "rimanderà verso /auth/sso."
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:61
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:62
 msgid "Enables console logging."
 msgstr "Abilita log su console."
 
@@ -7893,7 +7897,7 @@ msgstr "Prima risposta"
 msgid "Fixed Email Accounts"
 msgstr "Account fisso di posta elettronica"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:122
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:123
 msgid "Flat Design"
 msgstr "Design piatto"
 
@@ -7930,7 +7934,7 @@ msgstr "Follow-up possibile"
 msgid "Font Awesome"
 msgstr "Font Awesome"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:113
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:114
 msgid "Font size"
 msgstr "Dimensione del carattere"
 
@@ -8604,7 +8608,7 @@ msgid "Health information can be retrieved as JSON using:"
 msgstr ""
 "Le informazioni di stato possono essere recuperate in formato JSON usando:"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:69
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:70
 msgid "Hello! I need help with your product."
 msgstr "Ciao! Ho bisogno di aiuto con il tuo prodotto."
 
@@ -8709,7 +8713,7 @@ msgstr ""
 msgid "Here you will find the latest activities of your system."
 msgstr "Qui puoi trovare le ultime attività del tuo sistema."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:72
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:73
 msgid "Hi! Which one of our products?"
 msgstr "Ciao! Quale dei nostri prodotti?"
 
@@ -8899,7 +8903,7 @@ msgstr "URL icona"
 msgid "Identifier"
 msgstr "Identificatore"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:36
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:37
 msgid "Identifier of the chat topic."
 msgstr "Identificatore dell'argomento chat."
 
@@ -8921,7 +8925,7 @@ msgstr ""
 "Se un utente viene trovato in due (o più) risorse LDAP, l'ultima a "
 "sincronizzarsi sarà mantenuta."
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:54
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:55
 msgid ""
 "If left empty, the host gets auto-detected - in this case %s. The auto-"
 "detection reads out the host from the <script> tag. If you don't include it "
@@ -8955,7 +8959,7 @@ msgid "If this regex matches, no notification will be sent by the sender."
 msgstr ""
 "Se questa regex corrisponde, nessuna notifica verrà inviata dal mittente."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:178
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:179
 msgid ""
 "If you don't already use jQuery on your website, you can add it like this:"
 msgstr ""
@@ -9009,7 +9013,7 @@ msgstr ""
 "Se vuoi spostare allegati già archiviatida un backend all'altro, è "
 "necessario eseguire il seguente task di rails/rake."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:162
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:163
 msgid ""
 "If you want to open the chat by clicking a button, set the option §show§ to "
 "§false§ and add the class §open-zammad-chat§ to the button."
@@ -9370,7 +9374,7 @@ msgstr "Inserisci il testo dall'articolo della base di conoscenza"
 msgid "Insert text from text module"
 msgstr "Inserisci testo dal modulo di testo"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:138
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:139
 msgid ""
 "Insert the widget code into the source code of every page the chat shall be "
 "visible on. It should be placed at the end of the page's source code before "
@@ -9733,7 +9737,7 @@ msgstr "Gennaio"
 msgid "Job is waiting to get started…"
 msgstr "Il lavoro è in attesa di iniziare…"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:58
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:59
 msgid "John Smith"
 msgstr "Mario Rossi"
 
@@ -10267,7 +10271,7 @@ msgstr "Localizzazione delle modifiche di esecuzione"
 msgid "Location"
 msgstr "Sede"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:103
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:104
 msgid "Location of an external chat.css file."
 msgstr "Posizione di un file chat.css esterno."
 
@@ -10669,7 +10673,7 @@ msgstr "Gestisci le tue impostazioni di notifica"
 msgid "Management"
 msgstr "Gestione"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:161
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:162
 msgid "Manually open chat"
 msgstr "Apri chat manualmente"
 
@@ -12296,7 +12300,7 @@ msgstr ""
 "Uno dei parametri richiesti deve essere compilato, ma non ne è stato trovato "
 "nessuno."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:49
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:50
 #: public/assets/chat/chat.coffee:207
 msgid "Online"
 msgstr "Online"
@@ -12499,7 +12503,7 @@ msgid "Operating system"
 msgstr "Sistema operativo"
 
 #: app/assets/javascripts/app/views/agent_ticket_view/content.jst.eco:7
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:222
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:223
 #: app/assets/javascripts/app/views/channel/form.jst.eco:60
 #: app/assets/javascripts/app/views/object_manager/screens.jst.eco:7
 #: app/assets/javascripts/app/views/profile/calendar_subscriptions.jst.eco:42
@@ -13923,7 +13927,7 @@ msgstr "Rimuovi Tutti i collegamenti ipertestuali"
 msgid "Removes the formatting"
 msgstr "Rimuovi la formattazione"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:79
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:80
 msgid "Removes the shadows for a flat look."
 msgstr "Rimuove le ombre per un aspetto piatto."
 
@@ -14045,7 +14049,7 @@ msgstr "Manca il parametro obbligatorio 'downloadBackendSelected'."
 msgid "Required parameter 'profile' is missing."
 msgstr "Manca il parametro obbligatorio 'profile'."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:177
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:178
 #: app/assets/javascripts/app/views/channel/form.jst.eco:147
 msgid "Requirements"
 msgstr "Requisiti"
@@ -14987,7 +14991,7 @@ msgstr "Seleziona il modulo di generazione del numero di ticket."
 msgid "Select…"
 msgstr "Seleziona…"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:77
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:78
 #: app/assets/javascripts/app/views/customer_chat/chat_window.jst.eco:58
 #: public/assets/chat/views/chat.eco:25
 msgid "Send"
@@ -15406,7 +15410,7 @@ msgstr "Mostra segreto app autenticazione"
 msgid "Show calendar weeks in the picker of date/datetime fields"
 msgstr "Mostra la settimana nel calendario di selezione data"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:149
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:150
 msgid "Show chat automatically"
 msgstr "Mostra la chat automaticamente"
 
@@ -15446,7 +15450,7 @@ msgstr ""
 msgid "Show previous tab"
 msgstr "Mostra scheda precedente"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:42
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:43
 msgid "Show the chat when ready."
 msgstr "Mostra la chat quando pronta."
 
@@ -15488,7 +15492,7 @@ msgstr "Mostra ticket di riferimento"
 msgid "Shown records in caller log."
 msgstr "Mostra righe dal log chiamante."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:94
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:95
 msgid "Shown when the chat is closed."
 msgstr "Mostrato quando la chat è chiusa."
 
@@ -16629,7 +16633,7 @@ msgstr "Non è stato possibile selezionare l'avatar."
 msgid "The avatar could not be uploaded."
 msgstr "Impossibile caricare l'avatar."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:212
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:213
 msgid ""
 "The browser is outdated. It does not support WebSocket - the technology we "
 "use for the chat."
@@ -16742,11 +16746,11 @@ msgstr "Non sono stati trovati i certificati per %s."
 msgid "The changes could not be saved."
 msgstr "Non è stato possibile salvare le modifiche."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:214
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:215
 msgid "The chat is turned off."
 msgstr "La chat è disattivata."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:150
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:151
 msgid ""
 "The chat will show up once the connection to the server got established and "
 "if there is an operator online to chat with."
@@ -16819,7 +16823,7 @@ msgstr ""
 "\"esempio.it/supporto\"). Poi, segui le istruzioni sotto \"Configurazione "
 "del server web\" per completare il processo."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:118
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:119
 msgid "The default font size is 12px."
 msgstr "La dimensione predefinita del font è 12px."
 
@@ -17808,11 +17812,11 @@ msgstr "Non sono presenti provider di autenticazione di terze parti abilitati."
 msgid "There are no enabled two-factor authentication methods."
 msgstr "Non ci sono metodi di autenticazione a due fattori attivi."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:210
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:211
 msgid "There are several possible reasons why the chat won't show up:"
 msgstr "Possono esserci diverse ragioni per cui la chat non compaia:"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:215
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:216
 msgid "There are too many people in the chat queue."
 msgstr "Ci sono troppe persone in coda per la chat."
 
@@ -17837,7 +17841,7 @@ msgstr "Nessuna app Google configurata."
 msgid "There is no Twitter app configured."
 msgstr "Nessuna app Twitter configurata."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:213
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:214
 msgid "There is no agent online."
 msgstr "Nessun operatore in linea."
 
@@ -17973,7 +17977,7 @@ msgstr "Flussi per questa categoria e sottocategorie associate:"
 msgid "This category is empty"
 msgstr "Questa categoria è vuota"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:91
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:92
 msgid ""
 "This class gets added to the button on initialization and will be removed "
 "once the chat connection is established."
@@ -19174,7 +19178,7 @@ msgstr "Passa tra modalità AM/PM"
 
 #: app/frontend/apps/desktop/components/Form/fields/FieldPermissions/FieldPermissionsInput.vue:164
 msgid "Toggle Group"
-msgstr "Attiva gruppo"
+msgstr "Attiva/disattiva gruppo"
 
 #: app/assets/javascripts/app/controllers/_plugin/keyboard_shortcuts.coffee:443
 msgid "Toggle dark mode"
@@ -19545,7 +19549,7 @@ msgstr "Il metodo a due fattori è stato configurato correttamente."
 #: app/assets/javascripts/app/controllers/widget/ticket_bulk_form.coffee:70
 #: app/assets/javascripts/app/models/ticket_article.coffee:12
 #: app/assets/javascripts/app/models/ticket_state.coffee:7
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:229
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:230
 #: app/assets/javascripts/app/views/generic/sla_times.jst.eco:5
 #: app/assets/javascripts/app/views/integration/check_mk.jst.eco:11
 #: app/assets/javascripts/app/views/integration/cti.jst.eco:11
@@ -20019,7 +20023,7 @@ msgstr "Carica chiave"
 msgid "Uploading"
 msgstr "Caricamento"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:136
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:137
 #: app/assets/javascripts/app/views/integration/check_mk.jst.eco:3
 msgid "Usage"
 msgstr "Utilizzo"
@@ -20624,7 +20628,7 @@ msgstr "Weibo"
 msgid "Weibo App Credentials"
 msgstr "Credenziali app Weibo"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:67
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:68
 msgid "Welcome Title shown on the closed chat. Can contain HTML."
 msgstr "Titolo di benvenuto mostrato nella chat chiusa. Può contenere HTML."
 
@@ -20709,7 +20713,7 @@ msgstr "Quanto la notifica viene inviata."
 msgid "When should the job run?"
 msgstr "Quando dovrebbe essere eseguita l'attività?"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:217
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:218
 msgid ""
 "When you turn on debugging by setting the option §debug§ to §true§ the "
 "reason gets printed to the javascript console."
@@ -20721,11 +20725,11 @@ msgstr ""
 msgid "Where"
 msgstr "Dove"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:48
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:49
 msgid "Where to append the chat to."
 msgstr "Dove accodare la chat."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:208
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:209
 msgid "Why doesn't the chat show up?"
 msgstr "Perché non compare la chat?"
 
@@ -21823,7 +21827,7 @@ msgstr "giorni"
 msgid "deactivated"
 msgstr "disattivatto"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:149
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:150
 #: db/seeds/signatures.rb:5
 msgid "default"
 msgstr "predefinito"
@@ -22886,7 +22890,7 @@ msgstr "per andare alla homepage."
 #: app/assets/javascripts/app/controllers/_ui_element/core_workflow_condition.coffee:65
 #: app/assets/javascripts/app/controllers/_ui_element/object_selector.coffee:52
 #: app/assets/javascripts/app/controllers/chat.coffee:757
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:67
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:68
 msgid "today"
 msgstr "oggi"
 

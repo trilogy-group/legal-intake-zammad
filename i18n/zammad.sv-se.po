@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zammad\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-12-03 12:41+0000\n"
-"Last-Translator: chrand818 <can@telenabler.com>\n"
+"PO-Revision-Date: 2026-01-20 22:00+0000\n"
+"Last-Translator: Louise Forsen <louise.forsen@entryevent.se>\n"
 "Language-Team: Swedish <https://translations.zammad.org/projects/zammad/"
 "zammad-stable/sv/>\n"
 "Language: sv-se\n"
@@ -1517,7 +1517,7 @@ msgstr "Lägg till tagg"
 msgid "Add third level heading"
 msgstr "Lägg till underrubrik"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:85
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:86
 msgid "Add this class to a button on your page that should open the chat."
 msgstr "Lägg till denna css klass på en knapp på sidan som ska öppna chatten."
 
@@ -1846,6 +1846,12 @@ msgstr "Ett fel inträffade"
 
 #: app/frontend/shared/server/apollo/handler/BaseHandler.ts:150
 msgid "An error occured during the operation."
+msgstr "Det inträffade ett fel under åtgärden."
+
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:251
+#, fuzzy
+#| msgid "An error occured during the operation."
+msgid "An error occurred while fetching the website preview."
 msgstr "Det inträffade ett fel under åtgärden."
 
 #: app/assets/javascripts/app/controllers/_ui_element/object_manager_attribute.coffee:997
@@ -2574,7 +2580,7 @@ msgstr ""
 "Berika automatiskt dina kunder och organisationer, med up-to-date "
 "information. Mappa data automatiskt till objektfält."
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:97
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:98
 msgid ""
 "Automatically loads the chat.css file. If you want to use your own css, just "
 "set it to false."
@@ -2672,7 +2678,7 @@ msgstr "Tillbaka till föregående sida"
 msgid "Back to search results"
 msgstr "Tillbaka till sökresultat"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:98
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:99
 msgid "Background color"
 msgstr "Bakgrundsfärg"
 
@@ -2892,7 +2898,7 @@ msgid "CMDB to document complex relations of your network components."
 msgstr ""
 "CMDB för att dokumentera komplexa relationer för dina nätverkskomponenter."
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:73
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:74
 msgid ""
 "CSS font-size with a unit like 12px, 1.5em. If left undefined it inherits "
 "the font-size of the website."
@@ -2991,7 +2997,7 @@ msgstr "Samtalslogg"
 msgid "Camera"
 msgstr "Kamera"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:109
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:110
 msgid "Can be in any CSS color format."
 msgstr "Kan vara i ett CSS färgformat."
 
@@ -3263,7 +3269,7 @@ msgstr "Chatt-id"
 msgid "Chat Session"
 msgstr "Chatt-session"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:89
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:90
 msgid "Chat Title"
 msgstr "Chatt-titel"
 
@@ -3276,7 +3282,7 @@ msgstr "Chatt stängd av %s"
 msgid "Chat not answered, automatically set to offline."
 msgstr "Chatt ej besvarad, sätter automatiskt till offline."
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:381
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:397
 msgid "Chats"
 msgstr "Chattar"
 
@@ -4736,7 +4742,7 @@ msgstr "Dekrypteringen lyckades."
 
 #: app/assets/javascripts/app/controllers/_ui_element/object_manager_attribute.coffee:239
 #: app/assets/javascripts/app/views/calendar/index.jst.eco:32
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:228
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:229
 #: app/assets/javascripts/app/views/generic/multi_locales.jst.eco:5
 #: app/assets/javascripts/app/views/generic/table_row.jst.eco:78
 #: app/assets/javascripts/app/views/object_manager/attribute/boolean.jst.eco:8
@@ -5012,8 +5018,8 @@ msgid ""
 "Defines groups for which a customer can create tickets via web interface. No "
 "selection means all groups are available."
 msgstr ""
-"Definierar grupper för vilka grupper en kund kan skapa ärenden för via "
-"webbgränssnitt. Inget val betyder att alla grupper är tillgängliga."
+"Lägg upp val för vilka grupper en kund kan skapa ärenden åt via "
+"webbgränssnittet. Inga val betyder att alla grupper är tillgängliga."
 
 #: db/seeds/settings.rb:3247
 msgid ""
@@ -5962,7 +5968,7 @@ msgstr "Avdelning"
 #: app/assets/javascripts/app/controllers/translation.coffee:183
 #: app/assets/javascripts/app/views/calendar/holiday_selector.jst.eco:6
 #: app/assets/javascripts/app/views/calendar/index.jst.eco:8
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:230
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:231
 #: app/assets/javascripts/app/views/data_privacy/index.jst.eco:7
 #: app/assets/javascripts/app/views/generic/admin/index.jst.eco:7
 #: app/assets/javascripts/app/views/integration/clearbit.jst.eco:9
@@ -6925,7 +6931,7 @@ msgstr ""
 "Aktiverar knappen för användarautentisering via %s. Knappen omdirigerar "
 "till /auth/sso vid användarinteraktion."
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:61
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:62
 msgid "Enables console logging."
 msgstr "Aktiverar konsolloggning."
 
@@ -7794,7 +7800,7 @@ msgstr "Första svar"
 msgid "Fixed Email Accounts"
 msgstr "Fixerade e-postkonton"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:122
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:123
 msgid "Flat Design"
 msgstr "Platt design"
 
@@ -7831,7 +7837,7 @@ msgstr "Uppföljning möjlig"
 msgid "Font Awesome"
 msgstr "Font Awesome"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:113
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:114
 msgid "Font size"
 msgstr "Fontstorlek"
 
@@ -8497,7 +8503,7 @@ msgstr "Hälsocheck"
 msgid "Health information can be retrieved as JSON using:"
 msgstr "Hälsoinformation kan hämtas som JSON med:"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:69
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:70
 msgid "Hello! I need help with your product."
 msgstr "Hej! Jag behöver hjälp med din produkt."
 
@@ -8601,7 +8607,7 @@ msgstr ""
 msgid "Here you will find the latest activities of your system."
 msgstr "Här hittar du de senaste aktiviteterna i ditt system."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:72
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:73
 msgid "Hi! Which one of our products?"
 msgstr "Hej! Vilken av våra produkter?"
 
@@ -8793,7 +8799,7 @@ msgstr "Ikon-URL"
 msgid "Identifier"
 msgstr "Identifierare"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:36
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:37
 msgid "Identifier of the chat topic."
 msgstr "Identifierare för chatt-ämnet."
 
@@ -8814,7 +8820,7 @@ msgstr ""
 "Om en användare finns i två (eller fler) konfigurerade LDAP-källor, kommer "
 "den senaste synkroniseringen att användas."
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:54
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:55
 msgid ""
 "If left empty, the host gets auto-detected - in this case %s. The auto-"
 "detection reads out the host from the <script> tag. If you don't include it "
@@ -8847,7 +8853,7 @@ msgid "If this regex matches, no notification will be sent by the sender."
 msgstr ""
 "Om denna regex matchar, kommer ingen notifikation att skickas av avsändaren."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:178
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:179
 msgid ""
 "If you don't already use jQuery on your website, you can add it like this:"
 msgstr ""
@@ -8901,7 +8907,7 @@ msgstr ""
 "Om du vill flytta redan lagrade bilagor från en backend till en annan måste "
 "du utföra följande via rails/rake uppgift."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:162
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:163
 msgid ""
 "If you want to open the chat by clicking a button, set the option §show§ to "
 "§false§ and add the class §open-zammad-chat§ to the button."
@@ -9263,7 +9269,7 @@ msgstr "Infoga text från kunskapsbasartikel"
 msgid "Insert text from text module"
 msgstr "Infoga text från textmodul"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:138
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:139
 msgid ""
 "Insert the widget code into the source code of every page the chat shall be "
 "visible on. It should be placed at the end of the page's source code before "
@@ -9619,7 +9625,7 @@ msgstr "januari"
 msgid "Job is waiting to get started…"
 msgstr "Jobbet väntar på att startas…"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:58
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:59
 msgid "John Smith"
 msgstr "John Smith"
 
@@ -10148,7 +10154,7 @@ msgstr "Lokalisering av åtgärdsändringar"
 msgid "Location"
 msgstr "Plats"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:103
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:104
 msgid "Location of an external chat.css file."
 msgstr "Plats för en extern chat.css-fil."
 
@@ -10549,7 +10555,7 @@ msgstr "Hantera dina notifieringsinställningar"
 msgid "Management"
 msgstr "Administration"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:161
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:162
 msgid "Manually open chat"
 msgstr "Öppna chatt manuellt"
 
@@ -12172,7 +12178,7 @@ msgstr "När den är klar …"
 msgid "One of the required parameters must be provided, but none was found."
 msgstr "En av de obligatoriska parametrarna måste anges, men ingen hittades."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:49
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:50
 #: public/assets/chat/chat.coffee:207
 msgid "Online"
 msgstr "Online"
@@ -12374,7 +12380,7 @@ msgid "Operating system"
 msgstr "Operativsystem"
 
 #: app/assets/javascripts/app/views/agent_ticket_view/content.jst.eco:7
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:222
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:223
 #: app/assets/javascripts/app/views/channel/form.jst.eco:60
 #: app/assets/javascripts/app/views/object_manager/screens.jst.eco:7
 #: app/assets/javascripts/app/views/profile/calendar_subscriptions.jst.eco:42
@@ -13792,7 +13798,7 @@ msgstr "Tar bort alla länkar"
 msgid "Removes the formatting"
 msgstr "Tar bort formatering"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:79
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:80
 msgid "Removes the shadows for a flat look."
 msgstr "Tar bort skuggorna för ett plant utseende."
 
@@ -13914,7 +13920,7 @@ msgstr "Den obligatoriska parametern \"downloadBackendSelected\" saknas."
 msgid "Required parameter 'profile' is missing."
 msgstr "Den obligatoriska parametern \"profil\" saknas."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:177
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:178
 #: app/assets/javascripts/app/views/channel/form.jst.eco:147
 msgid "Requirements"
 msgstr "Krav"
@@ -14849,7 +14855,7 @@ msgstr "Väljer generatormodulen för ärendenummer."
 msgid "Select…"
 msgstr "Välj …"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:77
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:78
 #: app/assets/javascripts/app/views/customer_chat/chat_window.jst.eco:58
 #: public/assets/chat/views/chat.eco:25
 msgid "Send"
@@ -15264,7 +15270,7 @@ msgstr "Visa authenticator app secret"
 msgid "Show calendar weeks in the picker of date/datetime fields"
 msgstr "Visa kalenderveckor i datum/datumtidsfält"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:149
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:150
 msgid "Show chat automatically"
 msgstr "Visa chatten automatiskt"
 
@@ -15304,7 +15310,7 @@ msgstr ""
 msgid "Show previous tab"
 msgstr "Visa föregående flik"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:42
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:43
 msgid "Show the chat when ready."
 msgstr "Visa chatten när den är tillgänglig."
 
@@ -15344,7 +15350,7 @@ msgstr "Visa spårade ärenden"
 msgid "Shown records in caller log."
 msgstr "Visade poster i samtalslog."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:94
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:95
 msgid "Shown when the chat is closed."
 msgstr "Visas när chatten är stängd."
 
@@ -16474,7 +16480,7 @@ msgstr "Avataren kunde inte väljas."
 msgid "The avatar could not be uploaded."
 msgstr "Avataren kunde inte läsas in."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:212
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:213
 msgid ""
 "The browser is outdated. It does not support WebSocket - the technology we "
 "use for the chat."
@@ -16584,11 +16590,11 @@ msgstr "Certifikaten för %s hittades inte."
 msgid "The changes could not be saved."
 msgstr "Ändringarna kunde inte sparas."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:214
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:215
 msgid "The chat is turned off."
 msgstr "Chatten är avstängd."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:150
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:151
 msgid ""
 "The chat will show up once the connection to the server got established and "
 "if there is an operator online to chat with."
@@ -16658,7 +16664,7 @@ msgstr ""
 "support\"). Följ sedan anvisningarna under \"Webbserverkonfiguration\" för "
 "att slutföra processen."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:118
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:119
 msgid "The default font size is 12px."
 msgstr "Standard teckenstorlek är 12px."
 
@@ -17621,11 +17627,11 @@ msgstr "Det finns inga aktiverade tredjepartsautentiseringleverantörer ."
 msgid "There are no enabled two-factor authentication methods."
 msgstr "Det finns inga aktiverade metoder för tvåfaktorsautentisering."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:210
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:211
 msgid "There are several possible reasons why the chat won't show up:"
 msgstr "Det kan finnas flera anledningar till att chatten inte visas:"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:215
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:216
 msgid "There are too many people in the chat queue."
 msgstr "Det är för många personer i kö för chatt."
 
@@ -17650,7 +17656,7 @@ msgstr "Inga Google-appar är konfigurerade."
 msgid "There is no Twitter app configured."
 msgstr "Ingen twitter-app är konfigurerad."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:213
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:214
 msgid "There is no agent online."
 msgstr "Inga agenter är online."
 
@@ -17785,7 +17791,7 @@ msgstr "Denna kategori inkluderar underkategorier feed:"
 msgid "This category is empty"
 msgstr "Denna kategori är tom"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:91
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:92
 msgid ""
 "This class gets added to the button on initialization and will be removed "
 "once the chat connection is established."
@@ -19343,7 +19349,7 @@ msgstr "Två-faktorsmetoden har konfigurerats."
 #: app/assets/javascripts/app/controllers/widget/ticket_bulk_form.coffee:70
 #: app/assets/javascripts/app/models/ticket_article.coffee:12
 #: app/assets/javascripts/app/models/ticket_state.coffee:7
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:229
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:230
 #: app/assets/javascripts/app/views/generic/sla_times.jst.eco:5
 #: app/assets/javascripts/app/views/integration/check_mk.jst.eco:11
 #: app/assets/javascripts/app/views/integration/cti.jst.eco:11
@@ -19816,7 +19822,7 @@ msgstr "Ladda upp nyckel"
 msgid "Uploading"
 msgstr "Laddar upp"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:136
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:137
 #: app/assets/javascripts/app/views/integration/check_mk.jst.eco:3
 msgid "Usage"
 msgstr "Användning"
@@ -20421,7 +20427,7 @@ msgstr "Weibo"
 msgid "Weibo App Credentials"
 msgstr "Weibo App Autentiseringsuppgifter"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:67
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:68
 msgid "Welcome Title shown on the closed chat. Can contain HTML."
 msgstr "Välkomst Titel som visas på den stängda chatten. Kan innehålla HTML."
 
@@ -20507,7 +20513,7 @@ msgstr "När notifikationer skickas."
 msgid "When should the job run?"
 msgstr "När ska jobbet köras?"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:217
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:218
 msgid ""
 "When you turn on debugging by setting the option §debug§ to §true§ the "
 "reason gets printed to the javascript console."
@@ -20519,11 +20525,11 @@ msgstr ""
 msgid "Where"
 msgstr "Var"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:48
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:49
 msgid "Where to append the chat to."
 msgstr "Var du vill lägga till chatten."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:208
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:209
 msgid "Why doesn't the chat show up?"
 msgstr "Varför visas inte chatten?"
 
@@ -21606,7 +21612,7 @@ msgstr "dagar"
 msgid "deactivated"
 msgstr "inaktiverad"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:149
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:150
 #: db/seeds/signatures.rb:5
 msgid "default"
 msgstr "standard"
@@ -22671,7 +22677,7 @@ msgstr "för att gå till startsidan."
 #: app/assets/javascripts/app/controllers/_ui_element/core_workflow_condition.coffee:65
 #: app/assets/javascripts/app/controllers/_ui_element/object_selector.coffee:52
 #: app/assets/javascripts/app/controllers/chat.coffee:757
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:67
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:68
 msgid "today"
 msgstr "idag"
 

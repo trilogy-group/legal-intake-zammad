@@ -1508,7 +1508,7 @@ msgstr "タグを追加"
 msgid "Add third level heading"
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:85
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:86
 msgid "Add this class to a button on your page that should open the chat."
 msgstr "Add this class to a button on your page that should open the chat."
 
@@ -1832,6 +1832,12 @@ msgstr ""
 #, fuzzy
 #| msgid "Unable to verify email. Please contact your administrator."
 msgid "An error occured during the operation."
+msgstr "メールを確認できません。 管理者に問い合わせて下さい。"
+
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:251
+#, fuzzy
+#| msgid "Unable to verify email. Please contact your administrator."
+msgid "An error occurred while fetching the website preview."
 msgstr "メールを確認できません。 管理者に問い合わせて下さい。"
 
 #: app/assets/javascripts/app/controllers/_ui_element/object_manager_attribute.coffee:997
@@ -2620,7 +2626,7 @@ msgstr ""
 "新鮮で最新の情報で顧客や組織を自動的に豊かにします。データをオブジェクト"
 "フィールドに直接マッピングします。"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:97
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:98
 msgid ""
 "Automatically loads the chat.css file. If you want to use your own css, just "
 "set it to false."
@@ -2728,7 +2734,7 @@ msgstr "マイビューに戻る"
 msgid "Back to search results"
 msgstr "検索結果に戻る"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:98
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:99
 msgid "Background color"
 msgstr "背景色"
 
@@ -2957,7 +2963,7 @@ msgstr ""
 "ネットワークコンポーネントの複雑な関係を情報管理できるようにする構成管理デー"
 "タベース(CMDB)"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:73
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:74
 #, fuzzy
 #| msgid ""
 #| "CSS font-size with a unit like 12px, 1.5em. If left to undefined it "
@@ -3074,7 +3080,7 @@ msgstr "電話履歴"
 msgid "Camera"
 msgstr "カメラ"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:109
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:110
 msgid "Can be in any CSS color format."
 msgstr "どのようなCSS色フォーマットでも可。"
 
@@ -3384,7 +3390,7 @@ msgstr "チャット"
 msgid "Chat Session"
 msgstr "セッション"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:89
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:90
 msgid "Chat Title"
 msgstr "チャットタイトル"
 
@@ -3397,7 +3403,7 @@ msgstr ""
 msgid "Chat not answered, automatically set to offline."
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:381
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:397
 msgid "Chats"
 msgstr ""
 
@@ -4972,7 +4978,7 @@ msgstr "接続テスト成功"
 
 #: app/assets/javascripts/app/controllers/_ui_element/object_manager_attribute.coffee:239
 #: app/assets/javascripts/app/views/calendar/index.jst.eco:32
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:228
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:229
 #: app/assets/javascripts/app/views/generic/multi_locales.jst.eco:5
 #: app/assets/javascripts/app/views/generic/table_row.jst.eco:78
 #: app/assets/javascripts/app/views/object_manager/attribute/boolean.jst.eco:8
@@ -6163,7 +6169,7 @@ msgstr "部署"
 #: app/assets/javascripts/app/controllers/translation.coffee:183
 #: app/assets/javascripts/app/views/calendar/holiday_selector.jst.eco:6
 #: app/assets/javascripts/app/views/calendar/index.jst.eco:8
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:230
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:231
 #: app/assets/javascripts/app/views/data_privacy/index.jst.eco:7
 #: app/assets/javascripts/app/views/generic/admin/index.jst.eco:7
 #: app/assets/javascripts/app/views/integration/clearbit.jst.eco:9
@@ -7195,7 +7201,7 @@ msgid ""
 "auth/sso on user interaction."
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:61
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:62
 msgid "Enables console logging."
 msgstr "コンソールログを有効にする。"
 
@@ -8127,7 +8133,7 @@ msgstr "最初の応答"
 msgid "Fixed Email Accounts"
 msgstr "固定メールアカウント"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:122
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:123
 msgid "Flat Design"
 msgstr "フラットデザイン"
 
@@ -8166,7 +8172,7 @@ msgstr ""
 msgid "Font Awesome"
 msgstr ""
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:113
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:114
 msgid "Font size"
 msgstr "フォントサイズ"
 
@@ -8915,7 +8921,7 @@ msgstr "健康チェック"
 msgid "Health information can be retrieved as JSON using:"
 msgstr "健康上の情報は、JSONで取得可能"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:69
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:70
 msgid "Hello! I need help with your product."
 msgstr ""
 
@@ -9019,7 +9025,7 @@ msgstr ""
 msgid "Here you will find the latest activities of your system."
 msgstr "ここではあなたのシステムの最近の活動を見ることができます。"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:72
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:73
 msgid "Hi! Which one of our products?"
 msgstr ""
 
@@ -9210,7 +9216,7 @@ msgstr "アイコンセット"
 msgid "Identifier"
 msgstr "アカウントが確認されていません"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:36
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:37
 #, fuzzy
 #| msgid "Identifier of the chat-topic."
 msgid "Identifier of the chat topic."
@@ -9232,7 +9238,7 @@ msgid ""
 "synchronisation will win."
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:54
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:55
 msgid ""
 "If left empty, the host gets auto-detected - in this case %s. The auto-"
 "detection reads out the host from the <script> tag. If you don't include it "
@@ -9263,7 +9269,7 @@ msgstr ""
 msgid "If this regex matches, no notification will be sent by the sender."
 msgstr "正規表現にマッチした場合、通知されません。"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:178
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:179
 #, fuzzy
 #| msgid ""
 #| "Zammad Chat requires jQuery. If you don't already use it on your website "
@@ -9319,7 +9325,7 @@ msgstr ""
 "バックエンドから別のバックエンドにすでに保存された添付物を移動するには、次を"
 "コンソールから実行してください。"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:162
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:163
 #, fuzzy
 #| msgid ""
 #| "If you want to open the chat by the press of a button set the option "
@@ -9716,7 +9722,7 @@ msgstr "ナレッジベースの削除"
 msgid "Insert text from text module"
 msgstr "次のテキストモジュール"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:138
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:139
 msgid ""
 "Insert the widget code into the source code of every page the chat shall be "
 "visible on. It should be placed at the end of the page's source code before "
@@ -10073,7 +10079,7 @@ msgstr "1月"
 msgid "Job is waiting to get started…"
 msgstr ""
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:58
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:59
 msgid "John Smith"
 msgstr "John Smith"
 
@@ -10673,7 +10679,7 @@ msgstr "バルクアクションが実行されました！"
 msgid "Location"
 msgstr "ロケーション"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:103
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:104
 msgid "Location of an external chat.css file."
 msgstr "chat.cssの外部ファイルの保存先"
 
@@ -11161,7 +11167,7 @@ msgstr "通知設定を管理"
 msgid "Management"
 msgstr "管理"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:161
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:162
 msgid "Manually open chat"
 msgstr "手動でチャット開始"
 
@@ -12964,7 +12970,7 @@ msgstr "完了次第"
 msgid "One of the required parameters must be provided, but none was found."
 msgstr ""
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:49
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:50
 #: public/assets/chat/chat.coffee:207
 msgid "Online"
 msgstr "オンライン"
@@ -13201,7 +13207,7 @@ msgid "Operating system"
 msgstr ""
 
 #: app/assets/javascripts/app/views/agent_ticket_view/content.jst.eco:7
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:222
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:223
 #: app/assets/javascripts/app/views/channel/form.jst.eco:60
 #: app/assets/javascripts/app/views/object_manager/screens.jst.eco:7
 #: app/assets/javascripts/app/views/profile/calendar_subscriptions.jst.eco:42
@@ -14793,7 +14799,7 @@ msgstr "ハイパーリンクを全て削除"
 msgid "Removes the formatting"
 msgstr "フォーマットを解除"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:79
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:80
 msgid "Removes the shadows for a flat look."
 msgstr ""
 
@@ -14933,7 +14939,7 @@ msgstr ""
 msgid "Required parameter 'profile' is missing."
 msgstr ""
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:177
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:178
 #: app/assets/javascripts/app/views/channel/form.jst.eco:147
 msgid "Requirements"
 msgstr "要件"
@@ -15929,7 +15935,7 @@ msgstr "チケット番号作成モジュールを選択してください。"
 msgid "Select…"
 msgstr "テンプレートを選択"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:77
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:78
 #: app/assets/javascripts/app/views/customer_chat/chat_window.jst.eco:58
 #: public/assets/chat/views/chat.eco:25
 msgid "Send"
@@ -16408,7 +16414,7 @@ msgstr "%sで認証"
 msgid "Show calendar weeks in the picker of date/datetime fields"
 msgstr ""
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:149
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:150
 msgid "Show chat automatically"
 msgstr ""
 
@@ -16452,7 +16458,7 @@ msgstr ""
 msgid "Show previous tab"
 msgstr "前のタブ"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:42
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:43
 msgid "Show the chat when ready."
 msgstr "Show the chat when ready."
 
@@ -16504,7 +16510,7 @@ msgstr "概要"
 msgid "Shown records in caller log."
 msgstr ""
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:94
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:95
 msgid "Shown when the chat is closed."
 msgstr "チャットを閉じたときに、表示されます。"
 
@@ -17761,7 +17767,7 @@ msgstr "%s オブジェクトを更新。"
 msgid "The avatar could not be uploaded."
 msgstr "%s オブジェクトを作成。"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:212
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:213
 msgid ""
 "The browser is outdated. It does not support WebSocket - the technology we "
 "use for the chat."
@@ -17881,11 +17887,11 @@ msgstr "通知音"
 msgid "The changes could not be saved."
 msgstr ""
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:214
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:215
 msgid "The chat is turned off."
 msgstr "チャットはオフです。"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:150
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:151
 #, fuzzy
 #| msgid ""
 #| "The chat will show up once the connection to the server got established "
@@ -17951,7 +17957,7 @@ msgid ""
 "process."
 msgstr ""
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:118
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:119
 msgid "The default font size is 12px."
 msgstr "デフォルトのフォントサイズは 12px です。"
 
@@ -18992,13 +18998,13 @@ msgstr ""
 msgid "There are no enabled two-factor authentication methods."
 msgstr "認証"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:210
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:211
 #, fuzzy
 #| msgid "There can be several reasons for the chat to not show up:"
 msgid "There are several possible reasons why the chat won't show up:"
 msgstr "チャットが表示されない理由は、いくつかあります:"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:215
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:216
 #, fuzzy
 #| msgid "There are too many people in queue for the chat."
 msgid "There are too many people in the chat queue."
@@ -19029,7 +19035,7 @@ msgstr "オンラインのエージェントはいません。"
 msgid "There is no Twitter app configured."
 msgstr "未設定"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:213
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:214
 msgid "There is no agent online."
 msgstr "オンラインのエージェントはいません。"
 
@@ -19182,7 +19188,7 @@ msgstr ""
 msgid "This category is empty"
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:91
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:92
 msgid ""
 "This class gets added to the button on initialization and will be removed "
 "once the chat connection is established."
@@ -20827,7 +20833,7 @@ msgstr "アップデートができました！"
 #: app/assets/javascripts/app/controllers/widget/ticket_bulk_form.coffee:70
 #: app/assets/javascripts/app/models/ticket_article.coffee:12
 #: app/assets/javascripts/app/models/ticket_state.coffee:7
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:229
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:230
 #: app/assets/javascripts/app/views/generic/sla_times.jst.eco:5
 #: app/assets/javascripts/app/views/integration/check_mk.jst.eco:11
 #: app/assets/javascripts/app/views/integration/cti.jst.eco:11
@@ -21271,7 +21277,7 @@ msgstr "アップロード"
 msgid "Uploading"
 msgstr "アップロード中"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:136
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:137
 #: app/assets/javascripts/app/views/integration/check_mk.jst.eco:3
 msgid "Usage"
 msgstr "利用"
@@ -21911,7 +21917,7 @@ msgstr ""
 msgid "Weibo App Credentials"
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:67
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:68
 msgid "Welcome Title shown on the closed chat. Can contain HTML."
 msgstr ""
 
@@ -21999,7 +22005,7 @@ msgstr "通知が送信された場合。"
 msgid "When should the job run?"
 msgstr "いつジョブを実行しますか？"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:217
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:218
 msgid ""
 "When you turn on debugging by setting the option §debug§ to §true§ the "
 "reason gets printed to the javascript console."
@@ -22011,11 +22017,11 @@ msgstr ""
 msgid "Where"
 msgstr "場所"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:48
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:49
 msgid "Where to append the chat to."
 msgstr " チャットを追加する場所。"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:208
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:209
 msgid "Why doesn't the chat show up?"
 msgstr "なぜチャットが表示されないのですか？"
 
@@ -23128,7 +23134,7 @@ msgstr "日"
 msgid "deactivated"
 msgstr "非アクティブ化済"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:149
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:150
 #: db/seeds/signatures.rb:5
 msgid "default"
 msgstr ""
@@ -24310,7 +24316,7 @@ msgstr ""
 #: app/assets/javascripts/app/controllers/_ui_element/core_workflow_condition.coffee:65
 #: app/assets/javascripts/app/controllers/_ui_element/object_selector.coffee:52
 #: app/assets/javascripts/app/controllers/chat.coffee:757
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:67
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:68
 msgid "today"
 msgstr "今日"
 

@@ -1536,7 +1536,7 @@ msgstr "Etiket ekle"
 msgid "Add third level heading"
 msgstr "Üçüncü düzey başlık ekle"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:85
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:86
 msgid "Add this class to a button on your page that should open the chat."
 msgstr "Bu sınıfı sayfanızda sohbeti açacak bir düğmeye ekleyin."
 
@@ -1867,6 +1867,12 @@ msgstr "Bir hata oluştu"
 
 #: app/frontend/shared/server/apollo/handler/BaseHandler.ts:150
 msgid "An error occured during the operation."
+msgstr "İşlem sırasında bir hata oluştu."
+
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:251
+#, fuzzy
+#| msgid "An error occured during the operation."
+msgid "An error occurred while fetching the website preview."
 msgstr "İşlem sırasında bir hata oluştu."
 
 #: app/assets/javascripts/app/controllers/_ui_element/object_manager_attribute.coffee:997
@@ -2598,7 +2604,7 @@ msgstr ""
 "Müşterilerinizi ve organizasyonlarınızı yeni, güncel bilgilerle otomatik "
 "olarak zenginleştirin. Verileri doğrudan nesne alanlarıyla eşleyin."
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:97
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:98
 msgid ""
 "Automatically loads the chat.css file. If you want to use your own css, just "
 "set it to false."
@@ -2696,7 +2702,7 @@ msgstr "Önceki sayfaya geri dön"
 msgid "Back to search results"
 msgstr "Arama sonuçlarına geri dön"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:98
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:99
 msgid "Background color"
 msgstr "Arkaplan rengi"
 
@@ -2918,7 +2924,7 @@ msgstr "CC"
 msgid "CMDB to document complex relations of your network components."
 msgstr "Ağ bileşenlerinizin karmaşık ilişkilerini belgelemek için CMDB."
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:73
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:74
 msgid ""
 "CSS font-size with a unit like 12px, 1.5em. If left undefined it inherits "
 "the font-size of the website."
@@ -3017,7 +3023,7 @@ msgstr "Arayan günlüğü"
 msgid "Camera"
 msgstr "Kamera"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:109
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:110
 msgid "Can be in any CSS color format."
 msgstr "Herhangi bir CSS renk formatında olabilir."
 
@@ -3291,7 +3297,7 @@ msgstr "Sohbet Kimliği"
 msgid "Chat Session"
 msgstr "Sohbet Oturumu"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:89
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:90
 msgid "Chat Title"
 msgstr "Sohbet Başlığı"
 
@@ -3304,7 +3310,7 @@ msgstr "Sohbet %s tarafından kapatıldı"
 msgid "Chat not answered, automatically set to offline."
 msgstr "Sohbet yanıtlanmadı, otomatik olarak çevrimdışı olarak ayarlandı."
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:381
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:397
 msgid "Chats"
 msgstr "Sohbetler"
 
@@ -4772,7 +4778,7 @@ msgstr "Şifre çözme başarılı oldu."
 
 #: app/assets/javascripts/app/controllers/_ui_element/object_manager_attribute.coffee:239
 #: app/assets/javascripts/app/views/calendar/index.jst.eco:32
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:228
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:229
 #: app/assets/javascripts/app/views/generic/multi_locales.jst.eco:5
 #: app/assets/javascripts/app/views/generic/table_row.jst.eco:78
 #: app/assets/javascripts/app/views/object_manager/attribute/boolean.jst.eco:8
@@ -6017,7 +6023,7 @@ msgstr "Departman"
 #: app/assets/javascripts/app/controllers/translation.coffee:183
 #: app/assets/javascripts/app/views/calendar/holiday_selector.jst.eco:6
 #: app/assets/javascripts/app/views/calendar/index.jst.eco:8
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:230
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:231
 #: app/assets/javascripts/app/views/data_privacy/index.jst.eco:7
 #: app/assets/javascripts/app/views/generic/admin/index.jst.eco:7
 #: app/assets/javascripts/app/views/integration/clearbit.jst.eco:9
@@ -6991,7 +6997,7 @@ msgstr ""
 "%s aracılığıyla kullanıcı kimlik doğrulaması için butonu etkinleştirir. "
 "Buton, kullanıcı etkileşiminde /auth/sso'ya yönlendirilecektir."
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:61
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:62
 msgid "Enables console logging."
 msgstr "Enables console logging."
 
@@ -7861,7 +7867,7 @@ msgstr "İlk yanıt"
 msgid "Fixed Email Accounts"
 msgstr "Fixed Email Accounts"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:122
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:123
 msgid "Flat Design"
 msgstr "Flat Design"
 
@@ -7898,7 +7904,7 @@ msgstr "Takip mümkün"
 msgid "Font Awesome"
 msgstr "Font Awesome"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:113
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:114
 msgid "Font size"
 msgstr "Font size"
 
@@ -8572,7 +8578,7 @@ msgstr "Health Check"
 msgid "Health information can be retrieved as JSON using:"
 msgstr "Sağlık bilgileri JSON kullanılarak alınabilir:"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:69
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:70
 msgid "Hello! I need help with your product."
 msgstr "Merhaba! Ürününüzle ilgili yardıma ihtiyacım var."
 
@@ -8677,7 +8683,7 @@ msgstr "Here you see a quick overview of your and other agents' performance."
 msgid "Here you will find the latest activities of your system."
 msgstr "Here you will find the latest activities of your system."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:72
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:73
 msgid "Hi! Which one of our products?"
 msgstr "Selam! Ürünlerimizden hangisi?"
 
@@ -8868,7 +8874,7 @@ msgstr "Simge URL'si"
 msgid "Identifier"
 msgstr "Tanımlayıcı"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:36
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:37
 msgid "Identifier of the chat topic."
 msgstr "Sohbet konusunun tanımlayıcısı."
 
@@ -8890,7 +8896,7 @@ msgstr ""
 "Bir kullanıcı iki (veya daha fazla) yapılandırılmış LDAP kaynağında "
 "bulunursa, son senkronizasyon geçerli olacaktır."
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:54
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:55
 msgid ""
 "If left empty, the host gets auto-detected - in this case %s. The auto-"
 "detection reads out the host from the <script> tag. If you don't include it "
@@ -8922,7 +8928,7 @@ msgstr ""
 msgid "If this regex matches, no notification will be sent by the sender."
 msgstr "If this regex matches, no notification will be sent by the sender."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:178
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:179
 msgid ""
 "If you don't already use jQuery on your website, you can add it like this:"
 msgstr ""
@@ -8975,7 +8981,7 @@ msgstr ""
 "Önceden depolanmış ekleri bir arka uçtan diğerine taşımak istiyorsanız, "
 "aşağıdaki rails/rake görevini çalıştırmanız gerekir."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:162
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:163
 msgid ""
 "If you want to open the chat by clicking a button, set the option §show§ to "
 "§false§ and add the class §open-zammad-chat§ to the button."
@@ -9347,7 +9353,7 @@ msgstr "Bilgi Tabanı yazısından metin ekle"
 msgid "Insert text from text module"
 msgstr "Metin modülünden metin ekle"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:138
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:139
 msgid ""
 "Insert the widget code into the source code of every page the chat shall be "
 "visible on. It should be placed at the end of the page's source code before "
@@ -9703,7 +9709,7 @@ msgstr "Ocak"
 msgid "Job is waiting to get started…"
 msgstr "İş başlatılmak için bekliyor…"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:58
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:59
 msgid "John Smith"
 msgstr "John Smith"
 
@@ -10236,7 +10242,7 @@ msgstr "Yürütme değişikliklerinin yerelleştirilmesi"
 msgid "Location"
 msgstr "konum"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:103
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:104
 msgid "Location of an external chat.css file."
 msgstr "Location of an external chat.css file."
 
@@ -10637,7 +10643,7 @@ msgstr "Bildirim ayarlarınızı yönetin"
 msgid "Management"
 msgstr "Yönetim"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:161
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:162
 msgid "Manually open chat"
 msgstr "Manually open chat"
 
@@ -12257,7 +12263,7 @@ msgstr "Tamamlandığında…"
 msgid "One of the required parameters must be provided, but none was found."
 msgstr "Gerekli parametrelerden biri sağlanmalıdır, ancak hiçbiri bulunamadı."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:49
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:50
 #: public/assets/chat/chat.coffee:207
 msgid "Online"
 msgstr "Online"
@@ -12459,7 +12465,7 @@ msgid "Operating system"
 msgstr "İşletim sistemi"
 
 #: app/assets/javascripts/app/views/agent_ticket_view/content.jst.eco:7
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:222
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:223
 #: app/assets/javascripts/app/views/channel/form.jst.eco:60
 #: app/assets/javascripts/app/views/object_manager/screens.jst.eco:7
 #: app/assets/javascripts/app/views/profile/calendar_subscriptions.jst.eco:42
@@ -13886,7 +13892,7 @@ msgstr "Removes any hyperlink"
 msgid "Removes the formatting"
 msgstr "Removes the formatting"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:79
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:80
 msgid "Removes the shadows for a flat look."
 msgstr "Removes the shadows for a flat look."
 
@@ -14008,7 +14014,7 @@ msgstr "Gerekli 'downloadBackendSelected' parametresi eksik."
 msgid "Required parameter 'profile' is missing."
 msgstr "Gerekli parametre 'profile' eksik."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:177
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:178
 #: app/assets/javascripts/app/views/channel/form.jst.eco:147
 msgid "Requirements"
 msgstr "Requirements"
@@ -14950,7 +14956,7 @@ msgstr "Selects the ticket number generator module."
 msgid "Select…"
 msgstr "Seçiniz…"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:77
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:78
 #: app/assets/javascripts/app/views/customer_chat/chat_window.jst.eco:58
 #: public/assets/chat/views/chat.eco:25
 msgid "Send"
@@ -15366,7 +15372,7 @@ msgstr "Kimlik doğrulayıcı uygulama sırrını göster"
 msgid "Show calendar weeks in the picker of date/datetime fields"
 msgstr "Tarih/tarih-saat alanlarının seçicisinde takvim haftalarını göster"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:149
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:150
 msgid "Show chat automatically"
 msgstr "Sohbeti otomatik olarak göster"
 
@@ -15406,7 +15412,7 @@ msgstr ""
 msgid "Show previous tab"
 msgstr "Önceki sekmeyi göster"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:42
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:43
 msgid "Show the chat when ready."
 msgstr "Show the chat when ready."
 
@@ -15448,7 +15454,7 @@ msgstr "İzlenen destek taleplerini göster"
 msgid "Shown records in caller log."
 msgstr "Shown records in caller log."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:94
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:95
 msgid "Shown when the chat is closed."
 msgstr "Shown when the chat is closed."
 
@@ -16581,7 +16587,7 @@ msgstr "Avatar seçilemedi."
 msgid "The avatar could not be uploaded."
 msgstr "Avatar yüklenemedi."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:212
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:213
 msgid ""
 "The browser is outdated. It does not support WebSocket - the technology we "
 "use for the chat."
@@ -16692,11 +16698,11 @@ msgstr "%s için sertifika bulunamadı."
 msgid "The changes could not be saved."
 msgstr "Değişiklikler kaydedilemedi."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:214
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:215
 msgid "The chat is turned off."
 msgstr "The chat is turned off."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:150
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:151
 msgid ""
 "The chat will show up once the connection to the server got established and "
 "if there is an operator online to chat with."
@@ -16766,7 +16772,7 @@ msgstr ""
 "Ardından, işlemi tamamlamak için \"Web Sunucusu Yapılandırması\" altındaki "
 "talimatları izleyin."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:118
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:119
 msgid "The default font size is 12px."
 msgstr "The default font size is 12px."
 
@@ -17727,11 +17733,11 @@ msgstr "Etkinleştirilmiş üçüncü taraf kimlik doğrulama sağlayıcısı yo
 msgid "There are no enabled two-factor authentication methods."
 msgstr "Etkinleştirilmiş iki faktörlü kimlik doğrulama yöntemi yoktur."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:210
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:211
 msgid "There are several possible reasons why the chat won't show up:"
 msgstr "Sohbetin görünmemesinin birkaç olası nedeni vardır:"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:215
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:216
 msgid "There are too many people in the chat queue."
 msgstr "Sohbet kuyruğunda çok fazla kişi var."
 
@@ -17756,7 +17762,7 @@ msgstr "Yapılandırılmış bir Google uygulaması yok."
 msgid "There is no Twitter app configured."
 msgstr "Yapılandırılmış bir Twitter uygulaması yok."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:213
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:214
 msgid "There is no agent online."
 msgstr "There is no agent online."
 
@@ -17892,7 +17898,7 @@ msgstr "Bu kategori alt kategoriler de dahil olmak üzere beslenir:"
 msgid "This category is empty"
 msgstr "Bu kategori boş"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:91
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:92
 msgid ""
 "This class gets added to the button on initialization and will be removed "
 "once the chat connection is established."
@@ -19454,7 +19460,7 @@ msgstr "İki faktörlü yöntem başarıyla yapılandırıldı."
 #: app/assets/javascripts/app/controllers/widget/ticket_bulk_form.coffee:70
 #: app/assets/javascripts/app/models/ticket_article.coffee:12
 #: app/assets/javascripts/app/models/ticket_state.coffee:7
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:229
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:230
 #: app/assets/javascripts/app/views/generic/sla_times.jst.eco:5
 #: app/assets/javascripts/app/views/integration/check_mk.jst.eco:11
 #: app/assets/javascripts/app/views/integration/cti.jst.eco:11
@@ -19927,7 +19933,7 @@ msgstr "Anahtar yükle"
 msgid "Uploading"
 msgstr "Uploading"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:136
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:137
 #: app/assets/javascripts/app/views/integration/check_mk.jst.eco:3
 msgid "Usage"
 msgstr "Usage"
@@ -20535,7 +20541,7 @@ msgstr "Weibo"
 msgid "Weibo App Credentials"
 msgstr "Weibo Uygulaması Kimlik Bilgileri"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:67
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:68
 msgid "Welcome Title shown on the closed chat. Can contain HTML."
 msgstr "Welcome Title shown on the closed chat. Can contain HTML."
 
@@ -20621,7 +20627,7 @@ msgstr "When notification is being sent."
 msgid "When should the job run?"
 msgstr "When should the job run?"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:217
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:218
 msgid ""
 "When you turn on debugging by setting the option §debug§ to §true§ the "
 "reason gets printed to the javascript console."
@@ -20633,11 +20639,11 @@ msgstr ""
 msgid "Where"
 msgstr "Where"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:48
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:49
 msgid "Where to append the chat to."
 msgstr "Where to append the chat to."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:208
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:209
 msgid "Why doesn't the chat show up?"
 msgstr "Why doesn't the chat show up?"
 
@@ -21735,7 +21741,7 @@ msgstr "gün"
 msgid "deactivated"
 msgstr "deactivated"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:149
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:150
 #: db/seeds/signatures.rb:5
 msgid "default"
 msgstr "varsayılan"
@@ -22800,7 +22806,7 @@ msgstr "ana sayfaya gitmek için."
 #: app/assets/javascripts/app/controllers/_ui_element/core_workflow_condition.coffee:65
 #: app/assets/javascripts/app/controllers/_ui_element/object_selector.coffee:52
 #: app/assets/javascripts/app/controllers/chat.coffee:757
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:67
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:68
 msgid "today"
 msgstr "today"
 

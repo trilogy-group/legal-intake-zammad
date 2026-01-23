@@ -1499,7 +1499,7 @@ msgstr "เพิ่มแท็ก"
 msgid "Add third level heading"
 msgstr "เพิ่มหัวเรื่องระดับที่สาม"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:85
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:86
 msgid "Add this class to a button on your page that should open the chat."
 msgstr "เพิ่มคลาสนี้ไปที่ปุ่มบนเพจของคุณที่ควรเปิดการแชท"
 
@@ -1815,6 +1815,12 @@ msgstr "เกิดข้อผิดพลาด"
 
 #: app/frontend/shared/server/apollo/handler/BaseHandler.ts:150
 msgid "An error occured during the operation."
+msgstr "มีข้อผิดพลาดเกิดขึ้นในระหว่างการดําเนินการ"
+
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:251
+#, fuzzy
+#| msgid "An error occured during the operation."
+msgid "An error occurred while fetching the website preview."
 msgstr "มีข้อผิดพลาดเกิดขึ้นในระหว่างการดําเนินการ"
 
 #: app/assets/javascripts/app/controllers/_ui_element/object_manager_attribute.coffee:997
@@ -2525,7 +2531,7 @@ msgstr ""
 "เพิ่มคุณค่าให้กับลูกค้าและองค์กรของคุณโดยอัตโนมัติด้วยข้อมูลล่าสุดที่สดใหม่ "
 "แมปข้อมูลโดยตรงกับฟิลด์ออบเจ็กต์"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:97
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:98
 msgid ""
 "Automatically loads the chat.css file. If you want to use your own css, just "
 "set it to false."
@@ -2621,7 +2627,7 @@ msgstr "กลับไปยังหน้าก่อนหน้า"
 msgid "Back to search results"
 msgstr "กลับไปที่ผลการค้นหา"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:98
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:99
 msgid "Background color"
 msgstr "สีพื้นหลัง"
 
@@ -2835,7 +2841,7 @@ msgstr "CC"
 msgid "CMDB to document complex relations of your network components."
 msgstr "CMDB เพื่อจัดทำเอกสารความสัมพันธ์ที่ซับซ้อนของส่วนประกอบเครือข่ายของคุณ."
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:73
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:74
 msgid ""
 "CSS font-size with a unit like 12px, 1.5em. If left undefined it inherits "
 "the font-size of the website."
@@ -2934,7 +2940,7 @@ msgstr "บันทึกผู้โทร"
 msgid "Camera"
 msgstr "กล้อง"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:109
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:110
 msgid "Can be in any CSS color format."
 msgstr "สามารถอยู่ในรูปแบบสี CSS ใดก็ได้"
 
@@ -3204,7 +3210,7 @@ msgstr "แชต ID"
 msgid "Chat Session"
 msgstr "เซสชันแชท"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:89
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:90
 msgid "Chat Title"
 msgstr "ชื่อแชท"
 
@@ -3217,7 +3223,7 @@ msgstr "ปิดแชทโดย %s"
 msgid "Chat not answered, automatically set to offline."
 msgstr "แชทไม่ตอบ ตั้งค่าเป็นออฟไลน์โดยอัตโนมัติ"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:381
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:397
 msgid "Chats"
 msgstr "แชต"
 
@@ -4703,7 +4709,7 @@ msgstr "ถอดรหัสสำเร็จ"
 
 #: app/assets/javascripts/app/controllers/_ui_element/object_manager_attribute.coffee:239
 #: app/assets/javascripts/app/views/calendar/index.jst.eco:32
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:228
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:229
 #: app/assets/javascripts/app/views/generic/multi_locales.jst.eco:5
 #: app/assets/javascripts/app/views/generic/table_row.jst.eco:78
 #: app/assets/javascripts/app/views/object_manager/attribute/boolean.jst.eco:8
@@ -5867,7 +5873,7 @@ msgstr "แผนก"
 #: app/assets/javascripts/app/controllers/translation.coffee:183
 #: app/assets/javascripts/app/views/calendar/holiday_selector.jst.eco:6
 #: app/assets/javascripts/app/views/calendar/index.jst.eco:8
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:230
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:231
 #: app/assets/javascripts/app/views/data_privacy/index.jst.eco:7
 #: app/assets/javascripts/app/views/generic/admin/index.jst.eco:7
 #: app/assets/javascripts/app/views/integration/clearbit.jst.eco:9
@@ -6890,7 +6896,7 @@ msgid ""
 msgstr ""
 "เปิดใช้งานปุ่มสำหรับการตรวจสอบผู้ใช้ผ่าน %s ปุ่มจะเปลี่ยนเส้นทางไปที่ /auth/sso เมื่อผู้ใช้โต้ตอบ"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:61
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:62
 msgid "Enables console logging."
 msgstr "เปิดใช้งานการบันทึกคอนโซล"
 
@@ -7817,7 +7823,7 @@ msgstr "การตอบสนองครั้งแรก"
 msgid "Fixed Email Accounts"
 msgstr "บัญชีอีเมลถาวร"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:122
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:123
 msgid "Flat Design"
 msgstr "Flat Design"
 
@@ -7854,7 +7860,7 @@ msgstr ""
 msgid "Font Awesome"
 msgstr ""
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:113
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:114
 msgid "Font size"
 msgstr "ขนาดแบบอักษร"
 
@@ -8589,7 +8595,7 @@ msgstr "ตรวจสุขภาพ"
 msgid "Health information can be retrieved as JSON using:"
 msgstr "สามารถดึงข้อมูลสุขภาพเป็น JSON โดยใช้:"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:69
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:70
 msgid "Hello! I need help with your product."
 msgstr "สวัสดี! ฉันต้องการความช่วยเหลือเกี่ยวกับผลิตภัณฑ์ของคุณ"
 
@@ -8677,7 +8683,7 @@ msgstr ""
 msgid "Here you will find the latest activities of your system."
 msgstr "ที่นี่คุณจะพบกับกิจกรรมล่าสุดของระบบของคุณ"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:72
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:73
 msgid "Hi! Which one of our products?"
 msgstr "สวัสดี! ผลิตภัณฑ์ใดของเรา?"
 
@@ -8870,7 +8876,7 @@ msgstr "ไอค่อน URL"
 msgid "Identifier"
 msgstr "บัญชีไม่ได้รับการยืนยัน"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:36
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:37
 msgid "Identifier of the chat topic."
 msgstr "ตัวระบุหัวข้อสนทนา"
 
@@ -8891,7 +8897,7 @@ msgid ""
 msgstr ""
 "หากพบผู้ใช้ในแหล่งที่มา LDAP ที่กําหนดค่าไว้สองแหล่ง (หรือมากกว่า) การซิงค์ครั้งล่าสุดจะชนะ"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:54
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:55
 msgid ""
 "If left empty, the host gets auto-detected - in this case %s. The auto-"
 "detection reads out the host from the <script> tag. If you don't include it "
@@ -8917,7 +8923,7 @@ msgstr ""
 msgid "If this regex matches, no notification will be sent by the sender."
 msgstr ""
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:178
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:179
 #, fuzzy
 #| msgid ""
 #| "Zammad Chat requires jQuery. If you don't already use it on your website, "
@@ -8972,7 +8978,7 @@ msgstr ""
 "หากคุณต้องการย้ายไฟล์แนบที่จัดเก็บไว้แล้วจากแบ็กเอนด์หนึ่งไปยังอีกที่หนึ่ง "
 "คุณต้องดำเนินการสิ่งต่อไปนี้ผ่านคอนโซล"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:162
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:163
 msgid ""
 "If you want to open the chat by clicking a button, set the option §show§ to "
 "§false§ and add the class §open-zammad-chat§ to the button."
@@ -9353,7 +9359,7 @@ msgstr "แทรกข้อความจากบทความศูนย
 msgid "Insert text from text module"
 msgstr "แทรกข้อความจากโมดูลข้อความ"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:138
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:139
 msgid ""
 "Insert the widget code into the source code of every page the chat shall be "
 "visible on. It should be placed at the end of the page's source code before "
@@ -9718,7 +9724,7 @@ msgstr "มกราคม"
 msgid "Job is waiting to get started…"
 msgstr "งานกำลังรอการเริ่มต้น…"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:58
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:59
 msgid "John Smith"
 msgstr "จอห์นสมิธ"
 
@@ -10292,7 +10298,7 @@ msgstr "การปรับแต่งการตั้งค่าภาษ
 msgid "Location"
 msgstr "ตำแหน่ง"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:103
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:104
 msgid "Location of an external chat.css file."
 msgstr ""
 
@@ -10791,7 +10797,7 @@ msgstr "จัดการการตั้งค่าการแจ้งเ
 msgid "Management"
 msgstr "การจัดการ"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:161
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:162
 msgid "Manually open chat"
 msgstr "เปิดแชทด้วยตนเอง"
 
@@ -12518,7 +12524,7 @@ msgstr "เมื่อเสร็จแล้ว…"
 msgid "One of the required parameters must be provided, but none was found."
 msgstr ""
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:49
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:50
 #: public/assets/chat/chat.coffee:207
 msgid "Online"
 msgstr "ออนไลน์"
@@ -12749,7 +12755,7 @@ msgid "Operating system"
 msgstr "ระบบปฏิบัติการ"
 
 #: app/assets/javascripts/app/views/agent_ticket_view/content.jst.eco:7
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:222
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:223
 #: app/assets/javascripts/app/views/channel/form.jst.eco:60
 #: app/assets/javascripts/app/views/object_manager/screens.jst.eco:7
 #: app/assets/javascripts/app/views/profile/calendar_subscriptions.jst.eco:42
@@ -14279,7 +14285,7 @@ msgstr "ลบไฮเปอร์ลิงก์ใด ๆ"
 msgid "Removes the formatting"
 msgstr "ลบการจัดรูปแบบ"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:79
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:80
 msgid "Removes the shadows for a flat look."
 msgstr "ลบเงาเพื่อให้ดูเรียบ"
 
@@ -14413,7 +14419,7 @@ msgstr ""
 msgid "Required parameter 'profile' is missing."
 msgstr ""
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:177
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:178
 #: app/assets/javascripts/app/views/channel/form.jst.eco:147
 msgid "Requirements"
 msgstr "ความต้องการ"
@@ -15449,7 +15455,7 @@ msgstr ""
 msgid "Select…"
 msgstr "เลือก…"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:77
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:78
 #: app/assets/javascripts/app/views/customer_chat/chat_window.jst.eco:58
 #: public/assets/chat/views/chat.eco:25
 msgid "Send"
@@ -15903,7 +15909,7 @@ msgstr "การตรวจสอบสิทธิ์ผ่าน %s"
 msgid "Show calendar weeks in the picker of date/datetime fields"
 msgstr ""
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:149
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:150
 msgid "Show chat automatically"
 msgstr "แสดงแชทอัตโนมัติ"
 
@@ -15943,7 +15949,7 @@ msgstr ""
 msgid "Show previous tab"
 msgstr "แสดงแท็บก่อนหน้า"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:42
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:43
 msgid "Show the chat when ready."
 msgstr "แสดงแชทเมื่อพร้อม"
 
@@ -15991,7 +15997,7 @@ msgstr "ภาพรวม Ticket ทั้งหมด"
 msgid "Shown records in caller log."
 msgstr "แสดงบันทึก ในบันทึกการโทร"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:94
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:95
 msgid "Shown when the chat is closed."
 msgstr "แสดงเมื่อแชทถูกปิด"
 
@@ -17214,7 +17220,7 @@ msgstr "ไม่สามารถอัปโหลดไฟล์ได้"
 msgid "The avatar could not be uploaded."
 msgstr "ไม่สามารถอัปโหลดไฟล์ได้"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:212
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:213
 msgid ""
 "The browser is outdated. It does not support WebSocket - the technology we "
 "use for the chat."
@@ -17332,11 +17338,11 @@ msgstr "เสียงแจ้งเตือน"
 msgid "The changes could not be saved."
 msgstr "ไม่สามารถบันทึกการเปลี่ยนแปลงได้."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:214
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:215
 msgid "The chat is turned off."
 msgstr ""
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:150
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:151
 msgid ""
 "The chat will show up once the connection to the server got established and "
 "if there is an operator online to chat with."
@@ -17402,7 +17408,7 @@ msgstr ""
 "\"example.com\" หรือ \"example.com/support\") จากนั้น ทำตามคำแนะนำภายใต้ "
 "\"การกำหนดค่าเซิร์ฟเวอร์เว็บ\" เพื่อดำเนินการให้เสร็จสิ้น"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:118
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:119
 msgid "The default font size is 12px."
 msgstr ""
 
@@ -18468,11 +18474,11 @@ msgstr ""
 msgid "There are no enabled two-factor authentication methods."
 msgstr "ไม่สามารถลบวิธีการรับรองความถูกต้องด้วยสองปัจจัย"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:210
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:211
 msgid "There are several possible reasons why the chat won't show up:"
 msgstr ""
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:215
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:216
 msgid "There are too many people in the chat queue."
 msgstr ""
 
@@ -18501,7 +18507,7 @@ msgstr "ไม่มีเจ้าหน้าที่ออนไลน์"
 msgid "There is no Twitter app configured."
 msgstr "No filter was configured."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:213
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:214
 msgid "There is no agent online."
 msgstr "ไม่มีเจ้าหน้าที่ออนไลน์"
 
@@ -18646,7 +18652,7 @@ msgstr ""
 msgid "This category is empty"
 msgstr "หมวดหมู่นี้ว่างเปล่า"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:91
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:92
 msgid ""
 "This class gets added to the button on initialization and will be removed "
 "once the chat connection is established."
@@ -20276,7 +20282,7 @@ msgstr "การทดสอบดำเนินการสำเร็จ"
 #: app/assets/javascripts/app/controllers/widget/ticket_bulk_form.coffee:70
 #: app/assets/javascripts/app/models/ticket_article.coffee:12
 #: app/assets/javascripts/app/models/ticket_state.coffee:7
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:229
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:230
 #: app/assets/javascripts/app/views/generic/sla_times.jst.eco:5
 #: app/assets/javascripts/app/views/integration/check_mk.jst.eco:11
 #: app/assets/javascripts/app/views/integration/cti.jst.eco:11
@@ -20742,7 +20748,7 @@ msgstr "อัพโหลด"
 msgid "Uploading"
 msgstr "กำลังส่งข้อมูล"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:136
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:137
 #: app/assets/javascripts/app/views/integration/check_mk.jst.eco:3
 msgid "Usage"
 msgstr "การใช้งาน"
@@ -21381,7 +21387,7 @@ msgstr "Weibo"
 msgid "Weibo App Credentials"
 msgstr "Weibo App Credentials"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:67
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:68
 msgid "Welcome Title shown on the closed chat. Can contain HTML."
 msgstr "หัวข้อการต้อนรับที่แสดงในแชทที่ปิดแล้ว สามารถมี HTML ได้"
 
@@ -21469,7 +21475,7 @@ msgstr "เมื่อมีการส่งการแจ้งเตือ
 msgid "When should the job run?"
 msgstr ""
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:217
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:218
 msgid ""
 "When you turn on debugging by setting the option §debug§ to §true§ the "
 "reason gets printed to the javascript console."
@@ -21479,11 +21485,11 @@ msgstr ""
 msgid "Where"
 msgstr "ที่ไหน"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:48
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:49
 msgid "Where to append the chat to."
 msgstr "จะต่อท้ายแชทไปที่ใด"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:208
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:209
 msgid "Why doesn't the chat show up?"
 msgstr "ทำไมแชทไม่ขึ้น?"
 
@@ -22568,7 +22574,7 @@ msgstr "วัน"
 msgid "deactivated"
 msgstr "ยกเลิกการทำงาน"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:149
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:150
 #: db/seeds/signatures.rb:5
 msgid "default"
 msgstr "ค่าปริยาย"
@@ -23716,7 +23722,7 @@ msgstr "เพื่อไปที่หน้าแรก"
 #: app/assets/javascripts/app/controllers/_ui_element/core_workflow_condition.coffee:65
 #: app/assets/javascripts/app/controllers/_ui_element/object_selector.coffee:52
 #: app/assets/javascripts/app/controllers/chat.coffee:757
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:67
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:68
 msgid "today"
 msgstr "วันนี้"
 

@@ -4,8 +4,8 @@ msgstr ""
 "POT-Creation-Date: \n"
 "PO-Revision-Date: 2025-12-12 09:00+0000\n"
 "Last-Translator: Mixer <mixer@mixercz.cz>\n"
-"Language-Team: Czech <https://translations.zammad.org/projects/zammad/"
-"zammad-stable/cs/>\n"
+"Language-Team: Czech <https://translations.zammad.org/projects/zammad/zammad-"
+"stable/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -76,8 +76,8 @@ msgid ""
 "<% end %>\n"
 msgstr ""
 "# #{ticket.title}\n"
-"_<#{config.http_type}://#{config.fqdn}/#ticket/zoom/"
-"#{ticket.id}|Tiket##{ticket.number}>: Vytvořil #{current_user.longname} "
+"_<#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}|"
+"Tiket##{ticket.number}>: Vytvořil #{current_user.longname} "
 "#{ticket.updated_at}_\n"
 "* Skupina: #{ticket.group.name}\n"
 "* Vlastník: #{ticket.owner.fullname}\n"
@@ -102,8 +102,8 @@ msgid ""
 "<% end %>\n"
 msgstr ""
 "# #{ticket.title}\n"
-"_<#{config.http_type}://#{config.fqdn}/#ticket/zoom/"
-"#{ticket.id}|Tiket##{ticket.number}>: Eskalován #{ticket.escalation_at}_\n"
+"_<#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}|"
+"Tiket##{ticket.number}>: Eskalován #{ticket.escalation_at}_\n"
 "Tiket (#{ticket.title}) od \"#{ticket.customer.longname}\" je v eskalaci od "
 "\"#{ticket.escalation_at}\"!\n"
 "\n"
@@ -127,9 +127,8 @@ msgid ""
 "<% end %>\n"
 msgstr ""
 "# #{ticket.title}\n"
-"_<#{config.http_type}://#{config.fqdn}/#ticket/zoom/"
-"#{ticket.id}|Tiket##{ticket.number}>: Naposledy aktualizováno v "
-"#{ticket.updated_at}_\n"
+"_<#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}|"
+"Tiket##{ticket.number}>: Naposledy aktualizováno v #{ticket.updated_at}_\n"
 "* Skupina: #{ticket.group.name}\n"
 "* Vlastník: #{ticket.owner.fullname}\n"
 "* Stav: #{t(ticket.state.name)}\n"
@@ -153,8 +152,8 @@ msgid ""
 "<% end %>\n"
 msgstr ""
 "# #{ticket.title}\n"
-"_<#{config.http_type}://#{config.fqdn}/#ticket/zoom/"
-"#{ticket.id}|Tiket##{ticket.number}>: Dosaženo upomínky!_\n"
+"_<#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}|"
+"Tiket##{ticket.number}>: Dosaženo upomínky!_\n"
 "Tiket vyžaduje pozornost: byla dosažena upomínka pro (#{ticket.title}) "
 "zákazníka \"*#{ticket.customer.longname}*\".\n"
 "\n"
@@ -181,8 +180,8 @@ msgid ""
 "<% end %>\n"
 msgstr ""
 "# #{ticket.title}\n"
-"_<#{config.http_type}://#{config.fqdn}/#ticket/zoom/"
-"#{ticket.id}|Tiket##{ticket.number}>: Aktualizoval #{current_user.longname} "
+"_<#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}|"
+"Tiket##{ticket.number}>: Aktualizoval #{current_user.longname} "
 "#{ticket.updated_at}_\n"
 "<% if @objects[:changes].present? %>\n"
 "  <% @objects[:changes].each do |key, value| %>\n"
@@ -209,9 +208,8 @@ msgid ""
 "<% end %>\n"
 msgstr ""
 "# #{ticket.title}\n"
-"_<#{config.http_type}://#{config.fqdn}/#ticket/zoom/"
-"#{ticket.id}|Tiket##{ticket.number}>: Bude eskalován #{ticket.escalation_at}"
-"_\n"
+"_<#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}|"
+"Tiket##{ticket.number}>: Bude eskalován #{ticket.escalation_at}_\n"
 "Tiket (#{ticket.title}) od \"#{ticket.customer.longname}\" bude eskalován "
 "\"#{ticket.escalation_at}\"!\n"
 "\n"
@@ -959,7 +957,8 @@ msgstr ""
 #: app/assets/javascripts/app/views/dashboard/first_steps_test_ticket_finish.jst.eco:1
 msgid ""
 "A test ticket has been created, you can find it in your overview \"%s\" %l."
-msgstr "Byl vytvořen testovací tiket, naleznete jej ve svém přehledu \"%s\" %l."
+msgstr ""
+"Byl vytvořen testovací tiket, naleznete jej ve svém přehledu \"%s\" %l."
 
 #: app/models/ticket.rb:285
 msgid "A ticket cannot be merged into itself."
@@ -1516,7 +1515,7 @@ msgstr "Přidat tag"
 msgid "Add third level heading"
 msgstr "Přidat nadpis třetí úrovně"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:85
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:86
 msgid "Add this class to a button on your page that should open the chat."
 msgstr "Třída tlačítka které má otevřít chat."
 
@@ -1611,8 +1610,8 @@ msgstr ""
 "<br>\n"
 "<div><a href=\"#{url}\">#{url}</a></div>\n"
 "<br>\n"
-"<div>Tento odkaz Vás přesměruje na stránku, kde můžete nastavit nové "
-"heslo.</div>\n"
+"<div>Tento odkaz Vás přesměruje na stránku, kde můžete nastavit nové heslo.</"
+"div>\n"
 "<br>\n"
 "<div>Pokud heslo nechcete změnit, tuto zprávu ignorujte (nevyužívejte výše "
 "zmíněného odkazu) a Vaše heslo bude zachováno.</div>\n"
@@ -1848,6 +1847,12 @@ msgstr "Nastala chyba"
 
 #: app/frontend/shared/server/apollo/handler/BaseHandler.ts:150
 msgid "An error occured during the operation."
+msgstr "Během operace nastala chyba."
+
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:251
+#, fuzzy
+#| msgid "An error occured during the operation."
+msgid "An error occurred while fetching the website preview."
 msgstr "Během operace nastala chyba."
 
 #: app/assets/javascripts/app/controllers/_ui_element/object_manager_attribute.coffee:997
@@ -2577,7 +2582,7 @@ msgstr ""
 "Obohaťte své zákazníky a organizace automaticky s čerstvými a nejnovějšími "
 "informacemi. Mapujte data přímo na pole objektu."
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:97
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:98
 msgid ""
 "Automatically loads the chat.css file. If you want to use your own css, just "
 "set it to false."
@@ -2675,7 +2680,7 @@ msgstr "Zpět na předchozí stránku"
 msgid "Back to search results"
 msgstr "Zpět k výsledkům vyhledávání"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:98
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:99
 msgid "Background color"
 msgstr "Barva pozadí"
 
@@ -2897,7 +2902,7 @@ msgstr ""
 "CMDB (konfigurační databáze) pro dokumentování komplexních vztahů vašich "
 "komponent v síti."
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:73
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:74
 msgid ""
 "CSS font-size with a unit like 12px, 1.5em. If left undefined it inherits "
 "the font-size of the website."
@@ -2996,7 +3001,7 @@ msgstr "Výpis volání"
 msgid "Camera"
 msgstr "Kamera"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:109
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:110
 msgid "Can be in any CSS color format."
 msgstr "Může být jakémkoli CSS formátu barev."
 
@@ -3268,7 +3273,7 @@ msgstr "ID chatu"
 msgid "Chat Session"
 msgstr "Relace chatu"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:89
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:90
 msgid "Chat Title"
 msgstr "Nadpis chatu"
 
@@ -3281,7 +3286,7 @@ msgstr "%s ukončil konverzaci"
 msgid "Chat not answered, automatically set to offline."
 msgstr "Chat je bez odpovědi, automaticky nastaven jako offline."
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:381
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:397
 msgid "Chats"
 msgstr "Chaty"
 
@@ -4261,8 +4266,8 @@ msgstr ""
 "\n"
 "Dostupné objekty:\n"
 "* tiket (např. ticket.state, ticket.group)\n"
-"* tiket.customer (např. ticket.customer.firstname, ticket.customer.lastname)"
-"\n"
+"* tiket.customer (např. ticket.customer.firstname, "
+"ticket.customer.lastname)\n"
 "* tiket.owner (např. ticket.owner.firstname, ticket.owner.lastname)\n"
 "* tiket.organization (např. ticket.organization.name)\n"
 "* user (např. user.firstname, user.email)\n"
@@ -4743,7 +4748,7 @@ msgstr "Dešifrování bylo úspěšné."
 
 #: app/assets/javascripts/app/controllers/_ui_element/object_manager_attribute.coffee:239
 #: app/assets/javascripts/app/views/calendar/index.jst.eco:32
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:228
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:229
 #: app/assets/javascripts/app/views/generic/multi_locales.jst.eco:5
 #: app/assets/javascripts/app/views/generic/table_row.jst.eco:78
 #: app/assets/javascripts/app/views/object_manager/attribute/boolean.jst.eco:8
@@ -4979,7 +4984,8 @@ msgstr ""
 #: db/seeds/settings.rb:3791
 msgid ""
 "Defines an OTRS endpoint to import users, tickets, states, and articles."
-msgstr "Definuje koncový bod OTRS pro import uživatelů, tiketů, stavů a článků."
+msgstr ""
+"Definuje koncový bod OTRS pro import uživatelů, tiketů, stavů a článků."
 
 #: app/assets/javascripts/app/models/ticket_priority.coffee:7
 msgid ""
@@ -5959,7 +5965,7 @@ msgstr "Oddělení"
 #: app/assets/javascripts/app/controllers/translation.coffee:183
 #: app/assets/javascripts/app/views/calendar/holiday_selector.jst.eco:6
 #: app/assets/javascripts/app/views/calendar/index.jst.eco:8
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:230
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:231
 #: app/assets/javascripts/app/views/data_privacy/index.jst.eco:7
 #: app/assets/javascripts/app/views/generic/admin/index.jst.eco:7
 #: app/assets/javascripts/app/views/integration/clearbit.jst.eco:9
@@ -6159,7 +6165,8 @@ msgstr "Zakázat Oznámení"
 
 #: db/seeds/settings.rb:1327
 msgid "Disables user creation on logon with a third-party application."
-msgstr "Zakazuje vytváření uživatele při přihlášení přes aplikaci třetí strany."
+msgstr ""
+"Zakazuje vytváření uživatele při přihlášení přes aplikaci třetí strany."
 
 #: app/assets/javascripts/app/views/profile/notification.jst.eco:23
 msgid ""
@@ -6919,7 +6926,7 @@ msgstr ""
 "Povolí tlačítko pro autentizaci uživatele pomocí %s. Při interakci provede "
 "tlačítko přesměrování na /auth/sso."
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:61
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:62
 msgid "Enables console logging."
 msgstr "Zapne logování do javascriptové konzole."
 
@@ -7225,7 +7232,8 @@ msgstr ""
 msgid ""
 "Enter your password from your Kayako account which should be used for the "
 "import."
-msgstr "Zadejte své heslo do vašeho Kayako účtu, který se má použít pro import."
+msgstr ""
+"Zadejte své heslo do vašeho Kayako účtu, který se má použít pro import."
 
 #: app/assets/javascripts/app/controllers/admin_password_auth.coffee:30
 #: app/assets/javascripts/app/controllers/password_reset.coffee:38
@@ -7290,8 +7298,8 @@ msgstr ""
 "\n"
 "<div>Dobrý den, #{recipient.firstname},</div>\n"
 "<br>\n"
-"<div>tiket (#{ticket.title}) zákazníka \"<b>#{ticket.customer.longname}</b>\""
-" eskaloval \"#{ticket.escalation_at}\"!</div>\n"
+"<div>tiket (#{ticket.title}) zákazníka \"<b>#{ticket.customer.longname}</"
+"b>\" eskaloval \"#{ticket.escalation_at}\"!</div>\n"
 "<br>\n"
 "<% if @objects[:article] %>\n"
 "  <div>\n"
@@ -7781,7 +7789,7 @@ msgstr "První reakce"
 msgid "Fixed Email Accounts"
 msgstr "Pevné Emailové účty"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:122
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:123
 msgid "Flat Design"
 msgstr "Plochý Design"
 
@@ -7818,7 +7826,7 @@ msgstr "Odpovídat umožněno"
 msgid "Font Awesome"
 msgstr "Font Awesome"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:113
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:114
 msgid "Font size"
 msgstr "Velikost písma"
 
@@ -8489,7 +8497,7 @@ msgstr "Kontrola funčnosti "
 msgid "Health information can be retrieved as JSON using:"
 msgstr "Informace o zdraví mohou být získány jako JSON pomocí:"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:69
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:70
 msgid "Hello! I need help with your product."
 msgstr "Dobrý den! Potřebuji pomoci s vaším produktem."
 
@@ -8594,7 +8602,7 @@ msgstr ""
 msgid "Here you will find the latest activities of your system."
 msgstr "Zde naleznete poslední aktivity ve vašem systému."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:72
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:73
 msgid "Hi! Which one of our products?"
 msgstr "Zdravím! Který z našich produktů?"
 
@@ -8715,8 +8723,8 @@ msgid ""
 "How many of your tickets are coming from email, phone, Twitter, or Facebook? "
 "(Shows percentages for both inbound and outbound tickets.)"
 msgstr ""
-"Kolik z vašich tiketů pochází z e-mailu, telefonu, Twitteru nebo Facebooku? ("
-"Ukazuje procenta jak pro příchozí, tak pro odchozí tikety.)"
+"Kolik z vašich tiketů pochází z e-mailu, telefonu, Twitteru nebo Facebooku? "
+"(Ukazuje procenta jak pro příchozí, tak pro odchozí tikety.)"
 
 #: app/assets/javascripts/app/controllers/_dashboard/stats/ticket_reopen.coffee:9
 msgid ""
@@ -8785,7 +8793,7 @@ msgstr "URL ikony"
 msgid "Identifier"
 msgstr "Identifikátor"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:36
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:37
 msgid "Identifier of the chat topic."
 msgstr "Identifikátor tématu konverzace."
 
@@ -8807,7 +8815,7 @@ msgstr ""
 "Pokud je uživatel nalezen ve dvou (nebo více) nakonfigurovaných LDAP "
 "zdrojích, poslední synchronizace vyhrává."
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:54
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:55
 msgid ""
 "If left empty, the host gets auto-detected - in this case %s. The auto-"
 "detection reads out the host from the <script> tag. If you don't include it "
@@ -8841,7 +8849,7 @@ msgid "If this regex matches, no notification will be sent by the sender."
 msgstr ""
 "Při shodě regulárního výrazu nebude odesílatelem zasláno žádné oznámení."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:178
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:179
 msgid ""
 "If you don't already use jQuery on your website, you can add it like this:"
 msgstr ""
@@ -8894,7 +8902,7 @@ msgstr ""
 "Pokud chcete přesunout již uložené přílohy z jednoho backendu do druhého, je "
 "nutné spustit následující úlohu Rails/Rake."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:162
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:163
 msgid ""
 "If you want to open the chat by clicking a button, set the option §show§ to "
 "§false§ and add the class §open-zammad-chat§ to the button."
@@ -9249,7 +9257,7 @@ msgstr "Vložit text z článku Znalostní báze"
 msgid "Insert text from text module"
 msgstr "Vložit text z textového modulu"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:138
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:139
 msgid ""
 "Insert the widget code into the source code of every page the chat shall be "
 "visible on. It should be placed at the end of the page's source code before "
@@ -9605,7 +9613,7 @@ msgstr "Leden"
 msgid "Job is waiting to get started…"
 msgstr "Úloha čeká na zahájení…"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:58
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:59
 msgid "John Smith"
 msgstr "Jan Novák"
 
@@ -10136,7 +10144,7 @@ msgstr "Lokalizace změn provedení"
 msgid "Location"
 msgstr "Lokalita"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:103
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:104
 msgid "Location of an external chat.css file."
 msgstr "Umístění externího souboru chat.css."
 
@@ -10554,7 +10562,7 @@ msgstr "Upravte své nastavení oznámení"
 msgid "Management"
 msgstr "Správa"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:161
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:162
 msgid "Manually open chat"
 msgstr "Ručně otevřít chat"
 
@@ -12286,7 +12294,7 @@ msgid "One of the required parameters must be provided, but none was found."
 msgstr ""
 "Jeden z požadovaných parametrů musí být vložen, ale žádný nebyl nalezen."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:49
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:50
 #: public/assets/chat/chat.coffee:207
 msgid "Online"
 msgstr "Online"
@@ -12509,7 +12517,7 @@ msgid "Operating system"
 msgstr ""
 
 #: app/assets/javascripts/app/views/agent_ticket_view/content.jst.eco:7
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:222
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:223
 #: app/assets/javascripts/app/views/channel/form.jst.eco:60
 #: app/assets/javascripts/app/views/object_manager/screens.jst.eco:7
 #: app/assets/javascripts/app/views/profile/calendar_subscriptions.jst.eco:42
@@ -14040,7 +14048,7 @@ msgstr "Odstraní jakýkoli hypertextový odkaz"
 msgid "Removes the formatting"
 msgstr "Odstraní formátování"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:79
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:80
 msgid "Removes the shadows for a flat look."
 msgstr "Odstraní stíny textu, čímž se dosáhne ploché zobrazení."
 
@@ -14168,7 +14176,7 @@ msgstr "Chybí požadovaný parametr 'downloadBackendSelected'."
 msgid "Required parameter 'profile' is missing."
 msgstr "Chybí požadovaný parametr'profile'."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:177
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:178
 #: app/assets/javascripts/app/views/channel/form.jst.eco:147
 msgid "Requirements"
 msgstr "Požadavky"
@@ -15215,7 +15223,7 @@ msgstr "Zvolte modul generování čísla tiketu."
 msgid "Select…"
 msgstr "Vyberte…"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:77
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:78
 #: app/assets/javascripts/app/views/customer_chat/chat_window.jst.eco:58
 #: public/assets/chat/views/chat.eco:25
 msgid "Send"
@@ -15646,7 +15654,8 @@ msgstr "Zobrazit detaily vyhledávání"
 #: db/seeds/settings.rb:875
 msgid ""
 "Show additional notes for ticket creation depending on the selected type."
-msgstr "Zobrazit doplňující poznámky pro vytvoření tiketu podle vybraného typu."
+msgstr ""
+"Zobrazit doplňující poznámky pro vytvoření tiketu podle vybraného typu."
 
 #: app/assets/javascripts/app/views/generic/ticket_list.jst.eco:40
 #: app/assets/javascripts/app/views/widget/ticket_stats_list.jst.eco:11
@@ -15663,7 +15672,7 @@ msgstr "Autentizace pomocí %s"
 msgid "Show calendar weeks in the picker of date/datetime fields"
 msgstr "Zobrazovat kalendářní týdny ve výběru polí datum/čas"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:149
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:150
 msgid "Show chat automatically"
 msgstr "Zobrazovat chat automaticky"
 
@@ -15705,7 +15714,7 @@ msgstr ""
 msgid "Show previous tab"
 msgstr "Zobrazit předchozí záložku"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:42
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:43
 msgid "Show the chat when ready."
 msgstr "Pokud to lze, chat se zobrazí."
 
@@ -15745,7 +15754,7 @@ msgstr "Zobrazit sledované tikety"
 msgid "Shown records in caller log."
 msgstr "Zobrazených záznamů v historii volání."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:94
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:95
 msgid "Shown when the chat is closed."
 msgstr "Zobrazí se, když je chat zavřený."
 
@@ -16969,7 +16978,7 @@ msgstr "Avatar se nepodařilo smazat."
 msgid "The avatar could not be uploaded."
 msgstr "Avatar se nepodařilo nahrát."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:212
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:213
 msgid ""
 "The browser is outdated. It does not support WebSocket - the technology we "
 "use for the chat."
@@ -17101,11 +17110,11 @@ msgstr "Certifikáty pro %s nebyly nalezeny."
 msgid "The changes could not be saved."
 msgstr "Změny se nepodařilo uložit."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:214
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:215
 msgid "The chat is turned off."
 msgstr "Chat je vypnutý."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:150
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:151
 msgid ""
 "The chat will show up once the connection to the server got established and "
 "if there is an operator online to chat with."
@@ -17179,7 +17188,7 @@ msgstr ""
 "podpora\", \"priklad.cz\" nebo \"priklad.cz/podpora\"). Poté následujte "
 "instrukce v \"Konfiguraci webového serveru\" pro úspěšné dokončení nastavení."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:118
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:119
 msgid "The default font size is 12px."
 msgstr "Výchozí velikost písma je 12px."
 
@@ -18252,11 +18261,11 @@ msgstr ""
 msgid "There are no enabled two-factor authentication methods."
 msgstr "Nelze odebrat metodu dvou faktorové autentizace"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:210
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:211
 msgid "There are several possible reasons why the chat won't show up:"
 msgstr "Pokud se chat nezobrazuje, může to být z několika důvodů:"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:215
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:216
 msgid "There are too many people in the chat queue."
 msgstr "Ve frontě chatu je příliš mnoho návštěvníků."
 
@@ -18281,7 +18290,7 @@ msgstr "Není nakonfigurována žádná Google aplikace."
 msgid "There is no Twitter app configured."
 msgstr "Není nakonfigurována žádná Twitter aplikace."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:213
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:214
 msgid "There is no agent online."
 msgstr "Žádný řešitel není online."
 
@@ -18429,7 +18438,7 @@ msgstr "Zásoba této kategorie včetně podkategorií:"
 msgid "This category is empty"
 msgstr "Tato kategorie je prázdná"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:91
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:92
 msgid ""
 "This class gets added to the button on initialization and will be removed "
 "once the chat connection is established."
@@ -19256,8 +19265,8 @@ msgstr ""
 "\n"
 "<div>Dobrý den, #{recipient.firstname},</div>\n"
 "<br>\n"
-"<div>tiket (#{ticket.title}) uživatele \"<b>#{ticket.customer.longname}</b>\""
-" bude \"#{ticket.escalation_at}\" eskalovat!</div>\n"
+"<div>tiket (#{ticket.title}) uživatele \"<b>#{ticket.customer.longname}</"
+"b>\" bude \"#{ticket.escalation_at}\" eskalovat!</div>\n"
 "<br>\n"
 "<% if @objects[:article] %>\n"
 "  <div>\n"
@@ -19872,7 +19881,8 @@ msgstr ""
 
 #: app/assets/javascripts/app/views/twitter/account_edit.jst.eco:5
 msgid "Tweets containing search terms are automatically turned into tickets."
-msgstr "Z tweetů obsahujících hledané výrazy jsou automaticky vytvářeny tikety."
+msgstr ""
+"Z tweetů obsahujících hledané výrazy jsou automaticky vytvářeny tikety."
 
 #: app/assets/javascripts/app/controllers/_channel/twitter.coffee:197
 #: app/assets/javascripts/app/controllers/_profile/linked_accounts.coffee:71
@@ -20039,7 +20049,7 @@ msgstr "Metoda dvoufaktorového ověřování byla úspěšně nastavena."
 #: app/assets/javascripts/app/controllers/widget/ticket_bulk_form.coffee:70
 #: app/assets/javascripts/app/models/ticket_article.coffee:12
 #: app/assets/javascripts/app/models/ticket_state.coffee:7
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:229
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:230
 #: app/assets/javascripts/app/views/generic/sla_times.jst.eco:5
 #: app/assets/javascripts/app/views/integration/check_mk.jst.eco:11
 #: app/assets/javascripts/app/views/integration/cti.jst.eco:11
@@ -20433,8 +20443,8 @@ msgstr ""
 "<br>\n"
 "<div>\n"
 "  <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}<% "
-"if @objects[:article] %>/#{article.id}<% end %>\" target=\"zammad_app\""
-">Zobrazit v aplikaci #{config.product_name}</a>\n"
+"if @objects[:article] %>/#{article.id}<% end %>\" "
+"target=\"zammad_app\">Zobrazit v aplikaci #{config.product_name}</a>\n"
 "</div>\n"
 
 #. This is the template file app/views/mailer/ticket_article_update_reaction/en.html.erb in ERB/HTML format.
@@ -20484,9 +20494,9 @@ msgstr ""
 "<% end %>\n"
 "<br>\n"
 "<div>\n"
-"  <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/"
-"#{ticket.id}/#{article.id}\" target=\"zammad_app\">Zobrazit toto v "
-"#{config.product_name}</a>\n"
+"  <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}/"
+"#{article.id}\" target=\"zammad_app\">Zobrazit toto v #{config.product_name}"
+"</a>\n"
 "</div>\n"
 
 #: app/assets/javascripts/app/views/object_manager/index.jst.eco:45
@@ -20535,7 +20545,7 @@ msgstr "Nahrát"
 msgid "Uploading"
 msgstr "Nahrávám"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:136
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:137
 #: app/assets/javascripts/app/views/integration/check_mk.jst.eco:3
 msgid "Usage"
 msgstr "Použití"
@@ -21168,7 +21178,7 @@ msgstr "Weibo"
 msgid "Weibo App Credentials"
 msgstr "Aplikační pověření Weibo"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:67
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:68
 msgid "Welcome Title shown on the closed chat. Can contain HTML."
 msgstr ""
 "Uvítací nadpis zobrazení na zavřeném chatu. Může obsahovat HTML elementy."
@@ -21261,7 +21271,7 @@ msgstr "V průběhu odesílání oznámení."
 msgid "When should the job run?"
 msgstr "Kdy spustit úkol?"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:217
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:218
 msgid ""
 "When you turn on debugging by setting the option §debug§ to §true§ the "
 "reason gets printed to the javascript console."
@@ -21273,11 +21283,11 @@ msgstr ""
 msgid "Where"
 msgstr "Kde"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:48
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:49
 msgid "Where to append the chat to."
 msgstr "Ke kterému elementu chat připnout."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:208
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:209
 msgid "Why doesn't the chat show up?"
 msgstr "Proč se chat nezobrazuje?"
 
@@ -21373,9 +21383,9 @@ msgid ""
 "\"Year.Month.Day.SystemID.Counter\" (e.g. 201206231010138, 201206231010139)."
 msgstr ""
 "S |Datem| budou čísla tiketů generována dle aktuálního data, systémového ID "
-"a počítadla. Výsledek bude ve formátu \"Rok.Měsíc.Den.SystémovéID.Počítadlo\""
-" (např. 201706231010138 kde 2017 je rok, 06 měsíc, 23 den v měsíci, 101 "
-"systémové ID a 0138 hodnota počítadla)."
+"a počítadla. Výsledek bude ve formátu "
+"\"Rok.Měsíc.Den.SystémovéID.Počítadlo\" (např. 201706231010138 kde 2017 je "
+"rok, 06 měsíc, 23 den v měsíci, 101 systémové ID a 0138 hodnota počítadla)."
 
 #: app/assets/javascripts/app/controllers/email_verify.coffee:35
 #: app/frontend/apps/desktop/pages/authentication/views/SignupVerify.vue:47
@@ -22400,7 +22410,7 @@ msgstr "dní(dny)"
 msgid "deactivated"
 msgstr "vypnuto"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:149
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:150
 #: db/seeds/signatures.rb:5
 msgid "default"
 msgstr "výchozí"
@@ -23517,7 +23527,7 @@ msgstr "pro odchod na domovskou stránku."
 #: app/assets/javascripts/app/controllers/_ui_element/core_workflow_condition.coffee:65
 #: app/assets/javascripts/app/controllers/_ui_element/object_selector.coffee:52
 #: app/assets/javascripts/app/controllers/chat.coffee:757
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:67
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:68
 msgid "today"
 msgstr "dnes"
 

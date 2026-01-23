@@ -1661,7 +1661,7 @@ msgstr "إضافة علامة"
 msgid "Add third level heading"
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:85
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:86
 msgid "Add this class to a button on your page that should open the chat."
 msgstr "أضف هذا الصف إلى زر في صفحتك يجب أن يفتح الدردشة."
 
@@ -1981,6 +1981,13 @@ msgstr ""
 #, fuzzy
 #| msgid "Unable to verify email. Please contact your administrator."
 msgid "An error occured during the operation."
+msgstr ""
+"غير قادر على التحقق من البريد الإلكتروني. يرجى الاتصال بالمسؤول الخاص بك."
+
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:251
+#, fuzzy
+#| msgid "Unable to verify email. Please contact your administrator."
+msgid "An error occurred while fetching the website preview."
 msgstr ""
 "غير قادر على التحقق من البريد الإلكتروني. يرجى الاتصال بالمسؤول الخاص بك."
 
@@ -2773,7 +2780,7 @@ msgstr ""
 "إثراء عملائك ومؤسساتك تلقائيًا باستخدام معلومات حديثة ومحدثة. تعيين البيانات "
 "مباشرة إلى حقول الكائن."
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:97
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:98
 msgid ""
 "Automatically loads the chat.css file. If you want to use your own css, just "
 "set it to false."
@@ -2881,7 +2888,7 @@ msgstr "العودة إلى وجهة نظري"
 msgid "Back to search results"
 msgstr "العودة إلى نتائج البحث"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:98
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:99
 msgid "Background color"
 msgstr "لون الخلفية"
 
@@ -3106,7 +3113,7 @@ msgstr ""
 msgid "CMDB to document complex relations of your network components."
 msgstr "CMDB لتوثيق العلاقات المعقدة لمكونات الشبكة الخاصة بك."
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:73
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:74
 #, fuzzy
 #| msgid ""
 #| "CSS font-size with a unit like 12px, 1.5em. If left to undefined it "
@@ -3223,7 +3230,7 @@ msgstr "سجل المتصل"
 msgid "Camera"
 msgstr "الة تصوير"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:109
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:110
 msgid "Can be in any CSS color format."
 msgstr "يمكن أن يكون بأي تنسيق للون CSS."
 
@@ -3533,7 +3540,7 @@ msgstr "دردشة"
 msgid "Chat Session"
 msgstr "جلسة"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:89
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:90
 msgid "Chat Title"
 msgstr "عنوان المحادثة"
 
@@ -3546,7 +3553,7 @@ msgstr ""
 msgid "Chat not answered, automatically set to offline."
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:381
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:397
 msgid "Chats"
 msgstr ""
 
@@ -5148,7 +5155,7 @@ msgstr "تم التسجيل بنجاح!"
 
 #: app/assets/javascripts/app/controllers/_ui_element/object_manager_attribute.coffee:239
 #: app/assets/javascripts/app/views/calendar/index.jst.eco:32
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:228
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:229
 #: app/assets/javascripts/app/views/generic/multi_locales.jst.eco:5
 #: app/assets/javascripts/app/views/generic/table_row.jst.eco:78
 #: app/assets/javascripts/app/views/object_manager/attribute/boolean.jst.eco:8
@@ -6352,7 +6359,7 @@ msgstr "قسم"
 #: app/assets/javascripts/app/controllers/translation.coffee:183
 #: app/assets/javascripts/app/views/calendar/holiday_selector.jst.eco:6
 #: app/assets/javascripts/app/views/calendar/index.jst.eco:8
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:230
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:231
 #: app/assets/javascripts/app/views/data_privacy/index.jst.eco:7
 #: app/assets/javascripts/app/views/generic/admin/index.jst.eco:7
 #: app/assets/javascripts/app/views/integration/clearbit.jst.eco:9
@@ -7383,7 +7390,7 @@ msgid ""
 "auth/sso on user interaction."
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:61
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:62
 msgid "Enables console logging."
 msgstr "تمكين تسجيل وحدة التحكم."
 
@@ -8312,7 +8319,7 @@ msgstr "الرد الأول"
 msgid "Fixed Email Accounts"
 msgstr "حسابات البريد الإلكتروني الثابتة"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:122
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:123
 msgid "Flat Design"
 msgstr "Flat Design"
 
@@ -8351,7 +8358,7 @@ msgstr "المتابعة ممكنة "
 msgid "Font Awesome"
 msgstr ""
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:113
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:114
 msgid "Font size"
 msgstr "حجم الخط"
 
@@ -9109,7 +9116,7 @@ msgstr "فحص طبي"
 msgid "Health information can be retrieved as JSON using:"
 msgstr "يمكن استرداد المعلومات الصحية باستخدام JSON"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:69
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:70
 msgid "Hello! I need help with your product."
 msgstr "مرحبا! أحتاج إلى مساعدة في منتجك. "
 
@@ -9214,7 +9221,7 @@ msgstr ""
 msgid "Here you will find the latest activities of your system."
 msgstr "ستجد هنا أحدث أنشطة نظامك."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:72
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:73
 msgid "Hi! Which one of our products?"
 msgstr "مرحبا! أي من منتجاتنا؟ "
 
@@ -9417,7 +9424,7 @@ msgstr "أيقونة"
 msgid "Identifier"
 msgstr "لم يتم التحقق من الحساب"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:36
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:37
 #, fuzzy
 #| msgid "Identifier of the chat-topic."
 msgid "Identifier of the chat topic."
@@ -9439,7 +9446,7 @@ msgid ""
 "synchronisation will win."
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:54
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:55
 msgid ""
 "If left empty, the host gets auto-detected - in this case %s. The auto-"
 "detection reads out the host from the <script> tag. If you don't include it "
@@ -9476,7 +9483,7 @@ msgstr "إذا كان المرسل وكيلًا ، فعين أول مستخدم 
 msgid "If this regex matches, no notification will be sent by the sender."
 msgstr "إذا تطابق التعبير العادي هذا ، فلن يتم إرسال إشعار من قبل المرسل."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:178
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:179
 #, fuzzy
 #| msgid ""
 #| "Zammad Chat requires jQuery. If you don't already use it on your website "
@@ -9535,7 +9542,7 @@ msgstr ""
 "إذا كنت تريد نقل المرفقات المخزنة بالفعل من خلفية إلى أخرى ، فستحتاج إلى "
 "تنفيذ ما يلي عبر وحدة التحكم."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:162
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:163
 #, fuzzy
 #| msgid ""
 #| "If you want to open the chat by the press of a button set the option "
@@ -9935,7 +9942,7 @@ msgstr "حذف قاعدة المعارف"
 msgid "Insert text from text module"
 msgstr "وحدة نصية جديدة"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:138
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:139
 msgid ""
 "Insert the widget code into the source code of every page the chat shall be "
 "visible on. It should be placed at the end of the page's source code before "
@@ -10299,7 +10306,7 @@ msgstr "كانون الثاني"
 msgid "Job is waiting to get started…"
 msgstr "المهمة في انتظار البدء ..."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:58
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:59
 msgid "John Smith"
 msgstr "جون سميث"
 
@@ -10897,7 +10904,7 @@ msgstr "تم تنفيذ الإجراء المجمّع!"
 msgid "Location"
 msgstr "موقعك"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:103
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:104
 msgid "Location of an external chat.css file."
 msgstr "موقع ملف chat.css خارجي."
 
@@ -11399,7 +11406,7 @@ msgstr "إدارة إعدادات الإخطارات الخاصة بك"
 msgid "Management"
 msgstr "إدارة"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:161
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:162
 msgid "Manually open chat"
 msgstr "فتح الدردشة يدويًا"
 
@@ -13206,7 +13213,7 @@ msgstr "بعد الانتهاء..."
 msgid "One of the required parameters must be provided, but none was found."
 msgstr ""
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:49
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:50
 #: public/assets/chat/chat.coffee:207
 msgid "Online"
 msgstr "عبر الانترنت"
@@ -13443,7 +13450,7 @@ msgid "Operating system"
 msgstr ""
 
 #: app/assets/javascripts/app/views/agent_ticket_view/content.jst.eco:7
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:222
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:223
 #: app/assets/javascripts/app/views/channel/form.jst.eco:60
 #: app/assets/javascripts/app/views/object_manager/screens.jst.eco:7
 #: app/assets/javascripts/app/views/profile/calendar_subscriptions.jst.eco:42
@@ -15045,7 +15052,7 @@ msgstr "يزيل أي ارتباط تشعبي"
 msgid "Removes the formatting"
 msgstr "يزيل التنسيق"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:79
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:80
 msgid "Removes the shadows for a flat look."
 msgstr "يزيل الظلال للحصول على مظهر مسطح."
 
@@ -15185,7 +15192,7 @@ msgstr ""
 msgid "Required parameter 'profile' is missing."
 msgstr ""
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:177
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:178
 #: app/assets/javascripts/app/views/channel/form.jst.eco:147
 msgid "Requirements"
 msgstr "المتطلبات"
@@ -16191,7 +16198,7 @@ msgstr "يحدد وحدة مولد رقم التذكرة."
 msgid "Select…"
 msgstr "حدد قالب"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:77
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:78
 #: app/assets/javascripts/app/views/customer_chat/chat_window.jst.eco:58
 #: public/assets/chat/views/chat.eco:25
 msgid "Send"
@@ -16677,7 +16684,7 @@ msgstr "المصادقة عبر %s"
 msgid "Show calendar weeks in the picker of date/datetime fields"
 msgstr ""
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:149
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:150
 msgid "Show chat automatically"
 msgstr ""
 
@@ -16721,7 +16728,7 @@ msgstr ""
 msgid "Show previous tab"
 msgstr "علامة التبويب السابقة"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:42
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:43
 msgid "Show the chat when ready."
 msgstr "اعرض الدردشة عندما تكون مستعدًا."
 
@@ -16773,7 +16780,7 @@ msgstr "نظرة عامة"
 msgid "Shown records in caller log."
 msgstr ""
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:94
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:95
 msgid "Shown when the chat is closed."
 msgstr "تظهر عندما يتم إغلاق الدردشة."
 
@@ -18031,7 +18038,7 @@ msgstr "يتم تحديث كائن (كائنات)%s."
 msgid "The avatar could not be uploaded."
 msgstr "يتم إنشاء %s كائن (كائنات)."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:212
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:213
 msgid ""
 "The browser is outdated. It does not support WebSocket - the technology we "
 "use for the chat."
@@ -18152,11 +18159,11 @@ msgstr "صوت الإشعار"
 msgid "The changes could not be saved."
 msgstr ""
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:214
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:215
 msgid "The chat is turned off."
 msgstr "تم إيقاف الدردشة."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:150
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:151
 #, fuzzy
 #| msgid ""
 #| "The chat will show up once the connection to the server got established "
@@ -18226,7 +18233,7 @@ msgstr ""
 "(على سبيل المثال ، \"/ support\" أو \"example.com\" أو \"example.com/"
 "support\"). بعد ذلك ، اتبع التوجيهات ضمن \"تكوين خادم الويب\" لإكمال العملية."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:118
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:119
 msgid "The default font size is 12px."
 msgstr "حجم الخط الافتراضي هو 12 بكسل."
 
@@ -19294,13 +19301,13 @@ msgstr ""
 "Login failed. Have you double-checked your credentials and completed the "
 "email verification step?"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:210
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:211
 #, fuzzy
 #| msgid "There can be several reasons for the chat to not show up:"
 msgid "There are several possible reasons why the chat won't show up:"
 msgstr "يمكن أن تكون هناك عدة أسباب لعدم ظهور الدردشة:"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:215
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:216
 #, fuzzy
 #| msgid "There are too many people in queue for the chat."
 msgid "There are too many people in the chat queue."
@@ -19331,7 +19338,7 @@ msgstr "لا يوجد وكيل على الإنترنت."
 msgid "There is no Twitter app configured."
 msgstr "غير مهيأ"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:213
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:214
 msgid "There is no agent online."
 msgstr "لا يوجد وكيل على الإنترنت."
 
@@ -19496,7 +19503,7 @@ msgstr ""
 msgid "This category is empty"
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:91
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:92
 #, fuzzy
 #| msgid ""
 #| "This class gets added to the button on initialization and gets removed "
@@ -21163,7 +21170,7 @@ msgstr "تم تشغيل الاختبار بنجاح."
 #: app/assets/javascripts/app/controllers/widget/ticket_bulk_form.coffee:70
 #: app/assets/javascripts/app/models/ticket_article.coffee:12
 #: app/assets/javascripts/app/models/ticket_state.coffee:7
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:229
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:230
 #: app/assets/javascripts/app/views/generic/sla_times.jst.eco:5
 #: app/assets/javascripts/app/views/integration/check_mk.jst.eco:11
 #: app/assets/javascripts/app/views/integration/cti.jst.eco:11
@@ -21609,7 +21616,7 @@ msgstr "تحميل"
 msgid "Uploading"
 msgstr "تحميل"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:136
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:137
 #: app/assets/javascripts/app/views/integration/check_mk.jst.eco:3
 msgid "Usage"
 msgstr "الاستخدام"
@@ -22251,7 +22258,7 @@ msgstr ""
 msgid "Weibo App Credentials"
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:67
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:68
 msgid "Welcome Title shown on the closed chat. Can contain HTML."
 msgstr "عنوان الترحيب يظهر في الدردشة المغلقة. يمكن أن يحتوي على HTML."
 
@@ -22339,7 +22346,7 @@ msgstr "عندما يتم إرسال الإخطار."
 msgid "When should the job run?"
 msgstr "متى يجب تشغيل الوظيفة؟"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:217
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:218
 msgid ""
 "When you turn on debugging by setting the option §debug§ to §true§ the "
 "reason gets printed to the javascript console."
@@ -22351,11 +22358,11 @@ msgstr ""
 msgid "Where"
 msgstr "أين"
 
-#: app/assets/javascripts/app/controllers/_channel/chat.coffee:48
+#: app/assets/javascripts/app/controllers/_channel/chat.coffee:49
 msgid "Where to append the chat to."
 msgstr "مكان إلحاق المحادثة."
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:208
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:209
 msgid "Why doesn't the chat show up?"
 msgstr "لماذا لا تظهر الدردشة؟"
 
@@ -23477,7 +23484,7 @@ msgstr "أيام"
 msgid "deactivated"
 msgstr "معطلة"
 
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:149
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:150
 #: db/seeds/signatures.rb:5
 msgid "default"
 msgstr ""
@@ -24661,7 +24668,7 @@ msgstr ""
 #: app/assets/javascripts/app/controllers/_ui_element/core_workflow_condition.coffee:65
 #: app/assets/javascripts/app/controllers/_ui_element/object_selector.coffee:52
 #: app/assets/javascripts/app/controllers/chat.coffee:757
-#: app/assets/javascripts/app/views/channel/chat.jst.eco:67
+#: app/assets/javascripts/app/views/channel/chat.jst.eco:68
 msgid "today"
 msgstr "اليوم"
 
