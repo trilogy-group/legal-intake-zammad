@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zammad\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2026-01-08 22:00+0000\n"
+"PO-Revision-Date: 2026-01-26 09:01+0000\n"
 "Last-Translator: Andi Chandler <andi@gowling.com>\n"
 "Language-Team: English (United Kingdom) <https://translations.zammad.org/"
 "projects/zammad/zammad-stable/en_GB/>\n"
@@ -1832,10 +1832,8 @@ msgid "An error occured during the operation."
 msgstr "An error occurred during the operation."
 
 #: app/assets/javascripts/app/controllers/_channel/chat.coffee:251
-#, fuzzy
-#| msgid "An error occured during the operation."
 msgid "An error occurred while fetching the website preview."
-msgstr "An error occurred during the operation."
+msgstr "An error occurred while fetching the website preview."
 
 #: app/assets/javascripts/app/controllers/_ui_element/object_manager_attribute.coffee:997
 #: app/assets/javascripts/app/views/integration/exchange_last_import.jst.eco:5
@@ -2028,11 +2026,11 @@ msgstr "Apply filter…"
 #: app/assets/javascripts/app/controllers/report.coffee:220
 #: app/assets/javascripts/app/controllers/time_accounting_accounted_time.coffee:26
 msgid "Apr"
-msgstr ""
+msgstr "Apr"
 
 #: app/assets/javascripts/app/controllers/_ui_element/basedate.coffee:160
 msgid "April"
-msgstr ""
+msgstr "April"
 
 #: app/assets/javascripts/app/controllers/knowledge_base/content_controller.coffee:141
 msgid "Archive"

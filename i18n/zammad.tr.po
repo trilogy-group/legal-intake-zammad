@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zammad\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-12-19 22:00+0000\n"
-"Last-Translator: Murat Özalp <cunyor@gmail.com>\n"
+"PO-Revision-Date: 2026-01-26 09:02+0000\n"
+"Last-Translator: Murat Duman <mduman@metu.edu.tr>\n"
 "Language-Team: Turkish <https://translations.zammad.org/projects/zammad/"
 "zammad-stable/tr/>\n"
 "Language: tr\n"
@@ -1870,10 +1870,8 @@ msgid "An error occured during the operation."
 msgstr "İşlem sırasında bir hata oluştu."
 
 #: app/assets/javascripts/app/controllers/_channel/chat.coffee:251
-#, fuzzy
-#| msgid "An error occured during the operation."
 msgid "An error occurred while fetching the website preview."
-msgstr "İşlem sırasında bir hata oluştu."
+msgstr "Web site önizlemesi alınırken bir hata oluştu."
 
 #: app/assets/javascripts/app/controllers/_ui_element/object_manager_attribute.coffee:997
 #: app/assets/javascripts/app/views/integration/exchange_last_import.jst.eco:5

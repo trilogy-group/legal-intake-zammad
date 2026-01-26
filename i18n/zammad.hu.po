@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zammad\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2026-01-08 22:00+0000\n"
+"PO-Revision-Date: 2026-01-26 09:01+0000\n"
 "Last-Translator: Karoly Nagy <cpt.charlesg@gmail.com>\n"
 "Language-Team: Hungarian <https://translations.zammad.org/projects/zammad/"
 "zammad-stable/hu/>\n"
@@ -1878,10 +1878,8 @@ msgid "An error occured during the operation."
 msgstr "Hiba történt a művelet során."
 
 #: app/assets/javascripts/app/controllers/_channel/chat.coffee:251
-#, fuzzy
-#| msgid "An error occured during the operation."
 msgid "An error occurred while fetching the website preview."
-msgstr "Hiba történt a művelet során."
+msgstr "Hiba történt a weboldal előnézetének betöltése során."
 
 #: app/assets/javascripts/app/controllers/_ui_element/object_manager_attribute.coffee:997
 #: app/assets/javascripts/app/views/integration/exchange_last_import.jst.eco:5
