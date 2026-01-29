@@ -58,7 +58,7 @@ class Service::AI::Analytics::GenerateReport::Base < Service::Base
       .in_batches(of: BATCH_SIZE, order: :desc)
       .take(RESULT_SIZE / BATCH_SIZE)
       .each do |batch|
-        enrich_batch(batch).each(&)
+        enrich_batch(batch).order(id: :desc).each(&)
       end
   end
 
