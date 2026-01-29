@@ -135,5 +135,43 @@ RSpec.describe Service::AI::Analytics::GenerateReport::WithUsages do
           )
       end
     end
+
+    context 'when multiple records exist' do
+      let(:ai_analytics_run_1) { create(:ai_analytics_run) }
+      let(:ai_analytics_run_2) { create(:ai_analytics_run) }
+      let(:ai_analytics_run_3) { create(:ai_analytics_run) }
+
+      before do
+        ai_analytics_run_1
+        ai_analytics_run_2
+        ai_analytics_run_3
+      end
+
+      it 'returns records ordered by id descending (newest first)' do
+        parsed_records = described_class.new.send(:parsed_records)
+        record_ids = parsed_records.map { |record| record[:id] }
+
+        expect(record_ids).to eq([ai_analytics_run_3.id, ai_analytics_run_2.id, ai_analytics_run_1.id])
+      end
+    end
+
+    context 'when records exceed the batch limit' do
+      before do
+        stub_const('Service::AI::Analytics::GenerateReport::Base::BATCH_SIZE', 2)
+        stub_const('Service::AI::Analytics::GenerateReport::Base::RESULT_SIZE', 4)
+
+        # Create records in a specific order
+        create_list(:ai_analytics_run, 5)
+      end
+
+      it 'returns only the newest records up to the result limit' do
+        parsed_records = described_class.new.send(:parsed_records)
+        record_ids = parsed_records.map { |record| record[:id] }
+
+        # Should return only the 4 newest records (highest IDs) in descending order
+        all_ids = AI::Analytics::Run.order(id: :desc).limit(4).pluck(:id)
+        expect(record_ids).to eq(all_ids)
+      end
+    end
   end
 end
