@@ -155,22 +155,39 @@ RSpec.describe Service::AI::Analytics::GenerateReport::WithUsages do
       end
     end
 
-    context 'when records exceed the batch limit' do
+    context 'when records span multiple batches' do
       before do
+        # Use small batch size to test batching with few records
         stub_const('Service::AI::Analytics::GenerateReport::Base::BATCH_SIZE', 2)
-        stub_const('Service::AI::Analytics::GenerateReport::Base::RESULT_SIZE', 4)
-
-        # Create records in a specific order
-        create_list(:ai_analytics_run, 5)
       end
 
-      it 'returns only the newest records up to the result limit' do
+      let!(:ai_analytics_runs) { create_list(:ai_analytics_run, 5) }
+
+      it 'returns all records ordered by id descending across batch boundaries' do
+        parsed_records = described_class.new.send(:parsed_records)
+        record_ids = parsed_records.map { |record| record[:id] }
+
+        # With BATCH_SIZE=2, records are processed in batches: [5,4], [3,2], [1]
+        # All should be returned in descending order: 5, 4, 3, 2, 1
+        expected_ids = ai_analytics_runs.map(&:id).sort.reverse
+        expect(record_ids).to eq(expected_ids)
+      end
+
+      it 'respects the result limit when records exceed it' do
+        # Create one more record to exceed the result limit
+        extra_run = create(:ai_analytics_run)
+
+        # With BATCH_SIZE=2 and RESULT_SIZE=4, we take 2 batches (4 records max)
+        stub_const('Service::AI::Analytics::GenerateReport::Base::RESULT_SIZE', 4)
+
         parsed_records = described_class.new.send(:parsed_records)
         record_ids = parsed_records.map { |record| record[:id] }
 
         # Should return only the 4 newest records (highest IDs) in descending order
         all_ids = AI::Analytics::Run.order(id: :desc).limit(4).pluck(:id)
         expect(record_ids).to eq(all_ids)
+        expect(record_ids).to include(extra_run.id)
+        expect(record_ids.length).to eq(4)
       end
     end
   end
