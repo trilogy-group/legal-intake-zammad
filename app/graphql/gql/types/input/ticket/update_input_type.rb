@@ -9,7 +9,13 @@ module Gql::Types::Input::Ticket
     end
 
     # Arguments optional in update.
-    argument :group_id, GraphQL::Types::ID, required: false, description: 'The group of the ticket.', loads: Gql::Types::GroupType
+    argument :group_id,
+             GraphQL::Types::ID,
+             required:    false,
+             description: 'The group of the ticket.',
+             loads:       Gql::Types::GroupType,
+             prepare:     only_for_ticket_agents
+
     argument :title, Gql::Types::NonEmptyStringType, required: false, description: 'The title of the ticket.'
 
     # Arguments specific to update.
