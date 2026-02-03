@@ -149,7 +149,7 @@ RSpec.describe Service::AI::Analytics::GenerateReport::WithUsages do
 
       it 'returns records ordered by id descending (newest first)' do
         parsed_records = described_class.new.send(:parsed_records)
-        record_ids = parsed_records.map { |record| record[:id] }
+        record_ids = parsed_records.pluck(:id)
 
         expect(record_ids).to eq([ai_analytics_run_3.id, ai_analytics_run_2.id, ai_analytics_run_1.id])
       end
@@ -165,7 +165,7 @@ RSpec.describe Service::AI::Analytics::GenerateReport::WithUsages do
 
       it 'returns all records ordered by id descending across batch boundaries' do
         parsed_records = described_class.new.send(:parsed_records)
-        record_ids = parsed_records.map { |record| record[:id] }
+        record_ids = parsed_records.pluck(:id)
 
         # With BATCH_SIZE=2, records are processed in batches: [5,4], [3,2], [1]
         # All should be returned in descending order: 5, 4, 3, 2, 1
@@ -173,7 +173,7 @@ RSpec.describe Service::AI::Analytics::GenerateReport::WithUsages do
         expect(record_ids).to eq(expected_ids)
       end
 
-      it 'respects the result limit when records exceed it' do
+      it 'respects the result limit when records exceed it', :aggregate_failures do
         # Create one more record to exceed the result limit
         extra_run = create(:ai_analytics_run)
 
@@ -181,10 +181,10 @@ RSpec.describe Service::AI::Analytics::GenerateReport::WithUsages do
         stub_const('Service::AI::Analytics::GenerateReport::Base::RESULT_SIZE', 4)
 
         parsed_records = described_class.new.send(:parsed_records)
-        record_ids = parsed_records.map { |record| record[:id] }
+        record_ids = parsed_records.pluck(:id)
 
         # Should return only the 4 newest records (highest IDs) in descending order
-        all_ids = AI::Analytics::Run.order(id: :desc).limit(4).pluck(:id)
+        all_ids = AI::Analytics::Run.reorder(id: :desc).limit(4).pluck(:id)
         expect(record_ids).to eq(all_ids)
         expect(record_ids).to include(extra_run.id)
         expect(record_ids.length).to eq(4)
