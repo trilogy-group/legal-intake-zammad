@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zammad\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2026-01-20 22:00+0000\n"
+"PO-Revision-Date: 2026-02-03 22:00+0000\n"
 "Last-Translator: mathew-uems <mathew.chen@edgentauems.com.tw>\n"
 "Language-Team: Chinese (Traditional Han script) <https://"
 "translations.zammad.org/projects/zammad/zammad-stable/zh_Hant/>\n"
@@ -1572,10 +1572,10 @@ msgstr ""
 "\n"
 "<div>#{user.firstname} 您好：</div>\n"
 "<br>\n"
-"<div>#{config.product_name} 系統接收到賬號 <b>#{user.login}</b> 管理登入請"
-"求。</div>\n"
+"<div>#{config.product_name} 系統接收到賬號 <b>#{user.login}</b> "
+"管理登入請求。</div>\n"
 "<br>\n"
-"<div>請點入如下的連結繼續（或復制該網址并粘貼到瀏覽器的網址列）：</div>\n"
+"<div>請點入如下的連結繼續（或複製該網址並黏貼到瀏覽器的網址列）：</div>\n"
 "<br>\n"
 "<div><a href=\"#{url}\">#{url}</a></div>\n"
 "<br>\n"
@@ -1803,10 +1803,8 @@ msgid "An error occured during the operation."
 msgstr "操作過程中出現錯誤。"
 
 #: app/assets/javascripts/app/controllers/_channel/chat.coffee:251
-#, fuzzy
-#| msgid "An error occured during the operation."
 msgid "An error occurred while fetching the website preview."
-msgstr "操作過程中出現錯誤。"
+msgstr "取得網站預覽時發生錯誤。"
 
 #: app/assets/javascripts/app/controllers/_ui_element/object_manager_attribute.coffee:997
 #: app/assets/javascripts/app/views/integration/exchange_last_import.jst.eco:5
@@ -2502,7 +2500,7 @@ msgstr "初始登入時自動建立帳戶連結"
 
 #: db/seeds/settings.rb:1298
 msgid "Automatic account linking notification"
-msgstr "自動帳戶關聯通知"
+msgstr "自動帳戶連結通知"
 
 #: app/assets/javascripts/app/controllers/_channel/whatsapp.coffee:180
 msgid "Automatic reminders"
@@ -6623,7 +6621,8 @@ msgstr ""
 msgid ""
 "Enables sending of an email notification to a user when they link their "
 "account with a third-party application."
-msgstr ""
+msgstr "啟用此功能後，當使用者將其帳戶與第三方應用程式關聯時，系統會向使用者發送電子"
+"郵件通知。"
 
 #: db/seeds/settings.rb:1275
 msgid ""
@@ -6632,9 +6631,9 @@ msgid ""
 "log into Zammad and then link his \"Third Party\" account to his Zammad "
 "account via Profile -> Linked Accounts."
 msgstr ""
-"啟用通過第三方應用程序在初始登錄時自動連結現有帳號的功能。 如果關閉此功能，則"
-"現有使用者必須先登入 Zammad，然後通過 “個人資料” -> “關聯帳戶” 將其 “第三方” "
-"帳號連結到該 Zammad帳號。"
+"啟用通過第三方應用程序在初始登錄時自動連結現有帳號的功能。 如果關閉此功能，"
+"則現有使用者必須先登入 Zammad，然後通過 “個人資料” -> “連結帳戶” 將其 "
+"“第三方” 帳號連結到該 Zammad帳號。"
 
 #: db/seeds/settings.rb:1212
 msgid "Enables user authentication via %s."
@@ -9536,7 +9535,7 @@ msgstr ""
 
 #: app/assets/javascripts/app/views/profile/linked_accounts.jst.eco:3
 msgid "Link Accounts"
-msgstr "外部連結帳號"
+msgstr "連結帳號"
 
 #: app/assets/javascripts/app/controllers/_ui_element/richtext_additions/link_answer_button.coffee:4
 msgid "Link Answer"
@@ -13194,10 +13193,8 @@ msgid "Remember me"
 msgstr "記住我 (請不要在公共電腦勾選此選項)"
 
 #: app/assets/javascripts/app/views/whatsapp/account_phone_number.jst.eco:47
-#, fuzzy
-#| msgid "Welcome message"
 msgid "Reminder message"
-msgstr "歡迎訊息"
+msgstr "提醒訊息"
 
 #: app/assets/javascripts/app/views/generic/postmaster_set_row.jst.eco:17
 msgid "Remote"
@@ -13235,10 +13232,8 @@ msgid "Remove"
 msgstr "移除"
 
 #: app/frontend/shared/components/CommonFilePreview/CommonFilePreview.vue:166
-#, fuzzy
-#| msgid "Remove"
 msgid "Remove %s"
-msgstr "移除"
+msgstr "移除 %s"
 
 #: app/frontend/apps/desktop/components/layout/LayoutSidebar/LeftSidebar/LeftSidebarHeader/OnlineNotification/NotificationPopover/NotificationList/NotificationItem.vue:79
 #, fuzzy
@@ -13257,88 +13252,62 @@ msgid "Remove a configured two-factor authentication method"
 msgstr ""
 
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingLinkedAccounts.vue:177
-#, fuzzy
-#| msgid "Authentication"
 msgid "Remove account link on %s"
-msgstr "身份驗證"
+msgstr "移除 %s 上的帳戶連結"
 
 #: app/frontend/shared/form/i18n/locales.ts:33
-#, fuzzy
-#| msgid "Remove"
 msgid "Remove all"
-msgstr "移除"
+msgstr "移除全部"
 
 #: app/assets/javascripts/app/views/user/manage_two_factor.jst.eco:4
-#, fuzzy
-#| msgid "Remove"
 msgid "Remove all methods"
-msgstr "移除"
+msgstr "移除所有方法"
 
 #: app/frontend/shared/form/i18n/locales.ts:82
-#, fuzzy
-#| msgid "Remove"
 msgid "Remove all values"
-msgstr "移除"
+msgstr "移除所有值"
 
 #: app/frontend/apps/desktop/entities/two-factor-configuration/plugins/authenticator-app.ts:22
-#, fuzzy
-#| msgid "Authentication"
 msgid "Remove authenticator app"
-msgstr "身份驗證"
+msgstr "移除驗證器 App"
 
 #: app/assets/javascripts/app/controllers/ticket_zoom/sidebar_checklist.coffee:21
 #: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarChecklist/TicketSidebarChecklistContent.vue:405
-#, fuzzy
-#| msgid "Remove"
 msgid "Remove checklist"
-msgstr "移除"
+msgstr "移除確認清單"
 
 #: app/frontend/shared/components/Form/fields/FieldEditor/useEditorActions.ts:283
-#, fuzzy
-#| msgid "Removes the formatting"
 msgid "Remove formatting"
 msgstr "移除格式"
 
 #: app/frontend/apps/desktop/components/Form/fields/FieldImageUpload/FieldImageUploadInput.vue:121
-#, fuzzy
-#| msgid "Remove"
 msgid "Remove image"
-msgstr "移除"
+msgstr "移除圖片"
 
 #: app/assets/javascripts/app/views/ticket_zoom/sidebar_checklist/show_row.jst.eco:37
 #: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarChecklist/TicketSidebarChecklistContent/ChecklistItem.vue:75
-#, fuzzy
-#| msgid "Remove"
 msgid "Remove item"
-msgstr "移除"
+msgstr "移除項目"
 
 #: app/assets/javascripts/app/views/user/manage_two_factor.jst.eco:5
-#, fuzzy
-#| msgid "Remove"
 msgid "Remove method"
-msgstr "移除"
+msgstr "移除方法"
 
 #: app/frontend/apps/desktop/entities/two-factor-configuration/plugins/security-keys.ts:24
-#, fuzzy
-#| msgid "Security"
 msgid "Remove security keys"
-msgstr "安全性"
+msgstr "移除安全金鑰"
 
 #: app/frontend/shared/form/i18n/locales.ts:86
 msgid "Remove selected values"
 msgstr ""
 
 #: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarInformation/TicketSidebarInformationContent/TicketTags.vue:176
-#, fuzzy
-#| msgid "Remove"
 msgid "Remove this tag"
-msgstr "移除"
+msgstr "移除此標籤"
 
 #: app/assets/javascripts/app/controllers/_profile/password.coffee:176
-#, fuzzy
-#| msgid "Authentication"
 msgid "Remove two-factor authentication"
-msgstr "身份驗證"
+msgstr "移除兩步驟身份驗證"
 
 #: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/actions/TicketHistory/HistoryEventDetails/HistoryEventDetailsReaction.vue:16
 msgid "Removed reaction from message %s from %s"
@@ -13362,10 +13331,8 @@ msgid "Rename checklist"
 msgstr ""
 
 #: app/assets/javascripts/app/controllers/knowledge_base/feed_dialog.coffee:9
-#, fuzzy
-#| msgid "Personal Access Tokens"
 msgid "Renew Access Token"
-msgstr "個人存取 Token"
+msgstr "更新存取 Token"
 
 #: app/models/report.rb:52
 msgid "Reopened"
@@ -13568,29 +13535,6 @@ msgstr "恢復預設值"
 #. This is the template file app/views/mailer/password_reset/en.html.erb in ERB/HTML format.
 #. Please make sure to translate it to a valid corresponding output structure.
 #: app/views/mailer/password_reset/en.html.erb
-#, fuzzy
-#| msgid ""
-#| "Reset your #{config.product_name} password\n"
-#| "\n"
-#| "<div>Hi #{user.firstname},</div>\n"
-#| "<br>\n"
-#| "<div>We received a request to reset the password for your "
-#| "#{config.product_name} account <b>#{user.login}</b>.</div>\n"
-#| "<br>\n"
-#| "<div>If you want to reset your password, click on the link below (or copy "
-#| "and paste the URL into your browser):</div>\n"
-#| "<br>\n"
-#| "<div><a href=\"#{config.http_type}://#{config.fqdn}/"
-#| "#password_reset_verify/#{token.name}\">#{config.http_type}://"
-#| "#{config.fqdn}/#password_reset_verify/#{token.name}</a></div>\n"
-#| "<br>\n"
-#| "<div>This link takes you to a page where you can change your password.</"
-#| "div>\n"
-#| "<br>\n"
-#| "<div>If you don't want to reset your password, please ignore this "
-#| "message. Your password will not be reset.</div>\n"
-#| "<br>\n"
-#| "<div>Your #{config.product_name} Team</div>\n"
 msgid ""
 "Reset your #{config.product_name} password\n"
 "\n"
@@ -13616,11 +13560,11 @@ msgstr ""
 "\n"
 "<div>你好, #{user.firstname}:</div>\n"
 "<br>\n"
-"<div>#{config.product_name} 系統接收到賬號 <b>#{user.login}</b> 重設密碼的要"
-"求.</div>\n"
+"<div>#{config.product_name} 系統接收到賬號 <b>#{user.login}</b> "
+"重設密碼的要求.</div>\n"
 "<br>\n"
-"<div>如果確認是你需要重設密碼, 請點入如下的連結(或復制該網址并粘貼到瀏覽器的"
-"網址列):</div>\n"
+"<div>如果確認是你需要重設密碼, "
+"請點入如下的連結(或複製該網址並黏貼到瀏覽器的網址列):</div>\n"
 "<br>\n"
 "<div><a href=\"#{config.http_type}://#{config.fqdn}/#password_reset_verify/"
 "#{token.token}\">#{config.http_type}://#{config.fqdn}/#password_reset_verify/"
@@ -13628,8 +13572,8 @@ msgstr ""
 "<br>\n"
 "<div>這個網址會指引重設你的密碼.</div>\n"
 "<br>\n"
-"<div>如果你不需要(或不是你发出的要求)重設你的密碼, 你無需理會這封電郵, 繼續使"
-"用原來的密碼.</div>\n"
+"<div>如果你不需要(或不是你发出的要求)重設你的密碼, 你無需理會這封電郵, "
+"繼續使用原來的密碼.</div>\n"
 "<br>\n"
 "<div>你的 #{config.product_name} 團隊</div>\n"
 
@@ -16643,10 +16587,8 @@ msgid ""
 msgstr ""
 
 #: app/services/service/user/remove_linked_account.rb:21
-#, fuzzy
-#| msgid "%s Object(s) are updated."
 msgid "The linked account could not be found."
-msgstr "%s 個物件已刪除。"
+msgstr "找不到連結帳戶。"
 
 #: app/services/service/auth/verify_admin_token.rb:17
 msgid "The login is not possible."
@@ -21743,7 +21685,7 @@ msgstr "i-doit 整合"
 
 #: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarExternalReferences/TicketSidebarIdoit/IdoitFlyout.vue:180
 msgid "i-doit: Link objects"
-msgstr "i-doit: 連結物件"
+msgstr "i-doit：連結物件"
 
 #: app/assets/javascripts/app/views/generic/ical_feed.jst.eco:19
 msgid "iCalendar links from Google will get fetched once a day"
