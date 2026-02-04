@@ -117,7 +117,7 @@ class OmniAuth::Strategies::SamlDatabase < OmniAuth::Strategies::SAML
   ].freeze
 
   def self.destroy_saml_sessions(saml_uid)
-    ActiveRecord::SessionStore::Session.find_each do |session_record|
+    Session.find_each do |session_record|
       next if session_record.data['saml_uid'] != saml_uid
 
       session_record.destroy
