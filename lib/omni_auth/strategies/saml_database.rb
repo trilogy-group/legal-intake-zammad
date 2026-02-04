@@ -116,7 +116,43 @@ class OmniAuth::Strategies::SamlDatabase < OmniAuth::Strategies::SAML
     apply_sign_only_settings
   ].freeze
 
+  def self.destroy_saml_sessions(saml_uid)
+    ActiveRecord::SessionStore::Session.find_each do |session_record|
+      next if session_record.data['saml_uid'] != saml_uid
+
+      session_record.destroy
+    end
+  end
+
   private
+
+  def handle_logout_request(raw_request, settings)
+    logout_request = OneLogin::RubySaml::SloLogoutrequest.new(
+      raw_request,
+      { settings: settings, get_params: request.params }
+    )
+
+    raise OmniAuth::Strategies::SAML::ValidationError, "SAML logout request is invalid: #{logout_request.errors.join(', ')}" if !logout_request.is_valid?
+
+    name_id = logout_request.name_id
+
+    # Destroy matching sessions in the database (IDP-initiated logout)
+    self.class.destroy_saml_sessions(name_id)
+
+    # Also destroy current session if it matches
+    if session['saml_uid'] == name_id
+      options[:idp_slo_session_destroy].call(env, session)
+    end
+
+    # Generate a response to the IdP
+    logout_response = OneLogin::RubySaml::SloLogoutresponse.new.create(
+      settings,
+      logout_request.id,
+      nil,
+      { RelayState: slo_relay_state }
+    )
+    redirect(logout_response)
+  end
 
   def handle_logout_response(raw_response, settings)
     logout_response = OneLogin::RubySaml::Logoutresponse.new(raw_response, settings, matches_request_id: session['saml_transaction_id'])
