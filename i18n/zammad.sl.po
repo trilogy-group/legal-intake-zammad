@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zammad\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-11-09 06:00+0000\n"
-"Last-Translator: Borut Baznik <borut.baznik@jhl.si>\n"
+"PO-Revision-Date: 2026-02-09 05:46+0000\n"
+"Last-Translator: Rok Poje <rok.poje@mintpos.si>\n"
 "Language-Team: Slovenian <https://translations.zammad.org/projects/zammad/"
 "zammad-stable/sl/>\n"
 "Language: sl\n"
@@ -2568,7 +2568,7 @@ msgstr "Osnovno preverjanje pristnosti"
 msgid "Basic Settings"
 msgstr "Osnovne nastavitve"
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:788
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:795
 #: app/frontend/shared/components/Form/fields/FieldEditor/suggestions/UserMention.ts:99
 msgid "Before you mention a user, please select a group."
 msgstr ""
@@ -9310,7 +9310,7 @@ msgstr ""
 msgid "Invalid values in step %s"
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/_ui_element/richtext_additions/popup_video.coffee:39
+#: app/assets/javascripts/app/controllers/_ui_element/richtext_additions/popup_video.coffee:40
 msgid "Invalid video URL"
 msgstr ""
 
@@ -9969,7 +9969,7 @@ msgid "Loading failed."
 msgstr "Nalaganje neuspešno."
 
 #: app/assets/javascripts/app/lib/app_post/task_manager/singleton.coffee:55
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:647
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:654
 #: app/assets/javascripts/app/views/generic/page_loading.jst.eco:3
 #: app/frontend/apps/desktop/components/CommonLoader/CommonLoader.vue:63
 #: app/frontend/apps/desktop/components/CommonSelect/CommonSelect.vue:513
@@ -11650,7 +11650,7 @@ msgstr ""
 msgid "No results for this query."
 msgstr ""
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:698
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:705
 #: app/frontend/apps/desktop/components/CommonSelect/CommonSelect.vue:339
 #: app/frontend/apps/desktop/components/Form/fields/FieldTreeSelect/FieldTreeSelectInputDropdown.vue:523
 #: app/frontend/apps/desktop/components/NavigationMenu/NavigationMenu.vue:90
@@ -13136,7 +13136,7 @@ msgstr ""
 msgid "Please wait until you received the notification email of the approval."
 msgstr ""
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:594
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:601
 msgid "Please wait…"
 msgstr ""
 
@@ -15782,11 +15782,11 @@ msgstr ""
 msgid "Start typing to find the ticket to merge into."
 msgstr ""
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:745
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:752
 msgid "Start typing to search for users…"
 msgstr "Začnite tipkati in poiščite uporabnike…"
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:641
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:648
 msgid "Start typing to search in Knowledge Base…"
 msgstr "Poišči v bazi znanja…"
 
@@ -20679,12 +20679,12 @@ msgstr ""
 #: app/assets/javascripts/app/controllers/email_verify.coffee:35
 #: app/frontend/apps/desktop/pages/authentication/views/SignupVerify.vue:47
 msgid "Woo hoo! Your email address has been verified!"
-msgstr ""
+msgstr "Woo hoo! Vaš e-poštni naslov je bil preverjen!"
 
 #: app/assets/javascripts/app/controllers/password_reset_verify.coffee:106
 #: app/frontend/apps/desktop/pages/authentication/views/PasswordResetVerify.vue:129
 msgid "Woo hoo! Your password has been changed!"
-msgstr ""
+msgstr "Woo hoo! Vaše geslo je bilo spremenjeno!"
 
 #: app/assets/javascripts/app/controllers/core_workflow.coffee:18
 msgid "Workflow"
@@ -21322,6 +21322,7 @@ msgstr ""
 #: db/seeds/settings.rb:241
 msgid "absolute - e. g. \"Monday 09:30\" or \"Tuesday 23. Feb 14:20\""
 msgstr ""
+"absolutno - npr. \"ponedeljek, 09.30\" ali \"torek, 23. februar, 14.20\""
 
 #: app/assets/javascripts/app/controllers/_ui_element/active.coffee:4
 msgid "active"
@@ -21334,7 +21335,7 @@ msgstr "dodaj"
 #: app/frontend/apps/desktop/components/Form/fields/FieldAutoComplete/useAddUnknownValueAction.ts:28
 #: app/frontend/apps/desktop/components/Form/fields/FieldRecipient/FieldRecipientWrapper.vue:27
 msgid "add new email address"
-msgstr ""
+msgstr "dodaj nov e-poštni naslov"
 
 #: app/frontend/apps/desktop/components/Form/fields/FieldRecipient/FieldRecipientWrapper.vue:26
 #, fuzzy
@@ -21354,7 +21355,7 @@ msgstr "dodaj možnost"
 
 #: db/seeds/settings.rb:11
 msgid "admin"
-msgstr ""
+msgstr "admin"
 
 #: app/assets/javascripts/app/controllers/_ui_element/_application_selector.coffee:25
 #: app/assets/javascripts/app/controllers/_ui_element/core_workflow_condition.coffee:67
@@ -21390,7 +21391,7 @@ msgstr "Clearbit"
 
 #: app/assets/javascripts/app/controllers/knowledge_base/content_can_be_published_form.coffee:91
 msgid "archived"
-msgstr ""
+msgstr "arhivirano"
 
 #: app/assets/javascripts/app/controllers/ticket_overview/settings.coffee:55
 #: app/assets/javascripts/app/models/overview.coffee:37
@@ -21408,7 +21409,7 @@ msgstr "na"
 
 #: app/models/object_manager/attribute.rb:615
 msgid "at least one letter is required"
-msgstr ""
+msgstr "zahtevana je vsaj ena črka"
 
 #: app/assets/javascripts/app/lib/app_post/utils.coffee:1063
 #: app/frontend/shared/composables/form/useCheckBodyAttachmentReference.ts:9
@@ -21460,14 +21461,14 @@ msgid ""
 msgstr ""
 
 msgid "can't be blank"
-msgstr ""
+msgstr "ne sme biti prazno"
 
 msgid "can't be empty"
-msgstr ""
+msgstr "ne sme biti prazno"
 
 #: app/models/object_manager/attribute.rb:606
 msgid "can't be used because *_id and *_ids are not allowed"
-msgstr ""
+msgstr "uporaba ni dovoljena, ker *_id in *_ids nista dovoljena"
 
 #: app/models/knowledge_base/category.rb:140
 msgid "cannot be a subcategory of the parent category"
@@ -21594,7 +21595,7 @@ msgstr "stranka"
 
 #: app/assets/javascripts/app/lib/mixins/time_accounting_unit.coffee:21
 msgid "custom unit"
-msgstr ""
+msgstr "enota po meri"
 
 #: app/assets/javascripts/app/lib/app_post/pretty_date.coffee:76
 msgid "d"
@@ -21602,11 +21603,11 @@ msgstr ""
 
 #: app/models/concerns/can_be_published.rb:133
 msgid "date must be no earlier than internal date"
-msgstr ""
+msgstr "datum ne sme biti pred internim datumom"
 
 #: app/models/concerns/can_be_published.rb:139
 msgid "date must be no earlier than published date"
-msgstr ""
+msgstr "datum ne sme biti pred datumom objave"
 
 #: app/assets/javascripts/app/lib/app_post/pretty_date.coffee:76
 msgid "day"
@@ -21614,7 +21615,7 @@ msgstr "dan"
 
 #: app/assets/javascripts/app/lib/app_post/pretty_date.coffee:76
 msgid "days"
-msgstr "dnevi"
+msgstr "dni"
 
 #: app/assets/javascripts/app/views/integration/ldap_last_import.jst.eco:36
 #: app/assets/javascripts/app/views/integration/ldap_summary.jst.eco:4
@@ -21624,7 +21625,7 @@ msgstr "deaktivirano"
 #: app/assets/javascripts/app/views/channel/chat.jst.eco:150
 #: db/seeds/signatures.rb:5
 msgid "default"
-msgstr ""
+msgstr "privzeto"
 
 #: app/assets/javascripts/app/controllers/data_privacy.coffee:191
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_action/delete.coffee:8
@@ -21672,11 +21673,11 @@ msgstr "ne odpri zaključenega zahtevka, temveč ustvari nov zahtevek"
 
 #: lib/validations/object_manager/attribute_validator/future_past.rb:30
 msgid "does not allow future dates"
-msgstr ""
+msgstr "ne dovoljuje datumov v prihodnost"
 
 #: lib/validations/object_manager/attribute_validator/future_past.rb:23
 msgid "does not allow past dates"
-msgstr ""
+msgstr "ne dovoljuje preteklih datumov"
 
 #: app/assets/javascripts/app/controllers/cti.coffee:164
 #, fuzzy
@@ -21693,7 +21694,7 @@ msgid "does not match regex"
 msgstr "ne obstaja"
 
 msgid "doesn't match %{attribute}"
-msgstr ""
+msgstr "se ne ujema z %{atribut}"
 
 #: app/assets/javascripts/app/views/import/freshdesk.jst.eco:104
 #: app/assets/javascripts/app/views/import/kayako.jst.eco:108
@@ -21705,7 +21706,7 @@ msgstr "zaključeno"
 
 #: app/assets/javascripts/app/controllers/knowledge_base/content_can_be_published_form.coffee:91
 msgid "draft"
-msgstr ""
+msgstr "osnutek"
 
 #: app/assets/javascripts/app/views/ticket_overview/batch_overlay.jst.eco:3
 msgid "drag here to cancel"
@@ -21720,19 +21721,19 @@ msgstr "tor"
 #: app/assets/javascripts/app/views/integration/placetel.jst.eco:140
 #: app/assets/javascripts/app/views/integration/sipgate.jst.eco:124
 msgid "e. g. user@example.com"
-msgstr ""
+msgstr "npr. user@example.com"
 
 #: app/assets/javascripts/app/views/profile/out_of_office.jst.eco:14
 msgid "e.g."
-msgstr ""
+msgstr "npr."
 
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingOutOfOffice.vue:47
 msgid "e.g. Easter holiday"
-msgstr ""
+msgstr "npr. velikonočne počitnice"
 
 #: app/assets/javascripts/app/views/generic/drox.jst.eco:7
 msgid "edit"
-msgstr ""
+msgstr "uredi"
 
 #: app/frontend/apps/mobile/composables/useEditedBy.ts:41
 msgid "edited %s"
@@ -21752,11 +21753,11 @@ msgstr "E-pošta"
 
 #: app/assets/javascripts/app/controllers/_application_controller/_modal_generic_history.coffee:99
 msgid "email sent to '%s'"
-msgstr ""
+msgstr "e-pošta poslana na naslov '%s'"
 
 #: app/assets/javascripts/app/controllers/_ui_element/core_workflow_condition.coffee:186
 msgid "ends with"
-msgstr ""
+msgstr "se konča z"
 
 #: app/assets/javascripts/app/controllers/_ui_element/_application_selector.coffee:36
 #: app/assets/javascripts/app/controllers/_ui_element/core_workflow_condition.coffee:186
@@ -21771,7 +21772,7 @@ msgstr "eskaliral"
 #: app/assets/javascripts/app/controllers/_profile/calendar_subscriptions.coffee:19
 #: app/assets/javascripts/app/views/ticket_zoom/meta.jst.eco:9
 msgid "escalation"
-msgstr ""
+msgstr "eskalacija"
 
 #: app/frontend/apps/desktop/components/CommonTicketEscalationIndicator/CommonTicketEscalationIndicator.vue:31
 #: app/frontend/apps/mobile/components/CommonTicketEscalationIndicator/CommonTicketEscalationIndicator.vue:38
@@ -21805,7 +21806,7 @@ msgstr "neuspešno"
 
 #: db/seeds/ticket_article_types.rb:6
 msgid "fax"
-msgstr ""
+msgstr "faks"
 
 #: app/assets/javascripts/app/controllers/_ui_element/core_workflow_perform.coffee:174
 msgid "fill in"
@@ -21822,7 +21823,7 @@ msgstr "da se svetovalec odzove"
 
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_action/email_reply.coffee:61
 msgid "forward"
-msgstr ""
+msgstr "posreduj"
 
 #: app/assets/javascripts/app/controllers/_application_controller/_modal_generic_history.coffee:158
 msgid "from"
@@ -21833,7 +21834,7 @@ msgstr "od"
 #: app/assets/javascripts/app/controllers/_ui_element/core_workflow_condition.coffee:73
 #: app/assets/javascripts/app/controllers/_ui_element/object_selector.coffee:52
 msgid "from (relative)"
-msgstr ""
+msgstr "od (relativno)"
 
 #: app/controllers/integration/pgp_controller.rb:46
 msgid "gpg (GnuPG) 2.2.0 or newer is required"
@@ -21850,7 +21851,7 @@ msgstr ""
 #: app/assets/javascripts/app/controllers/_ui_element/object_selector.coffee:70
 #: app/assets/javascripts/app/views/object_manager/index.jst.eco:75
 msgid "has changed"
-msgstr ""
+msgstr "se je spremenil"
 
 #: app/assets/javascripts/app/controllers/_ui_element/_application_selector.coffee:157
 #: app/assets/javascripts/app/controllers/_ui_element/object_selector.coffee:184
@@ -21889,7 +21890,7 @@ msgstr "ure"
 
 #: db/seeds/settings.rb:2087
 msgid "https://example.com"
-msgstr ""
+msgstr "https://example.com"
 
 #: app/assets/javascripts/app/controllers/_ui_element/object_manager_attribute.coffee:267
 msgid ""
@@ -21901,7 +21902,7 @@ msgstr ""
 #: app/assets/javascripts/app/controllers/ticket_zoom/sidebar_idoit.coffee:13
 #: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/plugins/idoit.ts:11
 msgid "i-doit"
-msgstr ""
+msgstr "i-doit"
 
 #: db/seeds/settings.rb:4968
 msgid "i-doit config"
@@ -22035,7 +22036,7 @@ msgstr ""
 #: app/assets/javascripts/app/controllers/_ui_element/_application_selector.coffee:124
 #: app/assets/javascripts/app/controllers/_ui_element/object_selector.coffee:151
 msgid "is in working time"
-msgstr ""
+msgstr "je v delovnem času"
 
 msgid "is invalid"
 msgstr ""
@@ -22074,40 +22075,40 @@ msgstr "ni"
 
 #: lib/validations/color_validator.rb:13
 msgid "is not a color. Only Hex, RGB and HSL colors are supported."
-msgstr ""
+msgstr "ni barva. Podprte so samo barve HEX, RGB in HSL."
 
 #: app/assets/javascripts/app/controllers/ticket_zoom/time_accounting_modal.coffee:94
 msgid "is not a number"
-msgstr ""
+msgstr "ni število"
 
 msgid "is not a valid URL"
-msgstr ""
+msgstr "ni veljaven naslov URL"
 
 #: app/assets/javascripts/app/controllers/_ui_element/_application_selector.coffee:124
 #: app/assets/javascripts/app/controllers/_ui_element/object_selector.coffee:151
 msgid "is not in working time"
-msgstr ""
+msgstr "ni v delovnem času"
 
 msgid "is not included in the list"
-msgstr ""
+msgstr "ni na seznamu"
 
 #: app/assets/javascripts/app/controllers/maintenance.coffee:84
 #: app/assets/javascripts/app/models/_application_model.coffee:63
 msgid "is required"
-msgstr ""
+msgstr "je zahtevan"
 
 #: lib/validations/object_manager/attribute_validator/required.rb:15
 msgid "is required but missing"
-msgstr ""
+msgstr "je zahtevan, vendar manjka"
 
 msgid "is reserved"
-msgstr ""
+msgstr "je rezerviran"
 
 #: app/assets/javascripts/app/controllers/_ui_element/_application_selector.coffee:113
 #: app/assets/javascripts/app/controllers/_ui_element/core_workflow_condition.coffee:101
 #: app/assets/javascripts/app/controllers/_ui_element/object_selector.coffee:140
 msgid "is set"
-msgstr ""
+msgstr "je nastavljen"
 
 #: lib/validations/object_manager/attribute_validator/min_max.rb:23
 msgid "is smaller than the allowed minimum value of %{min_value}"
@@ -22173,7 +22174,7 @@ msgstr "Prikaži več"
 
 #: app/assets/javascripts/app/lib/app_post/pretty_date.coffee:120
 msgid "m"
-msgstr ""
+msgstr "min"
 
 #: app/frontend/apps/desktop/components/layout/LayoutSidebar/LeftSidebar/LeftSidebarHeader/OnlineNotification/NotificationPopover/NotificationHeader.vue:27
 #, fuzzy
@@ -22224,7 +22225,7 @@ msgstr "združen v"
 
 #: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:617
 msgid "message"
-msgstr ""
+msgstr "sporočilo"
 
 #: app/assets/javascripts/app/lib/app_post/pretty_date.coffee:120
 msgid "minute"
@@ -22242,47 +22243,47 @@ msgstr "minute"
 
 #: app/models/knowledge_base.rb:244
 msgid "must be a valid path or domain"
-msgstr ""
+msgstr "mora biti veljavna pot ali domena"
 
 msgid "must be accepted"
 msgstr ""
 
 msgid "must be an integer"
-msgstr ""
+msgstr "mora biti celo število"
 
 msgid "must be blank"
-msgstr ""
+msgstr "mora biti prazno"
 
 msgid "must be equal to %{count}"
-msgstr ""
+msgstr "mora biti enako %{count}"
 
 msgid "must be even"
-msgstr ""
+msgstr "mora biti sodo"
 
 msgid "must be greater than %{count}"
-msgstr ""
+msgstr "mora biti večje od %{count}"
 
 msgid "must be greater than or equal to %{count}"
-msgstr ""
+msgstr "mora biti večje ali enako %{count}"
 
 msgid "must be in %{count}"
-msgstr ""
+msgstr "mora biti v %{count}"
 
 msgid "must be less than %{count}"
-msgstr ""
+msgstr "mora biti manjše od %{count}"
 
 msgid "must be less than or equal to %{count}"
-msgstr ""
+msgstr "mora biti manjše ali enako %{count}"
 
 msgid "must be odd"
-msgstr ""
+msgstr "mora biti liho"
 
 msgid "must be other than %{count}"
-msgstr ""
+msgstr "mora biti drugačen od %{count}"
 
 #: app/models/knowledge_base.rb:232
 msgid "must begin with a slash (\"/\")"
-msgstr ""
+msgstr "se mora začeti s poševnico (\"/\")"
 
 #, fuzzy
 #| msgid "not exist"
@@ -22291,17 +22292,17 @@ msgstr "ne obstaja"
 
 #: app/models/knowledge_base.rb:240
 msgid "must not end with a slash (\"/\")"
-msgstr ""
+msgstr "se ne sme končati s poševnico (\"/\")"
 
 #: app/models/knowledge_base.rb:236
 msgid "must not include a protocol (e.g., \"http://\" or \"https://\")"
-msgstr ""
+msgstr "ne sme vsebovati protokola (npr. \"http://\" ali \"https://\")"
 
 #: app/assets/javascripts/app/views/integration/cti.jst.eco:44
 #: app/assets/javascripts/app/views/integration/placetel.jst.eco:60
 #: app/assets/javascripts/app/views/integration/sipgate.jst.eco:47
 msgid "my own note"
-msgstr ""
+msgstr "moja lastna opomba"
 
 #: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/ArticleSeparatorNew.vue:5
 #: db/seeds/ticket_state_types.rb:3 db/seeds/ticket_states.rb:5
@@ -22353,23 +22354,23 @@ msgstr "prazno"
 
 #: app/assets/javascripts/app/controllers/cti.coffee:162
 msgid "not reached"
-msgstr ""
+msgstr "ni doseženo"
 
 #: app/assets/javascripts/app/controllers/_ui_element/_application_selector.coffee:113
 #: app/assets/javascripts/app/controllers/_ui_element/core_workflow_condition.coffee:102
 #: app/assets/javascripts/app/controllers/_ui_element/object_selector.coffee:140
 msgid "not set"
-msgstr ""
+msgstr "ni nastavljeno"
 
 #: app/assets/javascripts/app/controllers/_ui_element/_application_selector.coffee:547
 #: app/assets/javascripts/app/controllers/_ui_element/_application_selector_expert.coffee:634
 msgid "not set (not defined)"
-msgstr ""
+msgstr "ni nastavljeno (ni definirano)"
 
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_action/note.coffee:15
 #: db/seeds/ticket_article_types.rb:12
 msgid "note"
-msgstr ""
+msgstr "opomba"
 
 #: app/assets/javascripts/app/controllers/_application_controller/_modal_generic_history.coffee:97
 #, fuzzy
@@ -22391,7 +22392,7 @@ msgstr "ne"
 
 #: app/models/object_manager/attribute.rb:612
 msgid "only lowercase letters, numbers, and '_' are allowed"
-msgstr ""
+msgstr "dovoljene so samo male črke, številke in podčrtaj ( _ )"
 
 #: app/frontend/apps/mobile/components/CommonTicketStateList/CommonTicketStateList.vue:44
 #: db/seeds/ticket_state_types.rb:4 db/seeds/ticket_states.rb:11
@@ -22406,7 +22407,7 @@ msgstr "Odprti zahtevki"
 
 #: app/assets/javascripts/app/controllers/_channel/google.coffee:283
 msgid "optional"
-msgstr ""
+msgstr "neobvezno"
 
 #: app/assets/javascripts/app/controllers/_integration/pgp.coffee:144
 #: app/assets/javascripts/app/views/integration/smime_certificate_add.jst.eco:14
@@ -22444,7 +22445,7 @@ msgstr "odložen opomnik"
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_action/phone_reply.coffee:12
 #: db/seeds/ticket_article_types.rb:7
 msgid "phone"
-msgstr ""
+msgstr "telefon"
 
 #: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:598
 #, fuzzy
@@ -22454,7 +22455,7 @@ msgstr "nastavi kot javno"
 
 #: app/assets/javascripts/app/controllers/knowledge_base/content_can_be_published_form.coffee:91
 msgid "published"
-msgstr ""
+msgstr "objavljeno"
 
 #: app/assets/javascripts/app/lib/mixins/time_accounting_unit.coffee:13
 #: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/TimeAccountingFlyout.vue:54
@@ -22486,11 +22487,11 @@ msgstr ""
 
 #: app/assets/javascripts/app/views/widget/two_factor_login/try_another_method.jst.eco:21
 msgid "recovery codes"
-msgstr ""
+msgstr "obnovitvene kode"
 
 #: app/models/checklist/item.rb:102
 msgid "reference must not be the checklist ticket."
-msgstr ""
+msgstr "referenca ne sme biti zahtevek kontrolnega seznama."
 
 #: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:103
 #, fuzzy
@@ -22500,7 +22501,7 @@ msgstr "aktivno"
 
 #: db/seeds/settings.rb:240
 msgid "relative - e. g. \"2 hours ago\" or \"2 days and 15 minutes ago\""
-msgstr ""
+msgstr "relativno - npr. \"pred 2 urama\" ali \"pred 2 dnevoma in 15 minutami\""
 
 #: app/assets/javascripts/app/controllers/_ui_element/core_workflow_perform.coffee:40
 #: app/assets/javascripts/app/views/profile/linked_accounts.jst.eco:17
@@ -22509,7 +22510,7 @@ msgstr "odstrani"
 
 #: app/assets/javascripts/app/controllers/_ui_element/core_workflow_perform.coffee:170
 msgid "remove option"
-msgstr ""
+msgstr "odstrani možnost"
 
 #: app/assets/javascripts/app/controllers/_application_controller/_modal_generic_history.coffee:143
 msgid "removed reaction to message from %s '%s'"
@@ -22536,7 +22537,7 @@ msgstr "odgovori vsem"
 
 #: app/assets/javascripts/app/controllers/_ui_element/object_manager_attribute.coffee:111
 msgid "required"
-msgstr ""
+msgstr "obvezno"
 
 #: db/seeds/settings.rb:2358
 msgid "right"
@@ -22549,7 +22550,7 @@ msgstr "zvonenje"
 #: app/assets/javascripts/app/views/object_manager/attribute/multi_tree_select.jst.eco:27
 #: app/assets/javascripts/app/views/object_manager/attribute/tree_select.jst.eco:27
 msgid "row"
-msgstr ""
+msgstr "vrstica"
 
 #: app/assets/javascripts/app/views/ticket_overview/batch_overlay.jst.eco:6
 msgid "run macro"
@@ -22618,7 +22619,7 @@ msgstr "nastavi kot javno"
 
 #: app/assets/javascripts/app/controllers/_ui_element/core_workflow_perform.coffee:40
 msgid "show"
-msgstr ""
+msgstr "Prikaži"
 
 #: app/assets/javascripts/app/views/generic/object_search/item_organization_members.jst.eco:10
 #: app/assets/javascripts/app/views/organization_profile/object.jst.eco:23
@@ -22627,7 +22628,7 @@ msgstr ""
 #: app/assets/javascripts/app/views/widget/organization.jst.eco:32
 #: app/assets/javascripts/app/views/widget/user.jst.eco:18
 msgid "show more"
-msgstr ""
+msgstr "pokaži več"
 
 #: app/assets/javascripts/app/controllers/_ui_element/object_manager_attribute.coffee:110
 msgid "shown"
@@ -22643,11 +22644,11 @@ msgstr ""
 
 #: db/seeds/settings.rb:5191
 msgid "sipgate.io config"
-msgstr ""
+msgstr "Konfiguracija sipgate.io"
 
 #: db/seeds/settings.rb:5142
 msgid "sipgate.io integration"
-msgstr ""
+msgstr "Integracija Sipgate.io"
 
 #: app/assets/javascripts/app/views/integration/exchange_last_import.jst.eco:36
 #: app/assets/javascripts/app/views/integration/exchange_summary.jst.eco:4
@@ -22662,7 +22663,7 @@ msgstr "SMS"
 
 #: app/models/object_manager/attribute.rb:609
 msgid "spaces are not allowed"
-msgstr ""
+msgstr "presledki niso dovoljeni"
 
 #: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:428
 #: app/assets/javascripts/app/controllers/_ui_element/_application_selector.coffee:551
@@ -22700,7 +22701,7 @@ msgstr ""
 
 #: app/assets/javascripts/app/views/getting_started/email.jst.eco:16
 msgid "support@example.com"
-msgstr ""
+msgstr "support@example.com"
 
 #: app/assets/javascripts/app/controllers/translation.coffee:280
 #, fuzzy
@@ -22731,22 +22732,22 @@ msgstr "zahtevek %s je bil združen v ta zahtevek"
 
 #: db/seeds/settings.rb:1155
 msgid "ticket.agent"
-msgstr ""
+msgstr "ticket.agent"
 
 #: db/seeds/settings.rb:1163
 msgid "ticket.customer"
-msgstr ""
+msgstr "ticket.customer"
 
 #: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:480
 #: app/assets/javascripts/app/controllers/_ui_element/_application_selector.coffee:25
 #: app/assets/javascripts/app/controllers/_ui_element/core_workflow_condition.coffee:72
 #: app/assets/javascripts/app/controllers/_ui_element/object_selector.coffee:52
 msgid "till (relative)"
-msgstr ""
+msgstr "do (relativno)"
 
 #: db/seeds/settings.rb:242
 msgid "timestamp - e. g. \"2018-08-30 14:30\""
-msgstr ""
+msgstr "časovni žig - npr. \"2018-08-30 14:30\""
 
 #: app/views/knowledge_base/public/not_found.html.erb:8
 msgid "to go to the homepage."
@@ -22787,7 +22788,7 @@ msgstr "sprožilec '%s' je bil izveden, ker bo zahtevek kmalu eskaliral"
 
 #: app/assets/javascripts/app/views/password/reset_failed.jst.eco:6
 msgid "try again"
-msgstr ""
+msgstr "poskusite znova"
 
 #: db/seeds/ticket_article_types.rb:9
 msgid "twitter direct-message"
@@ -22843,11 +22844,11 @@ msgstr ""
 
 #: db/seeds/ticket_article_types.rb:13
 msgid "web"
-msgstr ""
+msgstr "splet"
 
 #: app/assets/javascripts/app/views/telegram/bot_edit.jst.eco:15
 msgid "welcome message"
-msgstr ""
+msgstr "pozdravno sporočilo"
 
 #: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/ArticleMeta/ArticleMetaWhatsappMessageStatus.vue:31
 #: db/seeds/ticket_article_types.rb:16
@@ -22869,14 +22870,14 @@ msgstr ""
 #: app/assets/javascripts/app/controllers/_ui_element/core_workflow_condition.coffee:71
 #: app/assets/javascripts/app/controllers/_ui_element/object_selector.coffee:52
 msgid "within last (relative)"
-msgstr ""
+msgstr "v zadnjem (relativnem)"
 
 #: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:477
 #: app/assets/javascripts/app/controllers/_ui_element/_application_selector.coffee:25
 #: app/assets/javascripts/app/controllers/_ui_element/core_workflow_condition.coffee:70
 #: app/assets/javascripts/app/controllers/_ui_element/object_selector.coffee:52
 msgid "within next (relative)"
-msgstr ""
+msgstr "znotraj naslednjega (relativno)"
 
 #: app/assets/javascripts/app/controllers/_ui_element/boolean.coffee:9
 #: app/assets/javascripts/app/controllers/time_accounting_types.coffee:22

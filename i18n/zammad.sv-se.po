@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zammad\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2026-01-20 22:00+0000\n"
-"Last-Translator: Louise Forsen <louise.forsen@entryevent.se>\n"
+"PO-Revision-Date: 2026-02-06 22:00+0000\n"
+"Last-Translator: chrand818 <can@telenabler.com>\n"
 "Language-Team: Swedish <https://translations.zammad.org/projects/zammad/"
 "zammad-stable/sv/>\n"
 "Language: sv-se\n"
@@ -1849,10 +1849,8 @@ msgid "An error occured during the operation."
 msgstr "Det inträffade ett fel under åtgärden."
 
 #: app/assets/javascripts/app/controllers/_channel/chat.coffee:251
-#, fuzzy
-#| msgid "An error occured during the operation."
 msgid "An error occurred while fetching the website preview."
-msgstr "Det inträffade ett fel under åtgärden."
+msgstr "Ett fel inträffade när förhandsgranskningen av webbplatsen hämtades."
 
 #: app/assets/javascripts/app/controllers/_ui_element/object_manager_attribute.coffee:997
 #: app/assets/javascripts/app/views/integration/exchange_last_import.jst.eco:5
@@ -2723,7 +2721,7 @@ msgstr "Basic Authentication"
 msgid "Basic Settings"
 msgstr "Basinställningar"
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:788
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:795
 #: app/frontend/shared/components/Form/fields/FieldEditor/suggestions/UserMention.ts:99
 msgid "Before you mention a user, please select a group."
 msgstr "Innan du nämner en användare, välj grupp."
@@ -9484,7 +9482,7 @@ msgstr "Ogiltig token, vänligen kontakta din administratör!"
 msgid "Invalid values in step %s"
 msgstr "Ogiltiga värden i steg %s"
 
-#: app/assets/javascripts/app/controllers/_ui_element/richtext_additions/popup_video.coffee:39
+#: app/assets/javascripts/app/controllers/_ui_element/richtext_additions/popup_video.coffee:40
 msgid "Invalid video URL"
 msgstr "Ogiltig URL för video"
 
@@ -10116,7 +10114,7 @@ msgid "Loading failed."
 msgstr "Sidan kunde inte laddas."
 
 #: app/assets/javascripts/app/lib/app_post/task_manager/singleton.coffee:55
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:647
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:654
 #: app/assets/javascripts/app/views/generic/page_loading.jst.eco:3
 #: app/frontend/apps/desktop/components/CommonLoader/CommonLoader.vue:63
 #: app/frontend/apps/desktop/components/CommonSelect/CommonSelect.vue:513
@@ -11734,7 +11732,7 @@ msgstr ""
 msgid "No results for this query."
 msgstr "Inga resultat för denna fråga."
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:698
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:705
 #: app/frontend/apps/desktop/components/CommonSelect/CommonSelect.vue:339
 #: app/frontend/apps/desktop/components/Form/fields/FieldTreeSelect/FieldTreeSelectInputDropdown.vue:523
 #: app/frontend/apps/desktop/components/NavigationMenu/NavigationMenu.vue:90
@@ -13165,7 +13163,7 @@ msgstr "Vänta tills innehållet har laddats"
 msgid "Please wait until you received the notification email of the approval."
 msgstr "Vänta tills du har fått e-postmeddelandet om godkännandet."
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:594
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:601
 msgid "Please wait…"
 msgstr "Vänta …"
 
@@ -15696,11 +15694,11 @@ msgstr ""
 msgid "Start typing to find the ticket to merge into."
 msgstr "Börja skriv för att hitta ärendet som du vill sammanfoga med."
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:745
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:752
 msgid "Start typing to search for users…"
 msgstr "Börja skriva för att söka efter användare …"
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:641
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:648
 msgid "Start typing to search in Knowledge Base…"
 msgstr "Börja skriva för att söka i kunskapsbasen …"
 

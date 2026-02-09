@@ -2782,7 +2782,7 @@ msgstr "Autentificare de bază"
 msgid "Basic Settings"
 msgstr "Setări de bază"
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:788
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:795
 #: app/frontend/shared/components/Form/fields/FieldEditor/suggestions/UserMention.ts:99
 msgid "Before you mention a user, please select a group."
 msgstr "Înainte de a menționa un utilizator, te rugăm să selectezi un grup."
@@ -9811,7 +9811,7 @@ msgstr "Token invalid, vă rugăm să contactați administratorul!"
 msgid "Invalid values in step %s"
 msgstr "Valori invalide în pasul %s"
 
-#: app/assets/javascripts/app/controllers/_ui_element/richtext_additions/popup_video.coffee:39
+#: app/assets/javascripts/app/controllers/_ui_element/richtext_additions/popup_video.coffee:40
 msgid "Invalid video URL"
 msgstr "URL video invalid"
 
@@ -10487,7 +10487,7 @@ msgid "Loading failed."
 msgstr "Încărcare eșuată."
 
 #: app/assets/javascripts/app/lib/app_post/task_manager/singleton.coffee:55
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:647
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:654
 #: app/assets/javascripts/app/views/generic/page_loading.jst.eco:3
 #: app/frontend/apps/desktop/components/CommonLoader/CommonLoader.vue:63
 #: app/frontend/apps/desktop/components/CommonSelect/CommonSelect.vue:513
@@ -12261,7 +12261,7 @@ msgstr "Niciun articol corelat găsit pentru a procesa mesajul de status."
 msgid "No results for this query."
 msgstr "Nu au fost găsite rezultate"
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:698
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:705
 #: app/frontend/apps/desktop/components/CommonSelect/CommonSelect.vue:339
 #: app/frontend/apps/desktop/components/Form/fields/FieldTreeSelect/FieldTreeSelectInputDropdown.vue:523
 #: app/frontend/apps/desktop/components/NavigationMenu/NavigationMenu.vue:90
@@ -13795,7 +13795,7 @@ msgid "Please wait until you received the notification email of the approval."
 msgstr ""
 "Vă rugăm să așteptați până când primiți e-mailul de notificare al aprobării."
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:594
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:601
 msgid "Please wait…"
 msgstr "Vă rugăm să așteptați…"
 
@@ -16479,11 +16479,11 @@ msgid "Start typing to find the ticket to merge into."
 msgstr ""
 "Începe să tastezi pentru a găsi tichetul cu care vrei să faci fuziunea."
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:745
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:752
 msgid "Start typing to search for users…"
 msgstr "Începe să tastezi pentru căuta utilizatori…"
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:641
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:648
 msgid "Start typing to search in Knowledge Base…"
 msgstr "Începe să tastezi pentru căuta în baza de cunoștințe…"
 

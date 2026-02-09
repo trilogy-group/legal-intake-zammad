@@ -4,8 +4,8 @@ msgstr ""
 "POT-Creation-Date: \n"
 "PO-Revision-Date: 2026-01-29 11:00+0000\n"
 "Last-Translator: Sumonchai Wongphithak <sumonchai@gmail.com>\n"
-"Language-Team: Thai <https://translations.zammad.org/projects/zammad/"
-"zammad-stable/th/>\n"
+"Language-Team: Thai <https://translations.zammad.org/projects/zammad/zammad-"
+"stable/th/>\n"
 "Language: th\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -2676,7 +2676,7 @@ msgstr "การตรวจสอบสิทธิ์แบบพื้นฐ
 msgid "Basic Settings"
 msgstr "ค่าพื้นฐาน"
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:788
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:795
 #: app/frontend/shared/components/Form/fields/FieldEditor/suggestions/UserMention.ts:99
 msgid "Before you mention a user, please select a group."
 msgstr "ก่อนที่คุณจะกล่าวถึงผู้ใช้ กรุณาเลือกกลุ่ม."
@@ -9580,7 +9580,7 @@ msgstr ""
 msgid "Invalid values in step %s"
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/_ui_element/richtext_additions/popup_video.coffee:39
+#: app/assets/javascripts/app/controllers/_ui_element/richtext_additions/popup_video.coffee:40
 msgid "Invalid video URL"
 msgstr "URL วิดีโอไม่ถูกต้อง"
 
@@ -10265,7 +10265,7 @@ msgid "Loading failed."
 msgstr ""
 
 #: app/assets/javascripts/app/lib/app_post/task_manager/singleton.coffee:55
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:647
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:654
 #: app/assets/javascripts/app/views/generic/page_loading.jst.eco:3
 #: app/frontend/apps/desktop/components/CommonLoader/CommonLoader.vue:63
 #: app/frontend/apps/desktop/components/CommonSelect/CommonSelect.vue:513
@@ -12060,7 +12060,7 @@ msgstr ""
 msgid "No results for this query."
 msgstr "ไม่พบรายการ"
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:698
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:705
 #: app/frontend/apps/desktop/components/CommonSelect/CommonSelect.vue:339
 #: app/frontend/apps/desktop/components/Form/fields/FieldTreeSelect/FieldTreeSelectInputDropdown.vue:523
 #: app/frontend/apps/desktop/components/NavigationMenu/NavigationMenu.vue:90
@@ -13594,7 +13594,7 @@ msgstr ""
 msgid "Please wait until you received the notification email of the approval."
 msgstr ""
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:594
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:601
 msgid "Please wait…"
 msgstr "โปรดรอ .....…"
 
@@ -16374,11 +16374,11 @@ msgstr ""
 msgid "Start typing to find the ticket to merge into."
 msgstr ""
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:745
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:752
 msgid "Start typing to search for users…"
 msgstr "เริ่มพิมพ์เพื่อค้นหาผู้ใช้…"
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:641
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:648
 msgid "Start typing to search in Knowledge Base…"
 msgstr "พิมพ์ค้นหาใน ศูนย์การเรียนรู้…"
 

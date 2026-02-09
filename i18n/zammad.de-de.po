@@ -2766,7 +2766,7 @@ msgstr "Basic Authentication"
 msgid "Basic Settings"
 msgstr "Grundeinstellungen"
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:788
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:795
 #: app/frontend/shared/components/Form/fields/FieldEditor/suggestions/UserMention.ts:99
 msgid "Before you mention a user, please select a group."
 msgstr "Bevor Sie einen Benutzer erwähnen, wählen Sie bitte eine Gruppe aus."
@@ -9647,7 +9647,7 @@ msgstr "Ungültiges Token - bitte kontaktieren Sie Ihren Administrator!"
 msgid "Invalid values in step %s"
 msgstr "Fehlerhafte Werte in Schritt %s"
 
-#: app/assets/javascripts/app/controllers/_ui_element/richtext_additions/popup_video.coffee:39
+#: app/assets/javascripts/app/controllers/_ui_element/richtext_additions/popup_video.coffee:40
 msgid "Invalid video URL"
 msgstr "Ungültige Video-URL"
 
@@ -10281,7 +10281,7 @@ msgid "Loading failed."
 msgstr "Laden fehlgeschlagen."
 
 #: app/assets/javascripts/app/lib/app_post/task_manager/singleton.coffee:55
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:647
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:654
 #: app/assets/javascripts/app/views/generic/page_loading.jst.eco:3
 #: app/frontend/apps/desktop/components/CommonLoader/CommonLoader.vue:63
 #: app/frontend/apps/desktop/components/CommonSelect/CommonSelect.vue:513
@@ -11907,7 +11907,7 @@ msgstr ""
 msgid "No results for this query."
 msgstr "Keine Ergebnisse für diese Anfrage."
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:698
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:705
 #: app/frontend/apps/desktop/components/CommonSelect/CommonSelect.vue:339
 #: app/frontend/apps/desktop/components/Form/fields/FieldTreeSelect/FieldTreeSelectInputDropdown.vue:523
 #: app/frontend/apps/desktop/components/NavigationMenu/NavigationMenu.vue:90
@@ -13359,7 +13359,7 @@ msgstr ""
 "Bitte warten Sie, bis Sie die Benachrichtigungs-E-Mail über die Genehmigung "
 "erhalten haben."
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:594
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:601
 msgid "Please wait…"
 msgstr "Bitte warten…"
 
@@ -15920,11 +15920,11 @@ msgstr ""
 msgid "Start typing to find the ticket to merge into."
 msgstr "Tippen Sie, um das Ticket zum Zusammenfassen zu finden."
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:745
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:752
 msgid "Start typing to search for users…"
 msgstr "Beginnen Sie mit der Eingabe, um nach Benutzern zu suchen…"
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:641
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:648
 msgid "Start typing to search in Knowledge Base…"
 msgstr "Beginnen Sie mit der Eingabe, um in der Knowledge Base zu suchen…"
 

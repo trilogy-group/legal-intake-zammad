@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zammad\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-12-26 20:00+0000\n"
-"Last-Translator: MBekspert <michal.bosak@ekspert.biz>\n"
+"PO-Revision-Date: 2026-02-06 22:00+0000\n"
+"Last-Translator: kands-software <admin@kands.pl>\n"
 "Language-Team: Polish <https://translations.zammad.org/projects/zammad/"
 "zammad-stable/pl/>\n"
 "Language: pl\n"
@@ -1868,10 +1868,8 @@ msgid "An error occured during the operation."
 msgstr "Podczas operacji wystąpił błąd."
 
 #: app/assets/javascripts/app/controllers/_channel/chat.coffee:251
-#, fuzzy
-#| msgid "An error occured during the operation."
 msgid "An error occurred while fetching the website preview."
-msgstr "Podczas operacji wystąpił błąd."
+msgstr "Wystąpił błąd podczas pobierania podglądu strony internetowej."
 
 #: app/assets/javascripts/app/controllers/_ui_element/object_manager_attribute.coffee:997
 #: app/assets/javascripts/app/views/integration/exchange_last_import.jst.eco:5
@@ -2744,7 +2742,7 @@ msgstr "Uwierzytelnianie podstawowe"
 msgid "Basic Settings"
 msgstr "Ustawienia podstawowe"
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:788
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:795
 #: app/frontend/shared/components/Form/fields/FieldEditor/suggestions/UserMention.ts:99
 msgid "Before you mention a user, please select a group."
 msgstr "Zanim wspomnisz o użytkowniku, wybierz grupę."
@@ -9566,7 +9564,7 @@ msgstr "Nieprawidłowy token, skontaktuj się z administratorem!"
 msgid "Invalid values in step %s"
 msgstr "Nieprawidłowa wartość w kroku %s"
 
-#: app/assets/javascripts/app/controllers/_ui_element/richtext_additions/popup_video.coffee:39
+#: app/assets/javascripts/app/controllers/_ui_element/richtext_additions/popup_video.coffee:40
 msgid "Invalid video URL"
 msgstr "Nieprawidłowy URL filmu"
 
@@ -10201,7 +10199,7 @@ msgid "Loading failed."
 msgstr "Ładowanie nie powiodło się."
 
 #: app/assets/javascripts/app/lib/app_post/task_manager/singleton.coffee:55
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:647
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:654
 #: app/assets/javascripts/app/views/generic/page_loading.jst.eco:3
 #: app/frontend/apps/desktop/components/CommonLoader/CommonLoader.vue:63
 #: app/frontend/apps/desktop/components/CommonSelect/CommonSelect.vue:513
@@ -11820,7 +11818,7 @@ msgstr ""
 msgid "No results for this query."
 msgstr "Brak wyników dla tego zapytania."
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:698
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:705
 #: app/frontend/apps/desktop/components/CommonSelect/CommonSelect.vue:339
 #: app/frontend/apps/desktop/components/Form/fields/FieldTreeSelect/FieldTreeSelectInputDropdown.vue:523
 #: app/frontend/apps/desktop/components/NavigationMenu/NavigationMenu.vue:90
@@ -13257,7 +13255,7 @@ msgid "Please wait until you received the notification email of the approval."
 msgstr ""
 "Poczekaj, aż otrzymasz wiadomość e-mail z powiadomieniem o zatwierdzeniu."
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:594
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:601
 msgid "Please wait…"
 msgstr "Proszę czekać…"
 
@@ -15810,11 +15808,11 @@ msgstr "Zacznij pisać, np. nazwę zgłoszenia, organizacji lub użytkownika."
 msgid "Start typing to find the ticket to merge into."
 msgstr "Zacznij pisać, aby znaleźć zgłoszenie do połączenia."
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:745
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:752
 msgid "Start typing to search for users…"
 msgstr "Zacznij pisać, aby wyszukać użytkowników…"
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:641
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:648
 msgid "Start typing to search in Knowledge Base…"
 msgstr "Zacznij pisać, aby wyszukać artykuł z bazy wiedzy…"
 

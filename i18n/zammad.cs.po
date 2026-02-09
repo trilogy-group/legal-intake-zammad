@@ -4,8 +4,8 @@ msgstr ""
 "POT-Creation-Date: \n"
 "PO-Revision-Date: 2026-01-29 11:00+0000\n"
 "Last-Translator: Mixer <mixer@mixercz.cz>\n"
-"Language-Team: Czech <https://translations.zammad.org/projects/zammad/"
-"zammad-stable/cs/>\n"
+"Language-Team: Czech <https://translations.zammad.org/projects/zammad/zammad-"
+"stable/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -2724,7 +2724,7 @@ msgstr "Basic Authentication"
 msgid "Basic Settings"
 msgstr "Základní nastavení"
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:788
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:795
 #: app/frontend/shared/components/Form/fields/FieldEditor/suggestions/UserMention.ts:99
 msgid "Before you mention a user, please select a group."
 msgstr "Než zmíníte uživatele, zvolte prosím skupinu."
@@ -9471,7 +9471,7 @@ msgstr "Neplatný token, prosím kontaktujte svého správce!"
 msgid "Invalid values in step %s"
 msgstr "Neplatné hodnoty v kroku %s"
 
-#: app/assets/javascripts/app/controllers/_ui_element/richtext_additions/popup_video.coffee:39
+#: app/assets/javascripts/app/controllers/_ui_element/richtext_additions/popup_video.coffee:40
 msgid "Invalid video URL"
 msgstr "Neplatné URL videa"
 
@@ -10104,7 +10104,7 @@ msgid "Loading failed."
 msgstr "Nahrávání se nezdařilo."
 
 #: app/assets/javascripts/app/lib/app_post/task_manager/singleton.coffee:55
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:647
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:654
 #: app/assets/javascripts/app/views/generic/page_loading.jst.eco:3
 #: app/frontend/apps/desktop/components/CommonLoader/CommonLoader.vue:63
 #: app/frontend/apps/desktop/components/CommonSelect/CommonSelect.vue:513
@@ -11722,7 +11722,7 @@ msgstr ""
 msgid "No results for this query."
 msgstr "Pro tento dotaz nebyly nalezeny žádné výsledky."
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:698
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:705
 #: app/frontend/apps/desktop/components/CommonSelect/CommonSelect.vue:339
 #: app/frontend/apps/desktop/components/Form/fields/FieldTreeSelect/FieldTreeSelectInputDropdown.vue:523
 #: app/frontend/apps/desktop/components/NavigationMenu/NavigationMenu.vue:90
@@ -13065,7 +13065,8 @@ msgstr "Přiložte prosím platnou URL."
 
 #: app/services/service/system/import/apply_otrs_configuration.rb:82
 msgid "Please install the OTRS migrator plugin and provide a valid URL."
-msgstr "Nainstalujte prosím plugin OTRS migrátoru a zadejte platnou URL adresu."
+msgstr ""
+"Nainstalujte prosím plugin OTRS migrátoru a zadejte platnou URL adresu."
 
 #: db/seeds/settings.rb:1946
 msgid ""
@@ -13150,7 +13151,7 @@ msgstr "Počkejte prosím, než se obsah načte"
 msgid "Please wait until you received the notification email of the approval."
 msgstr "Počkejte prosím, než obdržíte e-mail s oznámením o schválení."
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:594
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:601
 msgid "Please wait…"
 msgstr "Prosím počkejte…"
 
@@ -14005,8 +14006,8 @@ msgstr ""
 "<br>\n"
 "<div><a href=\"#{url}\">#{url}</a></div>\n"
 "<br>\n"
-"<div>Tento odkaz Vás přesměruje na stránku, kde si nastavíte své nové "
-"heslo.</div>\n"
+"<div>Tento odkaz Vás přesměruje na stránku, kde si nastavíte své nové heslo."
+"</div>\n"
 "<br>\n"
 "<div>Pokud heslo měnit nechcete, tuto zprávu ignorujte (nevyužívejte výše "
 "zmíněného odkazu) a Vaše heslo nebude změněno.</div>\n"
@@ -14049,8 +14050,8 @@ msgstr ""
 "<br>\n"
 "<div><a href=\"#{url}\">#{url}</a></div>\n"
 "<br>\n"
-"<div>Tento odkaz vede na stránku, kde si budete moci nastavit nové "
-"heslo.</div>\n"
+"<div>Tento odkaz vede na stránku, kde si budete moci nastavit nové heslo.</"
+"div>\n"
 "<br>\n"
 "<div>Pokud si heslo změnit nepřejete, ignorujte prosím tuto zprávu. Vaše "
 "heslo nebude obnoveno.</div>\n"
@@ -15690,11 +15691,11 @@ msgid "Start typing to find the ticket to merge into."
 msgstr ""
 "Začněte psát pro nalezení tiketu, do kterého chcete sloučit stávající tiket."
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:745
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:752
 msgid "Start typing to search for users…"
 msgstr "Pro vyhledání uživatelů začněte psát…"
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:641
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:648
 msgid "Start typing to search in Knowledge Base…"
 msgstr "Pro hledání ve Znalostní bázi začněte psát…"
 

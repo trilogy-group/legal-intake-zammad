@@ -2725,7 +2725,7 @@ msgstr "Osnovna autentifikacija"
 msgid "Basic Settings"
 msgstr "Osnovne postavke"
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:788
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:795
 #: app/frontend/shared/components/Form/fields/FieldEditor/suggestions/UserMention.ts:99
 msgid "Before you mention a user, please select a group."
 msgstr "Prije nego što spomenete korisnika, molimo, odaberite grupu."
@@ -9475,7 +9475,7 @@ msgstr "Neispravan token, molimo kontaktirajte administratora!"
 msgid "Invalid values in step %s"
 msgstr "Neispravne vrijednosti u koraku %s"
 
-#: app/assets/javascripts/app/controllers/_ui_element/richtext_additions/popup_video.coffee:39
+#: app/assets/javascripts/app/controllers/_ui_element/richtext_additions/popup_video.coffee:40
 msgid "Invalid video URL"
 msgstr "Neispravna video poveznica"
 
@@ -10105,7 +10105,7 @@ msgid "Loading failed."
 msgstr "Učitavanje nije uspjelo."
 
 #: app/assets/javascripts/app/lib/app_post/task_manager/singleton.coffee:55
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:647
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:654
 #: app/assets/javascripts/app/views/generic/page_loading.jst.eco:3
 #: app/frontend/apps/desktop/components/CommonLoader/CommonLoader.vue:63
 #: app/frontend/apps/desktop/components/CommonSelect/CommonSelect.vue:513
@@ -11722,7 +11722,7 @@ msgstr "Nije pronađen nijedan povezani članak za obradu statusne poruke."
 msgid "No results for this query."
 msgstr "Nema rezultata za ovaj upit"
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:698
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:705
 #: app/frontend/apps/desktop/components/CommonSelect/CommonSelect.vue:339
 #: app/frontend/apps/desktop/components/Form/fields/FieldTreeSelect/FieldTreeSelectInputDropdown.vue:523
 #: app/frontend/apps/desktop/components/NavigationMenu/NavigationMenu.vue:90
@@ -13147,7 +13147,7 @@ msgstr "Molimo, pričekajte učitavanje sadržaja"
 msgid "Please wait until you received the notification email of the approval."
 msgstr "Molimo, pričekajte dok ne primite e-mail sa obavijesti o odobrenju."
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:594
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:601
 msgid "Please wait…"
 msgstr "Molimo, pričekajte…"
 
@@ -15681,11 +15681,11 @@ msgstr "Počnite sa upisivanjem npr. imena ticketa, organizacije ili korisnika."
 msgid "Start typing to find the ticket to merge into."
 msgstr "Počnite tipkati kako biste pronašli ticket za spajanje."
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:745
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:752
 msgid "Start typing to search for users…"
 msgstr "Počnite tipkati da biste pretražili korisnike…"
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:641
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:648
 msgid "Start typing to search in Knowledge Base…"
 msgstr "Počnite tipkati za pretraživanje Knowledge Base-a…"
 

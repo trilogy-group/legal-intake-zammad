@@ -2736,7 +2736,7 @@ msgstr "Basic Authentication"
 msgid "Basic Settings"
 msgstr "Základné nastavenia"
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:788
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:795
 #: app/frontend/shared/components/Form/fields/FieldEditor/suggestions/UserMention.ts:99
 msgid "Before you mention a user, please select a group."
 msgstr "Skôr ako spomeniete používateľa, vyberte skupinu."
@@ -9536,7 +9536,7 @@ msgstr "Neplatný kľúč, kontaktujte svojho admina!"
 msgid "Invalid values in step %s"
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/_ui_element/richtext_additions/popup_video.coffee:39
+#: app/assets/javascripts/app/controllers/_ui_element/richtext_additions/popup_video.coffee:40
 #, fuzzy
 msgid "Invalid video URL"
 msgstr "Neplatná URL adresa videa"
@@ -10215,7 +10215,7 @@ msgid "Loading failed."
 msgstr "Načítanie zlyhalo."
 
 #: app/assets/javascripts/app/lib/app_post/task_manager/singleton.coffee:55
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:647
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:654
 #: app/assets/javascripts/app/views/generic/page_loading.jst.eco:3
 #: app/frontend/apps/desktop/components/CommonLoader/CommonLoader.vue:63
 #: app/frontend/apps/desktop/components/CommonSelect/CommonSelect.vue:513
@@ -11896,7 +11896,7 @@ msgstr ""
 msgid "No results for this query."
 msgstr "Nenašli sa žiadne výsledky"
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:698
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:705
 #: app/frontend/apps/desktop/components/CommonSelect/CommonSelect.vue:339
 #: app/frontend/apps/desktop/components/Form/fields/FieldTreeSelect/FieldTreeSelectInputDropdown.vue:523
 #: app/frontend/apps/desktop/components/NavigationMenu/NavigationMenu.vue:90
@@ -13400,7 +13400,7 @@ msgstr ""
 msgid "Please wait until you received the notification email of the approval."
 msgstr "Počkajte, kým vám príde e-mail s oznámením o schválení."
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:594
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:601
 msgid "Please wait…"
 msgstr "Čakajte prosím…"
 
@@ -16058,11 +16058,11 @@ msgstr ""
 msgid "Start typing to find the ticket to merge into."
 msgstr ""
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:745
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:752
 msgid "Start typing to search for users…"
 msgstr "Začnite písať pre hľadanie používateľov…"
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:641
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:648
 msgid "Start typing to search in Knowledge Base…"
 msgstr "Začnite písať pre hľadanie v databáze znalostí…"
 
