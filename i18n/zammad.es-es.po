@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zammad\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-07-23 17:58+0000\n"
-"Last-Translator: Benjamin Scharf <bs@zammad.com>\n"
+"PO-Revision-Date: 2026-02-09 18:08+0000\n"
+"Last-Translator: Alfredo Sola <alfredo@sola.es>\n"
 "Language-Team: Spanish <https://translations.zammad.org/projects/zammad/"
 "zammad-stable/es/>\n"
 "Language: es-es\n"
@@ -2759,7 +2759,7 @@ msgstr "Autenticación básica"
 msgid "Basic Settings"
 msgstr "Configuración Básica"
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:795
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:805
 #: app/frontend/shared/components/Form/fields/FieldEditor/suggestions/UserMention.ts:99
 msgid "Before you mention a user, please select a group."
 msgstr "Antes de mencionar un usuario, por favor seleccione un grupo."
@@ -10299,7 +10299,7 @@ msgid "Loading failed."
 msgstr "Carga fallida."
 
 #: app/assets/javascripts/app/lib/app_post/task_manager/singleton.coffee:55
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:654
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:664
 #: app/assets/javascripts/app/views/generic/page_loading.jst.eco:3
 #: app/frontend/apps/desktop/components/CommonLoader/CommonLoader.vue:63
 #: app/frontend/apps/desktop/components/CommonSelect/CommonSelect.vue:513
@@ -10430,7 +10430,7 @@ msgstr ""
 
 #: app/assets/javascripts/app/controllers/_channel/microsoft_graph.coffee:386
 msgid "Mailbox type"
-msgstr ""
+msgstr "Tipo de buzón"
 
 #: app/frontend/apps/desktop/components/layout/LayoutPage.vue:71
 msgid "Main sidebar"
@@ -11943,7 +11943,7 @@ msgstr ""
 msgid "No results for this query."
 msgstr "No se encontraron resultados"
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:705
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:715
 #: app/frontend/apps/desktop/components/CommonSelect/CommonSelect.vue:339
 #: app/frontend/apps/desktop/components/Form/fields/FieldTreeSelect/FieldTreeSelectInputDropdown.vue:523
 #: app/frontend/apps/desktop/components/NavigationMenu/NavigationMenu.vue:90
@@ -12939,7 +12939,7 @@ msgstr "Integración de PGP"
 
 #: db/seeds/settings.rb:2107
 msgid "PKCE"
-msgstr ""
+msgstr "PKCE"
 
 #: lib/email_helper.rb:12
 msgid "POP3"
@@ -13031,7 +13031,7 @@ msgstr "Inicio de sesión con contraseña"
 
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingPassword.vue:32
 msgid "Password change has been disabled by the administrator."
-msgstr ""
+msgstr "El administrador ha deshabilitado el cambio de contraseña."
 
 #: app/assets/javascripts/app/controllers/_profile/password.coffee:125
 msgid "Password changed successfully!"
@@ -13246,6 +13246,8 @@ msgid ""
 "Please add an account with a different mailbox or consider removing the "
 "duplicate first."
 msgstr ""
+"Por favor, añadir una cuenta con un buzón diferente o considerar eliminar el "
+"duplicado antes."
 
 #: app/assets/javascripts/app/controllers/checklist_template.coffee:55
 msgid "Please add at least one item to the checklist."
@@ -13407,7 +13409,7 @@ msgstr "Por favor, utilice la URL facilitada."
 
 #: app/frontend/apps/desktop/components/CommonSkeleton/CommonSkeleton.vue:28
 msgid "Please wait until content is loaded"
-msgstr ""
+msgstr "Por favor esperar a que se cargue el contenido"
 
 #: app/assets/javascripts/app/views/exchange/admin_consent.jst.eco:3
 #: app/assets/javascripts/app/views/microsoft365/admin_consent.jst.eco:3
@@ -13415,7 +13417,7 @@ msgid "Please wait until you received the notification email of the approval."
 msgstr ""
 "Espere hasta recibir el mensaje de correo de notificación de aprobación."
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:601
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:611
 msgid "Please wait…"
 msgstr "Espere, por favor…"
 
@@ -13650,6 +13652,8 @@ msgid ""
 "Proof Key for Code Exchange is currently only supporting SHA256 as code "
 "challenge method."
 msgstr ""
+"Proof Key for Code Exchange solamente funciona actualmente con SHA256 como "
+"«challenge»."
 
 #: app/assets/javascripts/app/views/channel/email_account_overview.jst.eco:76
 msgid "Protocol"
@@ -14737,13 +14741,15 @@ msgstr "Programadores"
 
 #: db/seeds/settings.rb:2099
 msgid "Scopes"
-msgstr ""
+msgstr "Ámbitos"
 
 #: db/seeds/settings.rb:2104
 msgid ""
 "Scopes that are included, separated by a single space character. If unset, "
 "\"openid email profile\" is used."
 msgstr ""
+"Ámbitos incluídos, separados por un único espacio. Si no se pone nada, se "
+"usa \"openid email profile\"."
 
 #: app/assets/javascripts/app/views/object_manager/screens.jst.eco:6
 msgid "Screen"
@@ -15936,9 +15942,12 @@ msgid "Special character required"
 msgstr "Se requiere carácter especial"
 
 #: app/assets/javascripts/app/controllers/_channel/microsoft_graph.coffee:482
+#, fuzzy
 msgid ""
 "Specify which folder to fetch from, or leave empty to fetch from ||inbox||."
 msgstr ""
+"Especifique la carpeta desde la que desea recuperar los mensajes o déjelo "
+"vacío para recuperarlos de ``INBOX``."
 
 #: app/frontend/shared/entities/ticket-article/action/plugins/split.ts:11
 msgid "Split"
@@ -15995,11 +16004,11 @@ msgstr ""
 msgid "Start typing to find the ticket to merge into."
 msgstr "Empiece a escribir para buscar el ticket con el que fusionar."
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:752
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:762
 msgid "Start typing to search for users…"
 msgstr "Comienza a escribir para buscar usuarios…"
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:648
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:658
 msgid "Start typing to search in Knowledge Base…"
 msgstr "Comienza a escribir para buscar en la base de datos de conocimiento…"
 
@@ -16342,6 +16351,8 @@ msgid ""
 "System-wide configuration of the query polling mechanism for ticket "
 "overviews."
 msgstr ""
+"Configuración para todo el sistema del mecanismo de sondeo de consultas para "
+"los resúmenes de los casos."
 
 #: db/seeds/settings.rb:262
 msgid "SystemID"
@@ -16579,7 +16590,7 @@ msgstr "No se ha podido detener el proceso 'gpg-agent'."
 
 #: app/controllers/concerns/handles_oidc_authorization.rb:19
 msgid "The 'logout_token' does not contain any session information."
-msgstr ""
+msgstr "El 'logout_token' no contiene ninguna información de sesión."
 
 #: app/controllers/concerns/handles_oidc_authorization.rb:16
 #, fuzzy
@@ -17091,7 +17102,7 @@ msgstr "Se realizarán los siguientes cambios:"
 
 #: app/assets/javascripts/app/views/system_report.jst.eco:13
 msgid "The following contents are provided in the system report:"
-msgstr ""
+msgstr "El informe del sistema incluye los siguientes contenidos:"
 
 #: app/assets/javascripts/app/controllers/_application_controller/_modal.coffee:196
 msgid ""
@@ -17663,6 +17674,8 @@ msgid ""
 "The server returned a redirect response, but the current operation does not "
 "allow redirects."
 msgstr ""
+"El servidor devolvió una redirección, pero la operación actual no permite "
+"redirecciones."
 
 #: app/assets/javascripts/app/controllers/_channel/email.coffee:626
 #: app/assets/javascripts/app/controllers/getting_started/channel_email.coffee:200
@@ -17983,7 +17996,7 @@ msgstr "No se ha configurado un horario de atención."
 
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingLinkedAccounts.vue:46
 msgid "There are no enabled third-party authentication providers."
-msgstr ""
+msgstr "No hay habilitado ningún proveedor de autenticación externo."
 
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingTwoFactorAuth.vue:39
 #, fuzzy
@@ -18451,11 +18464,16 @@ msgstr ""
 msgid ""
 "This overview is visible only when you are a shared organization member."
 msgstr ""
+"Esta visión general sólo es visible cuando usted es miembro de una "
+"organización compartida."
 
 #: app/frontend/apps/mobile/pages/home/components/TicketOverviewEditItem.vue:55
+#, fuzzy
 msgid ""
 "This overview is visible only when you are an out of office replacement."
 msgstr ""
+"Esta vista general sólo es visible cuando usted está sustituyendo a alguien "
+"que está fuera de la oficina."
 
 #: app/frontend/shared/router/error.ts:25
 msgid "This page doesn't exist."
@@ -18594,6 +18612,11 @@ msgid ""
 "should be used for outgoing mails, e.g. when an agent is composing an email "
 "or a trigger is sending an auto-reply."
 msgstr ""
+"Esto ajustará la configuración correspondiente del grupo de destino dentro "
+"de la gestión de grupos. La dirección de correo electrónico de un grupo "
+"determina qué dirección debe utilizarse para los correos salientes, por "
+"ejemplo, cuando un agente redacta un correo electrónico o un disparador "
+"manda una respuesta automática."
 
 #: app/assets/javascripts/app/controllers/_ui_element/basedate.coffee:157
 msgid "Thu"
@@ -19426,7 +19449,7 @@ msgstr "¡Token no válido!"
 
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingTokenAccess.vue:47
 msgid "Token-based API access has been disabled by the administrator."
-msgstr ""
+msgstr "El administrador ha desactivado el acceso a la API por token."
 
 #: lib/user_agent.rb:240
 msgid "Too many redirections for the original URL, halting."
@@ -20605,6 +20628,8 @@ msgid ""
 "Verification of the TLS connection to the IDP SSO target URL. Only relevant "
 "during setting up SAML authentication."
 msgstr ""
+"Verificación de la conexión TLS a la URL de destino del IDP SSO. Solo "
+"importa para la configuración de la autenticación SAML."
 
 #: app/assets/javascripts/app/views/whatsapp/account_webhook.jst.eco:24
 msgid "Verify Token"
@@ -21228,6 +21253,8 @@ msgid ""
 "You can find archived emails in Zammad anytime using the search function, "
 "like for any other ticket."
 msgstr ""
+"Se pueden encontrar los correos electrónicos archivados en Zammad en todo "
+"momento utilizando la función de búsqueda, como para cualquier otro caso."
 
 #: app/assets/javascripts/app/views/profile/token_access.jst.eco:4
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingTokenAccess.vue:182
@@ -21251,6 +21278,9 @@ msgid ""
 "notifications are sent and the tickets will be in a target state that you "
 "define."
 msgstr ""
+"Se pueden importar algunos de sus correos electrónicos como \"archivo\", lo "
+"que significa que no se enviarán notificaciones y los tickets estarán en el "
+"estado de destino que usted indique."
 
 #: app/frontend/shared/composables/activity-message/activityMessageBuilder/builders/data-privacy-task.ts:19
 msgid "You can no longer see the data privacy task."
@@ -21417,6 +21447,9 @@ msgid ""
 "(including future ones) are going to be archived until the selected time is "
 "reached."
 msgstr ""
+"Ha indicado una hora límite en el futuro. Ten en cuenta que todos los "
+"correos electrónicos (incluidos los futuros) se van a archivar hasta que se "
+"alcance la hora indicada."
 
 #: app/assets/javascripts/app/controllers/_profile/avatar.coffee:326
 msgid "You have to allow access to your webcam."
@@ -22926,7 +22959,7 @@ msgstr "ejecutar macro"
 
 #: app/frontend/apps/desktop/pages/ticket-overviews/views/TicketOverviews.vue:99
 msgid "second level navigation sidebar"
-msgstr ""
+msgstr "barra lateral de navegación de segundo nivel"
 
 #: app/assets/javascripts/app/controllers/_ui_element/core_workflow_perform.coffee:43
 msgid "select"

@@ -2956,7 +2956,7 @@ msgstr "Autenticació"
 msgid "Basic Settings"
 msgstr "Configuració básica"
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:795
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:805
 #: app/frontend/shared/components/Form/fields/FieldEditor/suggestions/UserMention.ts:99
 #, fuzzy
 msgid "Before you mention a user, please select a group."
@@ -11378,7 +11378,7 @@ msgid "Loading failed."
 msgstr "Carregant..."
 
 #: app/assets/javascripts/app/lib/app_post/task_manager/singleton.coffee:55
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:654
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:664
 #: app/assets/javascripts/app/views/generic/page_loading.jst.eco:3
 #: app/frontend/apps/desktop/components/CommonLoader/CommonLoader.vue:63
 #: app/frontend/apps/desktop/components/CommonSelect/CommonSelect.vue:513
@@ -13320,7 +13320,7 @@ msgstr "No related article found to process the status message on."
 msgid "No results for this query."
 msgstr "No results found"
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:705
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:715
 #: app/frontend/apps/desktop/components/CommonSelect/CommonSelect.vue:339
 #: app/frontend/apps/desktop/components/Form/fields/FieldTreeSelect/FieldTreeSelectInputDropdown.vue:523
 #: app/frontend/apps/desktop/components/NavigationMenu/NavigationMenu.vue:90
@@ -15007,7 +15007,7 @@ msgstr ""
 msgid "Please wait until you received the notification email of the approval."
 msgstr "Please wait until you received the notification email of the approval."
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:601
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:611
 #, fuzzy
 msgid "Please wait…"
 msgstr "Please wait…"
@@ -17985,13 +17985,13 @@ msgstr ""
 msgid "Start typing to find the ticket to merge into."
 msgstr "Start typing to find the ticket to merge into."
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:752
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:762
 #, fuzzy
 #| msgid "Search for users"
 msgid "Start typing to search for users…"
 msgstr "Busca usuaris"
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:648
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:658
 #, fuzzy
 #| msgid "Search for users"
 msgid "Start typing to search in Knowledge Base…"

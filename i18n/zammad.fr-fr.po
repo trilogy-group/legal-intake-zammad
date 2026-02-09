@@ -2767,7 +2767,7 @@ msgstr "Basic Authentication"
 msgid "Basic Settings"
 msgstr "Paramètres de base"
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:795
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:805
 #: app/frontend/shared/components/Form/fields/FieldEditor/suggestions/UserMention.ts:99
 msgid "Before you mention a user, please select a group."
 msgstr "Veuillez sélectionner un groupe avant de mentionner un utilisateur."
@@ -10302,7 +10302,7 @@ msgid "Loading failed."
 msgstr "Échec du chargement."
 
 #: app/assets/javascripts/app/lib/app_post/task_manager/singleton.coffee:55
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:654
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:664
 #: app/assets/javascripts/app/views/generic/page_loading.jst.eco:3
 #: app/frontend/apps/desktop/components/CommonLoader/CommonLoader.vue:63
 #: app/frontend/apps/desktop/components/CommonSelect/CommonSelect.vue:513
@@ -11927,7 +11927,7 @@ msgstr "Aucun article associé n'a été trouvé pour traiter le message d'état
 msgid "No results for this query."
 msgstr "Aucun résultat pour cette recherche."
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:705
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:715
 #: app/frontend/apps/desktop/components/CommonSelect/CommonSelect.vue:339
 #: app/frontend/apps/desktop/components/Form/fields/FieldTreeSelect/FieldTreeSelectInputDropdown.vue:523
 #: app/frontend/apps/desktop/components/NavigationMenu/NavigationMenu.vue:90
@@ -13381,7 +13381,7 @@ msgstr "Veuillez patienter jusqu'à ce que le contenu soit chargé"
 msgid "Please wait until you received the notification email of the approval."
 msgstr "Veuillez patienter jusqu'à ce que vous receviez l'email d'approbation."
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:601
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:611
 msgid "Please wait…"
 msgstr "Merci de patienter…"
 
@@ -15944,11 +15944,11 @@ msgstr ""
 msgid "Start typing to find the ticket to merge into."
 msgstr "Commencez à taper pour trouver le ticket dans lequel fusionner."
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:752
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:762
 msgid "Start typing to search for users…"
 msgstr "Commencez à taper pour rechercher des utilisateurs…"
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:648
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:658
 msgid "Start typing to search in Knowledge Base…"
 msgstr "Commencez à taper pour chercher dans la base de connaissances…"
 

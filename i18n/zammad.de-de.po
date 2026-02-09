@@ -2766,7 +2766,7 @@ msgstr "Basic Authentication"
 msgid "Basic Settings"
 msgstr "Grundeinstellungen"
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:795
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:805
 #: app/frontend/shared/components/Form/fields/FieldEditor/suggestions/UserMention.ts:99
 msgid "Before you mention a user, please select a group."
 msgstr "Bevor Sie einen Benutzer erwähnen, wählen Sie bitte eine Gruppe aus."
@@ -10281,7 +10281,7 @@ msgid "Loading failed."
 msgstr "Laden fehlgeschlagen."
 
 #: app/assets/javascripts/app/lib/app_post/task_manager/singleton.coffee:55
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:654
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:664
 #: app/assets/javascripts/app/views/generic/page_loading.jst.eco:3
 #: app/frontend/apps/desktop/components/CommonLoader/CommonLoader.vue:63
 #: app/frontend/apps/desktop/components/CommonSelect/CommonSelect.vue:513
@@ -11907,7 +11907,7 @@ msgstr ""
 msgid "No results for this query."
 msgstr "Keine Ergebnisse für diese Anfrage."
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:705
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:715
 #: app/frontend/apps/desktop/components/CommonSelect/CommonSelect.vue:339
 #: app/frontend/apps/desktop/components/Form/fields/FieldTreeSelect/FieldTreeSelectInputDropdown.vue:523
 #: app/frontend/apps/desktop/components/NavigationMenu/NavigationMenu.vue:90
@@ -13359,7 +13359,7 @@ msgstr ""
 "Bitte warten Sie, bis Sie die Benachrichtigungs-E-Mail über die Genehmigung "
 "erhalten haben."
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:601
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:611
 msgid "Please wait…"
 msgstr "Bitte warten…"
 
@@ -15920,11 +15920,11 @@ msgstr ""
 msgid "Start typing to find the ticket to merge into."
 msgstr "Tippen Sie, um das Ticket zum Zusammenfassen zu finden."
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:752
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:762
 msgid "Start typing to search for users…"
 msgstr "Beginnen Sie mit der Eingabe, um nach Benutzern zu suchen…"
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:648
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:658
 msgid "Start typing to search in Knowledge Base…"
 msgstr "Beginnen Sie mit der Eingabe, um in der Knowledge Base zu suchen…"
 

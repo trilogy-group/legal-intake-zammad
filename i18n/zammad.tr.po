@@ -2746,7 +2746,7 @@ msgstr "Temel Kimlik Doğrulama"
 msgid "Basic Settings"
 msgstr "Temel Ayarlar"
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:795
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:805
 #: app/frontend/shared/components/Form/fields/FieldEditor/suggestions/UserMention.ts:99
 msgid "Before you mention a user, please select a group."
 msgstr "Bir kullanıcıdan bahsetmeden önce lütfen bir grup seçin."
@@ -10202,7 +10202,7 @@ msgid "Loading failed."
 msgstr "Yükleme başarısız oldu."
 
 #: app/assets/javascripts/app/lib/app_post/task_manager/singleton.coffee:55
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:654
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:664
 #: app/assets/javascripts/app/views/generic/page_loading.jst.eco:3
 #: app/frontend/apps/desktop/components/CommonLoader/CommonLoader.vue:63
 #: app/frontend/apps/desktop/components/CommonSelect/CommonSelect.vue:513
@@ -11817,7 +11817,7 @@ msgstr "Durum mesajını işlemek için ilgili bir yazı bulunamadı."
 msgid "No results for this query."
 msgstr "Bu sorgu için sonuç yok."
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:705
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:715
 #: app/frontend/apps/desktop/components/CommonSelect/CommonSelect.vue:339
 #: app/frontend/apps/desktop/components/Form/fields/FieldTreeSelect/FieldTreeSelectInputDropdown.vue:523
 #: app/frontend/apps/desktop/components/NavigationMenu/NavigationMenu.vue:90
@@ -13255,7 +13255,7 @@ msgstr "Lütfen içerik yüklenene kadar bekleyin"
 msgid "Please wait until you received the notification email of the approval."
 msgstr "Lütfen onayla ilgili bildirim e-postasını alana kadar bekleyin."
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:601
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:611
 msgid "Please wait…"
 msgstr "Lütfen bekleyin…"
 
@@ -15798,11 +15798,11 @@ msgstr ""
 msgid "Start typing to find the ticket to merge into."
 msgstr "Birleştirilecek destek talebini bulmak için yazmaya başlayın."
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:752
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:762
 msgid "Start typing to search for users…"
 msgstr "Kullanıcıları aramak için yazmaya başlayın…"
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:648
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:658
 msgid "Start typing to search in Knowledge Base…"
 msgstr "Bilgi Tabanında arama yapmak için yazmaya başlayın…"
 
