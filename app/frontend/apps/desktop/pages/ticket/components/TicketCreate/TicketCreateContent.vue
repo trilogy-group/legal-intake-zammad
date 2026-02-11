@@ -419,10 +419,10 @@ const submitCreateTicket = async (event: FormSubmitData<TicketFormData>) => {
           variant="danger"
           :disabled="isDisabled"
           @click="discardChanges"
-          >{{ __('Discard changes') }}</CommonButton
+          >{{ $t('Discard changes') }}</CommonButton
         >
         <CommonButton v-else size="large" variant="secondary" @click="goBack">{{
-          __('Cancel & go back')
+          $t('Cancel & go back')
         }}</CommonButton>
       </template>
 
@@ -434,7 +434,7 @@ const submitCreateTicket = async (event: FormSubmitData<TicketFormData>) => {
         type="submit"
         :form="formNodeId"
         :disabled="isDisabled"
-        >{{ __('Create') }}</CommonButton
+        >{{ $t('Create') }}</CommonButton
       >
     </template>
   </LayoutContent>
