@@ -2,10 +2,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zammad\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-07-10 09:00+0000\n"
-"Last-Translator: Sebastian Diaz <sebdiazf@gmail.com>\n"
+"PO-Revision-Date: 2026-02-12 22:00+0000\n"
+"Last-Translator: Victor Gallegos <vgallegos@kaliroy.com>\n"
 "Language-Team: Spanish (Mexico) <https://translations.zammad.org/projects/"
-"zammad/zammad-development/es_MX/>\n"
+"zammad/zammad-stable/es_MX/>\n"
 "Language: es-mx\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -248,13 +248,11 @@ msgstr "Confirmar"
 
 #: app/frontend/apps/mobile/components/Form/fields/FieldSecurity/FieldSecurityInput.vue:103
 msgid "%s (method)"
-msgstr ""
+msgstr "método"
 
 #: app/frontend/apps/mobile/components/Form/fields/FieldSecurity/FieldSecurityInput.vue:138
-#, fuzzy
-#| msgid "set optional"
 msgid "%s (option)"
-msgstr "establecer opcional"
+msgstr "%s opción"
 
 #: app/frontend/apps/desktop/components/CommonSelect/CommonSelect.vue:272
 #: app/frontend/apps/desktop/components/Form/fields/FieldAutoComplete/FieldAutoCompleteInput.vue:556
@@ -266,7 +264,7 @@ msgstr "establecer opcional"
 #: app/frontend/apps/mobile/components/Form/fields/FieldTreeSelect/FieldTreeSelectInputDialog.vue:288
 #: app/frontend/shared/composables/useSelectOptions.ts:121
 msgid "%s (unknown)"
-msgstr ""
+msgstr "%s desconocido"
 
 #: app/assets/javascripts/app/views/telegram/bot_add.jst.eco:9
 #: app/assets/javascripts/app/views/telegram/bot_edit.jst.eco:6
@@ -383,10 +381,8 @@ msgid "%s days ago"
 msgstr "hace %s"
 
 #: app/frontend/apps/desktop/composables/dragAndDrop/useKeyboardKeysForDragAndDrop.ts:60
-#, fuzzy
-#| msgid "assign tickets"
 msgid "%s deselected."
-msgstr "asignar tickets"
+msgstr "deseleccionado."
 
 #: app/assets/javascripts/app/controllers/_channel/email.coffee:709
 #: app/assets/javascripts/app/controllers/getting_started/channel_email.coffee:260
@@ -419,10 +415,8 @@ msgid "%s groups to %s roles assignments"
 msgstr "%s grupos a %s asignaciones de roles"
 
 #: app/frontend/shared/i18n/dates.ts:110
-#, fuzzy
-#| msgid "%s ago"
 msgid "%s hours ago"
-msgstr "hace %s"
+msgstr "Hace %s horas"
 
 #: app/frontend/shared/components/Form/fields/FieldEditor/features/ai-assistant-text-tools/AiAssistantLoadingBanner/AiAssistantLoadingBanner.vue:28
 #, fuzzy

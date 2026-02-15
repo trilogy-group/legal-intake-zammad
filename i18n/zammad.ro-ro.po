@@ -2,17 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zammad\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-02-25 07:00+0000\n"
-"Last-Translator: Dominik Klein <dk@zammad.com>\n"
+"PO-Revision-Date: 2026-02-12 22:00+0000\n"
+"Last-Translator: Tecsi Aron <aron@edituraedu.ro>\n"
 "Language-Team: Romanian <https://translations.zammad.org/projects/zammad/"
-"zammad-development/ro/>\n"
+"zammad-stable/ro/>\n"
 "Language: ro-ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Weblate 5.9.2\n"
+"X-Generator: Weblate 5.11.4\n"
 
 #. Default date format to use for the current locale.
 #. These placeholders are supported:
@@ -489,10 +489,8 @@ msgid "%s days ago"
 msgstr "%s zile în urmă"
 
 #: app/frontend/apps/desktop/composables/dragAndDrop/useKeyboardKeysForDragAndDrop.ts:60
-#, fuzzy
-#| msgid "%s tickets"
 msgid "%s deselected."
-msgstr "%s tichete"
+msgstr "%s tichete."
 
 #: app/assets/javascripts/app/controllers/_channel/email.coffee:709
 #: app/assets/javascripts/app/controllers/getting_started/channel_email.coffee:260
@@ -525,10 +523,8 @@ msgid "%s hours ago"
 msgstr "%s ore în urmă"
 
 #: app/frontend/shared/components/Form/fields/FieldEditor/features/ai-assistant-text-tools/AiAssistantLoadingBanner/AiAssistantLoadingBanner.vue:28
-#, fuzzy
-#| msgid "%s Migration"
 msgid "%s is generating text…"
-msgstr "Migrare %s"
+msgstr "%s generează text…"
 
 #: app/assets/javascripts/app/views/channel/email_account_overview.jst.eco:91
 #: app/assets/javascripts/app/views/channel/sms_account_overview.jst.eco:58
@@ -555,10 +551,8 @@ msgid "%s months ago"
 msgstr "%s luni în urmă"
 
 #: app/frontend/apps/desktop/components/Search/QuickSearch/QuickSearchResultList/QuickSearchResultList.vue:172
-#, fuzzy
-#| msgid "show more"
 msgid "%s more"
-msgstr "afișează mai multe"
+msgstr "%s mai multe detalii"
 
 #: app/assets/javascripts/app/views/generic/object_import/imported.jst.eco:21
 msgid "%s object(s) have been created."
@@ -605,10 +599,8 @@ msgstr "%s persoane"
 
 #: app/assets/javascripts/app/models/ticket_article.coffee:53
 #: app/frontend/shared/composables/activity-message/activityMessageBuilder/builders/ticket-article.ts:31
-#, fuzzy
-#| msgid "%s ended switch to |%s|!"
 msgid "%s reacted with a %s to message from %s |%s|"
-msgstr "%s a încheiat comutarea la |%s|!"
+msgstr "%s a reacționat cu %s la mesajul de la %s |%s|"
 
 #: app/assets/javascripts/app/views/channel/email_account_overview.jst.eco:49
 msgid ""
@@ -625,6 +617,8 @@ msgstr "%s trebuie introdus obligatoriu!"
 #: app/frontend/apps/desktop/composables/dragAndDrop/useKeyboardKeysForDragAndDrop.ts:53
 msgid "%s selected. Use arrow keys to choose drop position, then press Space."
 msgstr ""
+"%s selectat. Folosiți tastele săgeată pentru a alege poziția de plasare, "
+"apoi apăsați Space."
 
 #: app/assets/javascripts/app/models/user.coffee:212
 #: app/frontend/shared/composables/activity-message/activityMessageBuilder/builders/user.ts:25

@@ -2,10 +2,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zammad\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-07-16 09:00+0000\n"
-"Last-Translator: Martin Bonde <martin@maboni.dk>\n"
+"PO-Revision-Date: 2026-02-12 22:00+0000\n"
+"Last-Translator: Dennis Juhler Aagaard <dennis@kulmosen.dk>\n"
 "Language-Team: Danish <https://translations.zammad.org/projects/zammad/"
-"zammad-development/da/>\n"
+"zammad-stable/da/>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -483,10 +483,8 @@ msgid "%s days ago"
 msgstr "%s dage siden"
 
 #: app/frontend/apps/desktop/composables/dragAndDrop/useKeyboardKeysForDragAndDrop.ts:60
-#, fuzzy
-#| msgid "%s ticket selected"
 msgid "%s deselected."
-msgstr "%s tickets valgt"
+msgstr "%s fravalgt"
 
 #: app/assets/javascripts/app/controllers/_channel/email.coffee:709
 #: app/assets/javascripts/app/controllers/getting_started/channel_email.coffee:260
@@ -512,7 +510,7 @@ msgstr "%s mapper"
 #: app/assets/javascripts/app/views/integration/ldap_last_import.jst.eco:39
 #: app/assets/javascripts/app/views/integration/ldap_summary.jst.eco:8
 msgid "%s groups to %s roles assignments"
-msgstr "%s grupper til %s rolle tildelinger"
+msgstr "%s grupper til %s rolletildelinger"
 
 #: app/frontend/shared/i18n/dates.ts:110
 msgid "%s hours ago"
@@ -614,7 +612,7 @@ msgstr "%s er påkrævet!"
 
 #: app/frontend/apps/desktop/composables/dragAndDrop/useKeyboardKeysForDragAndDrop.ts:53
 msgid "%s selected. Use arrow keys to choose drop position, then press Space."
-msgstr ""
+msgstr "%s valgt. Brug piletasterne til at vælge position og tryk så mellemrum."
 
 #: app/assets/javascripts/app/models/user.coffee:212
 #: app/frontend/shared/composables/activity-message/activityMessageBuilder/builders/user.ts:25
@@ -1067,6 +1065,7 @@ msgstr "Agent"
 #: app/services/service/ai/agent/run.rb:32
 msgid "AI agent result content does not match expected result structure."
 msgstr ""
+"AI Agent resultat indhold matcher ikke den forventede resultat struktur."
 
 #: app/assets/javascripts/app/controllers/_ai/ai_agent.coffee:33
 #, fuzzy
@@ -1079,6 +1078,9 @@ msgid ""
 "AI agents enable streamlined processing powered by artificial intelligence. "
 "You can execute AI agents via triggers or schedulers."
 msgstr ""
+"AI-agenter automatiserer og strømliner processer ved hjælp af kunstig "
+"intelligens. De kan aktiveres via triggere eller planlagte opgaver "
+"(schedulers)."
 
 #: app/services/service/ai_assistance/text_tools.rb:22
 #, fuzzy
@@ -1145,11 +1147,11 @@ msgstr "AI-udbyderens token er ikke indstillet"
 
 #: lib/ai/service/ticket_summarize.rb:45
 msgid "AI service result is missing expected keys"
-msgstr ""
+msgstr "AI-tjenestens resultat indeholder ikke de forventede nøgler"
 
 #: lib/excel_sheet/ai/analytics/with_usage.rb:4
 msgid "AI usage and feedback log"
-msgstr ""
+msgstr "Logfil for AI-aktivitet og feedback"
 
 #: app/assets/javascripts/app/controllers/api.coffee:3
 #: app/assets/javascripts/app/views/api.jst.eco:2 db/seeds/permissions.rb:263
@@ -1562,7 +1564,7 @@ msgstr "Tilføj Offentlig eller Privat Nøgle"
 
 #: app/frontend/shared/entities/ticket-article/action/plugins/sms.ts:45
 msgid "Add SMS"
-msgstr ""
+msgstr "Tilføj SMS"
 
 #: app/assets/javascripts/app/views/ssl_certificates.jst.eco:5
 msgid "Add SSL Certificate"
@@ -1915,11 +1917,11 @@ msgstr "Agenter"
 
 #: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:514
 msgid "Agents with \"%s\" permission"
-msgstr ""
+msgstr "Agenter med \"%s\" tilladelser"
 
 #: app/frontend/apps/desktop/components/BetaUi/BetaUiFeedbackConsentDialog.vue:103
 msgid "Agree & join"
-msgstr ""
+msgstr "Godkend & tilmeld"
 
 #: app/assets/javascripts/app/views/profile/calendar_subscriptions.jst.eco:27
 msgid "Alarm"
@@ -1964,7 +1966,7 @@ msgstr ""
 
 #: app/models/ai/agent/type/ticket_categorizer.rb:51
 msgid "All categories will be considered for categorizing tickets."
-msgstr ""
+msgstr "Alle kategorier anvendes til sortering af sager."
 
 #: public/assets/chat/views/waiting.eco:7
 msgid "All colleagues are busy."
@@ -1982,11 +1984,13 @@ msgstr "Alle computere og browsere, der har adgang til din Zammad, vises her."
 
 #: app/models/ai/agent/type/ticket_group_dispatcher.rb:24
 msgid "All groups will be considered for dispatching tickets."
-msgstr ""
+msgstr "Alle grupper indgår i sagsfordelingen."
 
 #: app/models/ai/agent/type/ticket_prioritizer.rb:29
 msgid "All priorities will be considered for prioritizing tickets."
 msgstr ""
+"Alle prioritetsniveauer vil blive taget i betragtning ved prioritering af "
+"supportanmodninger."
 
 #: app/assets/javascripts/app/controllers/_manage/ticket_duplicate_detection.coffee:38
 #: app/frontend/apps/desktop/components/Form/fields/FieldNotifications/FieldNotificationsInput.vue:56
@@ -1999,12 +2003,14 @@ msgstr "Alle to-faktor-godkendelsesmetoder blev fjernet for denne bruger."
 
 #: app/models/ai/agent/type/ticket_categorizer.rb:65
 msgid "Allow AI Agent to select multiple categories from all possible values."
-msgstr ""
+msgstr "Tillad AI-agenten at vælge flere kategorier blandt alle mulige værdier."
 
 #: db/seeds/settings.rb:6025
 msgid ""
 "Allow admins to manage availability and access to the desktop BETA UI switch."
 msgstr ""
+"Tillad administratorer at styre tilgængelighed og adgang til "
+"skrivebordsversionen af BETA UI kontakten."
 
 #: app/assets/javascripts/app/controllers/_ui_element/object_manager_attribute.coffee:317
 msgid "Allow future"
@@ -2204,7 +2210,7 @@ msgstr "Anticon"
 
 #: app/assets/javascripts/app/views/ai/ai_feedback_widget.jst.eco:8
 msgid "Any feedback on this result?"
-msgstr ""
+msgstr "Har du feedback på dette resultat?"
 
 #: app/assets/javascripts/app/controllers/_ui_element/postmaster_match.coffee:22
 msgid "Any recipient"
@@ -2977,11 +2983,11 @@ msgstr "Ny fane"
 
 #: app/assets/javascripts/app/controllers/_manage/beta_ui.coffee:2
 msgid "BETA UI Availability"
-msgstr ""
+msgstr "BETA UI Tilgængelighed"
 
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingNewBetaUi.vue:73
 msgid "BETA UI feedback program"
-msgstr ""
+msgstr "BETA UI feedback program"
 
 #: app/frontend/apps/desktop/components/BetaUi/BetaUiFeedbackConsentDialog.vue:46
 #, fuzzy
@@ -3037,6 +3043,8 @@ msgid ""
 "Bar chart showing ticket statistics. Created and closed tickets over the "
 "last 12 months."
 msgstr ""
+"Søjlediagram med sagstatistik. Oprettede og lukkede sager de seneste 12 "
+"måneder."
 
 #: app/assets/javascripts/app/controllers/_manage/branding.coffee:9
 #: app/assets/javascripts/app/controllers/_manage/security.coffee:9
@@ -3365,7 +3373,7 @@ msgstr "Kan være i ethvert CSS-farveformat."
 
 #: app/frontend/apps/desktop/components/BetaUi/FeedbackDialog/SwitchBackFeedbackDialog.vue:37
 msgid "Can you tell us what are you missing in the BETA UI?"
-msgstr ""
+msgstr "Kan du fortælle os, hvad du mangler i BETA UI'et?"
 
 #: app/assets/javascripts/app/controllers/getting_started/agent.coffee:87
 msgid "Can't create user!"
@@ -3677,7 +3685,7 @@ msgstr "Kanaler"
 #: app/frontend/shared/components/Form/fields/FieldEditor/extensions/CharacterCount/HtmlCharacterCount.ts:35
 #: app/frontend/shared/components/Form/fields/FieldEditor/extensions/CharacterCount/PlainCharacterCount.ts:29
 msgid "Character limit reached"
-msgstr ""
+msgstr "Karakter grænse nået"
 
 #: app/assets/javascripts/app/controllers/_channel/chat.coffee:3
 #: app/assets/javascripts/app/controllers/chat.coffee:98
@@ -3845,6 +3853,11 @@ msgid ""
 "below. Make sure the options have clear names and optional descriptions, as "
 "that would comprise the context provided to the AI agent."
 msgstr ""
+"Vælg hvilke attributværdier der skal tages i betragtning ved kategorisering "
+"af supportanmodninger. Hvis du ønsker at begrænse til specifikke muligheder, "
+"skal du vælge mindst to nedenfor. Sørg for, at mulighederne har klare navne "
+"og eventuelle beskrivelser, da dette udgør den kontekst, AI-agenten får til "
+"rådighed."
 
 #: app/models/ai/agent/type/ticket_group_dispatcher.rb:16
 msgid ""
@@ -3853,6 +3866,11 @@ msgid ""
 "the groups have clear names and optional descriptions, as that would "
 "comprise the context provided to the AI agent."
 msgstr ""
+"Vælg hvilke grupper der skal tages i betragtning ved fordeling af "
+"supportanmodninger. Hvis du ønsker at begrænse til specifikke grupper, skal "
+"du vælge mindst to nedenfor. Sørg for, at grupperne har klare navne og "
+"eventuelle beskrivelser, da dette udgør den kontekst, AI-agenten får til "
+"rådighed."
 
 #: app/models/ai/agent/type/ticket_prioritizer.rb:20
 msgid ""
@@ -3861,6 +3879,11 @@ msgid ""
 "Make sure the priorities have clear names and optional descriptions, as that "
 "would comprise the context provided to the AI agent."
 msgstr ""
+"Vælg hvilke prioritetsniveauer der skal tages i betragtning ved prioritering "
+"af supportanmodninger. Hvis du ønsker at begrænse til specifikke "
+"prioriteter, skal du vælge mindst to nedenfor. Sørg for, at prioriteterne "
+"har klare navne og eventuelle beskrivelser, da dette udgør den kontekst, AI-"
+"agenten får til rådighed."
 
 #: app/assets/javascripts/app/views/profile/language.jst.eco:7
 msgid "Choose your language."
@@ -3996,7 +4019,7 @@ msgstr "Klik her for at konfigurere en to-faktor-godkendelsesmetode."
 
 #: app/frontend/shared/components/Form/fields/FieldEditor/FieldEditorInput.vue:48
 msgid "Click to edit…"
-msgstr ""
+msgstr "Redigér her…"
 
 #: app/assets/javascripts/app/views/exchange/app_config.jst.eco:9
 #: app/assets/javascripts/app/views/exchange/token_information.jst.eco:28
@@ -4145,7 +4168,7 @@ msgstr "Kombineret abonnements URL"
 
 #: app/models/tag/item.rb:4
 msgid "Commas and stars are not allowed in name."
-msgstr ""
+msgstr "Kommaer og stjerner er ikke tilladt i navnet."
 
 #: app/assets/javascripts/app/controllers/widget/ticket_bulk_form.coffee:62
 #: app/frontend/apps/desktop/components/BetaUi/BetaUiFeedbackConsentDialog.vue:22
@@ -4721,7 +4744,7 @@ msgstr "Antal"
 
 #: app/models/system_report/plugin/failed_emails.rb:4
 msgid "Count of failed emails"
-msgstr ""
+msgstr "Antal mislykkede e-mails"
 
 #: app/assets/javascripts/app/views/integration/exchange_last_import.jst.eco:24
 #: app/assets/javascripts/app/views/integration/exchange_wizard.jst.eco:182
@@ -4796,6 +4819,26 @@ msgid ""
 "\n"
 "To select placeholders from a list, just enter \"::\"."
 msgstr ""
+"Opret tekstmoduler for at spare tid på at skrive svar. Tekstmoduler kan "
+"indeholde smarte variabler som brugerens navn eller e-mailadresse.\n"
+"Eksempler på tekststykker:\n"
+"\n"
+"    Hej fru #{ticket.customer.lastname},\n"
+"    Hej hr. #{ticket.customer.lastname},\n"
+"    Hej #{ticket.customer.firstname},\n"
+"    Mit navn er #{user.firstname},\n"
+"    Du kan naturligvis også bruge flerlinjede tekststykker.\n"
+"\n"
+"Tilgængelige objekter:\n"
+"\n"
+"    ticket (f.eks. ticket.state, ticket.group)\n"
+"    ticket.customer (f.eks. ticket.customer.firstname, "
+"ticket.customer.lastname)\n"
+"    ticket.owner (f.eks. ticket.owner.firstname, ticket.owner.lastname)\n"
+"    ticket.organization (f.eks. ticket.organization.name)\n"
+"    user (f.eks. user.firstname, user.email)\n"
+"\n"
+"For at vælge pladsholdere fra en liste, skriv blot '::'."
 
 #: app/controllers/first_steps_controller.rb:82
 msgid "Create a Test Ticket"
@@ -4952,7 +4995,7 @@ msgstr "Artikel Oprettet"
 #: lib/excel_sheet/ai/analytics/errors.rb:40
 #: lib/excel_sheet/ai/analytics/with_usage.rb:40 lib/excel_sheet/ticket.rb:56
 msgid "Created At"
-msgstr ""
+msgstr "Oprettet den"
 
 #: app/assets/javascripts/app/controllers/widget/placeholder.coffee:113
 msgid "Created External Article"
@@ -5021,8 +5064,9 @@ msgid "Creation Channels"
 msgstr "Kanaler til skabelse"
 
 #: app/assets/javascripts/app/controllers/core_workflow.coffee:56
+#, fuzzy
 msgid "Creation mask"
-msgstr ""
+msgstr "Opret-maske"
 
 #: app/assets/javascripts/app/controllers/_profile/avatar.coffee:156
 msgid "Crop Image"
@@ -5075,6 +5119,8 @@ msgid ""
 "Currently no overview is assigned to your roles. Please contact your "
 "administrator."
 msgstr ""
+"Der er i øjeblikket ikke tildelt nogen oversigt til dine roller. Kontakt "
+"venligst din administrator."
 
 #: app/assets/javascripts/app/controllers/ticket_zoom/attribute_bar.coffee:145
 #: app/frontend/apps/desktop/components/AiAgent/AiAgentPopoverWithTrigger.vue:25
@@ -5082,7 +5128,7 @@ msgstr ""
 #: app/frontend/apps/mobile/components/Ticket/TicketItem.vue:35
 #: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketViewersDialog.vue:41
 msgid "Currently processing this ticket…"
-msgstr ""
+msgstr "Behandler denne sag…"
 
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingOverviews.vue:146
 #: app/frontend/apps/desktop/pages/ticket-overviews/views/TicketOverviews.vue:131
@@ -5099,7 +5145,7 @@ msgstr "Tilpasset"
 
 #: app/assets/javascripts/app/lib/app_post/ai_provider/custom.coffee:4
 msgid "Custom (OpenAI Compatible)"
-msgstr ""
+msgstr "Brugerdefineret (OpenAI-kompatibel)"
 
 #: app/models/ai/agent/type/custom_ai_agent.rb:6
 #, fuzzy
@@ -5180,7 +5226,7 @@ msgstr "%s tickets"
 
 #: app/models/system_report/plugin/entities/user.rb:4
 msgid "Customer and agent ratio (role based user counts)"
-msgstr ""
+msgstr "Forhold mellem kunder og medarbejdere (rollebaseret brugeroptælling)"
 
 #: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarSummary/TicketSidebarSummary.vue:78
 #, fuzzy
@@ -5209,6 +5255,8 @@ msgid ""
 "Customer tickets of the user will get deleted on execution of the task. No "
 "rollback possible."
 msgstr ""
+"Brugerens kundesager vil blive slettet ved udførelse af opgaven. Handlingen "
+"kan ikke fortrydes."
 
 #: app/assets/javascripts/app/models/organization.coffee:7
 #: db/seeds/object_manager_attributes.rb:1751
@@ -5220,7 +5268,7 @@ msgstr "Kunder i denne organisation kan se hinandens emner."
 msgid ""
 "Customize the default locale and timezone during replacement of template "
 "variables."
-msgstr ""
+msgstr "Tilpas standardsprog og tidszone ved udskiftning af skabelonvariabler"
 
 #: app/assets/javascripts/app/controllers/_plugin/electron_events.coffee:26
 msgid "Cut"
@@ -5289,7 +5337,7 @@ msgstr "Dato & tid felt"
 
 #: db/seeds/settings.rb:2441
 msgid "Date (Year.Month.Day.SystemID.Counter)"
-msgstr ""
+msgstr "Dato (Year.Month.Day.SystemID.Counter)"
 
 #: app/assets/javascripts/app/controllers/_ui_element/object_manager_attribute.coffee:49
 msgid "Date field"
@@ -5303,7 +5351,7 @@ msgstr "Dato felt"
 
 #: app/frontend/shared/components/Form/fields/FieldDate/useDateTime.ts:43
 msgid "Datepicker menu"
-msgstr ""
+msgstr "Datovælger menu"
 
 #: app/assets/javascripts/app/views/generic/timer.jst.eco:7
 #: app/assets/javascripts/app/views/report/time_range_picker.jst.eco:5
@@ -5396,7 +5444,7 @@ msgstr "Standard ved tilmelding"
 
 #: db/seeds/settings.rb:4194
 msgid "Default calendar tickets subscriptions"
-msgstr ""
+msgstr "Standardabonnementer på kalendersager"
 
 #: app/assets/javascripts/app/views/integration/cti.jst.eco:98
 #: app/assets/javascripts/app/views/integration/placetel.jst.eco:116
@@ -5417,15 +5465,15 @@ msgstr "Opret ny sag"
 
 #: app/assets/javascripts/app/controllers/_ui_element/object_manager_attribute.coffee:349
 msgid "Default time diff (hours)"
-msgstr ""
+msgstr "Standard tidsforskel (timer)"
 
 #: app/assets/javascripts/app/controllers/_ui_element/object_manager_attribute.coffee:335
 msgid "Default time diff (minutes)"
-msgstr ""
+msgstr "Standard tidsforskel (minutter)"
 
 #: db/seeds/settings.rb:860
 msgid "Default type for a new ticket"
-msgstr ""
+msgstr "Standardtype for ny sag"
 
 #: app/models/object_manager/attribute/data_option_validator.rb:47
 #, fuzzy
@@ -5444,7 +5492,7 @@ msgstr ""
 
 #: db/seeds/settings.rb:3718
 msgid "Define if asciifolding analyzer should be used in Elasticsearch."
-msgstr ""
+msgstr "Angiv om asciifolding-analysatoren skal anvendes i Elasticsearch"
 
 #: db/seeds/settings.rb:3682
 msgid "Define max. attachment size for Elasticsearch."

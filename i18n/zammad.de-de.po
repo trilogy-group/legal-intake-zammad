@@ -2,10 +2,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zammad\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2026-02-03 09:00+0000\n"
-"Last-Translator: Ralf Schmid <rsc@zammad.com>\n"
+"PO-Revision-Date: 2026-02-11 09:51+0000\n"
+"Last-Translator: Martin Gruner <mg@zammad.com>\n"
 "Language-Team: German <https://translations.zammad.org/projects/zammad/"
-"zammad-development/de/>\n"
+"zammad-stable/de/>\n"
 "Language: de-de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1749,7 +1749,7 @@ msgstr "Administrations-Oberfläche"
 
 #: app/frontend/apps/desktop/pages/authentication/routes.ts:25
 msgid "Admin password login"
-msgstr "Admin Passwort Login"
+msgstr "Admin-Passwort-Login"
 
 #: app/assets/javascripts/app/views/admin_password_auth/request_sent.jst.eco:4
 #: app/frontend/apps/desktop/pages/authentication/views/AdminPasswordAuth.vue:56
@@ -2953,7 +2953,7 @@ msgstr "BETA UI Verfügbarkeit"
 
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingNewBetaUi.vue:73
 msgid "BETA UI feedback program"
-msgstr "Feedback-Programm BETA-Benutzeroberfläche"
+msgstr "Feedback-Programm BETA-UI"
 
 #: app/frontend/apps/desktop/components/BetaUi/BetaUiFeedbackConsentDialog.vue:46
 msgid "BETA UI illustration"
@@ -3331,8 +3331,7 @@ msgstr "Kann jegliche CSS-Farbe sein."
 
 #: app/frontend/apps/desktop/components/BetaUi/FeedbackDialog/SwitchBackFeedbackDialog.vue:37
 msgid "Can you tell us what are you missing in the BETA UI?"
-msgstr ""
-"Können Sie uns sagen, was Sie in der BETA-Benutzeroberfläche vermissen?"
+msgstr "Können Sie uns sagen, was Sie in der BETA-UI vermissen?"
 
 #: app/assets/javascripts/app/controllers/getting_started/agent.coffee:87
 msgid "Can't create user!"
@@ -6856,7 +6855,7 @@ msgstr "Zammad in der neuen BETA-Benutzeroberfläche anzeigen"
 
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingNewBetaUi.vue:52
 msgid "Display Zammad with the new BETA user interface"
-msgstr "Zammad in der neuen BETA-Benutzeroberfläche anzeigen"
+msgstr "Zammad in der neuen BETA-UI anzeigen"
 
 #: app/assets/javascripts/app/models/email_address.coffee:32
 #: db/seeds/settings.rb:1883
@@ -6865,7 +6864,7 @@ msgstr "Anzeigename"
 
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingNewBetaUi.vue:88
 msgid "Do not ask automatically for feedback on the BETA UI"
-msgstr "Nicht automatisch nach Feedback zur BETA-Benutzeroberfläche fragen"
+msgstr "Nicht automatisch nach Feedback zur BETA-UI fragen"
 
 #: app/assets/javascripts/app/lib/mixins/destination_group_email_address.coffee:26
 msgid "Do not change email address (%s)"
@@ -8337,7 +8336,7 @@ msgstr "Facebook-Entwickler-Seite"
 
 #: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/article-type/plugins/facebookDirectMessage.ts:7
 msgid "Facebook direct message"
-msgstr "Facebook Direktnachricht"
+msgstr "Facebook-Direktnachricht"
 
 #: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/article-type/plugins/facebookFeedComment.ts:6
 msgid "Facebook feed comment"
@@ -10890,7 +10889,7 @@ msgstr "Mehr erfahren"
 
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingNewBetaUi.vue:40
 msgid "Leave BETA UI feedback program?"
-msgstr "Feedback-Programm der BETA-Benutzeroberfläche verlassen?"
+msgstr "Feedback-Programm der BETA-UI verlassen?"
 
 #: app/assets/javascripts/app/controllers/_ai/provider.coffee:207
 msgid "Leave empty to use URL (Completions)"
@@ -13236,7 +13235,7 @@ msgstr "OAuth2 Token ist abgelaufen!"
 
 #: app/assets/javascripts/app/controllers/_ai/provider.coffee:190
 msgid "OCR Model"
-msgstr "OCR Model"
+msgstr "OCR-Model"
 
 #: app/frontend/apps/desktop/components/CommonDialog/CommonDialogActionFooter.vue:19
 #: app/frontend/apps/mobile/components/CommonConfirmation/CommonConfirmation.vue:29
@@ -13856,7 +13855,7 @@ msgstr "Navigationsliste der Übersichten"
 
 #: app/frontend/apps/desktop/pages/personal-setting/components/PersonalSettingOverviewOrder.vue:70
 msgid "Overview order list"
-msgstr "Liste Reihenfolge der Übersichten"
+msgstr "Reihenfolge der Übersichten"
 
 #: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:380
 msgid "Overview: %s"
@@ -16418,7 +16417,7 @@ msgstr "Feedback senden & zurückwechseln"
 
 #: app/frontend/apps/desktop/components/BetaUi/FeedbackDialog/FeedbackDialog.vue:121
 msgid "Send feedback on the BETA UI"
-msgstr "Feedback zur BETA-Benutzeroberfläche senden"
+msgstr "Feedback zur BETA-UI senden"
 
 #: app/frontend/apps/desktop/pages/guided-setup/views/GuidedSetupManual/GuidedSetupManualInviteColleagues.vue:85
 msgid "Send invitation"
@@ -19924,9 +19923,9 @@ msgid ""
 "This new desktop BETA UI is currently in development and not ready for "
 "production use. It may contain bugs or incomplete features."
 msgstr ""
-"Diese neue Desktop-BETA-Benutzeroberfläche befindet sich derzeit in der "
-"Entwicklung und ist noch nicht für den Produktivbetrieb geeignet. Sie kann "
-"Fehler oder unvollständige Funktionen enthalten."
+"Diese neue Desktop-BETA-UI befindet sich derzeit in der Entwicklung und ist "
+"noch nicht für den Produktivbetrieb geeignet. Sie kann Fehler oder "
+"unvollständige Funktionen enthalten."
 
 #: app/controllers/application_controller/handles_errors.rb:99
 #: app/graphql/gql/zammad_schema.rb:113
@@ -20026,7 +20025,7 @@ msgid ""
 "- amount of tracked hours in the new UI"
 msgstr ""
 "Diese Einstellung konfiguriert die Verfügbarkeit und Zustimmung zur "
-"Teilnahme an der Erhebung zur neuen BETA-Benutzeroberfläche.\n"
+"Teilnahme an der Erhebung zur neuen BETA-UI.\n"
 "\n"
 "Als Administrator können Sie konfigurieren, welche Rollen in Ihrer Zammad-"
 "Instanz einen Zugang zur neuen Benutzeroberfläche erhalten.\n"
@@ -20034,11 +20033,11 @@ msgstr ""
 "Jeder Benutzer kann dann sein Einverständnis für die Teilnahme am BETA-"
 "Programm geben oder nicht.\n"
 "\n"
-"Die Antworten werden anonymisiert und die gesammelten Daten beinhalten:\n"
+"Die Antworten werden anonymisiert und die gesammelten Daten bestehen aus:\n"
 "- Name der Zammad-Instanz\n"
 "- Sterne-Bewertung der neuen Benutzeroberfläche\n"
 "- Textkommentare zur neuen Benutzeroberfläche\n"
-"- Anzahl der Stunden, die die neue UI genutzt wurde"
+"- Anzahl der Stunden, welche die neue UI genutzt wurde"
 
 #: app/assets/javascripts/app/controllers/_integration/exchange.coffee:6
 msgid "This service enables Zammad to connect with your Exchange server."
@@ -22732,7 +22731,7 @@ msgstr "Workflows"
 
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingNewBetaUi.vue:104
 msgid "Would you like to give us feedback on the BETA UI? "
-msgstr "Möchten Sie uns Feedback zur BETA-Benutzeroberfläche geben? "
+msgstr "Möchten Sie uns Feedback zur BETA-UI geben? "
 
 #: app/assets/javascripts/app/controllers/_ai/text_tool.coffee:16
 #: db/seeds/permissions.rb:245 db/seeds/settings.rb:6103
@@ -23275,12 +23274,12 @@ msgid ""
 "You were using the new BETA UI for %s. Considering that, how would you rate "
 "your experience so far?"
 msgstr ""
-"Sie haben die neue BETA-Benutzeroberfläche für %s verwendet. Wie würden Sie "
-"Ihre bisherigen Erfahrungen bewerten?"
+"Sie haben die neue BETA-UI für %s verwendet. Wie würden Sie Ihre bisherigen "
+"Erfahrungen bewerten?"
 
 #: app/frontend/apps/desktop/components/BetaUi/BetaUiFeedbackConsentDialog.vue:15
 msgid "You were using the new BETA UI for 5 hours."
-msgstr "Sie haben die neue BETA-Benutzeroberfläche 5 Stunden lang verwendet."
+msgstr "Sie haben die neue BETA-UI 5 Stunden lang verwendet."
 
 #: app/assets/javascripts/app/views/login.jst.eco:96
 #: app/frontend/apps/desktop/pages/authentication/views/Signup.vue:158
@@ -24022,7 +24021,7 @@ msgstr "Beispiel-Makro"
 
 #: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/article-type/plugins/facebookDirectMessage.ts:6
 msgid "facebook direct message"
-msgstr "Facebook Direktnachricht"
+msgstr "Facebook-Direktnachricht"
 
 #: db/seeds/ticket_article_types.rb:16
 msgid "facebook direct-message"

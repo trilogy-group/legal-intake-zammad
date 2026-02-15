@@ -2,10 +2,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zammad\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2026-02-02 09:00+0000\n"
+"PO-Revision-Date: 2026-02-11 09:51+0000\n"
 "Last-Translator: mathew-uems <mathew.chen@edgentauems.com.tw>\n"
 "Language-Team: Chinese (Traditional Han script) <https://"
-"translations.zammad.org/projects/zammad/zammad-development/zh_Hant/>\n"
+"translations.zammad.org/projects/zammad/zammad-stable/zh_Hant/>\n"
 "Language: zh-tw\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -14449,10 +14449,8 @@ msgstr "重啟比例"
 
 #: app/assets/javascripts/app/views/ticket_zoom/sidebar_checklist/show.jst.eco:14
 #: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarChecklist/TicketSidebarChecklistContent/ChecklistItems.vue:194
-#, fuzzy
-#| msgid "Order"
 msgid "Reorder"
-msgstr "排序"
+msgstr "重新排序"
 
 #: app/assets/javascripts/app/views/profile/out_of_office.jst.eco:26
 msgid "Replacement"
@@ -14468,14 +14466,10 @@ msgstr "職務代理人"
 #: app/frontend/shared/entities/ticket-article/action/plugins/sms.ts:18
 #: app/frontend/shared/entities/ticket-article/action/plugins/telegram.ts:19
 #: app/frontend/shared/entities/ticket-article/action/plugins/whatsapp.ts:74
-#, fuzzy
-#| msgid "reply"
 msgid "Reply"
 msgstr "回覆"
 
 #: app/frontend/shared/entities/ticket-article/action/plugins/email.ts:105
-#, fuzzy
-#| msgid "reply all"
 msgid "Reply all"
 msgstr "回覆全部"
 
@@ -18960,14 +18954,10 @@ msgid ""
 msgstr "此寫作輔助工具可修正文句中的錯字和文法錯誤。"
 
 #: db/seeds/ai/text_tools.rb:123
-#, fuzzy
-#| msgid ""
-#| "This Writing Assistant Tool corrects spelling and grammar errors in the "
-#| "text."
 msgid ""
 "This Writing Assistant Tool creates a short summary of the selected text "
 "keeping the original meaning."
-msgstr "此寫作輔助工具可修正文句中的錯字和文法錯誤。"
+msgstr "此寫作輔助工具能產生所選文字的簡短摘要同時保留原文意義。"
 
 #: db/seeds/ai/text_tools.rb:91
 #, fuzzy
@@ -19042,7 +19032,7 @@ msgstr "此欄位僅允許一個檔案。"
 
 #: app/frontend/shared/form/i18n/locales.ts:151
 msgid "This field can only contain alphabetical characters."
-msgstr ""
+msgstr "此欄位只能包含單位元組字元。"
 
 #: app/frontend/shared/form/i18n/locales.ts:161
 msgid "This field can only contain letters and numbers."
@@ -19098,28 +19088,24 @@ msgstr ""
 
 #: app/frontend/shared/form/i18n/locales.ts:241
 msgid "This field must be a symbol."
-msgstr ""
+msgstr "此欄位必須為一個符號。"
 
 #: app/frontend/shared/form/i18n/locales.ts:427
 msgid "This field must be of the type \"%s\"."
 msgstr ""
 
 #: app/frontend/shared/form/i18n/locales.ts:221
-#, fuzzy
-#| msgid "Password needs to contain at least one digit."
 msgid "This field must contain a lowercase letter."
-msgstr "密碼必須至少包含 1 個數字。"
+msgstr "此欄位必須包含一個小寫字母。"
 
 #: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/TimeAccountingFlyout.vue:86
 #: app/frontend/shared/form/i18n/locales.ts:462
 msgid "This field must contain a number."
-msgstr ""
+msgstr "此欄位必須包含一個數字。"
 
 #: app/frontend/shared/form/i18n/locales.ts:201
-#, fuzzy
-#| msgid "Password needs to contain at least one digit."
 msgid "This field must contain a symbol."
-msgstr "密碼必須至少包含 1 個數字。"
+msgstr "此欄位必須包含一個符號。"
 
 #: app/frontend/shared/form/i18n/locales.ts:171
 msgid "This field must contain alphabetical characters."
