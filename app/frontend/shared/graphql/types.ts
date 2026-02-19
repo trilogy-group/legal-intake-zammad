@@ -1133,6 +1133,8 @@ export type FormUpdaterChangedFieldInput = {
 
 /** Represents the form meta information. */
 export type FormUpdaterMetaInput = {
+  /** Additional changed fields in the same tick */
+  additionalChangedFields?: InputMaybe<Array<FormUpdaterChangedFieldInput>>;
   /** Additional data for form updater */
   additionalData?: InputMaybe<Scalars['JSON']['input']>;
   /** Changed field information */
