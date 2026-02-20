@@ -13652,7 +13652,7 @@
         {
           "kind": "INTERFACE",
           "name": "ObjectAttributeValuesInterface",
-          "description": "Custom object fields (only editable & active)",
+          "description": "Custom object fields (only non-internal & active)",
           "fields": [
             {
               "name": "objectAttributeValues",
