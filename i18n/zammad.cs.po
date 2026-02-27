@@ -855,7 +855,7 @@ msgstr "před 1 rokem"
 msgid "2 hours"
 msgstr "2 hodiny"
 
-#: db/seeds/settings.rb:2157
+#: db/seeds/settings.rb:2160
 msgid "2 lower case and 2 upper case characters"
 msgstr "2 malé a 2 velké znaky"
 
@@ -936,7 +936,7 @@ msgstr ""
 "maily — například když agent píše e-mail nebo když trigger odesílá "
 "automatickou odpověď"
 
-#: db/seeds/settings.rb:4013
+#: db/seeds/settings.rb:4016
 msgid "A list of active import backends that gets scheduled automatically."
 msgstr "Seznam aktivních zdrojů importu, který je naplánován automaticky."
 
@@ -1041,7 +1041,7 @@ msgstr "Řešitelé"
 msgid "AI Provider"
 msgstr "Poskytovatel"
 
-#: db/seeds/settings.rb:6062
+#: db/seeds/settings.rb:6065
 #, fuzzy
 #| msgid "Provider"
 msgid "AI Provider Config"
@@ -1117,7 +1117,7 @@ msgstr ""
 msgid "AI error log"
 msgstr "Chyba API."
 
-#: db/seeds/settings.rb:6048
+#: db/seeds/settings.rb:6051
 #, fuzzy
 #| msgid "Provider"
 msgid "AI provider"
@@ -1202,7 +1202,7 @@ msgstr "API"
 msgid "API Key"
 msgstr "API klíč"
 
-#: db/seeds/settings.rb:3526
+#: db/seeds/settings.rb:3529
 msgid "API Password Access"
 msgstr "API přístup s heslem"
 
@@ -1210,7 +1210,7 @@ msgstr "API přístup s heslem"
 msgid "API Token"
 msgstr "API token"
 
-#: db/seeds/settings.rb:3501
+#: db/seeds/settings.rb:3504
 msgid "API Token Access"
 msgstr "API přístup s tokenem"
 
@@ -1438,7 +1438,7 @@ msgstr "Tlačítko akční nabídky pro bezpečnostní klíče"
 msgid "Actions"
 msgstr "Akce"
 
-#: db/seeds/settings.rb:2852
+#: db/seeds/settings.rb:2855
 msgid "Activate the recursive processing of ticket triggers."
 msgstr "Aktivujte rekurzivní zpracování spouštěčů tiketů."
 
@@ -1763,7 +1763,7 @@ msgstr "Přidat řazený seznam"
 msgid "Additional Channels"
 msgstr "Doplňkové kanály"
 
-#: db/seeds/settings.rb:3334
+#: db/seeds/settings.rb:3337
 msgid "Additional follow-up detection"
 msgstr "Další následná detekce"
 
@@ -1818,7 +1818,7 @@ msgstr "Přihlášení správce heslem"
 msgid "Admin documentation"
 msgstr "Administrátorský Účet"
 
-#: db/seeds/permissions.rb:5
+#: db/seeds/permissions.rb:5 db/seeds/settings.rb:1120
 msgid "Admin interface"
 msgstr "Rozhraní administrátora"
 
@@ -1929,11 +1929,11 @@ msgstr "Stáří"
 msgid "Agent"
 msgstr "Řešitel"
 
-#: db/seeds/settings.rb:3247
+#: db/seeds/settings.rb:3250
 msgid "Agent Name"
 msgstr "Jméno řešitele"
 
-#: db/seeds/settings.rb:3247
+#: db/seeds/settings.rb:3250
 msgid "Agent Name + FromSeparator + System Address Display Name"
 msgstr "Jméno řešitele + Oddělovač Od + Zobrazovaný název adresy systému"
 
@@ -1941,7 +1941,7 @@ msgstr "Jméno řešitele + Oddělovač Od + Zobrazovaný název adresy systému
 msgid "Agent chat"
 msgstr "Chat agenta"
 
-#: db/seeds/settings.rb:3601
+#: db/seeds/settings.rb:3604
 msgid "Agent idle timeout"
 msgstr "Časový limit neaktivity řešitele"
 
@@ -1953,7 +1953,7 @@ msgstr "Počet řešitelů překročen, prosím zkontrolujte nastavení svého �
 msgid "Agent phone"
 msgstr "Telefon agenta"
 
-#: db/seeds/permissions.rb:408
+#: db/seeds/permissions.rb:408 db/seeds/settings.rb:1129
 msgid "Agent tickets"
 msgstr "Tikety agenta"
 
@@ -2053,7 +2053,7 @@ msgstr ""
 msgid "Allow AI Agent to select multiple categories from all possible values."
 msgstr ""
 
-#: db/seeds/settings.rb:6033
+#: db/seeds/settings.rb:6036
 msgid ""
 "Allow admins to manage availability and access to the desktop BETA UI switch."
 msgstr ""
@@ -2088,15 +2088,15 @@ msgstr "Povolit znovuotevření tiketů po určitou dobu."
 msgid "Allow users to add new tags."
 msgstr "Dovolit uživatelům přidávat nové štítky."
 
-#: db/seeds/settings.rb:4178
+#: db/seeds/settings.rb:4181
 msgid "Allow users to create new tags."
 msgstr "Povolit uživatelům vytvářet nové štítky."
 
-#: db/seeds/settings.rb:6024
+#: db/seeds/settings.rb:6027
 msgid "Allow users to switch automatically to the new desktop UI."
 msgstr ""
 
-#: db/seeds/settings.rb:1160
+#: db/seeds/settings.rb:1163
 msgid "Allow using one email address for multiple users."
 msgstr "Povolit použití jedné e-mailové adresy pro více uživatelů."
 
@@ -2109,7 +2109,7 @@ msgstr "Povolit webové stránky (oddělené ;)"
 msgid "Also notify via email"
 msgstr "Také upozornit přes email"
 
-#: db/seeds/settings.rb:5206
+#: db/seeds/settings.rb:5209
 msgid ""
 "Alternative FQDN for callbacks if you operate Zammad in an internal network."
 msgstr "Alternativní FQDN pro zpětné volání, pokud Zammad běží v interní síti."
@@ -2267,15 +2267,15 @@ msgstr ""
 "Omlouváme se, tuto zprávu nelze zpracovat kvůli omezením v rámci WhatsApp "
 "Business."
 
-#: db/seeds/settings.rb:1424
+#: db/seeds/settings.rb:1427
 msgid "App ID"
 msgstr "App ID"
 
-#: db/seeds/settings.rb:1430
+#: db/seeds/settings.rb:1433
 msgid "App Secret"
 msgstr "App Secret"
 
-#: db/seeds/settings.rb:1769
+#: db/seeds/settings.rb:1772
 msgid "App Tenant ID"
 msgstr "Tenant ID aplikace"
 
@@ -2291,11 +2291,11 @@ msgstr "Verze aplikace"
 msgid "App could not be verified."
 msgstr "Účet nemůže být ověřen."
 
-#: db/seeds/settings.rb:1420
+#: db/seeds/settings.rb:1423
 msgid "App credentials for Facebook."
 msgstr "Přihlašovací údaje pro Facebook."
 
-#: db/seeds/settings.rb:1355
+#: db/seeds/settings.rb:1358
 msgid "App credentials for Twitter."
 msgstr "Přihlašovací údaje pro Twitter."
 
@@ -2627,7 +2627,7 @@ msgstr "Přiřazení"
 msgid "Assignment Timeout"
 msgstr "Lhůta pro přiřazení"
 
-#: app/assets/javascripts/app/models/_application_model.coffee:164
+#: app/assets/javascripts/app/models/_application_model.coffee:166
 #: app/assets/javascripts/app/models/group.coffee:8
 msgid "Assignment timeout"
 msgstr "Lhůta pro přiřazení"
@@ -2684,7 +2684,7 @@ msgstr "Přiložené soubory"
 msgid "Attachment"
 msgstr "Příloha"
 
-#: db/seeds/settings.rb:3348
+#: db/seeds/settings.rb:3351
 msgid "Attachment - Search for follow-up also in attachments."
 msgstr "Příloha - Vyhledávat návaznosti také v přílohách."
 
@@ -2747,7 +2747,7 @@ msgstr "Atribut"
 msgid "Attribute '%s' is required in the mapping"
 msgstr "Atribut '%s' je pro mapování vyžadován"
 
-#: db/seeds/settings.rb:1943
+#: db/seeds/settings.rb:1946
 msgid ""
 "Attribute that uniquely identifies the user. If unset, the name identifier "
 "returned by the IDP is used."
@@ -2762,7 +2762,7 @@ msgid "Attributes"
 msgstr "Atributy"
 
 #: app/assets/javascripts/app/controllers/_manage/ticket_duplicate_detection.coffee:32
-#: db/seeds/settings.rb:2703
+#: db/seeds/settings.rb:2706
 msgid "Attributes to compare"
 msgstr "Atributy k porovnání"
 
@@ -2817,13 +2817,13 @@ msgstr "Autentizace není možná (služba ji neposkytuje)"
 msgid "Authentication required"
 msgstr "Vyžaduje se autentizace"
 
-#: db/seeds/settings.rb:1182
+#: db/seeds/settings.rb:1185
 msgid "Authentication via %s"
 msgstr "Autentizace pomocí %s"
 
 #: app/assets/javascripts/app/controllers/widget/two_factor_configuration/modal/authenticator_app.coffee:4
 #: app/assets/javascripts/app/lib/app_post/two_factor_methods/authenticator_app.coffee:5
-#: db/seeds/settings.rb:5871
+#: db/seeds/settings.rb:5874
 msgid "Authenticator App"
 msgstr "Autentizacční aplikace"
 
@@ -2862,19 +2862,19 @@ msgstr "OAuth"
 
 #: app/assets/javascripts/app/controllers/_manage/ticket.coffee:11
 #: app/assets/javascripts/app/views/settings/ticket_auto_assignment.jst.eco:7
-#: db/seeds/settings.rb:2549
+#: db/seeds/settings.rb:2552
 msgid "Auto Assignment"
 msgstr "Automatické přiřazení"
 
-#: db/seeds/settings.rb:2592
+#: db/seeds/settings.rb:2595
 msgid "Auto Assignment Ignored Users"
 msgstr "Automatické přiřazení ignorovaných uživatelů"
 
-#: db/seeds/settings.rb:2575
+#: db/seeds/settings.rb:2578
 msgid "Auto Assignment Selector"
 msgstr "Automatické přiřazení výběru"
 
-#: db/seeds/settings.rb:6010
+#: db/seeds/settings.rb:6013
 msgid "Auto Shutdown"
 msgstr "Automatické vypnutí"
 
@@ -2882,7 +2882,7 @@ msgstr "Automatické vypnutí"
 msgid "Auto Wizard"
 msgstr "Auto průvodce"
 
-#: db/seeds/settings.rb:4529
+#: db/seeds/settings.rb:4532
 msgid "Auto close"
 msgstr "Automatické zavření"
 
@@ -2890,7 +2890,7 @@ msgstr "Automatické zavření"
 msgid "Auto create"
 msgstr "Automatické vytvoření"
 
-#: db/seeds/settings.rb:4555
+#: db/seeds/settings.rb:4558
 msgid "Auto-close state"
 msgstr "Automatické uzavření stavu"
 
@@ -2906,11 +2906,11 @@ msgstr "AutoWizard je vypnutý"
 msgid "Automated setup"
 msgstr "Automatické nastavení"
 
-#: db/seeds/settings.rb:1245
+#: db/seeds/settings.rb:1248
 msgid "Automatic account link on initial logon"
 msgstr "Automatické párování účtu při prvotním přihlášení"
 
-#: db/seeds/settings.rb:1271
+#: db/seeds/settings.rb:1274
 msgid "Automatic account linking notification"
 msgstr "Notifikace automatického spárování účtů"
 
@@ -2934,11 +2934,11 @@ msgstr ""
 "Automaticky načítá soubor chat.css. Pokud chcete použít vlastní css, "
 "nastavte hodnotu na vypnuto."
 
-#: app/frontend/shared/components/Form/Form.vue:1311
+#: app/frontend/shared/components/Form/Form.vue:1294
 msgid "Autosave in progress…"
 msgstr "Probíhá automatické ukládání…"
 
-#: app/frontend/shared/components/Form/Form.vue:1320
+#: app/frontend/shared/components/Form/Form.vue:1303
 msgid "Autosaving is taking longer than expected…"
 msgstr "Automatické ukládání trvá déle, než se očekávalo…"
 
@@ -3021,7 +3021,7 @@ msgstr "Průměr: %s%"
 msgid "Azure AI"
 msgstr ""
 
-#: db/seeds/settings.rb:3490
+#: db/seeds/settings.rb:3493
 msgid "BCC address for all outgoing emails"
 msgstr "Adresa slepé kopie (Bcc) pro všechny odchozí e-maily"
 
@@ -3166,7 +3166,7 @@ msgstr "Bind Password"
 msgid "Bind User"
 msgstr "Bind User"
 
-#: db/seeds/settings.rb:3467
+#: db/seeds/settings.rb:3470
 msgid "Block Notifications"
 msgstr "Blokovat oznámení"
 
@@ -3202,7 +3202,7 @@ msgstr "Modrá"
 msgid "Body"
 msgstr "Tělo"
 
-#: db/seeds/settings.rb:3347
+#: db/seeds/settings.rb:3350
 msgid "Body - Search for follow-up also in mail body."
 msgstr "Tělo - Vyhledávat návaznosti také v těle e-mailu."
 
@@ -3263,7 +3263,7 @@ msgstr "Pracovní Hodiny"
 msgid "But it's only available in these languages:"
 msgstr "Je to ale k dispozici pouze v těchto jazycích:"
 
-#: db/seeds/settings.rb:3337
+#: db/seeds/settings.rb:3340
 msgid ""
 "By default, the follow-up check is done via the subject of an email. This "
 "setting lets you add more fields for which the follow-up check will be "
@@ -3341,19 +3341,19 @@ msgstr "CTI"
 msgid "CTI (generic)"
 msgstr "CTI (obecný)"
 
-#: db/seeds/settings.rb:5265
+#: db/seeds/settings.rb:5268
 msgid "CTI Token"
 msgstr "CTI token"
 
-#: db/seeds/settings.rb:5252
+#: db/seeds/settings.rb:5255
 msgid "CTI config"
 msgstr "Konfigurace CTI"
 
-#: db/seeds/settings.rb:5286
+#: db/seeds/settings.rb:5289
 msgid "CTI customer last activity"
 msgstr "Poslední aktivita CTI zákazníka"
 
-#: db/seeds/settings.rb:5224
+#: db/seeds/settings.rb:5227
 msgid "CTI integration"
 msgstr "Integrace CTI"
 
@@ -3579,7 +3579,7 @@ msgstr "Rozložení stránky kategorie"
 msgid "Caution!"
 msgstr "Pozor!"
 
-#: db/seeds/settings.rb:1969
+#: db/seeds/settings.rb:1972
 msgid "Certificate (PEM)"
 msgstr "Certifikát (PEM)"
 
@@ -3847,7 +3847,7 @@ msgstr ""
 
 #: app/assets/javascripts/app/controllers/checklist_template.coffee:3
 #: app/assets/javascripts/app/views/checklist_template/index.jst.eco:7
-#: db/seeds/permissions.rb:335 db/seeds/settings.rb:5983
+#: db/seeds/permissions.rb:335 db/seeds/settings.rb:5986
 msgid "Checklists"
 msgstr "Kontrolní seznamy"
 
@@ -3855,15 +3855,15 @@ msgstr "Kontrolní seznamy"
 msgid "Checkmk"
 msgstr "Checkmk"
 
-#: db/seeds/settings.rb:4676
+#: db/seeds/settings.rb:4679
 msgid "Checkmk integration"
 msgstr "Integrace Checkmk"
 
-#: db/seeds/settings.rb:4797
+#: db/seeds/settings.rb:4800
 msgid "Checkmk token"
 msgstr "Checkmk token"
 
-#: db/seeds/settings.rb:2470
+#: db/seeds/settings.rb:2473
 msgid "Checksum"
 msgstr "Kontrolní součet"
 
@@ -4045,11 +4045,11 @@ msgstr "Vymazat hodnotu"
 msgid "Clearbit"
 msgstr "Clearbit"
 
-#: db/seeds/settings.rb:5388
+#: db/seeds/settings.rb:5391
 msgid "Clearbit config"
 msgstr "Konfigurace Clearbitu"
 
-#: db/seeds/settings.rb:5362
+#: db/seeds/settings.rb:5365
 msgid "Clearbit integration"
 msgstr "Integrace Clearbitu"
 
@@ -4070,14 +4070,14 @@ msgstr ""
 #: app/assets/javascripts/app/views/integration/idoit.jst.eco:21
 #: app/assets/javascripts/app/views/microsoft365/app_config.jst.eco:9
 #: app/assets/javascripts/app/views/microsoft_graph/app_config.jst.eco:9
-#: db/seeds/settings.rb:1489
+#: db/seeds/settings.rb:1492
 msgid "Client ID"
 msgstr "ID klienta"
 
 #: app/assets/javascripts/app/views/exchange/app_config.jst.eco:17
 #: app/assets/javascripts/app/views/microsoft365/app_config.jst.eco:17
 #: app/assets/javascripts/app/views/microsoft_graph/app_config.jst.eco:17
-#: db/seeds/settings.rb:1495
+#: db/seeds/settings.rb:1498
 msgid "Client Secret"
 msgstr "Client Secret"
 
@@ -4137,14 +4137,14 @@ msgstr "Zavřít boční panel"
 #: app/assets/javascripts/app/models/macro.coffee:9
 #: app/assets/javascripts/app/views/ticket_zoom/attribute_bar.jst.eco:41
 #: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/TicketScreenBehavior/behaviorOptions.ts:12
-#: db/seeds/settings.rb:3022
+#: db/seeds/settings.rb:3025
 msgid "Close tab"
 msgstr "Zavřít záložku"
 
 #: app/assets/javascripts/app/models/macro.coffee:9
 #: app/assets/javascripts/app/views/ticket_zoom/attribute_bar.jst.eco:46
 #: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/TicketScreenBehavior/behaviorOptions.ts:16
-#: db/seeds/settings.rb:3023
+#: db/seeds/settings.rb:3026
 msgid "Close tab on ticket close"
 msgstr "Zavřít záložku při uzavření tiketu"
 
@@ -4242,7 +4242,7 @@ msgstr ""
 
 #: app/assets/javascripts/app/lib/app_post/two_factor_methods/security_keys.coffee:6
 #: app/frontend/shared/entities/two-factor/plugins/security-keys.ts:10
-#: db/seeds/settings.rb:5863
+#: db/seeds/settings.rb:5866
 msgid "Complete the sign-in with your security key."
 msgstr "Dokončete přihlašování vaším bezpečnostním kódem."
 
@@ -4557,7 +4557,7 @@ msgstr "Pokračovat do mobilní aplikace"
 msgid "Contributing Translations"
 msgstr "Přispívání překladem"
 
-#: app/assets/javascripts/app/controllers/_ai/ticket_summary.coffee:75
+#: app/assets/javascripts/app/controllers/_ai/ticket_summary.coffee:76
 #: app/assets/javascripts/app/controllers/ticket_zoom/sidebar_ticket_summary.coffee:4
 #, fuzzy
 #| msgid "Creation mask"
@@ -5218,14 +5218,14 @@ msgstr "Zákazník"
 msgid "Customer Chat"
 msgstr "Zákaznický chat"
 
-#: app/assets/javascripts/app/controllers/_ai/ticket_summary.coffee:68
+#: app/assets/javascripts/app/controllers/_ai/ticket_summary.coffee:69
 #: app/assets/javascripts/app/controllers/ticket_zoom/sidebar_ticket_summary.coffee:3
 #, fuzzy
 #| msgid "Recent Customer Tickets"
 msgid "Customer Intent"
 msgstr "Nedávné zákaznické tickety"
 
-#: app/assets/javascripts/app/controllers/_ai/ticket_summary.coffee:94
+#: app/assets/javascripts/app/controllers/_ai/ticket_summary.coffee:95
 #: app/assets/javascripts/app/controllers/ticket_zoom/sidebar_ticket_summary.coffee:7
 #, fuzzy
 #| msgid "Recent Customer Tickets"
@@ -5242,7 +5242,7 @@ msgstr "Poměr zákazníků a agentů (počty uživatelů podle rolí)"
 msgid "Customer intent"
 msgstr "Nedávné zákaznické tickety"
 
-#: db/seeds/settings.rb:3391
+#: db/seeds/settings.rb:3394
 msgid "Customer selection based on sender and receiver list"
 msgstr "Volba zákazníka na základě seznamu odesílateů a příjemců"
 
@@ -5252,7 +5252,7 @@ msgstr "Volba zákazníka na základě seznamu odesílateů a příjemců"
 msgid "Customer sentiment"
 msgstr "Nedávné zákaznické tickety"
 
-#: db/seeds/permissions.rb:417
+#: db/seeds/permissions.rb:417 db/seeds/settings.rb:1138
 msgid "Customer tickets"
 msgstr "Zákaznické tikety"
 
@@ -5341,7 +5341,7 @@ msgstr "Datum"
 msgid "Date & time field"
 msgstr "Pole data a času"
 
-#: db/seeds/settings.rb:2449
+#: db/seeds/settings.rb:2452
 msgid "Date (Year.Month.Day.SystemID.Counter)"
 msgstr "Datum (Rok.Měsíc.Den.SystémovéID.Počítadlo)"
 
@@ -5430,11 +5430,11 @@ msgstr "Výchozí chování"
 msgid "Default Notifications"
 msgstr "Základní oznámení"
 
-#: db/seeds/settings.rb:3623
+#: db/seeds/settings.rb:3626
 msgid "Default Screen"
 msgstr "Výchozí obrazovka"
 
-#: db/seeds/settings.rb:2610
+#: db/seeds/settings.rb:2613
 msgid "Default Ticket Agent Notifications"
 msgstr "Základní oznámení tiketu agentovi"
 
@@ -5442,7 +5442,7 @@ msgstr "Základní oznámení tiketu agentovi"
 msgid "Default at Signup"
 msgstr "Výchozí při registraci"
 
-#: db/seeds/settings.rb:4202
+#: db/seeds/settings.rb:4205
 msgid "Default calendar tickets subscriptions"
 msgstr "Výchozí odběry tiketů do kalendáře"
 
@@ -5478,7 +5478,7 @@ msgid "Default value is required."
 msgstr "Výchozí hodnota je povinná."
 
 #: app/assets/javascripts/app/views/settings/ticket_auto_assignment.jst.eco:15
-#: db/seeds/settings.rb:2595
+#: db/seeds/settings.rb:2598
 msgid ""
 "Define an exception of \"automatic assignment\" for certain users (e.g. "
 "executives)."
@@ -5486,29 +5486,29 @@ msgstr ""
 "Definujte výjimku z \"automatického přiřazení\" pro konkrétní uživatele "
 "(např. vedení)."
 
-#: db/seeds/settings.rb:3726
+#: db/seeds/settings.rb:3729
 #, fuzzy
 #| msgid "Define pipeline name for Elasticsearch."
 msgid "Define if asciifolding analyzer should be used in Elasticsearch."
 msgstr "Definujte název pipeline pro Elasticsearch."
 
-#: db/seeds/settings.rb:3690
+#: db/seeds/settings.rb:3693
 msgid "Define max. attachment size for Elasticsearch."
 msgstr "Definujte max. velikost přílohy pro Elasticsearch."
 
-#: db/seeds/settings.rb:3699
+#: db/seeds/settings.rb:3702
 msgid "Define max. payload size for Elasticsearch."
 msgstr "Definujte max. velikost obsahu pro Elasticsearch."
 
-#: db/seeds/settings.rb:3717
+#: db/seeds/settings.rb:3720
 msgid "Define model configuration for Elasticsearch."
 msgstr "Definujte konfiguraci modelu pro Elasticsearch."
 
-#: db/seeds/settings.rb:3708
+#: db/seeds/settings.rb:3711
 msgid "Define pipeline name for Elasticsearch."
 msgstr "Definujte název pipeline pro Elasticsearch."
 
-#: db/seeds/settings.rb:4348
+#: db/seeds/settings.rb:4351
 msgid ""
 "Define postmaster filter to check if follow-ups get created (based on admin "
 "settings)."
@@ -5516,11 +5516,11 @@ msgstr ""
 "Definujte filtr správce pošty pro kontrolu, zda se vytváření souvislosti (na "
 "základě nastavení správce)."
 
-#: db/seeds/settings.rb:4285
+#: db/seeds/settings.rb:4288
 msgid "Define postmaster filter to import archive mailboxes."
 msgstr "Definujte filtr správce pošty pro import archivních schránek."
 
-#: db/seeds/settings.rb:4282
+#: db/seeds/settings.rb:4285
 msgid "Define postmaster filter."
 msgstr "Definujte filtr správce pošty."
 
@@ -5535,7 +5535,7 @@ msgstr ""
 "podporovat řešitele zobrazováním pouze relevantních záznamů hovorů a "
 "oznámení."
 
-#: db/seeds/settings.rb:2613
+#: db/seeds/settings.rb:2616
 msgid "Define the default agent notifications for new users."
 msgstr "Definuje výchozí notifikace agenta pro nové uživatele."
 
@@ -5543,27 +5543,27 @@ msgstr "Definuje výchozí notifikace agenta pro nové uživatele."
 msgid "Define the maximum number of ticket shown in overviews."
 msgstr "Definujte maximální počet tiketů zobrazených v přehledech."
 
-#: db/seeds/settings.rb:3672
+#: db/seeds/settings.rb:3675
 msgid "Defines Elasticsearch SSL verification."
 msgstr "Definuje ověřování SSL pro Elasticsearch."
 
-#: db/seeds/settings.rb:3663
+#: db/seeds/settings.rb:3666
 msgid "Defines Elasticsearch index name."
 msgstr "Definuje název indexu pro Elasticsearch."
 
-#: db/seeds/settings.rb:3939
+#: db/seeds/settings.rb:3942
 msgid "Defines Freshdesk endpoint authentication API key."
 msgstr "Definuje API klíč pro koncovou autentizaci Freshdesku."
 
-#: db/seeds/settings.rb:3654
+#: db/seeds/settings.rb:3657
 msgid "Defines HTTP basic auth password of Elasticsearch."
 msgstr "Definuje heslo HTTP základní autentizace pro Elasticsearch."
 
-#: db/seeds/settings.rb:3645
+#: db/seeds/settings.rb:3648
 msgid "Defines HTTP basic auth user of Elasticsearch."
 msgstr "Definuje uživatele HTTP základní autentizace pro Elasticsearch."
 
-#: db/seeds/settings.rb:3846
+#: db/seeds/settings.rb:3849
 msgid ""
 "Defines HTTP basic authentication password (only if OTRS is protected via "
 "HTTP basic auth)."
@@ -5571,7 +5571,7 @@ msgstr ""
 "Definuje heslo HTTP základní autentizace (pouze pokud je OTRS chráněn HTTP "
 "základní autentizací)."
 
-#: db/seeds/settings.rb:3827
+#: db/seeds/settings.rb:3830
 msgid ""
 "Defines HTTP basic authentication user (only if OTRS is protected via HTTP "
 "basic auth)."
@@ -5579,49 +5579,49 @@ msgstr ""
 "Definuje uživatele HTTP základní autentizace (pouze pokud je OTRS chráněn "
 "HTTP základní autentizací)."
 
-#: db/seeds/settings.rb:3994
+#: db/seeds/settings.rb:3997
 msgid "Defines Kayako endpoint authentication password."
 msgstr "Definuje autentizační heslo koncového bodu pro Kayako."
 
-#: db/seeds/settings.rb:3976
+#: db/seeds/settings.rb:3979
 msgid "Defines Kayako endpoint authentication user."
 msgstr "Definuje uživatele pro koncovou autentizaci Kayako."
 
-#: db/seeds/settings.rb:3808
+#: db/seeds/settings.rb:3811
 msgid "Defines OTRS endpoint authentication key."
 msgstr "Definuje autentizační klíč koncového bodu pro OTRS."
 
-#: db/seeds/settings.rb:3883
+#: db/seeds/settings.rb:3886
 msgid "Defines Zendesk endpoint authentication API key."
 msgstr "Definuje API klíč pro koncovou autentizaci Zendesku."
 
-#: db/seeds/settings.rb:3902
+#: db/seeds/settings.rb:3905
 msgid "Defines Zendesk endpoint authentication user."
 msgstr "Definuje autentizačního uživatele koncového bodu pro Zendesk."
 
-#: db/seeds/settings.rb:3921
+#: db/seeds/settings.rb:3924
 msgid ""
 "Defines a Freshdesk endpoint to import users, tickets, states, and articles."
 msgstr ""
 "Definuje koncový bod Freshdesku pro import uživatelů, tiketů, stavů a článků."
 
-#: db/seeds/settings.rb:3958
+#: db/seeds/settings.rb:3961
 msgid ""
 "Defines a Kayako endpoint to import users, tickets, states, and articles."
 msgstr ""
 "Definuje koncový bod Kayako pro import uživatelů, tiketů, stavů a článků."
 
-#: db/seeds/settings.rb:3865
+#: db/seeds/settings.rb:3868
 msgid ""
 "Defines a Zendesk endpoint to import users, tickets, states, and articles."
 msgstr ""
 "Definuje koncový bod Zendesku pro import uživatelů, tiketů, stavů a článků."
 
-#: db/seeds/settings.rb:5466
+#: db/seeds/settings.rb:5469
 msgid "Defines a dashboard stats backend that gets scheduled automatically."
 msgstr "Definuje rozhraní statistik nástěnky, které je automaticky plánováno."
 
-#: db/seeds/settings.rb:3120
+#: db/seeds/settings.rb:3123
 msgid ""
 "Defines a limit for how many tickets can be created via web form from one IP "
 "address per day."
@@ -5629,7 +5629,7 @@ msgstr ""
 "Definuje omezení denního počtu tiketů, vytvářených přes webový formulář z "
 "jedné IP adresy."
 
-#: db/seeds/settings.rb:3099
+#: db/seeds/settings.rb:3102
 msgid ""
 "Defines a limit for how many tickets can be created via web form from one IP "
 "address per hour."
@@ -5637,18 +5637,18 @@ msgstr ""
 "Definuje omezení hodinového počtu tiketů, vytvářených přes webový formulář z "
 "jedné IP adresy."
 
-#: db/seeds/settings.rb:3141
+#: db/seeds/settings.rb:3144
 msgid ""
 "Defines a limit for how many tickets can be created via web form per day."
 msgstr ""
 "Definuje omezení denního počtu tiketů, vytvářených přes webový formulář."
 
-#: db/seeds/settings.rb:2238
+#: db/seeds/settings.rb:2241
 msgid "Defines after how many failed logins accounts will be deactivated."
 msgstr ""
 "Definuje, po kolika neúspěšných pokusech o přihlášení se účet deaktivuje."
 
-#: db/seeds/settings.rb:3790
+#: db/seeds/settings.rb:3793
 msgid ""
 "Defines an OTRS endpoint to import users, tickets, states, and articles."
 msgstr ""
@@ -5673,11 +5673,11 @@ msgstr ""
 "Definuje volitelnou ikonu této priority v tabulkách tiketů. Důležitá "
 "priorita bude zobrazena vykřičníkem, zatímco nízká priorita šipkou dolů."
 
-#: db/seeds/settings.rb:3681
+#: db/seeds/settings.rb:3684
 msgid "Defines attachment extensions which will be ignored by Elasticsearch."
 msgstr "Definuje přípony příloh, které bude Elasticsearch ignorovat."
 
-#: db/seeds/settings.rb:3636
+#: db/seeds/settings.rb:3639
 msgid "Defines endpoint of Elasticsearch."
 msgstr "Definuje koncový bod pro Elasticsearch."
 
@@ -5691,7 +5691,7 @@ msgid ""
 msgstr ""
 "Definuje omezení denního počtu ticketů, vytvářených přes webový formulář."
 
-#: db/seeds/settings.rb:2988
+#: db/seeds/settings.rb:2991
 msgid ""
 "Defines groups for which a customer can create tickets via web interface. No "
 "selection means all groups are available."
@@ -5699,7 +5699,7 @@ msgstr ""
 "Definuje skupiny, které mohou vytvářet tikety přes webové rozhraní. \"-\" "
 "znamená, že vytváření bude dostupné pro všechny skupiny."
 
-#: db/seeds/settings.rb:3237
+#: db/seeds/settings.rb:3240
 msgid ""
 "Defines how the From field of emails (sent from answers and email tickets) "
 "should look like."
@@ -5707,37 +5707,41 @@ msgstr ""
 "Definuje, jak má vypadat pole From (Od) v e-mailech (zaslaných z odpovědí a "
 "e-mailových tiketů)."
 
-#: db/seeds/settings.rb:2357
+#: db/seeds/settings.rb:2360
 msgid ""
 "Defines how the last customer contact time of tickets should be calculated."
 msgstr "Definuje, jakým způsobem se počítá čas posledního kontaktu zákazníka."
 
 #: db/seeds/settings.rb:313
+#, fuzzy
+#| msgid ""
+#| "Defines how to reach websocket server. \"websocket\" is default on "
+#| "production, \"websocketPort\" is for CI"
 msgid ""
-"Defines how to reach websocket server. \"websocket\" is default on "
-"production, \"websocketPort\" is for CI"
+"Defines how to reach WebSocket server. \"websocket\" is default on "
+"production, \"websocketPort\" is for CI."
 msgstr ""
 "Definuje, jak se připojit k websocket serveru. \"websocket\" je výchozí pro "
 "produkci, \"websocketPort\" je pro CI"
 
-#: db/seeds/settings.rb:4679
+#: db/seeds/settings.rb:4682
 msgid "Defines if Checkmk (https://checkmk.com/) is enabled or not."
 msgstr "Definuje, zda je Checkmk (https://checkmk.com/) povoleno nebo nikoli."
 
-#: db/seeds/settings.rb:5365
+#: db/seeds/settings.rb:5368
 msgid "Defines if Clearbit (http://www.clearbit.com) is enabled or not."
 msgstr ""
 "Definuje, zda je Clearbit (http://www.clearbit.com) povolen nebo nikoli."
 
-#: db/seeds/settings.rb:4966
+#: db/seeds/settings.rb:4969
 msgid "Defines if Exchange is enabled or not."
 msgstr "Definuje, zda je Exchange povolen nebo nikoli."
 
-#: db/seeds/settings.rb:4483
+#: db/seeds/settings.rb:4486
 msgid "Defines if Icinga (http://www.icinga.org) is enabled or not."
 msgstr "Definuje, zda je Icinga (http://www.icinga.org) povolena nebo nikoli."
 
-#: db/seeds/settings.rb:5576
+#: db/seeds/settings.rb:5579
 msgid ""
 "Defines if Knowledge Base navbar button is enabled for users without "
 "Knowledge Base permission."
@@ -5745,37 +5749,37 @@ msgstr ""
 "Definuje, zda je navigační tlačítko Znalostní báze povoleno pro uživatele "
 "bez oprávnění pro Znalostní bázi."
 
-#: db/seeds/settings.rb:5561
+#: db/seeds/settings.rb:5564
 msgid "Defines if Knowledge Base navbar button is enabled."
 msgstr "Definuje, zda je povoleno navigační tlačítko Znalostní báze."
 
-#: db/seeds/settings.rb:4913
+#: db/seeds/settings.rb:4916
 msgid "Defines if LDAP is enabled or not."
 msgstr "Definuje, zda je LDAP povoleno nebo nikoli."
 
-#: db/seeds/settings.rb:4812
+#: db/seeds/settings.rb:4815
 msgid "Defines if Monit (https://mmonit.com/monit/) is enabled or not."
 msgstr ""
 "Definuje, zda je Monit (https://mmonit.com/monit/) povolen nebo nikoli."
 
-#: db/seeds/settings.rb:4581
+#: db/seeds/settings.rb:4584
 msgid "Defines if Nagios (http://www.nagios.org) is enabled or not."
 msgstr "Definuje, zda je Nagios (http://www.nagios.org) povolen nebo nikoli."
 
-#: db/seeds/settings.rb:5731
+#: db/seeds/settings.rb:5734
 msgid "Defines if PGP encryption is enabled or not."
 msgstr "Určuje, zda je PGP šifrování povoleno, či nikoli."
 
-#: db/seeds/settings.rb:5302
+#: db/seeds/settings.rb:5305
 msgid "Defines if Placetel (http://www.placetel.de) is enabled or not."
 msgstr ""
 "Definuje, zda je Placetel (http://www.placetel.de) povolen nebo nikoli."
 
-#: db/seeds/settings.rb:5689
+#: db/seeds/settings.rb:5692
 msgid "Defines if S/MIME encryption is enabled or not."
 msgstr "Definuje, zda je S/MIME šifrování povoleno nebo nikoli."
 
-#: db/seeds/settings.rb:2961
+#: db/seeds/settings.rb:2964
 msgid "Defines if a customer can create tickets via the web interface."
 msgstr "Definuje, zda zákazník může vytvářet tikety přes webové rozhraní."
 
@@ -5787,7 +5791,7 @@ msgstr "Definuje, zda je aplikace v módu inicializace."
 msgid "Defines if application is used as online service."
 msgstr "Definuje, zda je aplikace používána jako online služba."
 
-#: db/seeds/settings.rb:5814
+#: db/seeds/settings.rb:5817
 msgid ""
 "Defines if calendar weeks are shown in the picker of date/datetime fields to "
 "easily select the correct date."
@@ -5795,11 +5799,11 @@ msgstr ""
 "Určuje, zda se v výběru polí datum/čas zobrazují kalendářní týdny pro "
 "snadnější výběr správného data."
 
-#: db/seeds/settings.rb:5227
+#: db/seeds/settings.rb:5230
 msgid "Defines if generic CTI integration is enabled or not."
 msgstr "Definuje, zda je obecná CTI integrace povolena nebo nikoli."
 
-#: db/seeds/settings.rb:5906
+#: db/seeds/settings.rb:5909
 msgid ""
 "Defines if recovery codes can be used by users in the event they lose access "
 "to other two-factor authentication methods."
@@ -5807,32 +5811,32 @@ msgstr ""
 "Definuje, zda obnovovací kódy mohou být použity uživateli v případě, že "
 "ztratili přístup k jiným dvou faktorovým autentizačním metodám."
 
-#: db/seeds/settings.rb:5144
+#: db/seeds/settings.rb:5147
 msgid "Defines if sipgate.io (http://www.sipgate.io) is enabled or not."
 msgstr ""
 "Definuje, zda je sipgate.io (http://www.sipgate.io) povolen nebo nikoli."
 
-#: db/seeds/settings.rb:6051
+#: db/seeds/settings.rb:6054
 #, fuzzy
 #| msgid "The setting 'storage_provider' was not configured."
 msgid "Defines if the AI provider is configured."
 msgstr "Nastavení 'storage_provider' není nakonfigurováno."
 
-#: db/seeds/settings.rb:5075
+#: db/seeds/settings.rb:5078
 msgid ""
 "Defines if the GitHub (http://www.github.com) integration is enabled or not."
 msgstr ""
 "Definuje, zda je integrace GitHub (http://www.github.com) povolena nebo "
 "nikoli."
 
-#: db/seeds/settings.rb:5033
+#: db/seeds/settings.rb:5036
 msgid ""
 "Defines if the GitLab (http://www.gitlab.com) integration is enabled or not."
 msgstr ""
 "Definuje, zda je integrace GitLab (http://www.gitlab.com) povolena nebo "
 "nikoli."
 
-#: db/seeds/settings.rb:5773
+#: db/seeds/settings.rb:5776
 msgid "Defines if the PGP recipient alias configuration is enabled or not."
 msgstr "Určuje, zda je konfigurace aliasu příjemce PGP povolena nebo ne."
 
@@ -5852,13 +5856,13 @@ msgstr ""
 "Definuje, zda je aplikace v režimu vývoje (všichni uživatelé mají totožné "
 "heslo a reset hesla funguje bez doručení e-mailu)."
 
-#: db/seeds/settings.rb:6142
+#: db/seeds/settings.rb:6145
 msgid ""
 "Defines if the bubble menu feature of the richtext editor is enabled. Note "
 "that this setting will be ignored if the writing assistant is turned on."
 msgstr ""
 
-#: db/seeds/settings.rb:5958
+#: db/seeds/settings.rb:5961
 msgid ""
 "Defines if the change of the primary organization of a user will update the "
 "100 most recent tickets for this user as well."
@@ -5867,9 +5871,13 @@ msgstr ""
 "posledních tiketů tohoto uživatele."
 
 #: db/seeds/settings.rb:604
+#, fuzzy
+#| msgid ""
+#| "Defines if the core workflow communication should run over ajax instead "
+#| "of websockets."
 msgid ""
-"Defines if the core workflow communication should run over ajax instead of "
-"websockets."
+"Defines if the core workflow communication should run over AJAX instead of "
+"WebSocket."
 msgstr ""
 "Definuje, zda komunikace Běžných pracovních postupů běží pomocí Ajaxu "
 "namísto websocketů."
@@ -5882,7 +5890,7 @@ msgstr ""
 "Definuje, zda se ve výsledku uživatelského/organizačního widgetu zobrazuje e-"
 "mail."
 
-#: db/seeds/settings.rb:4993
+#: db/seeds/settings.rb:4996
 msgid ""
 "Defines if the i-doit (https://www.i-doit.org/) integration is enabled or "
 "not."
@@ -5890,13 +5898,13 @@ msgstr ""
 "Definuje, zda je integrace i-doit (https://www.i-doit.org/) povolena nebo "
 "nikoli."
 
-#: db/seeds/settings.rb:2384
+#: db/seeds/settings.rb:2387
 msgid ""
 "Defines if the ticket conditions editor supports complex logical expressions."
 msgstr ""
 "Definuje, zda editor podmínek tiketu podporuje komplexní logické výrazy."
 
-#: db/seeds/settings.rb:2410
+#: db/seeds/settings.rb:2413
 msgid ""
 "Defines if the ticket conditions editor supports regular expression "
 "operators for triggers and ticket auto assignment."
@@ -5904,11 +5912,11 @@ msgstr ""
 "Určuje, zda editor podmínek tiketů podporuje operátory regulárních výrazů "
 "pro triggery a automatické přiřazování tiketů."
 
-#: db/seeds/settings.rb:4142
+#: db/seeds/settings.rb:4145
 msgid "Defines if the time accounting types are enabled."
 msgstr "Určuje, zda jsou typy účtování času povoleny."
 
-#: db/seeds/settings.rb:5874
+#: db/seeds/settings.rb:5877
 msgid ""
 "Defines if the two-factor authentication method authenticator app is enabled "
 "or not."
@@ -5916,7 +5924,7 @@ msgstr ""
 "Určuje, zda je metoda dvoufaktorového ověřování pomocí aplikace "
 "autentifikátoru povolena nebo ne."
 
-#: db/seeds/settings.rb:5842
+#: db/seeds/settings.rb:5845
 msgid ""
 "Defines if the two-factor authentication method security keys is enabled or "
 "not."
@@ -5924,22 +5932,22 @@ msgstr ""
 "Určuje, zda je metoda dvoufaktorového ověřování pomocí bezpečnostních klíčů "
 "povolena nebo ne."
 
-#: db/seeds/settings.rb:3042
+#: db/seeds/settings.rb:3045
 msgid "Defines if tickets can be created via web form."
 msgstr "Definuje, zda je možné vytvářet tikety pomocí webového formuláře."
 
-#: db/seeds/settings.rb:4532
+#: db/seeds/settings.rb:4535
 msgid "Defines if tickets should be closed if service is recovered."
 msgstr ""
 "Definuje, zda se tikety mají automaticky uzavřít při obnovení činnosti "
 "služby."
 
-#: db/seeds/settings.rb:4384
+#: db/seeds/settings.rb:4387
 msgid "Defines postmaster filter for filters managed via admin interface."
 msgstr ""
 "Definuje filtr správce pošty pro filtry řízené pomocí rozhraní správce."
 
-#: db/seeds/settings.rb:4294
+#: db/seeds/settings.rb:4297
 msgid ""
 "Defines postmaster filter to check if email has been created by Zammad "
 "itself and will set the article sender."
@@ -5947,7 +5955,7 @@ msgstr ""
 "Definuje filtr správce pošty pro kontrolu, zda byl e-mail vytvořen systémem "
 "Zammad a nastaví odesílatele článku."
 
-#: db/seeds/settings.rb:4303
+#: db/seeds/settings.rb:4306
 msgid ""
 "Defines postmaster filter to check if the email is a self-created "
 "notification email, then ignore it to prevent email loops."
@@ -5955,18 +5963,18 @@ msgstr ""
 "Definuje filtr správce pošty pro kontrolu, zda byl e-mail s oznámením "
 "vytvořen automaticky, aby se předešlo nechtěným smyčkám."
 
-#: db/seeds/settings.rb:4330
+#: db/seeds/settings.rb:4333
 msgid "Defines postmaster filter to handle secure mailing."
 msgstr "Definuje filtr správce pošty pro nakládání se zabezpečeným mailováním."
 
-#: db/seeds/settings.rb:4447
+#: db/seeds/settings.rb:4450
 msgid ""
 "Defines postmaster filter to identify Jira mails for correct follow-ups."
 msgstr ""
 "Definuje filtr správce pošty pro identifikaci Jira e-mailů pro správné "
 "zařazení souvislostí."
 
-#: db/seeds/settings.rb:4429
+#: db/seeds/settings.rb:4432
 msgid ""
 "Defines postmaster filter to identify ServiceNow mails for correct follow-"
 "ups."
@@ -5974,7 +5982,7 @@ msgstr ""
 "Definuje filtr správce pošty pro identifikaci ServiceNow e-mailů pro správné "
 "zařazení souvislostí."
 
-#: db/seeds/settings.rb:4240
+#: db/seeds/settings.rb:4243
 msgid ""
 "Defines postmaster filter to identify auto responses to prevent auto replies "
 "from Zammad."
@@ -5982,21 +5990,21 @@ msgstr ""
 "Definuje filtr správce pošty pro identifikaci automatických odpovědi, aby se "
 "předešlo automatickým odpovědím ze systému Zammad."
 
-#: db/seeds/settings.rb:4258
+#: db/seeds/settings.rb:4261
 msgid ""
 "Defines postmaster filter to identify follow-up ticket for merged tickets."
 msgstr ""
 "Definuje filtr správce pošty pro identifikaci souvislostí pro sloučené "
 "tikety."
 
-#: db/seeds/settings.rb:4249
+#: db/seeds/settings.rb:4252
 msgid ""
 "Defines postmaster filter to identify follow-ups (based on admin settings)."
 msgstr ""
 "Definuje filtr správce pošty pro identifikaci souvislostí (na základě "
 "nastavení správce)."
 
-#: db/seeds/settings.rb:4339
+#: db/seeds/settings.rb:4342
 msgid ""
 "Defines postmaster filter to identify out-of-office emails for follow-up "
 "detection and keeping current ticket state."
@@ -6004,7 +6012,7 @@ msgstr ""
 "Definuje filtr správce pošty pro identifikaci e-mailů \"mimo kancelář\" pro "
 "detekci souvislostí a zachování stávajících stavů tiketu."
 
-#: db/seeds/settings.rb:4366
+#: db/seeds/settings.rb:4369
 msgid ""
 "Defines postmaster filter to identify postmaster bounces; and disables "
 "sending notification if delivery fails permanently."
@@ -6012,15 +6020,19 @@ msgstr ""
 "Definuje filtr správce pošty pro identifikaci vrácených e-mailů; a zakáže "
 "zasílání oznámení, pokud doručování permantneně selhává."
 
-#: db/seeds/settings.rb:4357
+#: db/seeds/settings.rb:4360
+#, fuzzy
+#| msgid ""
+#| "Defines postmaster filter to identify postmaster bounces; and handles "
+#| "them as follow-up of the original tickets"
 msgid ""
 "Defines postmaster filter to identify postmaster bounces; and handles them "
-"as follow-up of the original tickets"
+"as follow-up of the original tickets."
 msgstr ""
 "Definuje filtr správce pošty pro identifikaci vrácených e-mailů; a naloží s "
 "nimi jako souvislostmi původních tiketů"
 
-#: db/seeds/settings.rb:4375
+#: db/seeds/settings.rb:4378
 msgid ""
 "Defines postmaster filter to identify postmaster bounces; and reopens "
 "tickets if delivery fails permanently."
@@ -6028,23 +6040,23 @@ msgstr ""
 "Definuje filtr správce pošty pro identifikaci vrácených e-mailů; a znovu "
 "otevře tikety, pokud se doručení nedaří permanentně."
 
-#: db/seeds/settings.rb:4321
+#: db/seeds/settings.rb:4324
 msgid "Defines postmaster filter to identify sender user."
 msgstr "Definuje filtr správce pošty pro identifikaci odesílajícího uživatele."
 
-#: db/seeds/settings.rb:4312
+#: db/seeds/settings.rb:4315
 #, fuzzy
 #| msgid "Defines postmaster filter to identify sender user."
 msgid "Defines postmaster filter to identify session user."
 msgstr "Definuje filtr správce pošty pro identifikaci odesílajícího uživatele."
 
-#: db/seeds/settings.rb:4474
+#: db/seeds/settings.rb:4477
 #, fuzzy
 #| msgid "Defines postmaster filter to identify sender user."
 msgid "Defines postmaster filter to identify ticket group."
 msgstr "Definuje filtr správce pošty pro identifikaci odesílajícího uživatele."
 
-#: db/seeds/settings.rb:4411
+#: db/seeds/settings.rb:4414
 #, fuzzy
 #| msgid ""
 #| "Defines postmaster filter to manage Monit (https://mmonit.com/monit/) "
@@ -6056,28 +6068,28 @@ msgstr ""
 "Definuje filtr správce pošty pro správu e-mailů z Monitu (https://mmonit.com/"
 "monit/)."
 
-#: db/seeds/settings.rb:4393
+#: db/seeds/settings.rb:4396
 msgid ""
 "Defines postmaster filter to manage Icinga (http://www.icinga.org) emails."
 msgstr ""
 "Definuje filtr správce pošty pro správu e-mailů z Icingy (http://"
 "www.icinga.org)."
 
-#: db/seeds/settings.rb:4420
+#: db/seeds/settings.rb:4423
 msgid ""
 "Defines postmaster filter to manage Monit (https://mmonit.com/monit/) emails."
 msgstr ""
 "Definuje filtr správce pošty pro správu e-mailů z Monitu (https://mmonit.com/"
 "monit/)."
 
-#: db/seeds/settings.rb:4402
+#: db/seeds/settings.rb:4405
 msgid ""
 "Defines postmaster filter to manage Nagios (http://www.nagios.org) emails."
 msgstr ""
 "Definuje filtr správce pošty pro správu e-mailů z Nagiosu (http://"
 "www.nagios.org)."
 
-#: db/seeds/settings.rb:4231
+#: db/seeds/settings.rb:4234
 msgid ""
 "Defines postmaster filter to remove X-Zammad headers from untrustworthy "
 "sources."
@@ -6085,7 +6097,7 @@ msgstr ""
 "Definuje filtr správce pošty pro odstranění hlaviček X-Zammad z "
 "nedůvěryhodných zdrojů."
 
-#: db/seeds/settings.rb:4267
+#: db/seeds/settings.rb:4270
 msgid ""
 "Defines postmaster filter to set the owner (based on group follow up "
 "assignment)."
@@ -6093,7 +6105,7 @@ msgstr ""
 "Definuje filtr správce pošty pro nastavení vlastníka (na základě skupinového "
 "přiřazení)."
 
-#: db/seeds/settings.rb:4276
+#: db/seeds/settings.rb:4279
 msgid ""
 "Defines postmaster filter to set the sender/from of emails based on reply-to "
 "header."
@@ -6101,7 +6113,7 @@ msgstr ""
 "Definuje filtr správce pošty pro nastavení odesílatele/From e-mailů na "
 "základě Reply-To hlavičky."
 
-#: db/seeds/settings.rb:4465
+#: db/seeds/settings.rb:4468
 msgid ""
 "Defines postmaster filter which sets the articles visibility to internal if "
 "it is a rely to an internal article or the last outgoing email is internal."
@@ -6110,7 +6122,7 @@ msgstr ""
 "\"interní\", pokud závisí na interním článku nebo pokud poslední odchozí e-"
 "mail je také interní."
 
-#: db/seeds/settings.rb:4228
+#: db/seeds/settings.rb:4231
 msgid "Defines postmaster filter."
 msgstr "Definuje filtr správce pošty."
 
@@ -6118,35 +6130,35 @@ msgstr "Definuje filtr správce pošty."
 msgid "Defines pretty date format."
 msgstr "Definuje formát zobrazení data."
 
-#: db/seeds/settings.rb:5455
+#: db/seeds/settings.rb:5458
 msgid "Defines processing timeout for the html sanitizer."
 msgstr "Definuje čas vypršení při zpracování html sanitizérem."
 
-#: db/seeds/settings.rb:5114
+#: db/seeds/settings.rb:5117
 msgid "Defines sync transaction backend."
 msgstr "Definuje rozhraní synchronizační transakce."
 
-#: db/seeds/settings.rb:5443
+#: db/seeds/settings.rb:5446
 msgid "Defines the CSS font information for HTML emails."
 msgstr "Definuje informace o CSS písmu pro HTML e-maily."
 
-#: db/seeds/settings.rb:5255
+#: db/seeds/settings.rb:5258
 msgid "Defines the CTI config."
 msgstr "Definuje konfiguraci CTI."
 
-#: db/seeds/settings.rb:4800
+#: db/seeds/settings.rb:4803
 msgid "Defines the Checkmk token for allowing updates."
 msgstr "Definuje token Checkmk pro umožnění aktualizací."
 
-#: db/seeds/settings.rb:5391
+#: db/seeds/settings.rb:5394
 msgid "Defines the Clearbit config."
 msgstr "Definuje konfiguraci Clearbit."
 
-#: db/seeds/settings.rb:4953
+#: db/seeds/settings.rb:4956
 msgid "Defines the Exchange OAuth config."
 msgstr "Definuje nastavení Exchange OAuth."
 
-#: db/seeds/settings.rb:4940
+#: db/seeds/settings.rb:4943
 msgid "Defines the Exchange config."
 msgstr "Definuje konfiguraci Exchange."
 
@@ -6154,19 +6166,19 @@ msgstr "Definuje konfiguraci Exchange."
 msgid "Defines the HTTP protocol of your instance."
 msgstr "Definuje HTTP protokol vaší instance."
 
-#: db/seeds/settings.rb:5759
+#: db/seeds/settings.rb:5762
 msgid "Defines the PGP config."
 msgstr "Definuje konfiguraci PGP."
 
-#: db/seeds/settings.rb:5330
+#: db/seeds/settings.rb:5333
 msgid "Defines the Placetel config."
 msgstr "Definuje konfiguraci Placetelu."
 
-#: db/seeds/settings.rb:5717
+#: db/seeds/settings.rb:5720
 msgid "Defines the S/MIME config."
 msgstr "Definuje konfiguraci S/MIME."
 
-#: db/seeds/settings.rb:5432
+#: db/seeds/settings.rb:5435
 msgid "Defines the agent limit."
 msgstr "Definuje limit řešitelů."
 
@@ -6202,7 +6214,7 @@ msgstr "Definuje službu pro prohledání obrázků/avatarů organizací a uživ
 msgid "Defines the backend service for ticket article language detection."
 msgstr "Určuje backendovou službu pro detekci jazyka článku tiketu."
 
-#: db/seeds/settings.rb:2897
+#: db/seeds/settings.rb:2900
 msgid ""
 "Defines the configuration how many articles can be created in a minute range "
 "globally."
@@ -6210,7 +6222,7 @@ msgstr ""
 "Určuje konfiguraci, kolik článků může být globálně vytvořeno během určitého "
 "časového intervalu v minutách."
 
-#: db/seeds/settings.rb:2878
+#: db/seeds/settings.rb:2881
 msgid ""
 "Defines the configuration how many articles can be created in a minute range "
 "per ticket."
@@ -6218,17 +6230,17 @@ msgstr ""
 "Určuje konfiguraci, kolik článků může být vytvořeno za minutu pro každý "
 "tiket."
 
-#: db/seeds/settings.rb:4124
+#: db/seeds/settings.rb:4127
 msgid ""
 "Defines the custom unit to be shown next to the time accounting input field."
 msgstr ""
 "Definuje vlastní jednotku, která bude zobrazena vedle pole pro počítání času."
 
-#: db/seeds/settings.rb:4205
+#: db/seeds/settings.rb:4208
 msgid "Defines the default calendar tickets subscription settings."
 msgstr "Definuje výchozí nastavení odběru tiketů pro kalendář."
 
-#: db/seeds/settings.rb:3626
+#: db/seeds/settings.rb:3629
 msgid "Defines the default screen."
 msgstr "Definuje výchozí obrazovku."
 
@@ -6240,7 +6252,7 @@ msgstr "Definuje výchozí jazyk systému."
 msgid "Defines the default system timezone."
 msgstr "Definuje výchozí systémové časové pásmo."
 
-#: db/seeds/settings.rb:4160
+#: db/seeds/settings.rb:4163
 msgid "Defines the default time accounting type."
 msgstr "Určuje výchozí typ účtování času."
 
@@ -6248,7 +6260,7 @@ msgstr "Určuje výchozí typ účtování času."
 msgid "Defines the default visibility for new notes."
 msgstr "Definuje výchozí viditelnost pro nové poznámky."
 
-#: db/seeds/settings.rb:5289
+#: db/seeds/settings.rb:5292
 msgid ""
 "Defines the duration of customer activity (in seconds) on a call until the "
 "user profile dialog is shown."
@@ -6256,7 +6268,7 @@ msgstr ""
 "Definuje dobu aktivity zákazníka (v sekundách) při hovoru, než se zobrazí "
 "dialog uživatelského profilu."
 
-#: db/seeds/settings.rb:6128
+#: db/seeds/settings.rb:6131
 msgid ""
 "Defines the fixed instructions that guide the AI Writing Assistant on e.g. "
 "how to format its output."
@@ -6272,19 +6284,19 @@ msgstr ""
 "použito jako proměnná #{setting.fqdn}, která se používá ve všech formách "
 "zpráv, které používá aplikace, k vytváření odkazů na tikety ve vašem systému."
 
-#: db/seeds/settings.rb:4728
+#: db/seeds/settings.rb:4731
 msgid "Defines the group of created tickets."
 msgstr "Definuje skupinu vytvořených tiketů."
 
-#: db/seeds/settings.rb:3076
+#: db/seeds/settings.rb:3079
 msgid "Defines the group of tickets created via web form."
 msgstr "Definuje skupinu tiketů vytvořených pomocí webového formuláře."
 
-#: db/seeds/settings.rb:5020
+#: db/seeds/settings.rb:5023
 msgid "Defines the i-doit config."
 msgstr "Definuje konfiguraci i-doit."
 
-#: db/seeds/settings.rb:4026
+#: db/seeds/settings.rb:4029
 msgid "Defines the log levels for various logging actions of the Sequencer."
 msgstr "Definuje úroveň logování pro různé logovací akce Sequenceru."
 
@@ -6292,7 +6304,7 @@ msgstr "Definuje úroveň logování pro různé logovací akce Sequenceru."
 msgid "Defines the logo of the application, shown in the web interface."
 msgstr "Reprezentační obrázek zobrazovaný na webu a jiných komponentách."
 
-#: db/seeds/settings.rb:3287
+#: db/seeds/settings.rb:3290
 msgid "Defines the maximum accepted email size in MB."
 msgstr "Definuje maximální přijatelnou velikost e-mailu v MB."
 
@@ -6312,35 +6324,37 @@ msgstr ""
 "Definuje název aplikace, zobrazený ve webovém rozhraní, záložkách a titulku "
 "webového prohlížeče."
 
-#: db/seeds/settings.rb:2791
+#: db/seeds/settings.rb:2794
 msgid "Defines the permission level used for lookups."
 msgstr "Definuje úroveň práv použitou pro prohledávání."
 
 #: db/seeds/settings.rb:321
-msgid "Defines the port of the websocket server."
+#, fuzzy
+#| msgid "Defines the port of the websocket server."
+msgid "Defines the port of the WebSocket server."
 msgstr "Definuje port websocket serveru."
 
 #: db/seeds/settings.rb:7
 msgid "Defines the random application secret."
 msgstr "Definuje náhodné aplikační pověření."
 
-#: db/seeds/settings.rb:4509
+#: db/seeds/settings.rb:4512
 msgid "Defines the sender email address of Icinga emails."
 msgstr "Definuje e-mail odesílatele Icinga e-mailů."
 
-#: db/seeds/settings.rb:4607
+#: db/seeds/settings.rb:4610
 msgid "Defines the sender email address of Nagios emails."
 msgstr "Definuje e-mail odesílatele Nagios e-mailů."
 
-#: db/seeds/settings.rb:4705
+#: db/seeds/settings.rb:4708
 msgid "Defines the sender email address of the service emails."
 msgstr "Definuje e-mail odesílatele servisních e-mailů."
 
-#: db/seeds/settings.rb:3447
+#: db/seeds/settings.rb:3450
 msgid "Defines the sender of email notifications."
 msgstr "Nastaví název odesílatele oznámení odeslaných e-mailem."
 
-#: db/seeds/settings.rb:3265
+#: db/seeds/settings.rb:3268
 msgid ""
 "Defines the separator between the agent's real name and the given group "
 "email address."
@@ -6357,11 +6371,11 @@ msgstr ""
 "přidělených oprávnění bude použita nejvyšší hodnota vypršení, případně pak "
 "výchozí hodnota."
 
-#: db/seeds/settings.rb:5193
+#: db/seeds/settings.rb:5196
 msgid "Defines the sipgate.io config."
 msgstr "Definuje konfiguraci sipgate.io."
 
-#: db/seeds/settings.rb:4558
+#: db/seeds/settings.rb:4561
 msgid "Defines the state of auto-closed tickets."
 msgstr "Definuje stav automaticky zavřených tiketů."
 
@@ -6375,37 +6389,37 @@ msgstr ""
 "Tím je zajištěno, že všechny tikety patřící do tohoto systému budou náležitě "
 "zpracovány (využívá se při komunikaci dvou instancí systému Zammad)."
 
-#: db/seeds/settings.rb:3013
+#: db/seeds/settings.rb:3016
 msgid "Defines the tab behaviour after a ticket action."
 msgstr "Definuje chování záložek po akci tiketu."
 
-#: db/seeds/settings.rb:2808
+#: db/seeds/settings.rb:2811
 msgid "Defines the ticket states used for lookups."
 msgstr "Definuje stavy tiketu použité pro prohledávání."
 
-#: db/seeds/settings.rb:5588
+#: db/seeds/settings.rb:5591
 msgid "Defines the timeframe during which a self-created note can be deleted."
 msgstr "Definuje časové období, po které může být vlastní poznámka smazána."
 
-#: db/seeds/settings.rb:5344
+#: db/seeds/settings.rb:5347
 msgid "Defines the token for Placetel."
 msgstr "Definuje token pro Placetel."
 
-#: db/seeds/settings.rb:5135
+#: db/seeds/settings.rb:5138
 msgid ""
 "Defines the transaction backend to detect customer signatures in emails."
 msgstr ""
 "Definuje transakční rozhraní pro detekci zákaznických podpisů v e-mailech."
 
-#: db/seeds/settings.rb:5117
+#: db/seeds/settings.rb:5120
 msgid "Defines the transaction backend to execute triggers."
 msgstr "Definuje transakční rozhraní pro vykonávání spouštěčů."
 
-#: db/seeds/settings.rb:5126
+#: db/seeds/settings.rb:5129
 msgid "Defines the transaction backend to send agent notifications."
 msgstr "Definuje transakční rozhraní pro zasílání oznámení řešitelům."
 
-#: db/seeds/settings.rb:5413
+#: db/seeds/settings.rb:5416
 msgid ""
 "Defines the transaction backend which detects caller IDs in objects and "
 "stores them for CTI lookups."
@@ -6413,11 +6427,11 @@ msgstr ""
 "Definuje transakční rozhraní, které detekuje ID volajícího v objektech a "
 "ukládá je pro CTI vyhledávání."
 
-#: db/seeds/settings.rb:5422
+#: db/seeds/settings.rb:5425
 msgid "Defines the transaction backend which executes time based triggers."
 msgstr "Definuje transakční rozhraní pro vykonávání spouštěčů na základě času."
 
-#: db/seeds/settings.rb:5404
+#: db/seeds/settings.rb:5407
 msgid ""
 "Defines the transaction backend which will enrich customer and organization "
 "information from Clearbit (http://www.clearbit.com)."
@@ -6426,46 +6440,46 @@ msgstr ""
 "informace z Clearbitu (http://www.clearbit.com)."
 
 #: app/assets/javascripts/app/views/time_accounting/settings.jst.eco:14
-#: db/seeds/settings.rb:4106
+#: db/seeds/settings.rb:4109
 msgid "Defines the unit to be shown next to the time accounting input field."
 msgstr "Definuje jednotku, která bude zobrazena vedle pole pro počítání času."
 
-#: db/seeds/settings.rb:2740
+#: db/seeds/settings.rb:2743
 msgid ""
 "Defines the warning message that is shown when a matching ticket is present."
 msgstr ""
 "Definuje varovnou zprávu, která se zobrazí, když je nalezen shodný tiket."
 
-#: db/seeds/settings.rb:2723
+#: db/seeds/settings.rb:2726
 msgid ""
 "Defines the warning title that is shown when a matching ticket is present."
 msgstr ""
 "Definuje varovný titulek, který je zobrazen, když je nalezen shodný tiket."
 
-#: db/seeds/settings.rb:5123
+#: db/seeds/settings.rb:5126
 msgid "Defines transaction backend."
 msgstr "Definuje transakční rozhraní."
 
-#: db/seeds/settings.rb:2774
+#: db/seeds/settings.rb:2777
 msgid ""
 "Defines whether the matching tickets are shown in case of already existing "
 "tickets."
 msgstr "Definuje, kdy jsou shodné tikety zobrazeny."
 
-#: db/seeds/settings.rb:3163
+#: db/seeds/settings.rb:3166
 msgid "Defines which parameters are allowed to be submitted via the form API."
 msgstr ""
 
-#: db/seeds/settings.rb:6042
-msgid "Defines which roles are allowed to access the desktop UI beta switch."
+#: db/seeds/settings.rb:6045
+msgid "Defines which roles are allowed to access the desktop BETA UI switch."
 msgstr ""
 
-#: db/seeds/settings.rb:2706
+#: db/seeds/settings.rb:2709
 msgid "Defines which ticket attributes are checked before creating a ticket."
 msgstr ""
 "Definuje, které atributy tiketu jsou zkontrolovány před vytvořením tiketu."
 
-#: db/seeds/settings.rb:2757
+#: db/seeds/settings.rb:2760
 msgid ""
 "Defines which user roles will receive a warning in case of matching tickets."
 msgstr ""
@@ -6737,6 +6751,20 @@ msgstr "Dyzajnér"
 msgid "Desktop"
 msgstr "Plocha"
 
+#: db/seeds/settings.rb:6024
+#, fuzzy
+#| msgid "New tab"
+msgid "Desktop BETA UI Switch"
+msgstr "Nová záložka"
+
+#: db/seeds/settings.rb:6033
+msgid "Desktop BETA UI Switch Admin Menu"
+msgstr ""
+
+#: db/seeds/settings.rb:6042
+msgid "Desktop BETA UI Switch Roles"
+msgstr ""
+
 #: app/assets/javascripts/app/controllers/_channel/email.coffee:263
 #: app/assets/javascripts/app/controllers/_channel/google.coffee:281
 #: app/assets/javascripts/app/controllers/_channel/microsoft365.coffee:303
@@ -6768,7 +6796,7 @@ msgid "Destination group > Sending email address"
 msgstr "Cílová skupina > Odesílací e-mailová adresa"
 
 #: app/assets/javascripts/app/views/settings/ticket_duplicate_detection.jst.eco:7
-#: db/seeds/settings.rb:2677
+#: db/seeds/settings.rb:2680
 msgid "Detect Duplicate Ticket Creation"
 msgstr "Detekovat vytváření duplicitních tiketů"
 
@@ -6855,7 +6883,7 @@ msgstr ""
 "Ověřili jste, že má uživatel přístup k této e-mailové schránce? Nebo zvažte "
 "odstranění tohoto kanálu a přechod na použití jiného typu schránky. %l"
 
-#: db/seeds/settings.rb:2183
+#: db/seeds/settings.rb:2186
 msgid "Digit required"
 msgstr "Vyžadováno číslo"
 
@@ -6892,7 +6920,7 @@ msgstr "Zakázat Oznámení"
 msgid "Disable the banner for the BETA switch"
 msgstr ""
 
-#: db/seeds/settings.rb:1300
+#: db/seeds/settings.rb:1303
 msgid "Disables user creation on logon with a third-party application."
 msgstr ""
 "Zakazuje vytváření uživatele při přihlášení přes aplikaci třetí strany."
@@ -6977,7 +7005,7 @@ msgid "Display Zammad with the new BETA user interface"
 msgstr ""
 
 #: app/assets/javascripts/app/models/email_address.coffee:32
-#: db/seeds/settings.rb:1891
+#: db/seeds/settings.rb:1894
 msgid "Display name"
 msgstr "Zobrazit jméno"
 
@@ -6999,7 +7027,7 @@ msgstr "Nešifrovat e-mail"
 msgid "Do not sign email"
 msgstr "Nepodepisovat e-mail"
 
-#: db/seeds/settings.rb:5968
+#: db/seeds/settings.rb:5971
 msgid "Do not update any tickets."
 msgstr "Neaktualizovat žádné tikety."
 
@@ -7327,49 +7355,49 @@ msgstr "Upravit Zákazníka"
 msgid "Editor"
 msgstr "Editor"
 
-#: db/seeds/settings.rb:3723
+#: db/seeds/settings.rb:3726
 #, fuzzy
 #| msgid "SSL verification"
 msgid "Elasticsearch Asciifolding Configuration"
 msgstr "SSL ověření"
 
-#: db/seeds/settings.rb:3678
+#: db/seeds/settings.rb:3681
 msgid "Elasticsearch Attachment Extensions"
 msgstr "Přípony příloh Elasticsearch"
 
-#: db/seeds/settings.rb:3687
+#: db/seeds/settings.rb:3690
 msgid "Elasticsearch Attachment Size"
 msgstr "Velikost příloh Elasticsearch"
 
-#: db/seeds/settings.rb:3660
+#: db/seeds/settings.rb:3663
 msgid "Elasticsearch Endpoint Index"
 msgstr "Index koncového bodu Elasticsearch"
 
-#: db/seeds/settings.rb:3651
+#: db/seeds/settings.rb:3654
 msgid "Elasticsearch Endpoint Password"
 msgstr "Heslo koncového bodu Elasticsearch"
 
-#: db/seeds/settings.rb:3633
+#: db/seeds/settings.rb:3636
 msgid "Elasticsearch Endpoint URL"
 msgstr "URL koncového bodu Elasticsearch"
 
-#: db/seeds/settings.rb:3642
+#: db/seeds/settings.rb:3645
 msgid "Elasticsearch Endpoint User"
 msgstr "Uživatel koncového bodu Elasticsearch"
 
-#: db/seeds/settings.rb:3714
+#: db/seeds/settings.rb:3717
 msgid "Elasticsearch Model Configuration"
 msgstr "Konfigurace modelu Elasticsearch"
 
-#: db/seeds/settings.rb:3705
+#: db/seeds/settings.rb:3708
 msgid "Elasticsearch Pipeline Name"
 msgstr "Název pipeline Elasticsearch"
 
-#: db/seeds/settings.rb:3669
+#: db/seeds/settings.rb:3672
 msgid "Elasticsearch SSL verification"
 msgstr "Ověření SSL pro Elasticsearch"
 
-#: db/seeds/settings.rb:3696
+#: db/seeds/settings.rb:3699
 msgid "Elasticsearch Total Payload Size"
 msgstr "Celková velikost obsahu Elasticsearch"
 
@@ -7595,11 +7623,11 @@ msgstr "Prázdný přehled"
 msgid "Enable"
 msgstr "Aktivovat"
 
-#: db/seeds/settings.rb:3574
+#: db/seeds/settings.rb:3577
 msgid "Enable Chat"
 msgstr "Aktivovat Chat"
 
-#: app/assets/javascripts/app/views/api.jst.eco:33 db/seeds/settings.rb:3529
+#: app/assets/javascripts/app/views/api.jst.eco:33 db/seeds/settings.rb:3532
 msgid ""
 "Enable REST API access using the username/email address and password for the "
 "authentication user."
@@ -7616,7 +7644,7 @@ msgstr ""
 "adresa a heslo). Všichni uživatelé si musí v uživatelském profilu vytvořit "
 "své vlastní přístupové tokeny."
 
-#: db/seeds/settings.rb:3504
+#: db/seeds/settings.rb:3507
 msgid ""
 "Enable REST API using tokens (not username/email address and password). Each "
 "user needs to create its own access tokens in user profile."
@@ -7624,11 +7652,11 @@ msgstr ""
 "Povolit REST API s pomocí tokenů (nikoli uživatel/e-mail a heslo). Každý "
 "uživatel si musí vytvořit vlastní token ve svém uživatelském profilu."
 
-#: db/seeds/settings.rb:5903
+#: db/seeds/settings.rb:5906
 msgid "Enable Recovery Codes"
 msgstr "Zapnout obnovovací kódy"
 
-#: db/seeds/settings.rb:2958
+#: db/seeds/settings.rb:2961
 msgid "Enable Ticket creation"
 msgstr "Povolit vytváření tiketů"
 
@@ -7640,7 +7668,7 @@ msgstr ""
 "Zapnout výběr typu aktivity. Toto umožní agentům vybrat jeden z typů níže "
 "při přidávání stráveného času."
 
-#: db/seeds/settings.rb:2578
+#: db/seeds/settings.rb:2581
 msgid "Enable auto assignment for following matching tickets."
 msgstr "Povolit automatické přiřazení pro následující odpovídající tikety."
 
@@ -7648,7 +7676,7 @@ msgstr "Povolit automatické přiřazení pro následující odpovídající tik
 msgid "Enable automatic assignment the first time an agent opens a ticket."
 msgstr "Povolit automatické přiřazení při prvním otevření tiketu řešitelem."
 
-#: db/seeds/settings.rb:5986
+#: db/seeds/settings.rb:5989
 msgid "Enable checklists."
 msgstr "Povolit kontrolní seznamy."
 
@@ -7676,7 +7704,7 @@ msgstr ""
 "určitou část, označte citovaný text a stiskněte Odpovědět (tato funkce je k "
 "dispozici neustále)."
 
-#: db/seeds/settings.rb:6013
+#: db/seeds/settings.rb:6016
 msgid ""
 "Enable or disable self-shutdown of Zammad processes after significant "
 "configuration changes. This should only be used if the controlling process "
@@ -7707,11 +7735,11 @@ msgstr ""
 "uživatelé mimo správce budou odhlášeni a pouze správci mohou zakládat nová "
 "sezení."
 
-#: db/seeds/settings.rb:6081
+#: db/seeds/settings.rb:6084
 msgid "Enable or disable the ticket summary."
 msgstr ""
 
-#: db/seeds/settings.rb:6114
+#: db/seeds/settings.rb:6117
 msgid "Enable or disable the writing assistant text tools."
 msgstr ""
 
@@ -7719,11 +7747,11 @@ msgstr ""
 msgid "Enable the banner for the BETA switch"
 msgstr ""
 
-#: db/seeds/settings.rb:2552
+#: db/seeds/settings.rb:2555
 msgid "Enable ticket auto assignment."
 msgstr "Povolit automatické přiřazení tiketu."
 
-#: db/seeds/settings.rb:4061
+#: db/seeds/settings.rb:4064
 msgid "Enable time accounting."
 msgstr "Povolit evidenci času."
 
@@ -7731,7 +7759,7 @@ msgstr "Povolit evidenci času."
 msgid "Enable/disable inline translations"
 msgstr "Zapnout/Vypnout vkládaný překlad"
 
-#: db/seeds/settings.rb:3577
+#: db/seeds/settings.rb:3580
 msgid "Enable/disable online chat."
 msgstr "Povolit/zakázat online chat."
 
@@ -7744,7 +7772,7 @@ msgid "Enables a sidebar to show an overview of all attachments."
 msgstr "Povolí boční panel pro zobrazení přehledu všech příloh."
 
 #: app/assets/javascripts/app/views/settings/ticket_duplicate_detection.jst.eco:12
-#: db/seeds/settings.rb:2680
+#: db/seeds/settings.rb:2683
 msgid ""
 "Enables a warning to users during ticket creation if there is an existing "
 "ticket with the same attributes."
@@ -7752,7 +7780,7 @@ msgstr ""
 "Zapne varovaní uživateli v průběhu tvorby tiketu, pokud existuje tiket se "
 "stejnými parametry."
 
-#: db/seeds/settings.rb:5784
+#: db/seeds/settings.rb:5787
 msgid ""
 "Enables button for user authentication via %s. The button will redirect to /"
 "auth/sso on user interaction."
@@ -7772,7 +7800,7 @@ msgstr "Umožňuje zobrazování ikon priorit tiketů v uživatelském rozhraní
 msgid "Enables preview of attachments."
 msgstr "Povolí náhled příloh."
 
-#: db/seeds/settings.rb:1274
+#: db/seeds/settings.rb:1277
 msgid ""
 "Enables sending of an email notification to a user when they link their "
 "account with a third-party application."
@@ -7780,7 +7808,7 @@ msgstr ""
 "Zapne zasílání e-mailových notifikací uživatelům, v případě, že dojde k "
 "propojení jejich účtu s aplikací třetí strany."
 
-#: db/seeds/settings.rb:1248
+#: db/seeds/settings.rb:1251
 msgid ""
 "Enables the automatic linking of an existing account on initial login via a "
 "third party application. If this is disabled, an existing user must first "
@@ -7792,46 +7820,46 @@ msgstr ""
 "uživatel se musí nejprve přihlásit do Zammadu a poté propojit jeho účet "
 "\"třetí strany\" ke svému Zammad účtu v části Profil > Propojené účty."
 
-#: db/seeds/settings.rb:1185
+#: db/seeds/settings.rb:1188
 msgid "Enables user authentication via %s."
 msgstr "Povolí ověření uživatele pomocí %s."
 
-#: db/seeds/settings.rb:1326
+#: db/seeds/settings.rb:1329
 msgid ""
 "Enables user authentication via %s. Register your app first at [%s](%s)."
 msgstr ""
 "Povolí ověření uživatele pomocí %s. Nejprve svou aplikaci zaregistrujte na "
 "[%s](%s)."
 
-#: db/seeds/settings.rb:1615
+#: db/seeds/settings.rb:1618
 msgid "Enables user authentication via GitHub."
 msgstr "Povolí ověřování uživatelů pomocí GitHubu."
 
-#: db/seeds/settings.rb:1680
+#: db/seeds/settings.rb:1683
 msgid "Enables user authentication via GitLab."
 msgstr "Povolí ověření uživatele pomocí GitLab."
 
-#: db/seeds/settings.rb:1485
+#: db/seeds/settings.rb:1488
 msgid "Enables user authentication via Google."
 msgstr "Povolí ověření uživatele pomocí Google."
 
-#: db/seeds/settings.rb:1550
+#: db/seeds/settings.rb:1553
 msgid "Enables user authentication via LinkedIn."
 msgstr "Povolí ověření uživatele pomocí LinkedIn."
 
-#: db/seeds/settings.rb:1752
+#: db/seeds/settings.rb:1755
 msgid "Enables user authentication via Microsoft 365."
 msgstr "Povolí ověřování uživatelů pomocí Microsoft 365."
 
-#: db/seeds/settings.rb:2045
+#: db/seeds/settings.rb:2048
 msgid "Enables user authentication via OpenID Connect."
 msgstr "Umožňuje autentizaci uživatele přes OpenID Connect."
 
-#: db/seeds/settings.rb:1887
+#: db/seeds/settings.rb:1890
 msgid "Enables user authentication via SAML."
 msgstr "Povolí ověření uživatele pomocí SAML."
 
-#: db/seeds/settings.rb:1823
+#: db/seeds/settings.rb:1826
 msgid "Enables user authentication via Weibo."
 msgstr "Povolí ověření uživatele pomocí Weibo."
 
@@ -7900,11 +7928,11 @@ msgstr "Koncový bod"
 msgid "Endpoint Settings"
 msgstr "Nastavení koncového bodu"
 
-#: db/seeds/settings.rb:5930
+#: db/seeds/settings.rb:5933
 msgid "Enforce the setup of the two-factor authentication"
 msgstr "Vynutit nastavení dvoufaktorového ověřování"
 
-#: db/seeds/settings.rb:5937
+#: db/seeds/settings.rb:5940
 msgid "Enforced for user roles"
 msgstr "Vynuceno pro role uživatelů"
 
@@ -8326,15 +8354,15 @@ msgstr "Vyjmutí uživatelé"
 msgid "Exchange"
 msgstr "Exchange"
 
-#: db/seeds/settings.rb:4950
+#: db/seeds/settings.rb:4953
 msgid "Exchange OAuth"
 msgstr "Exchange OAuth"
 
-#: db/seeds/settings.rb:4937
+#: db/seeds/settings.rb:4940
 msgid "Exchange config"
 msgstr "Konfigurace Exchange"
 
-#: db/seeds/settings.rb:4963
+#: db/seeds/settings.rb:4966
 msgid "Exchange integration"
 msgstr "Integrace Exchange"
 
@@ -8451,7 +8479,7 @@ msgstr "Extrahujte informace o Zammad přílohách z polí"
 #: app/controllers/first_steps_controller.rb:27
 #: app/frontend/shared/composables/authentication/useThirdPartyAuthentication.ts:18
 #: app/frontend/shared/entities/ticket-article/action/plugins/facebook.ts:43
-#: db/seeds/permissions.rb:167 db/seeds/settings.rb:1408
+#: db/seeds/permissions.rb:167 db/seeds/settings.rb:1411
 msgid "Facebook"
 msgstr "Facebook"
 
@@ -8463,7 +8491,7 @@ msgstr "Facebook APP ID"
 msgid "Facebook Account"
 msgstr "Facebook Účet"
 
-#: db/seeds/settings.rb:1417
+#: db/seeds/settings.rb:1420
 msgid "Facebook App Credentials"
 msgstr "Aplikační pověření Facebooku"
 
@@ -8471,7 +8499,7 @@ msgstr "Aplikační pověření Facebooku"
 msgid "Facebook App Secret"
 msgstr "Facebook App Secret"
 
-#: db/seeds/settings.rb:1409
+#: db/seeds/settings.rb:1412
 msgid "Facebook Developer Site"
 msgstr "Vývojářská stránka Facebook"
 
@@ -8593,7 +8621,7 @@ msgstr "Formulář odezvy"
 msgid "Feedback Form"
 msgstr "Formulář odezvy"
 
-#: db/seeds/settings.rb:2077
+#: db/seeds/settings.rb:2080
 msgid "Field that uniquely identifies the user. If unset, \"sub\" is used."
 msgstr ""
 "Pole, které jednoznačně identifikuje uživatele. Pokud není nastaveno, "
@@ -8870,7 +8898,7 @@ msgstr "Zapomněl(a) jste heslo?"
 msgid "Form"
 msgstr "Formulář"
 
-#: db/seeds/settings.rb:3160
+#: db/seeds/settings.rb:3163
 msgid "Form Allowed Parameters"
 msgstr ""
 
@@ -9105,7 +9133,7 @@ msgstr "Začínáme"
 
 #: app/assets/javascripts/app/lib/app_post/two_factor_methods/authenticator_app.coffee:6
 #: app/frontend/shared/entities/two-factor/plugins/authenticator-app.ts:10
-#: db/seeds/settings.rb:5895
+#: db/seeds/settings.rb:5898
 msgid "Get the security code from the authenticator app on your device."
 msgstr "Vložte bezpečnostní kód z autentizační aplikace na vašem zařízení."
 
@@ -9123,23 +9151,23 @@ msgstr "Získávání klíčových informací z prohlížeče…"
 #: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarExternalReferences/TicketSidebarExternalIssueTracker/useTicketExternalIssueTracker.ts:47
 #: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/plugins/github.ts:11
 #: app/frontend/shared/composables/authentication/useThirdPartyAuthentication.ts:39
-#: db/seeds/settings.rb:1604
+#: db/seeds/settings.rb:1607
 msgid "GitHub"
 msgstr "GitHub"
 
-#: db/seeds/settings.rb:1612
+#: db/seeds/settings.rb:1615
 msgid "GitHub App Credentials"
 msgstr "Pověření aplikace GitHubu"
 
-#: db/seeds/settings.rb:1605
+#: db/seeds/settings.rb:1608
 msgid "GitHub OAuth Applications"
 msgstr "GitHub OAuth aplikace"
 
-#: db/seeds/settings.rb:5099
+#: db/seeds/settings.rb:5102
 msgid "GitHub config"
 msgstr "Konfigurace GitHubu"
 
-#: db/seeds/settings.rb:5072
+#: db/seeds/settings.rb:5075
 msgid "GitHub integration"
 msgstr "Integrace GitHubu"
 
@@ -9158,23 +9186,23 @@ msgstr "GitHub: Připojit problém"
 #: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarExternalReferences/TicketSidebarExternalIssueTracker/useTicketExternalIssueTracker.ts:48
 #: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/plugins/gitlab.ts:11
 #: app/frontend/shared/composables/authentication/useThirdPartyAuthentication.ts:46
-#: db/seeds/settings.rb:1669
+#: db/seeds/settings.rb:1672
 msgid "GitLab"
 msgstr "GitLab"
 
-#: db/seeds/settings.rb:1677
+#: db/seeds/settings.rb:1680
 msgid "GitLab App Credentials"
 msgstr "Aplikační pověření GitLabu"
 
-#: db/seeds/settings.rb:1670
+#: db/seeds/settings.rb:1673
 msgid "GitLab Applications"
 msgstr "GitLab aplikace"
 
-#: db/seeds/settings.rb:5057
+#: db/seeds/settings.rb:5060
 msgid "GitLab config"
 msgstr "Konfigurace GitLabu"
 
-#: db/seeds/settings.rb:5030
+#: db/seeds/settings.rb:5033
 msgid "GitLab integration"
 msgstr "Integrace GitLabu"
 
@@ -9250,15 +9278,15 @@ msgstr "Zpráva na rozloučenou"
 
 #: app/assets/javascripts/app/controllers/_profile/linked_accounts.coffee:96
 #: app/frontend/shared/composables/authentication/useThirdPartyAuthentication.ts:60
-#: db/seeds/settings.rb:1474
+#: db/seeds/settings.rb:1477
 msgid "Google"
 msgstr "Google"
 
-#: db/seeds/settings.rb:1475
+#: db/seeds/settings.rb:1478
 msgid "Google API Console Site"
 msgstr "Google API Console stránka"
 
-#: db/seeds/settings.rb:1482
+#: db/seeds/settings.rb:1485
 msgid "Google App Credentials"
 msgstr "Aplikační pověření Google"
 
@@ -9317,7 +9345,7 @@ msgstr "Pozdrav"
 #: app/views/messaging/ticket_create/zh-tw.md.erb:3
 #: app/views/messaging/ticket_info/pt-br.md.erb:3
 #: app/views/messaging/ticket_info/zh-tw.md.erb:3
-#: db/seeds/object_manager_attributes.rb:168 db/seeds/settings.rb:2985
+#: db/seeds/object_manager_attributes.rb:168 db/seeds/settings.rb:2988
 #: lib/excel_sheet/ticket.rb:27
 msgid "Group"
 msgstr "Skupina"
@@ -9369,11 +9397,11 @@ msgid "Group permissions"
 msgstr "Oprávnění skupiny"
 
 #: app/assets/javascripts/app/views/channel/form.jst.eco:18
-#: db/seeds/settings.rb:2985
+#: db/seeds/settings.rb:2988
 msgid "Group selection for Ticket creation"
 msgstr "Výběr skupin pro vytváření tiketů"
 
-#: db/seeds/settings.rb:3073
+#: db/seeds/settings.rb:3076
 msgid "Group selection for ticket creation"
 msgstr "Výběr skupin pro vytváření tiketů"
 
@@ -9409,11 +9437,11 @@ msgstr "Skupiny jsou …"
 msgid "HMAC SHA1 Signature Token"
 msgstr "HMAC SHA1 podpisový token"
 
-#: db/seeds/settings.rb:5440
+#: db/seeds/settings.rb:5443
 msgid "HTML Email CSS Font"
 msgstr "CSS písmo HTML e-mailů"
 
-#: db/seeds/settings.rb:5452
+#: db/seeds/settings.rb:5455
 msgid "HTML Sanitizer Processing Timeout"
 msgstr "Čas vypršení HTML Sanitizéru"
 
@@ -9690,12 +9718,12 @@ msgstr "Barva zvýraznění"
 msgid "Highlight icon"
 msgstr "Ikona zvýraznění"
 
-#: db/seeds/settings.rb:5604
+#: db/seeds/settings.rb:5607
 msgid "Highlights if the note a user is writing is public or private"
 msgstr ""
 "Zvýraznění, když je poznámka, kterou uživatel píše veřejná nebo soukromá"
 
-#: db/seeds/settings.rb:5601
+#: db/seeds/settings.rb:5604
 msgid "Hint for adding an article to an existing ticket."
 msgstr "Nápověda pro přidání položky k existujícímu tiketu."
 
@@ -9816,19 +9844,19 @@ msgstr "ID"
 msgid "ID:"
 msgstr "ID:"
 
-#: db/seeds/settings.rb:1898
+#: db/seeds/settings.rb:1901
 msgid "IDP SSO target URL"
 msgstr "Cílová URL IDP SSO"
 
-#: db/seeds/settings.rb:1906
+#: db/seeds/settings.rb:1909
 msgid "IDP Single Logout target URL"
 msgstr "IDP jednotná odhlašovací URL"
 
-#: db/seeds/settings.rb:1914
+#: db/seeds/settings.rb:1917
 msgid "IDP certificate"
 msgstr "IDP certifikát"
 
-#: db/seeds/settings.rb:1922
+#: db/seeds/settings.rb:1925
 msgid "IDP certificate fingerprint"
 msgstr "Otisk IDP certifikátu"
 
@@ -9840,7 +9868,7 @@ msgstr "IMAP"
 msgid "Icinga"
 msgstr "Icinga"
 
-#: db/seeds/settings.rb:4480
+#: db/seeds/settings.rb:4483
 msgid "Icinga integration"
 msgstr "Integrace Icinga"
 
@@ -9856,7 +9884,7 @@ msgstr "Ikona & barva odkazu"
 msgid "Icon Set"
 msgstr "Sada ikon"
 
-#: db/seeds/settings.rb:2056 lib/excel_sheet/ai/analytics/errors.rb:24
+#: db/seeds/settings.rb:2059 lib/excel_sheet/ai/analytics/errors.rb:24
 #: lib/excel_sheet/ai/analytics/with_usage.rb:24
 msgid "Identifier"
 msgstr "Identifikátor"
@@ -9865,7 +9893,7 @@ msgstr "Identifikátor"
 msgid "Identifier of the chat topic."
 msgstr "Identifikátor tématu konverzace."
 
-#: db/seeds/settings.rb:3604
+#: db/seeds/settings.rb:3607
 msgid "Idle timeout in seconds until agent is set offline automatically."
 msgstr ""
 "Čas neaktivity v sekundách, po kterém je řešitel automaticky označen jako "
@@ -9904,7 +9932,7 @@ msgstr ""
 "Pokud je hostitel a služba opět v provozu, tiket může být uzavřen "
 "automaticky."
 
-#: db/seeds/settings.rb:3394
+#: db/seeds/settings.rb:3397
 msgid ""
 "If the sender is an agent, set the first user in the recipient list as the "
 "customer."
@@ -9912,7 +9940,7 @@ msgstr ""
 "Pokud je odesílatelem řešitel, nastavit prvního uživatele ze seznamu "
 "příjemců jako zákazníka."
 
-#: db/seeds/settings.rb:3470
+#: db/seeds/settings.rb:3473
 msgid "If this regex matches, no notification will be sent by the sender."
 msgstr ""
 "Při shodě regulárního výrazu nebude odesílatelem zasláno žádné oznámení."
@@ -9989,7 +10017,7 @@ msgstr ""
 msgid "Ignore Escalation"
 msgstr "Ignorovat eskalace"
 
-#: db/seeds/settings.rb:3764
+#: db/seeds/settings.rb:3767
 msgid "Ignore Escalation/SLA Information"
 msgstr "Ignorovat eskalaci/SLA informace"
 
@@ -9997,11 +10025,11 @@ msgstr "Ignorovat eskalaci/SLA informace"
 msgid "Ignore Message"
 msgstr "Ignorovat zprávu"
 
-#: db/seeds/settings.rb:3767
+#: db/seeds/settings.rb:3770
 msgid "Ignore escalation/SLA information for import."
 msgstr "Ignorovat eskalaci/SLA informace pro import."
 
-#: db/seeds/settings.rb:2829
+#: db/seeds/settings.rb:2832
 msgid "Ignore system_id"
 msgstr "Ignorovat systémové ID"
 
@@ -10055,51 +10083,51 @@ msgstr "Importovat %s"
 msgid "Import API key could not be extracted from URL."
 msgstr "Importovací API klíč se nepodařilo z URL získat."
 
-#: db/seeds/settings.rb:3936
+#: db/seeds/settings.rb:3939
 msgid "Import API key for requesting the Freshdesk API"
 msgstr "Importujte API klíč pro vyžádání Freshdesk API"
 
-#: db/seeds/settings.rb:3880
+#: db/seeds/settings.rb:3883
 msgid "Import API key for requesting the Zendesk API"
 msgstr "Importujte API klíč pro vyžádání Zendesk API"
 
-#: db/seeds/settings.rb:3755
+#: db/seeds/settings.rb:3758
 msgid "Import Backend"
 msgstr "Rozhraní importu"
 
-#: db/seeds/settings.rb:4010
+#: db/seeds/settings.rb:4013
 msgid "Import Backends"
 msgstr "Rozhraní importu"
 
-#: db/seeds/settings.rb:3787
+#: db/seeds/settings.rb:3790
 msgid "Import Endpoint"
 msgstr "Endpoint importu"
 
-#: db/seeds/settings.rb:3805
+#: db/seeds/settings.rb:3808
 msgid "Import Key"
 msgstr "Klíč importu"
 
-#: db/seeds/settings.rb:3733
+#: db/seeds/settings.rb:3736
 msgid "Import Mode"
 msgstr "Režim importu"
 
-#: db/seeds/settings.rb:3843
+#: db/seeds/settings.rb:3846
 msgid "Import Password for HTTP basic authentication"
 msgstr "Importujte heslo pro základní HTTP autentizaci"
 
-#: db/seeds/settings.rb:3991
+#: db/seeds/settings.rb:3994
 msgid "Import Password for requesting the Kayako API"
 msgstr "Importujte heslo pro vyžádání Kayako API"
 
-#: db/seeds/settings.rb:3824
+#: db/seeds/settings.rb:3827
 msgid "Import User for HTTP basic authentication"
 msgstr "Importujte uživatele pro základní HTTP autentizaci"
 
-#: db/seeds/settings.rb:3973
+#: db/seeds/settings.rb:3976
 msgid "Import User for requesting the Kayako API"
 msgstr "Importujte uživatele pro vyžádání Kayako API"
 
-#: db/seeds/settings.rb:3899
+#: db/seeds/settings.rb:3902
 msgid "Import User for requesting the Zendesk API"
 msgstr "Importujte uživatele pro vyžádání Zendesk API"
 
@@ -10248,7 +10276,7 @@ msgstr "Neúplné pověření"
 msgid "Incomplete ticket checklist"
 msgstr "Neúplný kontrolní seznam tiketu"
 
-#: db/seeds/settings.rb:2448
+#: db/seeds/settings.rb:2451
 msgid "Increment (SystemID.Counter)"
 msgstr "Přírůstek (SystemID.Counter)"
 
@@ -10716,7 +10744,7 @@ msgstr "URL problému"
 msgid "Issue status"
 msgstr "Stav problému"
 
-#: db/seeds/settings.rb:2064
+#: db/seeds/settings.rb:2067
 msgid "Issuer"
 msgstr "Vydavatel"
 
@@ -10873,21 +10901,21 @@ msgstr "Zásoba Znalostní báze"
 msgid "Knowledge Base Reader"
 msgstr "Čtenář Znalostní báze"
 
-#: db/seeds/settings.rb:5558
+#: db/seeds/settings.rb:5561
 msgid "Knowledge Base active"
 msgstr "Znalostní báze aktivní"
 
-#: db/seeds/settings.rb:5573
+#: db/seeds/settings.rb:5576
 msgid "Knowledge Base active publicly"
 msgstr "Znalostní báze aktivní veřejně"
 
-#: db/seeds/settings.rb:5547
+#: db/seeds/settings.rb:5550
 msgid "Knowledge Base multilingual support"
 msgstr "Vícejazyčná podpora Znalostní báze"
 
 #: app/assets/javascripts/app/controllers/_integration/ldap.coffee:3
 #: app/assets/javascripts/app/views/integration/ldap_wizard.jst.eco:8
-#: db/seeds/settings.rb:1219
+#: db/seeds/settings.rb:1222
 msgid "LDAP"
 msgstr "LDAP"
 
@@ -10895,7 +10923,7 @@ msgstr "LDAP"
 msgid "LDAP Host"
 msgstr "LDAP Host"
 
-#: db/seeds/settings.rb:4910
+#: db/seeds/settings.rb:4913
 msgid "LDAP integration"
 msgstr "Integrace LDAP"
 
@@ -11117,15 +11145,15 @@ msgstr "Omezit oznámení na konkrétní skupiny"
 msgid "Limit priorities and provide optional descriptions"
 msgstr ""
 
-#: db/seeds/settings.rb:3117
+#: db/seeds/settings.rb:3120
 msgid "Limit tickets by IP per day"
 msgstr "Omezit tikety z jedné IP za den"
 
-#: db/seeds/settings.rb:3096
+#: db/seeds/settings.rb:3099
 msgid "Limit tickets by IP per hour"
 msgstr "Omezit tikety z jedné IP za hodinu"
 
-#: db/seeds/settings.rb:3138
+#: db/seeds/settings.rb:3141
 msgid "Limit tickets per day"
 msgstr "Omezit tikety za den"
 
@@ -11253,15 +11281,15 @@ msgstr "Propojené účty"
 
 #: app/assets/javascripts/app/controllers/_profile/linked_accounts.coffee:76
 #: app/frontend/shared/composables/authentication/useThirdPartyAuthentication.ts:32
-#: db/seeds/settings.rb:1539
+#: db/seeds/settings.rb:1542
 msgid "LinkedIn"
 msgstr "LinkedIn"
 
-#: db/seeds/settings.rb:1547
+#: db/seeds/settings.rb:1550
 msgid "LinkedIn App Credentials"
 msgstr "Přihlašovací údaje LinkedIn"
 
-#: db/seeds/settings.rb:1540
+#: db/seeds/settings.rb:1543
 msgid "LinkedIn Developer Site"
 msgstr "Vývojářská stránka LinkedIn"
 
@@ -11867,7 +11895,7 @@ msgid "Match none (NOT)"
 msgstr "Negace (NOT)"
 
 #: app/assets/javascripts/app/controllers/_manage/ticket_duplicate_detection.coffee:38
-#: db/seeds/settings.rb:2805
+#: db/seeds/settings.rb:2808
 msgid "Match tickets in following states"
 msgstr "Vyber tikety v následujících stavech"
 
@@ -11896,7 +11924,7 @@ msgstr "Maximum souběžných chatů"
 msgid "Max. length"
 msgstr "Max. délka"
 
-#: db/seeds/settings.rb:3172
+#: db/seeds/settings.rb:3175
 msgid "Max. length of the subject in an email reply."
 msgstr "Max. délka předmětu v e-mailové odpovědi."
 
@@ -11920,15 +11948,15 @@ msgstr "Maximální hodnota musí být vyšší nebo rovna minimální hodnotě"
 msgid "Maximal value must be lower than 2147483648"
 msgstr "Maximální hodnota musí být menší než 2147483648"
 
-#: db/seeds/settings.rb:3284
+#: db/seeds/settings.rb:3287
 msgid "Maximum Email Size"
 msgstr "Maximální velikost emailu"
 
-#: db/seeds/settings.rb:2913
+#: db/seeds/settings.rb:2916
 msgid "Maximum Recursive Ticket Triggers Depth"
 msgstr "Maximální hloubka rekurzivních triggerů tiketů"
 
-#: db/seeds/settings.rb:2235
+#: db/seeds/settings.rb:2238
 msgid "Maximum failed logins"
 msgstr "Maximální počet neúspěšných přihlášení"
 
@@ -11936,7 +11964,7 @@ msgstr "Maximální počet neúspěšných přihlášení"
 msgid "Maximum number of open tabs."
 msgstr "Maximální počet otevřených záložek."
 
-#: db/seeds/settings.rb:2916
+#: db/seeds/settings.rb:2919
 msgid "Maximum number of recursively executed triggers."
 msgstr "Maximální počet rekurzivně vykonávaných spouštěčů."
 
@@ -12094,11 +12122,11 @@ msgstr "Metoda (koncový bod AJAXu)"
 
 #: app/assets/javascripts/app/controllers/_profile/linked_accounts.coffee:91
 #: app/frontend/shared/composables/authentication/useThirdPartyAuthentication.ts:53
-#: db/seeds/settings.rb:1741
+#: db/seeds/settings.rb:1744
 msgid "Microsoft"
 msgstr "Microsoft"
 
-#: db/seeds/settings.rb:1749
+#: db/seeds/settings.rb:1752
 msgid "Microsoft 365 App Credentials"
 msgstr "Aplikační pověření pro Microsoft 365"
 
@@ -12116,7 +12144,7 @@ msgstr "Microsoft 365 Graph – e-mail"
 msgid "Microsoft 365 IMAP Email"
 msgstr "Microsoft 365 – IMAP e-mail"
 
-#: db/seeds/settings.rb:1742
+#: db/seeds/settings.rb:1745
 msgid "Microsoft Application Registration Portal"
 msgstr "Registrační portál aplikací Microsoft"
 
@@ -12159,7 +12187,7 @@ msgstr "Migrátor nemůže přečíst výstup OTRS!"
 msgid "Milestone"
 msgstr "Milník"
 
-#: db/seeds/settings.rb:2480
+#: db/seeds/settings.rb:2483
 msgid "Min. size of number"
 msgstr "Min. velikost čísla"
 
@@ -12179,7 +12207,7 @@ msgstr "Minimální hodnota musí být vyšší než -2147483648"
 msgid "Minimal value must be lower than 2147483648"
 msgstr "Minimální hodnota musí být nižší než 2147483648"
 
-#: db/seeds/settings.rb:2117
+#: db/seeds/settings.rb:2120
 msgid "Minimum length"
 msgstr "Minimální délka"
 
@@ -12238,7 +12266,7 @@ msgstr "Pondělí"
 msgid "Monit"
 msgstr "Monit"
 
-#: db/seeds/settings.rb:4809
+#: db/seeds/settings.rb:4812
 msgid "Monit integration"
 msgstr "Integrace Monitu"
 
@@ -12248,7 +12276,7 @@ msgstr "Integrace Monitu"
 msgid "Monitoring"
 msgstr "Monitorování"
 
-#: db/seeds/settings.rb:3552
+#: db/seeds/settings.rb:3555
 msgid "Monitoring Token"
 msgstr "Token monitoringu"
 
@@ -12365,7 +12393,7 @@ msgstr "Mé rozpracované tikety"
 msgid "Nagios"
 msgstr "Nagios"
 
-#: db/seeds/settings.rb:4578
+#: db/seeds/settings.rb:4581
 msgid "Nagios integration"
 msgstr "Integrace Nagiosu"
 
@@ -12374,7 +12402,7 @@ msgstr "Integrace Nagiosu"
 #: app/assets/javascripts/app/controllers/_ui_element/object_attribute_options_context.coffee:21
 #: app/assets/javascripts/app/controllers/chat.coffee:559
 #: app/assets/javascripts/app/controllers/widget/two_factor_configuration/modal/security_keys.coffee:58
-#: app/assets/javascripts/app/models/_application_model.coffee:156
+#: app/assets/javascripts/app/models/_application_model.coffee:158
 #: app/assets/javascripts/app/models/ai_agent.coffee:6
 #: app/assets/javascripts/app/models/ai_text_tool.coffee:6
 #: app/assets/javascripts/app/models/application.coffee:7
@@ -12440,7 +12468,7 @@ msgstr "Integrace Nagiosu"
 msgid "Name"
 msgstr "Jméno"
 
-#: db/seeds/settings.rb:1930
+#: db/seeds/settings.rb:1933
 msgid "Name Identifier Format"
 msgstr "Formát identifikátoru názvu"
 
@@ -12496,7 +12524,7 @@ msgstr "Je vyžadováno ID sezení."
 msgid "Need user_id or organization_id as param"
 msgstr "Je vyžadováno user_id nebo organization_id jako parametr"
 
-#: db/seeds/settings.rb:2190
+#: db/seeds/settings.rb:2193
 msgid "Needed"
 msgstr "Vyžadováno"
 
@@ -12640,7 +12668,7 @@ msgid "New Source"
 msgstr "Nový zdroj"
 
 #: app/assets/javascripts/app/views/tag/index.jst.eco:14
-#: db/seeds/settings.rb:4175
+#: db/seeds/settings.rb:4178
 msgid "New Tags"
 msgstr "Nové štítky"
 
@@ -12835,7 +12863,7 @@ msgstr "Následující stav"
 #: app/assets/javascripts/app/views/ticket_zoom/attribute_bar.jst.eco:52
 #: app/assets/javascripts/app/views/ticket_zoom/overview_navigator.jst.eco:12
 #: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/TicketScreenBehavior/behaviorOptions.ts:21
-#: db/seeds/settings.rb:3024
+#: db/seeds/settings.rb:3027
 msgid "Next in overview"
 msgstr "Další v přehledu"
 
@@ -13193,7 +13221,7 @@ msgstr "Nemáte žádná nepřečtená oznámení. :)"
 msgid "No unread notifications."
 msgstr "Žádná nepřečtená oznámení."
 
-#: db/seeds/settings.rb:1297
+#: db/seeds/settings.rb:1300
 msgid "No user creation on logon"
 msgstr "Nevytvářet uživatele při přihlášení"
 
@@ -13221,7 +13249,7 @@ msgstr "Ne, děkuji"
 #: app/assets/javascripts/app/controllers/knowledge_base/permissions_dialog.coffee:9
 #: app/assets/javascripts/app/controllers/ticket_zoom/time_unit.coffee:55
 #: app/assets/javascripts/app/views/data_privacy/tasks.jst.eco:65
-#: app/graphql/gql/types/ticket_type.rb:109 db/seeds/settings.rb:1962
+#: app/graphql/gql/types/ticket_type.rb:109 db/seeds/settings.rb:1965
 msgid "None"
 msgstr "Žádný"
 
@@ -13380,7 +13408,7 @@ msgstr "Oznámení:"
 msgid "Notification"
 msgstr "Oznámení"
 
-#: db/seeds/settings.rb:3444
+#: db/seeds/settings.rb:3447
 msgid "Notification Sender"
 msgstr "Odesílatel oznámení"
 
@@ -13638,11 +13666,11 @@ msgstr ""
 "Pouze %s% tohoto jazyka je již přeloženo. Prosím, pomozte Zammadu a "
 "dokončete překlad."
 
-#: db/seeds/settings.rb:1965
+#: db/seeds/settings.rb:1968
 msgid "Only Encrypting"
 msgstr "Pouze šifrování"
 
-#: db/seeds/settings.rb:1964
+#: db/seeds/settings.rb:1967
 msgid "Only Signing"
 msgstr "Pouze podepisování"
 
@@ -13699,7 +13727,7 @@ msgstr "Otevřít"
 msgid "Open %s"
 msgstr "Otevřít %s"
 
-#: app/assets/javascripts/app/controllers/_ai/ticket_summary.coffee:82
+#: app/assets/javascripts/app/controllers/_ai/ticket_summary.coffee:83
 #: app/assets/javascripts/app/controllers/ticket_zoom/sidebar_ticket_summary.coffee:5
 #, fuzzy
 #| msgid "Options"
@@ -13801,11 +13829,11 @@ msgstr "Otevřít %s"
 
 #: app/assets/javascripts/app/controllers/_profile/linked_accounts.coffee:116
 #: app/frontend/shared/composables/authentication/useThirdPartyAuthentication.ts:90
-#: db/seeds/settings.rb:2034
+#: db/seeds/settings.rb:2037
 msgid "OpenID Connect"
 msgstr "OpenID Connect"
 
-#: db/seeds/settings.rb:2042
+#: db/seeds/settings.rb:2045
 msgid "OpenID Connect Options"
 msgstr "Možnosti OpenID Connect"
 
@@ -14188,19 +14216,19 @@ msgstr ""
 msgid "PGP"
 msgstr "PGP"
 
-#: db/seeds/settings.rb:5770
+#: db/seeds/settings.rb:5773
 msgid "PGP Recipient Alias Configuration"
 msgstr "Konfigurace aliasů příjemců PGP"
 
-#: db/seeds/settings.rb:5756
+#: db/seeds/settings.rb:5759
 msgid "PGP config"
 msgstr "Konfigurace PGP"
 
-#: db/seeds/settings.rb:5728
+#: db/seeds/settings.rb:5731
 msgid "PGP integration"
 msgstr "Integrace PDP"
 
-#: db/seeds/settings.rb:2088
+#: db/seeds/settings.rb:2091
 msgid "PKCE"
 msgstr "PKCE"
 
@@ -14315,19 +14343,19 @@ msgstr "Heslo pro spojení přes proxy"
 msgid "Password for proxy connection."
 msgstr "Heslo pro připojení přes proxy."
 
-#: db/seeds/settings.rb:2160
+#: db/seeds/settings.rb:2163
 msgid "Password needs to contain 2 lower case and 2 upper case characters."
 msgstr "Heslo musí obsahovat 2 malá a 2 velká písmena."
 
-#: db/seeds/settings.rb:2186
+#: db/seeds/settings.rb:2189
 msgid "Password needs to contain at least one digit."
 msgstr "Heslo musí obsahovat alespoň jednu číslici."
 
-#: db/seeds/settings.rb:2212
+#: db/seeds/settings.rb:2215
 msgid "Password needs to contain at least one special character."
 msgstr "Heslo musí obsahovat nejméně jeden speciální znak."
 
-#: db/seeds/settings.rb:2120
+#: db/seeds/settings.rb:2123
 msgid "Password needs to have at least a minimal number of characters."
 msgstr "Heslo musí obsahovat alespoň minimální počet znaků."
 
@@ -14411,7 +14439,7 @@ msgid "Permanently Delete Knowledge Base"
 msgstr "Trvale smazat Znalostní bázi"
 
 #: app/assets/javascripts/app/controllers/_manage/ticket_duplicate_detection.coffee:37
-#: db/seeds/settings.rb:2788
+#: db/seeds/settings.rb:2791
 msgid "Permission level for looking up tickets"
 msgstr "Úroveň práv pro prohlížení tiketů"
 
@@ -14501,15 +14529,15 @@ msgstr ""
 msgid "Placetel"
 msgstr "Placetel"
 
-#: db/seeds/settings.rb:5341
+#: db/seeds/settings.rb:5344
 msgid "Placetel Token"
 msgstr "Token Placetelu"
 
-#: db/seeds/settings.rb:5327
+#: db/seeds/settings.rb:5330
 msgid "Placetel config"
 msgstr "Konfigurace Placetelu"
 
-#: db/seeds/settings.rb:5299
+#: db/seeds/settings.rb:5302
 msgid "Placetel integration"
 msgstr "Integrace Placetelu"
 
@@ -14617,7 +14645,7 @@ msgid ""
 "side beforehand. %l"
 msgstr ""
 
-#: db/seeds/settings.rb:1927
+#: db/seeds/settings.rb:1930
 msgid ""
 "Please note that this attribute is deprecated within one of the next "
 "versions of Zammad. Use the IDP certificate instead."
@@ -14896,11 +14924,11 @@ msgstr "Priorita"
 msgid "Priority icon"
 msgstr "Priorita"
 
-#: db/seeds/settings.rb:1976
+#: db/seeds/settings.rb:1979
 msgid "Private key (PEM)"
 msgstr "Soukromý klíč (PEM)"
 
-#: db/seeds/settings.rb:1983
+#: db/seeds/settings.rb:1986
 msgid "Private key secret"
 msgstr "Tajný klíč soukromého klíče"
 
@@ -14952,7 +14980,7 @@ msgstr "Nastavení proflu"
 msgid "Profiles"
 msgstr "Profily"
 
-#: db/seeds/settings.rb:2098
+#: db/seeds/settings.rb:2101
 msgid ""
 "Proof Key for Code Exchange is currently only supporting SHA256 as code "
 "challenge method."
@@ -14964,24 +14992,24 @@ msgstr ""
 msgid "Protocol"
 msgstr "Protokol"
 
-#: app/assets/javascripts/app/controllers/_ai/ticket_summary.coffee:77
+#: app/assets/javascripts/app/controllers/_ai/ticket_summary.coffee:78
 msgid ""
 "Provide a summary of the conversation between customer and support agent."
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/_ai/ticket_summary.coffee:70
+#: app/assets/javascripts/app/controllers/_ai/ticket_summary.coffee:71
 msgid "Provide a summary of the problem the customer needs to get resolved."
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/_ai/ticket_summary.coffee:84
+#: app/assets/javascripts/app/controllers/_ai/ticket_summary.coffee:85
 msgid "Provide a summary of the questions raised in the conversation."
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/_ai/ticket_summary.coffee:90
+#: app/assets/javascripts/app/controllers/_ai/ticket_summary.coffee:91
 msgid "Provide a summary of the upcoming events based on the conversation."
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/_ai/ticket_summary.coffee:96
+#: app/assets/javascripts/app/controllers/_ai/ticket_summary.coffee:97
 msgid ""
 "Provide an assessment of the customer sentiment based on the conversation."
 msgstr ""
@@ -15071,7 +15099,7 @@ msgstr ""
 "Vložit správu na přihlašovací stránku. Pro změnu jejího obsahu klikněte do "
 "textového pole níže a přímo jej takto upravte."
 
-#: db/seeds/settings.rb:3736
+#: db/seeds/settings.rb:3739
 msgid "Puts Zammad into import mode (disables some triggers)."
 msgstr "Přepne Zammad do módu importu (zakáže některé spouštěče)."
 
@@ -15253,7 +15281,7 @@ msgstr ""
 "Obnovovací kódy lze použít k přístupu k vašemu účtu v případě, že ztratíte "
 "přístup k jiným metodám dvoufaktorového ověřování."
 
-#: db/seeds/settings.rb:2849
+#: db/seeds/settings.rb:2852
 msgid "Recursive Ticket Triggers"
 msgstr "Rekurzivní spouštěče tiketů"
 
@@ -15261,7 +15289,7 @@ msgstr "Rekurzivní spouštěče tiketů"
 msgid "Redis version"
 msgstr "Verze redis"
 
-#: db/seeds/settings.rb:3346
+#: db/seeds/settings.rb:3349
 msgid ""
 "References - Search for follow-up also in In-Reply-To or References headers."
 msgstr ""
@@ -15617,7 +15645,7 @@ msgstr "Chybí požadovaný parametr'profile'."
 msgid "Requirements"
 msgstr "Požadavky"
 
-#: db/seeds/settings.rb:5933
+#: db/seeds/settings.rb:5936
 msgid ""
 "Requires the setup of the two-factor authentication for certain user roles."
 msgstr ""
@@ -15860,7 +15888,7 @@ msgstr "Opakovaný pokus o stažení odeslaných médií přes WhatsApp se nezda
 msgid "Rewrite complex section and make it easy to understand"
 msgstr ""
 
-#: db/seeds/settings.rb:6139
+#: db/seeds/settings.rb:6142
 msgid "Richtext Bubble Menu"
 msgstr ""
 
@@ -15953,7 +15981,7 @@ msgstr ""
 "metoda (nebo přesněji, protokol) pro zasílání digitálně podepsaných a "
 "šifrovaných zpráv."
 
-#: db/seeds/settings.rb:5714
+#: db/seeds/settings.rb:5717
 msgid "S/MIME config"
 msgstr "Konfigurace S/MIME"
 
@@ -15961,17 +15989,17 @@ msgstr "Konfigurace S/MIME"
 msgid "S/MIME enables you to send digitally signed and encrypted messages."
 msgstr "S/MIME umožňuje zasílat digitálně podepsané a šifrované zprávy."
 
-#: db/seeds/settings.rb:5686
+#: db/seeds/settings.rb:5689
 msgid "S/MIME integration"
 msgstr "Integrace S/MIME"
 
 #: app/assets/javascripts/app/controllers/_profile/linked_accounts.coffee:106
 #: app/frontend/shared/composables/authentication/useThirdPartyAuthentication.ts:74
-#: db/seeds/settings.rb:1876
+#: db/seeds/settings.rb:1879
 msgid "SAML"
 msgstr "SAML"
 
-#: db/seeds/settings.rb:1884
+#: db/seeds/settings.rb:1887
 msgid "SAML App Credentials"
 msgstr "Aplikační pověření SAML"
 
@@ -16061,7 +16089,7 @@ msgstr "SSL/STARTTLS"
 
 #: app/assets/javascripts/app/controllers/_profile/linked_accounts.coffee:111
 #: app/frontend/shared/composables/authentication/useThirdPartyAuthentication.ts:81
-#: db/seeds/settings.rb:5802
+#: db/seeds/settings.rb:5805
 msgid "SSO"
 msgstr "SSO"
 
@@ -16202,11 +16230,11 @@ msgstr "Plánovač"
 msgid "Schedulers"
 msgstr "Plánovače"
 
-#: db/seeds/settings.rb:2080
+#: db/seeds/settings.rb:2083
 msgid "Scopes"
 msgstr "Rozsahy"
 
-#: db/seeds/settings.rb:2085
+#: db/seeds/settings.rb:2088
 msgid ""
 "Scopes that are included, separated by a single space character. If unset, "
 "\"openid email profile\" is used."
@@ -16554,7 +16582,7 @@ msgstr "Klíč zabezpečení"
 
 #: app/assets/javascripts/app/controllers/widget/two_factor_configuration/modal/security_keys.coffee:4
 #: app/assets/javascripts/app/lib/app_post/two_factor_methods/security_keys.coffee:5
-#: db/seeds/settings.rb:5839
+#: db/seeds/settings.rb:5842
 msgid "Security Keys"
 msgstr "Klíče zabezpečení"
 
@@ -16832,11 +16860,11 @@ msgstr ""
 "Odesílat zákazníkům automatické připomínky s výzvou k odpovědi, pokud se "
 "blíží vypršení 24hodinového okna."
 
-#: db/seeds/settings.rb:3417
+#: db/seeds/settings.rb:3420
 msgid "Send postmaster mail if mail too large"
 msgstr "Informovat e-mailem správce pošty, pokud je e-mail příliš velký"
 
-#: db/seeds/settings.rb:3420
+#: db/seeds/settings.rb:3423
 msgid "Send postmaster reject mail to sender of mail if mail is too large."
 msgstr ""
 "Zaslat odmítnutí správce pošty odesílateli e-mailu, pokud je e-mail příliš "
@@ -16850,16 +16878,16 @@ msgstr "Poslat klientům"
 #: app/assets/javascripts/app/views/channel/sms_account_overview.jst.eco:51
 #: app/models/channel/driver/sms/massenversand.rb:45
 #: app/models/channel/driver/sms/message_bird.rb:92
-#: app/models/channel/driver/sms/twilio.rb:106 db/seeds/settings.rb:3234
+#: app/models/channel/driver/sms/twilio.rb:106 db/seeds/settings.rb:3237
 #: lib/excel_sheet/ticket.rb:32
 msgid "Sender"
 msgstr "Odesílatel"
 
-#: db/seeds/settings.rb:3234
+#: db/seeds/settings.rb:3237
 msgid "Sender Format"
 msgstr "Formát Odesílatele"
 
-#: db/seeds/settings.rb:3262
+#: db/seeds/settings.rb:3265
 msgid "Sender Format Separator"
 msgstr "Formát oddělovače pro odesílatele"
 
@@ -16868,7 +16896,7 @@ msgstr "Formát oddělovače pro odesílatele"
 msgid "Sender Type"
 msgstr "Typ odesílatele"
 
-#: db/seeds/settings.rb:3363
+#: db/seeds/settings.rb:3366
 msgid "Sender based on Reply-To header"
 msgstr "Odesílatel založený na hlavičce Reply-To"
 
@@ -16906,7 +16934,7 @@ msgstr "Více hodnot oddělte pomocí ;"
 msgid "September"
 msgstr "Září"
 
-#: db/seeds/settings.rb:4023
+#: db/seeds/settings.rb:4026
 msgid "Sequencer log level"
 msgstr "Úroveň logování sekvenceru"
 
@@ -16963,7 +16991,7 @@ msgstr "Nastavit"
 msgid "Set a title for your ticket"
 msgstr "Vložte titulek pro váš první tiket"
 
-#: db/seeds/settings.rb:5429
+#: db/seeds/settings.rb:5432
 msgid "Set agent limit"
 msgstr "Nastavit limit řešitelů"
 
@@ -16989,7 +17017,7 @@ msgstr "Nastavit autentizační aplikaci jako výchozí"
 msgid "Set available ticket types"
 msgstr "Nastavit dostupné typy tiketů"
 
-#: db/seeds/settings.rb:3758
+#: db/seeds/settings.rb:3761
 msgid "Set backend which is being used for import."
 msgstr "Nastavit rozhraní, které se používá pro import."
 
@@ -17019,10 +17047,14 @@ msgstr "Nastavit odchozí ID volajícího"
 msgid "Set security keys as default"
 msgstr "Nastavit bezpečnostní klíče jako výchozí"
 
-#: db/seeds/settings.rb:5591
+#: db/seeds/settings.rb:5594
+#, fuzzy
+#| msgid ""
+#| "Set timeframe in seconds. If it's set to 0 you can delete notes without "
+#| "time limits"
 msgid ""
 "Set timeframe in seconds. If it's set to 0 you can delete notes without time "
-"limits"
+"limits."
 msgstr ""
 "Nastavte časové období v sekundách. Pokud je nastaveno na 0, můžete poznámky "
 "mazat bez časového omezení"
@@ -17071,7 +17103,7 @@ msgstr "Nastavit dvoufaktorové ověřování"
 msgid "Set up two-factor authentication: %s"
 msgstr "Autentizace"
 
-#: db/seeds/settings.rb:3366
+#: db/seeds/settings.rb:3369
 msgid ""
 "Set/overwrite sender/from of email based on \"Reply-To\" header. Useful to "
 "set correct customer if email is received from a third-party system on "
@@ -17222,7 +17254,7 @@ msgstr "Zobrazit vše…"
 msgid "Show authenticator app secret"
 msgstr "Zobrazit tajný klíč autentizační aplikace"
 
-#: db/seeds/settings.rb:5811
+#: db/seeds/settings.rb:5814
 msgid "Show calendar weeks in the picker of date/datetime fields"
 msgstr "Zobrazovat kalendářní týdny ve výběru polí datum/čas"
 
@@ -17245,7 +17277,7 @@ msgstr "Zobrazit méně"
 msgid "Show matching ticket(s) in the warning"
 msgstr "Zobrazit shodný(é) tiket(y) ve varování"
 
-#: db/seeds/settings.rb:2771
+#: db/seeds/settings.rb:2774
 msgid "Show matching tickets in the warning"
 msgstr "Zobrazit shodné tikety ve varování"
 
@@ -17304,7 +17336,7 @@ msgid "Show ticket viewers"
 msgstr "Prohlédnout zobrazení tiketu"
 
 #: app/assets/javascripts/app/views/time_accounting/settings.jst.eco:6
-#: db/seeds/settings.rb:4088
+#: db/seeds/settings.rb:4091
 msgid "Show time accounting dialog when updating matching tickets."
 msgstr "Zobrazit dialog účtování času při aktualizaci odpovídajících tiketů."
 
@@ -17312,7 +17344,7 @@ msgstr "Zobrazit dialog účtování času při aktualizaci odpovídajících ti
 msgid "Show title in form."
 msgstr "Zobrazit ve formuláři nadpis."
 
-#: db/seeds/settings.rb:2754
+#: db/seeds/settings.rb:2757
 msgid "Show to user roles"
 msgstr "Zobrazit uživateli role"
 
@@ -17434,7 +17466,7 @@ msgstr "Podpisy"
 msgid "Signed"
 msgstr "Podepsáno"
 
-#: db/seeds/settings.rb:1957
+#: db/seeds/settings.rb:1960
 msgid "Signing & Encrypting"
 msgstr "Chyba podpisu"
 
@@ -17442,7 +17474,7 @@ msgstr "Chyba podpisu"
 msgid "Signup Screen"
 msgstr "Obrazovka registrace"
 
-#: db/seeds/settings.rb:2733
+#: db/seeds/settings.rb:2736
 msgid "Similar tickets found"
 msgstr "Nalezeny shodné tikety"
 
@@ -17475,11 +17507,11 @@ msgstr ""
 msgid "Simple Storage Service not reachable."
 msgstr "Služba Simple Storage Service není dostupná."
 
-#: db/seeds/settings.rb:1813
+#: db/seeds/settings.rb:1816
 msgid "Sina Weibo"
 msgstr "Sina Weibo"
 
-#: db/seeds/settings.rb:1813
+#: db/seeds/settings.rb:1816
 msgid "Sina Weibo Open Portal"
 msgstr "Sina Weibo Open Portal"
 
@@ -17510,7 +17542,7 @@ msgstr "Pole jednoduchého stromového výběru"
 msgid "Sipgate"
 msgstr "Sipgate"
 
-#: db/seeds/settings.rb:1697
+#: db/seeds/settings.rb:1700
 msgid "Site"
 msgstr "Doména (site)"
 
@@ -17579,7 +17611,7 @@ msgstr "Omlouváme se, aktuálně není povoleno žádné CTI rozhraní."
 #: app/frontend/apps/desktop/composables/dragAndDrop/useKeyboardKeysForDragAndDrop.ts:146
 msgid ""
 "Sortable list focused. Use up and down arrows to navigate items. Press Space "
-"to select and item and again on another item to swap them."
+"to select an item and again on another item to swap them."
 msgstr ""
 
 #: app/frontend/apps/desktop/composables/dragAndDrop/useAccessibleDragAndDrop.ts:50
@@ -17616,7 +17648,7 @@ msgstr "zdroj"
 msgid "Sources"
 msgstr "Zdroje"
 
-#: db/seeds/settings.rb:2209
+#: db/seeds/settings.rb:2212
 msgid "Special character required"
 msgstr "Je vyžadován speciální znak"
 
@@ -17784,7 +17816,7 @@ msgstr "Stav"
 msgid "State icon"
 msgstr "Stav"
 
-#: db/seeds/settings.rb:5463
+#: db/seeds/settings.rb:5466
 msgid "Stats Backend"
 msgstr "Rozhraní statistik"
 
@@ -17818,7 +17850,7 @@ msgstr "Stav:"
 #: app/assets/javascripts/app/models/macro.coffee:9
 #: app/assets/javascripts/app/views/ticket_zoom/attribute_bar.jst.eco:58
 #: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/TicketScreenBehavior/behaviorOptions.ts:8
-#: db/seeds/settings.rb:3025
+#: db/seeds/settings.rb:3028
 msgid "Stay on tab"
 msgstr "Zůstat na záložce"
 
@@ -17860,21 +17892,21 @@ msgstr "Způsob ukládání"
 msgid "Store"
 msgstr "Obchod"
 
-#: db/seeds/settings.rb:6065
+#: db/seeds/settings.rb:6068
 #, fuzzy
 #| msgid "Stores the GitHub configuration."
 msgid "Stores the AI provider configuration."
 msgstr "Ukládá konfiguraci GitHubu."
 
-#: db/seeds/settings.rb:5102
+#: db/seeds/settings.rb:5105
 msgid "Stores the GitHub configuration."
 msgstr "Ukládá konfiguraci GitHubu."
 
-#: db/seeds/settings.rb:5060
+#: db/seeds/settings.rb:5063
 msgid "Stores the GitLab configuration."
 msgstr "Ukládá konfiguraci GitLabu."
 
-#: db/seeds/settings.rb:6095
+#: db/seeds/settings.rb:6098
 msgid ""
 "Stores the ticket summarization options (e.g. which content is visible)."
 msgstr ""
@@ -17898,7 +17930,7 @@ msgstr "Ulice"
 msgid "Subject"
 msgstr "Předmět"
 
-#: db/seeds/settings.rb:3349
+#: db/seeds/settings.rb:3352
 msgid ""
 "Subject & References - Additional search for same article subject and same "
 "message ID in references header if no follow-up was recognized using default "
@@ -18031,7 +18063,7 @@ msgstr "Ne"
 msgid "Sunday"
 msgstr "Neděle"
 
-#: db/seeds/settings.rb:5550
+#: db/seeds/settings.rb:5553
 msgid "Support of multilingual Knowledge Base."
 msgstr "Podpora vícejazyčné Znalostní báze."
 
@@ -18071,7 +18103,7 @@ msgstr "Synchronizovat s počítačem"
 msgid "System"
 msgstr "Systém"
 
-#: db/seeds/settings.rb:3246
+#: db/seeds/settings.rb:3249
 msgid "System Address Display Name"
 msgstr "Zobrazovaný název systémové adresy"
 
@@ -18120,7 +18152,7 @@ msgstr ""
 "platformě %l. Nabízí velmi pohodlné uživatelské rozhraní založené na "
 "Weblate, vyzkoušejte ho!"
 
-#: db/seeds/settings.rb:5623
+#: db/seeds/settings.rb:5626
 msgid ""
 "System-wide configuration of the query polling mechanism for ticket "
 "overviews."
@@ -18130,7 +18162,7 @@ msgstr "Systémová konfigurace mechanismu dotazování pro přehledy tiketů."
 msgid "SystemID"
 msgstr "Systémové ID"
 
-#: db/seeds/settings.rb:3010
+#: db/seeds/settings.rb:3013
 msgid "Tab behaviour after ticket action"
 msgstr "Chování záložek po vytvoření tiketu"
 
@@ -18169,7 +18201,7 @@ msgstr "Tag %s již existuje."
 msgid "Tags"
 msgstr "Tagy"
 
-#: db/seeds/settings.rb:3377
+#: db/seeds/settings.rb:3380
 msgid ""
 "Take Reply-To header as sender/from of email and use the real name of origin "
 "from."
@@ -18177,7 +18209,7 @@ msgstr ""
 "Použít hlavičku Reply-To jako odesílatele/from e-mailu a použít původní "
 "jméno z pole From."
 
-#: db/seeds/settings.rb:3376
+#: db/seeds/settings.rb:3379
 msgid "Take Reply-To header as sender/from of email."
 msgstr "Použít hlavičku Reply-To jako odesílatele/from e-mailu."
 
@@ -18430,7 +18462,10 @@ msgid "The OTRS import failed."
 msgstr "Import z OTRS se nezdařil."
 
 #: app/services/service/system/import/apply_otrs_configuration.rb:78
-msgid "The OTRS migrator plugin is not accessable. Please verify the API key."
+#, fuzzy
+#| msgid ""
+#| "The OTRS migrator plugin is not accessable. Please verify the API key."
+msgid "The OTRS migrator plugin is not accessible. Please verify the API key."
 msgstr "Plugin OTRS migrátoru není dostupný. Ověřte prosím API klíč."
 
 #: lib/secure_mailing/pgp/tool/error.rb:106
@@ -18866,7 +18901,7 @@ msgstr ""
 msgid "The device could not be deleted."
 msgstr "Odstavec nemůže být smazán."
 
-#: db/seeds/settings.rb:2304
+#: db/seeds/settings.rb:2307
 msgid "The divider between TicketHook and ticket number. E. g. ': '."
 msgstr "Oddělovač mezi TicketHook a číslem ticketu. Např. ': '."
 
@@ -19045,7 +19080,7 @@ msgstr "Název hostitele nebyl nalezen."
 msgid "The hours overlay"
 msgstr "Otevřít oblast pro poznámku"
 
-#: db/seeds/settings.rb:2279
+#: db/seeds/settings.rb:2282
 msgid ""
 "The identifier for a ticket, e.g. Ticket#, Call#, MyTicket#. The default is "
 "Ticket#."
@@ -19714,12 +19749,12 @@ msgstr "Číslo cílového ticketu nebylo nalezeno."
 msgid "The test run was successful."
 msgstr "Test proběhl úspěšně."
 
-#: db/seeds/settings.rb:3215
+#: db/seeds/settings.rb:3218
 msgid ""
 "The text at the beginning of the subject in an email forward, e. g. FWD."
 msgstr "Text na začátku předměru v přeposílaném e-mailu, např. FWD."
 
-#: db/seeds/settings.rb:3193
+#: db/seeds/settings.rb:3196
 msgid ""
 "The text at the beginning of the subject in an email reply, e.g. RE, AW, or "
 "AS."
@@ -20727,11 +20762,11 @@ msgstr "Automatické přiřazení tiketu"
 msgid "Ticket Categorizer"
 msgstr "ticket.customer"
 
-#: db/seeds/settings.rb:2381
+#: db/seeds/settings.rb:2384
 msgid "Ticket Conditions Expert Mode"
 msgstr "Expertní mód podmínek tiketu"
 
-#: db/seeds/settings.rb:2407
+#: db/seeds/settings.rb:2410
 msgid "Ticket Conditions Regular Expression Operators"
 msgstr "Operátory regulárních výrazů pro podmínky tiketů"
 
@@ -20753,43 +20788,43 @@ msgstr "Detekce duplicit tiketů"
 msgid "Ticket Group Dispatcher"
 msgstr "Aktualizace ticketu"
 
-#: db/seeds/settings.rb:2276
+#: db/seeds/settings.rb:2279
 msgid "Ticket Hook"
 msgstr "Identifikátor tiketu"
 
-#: db/seeds/settings.rb:2301
+#: db/seeds/settings.rb:2304
 msgid "Ticket Hook Divider"
 msgstr "Oddělovač tiketů"
 
-#: db/seeds/settings.rb:2322
+#: db/seeds/settings.rb:2325
 msgid "Ticket Hook Position"
 msgstr "Pozice identifikátoru tiketu"
 
-#: db/seeds/settings.rb:2354
+#: db/seeds/settings.rb:2357
 msgid "Ticket Last Contact Behaviour"
 msgstr "Chování posledního kontaktu tiketu"
 
-#: db/seeds/settings.rb:2433
+#: db/seeds/settings.rb:2436
 msgid "Ticket Number Format"
 msgstr "Formát čísla tiketu"
 
-#: db/seeds/settings.rb:2463
+#: db/seeds/settings.rb:2466
 msgid "Ticket Number Increment"
 msgstr "Přírůstek čísla tiketu"
 
-#: db/seeds/settings.rb:2520
+#: db/seeds/settings.rb:2523
 msgid "Ticket Number Increment Date"
 msgstr "Datum přírůstku v čísle tiketu"
 
-#: db/seeds/settings.rb:2822
+#: db/seeds/settings.rb:2825
 msgid "Ticket Number ignore system_id"
 msgstr "Číslo tiketu ignoruje system_id"
 
-#: db/seeds/settings.rb:5955
+#: db/seeds/settings.rb:5958
 msgid "Ticket Organization Reassignment"
 msgstr "Přeřazení organizace tiketu"
 
-#: db/seeds/settings.rb:5620
+#: db/seeds/settings.rb:5623
 msgid "Ticket Overview Query Polling"
 msgstr "Dotazování přehledu tiketů"
 
@@ -20833,15 +20868,15 @@ msgstr "Stav tiketu"
 msgid "Ticket States"
 msgstr "Stavy tiketů"
 
-#: db/seeds/settings.rb:3212
+#: db/seeds/settings.rb:3215
 msgid "Ticket Subject Forward"
 msgstr "Přeposlání v předmětu tiketu"
 
-#: db/seeds/settings.rb:3190
+#: db/seeds/settings.rb:3193
 msgid "Ticket Subject Reply"
 msgstr "Předmět v odpovědi k tiketu"
 
-#: db/seeds/settings.rb:3169
+#: db/seeds/settings.rb:3172
 msgid "Ticket Subject Size"
 msgstr "Délka předmětu tiketu"
 
@@ -20851,13 +20886,13 @@ msgstr "Odběry tiketů"
 
 #: app/assets/javascripts/app/controllers/_ai/ticket_summary.coffee:2
 #: app/assets/javascripts/app/views/ai/ticket_summary.jst.eco:7
-#: db/seeds/permissions.rb:239 db/seeds/settings.rb:6078
+#: db/seeds/permissions.rb:239 db/seeds/settings.rb:6081
 #, fuzzy
 #| msgid "Ticket title"
 msgid "Ticket Summary"
 msgstr "Titulek ticketu"
 
-#: db/seeds/settings.rb:6092
+#: db/seeds/settings.rb:6095
 #, fuzzy
 #| msgid "Ticket Count"
 msgid "Ticket Summary Config"
@@ -20877,11 +20912,11 @@ msgstr ""
 msgid "Ticket Title Rewriter"
 msgstr "Zobrazení ticketu"
 
-#: db/seeds/settings.rb:2894
+#: db/seeds/settings.rb:2897
 msgid "Ticket Trigger Loop Protection Articles Total"
 msgstr "Celkem článků ochrany proti smyčce spouštěče tiketu"
 
-#: db/seeds/settings.rb:2875
+#: db/seeds/settings.rb:2878
 msgid "Ticket Trigger Loop Protection Articles per Ticket"
 msgstr "Články ochrany proti smyčce spouštěče tiketu na jeden tiket"
 
@@ -21211,7 +21246,7 @@ msgstr "Tikety uživatele"
 msgid "Tickets with \"%s\""
 msgstr "Tikety s \"%s\""
 
-#: db/seeds/settings.rb:2750
+#: db/seeds/settings.rb:2753
 msgid "Tickets with the same attributes were found."
 msgstr "Byly nalezeny tikety se shodnými atributy."
 
@@ -21230,33 +21265,33 @@ msgstr "Čas"
 #: app/assets/javascripts/app/controllers/_ui_element/object_selector.coffee:134
 #: app/assets/javascripts/app/controllers/ticket_zoom/time_accounting_modal.coffee:12
 #: app/assets/javascripts/app/controllers/time_accounting.coffee:3
-#: db/seeds/permissions.rb:107 db/seeds/settings.rb:4058
+#: db/seeds/permissions.rb:107 db/seeds/settings.rb:4061
 msgid "Time Accounting"
 msgstr "Počítání času"
 
-#: db/seeds/settings.rb:4121
+#: db/seeds/settings.rb:4124
 #, fuzzy
 #| msgid "Time Accounting"
 msgid "Time Accounting Custom Unit"
 msgstr "Počítání času"
 
-#: db/seeds/settings.rb:4157
+#: db/seeds/settings.rb:4160
 #, fuzzy
 #| msgid "Time Accounting Selector"
 msgid "Time Accounting Default Type"
 msgstr "Selektor účtování času"
 
-#: db/seeds/settings.rb:4085
+#: db/seeds/settings.rb:4088
 msgid "Time Accounting Selector"
 msgstr "Selektor účtování času"
 
-#: db/seeds/settings.rb:4139
+#: db/seeds/settings.rb:4142
 #, fuzzy
 #| msgid "Time Accounting"
 msgid "Time Accounting Types"
 msgstr "Počítání času"
 
-#: db/seeds/settings.rb:4103
+#: db/seeds/settings.rb:4106
 #, fuzzy
 #| msgid "Time Accounting"
 msgid "Time Accounting Unit"
@@ -21367,7 +21402,7 @@ msgstr "nadpis formuláře"
 msgid "To"
 msgstr "Komu"
 
-#: db/seeds/settings.rb:3493
+#: db/seeds/settings.rb:3496
 msgid ""
 "To archive all outgoing emails from Zammad to external, you can store a BCC "
 "email address here."
@@ -21537,15 +21572,15 @@ msgstr "Přístup přes Token"
 msgid "Token authorization failed."
 msgstr "Autentizace se nezdařila"
 
-#: db/seeds/settings.rb:5268
+#: db/seeds/settings.rb:5271
 msgid "Token for CTI."
 msgstr "Token pro CTI."
 
-#: db/seeds/settings.rb:5172
+#: db/seeds/settings.rb:5175
 msgid "Token for Sipgate."
 msgstr "Token pro Sipgate."
 
-#: db/seeds/settings.rb:3555
+#: db/seeds/settings.rb:3558
 msgid "Token for monitoring."
 msgstr "Token pro monitoring."
 
@@ -21761,23 +21796,23 @@ msgstr ""
 
 #: app/assets/javascripts/app/controllers/_profile/linked_accounts.coffee:71
 #: app/frontend/shared/composables/authentication/useThirdPartyAuthentication.ts:25
-#: db/seeds/settings.rb:1344
+#: db/seeds/settings.rb:1347
 msgid "Twitter"
 msgstr "Twitter"
 
-#: db/seeds/settings.rb:1352
+#: db/seeds/settings.rb:1355
 msgid "Twitter App Credentials"
 msgstr "Přihlašovací údaje do Twitter aplikace"
 
-#: db/seeds/settings.rb:1345
+#: db/seeds/settings.rb:1348
 msgid "Twitter Developer Site"
 msgstr "Twitter Developer stránka"
 
-#: db/seeds/settings.rb:1359
+#: db/seeds/settings.rb:1362
 msgid "Twitter Key"
 msgstr "Twitter Key"
 
-#: db/seeds/settings.rb:1365
+#: db/seeds/settings.rb:1368
 msgid "Twitter Secret"
 msgstr "Twitter Secret"
 
@@ -21907,27 +21942,15 @@ msgstr "Typ"
 msgid "Type:"
 msgstr "Typ:"
 
-#: db/seeds/settings.rb:6030
-msgid "UI Desktop BETA Switch Admin Menu"
-msgstr ""
-
-#: db/seeds/settings.rb:6039
-msgid "UI Desktop BETA Switch Roles"
-msgstr ""
-
-#: db/seeds/settings.rb:6021
-msgid "UI Desktop Beta Switch"
-msgstr ""
-
 #: app/assets/javascripts/app/views/integration/ldap.jst.eco:44
 msgid "UID"
 msgstr "UID"
 
-#: db/seeds/settings.rb:1938
+#: db/seeds/settings.rb:1941
 msgid "UID Attribute Name"
 msgstr "Název UID atributu"
 
-#: db/seeds/settings.rb:2072
+#: db/seeds/settings.rb:2075
 #, fuzzy
 #| msgid "Date field"
 msgid "UID Field"
@@ -22100,7 +22123,7 @@ msgstr ""
 "Je přeloženo již %s% tohoto jazyka. Pomozte prosím Zammadu být ještě lepším "
 "a dokončete překlad."
 
-#: app/assets/javascripts/app/controllers/_ai/ticket_summary.coffee:88
+#: app/assets/javascripts/app/controllers/_ai/ticket_summary.coffee:89
 #: app/assets/javascripts/app/controllers/ticket_zoom/sidebar_ticket_summary.coffee:6
 msgid "Upcoming Events"
 msgstr ""
@@ -22136,6 +22159,12 @@ msgstr "Rozdíl aktualizace v min"
 msgid "Update Escalation At"
 msgstr "Eskalace aktualizace v"
 
+#: db/seeds/schedulers.rb:259
+#, fuzzy
+#| msgid "Update exchange oauth 2 token."
+msgid "Update Exchange OAuth2 token."
+msgstr "Upravit výměnu oauth2 tokenu."
+
 #: lib/excel_sheet/ticket.rb:68
 msgid "Update In Min"
 msgstr "Aktualizace v min"
@@ -22149,10 +22178,6 @@ msgstr "Doba aktualizace"
 #: app/assets/javascripts/app/controllers/_plugin/keyboard_shortcuts.coffee:513
 msgid "Update as closed"
 msgstr "Aktualizováno jako uzavřené"
-
-#: db/seeds/schedulers.rb:259
-msgid "Update exchange oauth 2 token."
-msgstr "Upravit výměnu oauth2 tokenu."
 
 #: app/assets/javascripts/app/views/generic/object_import/index.jst.eco:14
 msgid "Update existing records"
@@ -22185,7 +22210,7 @@ msgstr "Použít sdílený koncept"
 msgid "Update successful."
 msgstr "Aktualizace úspěšná."
 
-#: db/seeds/settings.rb:5967
+#: db/seeds/settings.rb:5970
 msgid "Update the most recent tickets."
 msgstr "Aktualizovat nejnovější tikety."
 
@@ -22495,7 +22520,7 @@ msgstr ""
 msgid "Use the camera to take a photo for the avatar."
 msgstr ""
 
-#: db/seeds/settings.rb:2368
+#: db/seeds/settings.rb:2371
 msgid ""
 "Use the start time of the last customer thread (which may consist of "
 "multiple articles)."
@@ -22503,12 +22528,14 @@ msgstr ""
 "Použít čas zahájení posledního zákaznického vlákna (které může být složeno z "
 "více článků)."
 
-#: db/seeds/settings.rb:2367
+#: db/seeds/settings.rb:2370
 msgid "Use the time of the very last customer article."
 msgstr "Použít čas úplně posledního zákaznického článku."
 
 #: app/assets/javascripts/app/controllers/_integration/ldap.coffee:5
-msgid "Use this switch to start synchronization of your ldap sources."
+#, fuzzy
+#| msgid "Use this switch to start synchronization of your ldap sources."
+msgid "Use this switch to start synchronization of your LDAP sources."
 msgstr "Použijte tento přepínač k zahájení synchronizace vašich zdrojů LDAP."
 
 #: app/assets/javascripts/app/controllers/_plugin/keyboard_shortcuts.coffee:141
@@ -22644,7 +22671,7 @@ msgstr "Uživatelské jméno / E-mail"
 msgid "User email could not be extracted from 'id_token'."
 msgstr "E-mail uživatele se nepodařilo z 'id_token' extrahovat."
 
-#: db/seeds/settings.rb:1157
+#: db/seeds/settings.rb:1160
 msgid "User email for multiple users"
 msgstr "E-mail uživatele pro více uživatelů"
 
@@ -22886,7 +22913,7 @@ msgstr "Ověřovací e-mail nebyl ve schránce nalezen."
 msgid "Verification email could not be sent."
 msgstr "Ověřovací e-mail se nepodařilo odeslat."
 
-#: db/seeds/settings.rb:1954
+#: db/seeds/settings.rb:1957
 msgid ""
 "Verification of the TLS connection to the IDP SSO target URL. Only relevant "
 "during setting up SAML authentication."
@@ -23020,12 +23047,12 @@ msgid "Warning"
 msgstr "Upozornění"
 
 #: app/assets/javascripts/app/controllers/_manage/ticket_duplicate_detection.coffee:34
-#: db/seeds/settings.rb:2737
+#: db/seeds/settings.rb:2740
 msgid "Warning message"
 msgstr "Varovná zpráva"
 
 #: app/assets/javascripts/app/controllers/_manage/ticket_duplicate_detection.coffee:33
-#: db/seeds/settings.rb:2720
+#: db/seeds/settings.rb:2723
 msgid "Warning title"
 msgstr "Titulek varování"
 
@@ -23052,6 +23079,18 @@ msgstr "Web (příchozí)"
 #: app/assets/javascripts/app/controllers/knowledge_base/server_snippet.coffee:2
 msgid "Web Server Configuration"
 msgstr "Konfigurace webového serveru"
+
+#: db/seeds/settings.rb:310
+#, fuzzy
+#| msgid "Websocket backend"
+msgid "WebSocket backend"
+msgstr "Rozhraní websocketu"
+
+#: db/seeds/settings.rb:318
+#, fuzzy
+#| msgid "Websocket port"
+msgid "WebSocket port"
+msgstr "Port websocketu"
 
 #: app/assets/javascripts/app/controllers/_channel/sms.coffee:201
 #: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:75
@@ -23098,14 +23137,6 @@ msgstr "Weblink"
 msgid "Website"
 msgstr "Webová stránka"
 
-#: db/seeds/settings.rb:310
-msgid "Websocket backend"
-msgstr "Rozhraní websocketu"
-
-#: db/seeds/settings.rb:318
-msgid "Websocket port"
-msgstr "Port websocketu"
-
 #: app/assets/javascripts/app/controllers/_ui_element/basedate.coffee:157
 msgid "Wed"
 msgstr "St"
@@ -23127,11 +23158,11 @@ msgstr "Týdny"
 
 #: app/assets/javascripts/app/controllers/_profile/linked_accounts.coffee:101
 #: app/frontend/shared/composables/authentication/useThirdPartyAuthentication.ts:67
-#: db/seeds/settings.rb:1812
+#: db/seeds/settings.rb:1815
 msgid "Weibo"
 msgstr "Weibo"
 
-#: db/seeds/settings.rb:1820
+#: db/seeds/settings.rb:1823
 msgid "Weibo App Credentials"
 msgstr "Aplikační pověření Weibo"
 
@@ -23221,9 +23252,13 @@ msgid "When should the job run?"
 msgstr "Kdy spustit úkol?"
 
 #: app/assets/javascripts/app/views/channel/chat.jst.eco:218
+#, fuzzy
+#| msgid ""
+#| "When you turn on debugging by setting the option §debug§ to §true§ the "
+#| "reason gets printed to the javascript console."
 msgid ""
 "When you turn on debugging by setting the option §debug§ to §true§ the "
-"reason gets printed to the javascript console."
+"reason gets printed to the JavaScript console."
 msgstr ""
 "Pokud zapnete debugování nastavením možnosti §debug§ na §true§, důvod bude "
 "zobrazen v javascriptové konzoli."
@@ -23357,17 +23392,17 @@ msgstr "Pracovní postupy"
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingNewBetaUi.vue:104
 #, fuzzy
 #| msgid "Feedback"
-msgid "Would you like to give us feedback on the BETA UI? "
+msgid "Would you like to give us feedback on the BETA UI?"
 msgstr "Zpětná vazba"
 
 #: app/assets/javascripts/app/controllers/_ai/text_tool.coffee:16
-#: db/seeds/permissions.rb:245 db/seeds/settings.rb:6111
+#: db/seeds/permissions.rb:245 db/seeds/settings.rb:6114
 #, fuzzy
 #| msgid "Waiting in %s"
 msgid "Writing Assistant"
 msgstr "Čekání v %s"
 
-#: db/seeds/settings.rb:6125
+#: db/seeds/settings.rb:6128
 #, fuzzy
 #| msgid "Waiting in %s"
 msgid "Writing Assistant Fixed Instructions"
@@ -23476,10 +23511,6 @@ msgstr "Toto jste obdrželi, jelikož jste vlastníkem tohoto tiketu."
 #: app/models/transaction/notification.rb:73
 msgid "You are receiving this because you were mentioned in this ticket."
 msgstr "Toto jste obdrželi, jelikož jste byli v tomto tiketu zmíněni."
-
-#: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingCalendar.vue:252
-msgid "You calendar subscription settings were updated."
-msgstr "Nastavení vašeho odběru kalendáře bylo aktualizováno."
 
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingNewBetaUi.vue:37
 msgid "You can always re-join later."
@@ -23686,15 +23717,10 @@ msgstr ""
 "systému který je již v produkčním režimu."
 
 #: app/assets/javascripts/app/controllers/_plugin/navigation.coffee:185
-msgid ""
-"You can switch between the old and the New BETA UI at any moment in the "
-"Profile > New BETA UI section."
-msgstr ""
-
 #: app/frontend/apps/desktop/components/BetaUi/composables/useBetaUi.ts:82
 msgid ""
 "You can switch between the old and the New BETA UI at any moment in the "
-"Profile Settings > New BETA UI section."
+"Profile settings > New BETA UI section."
 msgstr ""
 
 #: app/assets/javascripts/app/views/integration/check_mk.jst.eco:32
@@ -23839,7 +23865,10 @@ msgid "You must protect your account with two-factor authentication."
 msgstr ""
 
 #: app/assets/javascripts/app/views/channel/form.jst.eco:151
-msgid "You need to add the following Javascript code snippet to your web page:"
+#, fuzzy
+#| msgid ""
+#| "You need to add the following Javascript code snippet to your web page:"
+msgid "You need to add the following JavaScript code snippet to your web page:"
 msgstr "Musíte přidat následující JavaScriptový kód na svou webovou stránku:"
 
 #: app/assets/javascripts/app/views/integration/placetel.jst.eco:5
@@ -24005,12 +24034,18 @@ msgstr "Avatar se nepodařilo smazat."
 msgid "Your avatar has been uploaded."
 msgstr "Avatar se nepodařilo nahrát."
 
+#: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingCalendar.vue:252
+#, fuzzy
+#| msgid "You calendar subscription settings were updated."
+msgid "Your calendar subscription settings were updated."
+msgstr "Nastavení vašeho odběru kalendáře bylo aktualizováno."
+
 #: app/assets/javascripts/app/views/exchange/app_config.jst.eco:31
 #: app/assets/javascripts/app/views/facebook/app_config.jst.eco:23
 #: app/assets/javascripts/app/views/google/app_config.jst.eco:23
 #: app/assets/javascripts/app/views/microsoft365/app_config.jst.eco:31
 #: app/assets/javascripts/app/views/microsoft_graph/app_config.jst.eco:31
-#: db/seeds/settings.rb:1372
+#: db/seeds/settings.rb:1375
 msgid "Your callback URL"
 msgstr "Vaše callback URL"
 
@@ -24215,10 +24250,6 @@ msgstr "Přidat tag"
 #: app/assets/javascripts/app/controllers/_ui_element/core_workflow_perform.coffee:169
 msgid "add option"
 msgstr "přidat možnost"
-
-#: db/seeds/settings.rb:11
-msgid "admin"
-msgstr "správce"
 
 #: app/assets/javascripts/app/controllers/_ui_element/_application_selector.coffee:25
 #: app/assets/javascripts/app/controllers/_ui_element/core_workflow_condition.coffee:67
@@ -24538,9 +24569,15 @@ msgstr "sestupně"
 msgid "detailed search"
 msgstr "Rozšířené hledání"
 
-#: db/seeds/settings.rb:1203
+#: db/seeds/settings.rb:1206
 msgid "developer password"
 msgstr "heslo vývojáře"
+
+#: db/seeds/settings.rb:1103
+#, fuzzy
+#| msgid "Disable"
+msgid "disabled"
+msgstr "Deaktivovat"
 
 #: app/assets/javascripts/app/views/customer_chat/chat_window.jst.eco:13
 msgid "disconnect"
@@ -24781,7 +24818,7 @@ msgstr "Hodin"
 msgid "hours"
 msgstr "hodin(y)"
 
-#: db/seeds/settings.rb:2068
+#: db/seeds/settings.rb:2071
 #, fuzzy
 #| msgid "support@example.com"
 msgid "https://example.com"
@@ -24801,11 +24838,11 @@ msgstr ""
 msgid "i-doit"
 msgstr "i-doit"
 
-#: db/seeds/settings.rb:5017
+#: db/seeds/settings.rb:5020
 msgid "i-doit config"
 msgstr "Konfigurace i-doit"
 
-#: db/seeds/settings.rb:4990
+#: db/seeds/settings.rb:4993
 msgid "i-doit integration"
 msgstr "Integrace i-doit"
 
@@ -24902,7 +24939,7 @@ msgstr "neaktivní"
 msgid "internal"
 msgstr "interní"
 
-#: db/seeds/settings.rb:1187
+#: db/seeds/settings.rb:1190
 msgid "internal database"
 msgstr "interní databáze"
 
@@ -25016,7 +25053,7 @@ msgid "is not included in the list"
 msgstr "není zahrnuto v seznamu"
 
 #: app/assets/javascripts/app/controllers/maintenance.coffee:84
-#: app/assets/javascripts/app/models/_application_model.coffee:63
+#: app/assets/javascripts/app/models/_application_model.coffee:65
 msgid "is required"
 msgstr "je povinné"
 
@@ -25081,7 +25118,7 @@ msgstr "změněno na"
 msgid "just now"
 msgstr "právě teď"
 
-#: db/seeds/settings.rb:2338
+#: db/seeds/settings.rb:2341
 msgid "left"
 msgstr "vlevo"
 
@@ -25292,7 +25329,7 @@ msgstr ""
 #: app/assets/javascripts/app/views/microsoft_graph/list.jst.eco:106
 #: app/assets/javascripts/app/views/profile/token_access.jst.eco:27
 #: app/assets/javascripts/app/views/widget/ticket_stats_list.jst.eco:7
-#: db/seeds/settings.rb:2340
+#: db/seeds/settings.rb:2343
 msgid "none"
 msgstr "žádné"
 
@@ -25475,7 +25512,7 @@ msgstr "odpovědět všem"
 msgid "required"
 msgstr "vyžadován"
 
-#: db/seeds/settings.rb:2339
+#: db/seeds/settings.rb:2342
 msgid "right"
 msgstr "vpravo"
 
@@ -25572,19 +25609,19 @@ msgstr "zobrazit další"
 msgid "shown"
 msgstr "zobrazeno"
 
-#: db/seeds/settings.rb:5169
+#: db/seeds/settings.rb:5172
 msgid "sipgate.io Token"
 msgstr "Token sipgate.io"
 
-#: db/seeds/settings.rb:5203
+#: db/seeds/settings.rb:5206
 msgid "sipgate.io alternative FQDN"
 msgstr "Alternativní FQDN sipgate.io"
 
-#: db/seeds/settings.rb:5190
+#: db/seeds/settings.rb:5193
 msgid "sipgate.io config"
 msgstr "Konfigurace sipgate.io"
 
-#: db/seeds/settings.rb:5141
+#: db/seeds/settings.rb:5144
 msgid "sipgate.io integration"
 msgstr "Integrace sipgate.io"
 
@@ -25672,14 +25709,6 @@ msgstr "tiket"
 #: app/assets/javascripts/app/controllers/_application_controller/_modal_generic_history.coffee:117
 msgid "ticket %s was merged into this ticket"
 msgstr "tiket %s byl sloučen do tohoto tiketu"
-
-#: db/seeds/settings.rb:1128
-msgid "ticket.agent"
-msgstr "ticket.agent"
-
-#: db/seeds/settings.rb:1136
-msgid "ticket.customer"
-msgstr "ticket.customer"
 
 #: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:487
 #: app/assets/javascripts/app/controllers/_ui_element/_application_selector.coffee:25
@@ -25886,6 +25915,15 @@ msgstr "...celé textové oblasti"
 #: app/assets/javascripts/app/views/dashboard/stats/ticket_waiting_time.jst.eco:3
 msgid "∅ Waiting time today"
 msgstr "dnešní ∅ čekací doby"
+
+#~ msgid "admin"
+#~ msgstr "správce"
+
+#~ msgid "ticket.agent"
+#~ msgstr "ticket.agent"
+
+#~ msgid "ticket.customer"
+#~ msgstr "ticket.customer"
 
 #~ msgid "This setting is not disabled."
 #~ msgstr "Toto nastavení není zakázáno."

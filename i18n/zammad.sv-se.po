@@ -849,7 +849,7 @@ msgstr "1 år sedan"
 msgid "2 hours"
 msgstr "2 timmar"
 
-#: db/seeds/settings.rb:2157
+#: db/seeds/settings.rb:2160
 msgid "2 lower case and 2 upper case characters"
 msgstr "2 små och 2 stora bokstäver"
 
@@ -926,7 +926,7 @@ msgstr ""
 "post, t.ex. när en agent skriver ett e-postmeddelande eller en trigger "
 "skickar ett autosvar"
 
-#: db/seeds/settings.rb:4013
+#: db/seeds/settings.rb:4016
 msgid "A list of active import backends that gets scheduled automatically."
 msgstr "En lista med aktiva import-backendar som körs automatiskt."
 
@@ -1023,7 +1023,7 @@ msgstr "AI Agenter"
 msgid "AI Provider"
 msgstr "AI-leverantör"
 
-#: db/seeds/settings.rb:6062
+#: db/seeds/settings.rb:6065
 msgid "AI Provider Config"
 msgstr "Konfigurering av AI-leverantör"
 
@@ -1090,7 +1090,7 @@ msgstr "Textverktyget för AI-assistans är ogiltigt."
 msgid "AI error log"
 msgstr "AI fellogg"
 
-#: db/seeds/settings.rb:6048
+#: db/seeds/settings.rb:6051
 msgid "AI provider"
 msgstr "AI-leverantör"
 
@@ -1163,7 +1163,7 @@ msgstr "API"
 msgid "API Key"
 msgstr "API-nyckel"
 
-#: db/seeds/settings.rb:3526
+#: db/seeds/settings.rb:3529
 msgid "API Password Access"
 msgstr "API-lösenordsåtkomst"
 
@@ -1171,7 +1171,7 @@ msgstr "API-lösenordsåtkomst"
 msgid "API Token"
 msgstr "API-token"
 
-#: db/seeds/settings.rb:3501
+#: db/seeds/settings.rb:3504
 msgid "API Token Access"
 msgstr "API-tokenåtkomst"
 
@@ -1390,7 +1390,7 @@ msgstr "Åtgärdsmenyknapp för säkerhetsnycklar"
 msgid "Actions"
 msgstr "Åtgärder"
 
-#: db/seeds/settings.rb:2852
+#: db/seeds/settings.rb:2855
 msgid "Activate the recursive processing of ticket triggers."
 msgstr "Aktivera rekursiv hantering av ärendetriggrar."
 
@@ -1709,7 +1709,7 @@ msgstr "Lägg till oordnad lista"
 msgid "Additional Channels"
 msgstr "Ytterligare kanaler"
 
-#: db/seeds/settings.rb:3334
+#: db/seeds/settings.rb:3337
 msgid "Additional follow-up detection"
 msgstr "Ytterligare uppföljningsdetektering"
 
@@ -1758,7 +1758,7 @@ msgstr "Admin-lösenord"
 msgid "Admin documentation"
 msgstr "Dokumentation för administratörer"
 
-#: db/seeds/permissions.rb:5
+#: db/seeds/permissions.rb:5 db/seeds/settings.rb:1120
 msgid "Admin interface"
 msgstr "Administratörsgränssnitt"
 
@@ -1865,11 +1865,11 @@ msgstr "Ålder"
 msgid "Agent"
 msgstr "Agent"
 
-#: db/seeds/settings.rb:3247
+#: db/seeds/settings.rb:3250
 msgid "Agent Name"
 msgstr "Handläggarnamn"
 
-#: db/seeds/settings.rb:3247
+#: db/seeds/settings.rb:3250
 msgid "Agent Name + FromSeparator + System Address Display Name"
 msgstr "Handläggarnamn + Frånavskiljare + Systemadressanvändarnamn"
 
@@ -1877,7 +1877,7 @@ msgstr "Handläggarnamn + Frånavskiljare + Systemadressanvändarnamn"
 msgid "Agent chat"
 msgstr "Agentchatt"
 
-#: db/seeds/settings.rb:3601
+#: db/seeds/settings.rb:3604
 msgid "Agent idle timeout"
 msgstr "Timeout för inaktiv agent"
 
@@ -1889,7 +1889,7 @@ msgstr "Handläggarbegränsning uppnådd, kontrollera dina kontoinställningar."
 msgid "Agent phone"
 msgstr "Agenttelefon"
 
-#: db/seeds/permissions.rb:408
+#: db/seeds/permissions.rb:408 db/seeds/settings.rb:1129
 msgid "Agent tickets"
 msgstr "Agentärenden"
 
@@ -1986,7 +1986,7 @@ msgstr ""
 msgid "Allow AI Agent to select multiple categories from all possible values."
 msgstr "Låt AI Agent välja flera kategorier från alla möjliga värden."
 
-#: db/seeds/settings.rb:6033
+#: db/seeds/settings.rb:6036
 msgid ""
 "Allow admins to manage availability and access to the desktop BETA UI switch."
 msgstr ""
@@ -2021,15 +2021,15 @@ msgstr "Tillåt återöppnande av ärende inom en viss tidsgräns."
 msgid "Allow users to add new tags."
 msgstr "Tillåt användare att skapa nya taggar."
 
-#: db/seeds/settings.rb:4178
+#: db/seeds/settings.rb:4181
 msgid "Allow users to create new tags."
 msgstr "Tillåt användare att skapa nya taggar."
 
-#: db/seeds/settings.rb:6024
+#: db/seeds/settings.rb:6027
 msgid "Allow users to switch automatically to the new desktop UI."
 msgstr "Låt användare växla automatiskt till det nya skrivbordsgränssnittet."
 
-#: db/seeds/settings.rb:1160
+#: db/seeds/settings.rb:1163
 msgid "Allow using one email address for multiple users."
 msgstr "Tillåt att använda samma e-postadress för flera användare."
 
@@ -2042,7 +2042,7 @@ msgstr "Tillåtna webbplatser (separera med semikolon \";\")"
 msgid "Also notify via email"
 msgstr "Notifiera även via e-post"
 
-#: db/seeds/settings.rb:5206
+#: db/seeds/settings.rb:5209
 msgid ""
 "Alternative FQDN for callbacks if you operate Zammad in an internal network."
 msgstr ""
@@ -2198,15 +2198,15 @@ msgstr ""
 "Vi ber om ursäkt, men vi kan inte behandla den här typen av meddelande på "
 "grund av begränsningar i WhatsApp Business."
 
-#: db/seeds/settings.rb:1424
+#: db/seeds/settings.rb:1427
 msgid "App ID"
 msgstr "App ID"
 
-#: db/seeds/settings.rb:1430
+#: db/seeds/settings.rb:1433
 msgid "App Secret"
 msgstr "Apphemlighet"
 
-#: db/seeds/settings.rb:1769
+#: db/seeds/settings.rb:1772
 msgid "App Tenant ID"
 msgstr "App Tenant ID"
 
@@ -2222,11 +2222,11 @@ msgstr "App-version"
 msgid "App could not be verified."
 msgstr "Kontot kunde inte verifieras."
 
-#: db/seeds/settings.rb:1420
+#: db/seeds/settings.rb:1423
 msgid "App credentials for Facebook."
 msgstr "App-inloggningsuppgifter för Facebook."
 
-#: db/seeds/settings.rb:1355
+#: db/seeds/settings.rb:1358
 msgid "App credentials for Twitter."
 msgstr "App-inloggningsuppgifter för Twitter."
 
@@ -2542,7 +2542,7 @@ msgstr "Uppdragstagare"
 msgid "Assignment Timeout"
 msgstr "Uppdragets Timeout"
 
-#: app/assets/javascripts/app/models/_application_model.coffee:164
+#: app/assets/javascripts/app/models/_application_model.coffee:166
 #: app/assets/javascripts/app/models/group.coffee:8
 msgid "Assignment timeout"
 msgstr "Tilldelningens timeout"
@@ -2599,7 +2599,7 @@ msgstr "Bifogade filer"
 msgid "Attachment"
 msgstr "Bifogad fil"
 
-#: db/seeds/settings.rb:3348
+#: db/seeds/settings.rb:3351
 msgid "Attachment - Search for follow-up also in attachments."
 msgstr "Bilagor - Sök också efter uppföljning i bilagor."
 
@@ -2663,7 +2663,7 @@ msgstr "Attribut"
 msgid "Attribute '%s' is required in the mapping"
 msgstr "Attributet '%s' krävs i mappningen"
 
-#: db/seeds/settings.rb:1943
+#: db/seeds/settings.rb:1946
 msgid ""
 "Attribute that uniquely identifies the user. If unset, the name identifier "
 "returned by the IDP is used."
@@ -2678,7 +2678,7 @@ msgid "Attributes"
 msgstr "Attribut"
 
 #: app/assets/javascripts/app/controllers/_manage/ticket_duplicate_detection.coffee:32
-#: db/seeds/settings.rb:2703
+#: db/seeds/settings.rb:2706
 msgid "Attributes to compare"
 msgstr "Attribut att jämföra"
 
@@ -2733,13 +2733,13 @@ msgstr "Autentisering är inte möjlig (erbjuds inte av tjänsten)"
 msgid "Authentication required"
 msgstr "Autentisering krävs"
 
-#: db/seeds/settings.rb:1182
+#: db/seeds/settings.rb:1185
 msgid "Authentication via %s"
 msgstr "Autentisering via %s"
 
 #: app/assets/javascripts/app/controllers/widget/two_factor_configuration/modal/authenticator_app.coffee:4
 #: app/assets/javascripts/app/lib/app_post/two_factor_methods/authenticator_app.coffee:5
-#: db/seeds/settings.rb:5871
+#: db/seeds/settings.rb:5874
 msgid "Authenticator App"
 msgstr "Authenticator App"
 
@@ -2776,19 +2776,19 @@ msgstr "Authy"
 
 #: app/assets/javascripts/app/controllers/_manage/ticket.coffee:11
 #: app/assets/javascripts/app/views/settings/ticket_auto_assignment.jst.eco:7
-#: db/seeds/settings.rb:2549
+#: db/seeds/settings.rb:2552
 msgid "Auto Assignment"
 msgstr "Automatisk Tilldelning"
 
-#: db/seeds/settings.rb:2592
+#: db/seeds/settings.rb:2595
 msgid "Auto Assignment Ignored Users"
 msgstr "Automatisk Tilldelning Ignorerade Användare"
 
-#: db/seeds/settings.rb:2575
+#: db/seeds/settings.rb:2578
 msgid "Auto Assignment Selector"
 msgstr "Automatisk Tilldelningväljare"
 
-#: db/seeds/settings.rb:6010
+#: db/seeds/settings.rb:6013
 msgid "Auto Shutdown"
 msgstr "Automatisk avstängning"
 
@@ -2796,7 +2796,7 @@ msgstr "Automatisk avstängning"
 msgid "Auto Wizard"
 msgstr "Automatisk assistent"
 
-#: db/seeds/settings.rb:4529
+#: db/seeds/settings.rb:4532
 msgid "Auto close"
 msgstr "Automatisk stängning"
 
@@ -2804,7 +2804,7 @@ msgstr "Automatisk stängning"
 msgid "Auto create"
 msgstr "Skapa automatiskt"
 
-#: db/seeds/settings.rb:4555
+#: db/seeds/settings.rb:4558
 msgid "Auto-close state"
 msgstr "Auto-stängd status"
 
@@ -2818,11 +2818,11 @@ msgstr "Automatisk assistent är inaktiverad"
 msgid "Automated setup"
 msgstr "Automatiserad konfiguration"
 
-#: db/seeds/settings.rb:1245
+#: db/seeds/settings.rb:1248
 msgid "Automatic account link on initial logon"
 msgstr "Automatisk kontolänkning vid första inloggning"
 
-#: db/seeds/settings.rb:1271
+#: db/seeds/settings.rb:1274
 msgid "Automatic account linking notification"
 msgstr "Automatisk kontolänkningsnotifiering"
 
@@ -2846,11 +2846,11 @@ msgstr ""
 "Laddar automatiskt chat.css filen. Om du vill använda din egen css, sätt den "
 "till false."
 
-#: app/frontend/shared/components/Form/Form.vue:1311
+#: app/frontend/shared/components/Form/Form.vue:1294
 msgid "Autosave in progress…"
 msgstr "Autosparning pågår…"
 
-#: app/frontend/shared/components/Form/Form.vue:1320
+#: app/frontend/shared/components/Form/Form.vue:1303
 msgid "Autosaving is taking longer than expected…"
 msgstr "Autosparandet tar längre tid än väntat…"
 
@@ -2925,7 +2925,7 @@ msgstr "Genomsnitt: %s%"
 msgid "Azure AI"
 msgstr "Azure AI"
 
-#: db/seeds/settings.rb:3490
+#: db/seeds/settings.rb:3493
 msgid "BCC address for all outgoing emails"
 msgstr "Hemlig kopia-adress för all utgående e-post"
 
@@ -3067,7 +3067,7 @@ msgstr "Bind Lösenord"
 msgid "Bind User"
 msgstr "Bind Användare"
 
-#: db/seeds/settings.rb:3467
+#: db/seeds/settings.rb:3470
 msgid "Block Notifications"
 msgstr "Blockera notifieringar"
 
@@ -3101,7 +3101,7 @@ msgstr "Blå"
 msgid "Body"
 msgstr "Body"
 
-#: db/seeds/settings.rb:3347
+#: db/seeds/settings.rb:3350
 msgid "Body - Search for follow-up also in mail body."
 msgstr "Body - Sök för uppföljning även i mailtexten."
 
@@ -3160,7 +3160,7 @@ msgstr "Öppettider"
 msgid "But it's only available in these languages:"
 msgstr "Det är endast tillgängligt på följande språk:"
 
-#: db/seeds/settings.rb:3337
+#: db/seeds/settings.rb:3340
 msgid ""
 "By default, the follow-up check is done via the subject of an email. This "
 "setting lets you add more fields for which the follow-up check will be "
@@ -3237,19 +3237,19 @@ msgstr "CTI"
 msgid "CTI (generic)"
 msgstr "CTI (generisk)"
 
-#: db/seeds/settings.rb:5265
+#: db/seeds/settings.rb:5268
 msgid "CTI Token"
 msgstr "CTI-token"
 
-#: db/seeds/settings.rb:5252
+#: db/seeds/settings.rb:5255
 msgid "CTI config"
 msgstr "CTI-konfiguration"
 
-#: db/seeds/settings.rb:5286
+#: db/seeds/settings.rb:5289
 msgid "CTI customer last activity"
 msgstr "CTI senaste kundaktivitet"
 
-#: db/seeds/settings.rb:5224
+#: db/seeds/settings.rb:5227
 msgid "CTI integration"
 msgstr "CTI-integration"
 
@@ -3467,7 +3467,7 @@ msgstr "Layout för kategorisidan"
 msgid "Caution!"
 msgstr "Varning!"
 
-#: db/seeds/settings.rb:1969
+#: db/seeds/settings.rb:1972
 msgid "Certificate (PEM)"
 msgstr "Certifikat (PEM)"
 
@@ -3715,7 +3715,7 @@ msgstr ""
 
 #: app/assets/javascripts/app/controllers/checklist_template.coffee:3
 #: app/assets/javascripts/app/views/checklist_template/index.jst.eco:7
-#: db/seeds/permissions.rb:335 db/seeds/settings.rb:5983
+#: db/seeds/permissions.rb:335 db/seeds/settings.rb:5986
 msgid "Checklists"
 msgstr "Checklistor"
 
@@ -3723,15 +3723,15 @@ msgstr "Checklistor"
 msgid "Checkmk"
 msgstr "Checkmk"
 
-#: db/seeds/settings.rb:4676
+#: db/seeds/settings.rb:4679
 msgid "Checkmk integration"
 msgstr "Checkmk-integration"
 
-#: db/seeds/settings.rb:4797
+#: db/seeds/settings.rb:4800
 msgid "Checkmk token"
 msgstr "Checkmk-token"
 
-#: db/seeds/settings.rb:2470
+#: db/seeds/settings.rb:2473
 msgid "Checksum"
 msgstr "Checksum"
 
@@ -3917,11 +3917,11 @@ msgstr "Rensa värdet"
 msgid "Clearbit"
 msgstr "Clearbit"
 
-#: db/seeds/settings.rb:5388
+#: db/seeds/settings.rb:5391
 msgid "Clearbit config"
 msgstr "Clearbit-konfiguration"
 
-#: db/seeds/settings.rb:5362
+#: db/seeds/settings.rb:5365
 msgid "Clearbit integration"
 msgstr "Clearbit-integration"
 
@@ -3942,14 +3942,14 @@ msgstr "Klicka för att redigera …"
 #: app/assets/javascripts/app/views/integration/idoit.jst.eco:21
 #: app/assets/javascripts/app/views/microsoft365/app_config.jst.eco:9
 #: app/assets/javascripts/app/views/microsoft_graph/app_config.jst.eco:9
-#: db/seeds/settings.rb:1489
+#: db/seeds/settings.rb:1492
 msgid "Client ID"
 msgstr "Klient-id"
 
 #: app/assets/javascripts/app/views/exchange/app_config.jst.eco:17
 #: app/assets/javascripts/app/views/microsoft365/app_config.jst.eco:17
 #: app/assets/javascripts/app/views/microsoft_graph/app_config.jst.eco:17
-#: db/seeds/settings.rb:1495
+#: db/seeds/settings.rb:1498
 msgid "Client Secret"
 msgstr "Klient Secret"
 
@@ -4009,14 +4009,14 @@ msgstr "Stäng sidopanelen"
 #: app/assets/javascripts/app/models/macro.coffee:9
 #: app/assets/javascripts/app/views/ticket_zoom/attribute_bar.jst.eco:41
 #: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/TicketScreenBehavior/behaviorOptions.ts:12
-#: db/seeds/settings.rb:3022
+#: db/seeds/settings.rb:3025
 msgid "Close tab"
 msgstr "Stäng flik"
 
 #: app/assets/javascripts/app/models/macro.coffee:9
 #: app/assets/javascripts/app/views/ticket_zoom/attribute_bar.jst.eco:46
 #: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/TicketScreenBehavior/behaviorOptions.ts:16
-#: db/seeds/settings.rb:3023
+#: db/seeds/settings.rb:3026
 msgid "Close tab on ticket close"
 msgstr "Stäng flik när ärendet stängs"
 
@@ -4109,7 +4109,7 @@ msgstr ""
 
 #: app/assets/javascripts/app/lib/app_post/two_factor_methods/security_keys.coffee:6
 #: app/frontend/shared/entities/two-factor/plugins/security-keys.ts:10
-#: db/seeds/settings.rb:5863
+#: db/seeds/settings.rb:5866
 msgid "Complete the sign-in with your security key."
 msgstr "Slutför inloggningen med din säkerhetsnyckel."
 
@@ -4417,7 +4417,7 @@ msgstr "Gå till mobilversion"
 msgid "Contributing Translations"
 msgstr "Bidra till översättningar"
 
-#: app/assets/javascripts/app/controllers/_ai/ticket_summary.coffee:75
+#: app/assets/javascripts/app/controllers/_ai/ticket_summary.coffee:76
 #: app/assets/javascripts/app/controllers/ticket_zoom/sidebar_ticket_summary.coffee:4
 msgid "Conversation Summary"
 msgstr "Summering av konversation"
@@ -5055,12 +5055,12 @@ msgstr "Kund"
 msgid "Customer Chat"
 msgstr "Kundchat"
 
-#: app/assets/javascripts/app/controllers/_ai/ticket_summary.coffee:68
+#: app/assets/javascripts/app/controllers/_ai/ticket_summary.coffee:69
 #: app/assets/javascripts/app/controllers/ticket_zoom/sidebar_ticket_summary.coffee:3
 msgid "Customer Intent"
 msgstr "Kundavsikt"
 
-#: app/assets/javascripts/app/controllers/_ai/ticket_summary.coffee:94
+#: app/assets/javascripts/app/controllers/_ai/ticket_summary.coffee:95
 #: app/assets/javascripts/app/controllers/ticket_zoom/sidebar_ticket_summary.coffee:7
 msgid "Customer Sentiment"
 msgstr "Känsla hos kunderna"
@@ -5073,7 +5073,7 @@ msgstr "Andel kunder och agenter (rollbaserad räkning av användare)"
 msgid "Customer intent"
 msgstr "Kundavsikt"
 
-#: db/seeds/settings.rb:3391
+#: db/seeds/settings.rb:3394
 msgid "Customer selection based on sender and receiver list"
 msgstr "Kundval baserat på avsändare och mottagare lista"
 
@@ -5081,7 +5081,7 @@ msgstr "Kundval baserat på avsändare och mottagare lista"
 msgid "Customer sentiment"
 msgstr "Känsla hos kunderna"
 
-#: db/seeds/permissions.rb:417
+#: db/seeds/permissions.rb:417 db/seeds/settings.rb:1138
 msgid "Customer tickets"
 msgstr "Kundärenden"
 
@@ -5167,7 +5167,7 @@ msgstr "Datum"
 msgid "Date & time field"
 msgstr "Datum och tidsfält"
 
-#: db/seeds/settings.rb:2449
+#: db/seeds/settings.rb:2452
 msgid "Date (Year.Month.Day.SystemID.Counter)"
 msgstr "Datum (År.Månad.Dag.SystemID.Räknare)"
 
@@ -5256,11 +5256,11 @@ msgstr "Standardbeteende"
 msgid "Default Notifications"
 msgstr "Standardnotifikationer"
 
-#: db/seeds/settings.rb:3623
+#: db/seeds/settings.rb:3626
 msgid "Default Screen"
 msgstr "Standardskärm"
 
-#: db/seeds/settings.rb:2610
+#: db/seeds/settings.rb:2613
 msgid "Default Ticket Agent Notifications"
 msgstr "Standard Ärende Agent Notifieringar"
 
@@ -5268,7 +5268,7 @@ msgstr "Standard Ärende Agent Notifieringar"
 msgid "Default at Signup"
 msgstr "Standard vid registering"
 
-#: db/seeds/settings.rb:4202
+#: db/seeds/settings.rb:4205
 msgid "Default calendar tickets subscriptions"
 msgstr "Standardkalender för ärendeprenumeration"
 
@@ -5304,7 +5304,7 @@ msgid "Default value is required."
 msgstr "Standardvärdet är obligatoriskt."
 
 #: app/assets/javascripts/app/views/settings/ticket_auto_assignment.jst.eco:15
-#: db/seeds/settings.rb:2595
+#: db/seeds/settings.rb:2598
 msgid ""
 "Define an exception of \"automatic assignment\" for certain users (e.g. "
 "executives)."
@@ -5312,27 +5312,27 @@ msgstr ""
 "Definiera ett undantag för \"automatisk tilldelning\" för vissa användare (t "
 "ex chefer)."
 
-#: db/seeds/settings.rb:3726
+#: db/seeds/settings.rb:3729
 msgid "Define if asciifolding analyzer should be used in Elasticsearch."
 msgstr "Definiera om asciifolding analyzer ska användas i Elasticsearch."
 
-#: db/seeds/settings.rb:3690
+#: db/seeds/settings.rb:3693
 msgid "Define max. attachment size for Elasticsearch."
 msgstr "Definiera maximal storlek på bilagor för Elasticsearch."
 
-#: db/seeds/settings.rb:3699
+#: db/seeds/settings.rb:3702
 msgid "Define max. payload size for Elasticsearch."
 msgstr "Definiera maximal payload storlek för Elasticsearch."
 
-#: db/seeds/settings.rb:3717
+#: db/seeds/settings.rb:3720
 msgid "Define model configuration for Elasticsearch."
 msgstr "Definiera modellkonfiguration för Elasticsearch."
 
-#: db/seeds/settings.rb:3708
+#: db/seeds/settings.rb:3711
 msgid "Define pipeline name for Elasticsearch."
 msgstr "Definiera pipelinenamn för Elasticsearch."
 
-#: db/seeds/settings.rb:4348
+#: db/seeds/settings.rb:4351
 msgid ""
 "Define postmaster filter to check if follow-ups get created (based on admin "
 "settings)."
@@ -5340,11 +5340,11 @@ msgstr ""
 "Definiera postmaster-filter för att kontrollera om uppföljningar skapas "
 "(baserat på administratörens inställningar)."
 
-#: db/seeds/settings.rb:4285
+#: db/seeds/settings.rb:4288
 msgid "Define postmaster filter to import archive mailboxes."
 msgstr "Definiera postmaster-filter för att importera arkivbrevlådor."
 
-#: db/seeds/settings.rb:4282
+#: db/seeds/settings.rb:4285
 msgid "Define postmaster filter."
 msgstr "Definiera postmaster-filter."
 
@@ -5359,7 +5359,7 @@ msgstr ""
 "Zammad stödja dina agenter genom att visa dem endast relevanta samtalsinlägg "
 "och notiser."
 
-#: db/seeds/settings.rb:2613
+#: db/seeds/settings.rb:2616
 msgid "Define the default agent notifications for new users."
 msgstr "Definiera standard agent notifieringar för nya användare."
 
@@ -5367,27 +5367,27 @@ msgstr "Definiera standard agent notifieringar för nya användare."
 msgid "Define the maximum number of ticket shown in overviews."
 msgstr "Definiera det maximala antalet ärenden som visas i översikterna."
 
-#: db/seeds/settings.rb:3672
+#: db/seeds/settings.rb:3675
 msgid "Defines Elasticsearch SSL verification."
 msgstr "Definierar Elasticsearch SSL verifikation."
 
-#: db/seeds/settings.rb:3663
+#: db/seeds/settings.rb:3666
 msgid "Defines Elasticsearch index name."
 msgstr "Definierar Elasticsearch indexnamn."
 
-#: db/seeds/settings.rb:3939
+#: db/seeds/settings.rb:3942
 msgid "Defines Freshdesk endpoint authentication API key."
 msgstr "Definierar Freshdesk endpoint autentisering API-nyckel."
 
-#: db/seeds/settings.rb:3654
+#: db/seeds/settings.rb:3657
 msgid "Defines HTTP basic auth password of Elasticsearch."
 msgstr "Definierar HTTP Basic Auth-lösenordet för Elasticsearch."
 
-#: db/seeds/settings.rb:3645
+#: db/seeds/settings.rb:3648
 msgid "Defines HTTP basic auth user of Elasticsearch."
 msgstr "Definierar HTTP Basic Auth-användare för Elasticsearch."
 
-#: db/seeds/settings.rb:3846
+#: db/seeds/settings.rb:3849
 msgid ""
 "Defines HTTP basic authentication password (only if OTRS is protected via "
 "HTTP basic auth)."
@@ -5395,7 +5395,7 @@ msgstr ""
 "Definierar HTTP basic autentisering (endast om OTRS skyddas via HTTP basic "
 "autentisering)."
 
-#: db/seeds/settings.rb:3827
+#: db/seeds/settings.rb:3830
 msgid ""
 "Defines HTTP basic authentication user (only if OTRS is protected via HTTP "
 "basic auth)."
@@ -5403,52 +5403,52 @@ msgstr ""
 "Definierar HTTP basic autentisering användare (endast om OTRS skyddas via "
 "HTTP basic autentisering)."
 
-#: db/seeds/settings.rb:3994
+#: db/seeds/settings.rb:3997
 msgid "Defines Kayako endpoint authentication password."
 msgstr "Definierar Kayako endpoint autentiseringslösenord."
 
-#: db/seeds/settings.rb:3976
+#: db/seeds/settings.rb:3979
 msgid "Defines Kayako endpoint authentication user."
 msgstr "Definierar Kayako endpoint autentisering användare."
 
-#: db/seeds/settings.rb:3808
+#: db/seeds/settings.rb:3811
 msgid "Defines OTRS endpoint authentication key."
 msgstr "Definierar OTRS endpoint autentiseringsnyckel."
 
-#: db/seeds/settings.rb:3883
+#: db/seeds/settings.rb:3886
 msgid "Defines Zendesk endpoint authentication API key."
 msgstr "Definierar Zendesk endpoint autentisering API-nyckel."
 
-#: db/seeds/settings.rb:3902
+#: db/seeds/settings.rb:3905
 msgid "Defines Zendesk endpoint authentication user."
 msgstr "Definierar Zendesk endpoint autentisering användare."
 
-#: db/seeds/settings.rb:3921
+#: db/seeds/settings.rb:3924
 msgid ""
 "Defines a Freshdesk endpoint to import users, tickets, states, and articles."
 msgstr ""
 "Definierar en Freshdesk endpoint för att importera användare, ärenden, "
 "status och artiklar."
 
-#: db/seeds/settings.rb:3958
+#: db/seeds/settings.rb:3961
 msgid ""
 "Defines a Kayako endpoint to import users, tickets, states, and articles."
 msgstr ""
 "Definierar ett Kayako endpoint för att importera användare, ärenden, status "
 "och artiklar."
 
-#: db/seeds/settings.rb:3865
+#: db/seeds/settings.rb:3868
 msgid ""
 "Defines a Zendesk endpoint to import users, tickets, states, and articles."
 msgstr ""
 "Definierar ett Zendesk endpoint för att importera användare, ärenden, status "
 "och artiklar."
 
-#: db/seeds/settings.rb:5466
+#: db/seeds/settings.rb:5469
 msgid "Defines a dashboard stats backend that gets scheduled automatically."
 msgstr "Definierar en dashboard stats backend som schemaläggs automatiskt."
 
-#: db/seeds/settings.rb:3120
+#: db/seeds/settings.rb:3123
 msgid ""
 "Defines a limit for how many tickets can be created via web form from one IP "
 "address per day."
@@ -5456,7 +5456,7 @@ msgstr ""
 "Definierar en gräns för hur många ärenden som kan skapas via webformulär "
 "från en IP-adress per dag."
 
-#: db/seeds/settings.rb:3099
+#: db/seeds/settings.rb:3102
 msgid ""
 "Defines a limit for how many tickets can be created via web form from one IP "
 "address per hour."
@@ -5464,18 +5464,18 @@ msgstr ""
 "Definierar en gräns för hur många ärenden som kan skapas via webformulär "
 "från en IP-adress per timme."
 
-#: db/seeds/settings.rb:3141
+#: db/seeds/settings.rb:3144
 msgid ""
 "Defines a limit for how many tickets can be created via web form per day."
 msgstr ""
 "Definierar en gräns för hur många ärenden som kan skapas via webformulär per "
 "dag."
 
-#: db/seeds/settings.rb:2238
+#: db/seeds/settings.rb:2241
 msgid "Defines after how many failed logins accounts will be deactivated."
 msgstr "Antal misslyckade inloggningar innan kontot inaktiveras."
 
-#: db/seeds/settings.rb:3790
+#: db/seeds/settings.rb:3793
 msgid ""
 "Defines an OTRS endpoint to import users, tickets, states, and articles."
 msgstr ""
@@ -5501,12 +5501,12 @@ msgstr ""
 "Definierar en valfri ikon för denna prioritet i ärendetabeller. Viktig visas "
 "med ett utropstecken, medan låg prioritet visas med en nedåtriktad pil."
 
-#: db/seeds/settings.rb:3681
+#: db/seeds/settings.rb:3684
 msgid "Defines attachment extensions which will be ignored by Elasticsearch."
 msgstr ""
 "Definierar bifogade filändelser som kommer att ignoreras av Elasticsearch."
 
-#: db/seeds/settings.rb:3636
+#: db/seeds/settings.rb:3639
 msgid "Defines endpoint of Elasticsearch."
 msgstr "Definierar endpoint för Elasticsearch."
 
@@ -5517,7 +5517,7 @@ msgid ""
 msgstr ""
 "Definierar global konfiguration när sammanfattningen ska genereras i ärendet."
 
-#: db/seeds/settings.rb:2988
+#: db/seeds/settings.rb:2991
 msgid ""
 "Defines groups for which a customer can create tickets via web interface. No "
 "selection means all groups are available."
@@ -5525,7 +5525,7 @@ msgstr ""
 "Lägg upp val för vilka grupper en kund kan skapa ärenden åt via "
 "webbgränssnittet. Inga val betyder att alla grupper är tillgängliga."
 
-#: db/seeds/settings.rb:3237
+#: db/seeds/settings.rb:3240
 msgid ""
 "Defines how the From field of emails (sent from answers and email tickets) "
 "should look like."
@@ -5533,37 +5533,41 @@ msgstr ""
 "Definierar hur Från-fältet för e-postmeddelanden (skickat från svar och e-"
 "postärenden) ska se ut."
 
-#: db/seeds/settings.rb:2357
+#: db/seeds/settings.rb:2360
 msgid ""
 "Defines how the last customer contact time of tickets should be calculated."
 msgstr "Definiera hur senaste tid för kundkontakt ska beräknas."
 
 #: db/seeds/settings.rb:313
+#, fuzzy
+#| msgid ""
+#| "Defines how to reach websocket server. \"websocket\" is default on "
+#| "production, \"websocketPort\" is for CI"
 msgid ""
-"Defines how to reach websocket server. \"websocket\" is default on "
-"production, \"websocketPort\" is for CI"
+"Defines how to reach WebSocket server. \"websocket\" is default on "
+"production, \"websocketPort\" is for CI."
 msgstr ""
 "Definierar hur man når websocket server. \"websocket\" är standard på "
 "produktion, \"WebsocketPort\" är för CI"
 
-#: db/seeds/settings.rb:4679
+#: db/seeds/settings.rb:4682
 msgid "Defines if Checkmk (https://checkmk.com/) is enabled or not."
 msgstr "Definierar om Checkmk (https://checkmk.com/) är aktiverad eller inte."
 
-#: db/seeds/settings.rb:5365
+#: db/seeds/settings.rb:5368
 msgid "Defines if Clearbit (http://www.clearbit.com) is enabled or not."
 msgstr ""
 "Definierar om Clearbit (http://www.clearbit.com) är aktiverat eller inte."
 
-#: db/seeds/settings.rb:4966
+#: db/seeds/settings.rb:4969
 msgid "Defines if Exchange is enabled or not."
 msgstr "Definierar om Exchange är aktiverat eller inte."
 
-#: db/seeds/settings.rb:4483
+#: db/seeds/settings.rb:4486
 msgid "Defines if Icinga (http://www.icinga.org) is enabled or not."
 msgstr "Definierar om Icinga (http://www.icinga.org) är aktiverat eller inte."
 
-#: db/seeds/settings.rb:5576
+#: db/seeds/settings.rb:5579
 msgid ""
 "Defines if Knowledge Base navbar button is enabled for users without "
 "Knowledge Base permission."
@@ -5571,37 +5575,37 @@ msgstr ""
 "Definierar om menyvalet för Kunskapsbanken är aktiverat för användare utan "
 "Kunskapsbank användarrättighet."
 
-#: db/seeds/settings.rb:5561
+#: db/seeds/settings.rb:5564
 msgid "Defines if Knowledge Base navbar button is enabled."
 msgstr "Definierar om menyvalet för Kunskapsbanken är aktiverat."
 
-#: db/seeds/settings.rb:4913
+#: db/seeds/settings.rb:4916
 msgid "Defines if LDAP is enabled or not."
 msgstr "Definierar om LDAP är aktiverat eller inte."
 
-#: db/seeds/settings.rb:4812
+#: db/seeds/settings.rb:4815
 msgid "Defines if Monit (https://mmonit.com/monit/) is enabled or not."
 msgstr ""
 "Definierar om Monit (https://mmonit.com/monit/) är aktiverat eller inte."
 
-#: db/seeds/settings.rb:4581
+#: db/seeds/settings.rb:4584
 msgid "Defines if Nagios (http://www.nagios.org) is enabled or not."
 msgstr "Definierar om Nagios (http://www.nagios.org) är aktiverat eller inte."
 
-#: db/seeds/settings.rb:5731
+#: db/seeds/settings.rb:5734
 msgid "Defines if PGP encryption is enabled or not."
 msgstr "Definierar om PGP kryptering är aktiverat eller inte."
 
-#: db/seeds/settings.rb:5302
+#: db/seeds/settings.rb:5305
 msgid "Defines if Placetel (http://www.placetel.de) is enabled or not."
 msgstr ""
 "Definierar om Placetel (http://www.placetel.de) är aktiverat eller inte."
 
-#: db/seeds/settings.rb:5689
+#: db/seeds/settings.rb:5692
 msgid "Defines if S/MIME encryption is enabled or not."
 msgstr "Definierar om S/MIME kryptering är aktiverat eller inte."
 
-#: db/seeds/settings.rb:2961
+#: db/seeds/settings.rb:2964
 msgid "Defines if a customer can create tickets via the web interface."
 msgstr "Definierar om en kund kan skapa ärenden via webbgränssnittet."
 
@@ -5613,7 +5617,7 @@ msgstr "Definierar om applikationen är i init läge."
 msgid "Defines if application is used as online service."
 msgstr "Definierar om applikationen är använd som online service."
 
-#: db/seeds/settings.rb:5814
+#: db/seeds/settings.rb:5817
 msgid ""
 "Defines if calendar weeks are shown in the picker of date/datetime fields to "
 "easily select the correct date."
@@ -5621,11 +5625,11 @@ msgstr ""
 "Definierar om veckonummer visas i datumväljaren för att enkelt kunna välja "
 "rätt datum."
 
-#: db/seeds/settings.rb:5227
+#: db/seeds/settings.rb:5230
 msgid "Defines if generic CTI integration is enabled or not."
 msgstr "Definierar om generic CTI är aktiverat eller inte."
 
-#: db/seeds/settings.rb:5906
+#: db/seeds/settings.rb:5909
 msgid ""
 "Defines if recovery codes can be used by users in the event they lose access "
 "to other two-factor authentication methods."
@@ -5633,30 +5637,30 @@ msgstr ""
 "Definierar om återställningskoder kan användas av användare om de förlorar "
 "tillgång till andra två-faktorautentiseringsmetoder."
 
-#: db/seeds/settings.rb:5144
+#: db/seeds/settings.rb:5147
 msgid "Defines if sipgate.io (http://www.sipgate.io) is enabled or not."
 msgstr ""
 "Definierar om sipgate.io (http://www.sipgate.io) är aktiverat eller inte."
 
-#: db/seeds/settings.rb:6051
+#: db/seeds/settings.rb:6054
 msgid "Defines if the AI provider is configured."
 msgstr "Definierar om AI-leverantören är konfigurerad."
 
-#: db/seeds/settings.rb:5075
+#: db/seeds/settings.rb:5078
 msgid ""
 "Defines if the GitHub (http://www.github.com) integration is enabled or not."
 msgstr ""
 "Definierar om GitHub (http://www.github.com) integration är aktiverat eller "
 "inte."
 
-#: db/seeds/settings.rb:5033
+#: db/seeds/settings.rb:5036
 msgid ""
 "Defines if the GitLab (http://www.gitlab.com) integration is enabled or not."
 msgstr ""
 "Definierar om GitLab (http://www.gitlab.com) integration är aktiverat eller "
 "inte."
 
-#: db/seeds/settings.rb:5773
+#: db/seeds/settings.rb:5776
 msgid "Defines if the PGP recipient alias configuration is enabled or not."
 msgstr ""
 "Definierar om PGP mottagare alias konfiguration är aktiverat eller inte."
@@ -5677,7 +5681,7 @@ msgstr ""
 "Definierar om applikationen är i utvecklingsläge (alla användare har samma "
 "lösenord och lösenordsåterställning kommer att fungera utan e-post utskick)."
 
-#: db/seeds/settings.rb:6142
+#: db/seeds/settings.rb:6145
 msgid ""
 "Defines if the bubble menu feature of the richtext editor is enabled. Note "
 "that this setting will be ignored if the writing assistant is turned on."
@@ -5686,7 +5690,7 @@ msgstr ""
 "Observera att den här inställningen ignoreras om skrivassistenten är "
 "aktiverad."
 
-#: db/seeds/settings.rb:5958
+#: db/seeds/settings.rb:5961
 msgid ""
 "Defines if the change of the primary organization of a user will update the "
 "100 most recent tickets for this user as well."
@@ -5695,9 +5699,13 @@ msgstr ""
 "uppdatera de senaste 100 ärenden för denna användare också."
 
 #: db/seeds/settings.rb:604
+#, fuzzy
+#| msgid ""
+#| "Defines if the core workflow communication should run over ajax instead "
+#| "of websockets."
 msgid ""
-"Defines if the core workflow communication should run over ajax instead of "
-"websockets."
+"Defines if the core workflow communication should run over AJAX instead of "
+"WebSocket."
 msgstr ""
 "Definierar om grundläggande arbetsflöden kommunikation ska köras över ajax "
 "istället över websockets."
@@ -5710,20 +5718,20 @@ msgstr ""
 "Definierar om e-post ska visas i resultatet av användare/organisation "
 "widgeten."
 
-#: db/seeds/settings.rb:4993
+#: db/seeds/settings.rb:4996
 msgid ""
 "Defines if the i-doit (https://www.i-doit.org/) integration is enabled or "
 "not."
 msgstr ""
 "Definierar om i-doit (https://www.i-doit.org/) är aktiverat eller inte."
 
-#: db/seeds/settings.rb:2384
+#: db/seeds/settings.rb:2387
 msgid ""
 "Defines if the ticket conditions editor supports complex logical expressions."
 msgstr ""
 "Definierar om redigeraren för ärendevillkor stöder komplexa logiska uttryck."
 
-#: db/seeds/settings.rb:2410
+#: db/seeds/settings.rb:2413
 msgid ""
 "Defines if the ticket conditions editor supports regular expression "
 "operators for triggers and ticket auto assignment."
@@ -5731,11 +5739,11 @@ msgstr ""
 "Definierar om redigeraren för villkor stödjer reguljära uttryck operatörer "
 "för trigger och automatisk ärendetilldelning."
 
-#: db/seeds/settings.rb:4142
+#: db/seeds/settings.rb:4145
 msgid "Defines if the time accounting types are enabled."
 msgstr "Definierar om tidsredovisningstyper är aktiverade."
 
-#: db/seeds/settings.rb:5874
+#: db/seeds/settings.rb:5877
 msgid ""
 "Defines if the two-factor authentication method authenticator app is enabled "
 "or not."
@@ -5743,7 +5751,7 @@ msgstr ""
 "Definierar om två-faktorautentisering via säkerhetskoder är aktiverat eller "
 "inte."
 
-#: db/seeds/settings.rb:5842
+#: db/seeds/settings.rb:5845
 msgid ""
 "Defines if the two-factor authentication method security keys is enabled or "
 "not."
@@ -5751,20 +5759,20 @@ msgstr ""
 "Definierar om tvåfaktorsautentisering via säkerhetskoder är aktiverad eller "
 "inte."
 
-#: db/seeds/settings.rb:3042
+#: db/seeds/settings.rb:3045
 msgid "Defines if tickets can be created via web form."
 msgstr "Definierar om ärenden kan skapas via web formulär."
 
-#: db/seeds/settings.rb:4532
+#: db/seeds/settings.rb:4535
 msgid "Defines if tickets should be closed if service is recovered."
 msgstr "Definierar om ärenden ska stängas om tjänsten återställs."
 
-#: db/seeds/settings.rb:4384
+#: db/seeds/settings.rb:4387
 msgid "Defines postmaster filter for filters managed via admin interface."
 msgstr ""
 "Definierar postmaster filter för filter som hanteras via admingränssnittet."
 
-#: db/seeds/settings.rb:4294
+#: db/seeds/settings.rb:4297
 msgid ""
 "Defines postmaster filter to check if email has been created by Zammad "
 "itself and will set the article sender."
@@ -5772,7 +5780,7 @@ msgstr ""
 "Definierar postmaster filter för att kontrollera om e-post har skapats av "
 "Zammad och kommer att sätta artikelskaparen."
 
-#: db/seeds/settings.rb:4303
+#: db/seeds/settings.rb:4306
 msgid ""
 "Defines postmaster filter to check if the email is a self-created "
 "notification email, then ignore it to prevent email loops."
@@ -5780,18 +5788,18 @@ msgstr ""
 "Definierar postmaster filter för att kontrollera om e-post är ett "
 "självskapat notifieringsmail, och ignorerar det för att förhindra loopar."
 
-#: db/seeds/settings.rb:4330
+#: db/seeds/settings.rb:4333
 msgid "Defines postmaster filter to handle secure mailing."
 msgstr "Definierar postmaster filer för att hantera säker e-post."
 
-#: db/seeds/settings.rb:4447
+#: db/seeds/settings.rb:4450
 msgid ""
 "Defines postmaster filter to identify Jira mails for correct follow-ups."
 msgstr ""
 "Definierar postmaster filter för att identifiera Jira email för korrekt "
 "uppföljning."
 
-#: db/seeds/settings.rb:4429
+#: db/seeds/settings.rb:4432
 msgid ""
 "Defines postmaster filter to identify ServiceNow mails for correct follow-"
 "ups."
@@ -5799,7 +5807,7 @@ msgstr ""
 "Definierar postmaster filter för att identifiera ServiceNow email för "
 "korrekt uppföljning."
 
-#: db/seeds/settings.rb:4240
+#: db/seeds/settings.rb:4243
 msgid ""
 "Defines postmaster filter to identify auto responses to prevent auto replies "
 "from Zammad."
@@ -5807,21 +5815,21 @@ msgstr ""
 "Definierar postmaster filter för att identifiera autosvar för att förhindra "
 "automatiska svar från Zammad."
 
-#: db/seeds/settings.rb:4258
+#: db/seeds/settings.rb:4261
 msgid ""
 "Defines postmaster filter to identify follow-up ticket for merged tickets."
 msgstr ""
 "Definierar postmaster filter för att identifiera uppföljningsärenden för "
 "sammanfogade ärenden."
 
-#: db/seeds/settings.rb:4249
+#: db/seeds/settings.rb:4252
 msgid ""
 "Defines postmaster filter to identify follow-ups (based on admin settings)."
 msgstr ""
 "Definierar postmaster filter för att identifiera uppföljningsärenden "
 "(baserade på admininställningar)."
 
-#: db/seeds/settings.rb:4339
+#: db/seeds/settings.rb:4342
 msgid ""
 "Defines postmaster filter to identify out-of-office emails for follow-up "
 "detection and keeping current ticket state."
@@ -5829,7 +5837,7 @@ msgstr ""
 "Definierar postmaster filter för att identifiera out-of-office för "
 "uppföljningsdetektering och behålla nuvarande ärendestatus."
 
-#: db/seeds/settings.rb:4366
+#: db/seeds/settings.rb:4369
 msgid ""
 "Defines postmaster filter to identify postmaster bounces; and disables "
 "sending notification if delivery fails permanently."
@@ -5837,15 +5845,19 @@ msgstr ""
 "Definierar postmaster filter för att identifiera postmaster studsar; och "
 "inaktiverar utskick av notifieringar om leverans misslyckas konstant."
 
-#: db/seeds/settings.rb:4357
+#: db/seeds/settings.rb:4360
+#, fuzzy
+#| msgid ""
+#| "Defines postmaster filter to identify postmaster bounces; and handles "
+#| "them as follow-up of the original tickets"
 msgid ""
 "Defines postmaster filter to identify postmaster bounces; and handles them "
-"as follow-up of the original tickets"
+"as follow-up of the original tickets."
 msgstr ""
 "Definierar postmaster filter för att identifiera postmaster studsar; och "
 "hanterar de som uppföljning av ursprungsärendet"
 
-#: db/seeds/settings.rb:4375
+#: db/seeds/settings.rb:4378
 msgid ""
 "Defines postmaster filter to identify postmaster bounces; and reopens "
 "tickets if delivery fails permanently."
@@ -5853,19 +5865,19 @@ msgstr ""
 "Definierar postmaster filter för att identifiera postmaster studsar; och "
 "återöppnar ärenden om leverans misslyckas konstant."
 
-#: db/seeds/settings.rb:4321
+#: db/seeds/settings.rb:4324
 msgid "Defines postmaster filter to identify sender user."
 msgstr "Definierar postmaster filter för att identifiera avsändaranvändare."
 
-#: db/seeds/settings.rb:4312
+#: db/seeds/settings.rb:4315
 msgid "Defines postmaster filter to identify session user."
 msgstr "Definierar postmaster filter för att identifiera sessionsanvändare."
 
-#: db/seeds/settings.rb:4474
+#: db/seeds/settings.rb:4477
 msgid "Defines postmaster filter to identify ticket group."
 msgstr "Definierar postmaster filter för att identifiera ärendegrupp."
 
-#: db/seeds/settings.rb:4411
+#: db/seeds/settings.rb:4414
 msgid ""
 "Defines postmaster filter to manage Checkmk (http://mathias-kettner.com/"
 "check_mk.html) emails."
@@ -5873,28 +5885,28 @@ msgstr ""
 "Definierar postmasterfilter för hantering av Checkmk (http://mathias-"
 "kettner.com/check_mk.html) E-post."
 
-#: db/seeds/settings.rb:4393
+#: db/seeds/settings.rb:4396
 msgid ""
 "Defines postmaster filter to manage Icinga (http://www.icinga.org) emails."
 msgstr ""
 "Definierar postmaster filter för att hantera Icinga (http://www.icinga.org) "
 "emails."
 
-#: db/seeds/settings.rb:4420
+#: db/seeds/settings.rb:4423
 msgid ""
 "Defines postmaster filter to manage Monit (https://mmonit.com/monit/) emails."
 msgstr ""
 "Definierar postmaster filter för att hantera Monit (https://mmonit.com/"
 "monit/) emails."
 
-#: db/seeds/settings.rb:4402
+#: db/seeds/settings.rb:4405
 msgid ""
 "Defines postmaster filter to manage Nagios (http://www.nagios.org) emails."
 msgstr ""
 "Definierar postmaster filter för att hantera Nagios (http://www.nagios.org) "
 "emails."
 
-#: db/seeds/settings.rb:4231
+#: db/seeds/settings.rb:4234
 msgid ""
 "Defines postmaster filter to remove X-Zammad headers from untrustworthy "
 "sources."
@@ -5902,7 +5914,7 @@ msgstr ""
 "Definierar postmaster filter för att ta bort X-Zammad headers från osäkra "
 "källor."
 
-#: db/seeds/settings.rb:4267
+#: db/seeds/settings.rb:4270
 msgid ""
 "Defines postmaster filter to set the owner (based on group follow up "
 "assignment)."
@@ -5910,7 +5922,7 @@ msgstr ""
 "Definierar postmaster filter för sätta ägare(baserad på grupp "
 "uppföljningstilldelning)."
 
-#: db/seeds/settings.rb:4276
+#: db/seeds/settings.rb:4279
 msgid ""
 "Defines postmaster filter to set the sender/from of emails based on reply-to "
 "header."
@@ -5918,7 +5930,7 @@ msgstr ""
 "Definierar postmaster filter för sätta avsändare/från av e-post baserad på "
 "svara till header."
 
-#: db/seeds/settings.rb:4465
+#: db/seeds/settings.rb:4468
 msgid ""
 "Defines postmaster filter which sets the articles visibility to internal if "
 "it is a rely to an internal article or the last outgoing email is internal."
@@ -5927,7 +5939,7 @@ msgstr ""
 "det är ett svar till en intern artikel eller och senaste utgående e-post är "
 "internt."
 
-#: db/seeds/settings.rb:4228
+#: db/seeds/settings.rb:4231
 msgid "Defines postmaster filter."
 msgstr "Definierar postmaster filter."
 
@@ -5935,35 +5947,35 @@ msgstr "Definierar postmaster filter."
 msgid "Defines pretty date format."
 msgstr "Definierar läsbart datumformat."
 
-#: db/seeds/settings.rb:5455
+#: db/seeds/settings.rb:5458
 msgid "Defines processing timeout for the html sanitizer."
 msgstr "Definierar processeringstimeout för html sanerare."
 
-#: db/seeds/settings.rb:5114
+#: db/seeds/settings.rb:5117
 msgid "Defines sync transaction backend."
 msgstr "Definierar sync transaction backend."
 
-#: db/seeds/settings.rb:5443
+#: db/seeds/settings.rb:5446
 msgid "Defines the CSS font information for HTML emails."
 msgstr "Definierar CSS font information för HTML e-post."
 
-#: db/seeds/settings.rb:5255
+#: db/seeds/settings.rb:5258
 msgid "Defines the CTI config."
 msgstr "Definierar CTI konfiguration."
 
-#: db/seeds/settings.rb:4800
+#: db/seeds/settings.rb:4803
 msgid "Defines the Checkmk token for allowing updates."
 msgstr "Definierar Checkmk token för att tillåta uppdateringar."
 
-#: db/seeds/settings.rb:5391
+#: db/seeds/settings.rb:5394
 msgid "Defines the Clearbit config."
 msgstr "Definierar Clearbit konfiguration."
 
-#: db/seeds/settings.rb:4953
+#: db/seeds/settings.rb:4956
 msgid "Defines the Exchange OAuth config."
 msgstr "Definierar Exchange OAuth konfiguration."
 
-#: db/seeds/settings.rb:4940
+#: db/seeds/settings.rb:4943
 msgid "Defines the Exchange config."
 msgstr "Definierar Exchange konfiguration."
 
@@ -5971,19 +5983,19 @@ msgstr "Definierar Exchange konfiguration."
 msgid "Defines the HTTP protocol of your instance."
 msgstr "Definiera HTTP-protokollet för din instans."
 
-#: db/seeds/settings.rb:5759
+#: db/seeds/settings.rb:5762
 msgid "Defines the PGP config."
 msgstr "Definierar PGP konfiguration."
 
-#: db/seeds/settings.rb:5330
+#: db/seeds/settings.rb:5333
 msgid "Defines the Placetel config."
 msgstr "Definierar Placetel konfiguration."
 
-#: db/seeds/settings.rb:5717
+#: db/seeds/settings.rb:5720
 msgid "Defines the S/MIME config."
 msgstr "Definierar S/MIME konfiguration."
 
-#: db/seeds/settings.rb:5432
+#: db/seeds/settings.rb:5435
 msgid "Defines the agent limit."
 msgstr "Definierar handläggarbegränsning."
 
@@ -6020,7 +6032,7 @@ msgid "Defines the backend service for ticket article language detection."
 msgstr ""
 "Definierar backend-tjänsten för språkdetektering av artiklar i ärenden."
 
-#: db/seeds/settings.rb:2897
+#: db/seeds/settings.rb:2900
 msgid ""
 "Defines the configuration how many articles can be created in a minute range "
 "globally."
@@ -6028,7 +6040,7 @@ msgstr ""
 "Definierar konfigurationen hur många artiklar som kan skapas inom en minut "
 "globalt."
 
-#: db/seeds/settings.rb:2878
+#: db/seeds/settings.rb:2881
 msgid ""
 "Defines the configuration how many articles can be created in a minute range "
 "per ticket."
@@ -6036,17 +6048,17 @@ msgstr ""
 "Definierar konfigurationen hur många artiklar som kan skapas inom en minut "
 "per ärende."
 
-#: db/seeds/settings.rb:4124
+#: db/seeds/settings.rb:4127
 msgid ""
 "Defines the custom unit to be shown next to the time accounting input field."
 msgstr ""
 "Definierar anpassad enhet att visa bredvid tidsredovisning inmatningsfältet."
 
-#: db/seeds/settings.rb:4205
+#: db/seeds/settings.rb:4208
 msgid "Defines the default calendar tickets subscription settings."
 msgstr "Definierar standard prenumerationsinställningar för kalenderärenden."
 
-#: db/seeds/settings.rb:3626
+#: db/seeds/settings.rb:3629
 msgid "Defines the default screen."
 msgstr "Definierar standardskärm."
 
@@ -6058,7 +6070,7 @@ msgstr "Definierar systemets standardspråk."
 msgid "Defines the default system timezone."
 msgstr "Definierar systemets standardtidszon."
 
-#: db/seeds/settings.rb:4160
+#: db/seeds/settings.rb:4163
 msgid "Defines the default time accounting type."
 msgstr "Definierar standard tidsredovisningstyp."
 
@@ -6066,7 +6078,7 @@ msgstr "Definierar standard tidsredovisningstyp."
 msgid "Defines the default visibility for new notes."
 msgstr "Definierar standardsynlighet för ny anteckning."
 
-#: db/seeds/settings.rb:5289
+#: db/seeds/settings.rb:5292
 msgid ""
 "Defines the duration of customer activity (in seconds) on a call until the "
 "user profile dialog is shown."
@@ -6074,7 +6086,7 @@ msgstr ""
 "Definierar längden på kundaktivitet(i sekunder) i ett samtal tills att "
 "användarprofilen visas."
 
-#: db/seeds/settings.rb:6128
+#: db/seeds/settings.rb:6131
 msgid ""
 "Defines the fixed instructions that guide the AI Writing Assistant on e.g. "
 "how to format its output."
@@ -6093,19 +6105,19 @@ msgstr ""
 "meddelanden som används av programmet, för att skapa länkar till ärenden i "
 "ditt system."
 
-#: db/seeds/settings.rb:4728
+#: db/seeds/settings.rb:4731
 msgid "Defines the group of created tickets."
 msgstr "Definierar gruppen för skapade ärenden."
 
-#: db/seeds/settings.rb:3076
+#: db/seeds/settings.rb:3079
 msgid "Defines the group of tickets created via web form."
 msgstr "Definierar gruppen för ärenden skapade via webbformulär."
 
-#: db/seeds/settings.rb:5020
+#: db/seeds/settings.rb:5023
 msgid "Defines the i-doit config."
 msgstr "Definierar i-doit konfig."
 
-#: db/seeds/settings.rb:4026
+#: db/seeds/settings.rb:4029
 msgid "Defines the log levels for various logging actions of the Sequencer."
 msgstr "Definierar loggnivån för olika loggningsåtgärder av Sequencer."
 
@@ -6113,7 +6125,7 @@ msgstr "Definierar loggnivån för olika loggningsåtgärder av Sequencer."
 msgid "Defines the logo of the application, shown in the web interface."
 msgstr "Definierar logon för applikationen som visas i web interfacet."
 
-#: db/seeds/settings.rb:3287
+#: db/seeds/settings.rb:3290
 msgid "Defines the maximum accepted email size in MB."
 msgstr "Definierar maximal storlek på accepterade email storlek i MB."
 
@@ -6133,35 +6145,37 @@ msgstr ""
 "Definierar applikationens namn, som visas i webbläsarens webbgränssnitt, "
 "flikar och titelfält."
 
-#: db/seeds/settings.rb:2791
+#: db/seeds/settings.rb:2794
 msgid "Defines the permission level used for lookups."
 msgstr "Definierar rättighetsnivån som används för uppslagningar."
 
 #: db/seeds/settings.rb:321
-msgid "Defines the port of the websocket server."
+#, fuzzy
+#| msgid "Defines the port of the websocket server."
+msgid "Defines the port of the WebSocket server."
 msgstr "Definierar websocket serverport."
 
 #: db/seeds/settings.rb:7
 msgid "Defines the random application secret."
 msgstr "Definiera den slumpmässiga applikation secret."
 
-#: db/seeds/settings.rb:4509
+#: db/seeds/settings.rb:4512
 msgid "Defines the sender email address of Icinga emails."
 msgstr "Definierar e-postavsändare för Icinga email."
 
-#: db/seeds/settings.rb:4607
+#: db/seeds/settings.rb:4610
 msgid "Defines the sender email address of Nagios emails."
 msgstr "Definierar e-postavsändare för Nagios email."
 
-#: db/seeds/settings.rb:4705
+#: db/seeds/settings.rb:4708
 msgid "Defines the sender email address of the service emails."
 msgstr "Definierar e-postadressen för tjänstens e-post."
 
-#: db/seeds/settings.rb:3447
+#: db/seeds/settings.rb:3450
 msgid "Defines the sender of email notifications."
 msgstr "Definierar avsändaren för e-postnotifieringar."
 
-#: db/seeds/settings.rb:3265
+#: db/seeds/settings.rb:3268
 msgid ""
 "Defines the separator between the agent's real name and the given group "
 "email address."
@@ -6178,11 +6192,11 @@ msgstr ""
 "tilldelade behörigheterna används det högsta timeoutvärdet, annars "
 "standardvärdet."
 
-#: db/seeds/settings.rb:5193
+#: db/seeds/settings.rb:5196
 msgid "Defines the sipgate.io config."
 msgstr "Definierar sipgate.io konfig."
 
-#: db/seeds/settings.rb:4558
+#: db/seeds/settings.rb:4561
 msgid "Defines the state of auto-closed tickets."
 msgstr "Definierar status för automatiskt stängda ärenden."
 
@@ -6197,37 +6211,37 @@ msgstr ""
 "behandlas som uppföljningar (användbart vid kommunikation mellan två "
 "instanser av Zammad)."
 
-#: db/seeds/settings.rb:3013
+#: db/seeds/settings.rb:3016
 msgid "Defines the tab behaviour after a ticket action."
 msgstr "Definierar hur en flik beter sig vid ärendeförändring."
 
-#: db/seeds/settings.rb:2808
+#: db/seeds/settings.rb:2811
 msgid "Defines the ticket states used for lookups."
 msgstr "Definierar ärendestatus som används för uppslagningar."
 
-#: db/seeds/settings.rb:5588
+#: db/seeds/settings.rb:5591
 msgid "Defines the timeframe during which a self-created note can be deleted."
 msgstr "Definierar tidsramen som en självskapad notering kan raderas."
 
-#: db/seeds/settings.rb:5344
+#: db/seeds/settings.rb:5347
 msgid "Defines the token for Placetel."
 msgstr "Definiera Placetel-token."
 
-#: db/seeds/settings.rb:5135
+#: db/seeds/settings.rb:5138
 msgid ""
 "Defines the transaction backend to detect customer signatures in emails."
 msgstr ""
 "Definierar transaktionsbackend för att upptäcka kundsignaturer i email."
 
-#: db/seeds/settings.rb:5117
+#: db/seeds/settings.rb:5120
 msgid "Defines the transaction backend to execute triggers."
 msgstr "Definierar transaktionsbackend att utföra triggers."
 
-#: db/seeds/settings.rb:5126
+#: db/seeds/settings.rb:5129
 msgid "Defines the transaction backend to send agent notifications."
 msgstr "Definierar transaktionsbackend att skicka agentnotifikationer."
 
-#: db/seeds/settings.rb:5413
+#: db/seeds/settings.rb:5416
 msgid ""
 "Defines the transaction backend which detects caller IDs in objects and "
 "stores them for CTI lookups."
@@ -6235,11 +6249,11 @@ msgstr ""
 "Definierar transaktionsbackend som upptäcker uppringnings-ID i object och "
 "sparar de för CTI uppslagning."
 
-#: db/seeds/settings.rb:5422
+#: db/seeds/settings.rb:5425
 msgid "Defines the transaction backend which executes time based triggers."
 msgstr "Definierar transaktionsbackend som utför tidsbaserade triggers."
 
-#: db/seeds/settings.rb:5404
+#: db/seeds/settings.rb:5407
 msgid ""
 "Defines the transaction backend which will enrich customer and organization "
 "information from Clearbit (http://www.clearbit.com)."
@@ -6248,28 +6262,28 @@ msgstr ""
 "organisationsinformation från Clearbit (http://www.clearbit.com)."
 
 #: app/assets/javascripts/app/views/time_accounting/settings.jst.eco:14
-#: db/seeds/settings.rb:4106
+#: db/seeds/settings.rb:4109
 msgid "Defines the unit to be shown next to the time accounting input field."
 msgstr "Definierar enheten som visas bredvid tidsredovisningsfältet."
 
-#: db/seeds/settings.rb:2740
+#: db/seeds/settings.rb:2743
 msgid ""
 "Defines the warning message that is shown when a matching ticket is present."
 msgstr ""
 "Definierar varningsmeddelandet som visas när ett matchande ärende finns."
 
-#: db/seeds/settings.rb:2723
+#: db/seeds/settings.rb:2726
 msgid ""
 "Defines the warning title that is shown when a matching ticket is present."
 msgstr ""
 "Definierar titeln på varningsmeddelandet som visas när ett matchande ärende "
 "finns."
 
-#: db/seeds/settings.rb:5123
+#: db/seeds/settings.rb:5126
 msgid "Defines transaction backend."
 msgstr "Definierar transaktionsbackend."
 
-#: db/seeds/settings.rb:2774
+#: db/seeds/settings.rb:2777
 msgid ""
 "Defines whether the matching tickets are shown in case of already existing "
 "tickets."
@@ -6277,22 +6291,25 @@ msgstr ""
 "Definierar om de matchande ärenden ska visas i de fall det redan finns "
 "existerande ärenden."
 
-#: db/seeds/settings.rb:3163
+#: db/seeds/settings.rb:3166
 msgid "Defines which parameters are allowed to be submitted via the form API."
 msgstr "Definierar vilka parametrar som får skickas in via formulär API."
 
-#: db/seeds/settings.rb:6042
-msgid "Defines which roles are allowed to access the desktop UI beta switch."
+#: db/seeds/settings.rb:6045
+#, fuzzy
+#| msgid ""
+#| "Defines which roles are allowed to access the desktop UI beta switch."
+msgid "Defines which roles are allowed to access the desktop BETA UI switch."
 msgstr ""
 "Definierar vilka roller som har åtkomst till beta-växlaren för "
 "skrivbordsgränssnittet."
 
-#: db/seeds/settings.rb:2706
+#: db/seeds/settings.rb:2709
 msgid "Defines which ticket attributes are checked before creating a ticket."
 msgstr ""
 "Definierar vilka ärendeattribut som ska kontrolleras innan ett ärende skapas."
 
-#: db/seeds/settings.rb:2757
+#: db/seeds/settings.rb:2760
 msgid ""
 "Defines which user roles will receive a warning in case of matching tickets."
 msgstr ""
@@ -6558,6 +6575,24 @@ msgstr "Designer"
 msgid "Desktop"
 msgstr "Desktop"
 
+#: db/seeds/settings.rb:6024
+#, fuzzy
+#| msgid "New BETA UI Switch"
+msgid "Desktop BETA UI Switch"
+msgstr "Nya Beta UI väljare"
+
+#: db/seeds/settings.rb:6033
+#, fuzzy
+#| msgid "UI Desktop BETA Switch Admin Menu"
+msgid "Desktop BETA UI Switch Admin Menu"
+msgstr "Användargränssnitt BETA växlare admin-meny"
+
+#: db/seeds/settings.rb:6042
+#, fuzzy
+#| msgid "UI Desktop BETA Switch Roles"
+msgid "Desktop BETA UI Switch Roles"
+msgstr "Användargränssnitt BETA växlare roller"
+
 #: app/assets/javascripts/app/controllers/_channel/email.coffee:263
 #: app/assets/javascripts/app/controllers/_channel/google.coffee:281
 #: app/assets/javascripts/app/controllers/_channel/microsoft365.coffee:303
@@ -6589,7 +6624,7 @@ msgid "Destination group > Sending email address"
 msgstr "Destination grupp > E-postadress för sändning"
 
 #: app/assets/javascripts/app/views/settings/ticket_duplicate_detection.jst.eco:7
-#: db/seeds/settings.rb:2677
+#: db/seeds/settings.rb:2680
 msgid "Detect Duplicate Ticket Creation"
 msgstr "Upptäck Duplicerade Skapade Ärenden"
 
@@ -6678,7 +6713,7 @@ msgstr ""
 "också överväga att ta bort den här kanalen och byta till en annan typ av e-"
 "postbrevlåda. %l"
 
-#: db/seeds/settings.rb:2183
+#: db/seeds/settings.rb:2186
 msgid "Digit required"
 msgstr "Siffra krävs"
 
@@ -6715,7 +6750,7 @@ msgstr "Inaktivera notifikationer"
 msgid "Disable the banner for the BETA switch"
 msgstr "Inaktivera bannern för BETA-väljaren"
 
-#: db/seeds/settings.rb:1300
+#: db/seeds/settings.rb:1303
 msgid "Disables user creation on logon with a third-party application."
 msgstr ""
 "Inaktiverar skapande av användare vid inloggning med en "
@@ -6799,7 +6834,7 @@ msgid "Display Zammad with the new BETA user interface"
 msgstr "Visa Zammad med det nya BETA-användargränssnittet"
 
 #: app/assets/javascripts/app/models/email_address.coffee:32
-#: db/seeds/settings.rb:1891
+#: db/seeds/settings.rb:1894
 msgid "Display name"
 msgstr "Visningsnamn"
 
@@ -6821,7 +6856,7 @@ msgstr "Kryptera inte e-post"
 msgid "Do not sign email"
 msgstr "Signera inte e-post"
 
-#: db/seeds/settings.rb:5968
+#: db/seeds/settings.rb:5971
 msgid "Do not update any tickets."
 msgstr "Uppdatera inga ärenden."
 
@@ -7137,47 +7172,47 @@ msgstr "Redigera användare"
 msgid "Editor"
 msgstr "Redaktör"
 
-#: db/seeds/settings.rb:3723
+#: db/seeds/settings.rb:3726
 msgid "Elasticsearch Asciifolding Configuration"
 msgstr "Konfiguration av Elasticsearch Asciifolding"
 
-#: db/seeds/settings.rb:3678
+#: db/seeds/settings.rb:3681
 msgid "Elasticsearch Attachment Extensions"
 msgstr "Elasticsearch Bilageändelser"
 
-#: db/seeds/settings.rb:3687
+#: db/seeds/settings.rb:3690
 msgid "Elasticsearch Attachment Size"
 msgstr "Elasticsearch Bilagestorlek"
 
-#: db/seeds/settings.rb:3660
+#: db/seeds/settings.rb:3663
 msgid "Elasticsearch Endpoint Index"
 msgstr "Elasticsearch Endpoint Index"
 
-#: db/seeds/settings.rb:3651
+#: db/seeds/settings.rb:3654
 msgid "Elasticsearch Endpoint Password"
 msgstr "Elasticsearch Endpoint Lösenord"
 
-#: db/seeds/settings.rb:3633
+#: db/seeds/settings.rb:3636
 msgid "Elasticsearch Endpoint URL"
 msgstr "Elasticsearch Endpoint URL"
 
-#: db/seeds/settings.rb:3642
+#: db/seeds/settings.rb:3645
 msgid "Elasticsearch Endpoint User"
 msgstr "Elasticsearch Endpoint Användare"
 
-#: db/seeds/settings.rb:3714
+#: db/seeds/settings.rb:3717
 msgid "Elasticsearch Model Configuration"
 msgstr "Elasticsearch Model Konfiguration"
 
-#: db/seeds/settings.rb:3705
+#: db/seeds/settings.rb:3708
 msgid "Elasticsearch Pipeline Name"
 msgstr "Elasticsearch Pipeline Namn"
 
-#: db/seeds/settings.rb:3669
+#: db/seeds/settings.rb:3672
 msgid "Elasticsearch SSL verification"
 msgstr "Elasticsearch SSL verifikation"
 
-#: db/seeds/settings.rb:3696
+#: db/seeds/settings.rb:3699
 msgid "Elasticsearch Total Payload Size"
 msgstr "Elasticsearch Total Payload Storlek"
 
@@ -7383,11 +7418,11 @@ msgstr "Tom översikt"
 msgid "Enable"
 msgstr "Aktivera"
 
-#: db/seeds/settings.rb:3574
+#: db/seeds/settings.rb:3577
 msgid "Enable Chat"
 msgstr "Aktivera Chatten"
 
-#: app/assets/javascripts/app/views/api.jst.eco:33 db/seeds/settings.rb:3529
+#: app/assets/javascripts/app/views/api.jst.eco:33 db/seeds/settings.rb:3532
 msgid ""
 "Enable REST API access using the username/email address and password for the "
 "authentication user."
@@ -7404,7 +7439,7 @@ msgstr ""
 "och lösenord). Varje användare behöver skapa egna åtkomsttoken i "
 "användarprofilen."
 
-#: db/seeds/settings.rb:3504
+#: db/seeds/settings.rb:3507
 msgid ""
 "Enable REST API using tokens (not username/email address and password). Each "
 "user needs to create its own access tokens in user profile."
@@ -7413,11 +7448,11 @@ msgstr ""
 "lösenord). Varje användare behöver skapa sina egna åtkomsttokens i "
 "användarprofilen."
 
-#: db/seeds/settings.rb:5903
+#: db/seeds/settings.rb:5906
 msgid "Enable Recovery Codes"
 msgstr "Aktivera Återställningskoder"
 
-#: db/seeds/settings.rb:2958
+#: db/seeds/settings.rb:2961
 msgid "Enable Ticket creation"
 msgstr "Aktivera Ärendeskapande"
 
@@ -7429,7 +7464,7 @@ msgstr ""
 "Aktivera aktivitetstypval. Detta tillåter agenter att välja en av nedan "
 "typer vid tidsredovisning."
 
-#: db/seeds/settings.rb:2578
+#: db/seeds/settings.rb:2581
 msgid "Enable auto assignment for following matching tickets."
 msgstr "Aktivera autotilldelning för följande matchande ärenden."
 
@@ -7439,7 +7474,7 @@ msgstr ""
 "Aktivera automatisk tilldelning första gången en handläggare öppnar ett "
 "ärende."
 
-#: db/seeds/settings.rb:5986
+#: db/seeds/settings.rb:5989
 msgid "Enable checklists."
 msgstr "Aktivera checklistor."
 
@@ -7467,7 +7502,7 @@ msgstr ""
 "citera en viss fras, markera bara texten och tryck på svaret (den här "
 "funktionen är alltid tillgänglig)."
 
-#: db/seeds/settings.rb:6013
+#: db/seeds/settings.rb:6016
 msgid ""
 "Enable or disable self-shutdown of Zammad processes after significant "
 "configuration changes. This should only be used if the controlling process "
@@ -7498,11 +7533,11 @@ msgstr ""
 "administratörer kommer att loggas ut och endast administratörer kan skapa en "
 "ny session."
 
-#: db/seeds/settings.rb:6081
+#: db/seeds/settings.rb:6084
 msgid "Enable or disable the ticket summary."
 msgstr "Aktivera eller inaktivera sammanfattningen av ärendet."
 
-#: db/seeds/settings.rb:6114
+#: db/seeds/settings.rb:6117
 msgid "Enable or disable the writing assistant text tools."
 msgstr "Aktivera eller inaktivera skrivassistentens textverktyg."
 
@@ -7510,11 +7545,11 @@ msgstr "Aktivera eller inaktivera skrivassistentens textverktyg."
 msgid "Enable the banner for the BETA switch"
 msgstr "Aktivera bannern för BETA-väljaren"
 
-#: db/seeds/settings.rb:2552
+#: db/seeds/settings.rb:2555
 msgid "Enable ticket auto assignment."
 msgstr "Aktivera automatisk ärendetilldelning."
 
-#: db/seeds/settings.rb:4061
+#: db/seeds/settings.rb:4064
 msgid "Enable time accounting."
 msgstr "Aktivera tidsredovisning."
 
@@ -7522,7 +7557,7 @@ msgstr "Aktivera tidsredovisning."
 msgid "Enable/disable inline translations"
 msgstr "Aktivera/Inaktivera inline översättningar"
 
-#: db/seeds/settings.rb:3577
+#: db/seeds/settings.rb:3580
 msgid "Enable/disable online chat."
 msgstr "Aktivera/inaktivera online chat."
 
@@ -7535,7 +7570,7 @@ msgid "Enables a sidebar to show an overview of all attachments."
 msgstr "Aktiverar en sidomeny för att visa en översikt över samtliga bilagor."
 
 #: app/assets/javascripts/app/views/settings/ticket_duplicate_detection.jst.eco:12
-#: db/seeds/settings.rb:2680
+#: db/seeds/settings.rb:2683
 msgid ""
 "Enables a warning to users during ticket creation if there is an existing "
 "ticket with the same attributes."
@@ -7543,7 +7578,7 @@ msgstr ""
 "Aktiverar en varning till användare vid ärendeskapning om det redan finns "
 "ett ärende med samma attribut."
 
-#: db/seeds/settings.rb:5784
+#: db/seeds/settings.rb:5787
 msgid ""
 "Enables button for user authentication via %s. The button will redirect to /"
 "auth/sso on user interaction."
@@ -7565,7 +7600,7 @@ msgstr ""
 msgid "Enables preview of attachments."
 msgstr "Aktiverar förhandsvisning av bilagor."
 
-#: db/seeds/settings.rb:1274
+#: db/seeds/settings.rb:1277
 msgid ""
 "Enables sending of an email notification to a user when they link their "
 "account with a third-party application."
@@ -7573,7 +7608,7 @@ msgstr ""
 "Aktiverar att e-postnotifiering skickas till en användare när de kopplar "
 "sitt konto med en tredjepartsapplikation."
 
-#: db/seeds/settings.rb:1248
+#: db/seeds/settings.rb:1251
 msgid ""
 "Enables the automatic linking of an existing account on initial login via a "
 "third party application. If this is disabled, an existing user must first "
@@ -7585,46 +7620,46 @@ msgstr ""
 "användare först logga in i Zammad och länka sedan sitt \"Tredje part\" "
 "-konto till sitt Zammad-konto via Profil -> Länkade konton."
 
-#: db/seeds/settings.rb:1185
+#: db/seeds/settings.rb:1188
 msgid "Enables user authentication via %s."
 msgstr "Aktiverar användarautentisering via %s."
 
-#: db/seeds/settings.rb:1326
+#: db/seeds/settings.rb:1329
 msgid ""
 "Enables user authentication via %s. Register your app first at [%s](%s)."
 msgstr ""
 "Aktiverar användarautentisering via %s. Registrera din app först på [%s] "
 "(%s)."
 
-#: db/seeds/settings.rb:1615
+#: db/seeds/settings.rb:1618
 msgid "Enables user authentication via GitHub."
 msgstr "Aktiverar autentisering via GitHub."
 
-#: db/seeds/settings.rb:1680
+#: db/seeds/settings.rb:1683
 msgid "Enables user authentication via GitLab."
 msgstr "Aktiverar användarautentisering via GitLab."
 
-#: db/seeds/settings.rb:1485
+#: db/seeds/settings.rb:1488
 msgid "Enables user authentication via Google."
 msgstr "Aktiverar inloggning via Google."
 
-#: db/seeds/settings.rb:1550
+#: db/seeds/settings.rb:1553
 msgid "Enables user authentication via LinkedIn."
 msgstr "Aktiverar inloggning via LinkedIn."
 
-#: db/seeds/settings.rb:1752
+#: db/seeds/settings.rb:1755
 msgid "Enables user authentication via Microsoft 365."
 msgstr "Aktiverar autentisering via Microsoft 365."
 
-#: db/seeds/settings.rb:2045
+#: db/seeds/settings.rb:2048
 msgid "Enables user authentication via OpenID Connect."
 msgstr "Aktiverar användarautentisering via OpenID Connect."
 
-#: db/seeds/settings.rb:1887
+#: db/seeds/settings.rb:1890
 msgid "Enables user authentication via SAML."
 msgstr "Aktiverar användarautentisering via SAML."
 
-#: db/seeds/settings.rb:1823
+#: db/seeds/settings.rb:1826
 msgid "Enables user authentication via Weibo."
 msgstr "Aktiverar användarautentisering via Weibo."
 
@@ -7693,11 +7728,11 @@ msgstr "Endpoint"
 msgid "Endpoint Settings"
 msgstr "Endpointinställningar"
 
-#: db/seeds/settings.rb:5930
+#: db/seeds/settings.rb:5933
 msgid "Enforce the setup of the two-factor authentication"
 msgstr "Tvinga konfiguration av två-faktorautentisering"
 
-#: db/seeds/settings.rb:5937
+#: db/seeds/settings.rb:5940
 msgid "Enforced for user roles"
 msgstr "Tvingat för användarroller"
 
@@ -8105,15 +8140,15 @@ msgstr "Undantagna användare"
 msgid "Exchange"
 msgstr "Exchange"
 
-#: db/seeds/settings.rb:4950
+#: db/seeds/settings.rb:4953
 msgid "Exchange OAuth"
 msgstr "Exchange OAuth"
 
-#: db/seeds/settings.rb:4937
+#: db/seeds/settings.rb:4940
 msgid "Exchange config"
 msgstr "Exchange konfig"
 
-#: db/seeds/settings.rb:4963
+#: db/seeds/settings.rb:4966
 msgid "Exchange integration"
 msgstr "Exchange integration"
 
@@ -8226,7 +8261,7 @@ msgstr "Extrahera zammad bilageinformation från fält"
 #: app/controllers/first_steps_controller.rb:27
 #: app/frontend/shared/composables/authentication/useThirdPartyAuthentication.ts:18
 #: app/frontend/shared/entities/ticket-article/action/plugins/facebook.ts:43
-#: db/seeds/permissions.rb:167 db/seeds/settings.rb:1408
+#: db/seeds/permissions.rb:167 db/seeds/settings.rb:1411
 msgid "Facebook"
 msgstr "Facebook"
 
@@ -8238,7 +8273,7 @@ msgstr "Facebook-app-id"
 msgid "Facebook Account"
 msgstr "Facebook konto"
 
-#: db/seeds/settings.rb:1417
+#: db/seeds/settings.rb:1420
 msgid "Facebook App Credentials"
 msgstr "Facebook App Användaruppgifter"
 
@@ -8246,7 +8281,7 @@ msgstr "Facebook App Användaruppgifter"
 msgid "Facebook App Secret"
 msgstr "Facebook App Secret"
 
-#: db/seeds/settings.rb:1409
+#: db/seeds/settings.rb:1412
 msgid "Facebook Developer Site"
 msgstr "Facebook Utvecklings Sida"
 
@@ -8357,7 +8392,7 @@ msgstr "Feedback och loggar"
 msgid "Feedback Form"
 msgstr "Feedback-formulär"
 
-#: db/seeds/settings.rb:2077
+#: db/seeds/settings.rb:2080
 msgid "Field that uniquely identifies the user. If unset, \"sub\" is used."
 msgstr ""
 "Fält som identifierar användaren på ett unikt sätt. Om det inte är inställt "
@@ -8626,7 +8661,7 @@ msgstr "Har du glömt ditt lösenord?"
 msgid "Form"
 msgstr "Formulär"
 
-#: db/seeds/settings.rb:3160
+#: db/seeds/settings.rb:3163
 msgid "Form Allowed Parameters"
 msgstr "Formulärets tillåtna parametrar"
 
@@ -8851,7 +8886,7 @@ msgstr "Kom igång"
 
 #: app/assets/javascripts/app/lib/app_post/two_factor_methods/authenticator_app.coffee:6
 #: app/frontend/shared/entities/two-factor/plugins/authenticator-app.ts:10
-#: db/seeds/settings.rb:5895
+#: db/seeds/settings.rb:5898
 msgid "Get the security code from the authenticator app on your device."
 msgstr "Hämta säkerhetskoden från autentiseringsappen på din enhet."
 
@@ -8869,23 +8904,23 @@ msgstr "Hämtar viktig information från webbläsaren…"
 #: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarExternalReferences/TicketSidebarExternalIssueTracker/useTicketExternalIssueTracker.ts:47
 #: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/plugins/github.ts:11
 #: app/frontend/shared/composables/authentication/useThirdPartyAuthentication.ts:39
-#: db/seeds/settings.rb:1604
+#: db/seeds/settings.rb:1607
 msgid "GitHub"
 msgstr "GitHub"
 
-#: db/seeds/settings.rb:1612
+#: db/seeds/settings.rb:1615
 msgid "GitHub App Credentials"
 msgstr "GitHub-appuppgifter"
 
-#: db/seeds/settings.rb:1605
+#: db/seeds/settings.rb:1608
 msgid "GitHub OAuth Applications"
 msgstr "GitHub OAuth Applikationer"
 
-#: db/seeds/settings.rb:5099
+#: db/seeds/settings.rb:5102
 msgid "GitHub config"
 msgstr "GitHub konfig"
 
-#: db/seeds/settings.rb:5072
+#: db/seeds/settings.rb:5075
 msgid "GitHub integration"
 msgstr "GitHub integration"
 
@@ -8903,23 +8938,23 @@ msgstr "GitHub: Länka ärende"
 #: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarExternalReferences/TicketSidebarExternalIssueTracker/useTicketExternalIssueTracker.ts:48
 #: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/plugins/gitlab.ts:11
 #: app/frontend/shared/composables/authentication/useThirdPartyAuthentication.ts:46
-#: db/seeds/settings.rb:1669
+#: db/seeds/settings.rb:1672
 msgid "GitLab"
 msgstr "GitLab"
 
-#: db/seeds/settings.rb:1677
+#: db/seeds/settings.rb:1680
 msgid "GitLab App Credentials"
 msgstr "GitLab App Användaruppgifter"
 
-#: db/seeds/settings.rb:1670
+#: db/seeds/settings.rb:1673
 msgid "GitLab Applications"
 msgstr "GitLab Applikationer"
 
-#: db/seeds/settings.rb:5057
+#: db/seeds/settings.rb:5060
 msgid "GitLab config"
 msgstr "GitLab konfig"
 
-#: db/seeds/settings.rb:5030
+#: db/seeds/settings.rb:5033
 msgid "GitLab integration"
 msgstr "GitLab integration"
 
@@ -8992,15 +9027,15 @@ msgstr "Hejdå meddelande"
 
 #: app/assets/javascripts/app/controllers/_profile/linked_accounts.coffee:96
 #: app/frontend/shared/composables/authentication/useThirdPartyAuthentication.ts:60
-#: db/seeds/settings.rb:1474
+#: db/seeds/settings.rb:1477
 msgid "Google"
 msgstr "Google"
 
-#: db/seeds/settings.rb:1475
+#: db/seeds/settings.rb:1478
 msgid "Google API Console Site"
 msgstr "Google API Console Site"
 
-#: db/seeds/settings.rb:1482
+#: db/seeds/settings.rb:1485
 msgid "Google App Credentials"
 msgstr "Google App inloggningsuppgifter"
 
@@ -9059,7 +9094,7 @@ msgstr "Hälsning"
 #: app/views/messaging/ticket_create/zh-tw.md.erb:3
 #: app/views/messaging/ticket_info/pt-br.md.erb:3
 #: app/views/messaging/ticket_info/zh-tw.md.erb:3
-#: db/seeds/object_manager_attributes.rb:168 db/seeds/settings.rb:2985
+#: db/seeds/object_manager_attributes.rb:168 db/seeds/settings.rb:2988
 #: lib/excel_sheet/ticket.rb:27
 msgid "Group"
 msgstr "Grupp"
@@ -9110,11 +9145,11 @@ msgid "Group permissions"
 msgstr "Grupprättigheter"
 
 #: app/assets/javascripts/app/views/channel/form.jst.eco:18
-#: db/seeds/settings.rb:2985
+#: db/seeds/settings.rb:2988
 msgid "Group selection for Ticket creation"
 msgstr "Gruppval för Ärendeskapande"
 
-#: db/seeds/settings.rb:3073
+#: db/seeds/settings.rb:3076
 msgid "Group selection for ticket creation"
 msgstr "Gruppurval för ärendeskapande"
 
@@ -9150,11 +9185,11 @@ msgstr "Grupper är …"
 msgid "HMAC SHA1 Signature Token"
 msgstr "HMAC SHA1 Signatur Token"
 
-#: db/seeds/settings.rb:5440
+#: db/seeds/settings.rb:5443
 msgid "HTML Email CSS Font"
 msgstr "HTML Email CSS Font"
 
-#: db/seeds/settings.rb:5452
+#: db/seeds/settings.rb:5455
 msgid "HTML Sanitizer Processing Timeout"
 msgstr "HTML saneringsprocesstimeout"
 
@@ -9429,12 +9464,12 @@ msgstr "Markeringsfärg"
 msgid "Highlight icon"
 msgstr "Markeringsikon"
 
-#: db/seeds/settings.rb:5604
+#: db/seeds/settings.rb:5607
 msgid "Highlights if the note a user is writing is public or private"
 msgstr ""
 "Markerar om meddelandet som en användare skriver är offentligt eller privat"
 
-#: db/seeds/settings.rb:5601
+#: db/seeds/settings.rb:5604
 msgid "Hint for adding an article to an existing ticket."
 msgstr "Tips för att lägga till en artikel i ett befintligt ärende."
 
@@ -9552,19 +9587,19 @@ msgstr "ID"
 msgid "ID:"
 msgstr "ID:"
 
-#: db/seeds/settings.rb:1898
+#: db/seeds/settings.rb:1901
 msgid "IDP SSO target URL"
 msgstr "URL för IDP SSO-mål"
 
-#: db/seeds/settings.rb:1906
+#: db/seeds/settings.rb:1909
 msgid "IDP Single Logout target URL"
 msgstr "IDP Mål-URL för enskild utloggning"
 
-#: db/seeds/settings.rb:1914
+#: db/seeds/settings.rb:1917
 msgid "IDP certificate"
 msgstr "IDP certifikat"
 
-#: db/seeds/settings.rb:1922
+#: db/seeds/settings.rb:1925
 msgid "IDP certificate fingerprint"
 msgstr "IDP certifikatets fingeravtryck"
 
@@ -9576,7 +9611,7 @@ msgstr "IMAP"
 msgid "Icinga"
 msgstr "Icinga"
 
-#: db/seeds/settings.rb:4480
+#: db/seeds/settings.rb:4483
 msgid "Icinga integration"
 msgstr "Icinga integration"
 
@@ -9592,7 +9627,7 @@ msgstr "Ikon- & Länkfärg"
 msgid "Icon Set"
 msgstr "Ikonuppsättning"
 
-#: db/seeds/settings.rb:2056 lib/excel_sheet/ai/analytics/errors.rb:24
+#: db/seeds/settings.rb:2059 lib/excel_sheet/ai/analytics/errors.rb:24
 #: lib/excel_sheet/ai/analytics/with_usage.rb:24
 msgid "Identifier"
 msgstr "Identifierare"
@@ -9601,7 +9636,7 @@ msgstr "Identifierare"
 msgid "Identifier of the chat topic."
 msgstr "Identifierare för chatt-ämnet."
 
-#: db/seeds/settings.rb:3604
+#: db/seeds/settings.rb:3607
 msgid "Idle timeout in seconds until agent is set offline automatically."
 msgstr ""
 "Timeout för inaktivitet i sekunder tills agenten automatiskt sätts offline."
@@ -9638,7 +9673,7 @@ msgid ""
 msgstr ""
 "Om värden och tjänsten har återställts, så kan ärendet stängas automatiskt."
 
-#: db/seeds/settings.rb:3394
+#: db/seeds/settings.rb:3397
 msgid ""
 "If the sender is an agent, set the first user in the recipient list as the "
 "customer."
@@ -9646,7 +9681,7 @@ msgstr ""
 "Om avsändaren är en handläggare, ange den första användaren i mottagarlistan "
 "som kund."
 
-#: db/seeds/settings.rb:3470
+#: db/seeds/settings.rb:3473
 msgid "If this regex matches, no notification will be sent by the sender."
 msgstr ""
 "Om denna regex matchar, kommer ingen notifikation att skickas av avsändaren."
@@ -9724,7 +9759,7 @@ msgstr ""
 msgid "Ignore Escalation"
 msgstr "Ignorera eskalering"
 
-#: db/seeds/settings.rb:3764
+#: db/seeds/settings.rb:3767
 msgid "Ignore Escalation/SLA Information"
 msgstr "Ignorera eskalering/SLA"
 
@@ -9732,11 +9767,11 @@ msgstr "Ignorera eskalering/SLA"
 msgid "Ignore Message"
 msgstr "Ignorera meddelande"
 
-#: db/seeds/settings.rb:3767
+#: db/seeds/settings.rb:3770
 msgid "Ignore escalation/SLA information for import."
 msgstr "Ignorera eskalerings-/SLA-information för import."
 
-#: db/seeds/settings.rb:2829
+#: db/seeds/settings.rb:2832
 msgid "Ignore system_id"
 msgstr "Ignorera system_id"
 
@@ -9790,51 +9825,51 @@ msgstr "Importera %s"
 msgid "Import API key could not be extracted from URL."
 msgstr "API-nyckel för import kunde inte extraheras från URL."
 
-#: db/seeds/settings.rb:3936
+#: db/seeds/settings.rb:3939
 msgid "Import API key for requesting the Freshdesk API"
 msgstr "Importera API-nyckel för att begära Freshdesk API"
 
-#: db/seeds/settings.rb:3880
+#: db/seeds/settings.rb:3883
 msgid "Import API key for requesting the Zendesk API"
 msgstr "Importera API-nyckel för att begära Zendesk API"
 
-#: db/seeds/settings.rb:3755
+#: db/seeds/settings.rb:3758
 msgid "Import Backend"
 msgstr "Import Backend"
 
-#: db/seeds/settings.rb:4010
+#: db/seeds/settings.rb:4013
 msgid "Import Backends"
 msgstr "Import Backends"
 
-#: db/seeds/settings.rb:3787
+#: db/seeds/settings.rb:3790
 msgid "Import Endpoint"
 msgstr "Import-slutpunkt"
 
-#: db/seeds/settings.rb:3805
+#: db/seeds/settings.rb:3808
 msgid "Import Key"
 msgstr "Importnyckel"
 
-#: db/seeds/settings.rb:3733
+#: db/seeds/settings.rb:3736
 msgid "Import Mode"
 msgstr "Importläge"
 
-#: db/seeds/settings.rb:3843
+#: db/seeds/settings.rb:3846
 msgid "Import Password for HTTP basic authentication"
 msgstr "Importera Lösenord för basic HTTP-autentisering"
 
-#: db/seeds/settings.rb:3991
+#: db/seeds/settings.rb:3994
 msgid "Import Password for requesting the Kayako API"
 msgstr "Importera lösenord för att begära Kayako API"
 
-#: db/seeds/settings.rb:3824
+#: db/seeds/settings.rb:3827
 msgid "Import User for HTTP basic authentication"
 msgstr "Importera användare för basic HTTP-autentisering"
 
-#: db/seeds/settings.rb:3973
+#: db/seeds/settings.rb:3976
 msgid "Import User for requesting the Kayako API"
 msgstr "Importera användare för att begära Kayako API"
 
-#: db/seeds/settings.rb:3899
+#: db/seeds/settings.rb:3902
 msgid "Import User for requesting the Zendesk API"
 msgstr "Importera användare för att begära Zendesk API"
 
@@ -9982,7 +10017,7 @@ msgstr "Ofullständiga användaruppgifter"
 msgid "Incomplete ticket checklist"
 msgstr "Checklistan i ärendet är ofullständig"
 
-#: db/seeds/settings.rb:2448
+#: db/seeds/settings.rb:2451
 msgid "Increment (SystemID.Counter)"
 msgstr "Inkrement (SystemID.Counter)"
 
@@ -10434,7 +10469,7 @@ msgstr "Ärende-URL"
 msgid "Issue status"
 msgstr "Ärendestatus"
 
-#: db/seeds/settings.rb:2064
+#: db/seeds/settings.rb:2067
 msgid "Issuer"
 msgstr "Utfärdare"
 
@@ -10592,21 +10627,21 @@ msgstr "Kunskapsbankflöde"
 msgid "Knowledge Base Reader"
 msgstr "Kunskapsbank Läsare"
 
-#: db/seeds/settings.rb:5558
+#: db/seeds/settings.rb:5561
 msgid "Knowledge Base active"
 msgstr "Kunskapsbank aktiv"
 
-#: db/seeds/settings.rb:5573
+#: db/seeds/settings.rb:5576
 msgid "Knowledge Base active publicly"
 msgstr "Kunskapsbank aktiv publikt"
 
-#: db/seeds/settings.rb:5547
+#: db/seeds/settings.rb:5550
 msgid "Knowledge Base multilingual support"
 msgstr "Flerspråkigt stöd för kunskapsbank"
 
 #: app/assets/javascripts/app/controllers/_integration/ldap.coffee:3
 #: app/assets/javascripts/app/views/integration/ldap_wizard.jst.eco:8
-#: db/seeds/settings.rb:1219
+#: db/seeds/settings.rb:1222
 msgid "LDAP"
 msgstr "LDAP"
 
@@ -10614,7 +10649,7 @@ msgstr "LDAP"
 msgid "LDAP Host"
 msgstr "LDAP Host"
 
-#: db/seeds/settings.rb:4910
+#: db/seeds/settings.rb:4913
 msgid "LDAP integration"
 msgstr "LDAP-integration"
 
@@ -10833,15 +10868,15 @@ msgstr "Begränsa notifieringar till specifika Grupper"
 msgid "Limit priorities and provide optional descriptions"
 msgstr "Begränsa prioriteringar och ge valfria beskrivningar"
 
-#: db/seeds/settings.rb:3117
+#: db/seeds/settings.rb:3120
 msgid "Limit tickets by IP per day"
 msgstr "Begränsa antalet ärende per IP och dag"
 
-#: db/seeds/settings.rb:3096
+#: db/seeds/settings.rb:3099
 msgid "Limit tickets by IP per hour"
 msgstr "Begränsa antalet ärenden per IP och timme"
 
-#: db/seeds/settings.rb:3138
+#: db/seeds/settings.rb:3141
 msgid "Limit tickets per day"
 msgstr "Begränsa antalet ärenden per dag"
 
@@ -10961,15 +10996,15 @@ msgstr "Länkade konton"
 
 #: app/assets/javascripts/app/controllers/_profile/linked_accounts.coffee:76
 #: app/frontend/shared/composables/authentication/useThirdPartyAuthentication.ts:32
-#: db/seeds/settings.rb:1539
+#: db/seeds/settings.rb:1542
 msgid "LinkedIn"
 msgstr "LinkedIn"
 
-#: db/seeds/settings.rb:1547
+#: db/seeds/settings.rb:1550
 msgid "LinkedIn App Credentials"
 msgstr "Uppgifter för LinkedIn App"
 
-#: db/seeds/settings.rb:1540
+#: db/seeds/settings.rb:1543
 msgid "LinkedIn Developer Site"
 msgstr "LinkedIn Developer webbplats"
 
@@ -11560,7 +11595,7 @@ msgid "Match none (NOT)"
 msgstr "Matcha ingen (NOT)"
 
 #: app/assets/javascripts/app/controllers/_manage/ticket_duplicate_detection.coffee:38
-#: db/seeds/settings.rb:2805
+#: db/seeds/settings.rb:2808
 msgid "Match tickets in following states"
 msgstr "Matcha ärenden med följande status"
 
@@ -11589,7 +11624,7 @@ msgstr "Maximalt antal aktiva chattar"
 msgid "Max. length"
 msgstr "Maximal längd"
 
-#: db/seeds/settings.rb:3172
+#: db/seeds/settings.rb:3175
 msgid "Max. length of the subject in an email reply."
 msgstr "Maximal längd på ämnet i ett e-postsvar."
 
@@ -11614,15 +11649,15 @@ msgstr ""
 msgid "Maximal value must be lower than 2147483648"
 msgstr "Maxvärdet måste vara lägre än 2147483648"
 
-#: db/seeds/settings.rb:3284
+#: db/seeds/settings.rb:3287
 msgid "Maximum Email Size"
 msgstr "Maximal e-poststorlek"
 
-#: db/seeds/settings.rb:2913
+#: db/seeds/settings.rb:2916
 msgid "Maximum Recursive Ticket Triggers Depth"
 msgstr "Maximalt Rekursiva Ärendetriggersdjup"
 
-#: db/seeds/settings.rb:2235
+#: db/seeds/settings.rb:2238
 msgid "Maximum failed logins"
 msgstr "Maximalt antal misslyckade inloggningar"
 
@@ -11630,7 +11665,7 @@ msgstr "Maximalt antal misslyckade inloggningar"
 msgid "Maximum number of open tabs."
 msgstr "Maximalt antal öppna flikar."
 
-#: db/seeds/settings.rb:2916
+#: db/seeds/settings.rb:2919
 msgid "Maximum number of recursively executed triggers."
 msgstr "Maximalt antal rekursivt exekverade triggers."
 
@@ -11780,11 +11815,11 @@ msgstr "Metod (AJAX-slutpunkt)"
 
 #: app/assets/javascripts/app/controllers/_profile/linked_accounts.coffee:91
 #: app/frontend/shared/composables/authentication/useThirdPartyAuthentication.ts:53
-#: db/seeds/settings.rb:1741
+#: db/seeds/settings.rb:1744
 msgid "Microsoft"
 msgstr "Microsoft"
 
-#: db/seeds/settings.rb:1749
+#: db/seeds/settings.rb:1752
 msgid "Microsoft 365 App Credentials"
 msgstr "Microsoft 365 App Inloggningsuppgifter"
 
@@ -11802,7 +11837,7 @@ msgstr "Microsoft 365 Graph Email"
 msgid "Microsoft 365 IMAP Email"
 msgstr "Microsoft 365 IMAP E-post"
 
-#: db/seeds/settings.rb:1742
+#: db/seeds/settings.rb:1745
 msgid "Microsoft Application Registration Portal"
 msgstr "Microsoft Applikation Registrering Portal"
 
@@ -11843,7 +11878,7 @@ msgstr "Migrator kan inte läsa OTRS-utdata!"
 msgid "Milestone"
 msgstr "Milsten"
 
-#: db/seeds/settings.rb:2480
+#: db/seeds/settings.rb:2483
 msgid "Min. size of number"
 msgstr "Minimal storlek på nummer"
 
@@ -11863,7 +11898,7 @@ msgstr "Minimivärdet måste vara högre än -2147483648"
 msgid "Minimal value must be lower than 2147483648"
 msgstr "Minimivärdet måste vara lägre än 2147483648"
 
-#: db/seeds/settings.rb:2117
+#: db/seeds/settings.rb:2120
 msgid "Minimum length"
 msgstr "Minsta längd"
 
@@ -11920,7 +11955,7 @@ msgstr "måndag"
 msgid "Monit"
 msgstr "Monit"
 
-#: db/seeds/settings.rb:4809
+#: db/seeds/settings.rb:4812
 msgid "Monit integration"
 msgstr "Monit integration"
 
@@ -11930,7 +11965,7 @@ msgstr "Monit integration"
 msgid "Monitoring"
 msgstr "Övervakning"
 
-#: db/seeds/settings.rb:3552
+#: db/seeds/settings.rb:3555
 msgid "Monitoring Token"
 msgstr "Token för övervakning"
 
@@ -12047,7 +12082,7 @@ msgstr "Mina pågående ärenden"
 msgid "Nagios"
 msgstr "Nagios"
 
-#: db/seeds/settings.rb:4578
+#: db/seeds/settings.rb:4581
 msgid "Nagios integration"
 msgstr "Nagios integration"
 
@@ -12056,7 +12091,7 @@ msgstr "Nagios integration"
 #: app/assets/javascripts/app/controllers/_ui_element/object_attribute_options_context.coffee:21
 #: app/assets/javascripts/app/controllers/chat.coffee:559
 #: app/assets/javascripts/app/controllers/widget/two_factor_configuration/modal/security_keys.coffee:58
-#: app/assets/javascripts/app/models/_application_model.coffee:156
+#: app/assets/javascripts/app/models/_application_model.coffee:158
 #: app/assets/javascripts/app/models/ai_agent.coffee:6
 #: app/assets/javascripts/app/models/ai_text_tool.coffee:6
 #: app/assets/javascripts/app/models/application.coffee:7
@@ -12122,7 +12157,7 @@ msgstr "Nagios integration"
 msgid "Name"
 msgstr "Namn"
 
-#: db/seeds/settings.rb:1930
+#: db/seeds/settings.rb:1933
 msgid "Name Identifier Format"
 msgstr "Namn Identifieringsformat"
 
@@ -12178,7 +12213,7 @@ msgstr "Behöver session_id."
 msgid "Need user_id or organization_id as param"
 msgstr "Behöver user_id eller organization_id som parameter"
 
-#: db/seeds/settings.rb:2190
+#: db/seeds/settings.rb:2193
 msgid "Needed"
 msgstr "behövs"
 
@@ -12317,7 +12352,7 @@ msgid "New Source"
 msgstr "Ny Källa"
 
 #: app/assets/javascripts/app/views/tag/index.jst.eco:14
-#: db/seeds/settings.rb:4175
+#: db/seeds/settings.rb:4178
 msgid "New Tags"
 msgstr "Ny Tagg"
 
@@ -12502,7 +12537,7 @@ msgstr "Nästa Status"
 #: app/assets/javascripts/app/views/ticket_zoom/attribute_bar.jst.eco:52
 #: app/assets/javascripts/app/views/ticket_zoom/overview_navigator.jst.eco:12
 #: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/TicketScreenBehavior/behaviorOptions.ts:21
-#: db/seeds/settings.rb:3024
+#: db/seeds/settings.rb:3027
 msgid "Next in overview"
 msgstr "Nästa i översikten"
 
@@ -12845,7 +12880,7 @@ msgstr "Inga olästa notifieringar :)"
 msgid "No unread notifications."
 msgstr "Inga olästa notifieringar."
 
-#: db/seeds/settings.rb:1297
+#: db/seeds/settings.rb:1300
 msgid "No user creation on logon"
 msgstr "Användare skapas inte vid inloggning"
 
@@ -12873,7 +12908,7 @@ msgstr "Nej tack"
 #: app/assets/javascripts/app/controllers/knowledge_base/permissions_dialog.coffee:9
 #: app/assets/javascripts/app/controllers/ticket_zoom/time_unit.coffee:55
 #: app/assets/javascripts/app/views/data_privacy/tasks.jst.eco:65
-#: app/graphql/gql/types/ticket_type.rb:109 db/seeds/settings.rb:1962
+#: app/graphql/gql/types/ticket_type.rb:109 db/seeds/settings.rb:1965
 msgid "None"
 msgstr "Ingen"
 
@@ -13026,7 +13061,7 @@ msgstr "OBS:"
 msgid "Notification"
 msgstr "Notifikation"
 
-#: db/seeds/settings.rb:3444
+#: db/seeds/settings.rb:3447
 msgid "Notification Sender"
 msgstr "Avsändare notifieringar"
 
@@ -13275,11 +13310,11 @@ msgstr ""
 "Endast %s% av detta språk är redan översatt. Hjälp gärna till att förbättra "
 "Zammad och komplettera översättningen."
 
-#: db/seeds/settings.rb:1965
+#: db/seeds/settings.rb:1968
 msgid "Only Encrypting"
 msgstr "Endast kryptering"
 
-#: db/seeds/settings.rb:1964
+#: db/seeds/settings.rb:1967
 msgid "Only Signing"
 msgstr "Endast Signering"
 
@@ -13337,7 +13372,7 @@ msgstr "Öppna"
 msgid "Open %s"
 msgstr "%s öppna"
 
-#: app/assets/javascripts/app/controllers/_ai/ticket_summary.coffee:82
+#: app/assets/javascripts/app/controllers/_ai/ticket_summary.coffee:83
 #: app/assets/javascripts/app/controllers/ticket_zoom/sidebar_ticket_summary.coffee:5
 msgid "Open Questions"
 msgstr "Öppna frågor"
@@ -13433,11 +13468,11 @@ msgstr "OpenAI"
 
 #: app/assets/javascripts/app/controllers/_profile/linked_accounts.coffee:116
 #: app/frontend/shared/composables/authentication/useThirdPartyAuthentication.ts:90
-#: db/seeds/settings.rb:2034
+#: db/seeds/settings.rb:2037
 msgid "OpenID Connect"
 msgstr "OpenID Connect"
 
-#: db/seeds/settings.rb:2042
+#: db/seeds/settings.rb:2045
 msgid "OpenID Connect Options"
 msgstr "OpenID Connect alternativ"
 
@@ -13795,19 +13830,19 @@ msgstr ""
 msgid "PGP"
 msgstr "PGP"
 
-#: db/seeds/settings.rb:5770
+#: db/seeds/settings.rb:5773
 msgid "PGP Recipient Alias Configuration"
 msgstr "PGP Mottagare Alias Konfiguration"
 
-#: db/seeds/settings.rb:5756
+#: db/seeds/settings.rb:5759
 msgid "PGP config"
 msgstr "PGP konfiguration"
 
-#: db/seeds/settings.rb:5728
+#: db/seeds/settings.rb:5731
 msgid "PGP integration"
 msgstr "PGP integration"
 
-#: db/seeds/settings.rb:2088
+#: db/seeds/settings.rb:2091
 msgid "PKCE"
 msgstr "PKCE"
 
@@ -13922,19 +13957,19 @@ msgstr "Lösenord för anslutning via proxy"
 msgid "Password for proxy connection."
 msgstr "Lösenord för anslutning via proxy."
 
-#: db/seeds/settings.rb:2160
+#: db/seeds/settings.rb:2163
 msgid "Password needs to contain 2 lower case and 2 upper case characters."
 msgstr "Lösenordet måste innehålla 2 versaler och 2 gemener."
 
-#: db/seeds/settings.rb:2186
+#: db/seeds/settings.rb:2189
 msgid "Password needs to contain at least one digit."
 msgstr "Lösenordet måste innehålla minst en siffra."
 
-#: db/seeds/settings.rb:2212
+#: db/seeds/settings.rb:2215
 msgid "Password needs to contain at least one special character."
 msgstr "Lösenordet måste innehålla minst ett specialtecken."
 
-#: db/seeds/settings.rb:2120
+#: db/seeds/settings.rb:2123
 msgid "Password needs to have at least a minimal number of characters."
 msgstr "Lösenord måste ha minst ett minimalt antal tecken."
 
@@ -14016,7 +14051,7 @@ msgid "Permanently Delete Knowledge Base"
 msgstr "Radera kunskapsbank, permanent"
 
 #: app/assets/javascripts/app/controllers/_manage/ticket_duplicate_detection.coffee:37
-#: db/seeds/settings.rb:2788
+#: db/seeds/settings.rb:2791
 msgid "Permission level for looking up tickets"
 msgstr "Behörighetsnivå för att söka ärenden"
 
@@ -14104,15 +14139,15 @@ msgstr "Platshållare för AI-genererad text"
 msgid "Placetel"
 msgstr "Placetel"
 
-#: db/seeds/settings.rb:5341
+#: db/seeds/settings.rb:5344
 msgid "Placetel Token"
 msgstr "Placetel Token"
 
-#: db/seeds/settings.rb:5327
+#: db/seeds/settings.rb:5330
 msgid "Placetel config"
 msgstr "Placetel konfig"
 
-#: db/seeds/settings.rb:5299
+#: db/seeds/settings.rb:5302
 msgid "Placetel integration"
 msgstr "Placetel integration"
 
@@ -14221,7 +14256,7 @@ msgid ""
 msgstr ""
 "Notera att e-post alias måste konfigureras på Microsoft 365 på förhand. %l"
 
-#: db/seeds/settings.rb:1927
+#: db/seeds/settings.rb:1930
 msgid ""
 "Please note that this attribute is deprecated within one of the next "
 "versions of Zammad. Use the IDP certificate instead."
@@ -14485,11 +14520,11 @@ msgstr "Prioritet"
 msgid "Priority icon"
 msgstr "Prioritetsikon"
 
-#: db/seeds/settings.rb:1976
+#: db/seeds/settings.rb:1979
 msgid "Private key (PEM)"
 msgstr "Privat nyckel (PEM)"
 
-#: db/seeds/settings.rb:1983
+#: db/seeds/settings.rb:1986
 msgid "Private key secret"
 msgstr "Privat nyckel secret"
 
@@ -14541,7 +14576,7 @@ msgstr "Profilinställningar"
 msgid "Profiles"
 msgstr "Profiler"
 
-#: db/seeds/settings.rb:2098
+#: db/seeds/settings.rb:2101
 msgid ""
 "Proof Key for Code Exchange is currently only supporting SHA256 as code "
 "challenge method."
@@ -14553,24 +14588,24 @@ msgstr ""
 msgid "Protocol"
 msgstr "Protokoll"
 
-#: app/assets/javascripts/app/controllers/_ai/ticket_summary.coffee:77
+#: app/assets/javascripts/app/controllers/_ai/ticket_summary.coffee:78
 msgid ""
 "Provide a summary of the conversation between customer and support agent."
 msgstr "Ge en summering av samtalet mellan kund och supportagent."
 
-#: app/assets/javascripts/app/controllers/_ai/ticket_summary.coffee:70
+#: app/assets/javascripts/app/controllers/_ai/ticket_summary.coffee:71
 msgid "Provide a summary of the problem the customer needs to get resolved."
 msgstr "Ge en summering av det problem som kunden behöver få löst."
 
-#: app/assets/javascripts/app/controllers/_ai/ticket_summary.coffee:84
+#: app/assets/javascripts/app/controllers/_ai/ticket_summary.coffee:85
 msgid "Provide a summary of the questions raised in the conversation."
 msgstr "Gör en summering av de frågor som togs upp i konversationen."
 
-#: app/assets/javascripts/app/controllers/_ai/ticket_summary.coffee:90
+#: app/assets/javascripts/app/controllers/_ai/ticket_summary.coffee:91
 msgid "Provide a summary of the upcoming events based on the conversation."
 msgstr "Ge en sammanfattning av de kommande händelserna baserat på samtalet."
 
-#: app/assets/javascripts/app/controllers/_ai/ticket_summary.coffee:96
+#: app/assets/javascripts/app/controllers/_ai/ticket_summary.coffee:97
 msgid ""
 "Provide an assessment of the customer sentiment based on the conversation."
 msgstr "Ge en bedömning av kundens uppfattning baserat på samtalet."
@@ -14662,7 +14697,7 @@ msgstr ""
 "Sätt ett meddelande på inloggningssidan. För att ändra det, klicka på "
 "textområdet nedan och ändra det in-line."
 
-#: db/seeds/settings.rb:3736
+#: db/seeds/settings.rb:3739
 msgid "Puts Zammad into import mode (disables some triggers)."
 msgstr "Sätter Zammad i importläge (inaktiverar vissa triggers)."
 
@@ -14830,7 +14865,7 @@ msgstr ""
 "Återställningskoder kan användas för att komma åt ditt konto om du förlorar "
 "åtkomst till andra tvåfaktorsautentiseringsmetoder."
 
-#: db/seeds/settings.rb:2849
+#: db/seeds/settings.rb:2852
 msgid "Recursive Ticket Triggers"
 msgstr "Rekursiva ärendetriggers"
 
@@ -14838,7 +14873,7 @@ msgstr "Rekursiva ärendetriggers"
 msgid "Redis version"
 msgstr "Redis version"
 
-#: db/seeds/settings.rb:3346
+#: db/seeds/settings.rb:3349
 msgid ""
 "References - Search for follow-up also in In-Reply-To or References headers."
 msgstr ""
@@ -15174,7 +15209,7 @@ msgstr "Den obligatoriska parametern \"profil\" saknas."
 msgid "Requirements"
 msgstr "Krav"
 
-#: db/seeds/settings.rb:5933
+#: db/seeds/settings.rb:5936
 msgid ""
 "Requires the setup of the two-factor authentication for certain user roles."
 msgstr ""
@@ -15405,7 +15440,7 @@ msgstr "Försöket att ladda ner det skickade mediet via WhatsApp misslyckades."
 msgid "Rewrite complex section and make it easy to understand"
 msgstr "Skriv om komplicerade avsnitt så att de blir lätta att förstå"
 
-#: db/seeds/settings.rb:6139
+#: db/seeds/settings.rb:6142
 msgid "Richtext Bubble Menu"
 msgstr "Richtext Bubble-meny"
 
@@ -15496,7 +15531,7 @@ msgstr ""
 "accepterad metod (eller mer exakt, ett protokoll) för att skicka digitalt "
 "signerade och krypterade meddelanden."
 
-#: db/seeds/settings.rb:5714
+#: db/seeds/settings.rb:5717
 msgid "S/MIME config"
 msgstr "S/MIME konfig"
 
@@ -15505,17 +15540,17 @@ msgid "S/MIME enables you to send digitally signed and encrypted messages."
 msgstr ""
 "Med S/MIME kan du skicka digitalt signerade och krypterade meddelanden."
 
-#: db/seeds/settings.rb:5686
+#: db/seeds/settings.rb:5689
 msgid "S/MIME integration"
 msgstr "S/MIME integration"
 
 #: app/assets/javascripts/app/controllers/_profile/linked_accounts.coffee:106
 #: app/frontend/shared/composables/authentication/useThirdPartyAuthentication.ts:74
-#: db/seeds/settings.rb:1876
+#: db/seeds/settings.rb:1879
 msgid "SAML"
 msgstr "SAML"
 
-#: db/seeds/settings.rb:1884
+#: db/seeds/settings.rb:1887
 msgid "SAML App Credentials"
 msgstr "SAML App Autentiseringsuppgifter"
 
@@ -15605,7 +15640,7 @@ msgstr "SSL/STARTTLS"
 
 #: app/assets/javascripts/app/controllers/_profile/linked_accounts.coffee:111
 #: app/frontend/shared/composables/authentication/useThirdPartyAuthentication.ts:81
-#: db/seeds/settings.rb:5802
+#: db/seeds/settings.rb:5805
 msgid "SSO"
 msgstr "SSO"
 
@@ -15736,11 +15771,11 @@ msgstr "Schemaläggare"
 msgid "Schedulers"
 msgstr "Schemaläggare"
 
-#: db/seeds/settings.rb:2080
+#: db/seeds/settings.rb:2083
 msgid "Scopes"
 msgstr "Omfattningar"
 
-#: db/seeds/settings.rb:2085
+#: db/seeds/settings.rb:2088
 msgid ""
 "Scopes that are included, separated by a single space character. If unset, "
 "\"openid email profile\" is used."
@@ -16039,7 +16074,7 @@ msgstr "Säkerhetsnyckel"
 
 #: app/assets/javascripts/app/controllers/widget/two_factor_configuration/modal/security_keys.coffee:4
 #: app/assets/javascripts/app/lib/app_post/two_factor_methods/security_keys.coffee:5
-#: db/seeds/settings.rb:5839
+#: db/seeds/settings.rb:5842
 msgid "Security Keys"
 msgstr "Säkerhetsnycklar"
 
@@ -16299,11 +16334,11 @@ msgstr ""
 "Skicka ut automatiska påminnelser till kunderna och be dem svara om 24-"
 "timmarsfönstret är på väg att löpa ut."
 
-#: db/seeds/settings.rb:3417
+#: db/seeds/settings.rb:3420
 msgid "Send postmaster mail if mail too large"
 msgstr "Skicka postmaster mail om email är för stort"
 
-#: db/seeds/settings.rb:3420
+#: db/seeds/settings.rb:3423
 msgid "Send postmaster reject mail to sender of mail if mail is too large."
 msgstr "Skicka postmaster reject mail till avsändaren om email är för stort."
 
@@ -16315,16 +16350,16 @@ msgstr "Skicka till klienter"
 #: app/assets/javascripts/app/views/channel/sms_account_overview.jst.eco:51
 #: app/models/channel/driver/sms/massenversand.rb:45
 #: app/models/channel/driver/sms/message_bird.rb:92
-#: app/models/channel/driver/sms/twilio.rb:106 db/seeds/settings.rb:3234
+#: app/models/channel/driver/sms/twilio.rb:106 db/seeds/settings.rb:3237
 #: lib/excel_sheet/ticket.rb:32
 msgid "Sender"
 msgstr "Avsändare"
 
-#: db/seeds/settings.rb:3234
+#: db/seeds/settings.rb:3237
 msgid "Sender Format"
 msgstr "Avsändareformat"
 
-#: db/seeds/settings.rb:3262
+#: db/seeds/settings.rb:3265
 msgid "Sender Format Separator"
 msgstr "Avsändareformat-separator"
 
@@ -16333,7 +16368,7 @@ msgstr "Avsändareformat-separator"
 msgid "Sender Type"
 msgstr "Avsändartyp"
 
-#: db/seeds/settings.rb:3363
+#: db/seeds/settings.rb:3366
 msgid "Sender based on Reply-To header"
 msgstr "Avsändare baserat på Reply-To headern"
 
@@ -16371,7 +16406,7 @@ msgstr "Separera flera värden med ;"
 msgid "September"
 msgstr "September"
 
-#: db/seeds/settings.rb:4023
+#: db/seeds/settings.rb:4026
 msgid "Sequencer log level"
 msgstr "Loggnivå för sekvenser"
 
@@ -16426,7 +16461,7 @@ msgstr "Konfigurera"
 msgid "Set a title for your ticket"
 msgstr "Ange en titel för ditt ärende"
 
-#: db/seeds/settings.rb:5429
+#: db/seeds/settings.rb:5432
 msgid "Set agent limit"
 msgstr "Sätt agentgräns"
 
@@ -16452,7 +16487,7 @@ msgstr "Ange Authenticator App som standard"
 msgid "Set available ticket types"
 msgstr "Sätt tillgängliga ärendetyper"
 
-#: db/seeds/settings.rb:3758
+#: db/seeds/settings.rb:3761
 msgid "Set backend which is being used for import."
 msgstr "Sätt vilken backend som används för import."
 
@@ -16482,10 +16517,14 @@ msgstr "Ange utgående caller-id"
 msgid "Set security keys as default"
 msgstr "Ange säkerhetsnycklar som standard"
 
-#: db/seeds/settings.rb:5591
+#: db/seeds/settings.rb:5594
+#, fuzzy
+#| msgid ""
+#| "Set timeframe in seconds. If it's set to 0 you can delete notes without "
+#| "time limits"
 msgid ""
 "Set timeframe in seconds. If it's set to 0 you can delete notes without time "
-"limits"
+"limits."
 msgstr ""
 "Ställ in tidsram i sekunder. Om den är inställd på 0 kan du radera "
 "noteringar utan tidsbegränsning"
@@ -16532,7 +16571,7 @@ msgstr "Konfigurera två-faktorautentisering"
 msgid "Set up two-factor authentication: %s"
 msgstr "Konfigurera två-faktorautentisering"
 
-#: db/seeds/settings.rb:3366
+#: db/seeds/settings.rb:3369
 msgid ""
 "Set/overwrite sender/from of email based on \"Reply-To\" header. Useful to "
 "set correct customer if email is received from a third-party system on "
@@ -16677,7 +16716,7 @@ msgstr "Visa alla …"
 msgid "Show authenticator app secret"
 msgstr "Visa authenticator app secret"
 
-#: db/seeds/settings.rb:5811
+#: db/seeds/settings.rb:5814
 msgid "Show calendar weeks in the picker of date/datetime fields"
 msgstr "Visa kalenderveckor i datum/datumtidsfält"
 
@@ -16698,7 +16737,7 @@ msgstr "Visa mindre"
 msgid "Show matching ticket(s) in the warning"
 msgstr "Visa matchande ärende/ärenden i varningen"
 
-#: db/seeds/settings.rb:2771
+#: db/seeds/settings.rb:2774
 msgid "Show matching tickets in the warning"
 msgstr "Visa matchande ärenden i varningen"
 
@@ -16759,7 +16798,7 @@ msgid "Show ticket viewers"
 msgstr "Visa ärendeläsare"
 
 #: app/assets/javascripts/app/views/time_accounting/settings.jst.eco:6
-#: db/seeds/settings.rb:4088
+#: db/seeds/settings.rb:4091
 msgid "Show time accounting dialog when updating matching tickets."
 msgstr "Visa tidsredovisning dialogrutan vid uppdatering av matchande ärenden."
 
@@ -16767,7 +16806,7 @@ msgstr "Visa tidsredovisning dialogrutan vid uppdatering av matchande ärenden."
 msgid "Show title in form."
 msgstr "Visa titel i formulär."
 
-#: db/seeds/settings.rb:2754
+#: db/seeds/settings.rb:2757
 msgid "Show to user roles"
 msgstr "Visa för användarroller"
 
@@ -16889,7 +16928,7 @@ msgstr "Signaturer"
 msgid "Signed"
 msgstr "Signerad"
 
-#: db/seeds/settings.rb:1957
+#: db/seeds/settings.rb:1960
 msgid "Signing & Encrypting"
 msgstr "Signering & Kryptering"
 
@@ -16897,7 +16936,7 @@ msgstr "Signering & Kryptering"
 msgid "Signup Screen"
 msgstr "Registreringssida"
 
-#: db/seeds/settings.rb:2733
+#: db/seeds/settings.rb:2736
 msgid "Similar tickets found"
 msgstr "Liknande ärende hittade"
 
@@ -16928,11 +16967,11 @@ msgstr "Simple Storage Service(S3) funktionsfel. Kontakta en administratör."
 msgid "Simple Storage Service not reachable."
 msgstr "Simple Storage Service kan inte nås."
 
-#: db/seeds/settings.rb:1813
+#: db/seeds/settings.rb:1816
 msgid "Sina Weibo"
 msgstr "Sina Weibo"
 
-#: db/seeds/settings.rb:1813
+#: db/seeds/settings.rb:1816
 msgid "Sina Weibo Open Portal"
 msgstr "Sina Weibo Öppen Portal"
 
@@ -16961,7 +17000,7 @@ msgstr "Enkelvalsträdfält"
 msgid "Sipgate"
 msgstr "Sipgate"
 
-#: db/seeds/settings.rb:1697
+#: db/seeds/settings.rb:1700
 msgid "Site"
 msgstr "Sidplats"
 
@@ -17026,9 +17065,13 @@ msgid "Sorry, there is currently no CTI backend enabled."
 msgstr "Tyvärr, det finns för närvarande ingen CTI-backend aktiverad."
 
 #: app/frontend/apps/desktop/composables/dragAndDrop/useKeyboardKeysForDragAndDrop.ts:146
+#, fuzzy
+#| msgid ""
+#| "Sortable list focused. Use up and down arrows to navigate items. Press "
+#| "Space to select and item and again on another item to swap them."
 msgid ""
 "Sortable list focused. Use up and down arrows to navigate items. Press Space "
-"to select and item and again on another item to swap them."
+"to select an item and again on another item to swap them."
 msgstr ""
 "Fokuserad sorterbar lista. Använd upp- och nedpilarna för att navigera bland "
 "objekten. Tryck på mellanslag för att välja ett objekt och tryck igen på ett "
@@ -17068,7 +17111,7 @@ msgstr "Ursprung"
 msgid "Sources"
 msgstr "Ursprung/källor"
 
-#: db/seeds/settings.rb:2209
+#: db/seeds/settings.rb:2212
 msgid "Special character required"
 msgstr "Specialtecken krävs"
 
@@ -17220,7 +17263,7 @@ msgstr "Status"
 msgid "State icon"
 msgstr "Statusikon"
 
-#: db/seeds/settings.rb:5463
+#: db/seeds/settings.rb:5466
 msgid "Stats Backend"
 msgstr "Statistik Backend"
 
@@ -17252,7 +17295,7 @@ msgstr "Status:"
 #: app/assets/javascripts/app/models/macro.coffee:9
 #: app/assets/javascripts/app/views/ticket_zoom/attribute_bar.jst.eco:58
 #: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/TicketScreenBehavior/behaviorOptions.ts:8
-#: db/seeds/settings.rb:3025
+#: db/seeds/settings.rb:3028
 msgid "Stay on tab"
 msgstr "Stanna på flik"
 
@@ -17294,19 +17337,19 @@ msgstr "Lagringsmetod"
 msgid "Store"
 msgstr "Lagra"
 
-#: db/seeds/settings.rb:6065
+#: db/seeds/settings.rb:6068
 msgid "Stores the AI provider configuration."
 msgstr "Lagrar konfigurationen för AI-leverantören."
 
-#: db/seeds/settings.rb:5102
+#: db/seeds/settings.rb:5105
 msgid "Stores the GitHub configuration."
 msgstr "Lagrar GitHub-konfigurationen."
 
-#: db/seeds/settings.rb:5060
+#: db/seeds/settings.rb:5063
 msgid "Stores the GitLab configuration."
 msgstr "Lagrar GitLab-konfigurationen."
 
-#: db/seeds/settings.rb:6095
+#: db/seeds/settings.rb:6098
 msgid ""
 "Stores the ticket summarization options (e.g. which content is visible)."
 msgstr ""
@@ -17332,7 +17375,7 @@ msgstr "Gata"
 msgid "Subject"
 msgstr "Ämne"
 
-#: db/seeds/settings.rb:3349
+#: db/seeds/settings.rb:3352
 msgid ""
 "Subject & References - Additional search for same article subject and same "
 "message ID in references header if no follow-up was recognized using default "
@@ -17455,7 +17498,7 @@ msgstr "sön"
 msgid "Sunday"
 msgstr "Söndag"
 
-#: db/seeds/settings.rb:5550
+#: db/seeds/settings.rb:5553
 msgid "Support of multilingual Knowledge Base."
 msgstr "Stöd för flerspråkig kunskapsbank."
 
@@ -17493,7 +17536,7 @@ msgstr "Synkronisera med dator"
 msgid "System"
 msgstr "System"
 
-#: db/seeds/settings.rb:3246
+#: db/seeds/settings.rb:3249
 msgid "System Address Display Name"
 msgstr "Systemadress Visningsnamn"
 
@@ -17540,7 +17583,7 @@ msgstr ""
 "%l. Det har ett mycket enkelt användargränssnitt baserat på Weblate, prova "
 "det!"
 
-#: db/seeds/settings.rb:5623
+#: db/seeds/settings.rb:5626
 msgid ""
 "System-wide configuration of the query polling mechanism for ticket "
 "overviews."
@@ -17552,7 +17595,7 @@ msgstr ""
 msgid "SystemID"
 msgstr "SystemID"
 
-#: db/seeds/settings.rb:3010
+#: db/seeds/settings.rb:3013
 msgid "Tab behaviour after ticket action"
 msgstr "Flikbeteende när ärendet förändras"
 
@@ -17591,7 +17634,7 @@ msgstr "Etikett \"%s\" finns redan."
 msgid "Tags"
 msgstr "Taggar"
 
-#: db/seeds/settings.rb:3377
+#: db/seeds/settings.rb:3380
 msgid ""
 "Take Reply-To header as sender/from of email and use the real name of origin "
 "from."
@@ -17599,7 +17642,7 @@ msgstr ""
 "Använd Reply-To-rubriken som avsändare/från för e-postmeddelandet och använd "
 "det riktiga namnet för ursprunget från."
 
-#: db/seeds/settings.rb:3376
+#: db/seeds/settings.rb:3379
 msgid "Take Reply-To header as sender/from of email."
 msgstr "Använd Reply-To-rubriken som avsändare/från i e-postmeddelandet."
 
@@ -17842,7 +17885,10 @@ msgid "The OTRS import failed."
 msgstr "Importen av OTRS misslyckades."
 
 #: app/services/service/system/import/apply_otrs_configuration.rb:78
-msgid "The OTRS migrator plugin is not accessable. Please verify the API key."
+#, fuzzy
+#| msgid ""
+#| "The OTRS migrator plugin is not accessable. Please verify the API key."
+msgid "The OTRS migrator plugin is not accessible. Please verify the API key."
 msgstr "OTRS migrator plugin kan inte nås. Verifiera API-nyckeln."
 
 #: lib/secure_mailing/pgp/tool/error.rb:106
@@ -18260,7 +18306,7 @@ msgstr ""
 msgid "The device could not be deleted."
 msgstr "Enheten kunde inte tas bort."
 
-#: db/seeds/settings.rb:2304
+#: db/seeds/settings.rb:2307
 msgid "The divider between TicketHook and ticket number. E. g. ': '."
 msgstr "Avdelaren mellan TicketHook och ärendenummer. T.ex. ': '."
 
@@ -18415,7 +18461,7 @@ msgstr "Värdnamnet kunde inte hittas."
 msgid "The hours overlay"
 msgstr "Timmar overlay"
 
-#: db/seeds/settings.rb:2279
+#: db/seeds/settings.rb:2282
 msgid ""
 "The identifier for a ticket, e.g. Ticket#, Call#, MyTicket#. The default is "
 "Ticket#."
@@ -19033,12 +19079,12 @@ msgstr "Mål-ärendenumret kunde inte hittas."
 msgid "The test run was successful."
 msgstr "Testkörningen var framgångsrik."
 
-#: db/seeds/settings.rb:3215
+#: db/seeds/settings.rb:3218
 msgid ""
 "The text at the beginning of the subject in an email forward, e. g. FWD."
 msgstr "Texten i början av ämnet i ett e-postmeddelande, t. ex. VB."
 
-#: db/seeds/settings.rb:3193
+#: db/seeds/settings.rb:3196
 msgid ""
 "The text at the beginning of the subject in an email reply, e.g. RE, AW, or "
 "AS."
@@ -20065,11 +20111,11 @@ msgstr "Automatisk Ärendetilldelning"
 msgid "Ticket Categorizer"
 msgstr "Kategorisering av ärenden"
 
-#: db/seeds/settings.rb:2381
+#: db/seeds/settings.rb:2384
 msgid "Ticket Conditions Expert Mode"
 msgstr "Ärendevillkor Expertläge"
 
-#: db/seeds/settings.rb:2407
+#: db/seeds/settings.rb:2410
 msgid "Ticket Conditions Regular Expression Operators"
 msgstr "Ärendevillkor Reguljära Uttryck Operatörer"
 
@@ -20089,43 +20135,43 @@ msgstr "Ärende Duplikatdetektering"
 msgid "Ticket Group Dispatcher"
 msgstr "Ärende Grupp Fördelare"
 
-#: db/seeds/settings.rb:2276
+#: db/seeds/settings.rb:2279
 msgid "Ticket Hook"
 msgstr "Ärende-krok"
 
-#: db/seeds/settings.rb:2301
+#: db/seeds/settings.rb:2304
 msgid "Ticket Hook Divider"
 msgstr "Ärende Hook Avdelare"
 
-#: db/seeds/settings.rb:2322
+#: db/seeds/settings.rb:2325
 msgid "Ticket Hook Position"
 msgstr "Ärendekrokens possition"
 
-#: db/seeds/settings.rb:2354
+#: db/seeds/settings.rb:2357
 msgid "Ticket Last Contact Behaviour"
 msgstr "Ärendets senaste kontakt-beteende"
 
-#: db/seeds/settings.rb:2433
+#: db/seeds/settings.rb:2436
 msgid "Ticket Number Format"
 msgstr "Format ärendenummer"
 
-#: db/seeds/settings.rb:2463
+#: db/seeds/settings.rb:2466
 msgid "Ticket Number Increment"
 msgstr "Ärendenummerökning"
 
-#: db/seeds/settings.rb:2520
+#: db/seeds/settings.rb:2523
 msgid "Ticket Number Increment Date"
 msgstr "Ärendenummer Ökningsdatum"
 
-#: db/seeds/settings.rb:2822
+#: db/seeds/settings.rb:2825
 msgid "Ticket Number ignore system_id"
 msgstr "Ärendenummer ignorera 'system_id'"
 
-#: db/seeds/settings.rb:5955
+#: db/seeds/settings.rb:5958
 msgid "Ticket Organization Reassignment"
 msgstr "Ärenden Organisation Omplacering"
 
-#: db/seeds/settings.rb:5620
+#: db/seeds/settings.rb:5623
 msgid "Ticket Overview Query Polling"
 msgstr "Ärendeöversikt Fråga Polling"
 
@@ -20167,15 +20213,15 @@ msgstr "Ärendestatus"
 msgid "Ticket States"
 msgstr "Ärendestatus"
 
-#: db/seeds/settings.rb:3212
+#: db/seeds/settings.rb:3215
 msgid "Ticket Subject Forward"
 msgstr "Vidarebefordra ärendet"
 
-#: db/seeds/settings.rb:3190
+#: db/seeds/settings.rb:3193
 msgid "Ticket Subject Reply"
 msgstr "Ärendeämnets Svar"
 
-#: db/seeds/settings.rb:3169
+#: db/seeds/settings.rb:3172
 msgid "Ticket Subject Size"
 msgstr "Ärendeämnets Storlek"
 
@@ -20185,11 +20231,11 @@ msgstr "Ärendeabonneringar"
 
 #: app/assets/javascripts/app/controllers/_ai/ticket_summary.coffee:2
 #: app/assets/javascripts/app/views/ai/ticket_summary.jst.eco:7
-#: db/seeds/permissions.rb:239 db/seeds/settings.rb:6078
+#: db/seeds/permissions.rb:239 db/seeds/settings.rb:6081
 msgid "Ticket Summary"
 msgstr "Summering av ärendet"
 
-#: db/seeds/settings.rb:6092
+#: db/seeds/settings.rb:6095
 msgid "Ticket Summary Config"
 msgstr "Ärende summering Konfig"
 
@@ -20209,11 +20255,11 @@ msgstr ""
 msgid "Ticket Title Rewriter"
 msgstr "Ärendetitel omskrivare"
 
-#: db/seeds/settings.rb:2894
+#: db/seeds/settings.rb:2897
 msgid "Ticket Trigger Loop Protection Articles Total"
 msgstr "Ärende Trigger Loop Skydd Artiklar Totalt"
 
-#: db/seeds/settings.rb:2875
+#: db/seeds/settings.rb:2878
 msgid "Ticket Trigger Loop Protection Articles per Ticket"
 msgstr "Ärende Trigger Loop Skydd Artiklar Per Ärende"
 
@@ -20532,7 +20578,7 @@ msgstr "Ärende för Användare"
 msgid "Tickets with \"%s\""
 msgstr "Ärenden med \"%s\""
 
-#: db/seeds/settings.rb:2750
+#: db/seeds/settings.rb:2753
 msgid "Tickets with the same attributes were found."
 msgstr "Ärenden med samma attribut hittades."
 
@@ -20551,27 +20597,27 @@ msgstr "Tid"
 #: app/assets/javascripts/app/controllers/_ui_element/object_selector.coffee:134
 #: app/assets/javascripts/app/controllers/ticket_zoom/time_accounting_modal.coffee:12
 #: app/assets/javascripts/app/controllers/time_accounting.coffee:3
-#: db/seeds/permissions.rb:107 db/seeds/settings.rb:4058
+#: db/seeds/permissions.rb:107 db/seeds/settings.rb:4061
 msgid "Time Accounting"
 msgstr "Tidsredovisning"
 
-#: db/seeds/settings.rb:4121
+#: db/seeds/settings.rb:4124
 msgid "Time Accounting Custom Unit"
 msgstr "Tidsredovisning anpassad enhet"
 
-#: db/seeds/settings.rb:4157
+#: db/seeds/settings.rb:4160
 msgid "Time Accounting Default Type"
 msgstr "Tidsredovisning Standardtyp"
 
-#: db/seeds/settings.rb:4085
+#: db/seeds/settings.rb:4088
 msgid "Time Accounting Selector"
 msgstr "Väljare för tidredovisning"
 
-#: db/seeds/settings.rb:4139
+#: db/seeds/settings.rb:4142
 msgid "Time Accounting Types"
 msgstr "Tidsredovisningtyper"
 
-#: db/seeds/settings.rb:4103
+#: db/seeds/settings.rb:4106
 msgid "Time Accounting Unit"
 msgstr "Tidsredovisningenheter"
 
@@ -20672,7 +20718,7 @@ msgstr "Formulärtitel"
 msgid "To"
 msgstr "Till"
 
-#: db/seeds/settings.rb:3493
+#: db/seeds/settings.rb:3496
 msgid ""
 "To archive all outgoing emails from Zammad to external, you can store a BCC "
 "email address here."
@@ -20826,15 +20872,15 @@ msgstr "Tokenåtkomst"
 msgid "Token authorization failed."
 msgstr "Auktorisering av token misslyckades."
 
-#: db/seeds/settings.rb:5268
+#: db/seeds/settings.rb:5271
 msgid "Token for CTI."
 msgstr "Token för CTI."
 
-#: db/seeds/settings.rb:5172
+#: db/seeds/settings.rb:5175
 msgid "Token for Sipgate."
 msgstr "Token för Sipgate."
 
-#: db/seeds/settings.rb:3555
+#: db/seeds/settings.rb:3558
 msgid "Token for monitoring."
 msgstr "Token för övervakning."
 
@@ -21028,23 +21074,23 @@ msgstr ""
 
 #: app/assets/javascripts/app/controllers/_profile/linked_accounts.coffee:71
 #: app/frontend/shared/composables/authentication/useThirdPartyAuthentication.ts:25
-#: db/seeds/settings.rb:1344
+#: db/seeds/settings.rb:1347
 msgid "Twitter"
 msgstr "Twitter"
 
-#: db/seeds/settings.rb:1352
+#: db/seeds/settings.rb:1355
 msgid "Twitter App Credentials"
 msgstr "Twitter App Uppgifter"
 
-#: db/seeds/settings.rb:1345
+#: db/seeds/settings.rb:1348
 msgid "Twitter Developer Site"
 msgstr "Twitter Developer Sida"
 
-#: db/seeds/settings.rb:1359
+#: db/seeds/settings.rb:1362
 msgid "Twitter Key"
 msgstr "Twitternyckel"
 
-#: db/seeds/settings.rb:1365
+#: db/seeds/settings.rb:1368
 msgid "Twitter Secret"
 msgstr "Twitterhemlighet"
 
@@ -21145,27 +21191,15 @@ msgstr "Typ"
 msgid "Type:"
 msgstr "Typ:"
 
-#: db/seeds/settings.rb:6030
-msgid "UI Desktop BETA Switch Admin Menu"
-msgstr "Användargränssnitt BETA växlare admin-meny"
-
-#: db/seeds/settings.rb:6039
-msgid "UI Desktop BETA Switch Roles"
-msgstr "Användargränssnitt BETA växlare roller"
-
-#: db/seeds/settings.rb:6021
-msgid "UI Desktop Beta Switch"
-msgstr "UI Desktop Beta Väljare"
-
 #: app/assets/javascripts/app/views/integration/ldap.jst.eco:44
 msgid "UID"
 msgstr "UID"
 
-#: db/seeds/settings.rb:1938
+#: db/seeds/settings.rb:1941
 msgid "UID Attribute Name"
 msgstr "UID Attributnamn"
 
-#: db/seeds/settings.rb:2072
+#: db/seeds/settings.rb:2075
 msgid "UID Field"
 msgstr "UID Fält"
 
@@ -21319,7 +21353,7 @@ msgstr ""
 "%s% av detta språk är redan översatt. Hjälp till att göra Zammad ännu bättre "
 "och komplettera översättningen."
 
-#: app/assets/javascripts/app/controllers/_ai/ticket_summary.coffee:88
+#: app/assets/javascripts/app/controllers/_ai/ticket_summary.coffee:89
 #: app/assets/javascripts/app/controllers/ticket_zoom/sidebar_ticket_summary.coffee:6
 msgid "Upcoming Events"
 msgstr "Kommande händelser"
@@ -21355,6 +21389,12 @@ msgstr "Uppdatering Diff i min"
 msgid "Update Escalation At"
 msgstr "Uppdatera Eskalering"
 
+#: db/seeds/schedulers.rb:259
+#, fuzzy
+#| msgid "Update exchange oauth 2 token."
+msgid "Update Exchange OAuth2 token."
+msgstr "Uppdatera exchange oauth 2 token."
+
 #: lib/excel_sheet/ticket.rb:68
 msgid "Update In Min"
 msgstr "Uppdatering i min"
@@ -21368,10 +21408,6 @@ msgstr "Uppdatera tid"
 #: app/assets/javascripts/app/controllers/_plugin/keyboard_shortcuts.coffee:513
 msgid "Update as closed"
 msgstr "Uppdatera till stängd"
-
-#: db/seeds/schedulers.rb:259
-msgid "Update exchange oauth 2 token."
-msgstr "Uppdatera exchange oauth 2 token."
 
 #: app/assets/javascripts/app/views/generic/object_import/index.jst.eco:14
 msgid "Update existing records"
@@ -21400,7 +21436,7 @@ msgstr "Uppdatera delat utkast"
 msgid "Update successful."
 msgstr "Uppdatering klar."
 
-#: db/seeds/settings.rb:5967
+#: db/seeds/settings.rb:5970
 msgid "Update the most recent tickets."
 msgstr "Uppdatera de senaste ärendena."
 
@@ -21700,7 +21736,7 @@ msgstr ""
 msgid "Use the camera to take a photo for the avatar."
 msgstr "Använd kameran för att ta ett foto för avataren."
 
-#: db/seeds/settings.rb:2368
+#: db/seeds/settings.rb:2371
 msgid ""
 "Use the start time of the last customer thread (which may consist of "
 "multiple articles)."
@@ -21708,12 +21744,14 @@ msgstr ""
 "Använd starttidpunkten för den senaste kundtråden (som kan bestå av flera "
 "artiklar)."
 
-#: db/seeds/settings.rb:2367
+#: db/seeds/settings.rb:2370
 msgid "Use the time of the very last customer article."
 msgstr "Använd tiden för den allra sista kundartikeln."
 
 #: app/assets/javascripts/app/controllers/_integration/ldap.coffee:5
-msgid "Use this switch to start synchronization of your ldap sources."
+#, fuzzy
+#| msgid "Use this switch to start synchronization of your ldap sources."
+msgid "Use this switch to start synchronization of your LDAP sources."
 msgstr ""
 "Använd denna switch för att starta synkroniseringen av dina ldap-källor."
 
@@ -21838,7 +21876,7 @@ msgstr "Användardokumentation"
 msgid "User email could not be extracted from 'id_token'."
 msgstr "Användarens e-postadress kunde inte extraheras från \"id_token\"."
 
-#: db/seeds/settings.rb:1157
+#: db/seeds/settings.rb:1160
 msgid "User email for multiple users"
 msgstr "Användarmail för flera användare"
 
@@ -22053,7 +22091,7 @@ msgstr "Verifiering E-post hittades inte i brevlådan."
 msgid "Verification email could not be sent."
 msgstr "Verifikationsmejl kunde inte skickas."
 
-#: db/seeds/settings.rb:1954
+#: db/seeds/settings.rb:1957
 msgid ""
 "Verification of the TLS connection to the IDP SSO target URL. Only relevant "
 "during setting up SAML authentication."
@@ -22185,12 +22223,12 @@ msgid "Warning"
 msgstr "Varning"
 
 #: app/assets/javascripts/app/controllers/_manage/ticket_duplicate_detection.coffee:34
-#: db/seeds/settings.rb:2737
+#: db/seeds/settings.rb:2740
 msgid "Warning message"
 msgstr "Varningsmeddelande"
 
 #: app/assets/javascripts/app/controllers/_manage/ticket_duplicate_detection.coffee:33
-#: db/seeds/settings.rb:2720
+#: db/seeds/settings.rb:2723
 msgid "Warning title"
 msgstr "Varningstitel"
 
@@ -22217,6 +22255,18 @@ msgstr "Webb (in)"
 #: app/assets/javascripts/app/controllers/knowledge_base/server_snippet.coffee:2
 msgid "Web Server Configuration"
 msgstr "Konfiguration av webbserver"
+
+#: db/seeds/settings.rb:310
+#, fuzzy
+#| msgid "Websocket backend"
+msgid "WebSocket backend"
+msgstr "Websocket backend"
+
+#: db/seeds/settings.rb:318
+#, fuzzy
+#| msgid "Websocket port"
+msgid "WebSocket port"
+msgstr "Websocket port"
 
 #: app/assets/javascripts/app/controllers/_channel/sms.coffee:201
 #: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:75
@@ -22263,14 +22313,6 @@ msgstr "Webblänk"
 msgid "Website"
 msgstr "Webbsida"
 
-#: db/seeds/settings.rb:310
-msgid "Websocket backend"
-msgstr "Websocket backend"
-
-#: db/seeds/settings.rb:318
-msgid "Websocket port"
-msgstr "Websocket port"
-
 #: app/assets/javascripts/app/controllers/_ui_element/basedate.coffee:157
 msgid "Wed"
 msgstr "ons"
@@ -22292,11 +22334,11 @@ msgstr "Vecka/-or"
 
 #: app/assets/javascripts/app/controllers/_profile/linked_accounts.coffee:101
 #: app/frontend/shared/composables/authentication/useThirdPartyAuthentication.ts:67
-#: db/seeds/settings.rb:1812
+#: db/seeds/settings.rb:1815
 msgid "Weibo"
 msgstr "Weibo"
 
-#: db/seeds/settings.rb:1820
+#: db/seeds/settings.rb:1823
 msgid "Weibo App Credentials"
 msgstr "Weibo App Autentiseringsuppgifter"
 
@@ -22379,9 +22421,13 @@ msgid "When should the job run?"
 msgstr "När ska jobbet köras?"
 
 #: app/assets/javascripts/app/views/channel/chat.jst.eco:218
+#, fuzzy
+#| msgid ""
+#| "When you turn on debugging by setting the option §debug§ to §true§ the "
+#| "reason gets printed to the javascript console."
 msgid ""
 "When you turn on debugging by setting the option §debug§ to §true§ the "
-"reason gets printed to the javascript console."
+"reason gets printed to the JavaScript console."
 msgstr ""
 "När du aktiverar felsökning genom att ställa in alternativet §debug§ till "
 "§true§ kommer anledningen att skrivas ut till javascript-konsolen."
@@ -22511,15 +22557,15 @@ msgstr "Arbetsflöde"
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingNewBetaUi.vue:104
 #, fuzzy
 #| msgid "Send feedback"
-msgid "Would you like to give us feedback on the BETA UI? "
+msgid "Would you like to give us feedback on the BETA UI?"
 msgstr "Skicka feedback"
 
 #: app/assets/javascripts/app/controllers/_ai/text_tool.coffee:16
-#: db/seeds/permissions.rb:245 db/seeds/settings.rb:6111
+#: db/seeds/permissions.rb:245 db/seeds/settings.rb:6114
 msgid "Writing Assistant"
 msgstr "Skrivassistent"
 
-#: db/seeds/settings.rb:6125
+#: db/seeds/settings.rb:6128
 msgid "Writing Assistant Fixed Instructions"
 msgstr "Skrivarassistent fasta instruktioner"
 
@@ -22623,10 +22669,6 @@ msgstr "Du får detta eftersom du är ägare till detta ärende."
 #: app/models/transaction/notification.rb:73
 msgid "You are receiving this because you were mentioned in this ticket."
 msgstr "Du får detta eftersom du nämndes i detta ärende."
-
-#: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingCalendar.vue:252
-msgid "You calendar subscription settings were updated."
-msgstr "Inställningarna för din kalenderprenumeration har uppdaterats."
 
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingNewBetaUi.vue:37
 msgid "You can always re-join later."
@@ -22833,17 +22875,14 @@ msgstr ""
 "redan är i produktion utan att data förloras."
 
 #: app/assets/javascripts/app/controllers/_plugin/navigation.coffee:185
-msgid ""
-"You can switch between the old and the New BETA UI at any moment in the "
-"Profile > New BETA UI section."
-msgstr ""
-"Du kan när som helst växla mellan det gamla och det nya BETA-gränssnittet i "
-"Profil > Nytt BETA-gränssnitt."
-
 #: app/frontend/apps/desktop/components/BetaUi/composables/useBetaUi.ts:82
+#, fuzzy
+#| msgid ""
+#| "You can switch between the old and the New BETA UI at any moment in the "
+#| "Profile Settings > New BETA UI section."
 msgid ""
 "You can switch between the old and the New BETA UI at any moment in the "
-"Profile Settings > New BETA UI section."
+"Profile settings > New BETA UI section."
 msgstr ""
 "Du kan när som helst växla mellan det gamla och det nya BETA-gränssnittet i "
 "profilinställningar > Nytt BETA-gränssnitt."
@@ -22994,7 +23033,10 @@ msgid "You must protect your account with two-factor authentication."
 msgstr "Du måste skydda ditt konto med tvåfaktorsautentisering."
 
 #: app/assets/javascripts/app/views/channel/form.jst.eco:151
-msgid "You need to add the following Javascript code snippet to your web page:"
+#, fuzzy
+#| msgid ""
+#| "You need to add the following Javascript code snippet to your web page:"
+msgid "You need to add the following JavaScript code snippet to your web page:"
 msgstr "Du måste lägga till följande Javascript-kod till din webbsida:"
 
 #: app/assets/javascripts/app/views/integration/placetel.jst.eco:5
@@ -23138,12 +23180,18 @@ msgstr "Din avatar har tagits bort."
 msgid "Your avatar has been uploaded."
 msgstr "Din avatar har laddats upp."
 
+#: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingCalendar.vue:252
+#, fuzzy
+#| msgid "You calendar subscription settings were updated."
+msgid "Your calendar subscription settings were updated."
+msgstr "Inställningarna för din kalenderprenumeration har uppdaterats."
+
 #: app/assets/javascripts/app/views/exchange/app_config.jst.eco:31
 #: app/assets/javascripts/app/views/facebook/app_config.jst.eco:23
 #: app/assets/javascripts/app/views/google/app_config.jst.eco:23
 #: app/assets/javascripts/app/views/microsoft365/app_config.jst.eco:31
 #: app/assets/javascripts/app/views/microsoft_graph/app_config.jst.eco:31
-#: db/seeds/settings.rb:1372
+#: db/seeds/settings.rb:1375
 msgid "Your callback URL"
 msgstr "Din callback URL"
 
@@ -23331,10 +23379,6 @@ msgstr "Lägg till ny tagg"
 #: app/assets/javascripts/app/controllers/_ui_element/core_workflow_perform.coffee:169
 msgid "add option"
 msgstr "Lägg till val"
-
-#: db/seeds/settings.rb:11
-msgid "admin"
-msgstr "admin"
 
 #: app/assets/javascripts/app/controllers/_ui_element/_application_selector.coffee:25
 #: app/assets/javascripts/app/controllers/_ui_element/core_workflow_condition.coffee:67
@@ -23645,9 +23689,15 @@ msgstr "fallande"
 msgid "detailed search"
 msgstr "detaljerad sökning"
 
-#: db/seeds/settings.rb:1203
+#: db/seeds/settings.rb:1206
 msgid "developer password"
 msgstr "developer lösenord"
+
+#: db/seeds/settings.rb:1103
+#, fuzzy
+#| msgid "Disable"
+msgid "disabled"
+msgstr "Inaktivera"
 
 #: app/assets/javascripts/app/views/customer_chat/chat_window.jst.eco:13
 msgid "disconnect"
@@ -23878,7 +23928,7 @@ msgstr "timme/timmar"
 msgid "hours"
 msgstr "timmar"
 
-#: db/seeds/settings.rb:2068
+#: db/seeds/settings.rb:2071
 msgid "https://example.com"
 msgstr "https://exempel.se"
 
@@ -23896,11 +23946,11 @@ msgstr ""
 msgid "i-doit"
 msgstr "i-doit"
 
-#: db/seeds/settings.rb:5017
+#: db/seeds/settings.rb:5020
 msgid "i-doit config"
 msgstr "i-doit konfig"
 
-#: db/seeds/settings.rb:4990
+#: db/seeds/settings.rb:4993
 msgid "i-doit integration"
 msgstr "i-doit integration"
 
@@ -23995,7 +24045,7 @@ msgstr "inaktiv"
 msgid "internal"
 msgstr "intern"
 
-#: db/seeds/settings.rb:1187
+#: db/seeds/settings.rb:1190
 msgid "internal database"
 msgstr "intern databas"
 
@@ -24095,7 +24145,7 @@ msgid "is not included in the list"
 msgstr "är inte i listan"
 
 #: app/assets/javascripts/app/controllers/maintenance.coffee:84
-#: app/assets/javascripts/app/models/_application_model.coffee:63
+#: app/assets/javascripts/app/models/_application_model.coffee:65
 msgid "is required"
 msgstr "obligatorisk"
 
@@ -24154,7 +24204,7 @@ msgstr "nyligen ändrad till"
 msgid "just now"
 msgstr "just nu"
 
-#: db/seeds/settings.rb:2338
+#: db/seeds/settings.rb:2341
 msgid "left"
 msgstr "vänster"
 
@@ -24361,7 +24411,7 @@ msgstr "Kommande händelser"
 #: app/assets/javascripts/app/views/microsoft_graph/list.jst.eco:106
 #: app/assets/javascripts/app/views/profile/token_access.jst.eco:27
 #: app/assets/javascripts/app/views/widget/ticket_stats_list.jst.eco:7
-#: db/seeds/settings.rb:2340
+#: db/seeds/settings.rb:2343
 msgid "none"
 msgstr "inga"
 
@@ -24541,7 +24591,7 @@ msgstr "svara alla"
 msgid "required"
 msgstr "krävs"
 
-#: db/seeds/settings.rb:2339
+#: db/seeds/settings.rb:2342
 msgid "right"
 msgstr "höger"
 
@@ -24632,19 +24682,19 @@ msgstr "visa mer"
 msgid "shown"
 msgstr "visade"
 
-#: db/seeds/settings.rb:5169
+#: db/seeds/settings.rb:5172
 msgid "sipgate.io Token"
 msgstr "sipgate.io-token"
 
-#: db/seeds/settings.rb:5203
+#: db/seeds/settings.rb:5206
 msgid "sipgate.io alternative FQDN"
 msgstr "sipgate.io alternativ FQDN"
 
-#: db/seeds/settings.rb:5190
+#: db/seeds/settings.rb:5193
 msgid "sipgate.io config"
 msgstr "sipgate.io konfig"
 
-#: db/seeds/settings.rb:5141
+#: db/seeds/settings.rb:5144
 msgid "sipgate.io integration"
 msgstr "sipgate.io integration"
 
@@ -24726,14 +24776,6 @@ msgstr "ärende"
 #: app/assets/javascripts/app/controllers/_application_controller/_modal_generic_history.coffee:117
 msgid "ticket %s was merged into this ticket"
 msgstr "Ärendet %s slogs ihop med det här ärendet"
-
-#: db/seeds/settings.rb:1128
-msgid "ticket.agent"
-msgstr "ticket.agent"
-
-#: db/seeds/settings.rb:1136
-msgid "ticket.customer"
-msgstr "ticket.customer"
 
 #: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:487
 #: app/assets/javascripts/app/controllers/_ui_element/_application_selector.coffee:25
@@ -24931,6 +24973,25 @@ msgstr "...av hela textfältet"
 #: app/assets/javascripts/app/views/dashboard/stats/ticket_waiting_time.jst.eco:3
 msgid "∅ Waiting time today"
 msgstr "∅ Väntetid idag"
+
+#~ msgid "UI Desktop Beta Switch"
+#~ msgstr "UI Desktop Beta Väljare"
+
+#~ msgid ""
+#~ "You can switch between the old and the New BETA UI at any moment in the "
+#~ "Profile > New BETA UI section."
+#~ msgstr ""
+#~ "Du kan när som helst växla mellan det gamla och det nya BETA-gränssnittet "
+#~ "i Profil > Nytt BETA-gränssnitt."
+
+#~ msgid "admin"
+#~ msgstr "admin"
+
+#~ msgid "ticket.agent"
+#~ msgstr "ticket.agent"
+
+#~ msgid "ticket.customer"
+#~ msgstr "ticket.customer"
 
 #~ msgid "This setting is not disabled."
 #~ msgstr "Den här inställningen är inte inaktiverad."
