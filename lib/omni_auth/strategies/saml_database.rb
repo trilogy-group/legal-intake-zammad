@@ -135,11 +135,11 @@ class OmniAuth::Strategies::SamlDatabase < OmniAuth::Strategies::SAML
       { settings: settings, get_params: request.params }
     )
 
-    # Log details for debugging SLO issues
+    # Log details for debugging SLO issues (using debug level to avoid exposing PII in production logs)
     name_id = logout_request.name_id
     session_saml_uid = session['saml_uid']
 
-    Rails.logger.info "SAML SLO: Processing logout request for name_id=#{name_id.inspect}, session_saml_uid=#{session_saml_uid.inspect}"
+    Rails.logger.debug { "SAML SLO: Processing logout request for name_id=#{name_id.inspect}, session_saml_uid=#{session_saml_uid.inspect}" }
 
     if !logout_request.is_valid?
       Rails.logger.error "SAML SLO: Logout request validation failed - errors: #{logout_request.errors.inspect}"
@@ -149,11 +149,11 @@ class OmniAuth::Strategies::SamlDatabase < OmniAuth::Strategies::SAML
     # Destroy matching sessions in the database (IDP-initiated logout)
     # This handles the case where the logout request arrives on a different browser/session
     destroyed_count = self.class.destroy_saml_sessions(name_id)
-    Rails.logger.info "SAML SLO: Destroyed #{destroyed_count} session(s) for name_id=#{name_id}"
+    Rails.logger.info "SAML SLO: Destroyed #{destroyed_count} session(s) during IDP-initiated logout"
 
     # Also destroy current session if it matches
     if session_saml_uid == name_id
-      Rails.logger.info 'SAML SLO: Current session matches, destroying via idp_slo_session_destroy'
+      Rails.logger.debug { 'SAML SLO: Current session matches, destroying via idp_slo_session_destroy' }
       options[:idp_slo_session_destroy].call(env, session)
     end
 
