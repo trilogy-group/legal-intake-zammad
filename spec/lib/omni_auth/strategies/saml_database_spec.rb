@@ -32,6 +32,10 @@ RSpec.describe OmniAuth::Strategies::SamlDatabase do
           .to change(Session, :count).by(-2)
       end
 
+      it 'returns the count of destroyed sessions' do
+        expect(described_class.destroy_saml_sessions(saml_uid)).to eq(2)
+      end
+
       it 'preserves sessions with different saml_uid' do
         described_class.destroy_saml_sessions(saml_uid)
 
@@ -51,6 +55,10 @@ RSpec.describe OmniAuth::Strategies::SamlDatabase do
       it 'does not destroy any sessions' do
         expect { described_class.destroy_saml_sessions(saml_uid) }
           .not_to change(Session, :count)
+      end
+
+      it 'returns zero' do
+        expect(described_class.destroy_saml_sessions(saml_uid)).to eq(0)
       end
     end
   end
