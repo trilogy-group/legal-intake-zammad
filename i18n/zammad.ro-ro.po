@@ -19594,7 +19594,7 @@ msgid "The divider between TicketHook and ticket number. E. g. ': '."
 msgstr "Separatorul dintre TicketHook și numărul tichetului. De ex. ': '."
 
 #: app/assets/javascripts/app/controllers/_ai/provider.coffee:92
-#: app/assets/javascripts/app/lib/app_post/utils.coffee:1695
+#: app/assets/javascripts/app/lib/app_post/utils.coffee:1691
 #, fuzzy
 #| msgid "Media download failed. Please try again later."
 msgid "The download could not be started. Please try again later."
@@ -24992,7 +24992,7 @@ msgstr "la"
 msgid "at least one letter is required"
 msgstr "este necesară cel puțin o literă"
 
-#: app/assets/javascripts/app/lib/app_post/utils.coffee:1080
+#: app/assets/javascripts/app/lib/app_post/utils.coffee:1076
 #: app/frontend/shared/composables/form/useCheckBodyAttachmentReference.ts:9
 msgid "attachment,attached,enclosed,enclosure"
 msgstr ""
@@ -25594,7 +25594,7 @@ msgid "in process"
 msgstr "în procesare"
 
 #: app/assets/javascripts/app/controllers/_ui_element/active.coffee:5
-#: app/assets/javascripts/app/lib/app_post/utils.coffee:1455
+#: app/assets/javascripts/app/lib/app_post/utils.coffee:1451
 #: app/assets/javascripts/app/models/webhook.coffee:38
 #: app/assets/javascripts/app/views/generic/object_search/item_object.jst.eco:16
 #: app/assets/javascripts/app/views/generic/object_search/item_organization.jst.eco:4

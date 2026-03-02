@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zammad\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2026-02-27 12:39+0000\n"
+"PO-Revision-Date: 2026-03-02 07:21+0000\n"
 "Last-Translator: Dusan Vuckovic <dv@zammad.com>\n"
 "Language-Team: Serbian (Cyrillic script) <https://translations.zammad.org/"
 "projects/zammad/zammad-stable/sr_Cyrl/>\n"
@@ -18192,7 +18192,7 @@ msgid "The divider between TicketHook and ticket number. E. g. ': '."
 msgstr "Сепаратор између прикључка и броја тикета. Нпр. ’: ’."
 
 #: app/assets/javascripts/app/controllers/_ai/provider.coffee:92
-#: app/assets/javascripts/app/lib/app_post/utils.coffee:1695
+#: app/assets/javascripts/app/lib/app_post/utils.coffee:1691
 msgid "The download could not be started. Please try again later."
 msgstr ""
 "Није било могуће покренути преузимање. Молимо покушајте поново касније."
@@ -23284,7 +23284,7 @@ msgstr "у"
 msgid "at least one letter is required"
 msgstr "неопходно је бар једно слово"
 
-#: app/assets/javascripts/app/lib/app_post/utils.coffee:1080
+#: app/assets/javascripts/app/lib/app_post/utils.coffee:1076
 #: app/frontend/shared/composables/form/useCheckBodyAttachmentReference.ts:9
 msgid "attachment,attached,enclosed,enclosure"
 msgstr "прилог,приложен,атачован,атачмент"
@@ -23528,7 +23528,7 @@ msgstr "развојна лозинка"
 
 #: db/seeds/settings.rb:1103
 msgid "disabled"
-msgstr "Искључено"
+msgstr "Искључи"
 
 #: app/assets/javascripts/app/views/customer_chat/chat_window.jst.eco:13
 msgid "disconnect"
@@ -23862,7 +23862,7 @@ msgid "in process"
 msgstr "у обради"
 
 #: app/assets/javascripts/app/controllers/_ui_element/active.coffee:5
-#: app/assets/javascripts/app/lib/app_post/utils.coffee:1455
+#: app/assets/javascripts/app/lib/app_post/utils.coffee:1451
 #: app/assets/javascripts/app/models/webhook.coffee:38
 #: app/assets/javascripts/app/views/generic/object_search/item_object.jst.eco:16
 #: app/assets/javascripts/app/views/generic/object_search/item_organization.jst.eco:4

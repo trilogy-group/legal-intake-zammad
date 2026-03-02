@@ -18346,7 +18346,7 @@ msgid "The divider between TicketHook and ticket number. E. g. ': '."
 msgstr "TicketHook과 티켓 번호 사이의 구분자입니다. 예: ': '."
 
 #: app/assets/javascripts/app/controllers/_ai/provider.coffee:92
-#: app/assets/javascripts/app/lib/app_post/utils.coffee:1695
+#: app/assets/javascripts/app/lib/app_post/utils.coffee:1691
 msgid "The download could not be started. Please try again later."
 msgstr "다운로드를 시작할 수 없습니다. 나중에 다시 시도하세요."
 
@@ -23412,7 +23412,7 @@ msgstr "에"
 msgid "at least one letter is required"
 msgstr "최소 하나의 문자가 필요합니다"
 
-#: app/assets/javascripts/app/lib/app_post/utils.coffee:1080
+#: app/assets/javascripts/app/lib/app_post/utils.coffee:1076
 #: app/frontend/shared/composables/form/useCheckBodyAttachmentReference.ts:9
 msgid "attachment,attached,enclosed,enclosure"
 msgstr "첨부,첨부됨,동봉,동봉물"
@@ -23999,7 +23999,7 @@ msgid "in process"
 msgstr "진행 중"
 
 #: app/assets/javascripts/app/controllers/_ui_element/active.coffee:5
-#: app/assets/javascripts/app/lib/app_post/utils.coffee:1455
+#: app/assets/javascripts/app/lib/app_post/utils.coffee:1451
 #: app/assets/javascripts/app/models/webhook.coffee:38
 #: app/assets/javascripts/app/views/generic/object_search/item_object.jst.eco:16
 #: app/assets/javascripts/app/views/generic/object_search/item_organization.jst.eco:4

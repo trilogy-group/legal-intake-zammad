@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zammad\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2026-02-12 22:00+0000\n"
-"Last-Translator: Øivind Spro Heggland <oivheg@gmail.com>\n"
+"PO-Revision-Date: 2026-03-02 07:21+0000\n"
+"Last-Translator: Peter-Hans de Zwarte <peter-hans@zwarte.no>\n"
 "Language-Team: Norwegian Bokmål <https://translations.zammad.org/projects/"
 "zammad/zammad-stable/nb_NO/>\n"
 "Language: no-no\n"
@@ -1012,10 +1012,8 @@ msgstr ""
 #: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:64
 #: app/assets/javascripts/app/controllers/_ui_element/object_perform_action.coffee:30
 #: app/assets/javascripts/app/controllers/manage.coffee:45
-#, fuzzy
-#| msgid "API"
 msgid "AI"
-msgstr "API"
+msgstr "KI"
 
 #: app/assets/javascripts/app/controllers/_ai/ai_agent.coffee:6
 #: app/assets/javascripts/app/controllers/_application_controller/_modal_generic_history.coffee:42
@@ -1093,10 +1091,8 @@ msgid "AI agent result content does not match expected result structure."
 msgstr ""
 
 #: app/assets/javascripts/app/controllers/_ai/ai_agent.coffee:33
-#, fuzzy
-#| msgid "Agents"
 msgid "AI agent used in"
-msgstr "Saksbehandlere"
+msgstr "KI agent brukt i"
 
 #: app/assets/javascripts/app/models/ai_agent.coffee
 msgid ""
@@ -1113,16 +1109,12 @@ msgid "AI assistance text tool is invalid."
 msgstr ""
 
 #: lib/excel_sheet/ai/analytics/errors.rb:4
-#, fuzzy
-#| msgid "API error."
 msgid "AI error log"
-msgstr "API feil."
+msgstr "KI feillogg"
 
 #: db/seeds/settings.rb:6051
-#, fuzzy
-#| msgid "Provider"
 msgid "AI provider"
-msgstr "Tilbyder"
+msgstr "KI leverandør"
 
 #: app/models/setting/validation/ai_provider_config.rb:7
 #, fuzzy
@@ -20131,7 +20123,7 @@ msgid "The divider between TicketHook and ticket number. E. g. ': '."
 msgstr ""
 
 #: app/assets/javascripts/app/controllers/_ai/provider.coffee:92
-#: app/assets/javascripts/app/lib/app_post/utils.coffee:1695
+#: app/assets/javascripts/app/lib/app_post/utils.coffee:1691
 #, fuzzy
 #| msgid "Unable to verify email. Please contact your administrator."
 msgid "The download could not be started. Please try again later."
@@ -25568,7 +25560,7 @@ msgstr "på"
 msgid "at least one letter is required"
 msgstr "Minst én bokstav er påkrevd"
 
-#: app/assets/javascripts/app/lib/app_post/utils.coffee:1080
+#: app/assets/javascripts/app/lib/app_post/utils.coffee:1076
 #: app/frontend/shared/composables/form/useCheckBodyAttachmentReference.ts:9
 msgid "attachment,attached,enclosed,enclosure"
 msgstr ""
@@ -26199,7 +26191,7 @@ msgid "in process"
 msgstr "under behandling"
 
 #: app/assets/javascripts/app/controllers/_ui_element/active.coffee:5
-#: app/assets/javascripts/app/lib/app_post/utils.coffee:1455
+#: app/assets/javascripts/app/lib/app_post/utils.coffee:1451
 #: app/assets/javascripts/app/models/webhook.coffee:38
 #: app/assets/javascripts/app/views/generic/object_search/item_object.jst.eco:16
 #: app/assets/javascripts/app/views/generic/object_search/item_organization.jst.eco:4

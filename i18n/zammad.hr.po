@@ -18206,7 +18206,7 @@ msgid "The divider between TicketHook and ticket number. E. g. ': '."
 msgstr "Razdjelnik između TicketHook-a i broja ticketa. Npr. ’: ’."
 
 #: app/assets/javascripts/app/controllers/_ai/provider.coffee:92
-#: app/assets/javascripts/app/lib/app_post/utils.coffee:1695
+#: app/assets/javascripts/app/lib/app_post/utils.coffee:1691
 msgid "The download could not be started. Please try again later."
 msgstr "Nije moguće pokrenuti preuzimanje. Molimo, pokušajte kasnije."
 
@@ -22298,8 +22298,8 @@ msgid ""
 "When you turn on debugging by setting the option §debug§ to §true§ the "
 "reason gets printed to the JavaScript console."
 msgstr ""
-"Kada uključite ispravljanje pogrešaka postavljanjem opcije §debug§ na §true§"
-", razlog se ispisuje u JavaScript konzolu."
+"Kada uključite ispravljanje pogrešaka postavljanjem opcije §debug§ na "
+"§true§, razlog se ispisuje u JavaScript konzolu."
 
 #: app/assets/javascripts/app/controllers/_ui_element/_application_selector.coffee:679
 msgid "Where"
@@ -23326,7 +23326,7 @@ msgstr "u"
 msgid "at least one letter is required"
 msgstr "Potrebno je barem jedno slovo"
 
-#: app/assets/javascripts/app/lib/app_post/utils.coffee:1080
+#: app/assets/javascripts/app/lib/app_post/utils.coffee:1076
 #: app/frontend/shared/composables/form/useCheckBodyAttachmentReference.ts:9
 msgid "attachment,attached,enclosed,enclosure"
 msgstr "Privitak, priloženo, u prilogu, prikvačeno"
@@ -23914,7 +23914,7 @@ msgid "in process"
 msgstr "u tijeku"
 
 #: app/assets/javascripts/app/controllers/_ui_element/active.coffee:5
-#: app/assets/javascripts/app/lib/app_post/utils.coffee:1455
+#: app/assets/javascripts/app/lib/app_post/utils.coffee:1451
 #: app/assets/javascripts/app/models/webhook.coffee:38
 #: app/assets/javascripts/app/views/generic/object_search/item_object.jst.eco:16
 #: app/assets/javascripts/app/views/generic/object_search/item_organization.jst.eco:4

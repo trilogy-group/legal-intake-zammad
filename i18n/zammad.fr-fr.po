@@ -18569,7 +18569,7 @@ msgid "The divider between TicketHook and ticket number. E. g. ': '."
 msgstr "Le séparateur entre TicketHook et le numéro de ticket, p. ex. ' : '."
 
 #: app/assets/javascripts/app/controllers/_ai/provider.coffee:92
-#: app/assets/javascripts/app/lib/app_post/utils.coffee:1695
+#: app/assets/javascripts/app/lib/app_post/utils.coffee:1691
 msgid "The download could not be started. Please try again later."
 msgstr ""
 "Le téléchargement n'a pas pu démarrer. Veuillez réessayer ultérieurement."
@@ -23816,7 +23816,7 @@ msgstr "à"
 msgid "at least one letter is required"
 msgstr "au moins une lettre est requise"
 
-#: app/assets/javascripts/app/lib/app_post/utils.coffee:1080
+#: app/assets/javascripts/app/lib/app_post/utils.coffee:1076
 #: app/frontend/shared/composables/form/useCheckBodyAttachmentReference.ts:9
 msgid "attachment,attached,enclosed,enclosure"
 msgstr "joint,attaché"
@@ -24397,7 +24397,7 @@ msgid "in process"
 msgstr "en cours"
 
 #: app/assets/javascripts/app/controllers/_ui_element/active.coffee:5
-#: app/assets/javascripts/app/lib/app_post/utils.coffee:1455
+#: app/assets/javascripts/app/lib/app_post/utils.coffee:1451
 #: app/assets/javascripts/app/models/webhook.coffee:38
 #: app/assets/javascripts/app/views/generic/object_search/item_object.jst.eco:16
 #: app/assets/javascripts/app/views/generic/object_search/item_organization.jst.eco:4

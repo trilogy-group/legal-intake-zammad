@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zammad\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2026-02-23 11:26+0000\n"
+"PO-Revision-Date: 2026-03-02 07:21+0000\n"
 "Last-Translator: mathew-uems <mathew.chen@edgentauems.com.tw>\n"
 "Language-Team: Chinese (Traditional Han script) <https://"
 "translations.zammad.org/projects/zammad/zammad-stable/zh_Hant/>\n"
@@ -17850,7 +17850,7 @@ msgid "The divider between TicketHook and ticket number. E. g. ': '."
 msgstr ""
 
 #: app/assets/javascripts/app/controllers/_ai/provider.coffee:92
-#: app/assets/javascripts/app/lib/app_post/utils.coffee:1695
+#: app/assets/javascripts/app/lib/app_post/utils.coffee:1691
 msgid "The download could not be started. Please try again later."
 msgstr "下載無法開始。 請稍後重試。"
 
@@ -23065,7 +23065,7 @@ msgstr "在"
 msgid "at least one letter is required"
 msgstr "至少需要一個字母"
 
-#: app/assets/javascripts/app/lib/app_post/utils.coffee:1080
+#: app/assets/javascripts/app/lib/app_post/utils.coffee:1076
 #: app/frontend/shared/composables/form/useCheckBodyAttachmentReference.ts:9
 msgid "attachment,attached,enclosed,enclosure"
 msgstr ""
@@ -23311,26 +23311,20 @@ msgid "descending"
 msgstr "待處理"
 
 #: app/frontend/apps/desktop/components/Search/QuickSearch/QuickSearchResultList/QuickSearchResultList.vue:132
-#, fuzzy
-#| msgid "Extended Search"
 msgid "detailed search"
-msgstr "擴展搜尋"
+msgstr "詳細搜尋"
 
 #: db/seeds/settings.rb:1206
-#, fuzzy
-#| msgid "New password"
 msgid "developer password"
-msgstr "新密碼"
+msgstr "開發者密碼"
 
 #: db/seeds/settings.rb:1103
-#, fuzzy
-#| msgid "Disable"
 msgid "disabled"
 msgstr "關閉"
 
 #: app/assets/javascripts/app/views/customer_chat/chat_window.jst.eco:13
 msgid "disconnect"
-msgstr "斷開"
+msgstr "中斷連線"
 
 #: app/assets/javascripts/app/models/group.coffee:9
 #: db/seeds/object_manager_attributes.rb:2179
@@ -23351,18 +23345,14 @@ msgid "does not allow past dates"
 msgstr "不允許過去時間"
 
 #: app/assets/javascripts/app/controllers/cti.coffee:164
-#, fuzzy
-#| msgid "not exist"
 msgid "does not exist"
 msgstr "不存在"
 
 #: app/assets/javascripts/app/controllers/_ui_element/_application_selector.coffee:60
 #: app/assets/javascripts/app/controllers/_ui_element/core_workflow_condition.coffee:192
 #: app/assets/javascripts/app/controllers/_ui_element/object_selector.coffee:87
-#, fuzzy
-#| msgid "not exist"
 msgid "does not match regex"
-msgstr "不存在"
+msgstr "不符合正規表示式"
 
 msgid "doesn't match %{attribute}"
 msgstr ""
@@ -23674,7 +23664,7 @@ msgid "in process"
 msgstr "進行處理中"
 
 #: app/assets/javascripts/app/controllers/_ui_element/active.coffee:5
-#: app/assets/javascripts/app/lib/app_post/utils.coffee:1455
+#: app/assets/javascripts/app/lib/app_post/utils.coffee:1451
 #: app/assets/javascripts/app/models/webhook.coffee:38
 #: app/assets/javascripts/app/views/generic/object_search/item_object.jst.eco:16
 #: app/assets/javascripts/app/views/generic/object_search/item_organization.jst.eco:4
