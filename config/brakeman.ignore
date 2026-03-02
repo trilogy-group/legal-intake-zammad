@@ -230,6 +230,25 @@
       "note": ""
     },
     {
+      "warning_type": "Unmaintained Dependency",
+      "warning_code": 123,
+      "fingerprint": "40be17ee84017c91503dab23873e24bdd71665ab665bf6f351cfc09ff83e6582",
+      "check_name": "EOLRuby",
+      "message": "Support for Ruby 3.2.8 ends on 2026-03-31",
+      "file": ".ruby-version",
+      "line": 1,
+      "link": "https://brakemanscanner.org/docs/warning_types/unmaintained_dependency/",
+      "code": null,
+      "render_path": null,
+      "location": null,
+      "user_input": null,
+      "confidence": "Medium",
+      "cwe_id": [
+        1104
+      ],
+      "note": ""
+    },
+    {
       "warning_type": "SQL Injection",
       "warning_code": 0,
       "fingerprint": "49c4e60297a41654cfb9d8ac6b8232e0d3a68ee7ebd53f48b7c6d0ec6f830318",
@@ -365,25 +384,6 @@
       "confidence": "Weak",
       "cwe_id": [
         89
-      ],
-      "note": ""
-    },
-    {
-      "warning_type": "Unmaintained Dependency",
-      "warning_code": 123,
-      "fingerprint": "715ee6d743a8af33c7b930d728708ce19c765fb40e2ad9d2b974db04d92dc7d1",
-      "check_name": "EOLRuby",
-      "message": "Support for Ruby 3.2.8 ends on 2026-03-31",
-      "file": ".ruby-version",
-      "line": 1,
-      "link": "https://brakemanscanner.org/docs/warning_types/unmaintained_dependency/",
-      "code": null,
-      "render_path": null,
-      "location": null,
-      "user_input": null,
-      "confidence": "Weak",
-      "cwe_id": [
-        1104
       ],
       "note": ""
     },
