@@ -15,9 +15,8 @@ Rails.application.config.action_cable.cable = {
 }
 begin
   Zammad::Service::Redis.new.ping
-  Rails.logger.info { "ActionCable is using the redis instance at #{redis_url}." }
 rescue Redis::CannotConnectError => e
-  warn "There was an error trying to connect to Redis via #{redis_url}."
+  warn 'There was an error trying to connect to Redis.'
   if ENV['REDIS_URL'].present?
     warn 'Please make sure Redis is available.'
   else
