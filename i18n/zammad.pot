@@ -1267,7 +1267,7 @@ msgstr ""
 #: app/frontend/apps/desktop/components/Form/fields/FieldEditor/useEditorActions.ts:300
 #: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarInformation/TicketSidebarInformationContent/TicketLinks.vue:158
 #: app/frontend/apps/mobile/components/Form/fields/FieldEditor/useEditorActions.ts:297
-#: app/frontend/shared/components/Form/fields/FieldEditor/features/link/LinkForm.vue:174
+#: app/frontend/shared/components/Form/fields/FieldEditor/features/link/LinkForm.vue:173
 msgid "Add link"
 msgstr ""
 
@@ -2312,11 +2312,11 @@ msgstr ""
 msgid "Automatically loads the chat.css file. If you want to use your own css, just set it to false."
 msgstr ""
 
-#: app/frontend/shared/components/Form/Form.vue:1294
+#: app/frontend/shared/components/Form/Form.vue:1295
 msgid "Autosave in progress…"
 msgstr ""
 
-#: app/frontend/shared/components/Form/Form.vue:1303
+#: app/frontend/shared/components/Form/Form.vue:1304
 msgid "Autosaving is taking longer than expected…"
 msgstr ""
 
@@ -2791,7 +2791,7 @@ msgstr ""
 #: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/ArticleReplyDialog.vue:136
 #: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketAction/TicketActionChangeCustomerDialog.vue:68
 #: app/frontend/shared/components/Form/fields/FieldEditor/features/ai-assistant-text-tools/AiAssistantLoadingBanner/AiAssistantLoadingBanner.vue:46
-#: app/frontend/shared/components/Form/fields/FieldEditor/features/link/LinkForm.vue:170
+#: app/frontend/shared/components/Form/fields/FieldEditor/features/link/LinkForm.vue:169
 msgid "Cancel"
 msgstr ""
 
@@ -3742,7 +3742,7 @@ msgstr ""
 #: app/frontend/apps/desktop/pages/guided-setup/components/GuidedSetupActionFooter.vue:46
 #: app/frontend/apps/desktop/pages/guided-setup/views/GuidedSetupImport/GuidedSetupImportSource/GuidedSetupImportSource.vue:52
 #: app/frontend/apps/desktop/pages/guided-setup/views/GuidedSetupManual/GuidedSetupManualChannelEmail.vue:136
-#: app/frontend/apps/mobile/pages/ticket/views/TicketCreate.vue:525
+#: app/frontend/apps/mobile/pages/ticket/views/TicketCreate.vue:523
 msgid "Continue"
 msgstr ""
 
@@ -3968,7 +3968,7 @@ msgstr ""
 #: app/frontend/apps/desktop/entities/user/composables/useUserCreate.ts:78
 #: app/frontend/apps/desktop/pages/personal-setting/components/PersonalSettingNewAccessTokenFlyout.vue:114
 #: app/frontend/apps/desktop/pages/ticket/components/TicketCreate/TicketCreateContent.vue:298
-#: app/frontend/apps/mobile/pages/ticket/views/TicketCreate.vue:476
+#: app/frontend/apps/mobile/pages/ticket/views/TicketCreate.vue:474
 msgid "Create"
 msgstr ""
 
@@ -4086,12 +4086,12 @@ msgid "Create tag"
 msgstr ""
 
 #: app/frontend/apps/mobile/pages/ticket/routes.ts:64
-#: app/frontend/apps/mobile/pages/ticket/views/TicketCreate.vue:476
+#: app/frontend/apps/mobile/pages/ticket/views/TicketCreate.vue:474
 msgid "Create ticket"
 msgstr ""
 
 #: app/assets/javascripts/app/views/customer_not_ticket_exists.jst.eco:14
-#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:417
+#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:418
 msgid "Create your first ticket"
 msgstr ""
 
@@ -6290,7 +6290,7 @@ msgstr ""
 msgid "Empty"
 msgstr ""
 
-#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:424
+#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:425
 msgid "Empty overview"
 msgstr ""
 
@@ -7322,7 +7322,7 @@ msgstr ""
 #: app/frontend/apps/desktop/pages/ticket/views/TicketCreate.vue:23
 #: app/frontend/apps/mobile/pages/ticket/views/TicketCreate.vue:448
 #: app/frontend/shared/errors/useErrorHandler.ts:29
-#: app/frontend/shared/router/guards/before/permission.ts:31
+#: app/frontend/shared/router/guards/before/permission.ts:26
 msgid "Forbidden"
 msgstr ""
 
@@ -9412,7 +9412,7 @@ msgstr ""
 msgid "Link Related Answer"
 msgstr ""
 
-#: app/frontend/shared/components/Form/fields/FieldEditor/features/link/LinkForm.vue:148
+#: app/frontend/shared/components/Form/fields/FieldEditor/features/link/LinkForm.vue:147
 msgid "Link URL"
 msgstr ""
 
@@ -9449,7 +9449,7 @@ msgstr ""
 msgid "Link template"
 msgstr ""
 
-#: app/frontend/shared/components/Form/fields/FieldEditor/features/link/LinkForm.vue:150
+#: app/frontend/shared/components/Form/fields/FieldEditor/features/link/LinkForm.vue:149
 msgid "Link text"
 msgstr ""
 
@@ -11236,7 +11236,7 @@ msgstr ""
 msgid "No template created yet."
 msgstr ""
 
-#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:425
+#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:426
 msgid "No tickets in this state."
 msgstr ""
 
@@ -12108,7 +12108,7 @@ msgstr ""
 msgid "Overview order list"
 msgstr ""
 
-#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:380
+#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:381
 msgid "Overview: %s"
 msgstr ""
 
@@ -12507,7 +12507,7 @@ msgid "Please add categories and/or answers"
 msgstr ""
 
 #: app/assets/javascripts/app/views/customer_not_ticket_exists.jst.eco:12
-#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:410
+#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:411
 msgid "Please click on the button below to create your first one."
 msgstr ""
 
@@ -13298,7 +13298,7 @@ msgstr ""
 msgid "Remove item"
 msgstr ""
 
-#: app/frontend/shared/components/Form/fields/FieldEditor/features/link/LinkForm.vue:160
+#: app/frontend/shared/components/Form/fields/FieldEditor/features/link/LinkForm.vue:159
 msgid "Remove link"
 msgstr ""
 
@@ -16948,7 +16948,7 @@ msgstr ""
 msgid "The text tool with the given ID could not be found."
 msgstr ""
 
-#: app/frontend/shared/components/Form/fields/FieldEditor/extensions/AiAssistantTextTools.ts:142
+#: app/frontend/shared/components/Form/fields/FieldEditor/extensions/AiAssistantTextTools.ts:144
 msgid "The text was modified. Your request has been aborted to prevent overwriting."
 msgstr ""
 
@@ -17048,7 +17048,7 @@ msgstr ""
 
 #: app/assets/javascripts/app/controllers/customer_ticket_create/sidebar_customer_default.coffee:29
 #: app/assets/javascripts/app/views/customer_not_ticket_exists.jst.eco:11
-#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:407
+#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:408
 msgid "The way to communicate with us is this thing called \"ticket\"."
 msgstr ""
 
@@ -19621,7 +19621,7 @@ msgstr ""
 #: app/assets/javascripts/app/views/customer_not_ticket_exists.jst.eco:2
 #: app/assets/javascripts/app/views/welcome.jst.eco:2
 #: app/frontend/apps/desktop/pages/guided-setup/views/GuidedSetupStart.vue:43
-#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:401
+#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:402
 msgid "Welcome!"
 msgstr ""
 
@@ -19807,7 +19807,7 @@ msgid "Writing Assistant Tools simplify the process of refining an article text 
 msgstr ""
 
 #: app/assets/javascripts/app/views/generic/text_tools_modal.jst.eco:8
-#: app/frontend/shared/components/Form/fields/FieldEditor/extensions/AiAssistantTextTools.ts:38
+#: app/frontend/shared/components/Form/fields/FieldEditor/extensions/AiAssistantTextTools.ts:40
 msgid "Writing assistant could not generate text. Please try again or contact your administrator."
 msgstr ""
 
@@ -20042,7 +20042,7 @@ msgstr ""
 msgid "You don't have more tickets to load."
 msgstr ""
 
-#: app/frontend/shared/router/guards/before/permission.ts:32
+#: app/frontend/shared/router/guards/before/permission.ts:27
 msgid "You don't have the necessary permissions to access this page."
 msgstr ""
 
@@ -20102,7 +20102,7 @@ msgid "You have no unread messages"
 msgstr ""
 
 #: app/assets/javascripts/app/views/customer_not_ticket_exists.jst.eco:10
-#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:404
+#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:405
 msgid "You have not created a ticket yet."
 msgstr ""
 
