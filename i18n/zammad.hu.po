@@ -1663,7 +1663,7 @@ msgstr "Belső jegyzet hozzáadása"
 #: app/frontend/apps/desktop/components/Form/fields/FieldEditor/useEditorActions.ts:300
 #: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarInformation/TicketSidebarInformationContent/TicketLinks.vue:158
 #: app/frontend/apps/mobile/components/Form/fields/FieldEditor/useEditorActions.ts:297
-#: app/frontend/shared/components/Form/fields/FieldEditor/features/link/LinkForm.vue:174
+#: app/frontend/shared/components/Form/fields/FieldEditor/features/link/LinkForm.vue:173
 msgid "Add link"
 msgstr "Hivatkozás hozzáadása"
 
@@ -2878,11 +2878,11 @@ msgstr ""
 "Automatikusan betölti a chat.css fájlt. Ha a saját CSS-fájlját szeretné "
 "használni, akkor egyszerűen csak állítsa hamisra."
 
-#: app/frontend/shared/components/Form/Form.vue:1294
+#: app/frontend/shared/components/Form/Form.vue:1295
 msgid "Autosave in progress…"
 msgstr "Automatikus mentés folyamatban…"
 
-#: app/frontend/shared/components/Form/Form.vue:1303
+#: app/frontend/shared/components/Form/Form.vue:1304
 msgid "Autosaving is taking longer than expected…"
 msgstr "Az automatikus mentés tovább tart a vártnál…"
 
@@ -3399,7 +3399,7 @@ msgstr ""
 #: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/ArticleReplyDialog.vue:136
 #: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketAction/TicketActionChangeCustomerDialog.vue:68
 #: app/frontend/shared/components/Form/fields/FieldEditor/features/ai-assistant-text-tools/AiAssistantLoadingBanner/AiAssistantLoadingBanner.vue:46
-#: app/frontend/shared/components/Form/fields/FieldEditor/features/link/LinkForm.vue:170
+#: app/frontend/shared/components/Form/fields/FieldEditor/features/link/LinkForm.vue:169
 msgid "Cancel"
 msgstr "Mégse"
 
@@ -4444,7 +4444,7 @@ msgstr "Helyi menü"
 #: app/frontend/apps/desktop/pages/guided-setup/components/GuidedSetupActionFooter.vue:46
 #: app/frontend/apps/desktop/pages/guided-setup/views/GuidedSetupImport/GuidedSetupImportSource/GuidedSetupImportSource.vue:52
 #: app/frontend/apps/desktop/pages/guided-setup/views/GuidedSetupManual/GuidedSetupManualChannelEmail.vue:136
-#: app/frontend/apps/mobile/pages/ticket/views/TicketCreate.vue:525
+#: app/frontend/apps/mobile/pages/ticket/views/TicketCreate.vue:523
 msgid "Continue"
 msgstr "Folytatás"
 
@@ -4694,7 +4694,7 @@ msgstr "Ország"
 #: app/frontend/apps/desktop/entities/user/composables/useUserCreate.ts:78
 #: app/frontend/apps/desktop/pages/personal-setting/components/PersonalSettingNewAccessTokenFlyout.vue:114
 #: app/frontend/apps/desktop/pages/ticket/components/TicketCreate/TicketCreateContent.vue:298
-#: app/frontend/apps/mobile/pages/ticket/views/TicketCreate.vue:476
+#: app/frontend/apps/mobile/pages/ticket/views/TicketCreate.vue:474
 msgid "Create"
 msgstr "Létrehozás"
 
@@ -4859,12 +4859,12 @@ msgid "Create tag"
 msgstr "Címke létrehozása"
 
 #: app/frontend/apps/mobile/pages/ticket/routes.ts:64
-#: app/frontend/apps/mobile/pages/ticket/views/TicketCreate.vue:476
+#: app/frontend/apps/mobile/pages/ticket/views/TicketCreate.vue:474
 msgid "Create ticket"
 msgstr "Jegy létrehozása"
 
 #: app/assets/javascripts/app/views/customer_not_ticket_exists.jst.eco:14
-#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:417
+#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:418
 msgid "Create your first ticket"
 msgstr "Első jegy létrehozása"
 
@@ -7208,7 +7208,7 @@ msgstr "Húsvéti ünnepek"
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingTwoFactorAuth.vue:159
 #: app/frontend/apps/desktop/pages/user/components/UserDetailTopBar/actions/edit.ts:10
 #: app/frontend/apps/mobile/pages/home/views/Home.vue:71
-#: app/frontend/apps/mobile/pages/organization/views/OrganizationDetailView.vue:46
+#: app/frontend/apps/mobile/pages/organization/views/OrganizationDetailView.vue:52
 #: app/frontend/apps/mobile/pages/user/views/UserDetailView.vue:54
 msgid "Edit"
 msgstr "Szerkesztés"
@@ -7259,7 +7259,7 @@ msgstr "Maszk szerkesztése"
 
 #: app/frontend/apps/desktop/entities/organization/composables/useOrganizationEdit.ts:59
 #: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarOrganization/TicketSidebarOrganizationContent.vue:39
-#: app/frontend/apps/mobile/pages/ticket/views/TicketInformation/TicketInformationOrganization.vue:76
+#: app/frontend/apps/mobile/pages/ticket/views/TicketInformation/TicketInformationOrganization.vue:77
 msgid "Edit organization"
 msgstr "Szervezet szerkesztése"
 
@@ -7518,7 +7518,7 @@ msgstr ""
 msgid "Empty"
 msgstr "Üres"
 
-#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:424
+#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:425
 msgid "Empty overview"
 msgstr "Üres áttekintés"
 
@@ -8765,7 +8765,7 @@ msgstr ""
 #: app/frontend/apps/desktop/pages/ticket/views/TicketCreate.vue:23
 #: app/frontend/apps/mobile/pages/ticket/views/TicketCreate.vue:448
 #: app/frontend/shared/errors/useErrorHandler.ts:29
-#: app/frontend/shared/router/guards/before/permission.ts:31
+#: app/frontend/shared/router/guards/before/permission.ts:26
 msgid "Forbidden"
 msgstr "Tiltott"
 
@@ -11071,7 +11071,7 @@ msgstr "GitLab-problémák összekapcsolása a jegyeivel."
 msgid "Link Related Answer"
 msgstr "Kapcsolódó válasz hozzákapcsolása"
 
-#: app/frontend/shared/components/Form/fields/FieldEditor/features/link/LinkForm.vue:148
+#: app/frontend/shared/components/Form/fields/FieldEditor/features/link/LinkForm.vue:147
 msgid "Link URL"
 msgstr "Hivatkozás URL-e"
 
@@ -11108,7 +11108,7 @@ msgstr "A hivatkozás sikeresen eltávolítva"
 msgid "Link template"
 msgstr "Sablon összekapcsolása"
 
-#: app/frontend/shared/components/Form/fields/FieldEditor/features/link/LinkForm.vue:150
+#: app/frontend/shared/components/Form/fields/FieldEditor/features/link/LinkForm.vue:149
 msgid "Link text"
 msgstr "Hivatkozás szövege"
 
@@ -11859,7 +11859,7 @@ msgstr "A média letöltése sikeres volt."
 #: app/frontend/apps/desktop/components/Organization/OrganizationPopoverWithTrigger/OrganizationPopover.vue:79
 #: app/frontend/apps/desktop/pages/organization/components/OrganizationDetailViewContent.vue:115
 #: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarOrganization/TicketSidebarOrganizationContent.vue:71
-#: app/frontend/apps/mobile/components/Organization/OrganizationMembersList.vue:29
+#: app/frontend/apps/mobile/components/Organization/OrganizationMembersList.vue:36
 msgid "Members"
 msgstr "Tagok"
 
@@ -13007,7 +13007,7 @@ msgstr "Még nincsenek címkék hozzáadva."
 msgid "No template created yet."
 msgstr "Még nincs sablon létrehozva."
 
-#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:425
+#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:426
 msgid "No tickets in this state."
 msgstr "Nincsenek ebben az állapotban lévő jegyek."
 
@@ -13928,7 +13928,7 @@ msgstr "Áttekintés navigációs listája"
 msgid "Overview order list"
 msgstr "Áttekintés rendezési listája"
 
-#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:380
+#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:381
 msgid "Overview: %s"
 msgstr "Áttekintés: %s"
 
@@ -14333,7 +14333,7 @@ msgid "Please add categories and/or answers"
 msgstr "Adjon hozzá kategóriákat és/vagy válaszokat"
 
 #: app/assets/javascripts/app/views/customer_not_ticket_exists.jst.eco:12
-#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:410
+#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:411
 msgid "Please click on the button below to create your first one."
 msgstr "Kattintson az alábbi gombra az első létrehozásához."
 
@@ -15199,7 +15199,7 @@ msgstr "Kép eltávolítása"
 msgid "Remove item"
 msgstr "Elem eltávolítása"
 
-#: app/frontend/shared/components/Form/fields/FieldEditor/features/link/LinkForm.vue:160
+#: app/frontend/shared/components/Form/fields/FieldEditor/features/link/LinkForm.vue:159
 msgid "Remove link"
 msgstr "Kapcsolat eltávolítása"
 
@@ -18066,7 +18066,8 @@ msgstr "Az OTRS-importálás nem sikerült."
 
 #: app/services/service/system/import/apply_otrs_configuration.rb:78
 msgid "The OTRS migrator plugin is not accessible. Please verify the API key."
-msgstr "Az OTRS-költöztető bővítmény nem érhető el. Ellenőrizze az API-kulcsot."
+msgstr ""
+"Az OTRS-költöztető bővítmény nem érhető el. Ellenőrizze az API-kulcsot."
 
 #: lib/secure_mailing/pgp/tool/error.rb:106
 msgid "The PGP email recipient is invalid."
@@ -19288,7 +19289,7 @@ msgstr ""
 msgid "The text tool with the given ID could not be found."
 msgstr "A megadott azonosítóval rendelkező szövegeszköz nem található."
 
-#: app/frontend/shared/components/Form/fields/FieldEditor/extensions/AiAssistantTextTools.ts:142
+#: app/frontend/shared/components/Form/fields/FieldEditor/extensions/AiAssistantTextTools.ts:144
 msgid ""
 "The text was modified. Your request has been aborted to prevent overwriting."
 msgstr ""
@@ -19413,7 +19414,7 @@ msgstr ""
 
 #: app/assets/javascripts/app/controllers/customer_ticket_create/sidebar_customer_default.coffee:29
 #: app/assets/javascripts/app/views/customer_not_ticket_exists.jst.eco:11
-#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:407
+#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:408
 msgid "The way to communicate with us is this thing called \"ticket\"."
 msgstr "A velünk való kommunikáció módja a „jegy” nevű dolog."
 
@@ -21271,6 +21272,10 @@ msgstr "kedd"
 msgid "Turn chat into ticket"
 msgstr "Csevegés jeggyé alakítása"
 
+#: app/views/init/index.html.erb app/views/init/spinner-loading.html.erb
+msgid "Turn on JavaScript to use Zammad."
+msgstr ""
+
 #: app/assets/javascripts/app/controllers/webhook.coffee:280
 #: app/assets/javascripts/app/views/channel/email_account_wizard.jst.eco:89
 #: app/assets/javascripts/app/views/channel/email_notification_wizard.jst.eco:48
@@ -22569,7 +22574,7 @@ msgstr "Üdvözlő üzenet"
 #: app/assets/javascripts/app/views/customer_not_ticket_exists.jst.eco:2
 #: app/assets/javascripts/app/views/welcome.jst.eco:2
 #: app/frontend/apps/desktop/pages/guided-setup/views/GuidedSetupStart.vue:43
-#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:401
+#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:402
 msgid "Welcome!"
 msgstr "Üdvözöljük!"
 
@@ -22801,7 +22806,7 @@ msgstr ""
 "fióktelep- vagy vállalatspecifikus megfogalmazások használatával."
 
 #: app/assets/javascripts/app/views/generic/text_tools_modal.jst.eco:8
-#: app/frontend/shared/components/Form/fields/FieldEditor/extensions/AiAssistantTextTools.ts:38
+#: app/frontend/shared/components/Form/fields/FieldEditor/extensions/AiAssistantTextTools.ts:40
 msgid ""
 "Writing assistant could not generate text. Please try again or contact your "
 "administrator."
@@ -23137,7 +23142,7 @@ msgstr "Nincs jogosultsága a frissítéshez"
 msgid "You don't have more tickets to load."
 msgstr "Nincsenek további betöltendő jegyei."
 
-#: app/frontend/shared/router/guards/before/permission.ts:32
+#: app/frontend/shared/router/guards/before/permission.ts:27
 msgid "You don't have the necessary permissions to access this page."
 msgstr "Nincsenek meg a szükséges jogosultságai az oldal eléréséhez."
 
@@ -23205,7 +23210,7 @@ msgid "You have no unread messages"
 msgstr "Nincsenek olvasatlan üzenetei"
 
 #: app/assets/javascripts/app/views/customer_not_ticket_exists.jst.eco:10
-#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:404
+#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:405
 msgid "You have not created a ticket yet."
 msgstr "Még nem hozott létre jegyet."
 

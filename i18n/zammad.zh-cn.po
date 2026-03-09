@@ -1674,7 +1674,7 @@ msgstr "增加注释"
 #: app/frontend/apps/desktop/components/Form/fields/FieldEditor/useEditorActions.ts:300
 #: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarInformation/TicketSidebarInformationContent/TicketLinks.vue:158
 #: app/frontend/apps/mobile/components/Form/fields/FieldEditor/useEditorActions.ts:297
-#: app/frontend/shared/components/Form/fields/FieldEditor/features/link/LinkForm.vue:174
+#: app/frontend/shared/components/Form/fields/FieldEditor/features/link/LinkForm.vue:173
 msgid "Add link"
 msgstr "添加链接"
 
@@ -2877,11 +2877,11 @@ msgid ""
 "set it to false."
 msgstr "自动加载chat.css文件。如果要使用自己的CSS，请将其设置为false。"
 
-#: app/frontend/shared/components/Form/Form.vue:1294
+#: app/frontend/shared/components/Form/Form.vue:1295
 msgid "Autosave in progress…"
 msgstr "自动保存正在进行中…"
 
-#: app/frontend/shared/components/Form/Form.vue:1303
+#: app/frontend/shared/components/Form/Form.vue:1304
 msgid "Autosaving is taking longer than expected…"
 msgstr "自动保存花费的时间比预期要长…"
 
@@ -3401,7 +3401,7 @@ msgstr "无法更新密码，您输入的密码错误。请再试一次。"
 #: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/ArticleReplyDialog.vue:136
 #: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketAction/TicketActionChangeCustomerDialog.vue:68
 #: app/frontend/shared/components/Form/fields/FieldEditor/features/ai-assistant-text-tools/AiAssistantLoadingBanner/AiAssistantLoadingBanner.vue:46
-#: app/frontend/shared/components/Form/fields/FieldEditor/features/link/LinkForm.vue:170
+#: app/frontend/shared/components/Form/fields/FieldEditor/features/link/LinkForm.vue:169
 msgid "Cancel"
 msgstr "取消"
 
@@ -4474,7 +4474,7 @@ msgstr "上下文"
 #: app/frontend/apps/desktop/pages/guided-setup/components/GuidedSetupActionFooter.vue:46
 #: app/frontend/apps/desktop/pages/guided-setup/views/GuidedSetupImport/GuidedSetupImportSource/GuidedSetupImportSource.vue:52
 #: app/frontend/apps/desktop/pages/guided-setup/views/GuidedSetupManual/GuidedSetupManualChannelEmail.vue:136
-#: app/frontend/apps/mobile/pages/ticket/views/TicketCreate.vue:525
+#: app/frontend/apps/mobile/pages/ticket/views/TicketCreate.vue:523
 msgid "Continue"
 msgstr "继续"
 
@@ -4731,7 +4731,7 @@ msgstr "国家"
 #: app/frontend/apps/desktop/entities/user/composables/useUserCreate.ts:78
 #: app/frontend/apps/desktop/pages/personal-setting/components/PersonalSettingNewAccessTokenFlyout.vue:114
 #: app/frontend/apps/desktop/pages/ticket/components/TicketCreate/TicketCreateContent.vue:298
-#: app/frontend/apps/mobile/pages/ticket/views/TicketCreate.vue:476
+#: app/frontend/apps/mobile/pages/ticket/views/TicketCreate.vue:474
 msgid "Create"
 msgstr "创建"
 
@@ -4899,12 +4899,12 @@ msgid "Create tag"
 msgstr "创建标签"
 
 #: app/frontend/apps/mobile/pages/ticket/routes.ts:64
-#: app/frontend/apps/mobile/pages/ticket/views/TicketCreate.vue:476
+#: app/frontend/apps/mobile/pages/ticket/views/TicketCreate.vue:474
 msgid "Create ticket"
 msgstr "创建工单"
 
 #: app/assets/javascripts/app/views/customer_not_ticket_exists.jst.eco:14
-#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:417
+#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:418
 msgid "Create your first ticket"
 msgstr "创建第一个工单"
 
@@ -7112,7 +7112,7 @@ msgstr "復活節假期"
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingTwoFactorAuth.vue:159
 #: app/frontend/apps/desktop/pages/user/components/UserDetailTopBar/actions/edit.ts:10
 #: app/frontend/apps/mobile/pages/home/views/Home.vue:71
-#: app/frontend/apps/mobile/pages/organization/views/OrganizationDetailView.vue:46
+#: app/frontend/apps/mobile/pages/organization/views/OrganizationDetailView.vue:52
 #: app/frontend/apps/mobile/pages/user/views/UserDetailView.vue:54
 msgid "Edit"
 msgstr "编辑"
@@ -7169,7 +7169,7 @@ msgstr "编辑面具"
 
 #: app/frontend/apps/desktop/entities/organization/composables/useOrganizationEdit.ts:59
 #: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarOrganization/TicketSidebarOrganizationContent.vue:39
-#: app/frontend/apps/mobile/pages/ticket/views/TicketInformation/TicketInformationOrganization.vue:76
+#: app/frontend/apps/mobile/pages/ticket/views/TicketInformation/TicketInformationOrganization.vue:77
 #, fuzzy
 #| msgid "Edit Organization"
 msgid "Edit organization"
@@ -7446,7 +7446,7 @@ msgstr ""
 msgid "Empty"
 msgstr "空的"
 
-#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:424
+#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:425
 #, fuzzy
 #| msgid "Overview"
 msgid "Empty overview"
@@ -8683,7 +8683,7 @@ msgstr ""
 #: app/frontend/apps/desktop/pages/ticket/views/TicketCreate.vue:23
 #: app/frontend/apps/mobile/pages/ticket/views/TicketCreate.vue:448
 #: app/frontend/shared/errors/useErrorHandler.ts:29
-#: app/frontend/shared/router/guards/before/permission.ts:31
+#: app/frontend/shared/router/guards/before/permission.ts:26
 msgid "Forbidden"
 msgstr "禁止"
 
@@ -11014,7 +11014,7 @@ msgstr "将 GitLab 问题链接到您的工单。"
 msgid "Link Related Answer"
 msgstr "链接到相关回答"
 
-#: app/frontend/shared/components/Form/fields/FieldEditor/features/link/LinkForm.vue:148
+#: app/frontend/shared/components/Form/fields/FieldEditor/features/link/LinkForm.vue:147
 #, fuzzy
 #| msgid "Link %s"
 msgid "Link URL"
@@ -11063,7 +11063,7 @@ msgstr "測試運行成功"
 msgid "Link template"
 msgstr "链接模板"
 
-#: app/frontend/shared/components/Form/fields/FieldEditor/features/link/LinkForm.vue:150
+#: app/frontend/shared/components/Form/fields/FieldEditor/features/link/LinkForm.vue:149
 #, fuzzy
 #| msgid "Linked Tickets"
 msgid "Link text"
@@ -11928,7 +11928,7 @@ msgstr "媒体下载成功。"
 #: app/frontend/apps/desktop/components/Organization/OrganizationPopoverWithTrigger/OrganizationPopover.vue:79
 #: app/frontend/apps/desktop/pages/organization/components/OrganizationDetailViewContent.vue:115
 #: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarOrganization/TicketSidebarOrganizationContent.vue:71
-#: app/frontend/apps/mobile/components/Organization/OrganizationMembersList.vue:29
+#: app/frontend/apps/mobile/components/Organization/OrganizationMembersList.vue:36
 msgid "Members"
 msgstr "成员"
 
@@ -13248,7 +13248,7 @@ msgstr "暂时还没有模板."
 msgid "No template created yet."
 msgstr "暂时还没有模板."
 
-#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:425
+#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:426
 #, fuzzy
 #| msgid "Match tickets in following states"
 msgid "No tickets in this state."
@@ -14291,7 +14291,7 @@ msgstr "概览"
 msgid "Overview order list"
 msgstr "概览"
 
-#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:380
+#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:381
 #, fuzzy
 #| msgid "Overviews"
 msgid "Overview: %s"
@@ -14719,7 +14719,7 @@ msgid "Please add categories and/or answers"
 msgstr "请添加类别和/或答案"
 
 #: app/assets/javascripts/app/views/customer_not_ticket_exists.jst.eco:12
-#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:410
+#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:411
 msgid "Please click on the button below to create your first one."
 msgstr "请单击下面的按钮来创建您的第一个。"
 
@@ -15629,7 +15629,7 @@ msgstr "删除图像"
 msgid "Remove item"
 msgstr "删除图像"
 
-#: app/frontend/shared/components/Form/fields/FieldEditor/features/link/LinkForm.vue:160
+#: app/frontend/shared/components/Form/fields/FieldEditor/features/link/LinkForm.vue:159
 #, fuzzy
 #| msgid "Remove image"
 msgid "Remove link"
@@ -19860,7 +19860,7 @@ msgstr ""
 msgid "The text tool with the given ID could not be found."
 msgstr "找不到目标工单编号。"
 
-#: app/frontend/shared/components/Form/fields/FieldEditor/extensions/AiAssistantTextTools.ts:142
+#: app/frontend/shared/components/Form/fields/FieldEditor/extensions/AiAssistantTextTools.ts:144
 msgid ""
 "The text was modified. Your request has been aborted to prevent overwriting."
 msgstr ""
@@ -19995,7 +19995,7 @@ msgstr "需要认证"
 
 #: app/assets/javascripts/app/controllers/customer_ticket_create/sidebar_customer_default.coffee:29
 #: app/assets/javascripts/app/views/customer_not_ticket_exists.jst.eco:11
-#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:407
+#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:408
 msgid "The way to communicate with us is this thing called \"ticket\"."
 msgstr "與我們溝通的方式就是所謂的“工單”"
 
@@ -22070,6 +22070,10 @@ msgstr "星期二"
 msgid "Turn chat into ticket"
 msgstr "将聊天变成门票"
 
+#: app/views/init/index.html.erb app/views/init/spinner-loading.html.erb
+msgid "Turn on JavaScript to use Zammad."
+msgstr ""
+
 #: app/assets/javascripts/app/controllers/webhook.coffee:280
 #: app/assets/javascripts/app/views/channel/email_account_wizard.jst.eco:89
 #: app/assets/javascripts/app/views/channel/email_notification_wizard.jst.eco:48
@@ -23541,7 +23545,7 @@ msgstr "歡迎信息"
 #: app/assets/javascripts/app/views/customer_not_ticket_exists.jst.eco:2
 #: app/assets/javascripts/app/views/welcome.jst.eco:2
 #: app/frontend/apps/desktop/pages/guided-setup/views/GuidedSetupStart.vue:43
-#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:401
+#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:402
 msgid "Welcome!"
 msgstr "欢迎！"
 
@@ -23792,7 +23796,7 @@ msgid ""
 msgstr ""
 
 #: app/assets/javascripts/app/views/generic/text_tools_modal.jst.eco:8
-#: app/frontend/shared/components/Form/fields/FieldEditor/extensions/AiAssistantTextTools.ts:38
+#: app/frontend/shared/components/Form/fields/FieldEditor/extensions/AiAssistantTextTools.ts:40
 #, fuzzy
 #| msgid "The password could not be set. Please contact your administrator."
 msgid ""
@@ -24125,7 +24129,7 @@ msgstr "至少有一个用户需要拥有admin权限。"
 msgid "You don't have more tickets to load."
 msgstr "您目前没有任何门票。"
 
-#: app/frontend/shared/router/guards/before/permission.ts:32
+#: app/frontend/shared/router/guards/before/permission.ts:27
 msgid "You don't have the necessary permissions to access this page."
 msgstr "您没有必要的访问此页面的权限。"
 
@@ -24191,7 +24195,7 @@ msgid "You have no unread messages"
 msgstr "您没有未读的消息"
 
 #: app/assets/javascripts/app/views/customer_not_ticket_exists.jst.eco:10
-#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:404
+#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:405
 msgid "You have not created a ticket yet."
 msgstr "您还没有创建工单"
 

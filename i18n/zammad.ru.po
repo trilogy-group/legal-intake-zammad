@@ -2,10 +2,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zammad\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2026-01-16 09:00+0000\n"
+"PO-Revision-Date: 2026-03-06 22:00+0000\n"
 "Last-Translator: NightFlexer <b111vitalii@gmail.com>\n"
 "Language-Team: Russian <https://translations.zammad.org/projects/zammad/"
-"zammad-development/ru/>\n"
+"zammad-stable/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1719,7 +1719,7 @@ msgstr "Добавить внутреннее примечание"
 #: app/frontend/apps/desktop/components/Form/fields/FieldEditor/useEditorActions.ts:300
 #: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarInformation/TicketSidebarInformationContent/TicketLinks.vue:158
 #: app/frontend/apps/mobile/components/Form/fields/FieldEditor/useEditorActions.ts:297
-#: app/frontend/shared/components/Form/fields/FieldEditor/features/link/LinkForm.vue:174
+#: app/frontend/shared/components/Form/fields/FieldEditor/features/link/LinkForm.vue:173
 msgid "Add link"
 msgstr "Добавить ссылку"
 
@@ -1981,7 +1981,7 @@ msgstr "Агенты с разрешением \"%s\""
 
 #: app/frontend/apps/desktop/components/BetaUi/BetaUiFeedbackConsentDialog.vue:103
 msgid "Agree & join"
-msgstr ""
+msgstr "Согласитесь & присоединяйтесь!"
 
 #: app/assets/javascripts/app/views/profile/calendar_subscriptions.jst.eco:27
 msgid "Alarm"
@@ -2953,11 +2953,11 @@ msgstr ""
 "Автоматически загружать файл chat.css. Если Вы хотите использовать свой "
 "собственный css, просто установите значение false."
 
-#: app/frontend/shared/components/Form/Form.vue:1294
+#: app/frontend/shared/components/Form/Form.vue:1295
 msgid "Autosave in progress…"
 msgstr "Выполняется автосохранение…"
 
-#: app/frontend/shared/components/Form/Form.vue:1303
+#: app/frontend/shared/components/Form/Form.vue:1304
 msgid "Autosaving is taking longer than expected…"
 msgstr "Автосохранение занимает больше времени, чем ожидалось…"
 
@@ -3052,7 +3052,7 @@ msgstr "Доступность BETA UI"
 
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingNewBetaUi.vue:73
 msgid "BETA UI feedback program"
-msgstr ""
+msgstr "Фидбэк по программе Бета UI"
 
 #: app/frontend/apps/desktop/components/BetaUi/BetaUiFeedbackConsentDialog.vue:46
 #, fuzzy
@@ -3455,6 +3455,8 @@ msgstr "Может быть в любом CSS формате цвета."
 #: app/frontend/apps/desktop/components/BetaUi/FeedbackDialog/SwitchBackFeedbackDialog.vue:37
 msgid "Can you tell us what are you missing in the BETA UI?"
 msgstr ""
+"Расскажите, чего именно вам не хватает в бета-версии пользовательского "
+"интерфейса?"
 
 #: app/assets/javascripts/app/controllers/getting_started/agent.coffee:87
 msgid "Can't create user!"
@@ -3495,7 +3497,7 @@ msgstr ""
 #: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/ArticleReplyDialog.vue:136
 #: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketAction/TicketActionChangeCustomerDialog.vue:68
 #: app/frontend/shared/components/Form/fields/FieldEditor/features/ai-assistant-text-tools/AiAssistantLoadingBanner/AiAssistantLoadingBanner.vue:46
-#: app/frontend/shared/components/Form/fields/FieldEditor/features/link/LinkForm.vue:170
+#: app/frontend/shared/components/Form/fields/FieldEditor/features/link/LinkForm.vue:169
 msgid "Cancel"
 msgstr "Отмена"
 
@@ -4561,7 +4563,7 @@ msgstr "Контекстное меню"
 #: app/frontend/apps/desktop/pages/guided-setup/components/GuidedSetupActionFooter.vue:46
 #: app/frontend/apps/desktop/pages/guided-setup/views/GuidedSetupImport/GuidedSetupImportSource/GuidedSetupImportSource.vue:52
 #: app/frontend/apps/desktop/pages/guided-setup/views/GuidedSetupManual/GuidedSetupManualChannelEmail.vue:136
-#: app/frontend/apps/mobile/pages/ticket/views/TicketCreate.vue:525
+#: app/frontend/apps/mobile/pages/ticket/views/TicketCreate.vue:523
 msgid "Continue"
 msgstr "Продолжить"
 
@@ -4823,7 +4825,7 @@ msgstr "Страна"
 #: app/frontend/apps/desktop/entities/user/composables/useUserCreate.ts:78
 #: app/frontend/apps/desktop/pages/personal-setting/components/PersonalSettingNewAccessTokenFlyout.vue:114
 #: app/frontend/apps/desktop/pages/ticket/components/TicketCreate/TicketCreateContent.vue:298
-#: app/frontend/apps/mobile/pages/ticket/views/TicketCreate.vue:476
+#: app/frontend/apps/mobile/pages/ticket/views/TicketCreate.vue:474
 msgid "Create"
 msgstr "Создать"
 
@@ -4991,12 +4993,12 @@ msgid "Create tag"
 msgstr "Создать тег"
 
 #: app/frontend/apps/mobile/pages/ticket/routes.ts:64
-#: app/frontend/apps/mobile/pages/ticket/views/TicketCreate.vue:476
+#: app/frontend/apps/mobile/pages/ticket/views/TicketCreate.vue:474
 msgid "Create ticket"
 msgstr "Создать заявку"
 
 #: app/assets/javascripts/app/views/customer_not_ticket_exists.jst.eco:14
-#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:417
+#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:418
 msgid "Create your first ticket"
 msgstr "Создать Вашу первую заявку"
 
@@ -7363,7 +7365,7 @@ msgstr "Рождественские каникулы"
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingTwoFactorAuth.vue:159
 #: app/frontend/apps/desktop/pages/user/components/UserDetailTopBar/actions/edit.ts:10
 #: app/frontend/apps/mobile/pages/home/views/Home.vue:71
-#: app/frontend/apps/mobile/pages/organization/views/OrganizationDetailView.vue:46
+#: app/frontend/apps/mobile/pages/organization/views/OrganizationDetailView.vue:52
 #: app/frontend/apps/mobile/pages/user/views/UserDetailView.vue:54
 msgid "Edit"
 msgstr "Редактировать"
@@ -7416,7 +7418,7 @@ msgstr "Маска редактирования"
 
 #: app/frontend/apps/desktop/entities/organization/composables/useOrganizationEdit.ts:59
 #: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarOrganization/TicketSidebarOrganizationContent.vue:39
-#: app/frontend/apps/mobile/pages/ticket/views/TicketInformation/TicketInformationOrganization.vue:76
+#: app/frontend/apps/mobile/pages/ticket/views/TicketInformation/TicketInformationOrganization.vue:77
 #, fuzzy
 #| msgid "Edit Organization"
 msgid "Edit organization"
@@ -7695,7 +7697,7 @@ msgstr ""
 msgid "Empty"
 msgstr "Пусто"
 
-#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:424
+#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:425
 #, fuzzy
 #| msgid "Empty Overview"
 msgid "Empty overview"
@@ -8990,7 +8992,7 @@ msgstr ""
 #: app/frontend/apps/desktop/pages/ticket/views/TicketCreate.vue:23
 #: app/frontend/apps/mobile/pages/ticket/views/TicketCreate.vue:448
 #: app/frontend/shared/errors/useErrorHandler.ts:29
-#: app/frontend/shared/router/guards/before/permission.ts:31
+#: app/frontend/shared/router/guards/before/permission.ts:26
 msgid "Forbidden"
 msgstr "Запрещено"
 
@@ -9021,7 +9023,7 @@ msgstr "Форма"
 
 #: db/seeds/settings.rb:3163
 msgid "Form Allowed Parameters"
-msgstr ""
+msgstr "Допустимые параметры формы"
 
 #: app/graphql/gql/queries/form_updater.rb:34
 msgid "FormSchema could not be found."
@@ -9715,7 +9717,7 @@ msgstr "Помогите улучшить Zammad!"
 
 #: app/frontend/apps/desktop/components/BetaUi/BetaUiFeedbackConsentDialog.vue:99
 msgid "Help us shape the future of Zammad!"
-msgstr ""
+msgstr "Помогите нам сформировать будущее Zammad!"
 
 #: app/assets/javascripts/app/views/knowledge_base/public_menu_manager.jst.eco:6
 msgid ""
@@ -9808,6 +9810,10 @@ msgid ""
 "feedback. It involves asking you to rate your experience and provide an "
 "optional comment every once in a while."
 msgstr ""
+"Привет! У нас есть кое-что вам показать! Наша команда некоторое время "
+"работала над новым пользовательским интерфейсом Zammad, и мы очень хотим, "
+"чтобы вы его опробовали и оставили свои отзывы. Для этого мы попросим вас "
+"оценить свой опыт и время от времени оставлять комментарии (по желанию)."
 
 #: app/assets/javascripts/app/views/channel/chat.jst.eco:73
 msgid "Hi! Which one of our products?"
@@ -10971,7 +10977,7 @@ msgstr ""
 
 #: app/frontend/apps/desktop/components/BetaUi/FeedbackDialog/SwitchBackFeedbackDialog.vue:94
 msgid "Just switch back"
-msgstr ""
+msgstr "Просто переключитесь обратно"
 
 #: app/frontend/apps/desktop/pages/guided-setup/components/GuidedSetupImport/GuidedSetupImportSource/plugins/kayako.ts:11
 msgid "Kayako"
@@ -11219,7 +11225,7 @@ msgstr "Узнать больше"
 
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingNewBetaUi.vue:40
 msgid "Leave BETA UI feedback program?"
-msgstr ""
+msgstr "Выйти из программы по фидбэку BETA UI?"
 
 #: app/assets/javascripts/app/controllers/_ai/provider.coffee:207
 #, fuzzy
@@ -11234,7 +11240,7 @@ msgstr "Оставьте поле пустым, чтобы использова�
 
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingNewBetaUi.vue:39
 msgid "Leave program"
-msgstr ""
+msgstr "Программа отпусков"
 
 #: app/assets/javascripts/app/controllers/_ai/_feature_base.coffee:53
 #: app/assets/javascripts/app/controllers/_ai/ai_agent.coffee:66
@@ -11348,7 +11354,7 @@ msgstr "Связать проблемы GitLab с Вашими заявками.
 msgid "Link Related Answer"
 msgstr "Ссылка на подобный ответ"
 
-#: app/frontend/shared/components/Form/fields/FieldEditor/features/link/LinkForm.vue:148
+#: app/frontend/shared/components/Form/fields/FieldEditor/features/link/LinkForm.vue:147
 msgid "Link URL"
 msgstr "URL ссылки"
 
@@ -11385,7 +11391,7 @@ msgstr "Ссылка успешно удалена"
 msgid "Link template"
 msgstr "Связанный шаблон"
 
-#: app/frontend/shared/components/Form/fields/FieldEditor/features/link/LinkForm.vue:150
+#: app/frontend/shared/components/Form/fields/FieldEditor/features/link/LinkForm.vue:149
 #, fuzzy
 #| msgid "Link Text"
 msgid "Link text"
@@ -12122,7 +12128,7 @@ msgstr "Май"
 
 #: app/frontend/apps/desktop/components/BetaUi/BetaUiFeedbackConsentDialog.vue:104
 msgid "Maybe later"
-msgstr ""
+msgstr "Возможно позже"
 
 #: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/ArticleBubble.vue:80
 msgid "Me"
@@ -12152,7 +12158,7 @@ msgstr "Загрузка медиа успешно выполнена."
 #: app/frontend/apps/desktop/components/Organization/OrganizationPopoverWithTrigger/OrganizationPopover.vue:79
 #: app/frontend/apps/desktop/pages/organization/components/OrganizationDetailViewContent.vue:115
 #: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarOrganization/TicketSidebarOrganizationContent.vue:71
-#: app/frontend/apps/mobile/components/Organization/OrganizationMembersList.vue:29
+#: app/frontend/apps/mobile/components/Organization/OrganizationMembersList.vue:36
 msgid "Members"
 msgstr "Пользователи"
 
@@ -12690,7 +12696,7 @@ msgstr "Сеть"
 
 #: app/frontend/apps/desktop/components/BetaUi/FeedbackDialog/FeedbackDialog.vue:66
 msgid "Never ask me again"
-msgstr ""
+msgstr "Больше никогда меня не спрашивай"
 
 #: app/assets/javascripts/app/controllers/_channel/_email_filter.coffee:12
 #: app/assets/javascripts/app/controllers/_channel/_email_signature.coffee:12
@@ -13333,7 +13339,7 @@ msgstr "Теги еще не добавлены."
 msgid "No template created yet."
 msgstr "Шаблон еще не создан."
 
-#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:425
+#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:426
 msgid "No tickets in this state."
 msgstr "Заявки в этом состоянии отсутствуют."
 
@@ -14277,7 +14283,7 @@ msgstr "Список навигации представления"
 msgid "Overview order list"
 msgstr "Список навигации представления"
 
-#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:380
+#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:381
 msgid "Overview: %s"
 msgstr "Представление: %s"
 
@@ -14694,7 +14700,7 @@ msgid "Please add categories and/or answers"
 msgstr "Пожалуйста, добавьте категории и/или ответы"
 
 #: app/assets/javascripts/app/views/customer_not_ticket_exists.jst.eco:12
-#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:410
+#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:411
 msgid "Please click on the button below to create your first one."
 msgstr "Пожалуйста, нажмите на кнопку ниже, чтобы создать свою первую заявку."
 
@@ -15300,7 +15306,7 @@ msgstr "Причина отсутствия"
 
 #: app/frontend/apps/desktop/components/BetaUi/FeedbackDialog/SwitchBackFeedbackDialog.vue:78
 msgid "Reason to switch back"
-msgstr ""
+msgstr "Причина вернуться"
 
 #: app/assets/javascripts/app/views/exchange/token_information.jst.eco:39
 #: app/assets/javascripts/app/views/google/list.jst.eco:112
@@ -15603,7 +15609,7 @@ msgstr "Удалить изображение"
 msgid "Remove item"
 msgstr "Удалить элемент"
 
-#: app/frontend/shared/components/Form/fields/FieldEditor/features/link/LinkForm.vue:160
+#: app/frontend/shared/components/Form/fields/FieldEditor/features/link/LinkForm.vue:159
 #, fuzzy
 #| msgid "Remove Link"
 msgid "Remove link"
@@ -16750,6 +16756,9 @@ msgid ""
 "Security token verification failed. This may be just temporary, click here "
 "to reload and try again. Reloading in %s second(s)…"
 msgstr ""
+"Проверка токена безопасности не удалась. Возможно, это временное явление, "
+"нажмите здесь, чтобы обновить страницу и повторить попытку. Обновление через "
+"% секунд…"
 
 #: lib/external_data_source/errors.rb:28
 msgid "See HTTPLog for details."
@@ -18962,7 +18971,7 @@ msgstr ""
 
 #: app/frontend/apps/desktop/components/BetaUi/BetaUiFeedbackConsentDialog.vue:66
 msgid "The data we need to collect consists of:"
-msgstr ""
+msgstr "Необходимые нам данные включают в себя:"
 
 #: app/assets/javascripts/app/models/knowledge_base.coffee:294
 msgid ""
@@ -19196,6 +19205,8 @@ msgid ""
 "The included security token is invalid. This may be just a temporary error, "
 "please reload your browser, and try again."
 msgstr ""
+"Включенный токен безопасности недействителен. Возможно, это временная "
+"ошибка, пожалуйста, перезагрузите браузер и попробуйте снова."
 
 #: app/assets/javascripts/app/views/package.jst.eco:7
 msgid ""
@@ -19829,7 +19840,7 @@ msgstr ""
 msgid "The text tool with the given ID could not be found."
 msgstr "Не удалось найти номер целевой заявки."
 
-#: app/frontend/shared/components/Form/fields/FieldEditor/extensions/AiAssistantTextTools.ts:142
+#: app/frontend/shared/components/Form/fields/FieldEditor/extensions/AiAssistantTextTools.ts:144
 msgid ""
 "The text was modified. Your request has been aborted to prevent overwriting."
 msgstr ""
@@ -19954,7 +19965,7 @@ msgstr "Проверка конфигурации метода двухфакт�
 
 #: app/assets/javascripts/app/controllers/customer_ticket_create/sidebar_customer_default.coffee:29
 #: app/assets/javascripts/app/views/customer_not_ticket_exists.jst.eco:11
-#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:407
+#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:408
 msgid "The way to communicate with us is this thing called \"ticket\"."
 msgstr "Способ общения с нами называется «заявка»."
 
@@ -20256,6 +20267,20 @@ msgid ""
 "configuring this feature in a way that aligns with your organization's "
 "policies and compliance requirements."
 msgstr ""
+"Эта функция использует искусственный интеллект (ИИ) для генерации или "
+"поддержки результатов, рекомендаций или автоматизированных процессов. "
+"Системы ИИ являются вероятностными и могут выдавать результаты, которые "
+"являются неполными, предвзятыми или контекстно неподходящими.\n"
+"\n"
+"|Важные моменты для администраторов|\n"
+"\n"
+"- Информирование пользователей: Убедитесь, что конечные пользователи "
+"понимают, что результаты работы ИИ требуют проверки человеком, особенно для "
+"принятия важных решений (например, юридических, финансовых, медицинских или "
+"связанных с безопасностью).\n"
+"\n"
+"- Ответственность за настройку: Как администратор, вы несете ответственность "
+"за настройку этой функции в соответствии с политиками вашей организации."
 
 #: config/initializers/activemodel_error.rb:31
 msgid "This field %s"
@@ -21856,6 +21881,10 @@ msgstr "Вторник"
 msgid "Turn chat into ticket"
 msgstr "Превратить чат в заявку"
 
+#: app/views/init/index.html.erb app/views/init/spinner-loading.html.erb
+msgid "Turn on JavaScript to use Zammad."
+msgstr ""
+
 #: app/assets/javascripts/app/controllers/webhook.coffee:280
 #: app/assets/javascripts/app/views/channel/email_account_wizard.jst.eco:89
 #: app/assets/javascripts/app/views/channel/email_notification_wizard.jst.eco:48
@@ -23058,7 +23087,7 @@ msgstr "Ожидающий в %s"
 
 #: app/frontend/apps/desktop/components/BetaUi/BetaUiFeedbackConsentDialog.vue:34
 msgid "Want to join the BETA UI feedback program?"
-msgstr ""
+msgstr "Хотите принять участие в программе BETA-версии UI?"
 
 #: app/assets/javascripts/app/views/data_privacy/preview.jst.eco:16
 msgid "Warning"
@@ -23200,7 +23229,7 @@ msgstr "Сообщение приветствия"
 #: app/assets/javascripts/app/views/customer_not_ticket_exists.jst.eco:2
 #: app/assets/javascripts/app/views/welcome.jst.eco:2
 #: app/frontend/apps/desktop/pages/guided-setup/views/GuidedSetupStart.vue:43
-#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:401
+#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:402
 msgid "Welcome!"
 msgstr "Добро пожаловать!"
 
@@ -23451,7 +23480,7 @@ msgstr ""
 "подразделения или компании."
 
 #: app/assets/javascripts/app/views/generic/text_tools_modal.jst.eco:8
-#: app/frontend/shared/components/Form/fields/FieldEditor/extensions/AiAssistantTextTools.ts:38
+#: app/frontend/shared/components/Form/fields/FieldEditor/extensions/AiAssistantTextTools.ts:40
 #, fuzzy
 #| msgid ""
 #| "The summary could not be generated. Please try again later or contact "
@@ -23509,7 +23538,7 @@ msgstr "Вы находитесь в списке ожидания <strong>%s</s
 
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingNewBetaUi.vue:78
 msgid "You are part of the BETA UI feedback program."
-msgstr ""
+msgstr "Вы являетесь участником BETA-версии UI."
 
 #: app/models/transaction/notification.rb:111
 msgid ""
@@ -23533,7 +23562,7 @@ msgstr "Вы получаете это, потому что были упомя�
 
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingNewBetaUi.vue:37
 msgid "You can always re-join later."
-msgstr ""
+msgstr "Вы всегда можете присоединиться позже."
 
 #: app/assets/javascripts/app/views/exchange/oauth_intro.jst.eco:7
 #: app/assets/javascripts/app/views/facebook/index.jst.eco:9
@@ -23727,10 +23756,13 @@ msgid ""
 "You can return to the new BETA UI using the switch at the bottom of your "
 "taskbar or in your profile settings."
 msgstr ""
+"Вы можете вернуться к новой BETA-версии UI, используя переключатель в нижней "
+"части панели задач или в настройках профиля."
 
 #: app/frontend/apps/desktop/components/BetaUi/FeedbackDialog/FeedbackDialog.vue:69
 msgid "You can send feedback from the BETA button or profile settings."
 msgstr ""
+"Вы можете отправить отзыв, используя кнопку BETA или настройки профиля."
 
 #: app/assets/javascripts/app/views/settings/storage_provider.jst.eco:3
 msgid ""
@@ -23794,7 +23826,7 @@ msgstr "У Вас нет прав на обновление"
 msgid "You don't have more tickets to load."
 msgstr "У Вас больше нет заявок для загрузки."
 
-#: app/frontend/shared/router/guards/before/permission.ts:32
+#: app/frontend/shared/router/guards/before/permission.ts:27
 msgid "You don't have the necessary permissions to access this page."
 msgstr "У Вас нет необходимых разрешений для доступа к этой странице."
 
@@ -23863,7 +23895,7 @@ msgid "You have no unread messages"
 msgstr "У Вас нет непрочитанных сообщений"
 
 #: app/assets/javascripts/app/views/customer_not_ticket_exists.jst.eco:10
-#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:404
+#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:405
 msgid "You have not created a ticket yet."
 msgstr "Вы ещё не создавали заявок."
 
@@ -23939,10 +23971,12 @@ msgid ""
 "You were using the new BETA UI for %s. Considering that, how would you rate "
 "your experience so far?"
 msgstr ""
+"Вы использовали новый бета-интерфейс для %. Учитывая это, как бы вы оценили "
+"свой опыт использования на данный момент?"
 
 #: app/frontend/apps/desktop/components/BetaUi/BetaUiFeedbackConsentDialog.vue:15
 msgid "You were using the new BETA UI for 5 hours."
-msgstr ""
+msgstr "Вы использовали новый бета-интерфейс в течение 5 часов."
 
 #: app/assets/javascripts/app/views/login.jst.eco:96
 #: app/frontend/apps/desktop/pages/authentication/views/Signup.vue:158
@@ -24037,7 +24071,7 @@ msgstr ""
 #: app/frontend/apps/desktop/components/BetaUi/FeedbackDialog/FeedbackDialog.vue:60
 #: app/frontend/apps/desktop/components/BetaUi/FeedbackDialog/SwitchBackFeedbackDialog.vue:40
 msgid "Your answer will be submitted to Zammad GmbH in an anonymized way."
-msgstr ""
+msgstr "Ваш ответ будет отправлен в компанию Zammad GmbH в анонимной форме."
 
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingAvatar.vue:172
 msgid "Your avatar"
@@ -24099,7 +24133,7 @@ msgstr "Ваш персональный токен доступа (Access Token)
 
 #: app/frontend/apps/desktop/components/BetaUi/FeedbackDialog/FeedbackDialog.vue:50
 msgid "Your rating of the new BETA UI"
-msgstr ""
+msgstr "Ваша оценка нового бета-интерфейса"
 
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingAppearance.vue:28
 msgid "Your theme has been updated."
@@ -24292,10 +24326,14 @@ msgid ""
 "anonymized rating and comment on the new UI, repeated in a few timely "
 "iterations"
 msgstr ""
+"Анонимные оценки и комментарии к новому пользовательскому интерфейсу, "
+"повторяющиеся в нескольких своевременных итерациях"
 
 #: app/frontend/apps/desktop/components/BetaUi/BetaUiFeedbackConsentDialog.vue:80
 msgid "anonymized tracked usage time of the new UI"
 msgstr ""
+"анонимизированное отслеживаемое время использования нового пользовательского "
+"интерфейса"
 
 #: app/frontend/apps/desktop/components/NavigationMenu/NavigationMenuFilter.vue:70
 msgid "apply filter"
@@ -25230,6 +25268,8 @@ msgstr "моё примечание"
 #: app/frontend/apps/desktop/components/BetaUi/BetaUiFeedbackConsentDialog.vue:85
 msgid "name of the Zammad instance with tracked usage time of the new UI."
 msgstr ""
+"Название экземпляра Zammad с отслеживаемым временем использования нового "
+"пользовательского интерфейса."
 
 #: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/ArticleSeparatorNew.vue:5
 #: db/seeds/ticket_state_types.rb:3 db/seeds/ticket_states.rb:5

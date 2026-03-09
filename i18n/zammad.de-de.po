@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zammad\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2026-03-02 07:21+0000\n"
-"Last-Translator: Martin Gruner <mg@zammad.com>\n"
+"PO-Revision-Date: 2026-03-04 22:00+0000\n"
+"Last-Translator: Ralf Schmid <rsc@zammad.com>\n"
 "Language-Team: German <https://translations.zammad.org/projects/zammad/"
 "zammad-stable/de/>\n"
 "Language: de-de\n"
@@ -1662,7 +1662,7 @@ msgstr "Interne Notiz hinzufügen"
 #: app/frontend/apps/desktop/components/Form/fields/FieldEditor/useEditorActions.ts:300
 #: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarInformation/TicketSidebarInformationContent/TicketLinks.vue:158
 #: app/frontend/apps/mobile/components/Form/fields/FieldEditor/useEditorActions.ts:297
-#: app/frontend/shared/components/Form/fields/FieldEditor/features/link/LinkForm.vue:174
+#: app/frontend/shared/components/Form/fields/FieldEditor/features/link/LinkForm.vue:173
 msgid "Add link"
 msgstr "Verknüpfung hinzufügen"
 
@@ -2884,11 +2884,11 @@ msgstr ""
 "Lädt automatisch die Datei chat.css. Wenn Sie Ihre eigene CSS-Datei "
 "verwenden möchten, setzen Sie dies einfach auf false."
 
-#: app/frontend/shared/components/Form/Form.vue:1294
+#: app/frontend/shared/components/Form/Form.vue:1295
 msgid "Autosave in progress…"
 msgstr "Automatisches Speichern läuft…"
 
-#: app/frontend/shared/components/Form/Form.vue:1303
+#: app/frontend/shared/components/Form/Form.vue:1304
 msgid "Autosaving is taking longer than expected…"
 msgstr "Das automatische Speichern dauert länger als erwartet…"
 
@@ -3401,7 +3401,7 @@ msgstr ""
 #: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/ArticleReplyDialog.vue:136
 #: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketAction/TicketActionChangeCustomerDialog.vue:68
 #: app/frontend/shared/components/Form/fields/FieldEditor/features/ai-assistant-text-tools/AiAssistantLoadingBanner/AiAssistantLoadingBanner.vue:46
-#: app/frontend/shared/components/Form/fields/FieldEditor/features/link/LinkForm.vue:170
+#: app/frontend/shared/components/Form/fields/FieldEditor/features/link/LinkForm.vue:169
 msgid "Cancel"
 msgstr "Abbrechen"
 
@@ -4437,7 +4437,7 @@ msgstr "Kontextmenü"
 #: app/frontend/apps/desktop/pages/guided-setup/components/GuidedSetupActionFooter.vue:46
 #: app/frontend/apps/desktop/pages/guided-setup/views/GuidedSetupImport/GuidedSetupImportSource/GuidedSetupImportSource.vue:52
 #: app/frontend/apps/desktop/pages/guided-setup/views/GuidedSetupManual/GuidedSetupManualChannelEmail.vue:136
-#: app/frontend/apps/mobile/pages/ticket/views/TicketCreate.vue:525
+#: app/frontend/apps/mobile/pages/ticket/views/TicketCreate.vue:523
 msgid "Continue"
 msgstr "Weiter"
 
@@ -4689,7 +4689,7 @@ msgstr "Land"
 #: app/frontend/apps/desktop/entities/user/composables/useUserCreate.ts:78
 #: app/frontend/apps/desktop/pages/personal-setting/components/PersonalSettingNewAccessTokenFlyout.vue:114
 #: app/frontend/apps/desktop/pages/ticket/components/TicketCreate/TicketCreateContent.vue:298
-#: app/frontend/apps/mobile/pages/ticket/views/TicketCreate.vue:476
+#: app/frontend/apps/mobile/pages/ticket/views/TicketCreate.vue:474
 msgid "Create"
 msgstr "Erstellen"
 
@@ -4851,12 +4851,12 @@ msgid "Create tag"
 msgstr "Tag erstellen"
 
 #: app/frontend/apps/mobile/pages/ticket/routes.ts:64
-#: app/frontend/apps/mobile/pages/ticket/views/TicketCreate.vue:476
+#: app/frontend/apps/mobile/pages/ticket/views/TicketCreate.vue:474
 msgid "Create ticket"
 msgstr "Ticket erstellen"
 
 #: app/assets/javascripts/app/views/customer_not_ticket_exists.jst.eco:14
-#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:417
+#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:418
 msgid "Create your first ticket"
 msgstr "Erstellen Sie Ihr erstes Ticket"
 
@@ -7167,7 +7167,7 @@ msgstr "Osterferien"
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingTwoFactorAuth.vue:159
 #: app/frontend/apps/desktop/pages/user/components/UserDetailTopBar/actions/edit.ts:10
 #: app/frontend/apps/mobile/pages/home/views/Home.vue:71
-#: app/frontend/apps/mobile/pages/organization/views/OrganizationDetailView.vue:46
+#: app/frontend/apps/mobile/pages/organization/views/OrganizationDetailView.vue:52
 #: app/frontend/apps/mobile/pages/user/views/UserDetailView.vue:54
 msgid "Edit"
 msgstr "Bearbeiten"
@@ -7218,7 +7218,7 @@ msgstr "Bearbeitungsmaske"
 
 #: app/frontend/apps/desktop/entities/organization/composables/useOrganizationEdit.ts:59
 #: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarOrganization/TicketSidebarOrganizationContent.vue:39
-#: app/frontend/apps/mobile/pages/ticket/views/TicketInformation/TicketInformationOrganization.vue:76
+#: app/frontend/apps/mobile/pages/ticket/views/TicketInformation/TicketInformationOrganization.vue:77
 msgid "Edit organization"
 msgstr "Organisation bearbeiten"
 
@@ -7479,7 +7479,7 @@ msgstr ""
 msgid "Empty"
 msgstr "Leer"
 
-#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:424
+#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:425
 msgid "Empty overview"
 msgstr "Leere Übersicht"
 
@@ -8731,7 +8731,7 @@ msgstr ""
 #: app/frontend/apps/desktop/pages/ticket/views/TicketCreate.vue:23
 #: app/frontend/apps/mobile/pages/ticket/views/TicketCreate.vue:448
 #: app/frontend/shared/errors/useErrorHandler.ts:29
-#: app/frontend/shared/router/guards/before/permission.ts:31
+#: app/frontend/shared/router/guards/before/permission.ts:26
 msgid "Forbidden"
 msgstr "Verboten"
 
@@ -11049,7 +11049,7 @@ msgstr "Verknüpfen Sie GitLab-Issues mit Ihren Tickets."
 msgid "Link Related Answer"
 msgstr "Verknüpfe ähnliche Antwort"
 
-#: app/frontend/shared/components/Form/fields/FieldEditor/features/link/LinkForm.vue:148
+#: app/frontend/shared/components/Form/fields/FieldEditor/features/link/LinkForm.vue:147
 msgid "Link URL"
 msgstr "Link-URL"
 
@@ -11086,7 +11086,7 @@ msgstr "Verknüpfung erfolgreich entfernt"
 msgid "Link template"
 msgstr "Link-Vorlage"
 
-#: app/frontend/shared/components/Form/fields/FieldEditor/features/link/LinkForm.vue:150
+#: app/frontend/shared/components/Form/fields/FieldEditor/features/link/LinkForm.vue:149
 msgid "Link text"
 msgstr "Link-Text"
 
@@ -11838,7 +11838,7 @@ msgstr "Der Medien-Download war erfolgreich."
 #: app/frontend/apps/desktop/components/Organization/OrganizationPopoverWithTrigger/OrganizationPopover.vue:79
 #: app/frontend/apps/desktop/pages/organization/components/OrganizationDetailViewContent.vue:115
 #: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarOrganization/TicketSidebarOrganizationContent.vue:71
-#: app/frontend/apps/mobile/components/Organization/OrganizationMembersList.vue:29
+#: app/frontend/apps/mobile/components/Organization/OrganizationMembersList.vue:36
 msgid "Members"
 msgstr "Mitglieder"
 
@@ -12987,7 +12987,7 @@ msgstr "Bisher wurden keine Tags hinzugefügt."
 msgid "No template created yet."
 msgstr "Bisher wurde keine Vorlage angelegt."
 
-#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:425
+#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:426
 msgid "No tickets in this state."
 msgstr "Keine Tickets in diesem Status."
 
@@ -13910,7 +13910,7 @@ msgstr "Navigationsliste der Übersichten"
 msgid "Overview order list"
 msgstr "Reihenfolge der Übersichten"
 
-#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:380
+#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:381
 msgid "Overview: %s"
 msgstr "Übersicht: %s"
 
@@ -14319,7 +14319,7 @@ msgid "Please add categories and/or answers"
 msgstr "Bitte fügen Sie Kategorien und/oder Antworten hinzu"
 
 #: app/assets/javascripts/app/views/customer_not_ticket_exists.jst.eco:12
-#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:410
+#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:411
 msgid "Please click on the button below to create your first one."
 msgstr "Klicken Sie die untere Schaltfläche, um das erste zu erstellen."
 
@@ -15192,7 +15192,7 @@ msgstr "Bild entfernen"
 msgid "Remove item"
 msgstr "Element entfernen"
 
-#: app/frontend/shared/components/Form/fields/FieldEditor/features/link/LinkForm.vue:160
+#: app/frontend/shared/components/Form/fields/FieldEditor/features/link/LinkForm.vue:159
 msgid "Remove link"
 msgstr "Link entfernen"
 
@@ -19317,7 +19317,7 @@ msgstr ""
 msgid "The text tool with the given ID could not be found."
 msgstr "Das Textwerkzeug mit der angegebenen ID konnte nicht gefunden werden."
 
-#: app/frontend/shared/components/Form/fields/FieldEditor/extensions/AiAssistantTextTools.ts:142
+#: app/frontend/shared/components/Form/fields/FieldEditor/extensions/AiAssistantTextTools.ts:144
 msgid ""
 "The text was modified. Your request has been aborted to prevent overwriting."
 msgstr ""
@@ -19444,7 +19444,7 @@ msgstr ""
 
 #: app/assets/javascripts/app/controllers/customer_ticket_create/sidebar_customer_default.coffee:29
 #: app/assets/javascripts/app/views/customer_not_ticket_exists.jst.eco:11
-#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:407
+#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:408
 msgid "The way to communicate with us is this thing called \"ticket\"."
 msgstr "Sie können mit uns über ein sogenanntes \"Ticket\" kommunizieren."
 
@@ -21315,6 +21315,10 @@ msgstr "Dienstag"
 msgid "Turn chat into ticket"
 msgstr "Chat zu Ticket umwandeln"
 
+#: app/views/init/index.html.erb app/views/init/spinner-loading.html.erb
+msgid "Turn on JavaScript to use Zammad."
+msgstr ""
+
 #: app/assets/javascripts/app/controllers/webhook.coffee:280
 #: app/assets/javascripts/app/views/channel/email_account_wizard.jst.eco:89
 #: app/assets/javascripts/app/views/channel/email_notification_wizard.jst.eco:48
@@ -22626,7 +22630,7 @@ msgstr "Willkommens-Nachricht"
 #: app/assets/javascripts/app/views/customer_not_ticket_exists.jst.eco:2
 #: app/assets/javascripts/app/views/welcome.jst.eco:2
 #: app/frontend/apps/desktop/pages/guided-setup/views/GuidedSetupStart.vue:43
-#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:401
+#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:402
 msgid "Welcome!"
 msgstr "Willkommen!"
 
@@ -22859,7 +22863,7 @@ msgstr ""
 "erfüllen, z.B. um branchen- oder firmenspezifische Formulierungen anzuwenden."
 
 #: app/assets/javascripts/app/views/generic/text_tools_modal.jst.eco:8
-#: app/frontend/shared/components/Form/fields/FieldEditor/extensions/AiAssistantTextTools.ts:38
+#: app/frontend/shared/components/Form/fields/FieldEditor/extensions/AiAssistantTextTools.ts:40
 msgid ""
 "Writing assistant could not generate text. Please try again or contact your "
 "administrator."
@@ -23203,7 +23207,7 @@ msgstr "Sie haben keine Berechtigung zur Aktualisierung"
 msgid "You don't have more tickets to load."
 msgstr "Es gibt keine weiteren Tickets mehr zu laden."
 
-#: app/frontend/shared/router/guards/before/permission.ts:32
+#: app/frontend/shared/router/guards/before/permission.ts:27
 msgid "You don't have the necessary permissions to access this page."
 msgstr ""
 "Sie besitzen nicht die notwendigen Berechtigungen, um diese Seite aufzurufen."
@@ -23273,7 +23277,7 @@ msgid "You have no unread messages"
 msgstr "Sie haben keine ungelesenen Nachrichten"
 
 #: app/assets/javascripts/app/views/customer_not_ticket_exists.jst.eco:10
-#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:404
+#: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:405
 msgid "You have not created a ticket yet."
 msgstr "Sie haben noch kein Ticket erstellt."
 
@@ -23525,7 +23529,7 @@ msgstr "Zammad"
 
 #: app/assets/javascripts/app/lib/app_post/ai_provider/zammad_ai.coffee:3
 msgid "Zammad AI"
-msgstr "Zammad KI"
+msgstr "Zammad AI"
 
 #: app/assets/javascripts/app/views/channel/form.jst.eco:148
 msgid ""
