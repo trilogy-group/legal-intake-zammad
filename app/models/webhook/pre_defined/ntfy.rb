@@ -10,7 +10,7 @@ class Webhook::PreDefined::Ntfy < Webhook::PreDefined
     {
       topic:   '#{webhook.ntfy_topic}',
       title:   '#{ticket.title}',
-      message: '[Ticket##{ticket.number}]: #{notification.message} #{notification.changes} #{notification.body}',
+      message: "[Ticket#\#{ticket.number}]: \#{notification.message}\n\#{notification.changes}\n\#{notification.body}",
       click:   '#{notification.link}',
     }
   end
