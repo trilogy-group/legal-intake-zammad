@@ -118,9 +118,9 @@ msgstr ""
 #: app/frontend/apps/desktop/components/Form/fields/FieldTreeSelect/FieldTreeSelectInputDropdown.vue:343
 #: app/frontend/apps/mobile/components/Form/fields/FieldAutoComplete/FieldAutoCompleteInput.vue:145
 #: app/frontend/apps/mobile/components/Form/fields/FieldSelect/FieldSelectInput.vue:97
-#: app/frontend/apps/mobile/components/Form/fields/FieldTreeSelect/FieldTreeSelectInput.vue:130
+#: app/frontend/apps/mobile/components/Form/fields/FieldTreeSelect/FieldTreeSelectInput.vue:112
 #: app/frontend/apps/mobile/components/Form/fields/FieldTreeSelect/FieldTreeSelectInputDialog.vue:288
-#: app/frontend/shared/composables/useSelectOptions.ts:121
+#: app/frontend/shared/composables/useSelectOptions.ts:125
 msgid "%s (unknown)"
 msgstr ""
 
@@ -1120,7 +1120,7 @@ msgstr ""
 #: app/assets/javascripts/app/views/profile/linked_accounts.jst.eco:15
 #: app/assets/javascripts/app/views/tag/index.jst.eco:24
 #: app/assets/javascripts/app/views/ticket_zoom/sidebar_checklist/show.jst.eco:19
-#: app/frontend/apps/desktop/components/Form/fields/FieldGroupPermissions/FieldGroupPermissionsInput.vue:264
+#: app/frontend/apps/desktop/components/Form/fields/FieldGroupPermissions/FieldGroupPermissionsInput.vue:263
 #: app/frontend/shared/form/i18n/locales.ts:25
 msgid "Add"
 msgstr ""
@@ -2904,7 +2904,7 @@ msgstr ""
 #: app/assets/javascripts/app/views/generic/login_preview.jst.eco:26
 #: app/assets/javascripts/app/views/integration/exchange.jst.eco:102
 #: app/assets/javascripts/app/views/integration/ldap.jst.eco:108
-#: app/frontend/apps/desktop/components/Form/fields/FieldGroupPermissions/FieldGroupPermissionsInput.vue:47
+#: app/frontend/apps/desktop/components/Form/fields/FieldGroupPermissions/FieldGroupPermissionsInput.vue:46
 msgid "Change"
 msgstr ""
 
@@ -3288,7 +3288,7 @@ msgstr ""
 #: app/frontend/apps/mobile/components/Form/fields/FieldAutoComplete/FieldAutoCompleteInput.vue:151
 #: app/frontend/apps/mobile/components/Form/fields/FieldDate/FieldDateTimeInput.vue:149
 #: app/frontend/apps/mobile/components/Form/fields/FieldSelect/FieldSelectInput.vue:124
-#: app/frontend/apps/mobile/components/Form/fields/FieldTreeSelect/FieldTreeSelectInput.vue:215
+#: app/frontend/apps/mobile/components/Form/fields/FieldTreeSelect/FieldTreeSelectInput.vue:197
 msgid "Clear selection"
 msgstr ""
 
@@ -3964,7 +3964,7 @@ msgstr ""
 #: app/assets/javascripts/app/views/getting_started/admin.jst.eco:9
 #: app/assets/javascripts/app/views/profile/token_access.jst.eco:8
 #: app/assets/javascripts/app/views/widget/shared_draft.jst.eco:4
-#: app/frontend/apps/desktop/components/Form/fields/FieldGroupPermissions/FieldGroupPermissionsInput.vue:43
+#: app/frontend/apps/desktop/components/Form/fields/FieldGroupPermissions/FieldGroupPermissionsInput.vue:42
 #: app/frontend/apps/desktop/entities/user/composables/useUserCreate.ts:78
 #: app/frontend/apps/desktop/pages/personal-setting/components/PersonalSettingNewAccessTokenFlyout.vue:114
 #: app/frontend/apps/desktop/pages/ticket/components/TicketCreate/TicketCreateContent.vue:298
@@ -7483,7 +7483,7 @@ msgstr ""
 
 #: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:514
 #: app/assets/javascripts/app/models/group.coffee:48
-#: app/frontend/apps/desktop/components/Form/fields/FieldGroupPermissions/FieldGroupPermissionsInput.vue:55
+#: app/frontend/apps/desktop/components/Form/fields/FieldGroupPermissions/FieldGroupPermissionsInput.vue:54
 msgid "Full"
 msgstr ""
 
@@ -9534,7 +9534,7 @@ msgstr ""
 msgid "Loading content"
 msgstr ""
 
-#: app/views/init/spinner-loading.html.erb:257
+#: app/views/init/spinner-loading.html.erb:264
 msgid "Loading failed, please try again later."
 msgstr ""
 
@@ -9558,7 +9558,7 @@ msgstr ""
 #: app/frontend/apps/desktop/components/Form/fields/FieldEditor/FieldEditorSuggestionList.vue:65
 #: app/frontend/apps/mobile/components/Form/fields/FieldEditor/FieldEditorSuggestionList.vue:52
 #: app/frontend/shared/form/i18n/locales.ts:57
-#: app/views/init/spinner-loading.html.erb:254
+#: app/views/init/spinner-loading.html.erb:261
 msgid "Loading…"
 msgstr ""
 
@@ -12092,7 +12092,7 @@ msgstr ""
 #: app/assets/javascripts/app/controllers/overview.coffee:3
 #: app/assets/javascripts/app/models/group.coffee:47
 #: app/assets/javascripts/app/models/user_overview_sorting.coffee:7
-#: app/frontend/apps/desktop/components/Form/fields/FieldGroupPermissions/FieldGroupPermissionsInput.vue:51
+#: app/frontend/apps/desktop/components/Form/fields/FieldGroupPermissions/FieldGroupPermissionsInput.vue:50
 msgid "Overview"
 msgstr ""
 
@@ -13015,7 +13015,7 @@ msgid "Reacted with %s to message %s from %s"
 msgstr ""
 
 #: app/assets/javascripts/app/models/group.coffee:44
-#: app/frontend/apps/desktop/components/Form/fields/FieldGroupPermissions/FieldGroupPermissionsInput.vue:39
+#: app/frontend/apps/desktop/components/Form/fields/FieldGroupPermissions/FieldGroupPermissionsInput.vue:38
 msgid "Read"
 msgstr ""
 
@@ -13242,7 +13242,7 @@ msgstr ""
 #: app/assets/javascripts/app/views/object_manager/attribute/select.jst.eco:25
 #: app/assets/javascripts/app/views/profile/devices.jst.eco:15
 #: app/assets/javascripts/app/views/profile/password.jst.eco:81
-#: app/frontend/apps/desktop/components/Form/fields/FieldGroupPermissions/FieldGroupPermissionsInput.vue:255
+#: app/frontend/apps/desktop/components/Form/fields/FieldGroupPermissions/FieldGroupPermissionsInput.vue:254
 #: app/frontend/apps/desktop/components/TwoFactor/TwoFactorConfiguration/TwoFactorConfigurationPasswordCheck.vue:59
 #: app/frontend/apps/desktop/components/TwoFactor/TwoFactorConfiguration/TwoFactorConfigurationSecurityKeys.vue:147
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingTwoFactorAuth.vue:177
@@ -18511,8 +18511,8 @@ msgstr ""
 msgid "Turn chat into ticket"
 msgstr ""
 
-#: app/views/init/index.html.erb
-#: app/views/init/spinner-loading.html.erb
+#: app/views/init/index.html.erb:41
+#: app/views/init/spinner-loading.html.erb:272
 msgid "Turn on JavaScript to use Zammad."
 msgstr ""
 
