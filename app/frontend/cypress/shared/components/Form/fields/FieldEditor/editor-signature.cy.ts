@@ -99,10 +99,12 @@ describe('correctly adds signature', { retries: 2 }, () => {
   })
 
   it('add signature before marker', () => {
-    const originalBody = html`<p dir="auto" data-marker="signature-before"></p>
+    const originalBody = html`
+      <p dir="auto" data-marker="signature-before"></p>
       <blockquote type="cite">
         <p dir="auto">Subject: Welcome to Zammad!</p>
-      </blockquote>`
+      </blockquote>
+    `
 
     mountEditor({
       value: originalBody,

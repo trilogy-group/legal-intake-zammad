@@ -1,8 +1,4 @@
-mutation ticketUpdateBulk(
-  $ticketIds: [ID!]!
-  $input: TicketUpdateInput!
-  $macroId: ID
-) {
+mutation ticketUpdateBulk($ticketIds: [ID!]!, $input: TicketUpdateInput!, $macroId: ID) {
   ticketUpdateBulk(ticketIds: $ticketIds, input: $input, macroId: $macroId) {
     success
     errors {

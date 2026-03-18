@@ -7,13 +7,12 @@ import { defineConfigWithVueTs, vueTsConfigs } from '@vue/eslint-config-typescri
 import { globalIgnores } from 'eslint/config'
 // @ts-ignore
 import importPlugin from 'eslint-plugin-import'
+import eslintConfigPrettier from 'eslint-config-prettier'
 import oxlint from 'eslint-plugin-oxlint'
 import pluginSecurity from 'eslint-plugin-security'
 import pluginVue from 'eslint-plugin-vue'
 import vuejsAccesibility from 'eslint-plugin-vuejs-accessibility'
 import zammad from 'eslint-plugin-zammad/lib/index.js'
-import prettier from 'eslint-plugin-prettier/recommended'
-import prettierVueConfig from '@vue/eslint-config-prettier'
 
 const mobilePagesDir = path.resolve(__dirname, 'app/frontend/apps/mobile/pages')
 const mobilePagesFolder = fs.readdirSync(mobilePagesDir)
@@ -263,13 +262,5 @@ export default defineConfigWithVueTs(
   },
   ...oxlint.buildFromOxlintConfigFile('./.oxlintrc.json'),
 
-  prettier,
-  prettierVueConfig,
-
-  {
-    name: 'app/prettier',
-    rules: {
-      'prettier/prettier': ['error'],
-    },
-  },
+  eslintConfigPrettier,
 )
