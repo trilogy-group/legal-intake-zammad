@@ -125,7 +125,8 @@ class AI::Agent::Type
       placeholder_pattern = "\#{placeholder.#{placeholder_name}}"
       replacement_value = enrichment_data[placeholder_name] || ''
 
-      structure_string = structure_string.gsub(placeholder_pattern, replacement_value.to_s)
+      sanitized_value = replacement_value.to_s.gsub('<%', '<%%')
+      structure_string = structure_string.gsub(placeholder_pattern, sanitized_value)
     end
 
     structure_string
@@ -138,7 +139,7 @@ class AI::Agent::Type
       escape:                 false,
       url_encode:             false,
       ignore_missing_objects: true,
-      trusted:                true,
+      trusted:                false,
     ).render(debug_errors: false)
   end
 
