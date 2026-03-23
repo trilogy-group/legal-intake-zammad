@@ -2162,7 +2162,7 @@ msgstr ""
 msgid "Background color"
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/import_freshdesk.coffee:157
+#: app/assets/javascripts/app/controllers/import_freshdesk.coffee:156
 #: app/assets/javascripts/app/controllers/import_kayako.coffee:158
 #: app/assets/javascripts/app/controllers/import_otrs.coffee:154
 #: app/assets/javascripts/app/controllers/import_zendesk.coffee:156
@@ -6771,7 +6771,7 @@ msgstr ""
 msgid "Frequency"
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/import_freshdesk.coffee:189
+#: app/assets/javascripts/app/controllers/import_freshdesk.coffee:188
 #: app/frontend/apps/desktop/pages/guided-setup/components/GuidedSetupImport/GuidedSetupImportSource/plugins/freshdesk.ts:11
 msgid "Freshdesk"
 msgstr ""
@@ -8034,6 +8034,13 @@ msgstr ""
 
 #: lib/gitlab/linked_issue.rb:122
 msgid "Invalid GitLab issue link format"
+msgstr ""
+
+#: lib/external_credential/exchange.rb:43
+#: lib/external_credential/facebook.rb:42
+#: lib/external_credential/google.rb:39
+#: lib/external_credential/microsoft_base.rb:67
+msgid "Invalid OAuth state parameter."
 msgstr ""
 
 #: app/services/service/system/run_auto_wizard.rb:11
@@ -9787,7 +9794,7 @@ msgstr ""
 msgid "Need session_id."
 msgstr ""
 
-#: app/controllers/tickets_controller.rb:437
+#: app/controllers/tickets_controller.rb:439
 msgid "Need user_id or organization_id as param"
 msgstr ""
 
@@ -10283,7 +10290,7 @@ msgstr ""
 #: app/controllers/organizations_controller.rb:107
 #: app/controllers/text_modules_controller.rb:75
 #: app/controllers/ticket_articles_controller.rb:234
-#: app/controllers/tickets_controller.rb:480
+#: app/controllers/tickets_controller.rb:482
 #: app/controllers/users_controller.rb:574
 msgid "No source data submitted!"
 msgstr ""
@@ -11493,7 +11500,7 @@ msgstr ""
 msgid "Please contact your administrator."
 msgstr ""
 
-#: lib/selector/sql.rb:184
+#: lib/selector/sql.rb:188
 msgid "Please enable execution_time feature to use it (currently only allowed for triggers and schedulers)"
 msgstr ""
 
@@ -14792,7 +14799,7 @@ msgstr ""
 msgid "The connection to the server was lost."
 msgstr ""
 
-#: app/controllers/import_freshdesk_controller.rb:134
+#: app/controllers/import_freshdesk_controller.rb:142
 #: app/controllers/import_otrs_controller.rb:20
 #: app/controllers/import_zendesk_controller.rb:21
 #: app/services/service/system/import/apply_freshdesk_configuration.rb:51
@@ -14932,8 +14939,8 @@ msgstr ""
 msgid "The given two-factor method is not configured yet."
 msgstr ""
 
-#: app/controllers/import_freshdesk_controller.rb:131
-#: app/controllers/import_kayako_controller.rb:108
+#: app/controllers/import_freshdesk_controller.rb:139
+#: app/controllers/import_kayako_controller.rb:116
 #: app/controllers/import_otrs_controller.rb:18
 #: app/controllers/import_zendesk_controller.rb:17
 #: app/services/service/system/import/apply_freshdesk_configuration.rb:23
@@ -15142,7 +15149,7 @@ msgid "The provided URL is invalid."
 msgstr ""
 
 #: app/controllers/import_freshdesk_controller.rb:60
-#: app/controllers/import_kayako_controller.rb:129
+#: app/controllers/import_kayako_controller.rb:137
 #: app/controllers/import_zendesk_controller.rb:84
 #: app/services/service/system/import/apply_freshdesk_configuration.rb:29
 #: app/services/service/system/import/apply_kayako_configuration.rb:30
@@ -15276,9 +15283,9 @@ msgstr ""
 msgid "The required parameter 'client_secret' is missing."
 msgstr ""
 
-#: lib/external_credential/exchange.rb:43
-#: lib/external_credential/google.rb:39
-#: lib/external_credential/microsoft_base.rb:67
+#: lib/external_credential/exchange.rb:47
+#: lib/external_credential/google.rb:43
+#: lib/external_credential/microsoft_base.rb:71
 msgid "The required parameter 'code' is missing."
 msgstr ""
 
@@ -15469,7 +15476,7 @@ msgstr ""
 msgid "The signature was successfully verified."
 msgstr ""
 
-#: app/controllers/tickets_controller.rb:391
+#: app/controllers/tickets_controller.rb:393
 msgid "The source ticket could not be found."
 msgstr ""
 
@@ -15501,7 +15508,7 @@ msgstr ""
 msgid "The system was configured successfully. You are being redirected."
 msgstr ""
 
-#: app/controllers/tickets_controller.rb:382
+#: app/controllers/tickets_controller.rb:384
 msgid "The target ticket number could not be found."
 msgstr ""
 
@@ -15585,8 +15592,8 @@ msgstr ""
 msgid "The user token could not be generated."
 msgstr ""
 
-#: lib/external_credential/exchange.rb:51
-#: lib/external_credential/microsoft_base.rb:75
+#: lib/external_credential/exchange.rb:55
+#: lib/external_credential/microsoft_base.rb:79
 msgid "The user's 'preferred_username' could not be extracted from 'id_token'."
 msgstr ""
 
@@ -15704,7 +15711,7 @@ msgstr ""
 msgid "There is no rollback of this deletion. If you are sure that you wish to proceed, please type \"%s\" into the input. All related data to this package will be lost."
 msgstr ""
 
-#: app/controllers/import_freshdesk_controller.rb:133
+#: app/controllers/import_freshdesk_controller.rb:141
 #: app/controllers/import_otrs_controller.rb:19
 #: app/controllers/import_zendesk_controller.rb:20
 #: app/services/service/system/import/apply_freshdesk_configuration.rb:50
@@ -16532,7 +16539,7 @@ msgid "Tickets assigned to me: %s of %s"
 msgstr ""
 
 #: app/controllers/ticket_articles_controller.rb:227
-#: app/controllers/tickets_controller.rb:473
+#: app/controllers/tickets_controller.rb:475
 msgid "Tickets can only be imported if system is in import mode."
 msgstr ""
 
@@ -17615,7 +17622,7 @@ msgstr ""
 msgid "User could not be updated."
 msgstr ""
 
-#: lib/external_credential/google.rb:47
+#: lib/external_credential/google.rb:51
 msgid "User email could not be extracted from 'id_token'."
 msgstr ""
 
