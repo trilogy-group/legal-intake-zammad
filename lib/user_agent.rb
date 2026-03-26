@@ -322,7 +322,7 @@ class UserAgent
     request = Net::HTTP.const_get(method.capitalize).new(uri)
 
     if options[:validate_safety]
-      validate_safety_options = options[:validate_safety].is_a?(Hash) ? options[:validate_safety] : nil
+      validate_safety_options = options[:validate_safety].is_a?(Hash) ? options[:validate_safety] : {}
       HostnameSafetyCheck.validate!(uri.hostname, **validate_safety_options)
     end
 
