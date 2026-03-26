@@ -4,14 +4,22 @@ require 'rails_helper'
 
 RSpec.describe TriggerWebhookJob, type: :job do
 
-  let(:endpoint) { 'http://api.example.com/webhook' }
-  let(:token)    { 's3cr3t-t0k3n' }
-  let(:webhook)  { create(:webhook, endpoint: endpoint, signature_token: token) }
+  let(:endpoint)    { 'http://api.example.com/webhook' }
+  let(:resolved_ip) { '8.8.8.8' }
+  let(:token)       { 's3cr3t-t0k3n' }
+  let(:webhook)     { build(:webhook, endpoint: endpoint, signature_token: token).tap { _1.save(validate: false) } }
   let(:trigger) do
     create(:trigger,
            perform: {
              'notification.webhook' => { 'webhook_id' => webhook.id }
            })
+  end
+
+  before do
+    allow(IPSocket)
+      .to receive(:getaddress)
+      .with('api.example.com')
+      .and_return(resolved_ip)
   end
 
   context 'when serialized model argument gets deleted' do
@@ -104,6 +112,8 @@ RSpec.describe TriggerWebhookJob, type: :job do
     let(:response_headers) { {} }
 
     before do
+      allow(Rails.logger).to receive(:error)
+
       stub_request(:post, endpoint).to_return(headers: response_headers, status: response_status, body: response_body)
 
       perform
@@ -173,6 +183,21 @@ RSpec.describe TriggerWebhookJob, type: :job do
       it 'enqueues job again due to redirect exception', :aggregate_failures do
         expect(described_class).to have_been_enqueued
         expect(HttpLog.last.response).to include('code' => 0, 'content' => '')
+      end
+    end
+
+    context 'when endpoint is unsafe' do
+      let(:resolved_ip) { '1' }
+
+      it 'logs an error' do
+        expect(Rails.logger)
+          .to have_received(:error)
+          .with("Can't execute Webhook with ID #{webhook.id} for Trigger '#{trigger.name}' with ID #{trigger.id}: Could not ensure safety of the hostname: api.example.com")
+      end
+
+      it 'does not perform the request' do
+        expect(WebMock)
+          .not_to have_requested(:post, endpoint)
       end
     end
 
