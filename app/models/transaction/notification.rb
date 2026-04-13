@@ -116,6 +116,24 @@ class Transaction::Notification
     end
 
     recipients_reason_by_notifications_settings(possible_recipients)
+
+    add_shared_access_recipients
+  end
+
+  def add_shared_access_recipients
+    shared_users = Ticket::SharedAccess.where(ticket_id: ticket.id).includes(:user).map(&:user)
+    already_added_ids = @recipients_and_channels.map { |r| r[:user].id }.to_set
+
+    shared_users.each do |shared_user|
+      next if already_added_ids.include?(shared_user.id)
+      next if !shared_user.active?
+
+      @recipients_and_channels.push({
+                                      user:     shared_user,
+                                      channels: { 'online' => true, 'email' => true },
+                                    })
+      @recipients_reason[shared_user.id] = __('You are receiving this because this ticket was shared with you.')
+    end
   end
 
   def recipients_reason_by_notifications_settings(possible_recipients)

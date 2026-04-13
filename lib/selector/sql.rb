@@ -122,7 +122,7 @@ class Selector::Sql < Selector::Base
     return if !attribute_table
 
     sql_helper = SqlHelper.new(object: target_class)
-    if attribute_table && %w[execution_time ticket_owner ticket_customer].exclude?(attribute_table) && attribute_table != target_name && tables.exclude?(attribute_table) && !(attribute_table == 'ticket' && attribute_name != 'mention_user_ids') && !(attribute_table == 'ticket' && attribute_name == 'mention_user_ids' && block_condition[:pre_condition] == 'not_set') && !(attribute_table == 'article' && attribute_name == 'action')
+    if attribute_table && %w[execution_time ticket_owner ticket_customer].exclude?(attribute_table) && attribute_table != target_name && tables.exclude?(attribute_table) && !(attribute_table == 'ticket' && attribute_name != 'mention_user_ids' && attribute_name != 'shared_access_user_ids') && !(attribute_table == 'ticket' && attribute_name == 'mention_user_ids' && block_condition[:pre_condition] == 'not_set') && !(attribute_table == 'ticket' && attribute_name == 'shared_access_user_ids' && block_condition[:pre_condition] == 'not_set') && !(attribute_table == 'article' && attribute_name == 'action')
       case attribute_table
       when 'customer'
         tables         |= ["INNER JOIN users customers ON #{target_table}.customer_id = customers.id"]
@@ -278,6 +278,27 @@ class Selector::Sql < Selector::Base
                    'mentions.user_id IN (?)'
                  else
                    "tickets.id NOT IN (SELECT mentionable_id FROM mentions WHERE mentionable_type = 'Ticket' AND user_id IN (?))"
+                 end
+        if block_condition[:pre_condition] == 'current_user.id'
+          bind_params.push current_user_id
+        else
+          bind_params.push block_condition[:value]
+        end
+      end
+    elsif attribute_table == 'ticket' && attribute_name == 'shared_access_user_ids'
+      if block_condition[:pre_condition] == 'not_set'
+        tables |= ['LEFT JOIN ticket_shared_accesses ON tickets.id = ticket_shared_accesses.ticket_id']
+        query << if block_condition[:operator] == 'is'
+                   'ticket_shared_accesses.user_id IS NULL'
+                 else
+                   'ticket_shared_accesses.user_id IS NOT NULL'
+                 end
+      else
+        query << if block_condition[:operator] == 'is'
+                   tables |= ['LEFT JOIN ticket_shared_accesses ON tickets.id = ticket_shared_accesses.ticket_id']
+                   'ticket_shared_accesses.user_id IN (?)'
+                 else
+                   'tickets.id NOT IN (SELECT ticket_id FROM ticket_shared_accesses WHERE user_id IN (?))'
                  end
         if block_condition[:pre_condition] == 'current_user.id'
           bind_params.push current_user_id
