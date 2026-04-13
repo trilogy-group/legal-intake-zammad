@@ -54,6 +54,13 @@ class App.OnlineNotificationWidget extends App.Controller
 
     @createContainer()
 
+    # initial fetch of notifications
+    @delay(
+      => @fetch()
+      2500
+      'online-notification-initial'
+    )
+
     # rerender view, e.g. on language change
     @controllerBind('ui:rerender', =>
       @createContainer()

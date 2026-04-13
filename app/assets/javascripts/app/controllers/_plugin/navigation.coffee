@@ -251,7 +251,7 @@ class Navigation extends App.Controller
 
     @notificationWidget.remove() if @notificationWidget
 
-    if not @permissionCheck('ticket.agent')
+    if not @permissionCheck('ticket.agent') and not @permissionCheck('ticket.customer')
       @toggleNotificationsButton.addClass('u-unclickable')
       return
 
