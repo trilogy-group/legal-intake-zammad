@@ -10,8 +10,8 @@ class Ticket::SharedAccess < ApplicationModel
   validates :user_id, uniqueness: { scope: :ticket_id }
 
   after_create :notify_shared_user
-  after_create :update_ticket
-  after_destroy :update_ticket
+  after_create :signal_ticket_change
+  after_destroy :signal_ticket_change
 
   def self.shared_with?(ticket, user)
     exists?(ticket: ticket, user: user)
@@ -30,8 +30,18 @@ class Ticket::SharedAccess < ApplicationModel
 
   private
 
-  def update_ticket
+  def signal_ticket_change
     ticket.touch # rubocop:disable Rails/SkipsModelValidations
+
+    EventBuffer.add('transaction', {
+      object:     'Ticket',
+      type:       'update',
+      data:       ticket,
+      changes:    { 'shared_access_user_ids' => [nil, ticket.shared_accesses.pluck(:user_id)] },
+      id:         ticket_id,
+      user_id:    created_by_id,
+      created_at: Time.zone.now,
+    })
   end
 
   def notify_shared_user
@@ -51,29 +61,17 @@ class Ticket::SharedAccess < ApplicationModel
 
     shared_by = User.find(created_by_id)
 
-    subject = NotificationFactory::Mailer.template(
-      templateInline: 'A ticket has been shared with you (#{ticket.title})',
-      objects:        { ticket: ticket, recipient: user, shared_by: shared_by },
-      quote:          false,
-    )
-
-    body = NotificationFactory::Mailer.template(
-      templateInline: '<div>Hi #{recipient.firstname},</div><br>' \
-                      '<div><b>#{shared_by.fullname}</b> has shared ticket ' \
-                      '<b>(#{config.ticket_hook}#{ticket.number})</b> with you.</div><br>' \
-                      '<div>You now have access to read and comment on this ticket.</div><br>' \
-                      '<div>To view the ticket, click on the following link:<br>' \
-                      '<a href="#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}">' \
-                      '#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}</a></div><br>' \
-                      '<div>Your #{config.product_name} Team</div>',
-      objects:        { ticket: ticket, recipient: user, shared_by: shared_by },
-      quote:          true,
+    result = NotificationFactory::Mailer.template(
+      template:   'ticket_shared',
+      locale:     user.preferences[:locale] || Locale.default,
+      objects:    { ticket: ticket, recipient: user, shared_by: shared_by },
+      standalone: true,
     )
 
     NotificationFactory::Mailer.deliver(
       recipient:    user,
-      subject:      subject,
-      body:         body,
+      subject:      result[:subject],
+      body:         result[:body],
       content_type: 'text/html',
       message_id:   "<ticket_shared.#{ticket.id}.#{user.id}.#{SecureRandom.uuid}@#{Setting.get('fqdn')}>",
       references:   ticket.get_references,

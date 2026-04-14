@@ -182,6 +182,15 @@ class App.UiElement.ApplicationSelector
       translate: true
       operator: [__('is'), __('is not')]
 
+    elements['ticket.shared_access_user_ids'] =
+      name: 'shared_access_user_ids'
+      display: __('Shared Access')
+      tag: 'autocompletion_ajax'
+      relation: 'User'
+      null: false
+      translate: true
+      operator: [__('is'), __('is not'), __('has changed')]
+
     [defaults, groups, elements]
 
   @rowContainer: (groups, elements, attribute) ->
