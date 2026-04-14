@@ -253,6 +253,8 @@ class Ticket::PerformChanges::Action::NotificationEmail < Ticket::PerformChanges
       user_lookup_email(record.owner_id)
     when 'ticket_agents'
       recipients_by_type_user_group_access
+    when 'ticket_shared_access_users'
+      recipients_by_type_shared_access_users
     when %r{\Auserid_(\d+)\z}
       return user_lookup_email($1) if User.exists?($1)
 
@@ -280,6 +282,10 @@ class Ticket::PerformChanges::Action::NotificationEmail < Ticket::PerformChanges
 
   def recipients_by_type_user_group_access
     User.group_access(record.group_id, 'full').sort_by(&:login).map(&:email)
+  end
+
+  def recipients_by_type_shared_access_users
+    Ticket::SharedAccess.where(ticket_id: id).includes(:user).map { |sa| sa.user.email }.compact
   end
 
   def user_lookup_email(id)
