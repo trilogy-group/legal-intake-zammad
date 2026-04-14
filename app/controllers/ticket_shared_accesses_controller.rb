@@ -27,8 +27,8 @@ class TicketSharedAccessesController < ApplicationController
     render json: true, status: :created
   rescue ActiveRecord::RecordNotUnique
     render json: { error: __('This user is already shared on this ticket.') }, status: :unprocessable_entity
-  rescue ActiveRecord::RecordNotFound => e
-    render json: { error: e.message }, status: :not_found
+  rescue ActiveRecord::RecordNotFound
+    render json: { error: __('Ticket or user not found.') }, status: :not_found
   end
 
   # DELETE /api/v1/ticket_shared_accesses/:id
@@ -37,8 +37,8 @@ class TicketSharedAccessesController < ApplicationController
     shared_access.destroy!
 
     render json: true, status: :ok
-  rescue ActiveRecord::RecordNotFound => e
-    render json: { error: e.message }, status: :not_found
+  rescue ActiveRecord::RecordNotFound
+    render json: { error: __('Shared access not found.') }, status: :not_found
   end
 
   # GET /api/v1/ticket_shared_accesses/search?query=term

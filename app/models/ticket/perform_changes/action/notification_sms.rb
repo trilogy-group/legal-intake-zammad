@@ -113,6 +113,6 @@ class Ticket::PerformChanges::Action::NotificationSms < Ticket::PerformChanges::
   end
 
   def recipients_by_type_shared_access_users
-    Ticket::SharedAccess.where(ticket_id: record.id).includes(:user).map(&:user_id)
+    Ticket::SharedAccess.where(ticket_id: record.id).includes(:user).select { |sa| sa.user.active? }.map(&:user_id)
   end
 end

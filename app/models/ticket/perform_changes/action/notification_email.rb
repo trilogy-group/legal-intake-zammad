@@ -285,7 +285,7 @@ class Ticket::PerformChanges::Action::NotificationEmail < Ticket::PerformChanges
   end
 
   def recipients_by_type_shared_access_users
-    Ticket::SharedAccess.where(ticket_id: id).includes(:user).map { |sa| sa.user.email }.compact
+    Ticket::SharedAccess.where(ticket_id: id).includes(:user).map { |sa| sa.user.email if sa.user.active? }.compact
   end
 
   def user_lookup_email(id)
