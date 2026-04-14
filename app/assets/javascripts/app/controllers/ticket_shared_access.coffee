@@ -45,6 +45,7 @@ class App.TicketSharedAccess extends App.ControllerModal
       type: 'GET'
       url:  "#{App.Config.get('api_path')}/ticket_shared_accesses?ticket_id=#{@ticket_id}"
       success: (data) =>
+        App.Collection.loadAssets(data.assets) if data.assets
         @sharedUsers = data.shared_accesses || []
         @renderSharedUsers()
       error: =>

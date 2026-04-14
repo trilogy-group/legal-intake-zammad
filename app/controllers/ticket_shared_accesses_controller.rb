@@ -5,10 +5,14 @@ class TicketSharedAccessesController < ApplicationController
 
   # GET /api/v1/ticket_shared_accesses?ticket_id=123
   def index
-    list = ticket.shared_accesses
+    list = ticket.shared_accesses.includes(:user)
+
+    assets = {}
+    list.each { |sa| assets = sa.user.assets(assets) }
 
     render json: {
       shared_accesses: list,
+      assets:          assets,
     }
   end
 
