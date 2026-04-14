@@ -39,10 +39,10 @@ module Gql::Mutations
       raise Exceptions::Forbidden, __('You are not authorized to share this ticket.')
     end
 
-    def validate_target_user!(user)
-      raise Exceptions::Forbidden, __('You cannot share a ticket with yourself.') if user.id == context.current_user.id
-      raise Exceptions::Forbidden, __('Ticket can only be shared with customer users.') if !user.permissions?('ticket.customer')
-      raise Exceptions::Forbidden, __('Inactive users cannot be shared on tickets.') if !user.active?
+    def validate_target_user!(target_user)
+      raise Exceptions::Forbidden, __('You cannot share a ticket with yourself.') if target_user.id == context.current_user.id
+      raise Exceptions::Forbidden, __('Ticket can only be shared with customer users.') if !target_user.permissions?('ticket.customer')
+      raise Exceptions::Forbidden, __('Inactive users cannot be shared on tickets.') if !target_user.active?
     end
   end
 end

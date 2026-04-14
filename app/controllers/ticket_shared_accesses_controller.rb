@@ -8,7 +8,7 @@ class TicketSharedAccessesController < ApplicationController
     list = ticket.shared_accesses.includes(:user)
 
     assets = {}
-    list.each { |sa| assets = sa.user.assets(assets) }
+    list.each { |shared_access| assets = shared_access.user.assets(assets) }
 
     render json: {
       shared_accesses: list,

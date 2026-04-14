@@ -20,6 +20,13 @@ class Ticket::SharedAccess < ApplicationModel
     exists?(ticket: ticket, user: user)
   end
 
+  # Share a ticket with another customer user, granting them read and comment access.
+  # Creates or returns existing shared access record.
+  # Sends notification email and online notification to the shared user.
+  # @param ticket [Ticket] the ticket to share
+  # @param user [User] the customer user to share with
+  # @param created_by [User] the user performing the share action
+  # @return [Ticket::SharedAccess]
   def self.share!(ticket, user, created_by:)
     find_or_create_by!(ticket: ticket, user: user) do |record|
       record.created_by = created_by
@@ -27,12 +34,17 @@ class Ticket::SharedAccess < ApplicationModel
     end
   end
 
+  # Remove shared access from a ticket for a specific user.
+  # @param ticket [Ticket] the ticket to unshare
+  # @param user [User] the user to remove access from
   def self.unshare!(ticket, user)
     find_by(ticket: ticket, user: user)&.destroy!
   end
 
   private
 
+  # Validate that the user being shared with has customer permissions.
+  # This ensures tickets can only be shared with portal customers, not agents or admins.
   def user_must_be_customer
     return if user.blank?
     return if user.permissions?('ticket.customer')
@@ -40,6 +52,8 @@ class Ticket::SharedAccess < ApplicationModel
     errors.add(:user, __('must have customer permissions'))
   end
 
+  # Validate that the user being shared with is active.
+  # Inactive users should not receive new shared access.
   def user_must_be_active
     return if user.blank?
     return if user.active?
@@ -47,6 +61,8 @@ class Ticket::SharedAccess < ApplicationModel
     errors.add(:user, __('must be active'))
   end
 
+  # Validate that the ticket is not being shared with its owner.
+  # Ticket owners already have full access and should not be in the shared_accesses table.
   def cannot_share_with_ticket_owner
     return if ticket.blank? || user.blank?
     return if ticket.customer_id != user_id
@@ -54,6 +70,10 @@ class Ticket::SharedAccess < ApplicationModel
     errors.add(:user, __('cannot share ticket with its owner'))
   end
 
+  # Signal to the transaction system that this ticket has changed.
+  # This triggers selector updates and scheduled job evaluation.
+  # We inject a synthetic 'shared_access_user_ids' change to allow
+  # triggers and schedulers to react to sharing events.
   def signal_ticket_change
     ticket.touch # rubocop:disable Rails/SkipsModelValidations
 
