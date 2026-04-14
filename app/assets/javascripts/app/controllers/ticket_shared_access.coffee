@@ -57,13 +57,22 @@ class App.TicketSharedAccess extends App.ControllerModal
       list.html('<p class="text-muted">' + App.i18n.translateContent('Not shared with anyone yet.') + '</p>')
       return
 
+    currentUser = App.User.current()
+    ticket = App.Ticket.find(@ticket_id)
+    isTicketOwner = ticket && ticket.customer_id is currentUser.id
+
     html = '<ul class="list-unstyled">'
     for access in @sharedUsers
       user = App.User.find(access.user_id)
       displayName = if user then user.displayName() else "User ##{access.user_id}"
+      canRemove = isTicketOwner || access.user_id is currentUser.id
+      removeBtn = if canRemove
+        "<a href=\"#\" class=\"btn btn--text btn--small js-removeSharedAccess\" data-id=\"#{access.id}\" style=\"color: #e74c3c;\">#{App.i18n.translateContent('Remove')}</a>"
+      else
+        ''
       html += "<li class=\"shared-user-item\" style=\"padding: 5px 0; display: flex; justify-content: space-between; align-items: center;\">
         <span>#{App.Utils.htmlEscape(displayName)}</span>
-        <a href=\"#\" class=\"btn btn--text btn--small js-removeSharedAccess\" data-id=\"#{access.id}\" style=\"color: #e74c3c;\">#{App.i18n.translateContent('Remove')}</a>
+        #{removeBtn}
       </li>"
     html += '</ul>'
     list.html(html)
