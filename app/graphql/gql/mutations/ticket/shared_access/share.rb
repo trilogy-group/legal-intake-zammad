@@ -10,7 +10,7 @@ module Gql::Mutations
     field :success, Boolean, description: 'Was the mutation successful?'
     field :errors, [Gql::Types::UserErrorType], null: true, description: 'Errors, if any'
 
-    requires_permission 'ticket.agent', 'ticket.customer'
+    requires_permission 'ticket.customer'
 
     def resolve(ticket_id:, user_id:)
       ticket = Gql::ZammadSchema.authorized_object_from_id(ticket_id, user: context.current_user, query: :show?, type: ::Ticket)
@@ -32,7 +32,6 @@ module Gql::Mutations
     private
 
     def authorize_share!(ticket, user)
-      return if TicketPolicy.new(user, ticket).agent_read_access?
       return if ticket.customer_id == user.id
       return if ::Ticket::SharedAccess.shared_with?(ticket, user)
 

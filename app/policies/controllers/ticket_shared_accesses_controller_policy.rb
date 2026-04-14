@@ -19,21 +19,26 @@ class Controllers::TicketSharedAccessesControllerPolicy < Controllers::Applicati
     @ticket ||= Ticket.find(record.params[:ticket_id])
   end
 
+  def customer_only?
+    user.permissions?('ticket.customer')
+  end
+
   def ticket_accessible?
-    TicketPolicy.new(user, ticket).show?
+    customer_only? && TicketPolicy.new(user, ticket).show?
   end
 
   def can_share?
-    return true if TicketPolicy.new(user, ticket).agent_read_access?
+    return false if !customer_only?
 
     ticket.customer_id == user.id || Ticket::SharedAccess.shared_with?(ticket, user)
   end
 
   def can_unshare?
+    return false if !customer_only?
+
     shared_access = Ticket::SharedAccess.find_by(id: record.params[:id])
     return false if !shared_access
 
-    return true if TicketPolicy.new(user, ticket).agent_read_access?
     return true if ticket.customer_id == user.id
     return true if shared_access.user_id == user.id
 

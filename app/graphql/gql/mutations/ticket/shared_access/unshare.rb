@@ -10,7 +10,7 @@ module Gql::Mutations
     field :success, Boolean, description: 'Was the mutation successful?'
     field :errors, [Gql::Types::UserErrorType], null: true, description: 'Errors, if any'
 
-    requires_permission 'ticket.agent', 'ticket.customer'
+    requires_permission 'ticket.customer'
 
     def resolve(ticket_id:, user_id:)
       ticket = Gql::ZammadSchema.authorized_object_from_id(ticket_id, user: context.current_user, query: :show?, type: ::Ticket)
@@ -31,7 +31,6 @@ module Gql::Mutations
     private
 
     def authorize_unshare!(ticket, target_user, current_user)
-      return if TicketPolicy.new(current_user, ticket).agent_read_access?
       return if ticket.customer_id == current_user.id
       return if target_user.id == current_user.id
 

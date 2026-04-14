@@ -126,11 +126,6 @@ class SidebarTicket extends App.Controller
           name:     'customer-change'
           callback: @changeCustomer
         )
-      @item.sidebarActions.push(
-        title:    __('Share')
-        name:     'ticket-share'
-        callback: @showTicketShare
-      )
     if @ticket.currentView() is 'customer'
       @item.sidebarActions = @item.sidebarActions || []
       @item.sidebarActions.push(
