@@ -37,21 +37,21 @@ class Ticket::SharedAccess < ApplicationModel
     return if user.blank?
     return if user.permissions?('ticket.customer')
 
-    errors.add(:user, 'must have customer permissions')
+    errors.add(:user, __('must have customer permissions'))
   end
 
   def user_must_be_active
     return if user.blank?
     return if user.active?
 
-    errors.add(:user, 'must be active')
+    errors.add(:user, __('must be active'))
   end
 
   def cannot_share_with_ticket_owner
     return if ticket.blank? || user.blank?
     return if ticket.customer_id != user_id
 
-    errors.add(:user, 'cannot share ticket with its owner')
+    errors.add(:user, __('cannot share ticket with its owner'))
   end
 
   def signal_ticket_change

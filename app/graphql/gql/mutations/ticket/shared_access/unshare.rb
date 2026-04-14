@@ -8,7 +8,6 @@ module Gql::Mutations
     argument :user_id, GraphQL::Types::ID, description: 'The customer user to remove access from'
 
     field :success, Boolean, description: 'Was the mutation successful?'
-    field :errors, [Gql::Types::UserErrorType], null: true, description: 'Errors, if any'
 
     requires_permission 'ticket.customer'
 
@@ -20,12 +19,15 @@ module Gql::Mutations
 
       authorize_unshare!(ticket, target_user, context.current_user)
 
-      ::Ticket::SharedAccess.unshare!(ticket, target_user)
+      shared_access = ::Ticket::SharedAccess.find_by(ticket: ticket, user: target_user)
+      raise Exceptions::Forbidden, __('Shared access not found.') if !shared_access
+
+      shared_access.destroy!
       { success: true }
     rescue Exceptions::Forbidden => e
       error_response({ message: e.message })
     rescue ActiveRecord::RecordNotFound
-      error_response({ message: __('Shared access not found.') })
+      error_response({ message: __('User not found.') })
     end
 
     private

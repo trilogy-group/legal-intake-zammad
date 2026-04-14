@@ -1,6 +1,6 @@
 # Copyright (C) 2012-2026 Zammad Foundation, https://zammad-foundation.org/
 
-class CreateTicketSharedAccesses < ActiveRecord::Migration[7.2]
+class CreateTicketSharedAccesses < ActiveRecord::Migration[8.0]
   def change
     create_table :ticket_shared_accesses do |t|
       t.references :ticket,       null: false, foreign_key: true

@@ -8,7 +8,6 @@ module Gql::Mutations
     argument :user_id, GraphQL::Types::ID, description: 'The customer user to share with'
 
     field :success, Boolean, description: 'Was the mutation successful?'
-    field :errors, [Gql::Types::UserErrorType], null: true, description: 'Errors, if any'
 
     requires_permission 'ticket.customer'
 

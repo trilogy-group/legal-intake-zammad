@@ -130,7 +130,7 @@ class Transaction::Notification
 
       # Check user's notification preferences
       result = NotificationFactory::Mailer.notification_settings(shared_user, ticket, @item[:type])
-      
+
       # If no preferences configured, default to allowing notifications
       # (shared access is an explicit opt-in, so notifications are expected)
       if !result
