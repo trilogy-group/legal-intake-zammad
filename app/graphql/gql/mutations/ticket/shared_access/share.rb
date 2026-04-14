@@ -27,6 +27,8 @@ module Gql::Mutations
       error_response({ message: e.message })
     rescue ActiveRecord::RecordNotFound
       error_response({ message: __('User not found.') })
+    rescue ActiveRecord::RecordNotUnique
+      error_response({ message: __('This user is already shared on this ticket.') })
     end
 
     private
@@ -39,9 +41,9 @@ module Gql::Mutations
     end
 
     def validate_target_user!(user)
-      return if user.permissions?('ticket.customer')
-
-      raise Exceptions::Forbidden, __('Ticket can only be shared with customer users.')
+      raise Exceptions::Forbidden, __('You cannot share a ticket with yourself.') if user.id == context.current_user.id
+      raise Exceptions::Forbidden, __('Ticket can only be shared with customer users.') if !user.permissions?('ticket.customer')
+      raise Exceptions::Forbidden, __('Inactive users cannot be shared on tickets.') if !user.active?
     end
   end
 end

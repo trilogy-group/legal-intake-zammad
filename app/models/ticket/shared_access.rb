@@ -5,9 +5,12 @@ class Ticket::SharedAccess < ApplicationModel
   include ChecksClientNotification
 
   belongs_to :ticket
-  belongs_to :user, class_name: 'User'
+  belongs_to :user, class_name: 'User', inverse_of: :ticket_shared_accesses
 
   validates :user_id, uniqueness: { scope: :ticket_id }
+  validate :user_must_be_customer
+  validate :user_must_be_active
+  validate :cannot_share_with_ticket_owner
 
   after_create :notify_shared_user
   after_create :signal_ticket_change
@@ -29,6 +32,27 @@ class Ticket::SharedAccess < ApplicationModel
   end
 
   private
+
+  def user_must_be_customer
+    return if user.blank?
+    return if user.permissions?('ticket.customer')
+
+    errors.add(:user, 'must have customer permissions')
+  end
+
+  def user_must_be_active
+    return if user.blank?
+    return if user.active?
+
+    errors.add(:user, 'must be active')
+  end
+
+  def cannot_share_with_ticket_owner
+    return if ticket.blank? || user.blank?
+    return if ticket.customer_id != user_id
+
+    errors.add(:user, 'cannot share ticket with its owner')
+  end
 
   def signal_ticket_change
     ticket.touch # rubocop:disable Rails/SkipsModelValidations

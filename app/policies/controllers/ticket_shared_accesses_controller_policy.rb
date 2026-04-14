@@ -42,6 +42,9 @@ class Controllers::TicketSharedAccessesControllerPolicy < Controllers::Applicati
 
     shared_access = Ticket::SharedAccess.find_by(id: record.params[:id])
     return false if !shared_access
+    
+    # Critical: Verify the shared_access belongs to the ticket being operated on
+    return false if shared_access.ticket_id != ticket.id
 
     return true if ticket.customer_id == user.id
     return true if shared_access.user_id == user.id
