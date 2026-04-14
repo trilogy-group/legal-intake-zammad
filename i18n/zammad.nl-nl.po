@@ -2,10 +2,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zammad\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-09-02 09:00+0000\n"
-"Last-Translator: Shadowdenim <mikebeelen111@gmail.com>\n"
+"PO-Revision-Date: 2026-03-16 22:00+0000\n"
+"Last-Translator: Colin Andries <colin.andries@bisdomantwerpen.be>\n"
 "Language-Team: Dutch <https://translations.zammad.org/projects/zammad/zammad-"
-"development/nl/>\n"
+"stable/nl/>\n"
 "Language: nl-nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -62,11 +62,24 @@ msgstr ""
 #. This is the template file app/views/messaging/ticket_create/en.md.erb in ERB/Markdown format.
 #. Please make sure to translate it to a valid corresponding output structure.
 #: app/views/messaging/ticket_create/en.md.erb
+#, fuzzy
+#| msgid ""
+#| "# #{ticket.title}\n"
+#| "_<#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}|"
+#| "Ticket##{ticket.number}>: Created by #{current_user.longname} at "
+#| "#{ticket.updated_at}_\n"
+#| "* Group: #{ticket.group.name}\n"
+#| "* Owner: #{ticket.owner.fullname}\n"
+#| "* State: #{t(ticket.state.name)}\n"
+#| "\n"
+#| "<% if @objects[:article] %>\n"
+#| "#{article.body_as_text}\n"
+#| "<% end %>\n"
 msgid ""
 "# #{ticket.title}\n"
 "_<#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}|"
-"Ticket##{ticket.number}>: Created by #{current_user.longname} at "
-"#{ticket.updated_at}_\n"
+"#{config.ticket_hook}#{ticket.number}>: Created by #{current_user.longname} "
+"at #{ticket.updated_at}_\n"
 "* Group: #{ticket.group.name}\n"
 "* Owner: #{ticket.owner.fullname}\n"
 "* State: #{t(ticket.state.name)}\n"
@@ -90,10 +103,22 @@ msgstr ""
 #. This is the template file app/views/messaging/ticket_escalation/en.md.erb in ERB/Markdown format.
 #. Please make sure to translate it to a valid corresponding output structure.
 #: app/views/messaging/ticket_escalation/en.md.erb
+#, fuzzy
+#| msgid ""
+#| "# #{ticket.title}\n"
+#| "_<#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}|"
+#| "Ticket##{ticket.number}>: Escalated at #{ticket.escalation_at}_\n"
+#| "The ticket (#{ticket.title}) from \"#{ticket.customer.longname}\" has "
+#| "been escalated since \"#{ticket.escalation_at}\"!\n"
+#| "\n"
+#| "<% if @objects[:article] %>\n"
+#| "#{article.body_as_text}\n"
+#| "<% end %>\n"
 msgid ""
 "# #{ticket.title}\n"
 "_<#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}|"
-"Ticket##{ticket.number}>: Escalated at #{ticket.escalation_at}_\n"
+"#{config.ticket_hook}#{ticket.number}>: Escalated at #{ticket.escalation_at}"
+"_\n"
 "The ticket (#{ticket.title}) from \"#{ticket.customer.longname}\" has been "
 "escalated since \"#{ticket.escalation_at}\"!\n"
 "\n"
@@ -114,10 +139,23 @@ msgstr ""
 #. This is the template file app/views/messaging/ticket_info/en.md.erb in ERB/Markdown format.
 #. Please make sure to translate it to a valid corresponding output structure.
 #: app/views/messaging/ticket_info/en.md.erb
+#, fuzzy
+#| msgid ""
+#| "# #{ticket.title}\n"
+#| "_<#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}|"
+#| "Ticket##{ticket.number}>: Last updated at #{ticket.updated_at}_\n"
+#| "* Group: #{ticket.group.name}\n"
+#| "* Owner: #{ticket.owner.fullname}\n"
+#| "* State: #{t(ticket.state.name)}\n"
+#| "\n"
+#| "<% if @objects[:article] %>\n"
+#| "#{article.body_as_text}\n"
+#| "<% end %>\n"
 msgid ""
 "# #{ticket.title}\n"
 "_<#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}|"
-"Ticket##{ticket.number}>: Last updated at #{ticket.updated_at}_\n"
+"#{config.ticket_hook}#{ticket.number}>: Last updated at #{ticket.updated_at}"
+"_\n"
 "* Group: #{ticket.group.name}\n"
 "* Owner: #{ticket.owner.fullname}\n"
 "* State: #{t(ticket.state.name)}\n"
@@ -140,10 +178,21 @@ msgstr ""
 #. This is the template file app/views/messaging/ticket_reminder_reached/en.md.erb in ERB/Markdown format.
 #. Please make sure to translate it to a valid corresponding output structure.
 #: app/views/messaging/ticket_reminder_reached/en.md.erb
+#, fuzzy
+#| msgid ""
+#| "# #{ticket.title}\n"
+#| "_<#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}|"
+#| "Ticket##{ticket.number}>: Reminder reached!_\n"
+#| "A ticket needs attention: reminder reached for (#{ticket.title}) with "
+#| "customer \"*#{ticket.customer.longname}*\".\n"
+#| "\n"
+#| "<% if @objects[:article] %>\n"
+#| "#{article.body_as_text}\n"
+#| "<% end %>\n"
 msgid ""
 "# #{ticket.title}\n"
 "_<#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}|"
-"Ticket##{ticket.number}>: Reminder reached!_\n"
+"#{config.ticket_hook}#{ticket.number}>: Reminder reached!_\n"
 "A ticket needs attention: reminder reached for (#{ticket.title}) with "
 "customer \"*#{ticket.customer.longname}*\".\n"
 "\n"
@@ -164,11 +213,26 @@ msgstr ""
 #. This is the template file app/views/messaging/ticket_update/en.md.erb in ERB/Markdown format.
 #. Please make sure to translate it to a valid corresponding output structure.
 #: app/views/messaging/ticket_update/en.md.erb
+#, fuzzy
+#| msgid ""
+#| "# #{ticket.title}\n"
+#| "_<#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}|"
+#| "Ticket##{ticket.number}>: Updated by #{current_user.longname} at "
+#| "#{ticket.updated_at}_\n"
+#| "<% if @objects[:changes].present? %>\n"
+#| "  <% @objects[:changes].each do |key, value| %>\n"
+#| "  * <%= t key %>: <%= h value[0] %> -> <%= h value[1] %>\n"
+#| "  <% end %>\n"
+#| "<% end %>\n"
+#| "\n"
+#| "<% if @objects[:article] %>\n"
+#| "#{article.body_as_text}\n"
+#| "<% end %>\n"
 msgid ""
 "# #{ticket.title}\n"
 "_<#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}|"
-"Ticket##{ticket.number}>: Updated by #{current_user.longname} at "
-"#{ticket.updated_at}_\n"
+"#{config.ticket_hook}#{ticket.number}>: Updated by #{current_user.longname} "
+"at #{ticket.updated_at}_\n"
 "<% if @objects[:changes].present? %>\n"
 "  <% @objects[:changes].each do |key, value| %>\n"
 "  * <%= t key %>: <%= h value[0] %> -> <%= h value[1] %>\n"
@@ -196,10 +260,22 @@ msgstr ""
 #. This is the template file app/views/messaging/ticket_escalation_warning/en.md.erb in ERB/Markdown format.
 #. Please make sure to translate it to a valid corresponding output structure.
 #: app/views/messaging/ticket_escalation_warning/en.md.erb
+#, fuzzy
+#| msgid ""
+#| "# #{ticket.title}\n"
+#| "_<#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}|"
+#| "Ticket##{ticket.number}>: Will escalate at #{ticket.escalation_at}_\n"
+#| "The ticket (#{ticket.title}) from \"#{ticket.customer.longname}\" will "
+#| "escalate at \"#{ticket.escalation_at}\"!\n"
+#| "\n"
+#| "<% if @objects[:article] %>\n"
+#| "#{article.body_as_text}\n"
+#| "<% end %>\n"
 msgid ""
 "# #{ticket.title}\n"
 "_<#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}|"
-"Ticket##{ticket.number}>: Will escalate at #{ticket.escalation_at}_\n"
+"#{config.ticket_hook}#{ticket.number}>: Will escalate at "
+"#{ticket.escalation_at}_\n"
 "The ticket (#{ticket.title}) from \"#{ticket.customer.longname}\" will "
 "escalate at \"#{ticket.escalation_at}\"!\n"
 "\n"
@@ -374,9 +450,9 @@ msgstr "%s (optie)"
 #: app/frontend/apps/desktop/components/Form/fields/FieldTreeSelect/FieldTreeSelectInputDropdown.vue:343
 #: app/frontend/apps/mobile/components/Form/fields/FieldAutoComplete/FieldAutoCompleteInput.vue:145
 #: app/frontend/apps/mobile/components/Form/fields/FieldSelect/FieldSelectInput.vue:97
-#: app/frontend/apps/mobile/components/Form/fields/FieldTreeSelect/FieldTreeSelectInput.vue:130
+#: app/frontend/apps/mobile/components/Form/fields/FieldTreeSelect/FieldTreeSelectInput.vue:112
 #: app/frontend/apps/mobile/components/Form/fields/FieldTreeSelect/FieldTreeSelectInputDialog.vue:288
-#: app/frontend/shared/composables/useSelectOptions.ts:121
+#: app/frontend/shared/composables/useSelectOptions.ts:125
 msgid "%s (unknown)"
 msgstr "%s (onbekend)"
 
@@ -731,6 +807,10 @@ msgstr "%{name} bestaat reeds"
 msgid "%{name} is a reserved word"
 msgstr "%{name} is een gereserveerd woord"
 
+#: app/models/setting/validation/sso_trusted_ips.rb:9
+msgid "'%s' is not a valid IP address or CIDR range."
+msgstr ""
+
 #: app/frontend/apps/mobile/components/CommonTicketStateIndicator/CommonTicketStateIndicator.vue:63
 msgid "(state: %s)"
 msgstr "(status: %s)"
@@ -1056,7 +1136,7 @@ msgstr "Behandelaren"
 msgid "AI Provider"
 msgstr "Aanbieder"
 
-#: db/seeds/settings.rb:6065
+#: db/seeds/settings.rb:6089
 #, fuzzy
 #| msgid "Provider"
 msgid "AI Provider Config"
@@ -1104,7 +1184,7 @@ msgstr "Behandelaar"
 
 #: app/services/service/ai/agent/run.rb:32
 msgid "AI agent result content does not match expected result structure."
-msgstr ""
+msgstr "Het resultaat van de AI agent met de verwachte resultaatstructuur."
 
 #: app/assets/javascripts/app/controllers/_ai/ai_agent.coffee:33
 #, fuzzy
@@ -1132,7 +1212,7 @@ msgstr ""
 msgid "AI error log"
 msgstr "API error."
 
-#: db/seeds/settings.rb:6051
+#: db/seeds/settings.rb:6075
 #, fuzzy
 #| msgid "Provider"
 msgid "AI provider"
@@ -1154,6 +1234,18 @@ msgstr ""
 msgid "AI provider URL is not set"
 msgstr "Het verstrekte token is ongeldig."
 
+#: app/assets/javascripts/app/controllers/_ai/provider.coffee:64
+#, fuzzy
+#| msgid "Ticket updated successfully."
+msgid "AI provider disabled successfully."
+msgstr "Ticket succesvol geüpdatet."
+
+#: app/assets/javascripts/app/controllers/_ai/provider.coffee:62
+#, fuzzy
+#| msgid "Ticket updated successfully."
+msgid "AI provider enabled successfully."
+msgstr "Ticket succesvol geüpdatet."
+
 #: app/models/setting/validation/ai_provider_config.rb:75
 #, fuzzy
 #| msgid "Provider"
@@ -1173,7 +1265,7 @@ msgstr "De instelling 'storage_provider' is niet geconfigureerd."
 
 #: app/models/setting/validation/ai_provider_config.rb:76
 msgid "AI provider is not supported"
-msgstr ""
+msgstr "AI aanbieder wordt niet ondersteund"
 
 #: app/models/setting/validation/ai_provider_config.rb:8
 #, fuzzy
@@ -1181,7 +1273,7 @@ msgstr ""
 msgid "AI provider token is not set"
 msgstr "Het verstrekte token is ongeldig."
 
-#: lib/ai/service/ticket_summarize.rb:45
+#: lib/ai/service/ticket_summarize.rb:54
 msgid "AI service result is missing expected keys"
 msgstr ""
 
@@ -1193,7 +1285,7 @@ msgstr "Evenement Samenvatting"
 
 #: lib/excel_sheet/ai/analytics/with_usage.rb:4
 msgid "AI usage and feedback log"
-msgstr ""
+msgstr "Gebruik van AI en logboek van terugkoppeling"
 
 #: app/frontend/shared/components/Form/fields/FieldEditor/features/ai-assistant-text-tools/AiAssistantLoadingBanner/AiAssistantLoadingBanner.vue:35
 #, fuzzy
@@ -1247,7 +1339,7 @@ msgstr "API error."
 
 #: lib/ai/provider/azure.rb:128
 msgid "API server not accessible"
-msgstr ""
+msgstr "API server is niet toegankelijk"
 
 #: lib/ai/provider/concerns/handles_response.rb:15
 #, fuzzy
@@ -1572,7 +1664,7 @@ msgstr "Adapter"
 #: app/assets/javascripts/app/views/profile/linked_accounts.jst.eco:15
 #: app/assets/javascripts/app/views/tag/index.jst.eco:24
 #: app/assets/javascripts/app/views/ticket_zoom/sidebar_checklist/show.jst.eco:19
-#: app/frontend/apps/desktop/components/Form/fields/FieldGroupPermissions/FieldGroupPermissionsInput.vue:264
+#: app/frontend/apps/desktop/components/Form/fields/FieldGroupPermissions/FieldGroupPermissionsInput.vue:263
 #: app/frontend/shared/form/i18n/locales.ts:25
 msgid "Add"
 msgstr "Toevoegen"
@@ -1621,7 +1713,7 @@ msgstr "Public of Private Key toevoegen"
 
 #: app/frontend/shared/entities/ticket-article/action/plugins/sms.ts:45
 msgid "Add SMS"
-msgstr ""
+msgstr "Voeg SMS toe"
 
 #: app/assets/javascripts/app/views/ssl_certificates.jst.eco:5
 msgid "Add SSL Certificate"
@@ -1961,7 +2053,7 @@ msgstr "Chat met behandelaar"
 msgid "Agent idle timeout"
 msgstr "Behandelaar idle time-out"
 
-#: app/models/role.rb:151 app/models/user.rb:757
+#: app/models/role.rb:151 app/models/user.rb:760
 msgid "Agent limit exceeded, please check your account settings."
 msgstr "Maximum Behandelaren overschreden, controleer je accountinstellingen."
 
@@ -2034,7 +2126,7 @@ msgstr ""
 msgid "All colleagues are busy."
 msgstr "Alle collega's zijn bezet."
 
-#: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingDevices.vue:130
+#: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingDevices.vue:131
 msgid ""
 "All computers and browsers from which you logged in to Zammad appear here."
 msgstr ""
@@ -2069,7 +2161,7 @@ msgstr ""
 msgid "Allow AI Agent to select multiple categories from all possible values."
 msgstr ""
 
-#: db/seeds/settings.rb:6036
+#: db/seeds/settings.rb:6060
 msgid ""
 "Allow admins to manage availability and access to the desktop BETA UI switch."
 msgstr ""
@@ -2108,7 +2200,7 @@ msgstr "Sta gebruikers toe nieuwe tags toe te voegen."
 msgid "Allow users to create new tags."
 msgstr "Laat gebruikers nieuwe tags aanmaken."
 
-#: db/seeds/settings.rb:6027
+#: db/seeds/settings.rb:6051
 msgid "Allow users to switch automatically to the new desktop UI."
 msgstr ""
 
@@ -2649,7 +2741,7 @@ msgstr "Toegewezen aan"
 msgid "Assignment Timeout"
 msgstr "Time-out toewijzing"
 
-#: app/assets/javascripts/app/models/_application_model.coffee:166
+#: app/assets/javascripts/app/models/_application_model.coffee:168
 #: app/assets/javascripts/app/models/group.coffee:8
 msgid "Assignment timeout"
 msgstr "Time-out toewijzing"
@@ -2663,7 +2755,7 @@ msgstr ""
 "Toewijzing time-out in minuten wanneer toegewezen behandelaar er niet aan "
 "werkt. Ticket wordt getoond als niet toegewezen."
 
-#: app/models/user.rb:659
+#: app/models/user.rb:662
 msgid ""
 "At least one identifier (firstname, lastname, phone, mobile or email) for "
 "user is required."
@@ -2679,7 +2771,7 @@ msgstr "Minimaal één regel is verplicht, maar er is er geen aangeboden."
 msgid "At least one object must be selected."
 msgstr "Minimaal één object moet geselecteerd worden."
 
-#: app/models/role.rb:128 app/models/user.rb:736
+#: app/models/role.rb:128 app/models/user.rb:739
 msgid "At least one user needs to have admin permissions."
 msgstr "Minimaal één gebruiker moet administrator rechten hebben."
 
@@ -2803,10 +2895,8 @@ msgid "August"
 msgstr "augustus"
 
 #: app/assets/javascripts/app/controllers/_channel/microsoft_graph.coffee:379
-#, fuzzy
-#| msgid "Authentication"
 msgid "Authenticate"
-msgstr "Authenticatie"
+msgstr "Authenticeer"
 
 #: app/assets/javascripts/app/models/webhook.coffee:11
 #: app/assets/javascripts/app/views/integration/exchange.jst.eco:4
@@ -2845,7 +2935,7 @@ msgstr "Authenticatie via %s"
 
 #: app/assets/javascripts/app/controllers/widget/two_factor_configuration/modal/authenticator_app.coffee:4
 #: app/assets/javascripts/app/lib/app_post/two_factor_methods/authenticator_app.coffee:5
-#: db/seeds/settings.rb:5874
+#: db/seeds/settings.rb:5898
 msgid "Authenticator App"
 msgstr "Authenticator App"
 
@@ -2896,7 +2986,7 @@ msgstr "Automatische toewijzing van gebruikersuitzonderingen"
 msgid "Auto Assignment Selector"
 msgstr "Automatische toewijzingskiezer"
 
-#: db/seeds/settings.rb:6013
+#: db/seeds/settings.rb:6037
 msgid "Auto Shutdown"
 msgstr "Automatische uitschakeling"
 
@@ -2936,7 +3026,7 @@ msgstr "Automatische accountlink bij eerste aanmelding"
 msgid "Automatic account linking notification"
 msgstr "Automatische account-koppeling notificatie"
 
-#: app/assets/javascripts/app/controllers/_channel/whatsapp.coffee:181
+#: app/assets/javascripts/app/controllers/_channel/whatsapp.coffee:184
 msgid "Automatic reminders"
 msgstr "Automatische herinneringen"
 
@@ -2956,11 +3046,11 @@ msgstr ""
 "Het chat.css-bestand wordt automatisch geladen. Als je eigen CSS wilt "
 "gebruiken, zet deze waarde op false."
 
-#: app/frontend/shared/components/Form/Form.vue:1295
+#: app/frontend/shared/components/Form/Form.vue:1296
 msgid "Autosave in progress…"
 msgstr "Autosave bezig…"
 
-#: app/frontend/shared/components/Form/Form.vue:1304
+#: app/frontend/shared/components/Form/Form.vue:1305
 msgid "Autosaving is taking longer than expected…"
 msgstr "Het automatisch opslaan duurt langer dan verwacht…"
 
@@ -3155,7 +3245,7 @@ msgstr ""
 msgid "Bearer Token"
 msgstr "Genereer Token"
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:805
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:806
 #: app/frontend/shared/components/Form/fields/FieldEditor/extensions/UserMention.ts:105
 msgid "Before you mention a user, please select a group."
 msgstr "Selecteer een groep, voordat de je een gebruiker selecteerd."
@@ -3168,7 +3258,7 @@ msgstr ""
 "Voordat je begint: controleer de volgende punten zodat de migratie soepel "
 "verloopt en Zammad daarna goed werkt:"
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_action/email_reply.coffee:261
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_action/email_reply.coffee:262
 #: app/frontend/shared/entities/ticket-article/action/plugins/email/forward.ts:89
 msgid "Begin forwarded message"
 msgstr "Start doorgestuurd bericht"
@@ -3474,8 +3564,8 @@ msgstr ""
 "Probeer opnieuw."
 
 #: app/assets/javascripts/app/controllers/_application_controller/after_auth_modal.coffee:9
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_action/email_reply.coffee:404
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:373
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_action/email_reply.coffee:463
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:380
 #: app/assets/javascripts/app/views/integration/exchange_certificate_issue.jst.eco:18
 #: app/assets/javascripts/app/views/integration/exchange_wizard.jst.eco:236
 #: app/assets/javascripts/app/views/integration/ldap_wizard.jst.eco:292
@@ -3574,7 +3664,7 @@ msgstr "Externe databron %s kan niet verwerkt worden. %s"
 msgid "Cannot set online notifications as seen"
 msgstr "Kan online meldingen niet instellen zoals gezien"
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:833
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:845
 msgid "Cannot upload file"
 msgstr "Kan bestand niet uploaden"
 
@@ -3619,7 +3709,7 @@ msgstr "Certificaten & Private Keys"
 #: app/assets/javascripts/app/views/generic/login_preview.jst.eco:26
 #: app/assets/javascripts/app/views/integration/exchange.jst.eco:102
 #: app/assets/javascripts/app/views/integration/ldap.jst.eco:108
-#: app/frontend/apps/desktop/components/Form/fields/FieldGroupPermissions/FieldGroupPermissionsInput.vue:47
+#: app/frontend/apps/desktop/components/Form/fields/FieldGroupPermissions/FieldGroupPermissionsInput.vue:46
 msgid "Change"
 msgstr "Veranderen"
 
@@ -3873,7 +3963,7 @@ msgstr ""
 
 #: app/assets/javascripts/app/controllers/checklist_template.coffee:3
 #: app/assets/javascripts/app/views/checklist_template/index.jst.eco:7
-#: db/seeds/permissions.rb:335 db/seeds/settings.rb:5986
+#: db/seeds/permissions.rb:335 db/seeds/settings.rb:6010
 msgid "Checklists"
 msgstr "Checklists"
 
@@ -4054,7 +4144,7 @@ msgstr "Wis zoeken"
 #: app/frontend/apps/mobile/components/Form/fields/FieldAutoComplete/FieldAutoCompleteInput.vue:151
 #: app/frontend/apps/mobile/components/Form/fields/FieldDate/FieldDateTimeInput.vue:149
 #: app/frontend/apps/mobile/components/Form/fields/FieldSelect/FieldSelectInput.vue:124
-#: app/frontend/apps/mobile/components/Form/fields/FieldTreeSelect/FieldTreeSelectInput.vue:215
+#: app/frontend/apps/mobile/components/Form/fields/FieldTreeSelect/FieldTreeSelectInput.vue:197
 #, fuzzy
 #| msgid "Clear Selection"
 msgid "Clear selection"
@@ -4087,7 +4177,7 @@ msgstr "Klik hier om een twee-factor-authenticatiemethode in te stellen."
 
 #: app/frontend/shared/components/Form/fields/FieldEditor/FieldEditorInput.vue:48
 msgid "Click to edit…"
-msgstr ""
+msgstr "Klik om te bewerken…"
 
 #: app/assets/javascripts/app/views/exchange/app_config.jst.eco:9
 #: app/assets/javascripts/app/views/exchange/token_information.jst.eco:28
@@ -4111,6 +4201,12 @@ msgstr "Clients"
 
 #: app/assets/javascripts/app/controllers/_application_controller/table.coffee:686
 msgid "Clone"
+msgstr "Dupliceer"
+
+#: app/assets/javascripts/app/controllers/_application_controller/table.coffee:696
+#, fuzzy
+#| msgid "Clone"
+msgid "Clone: %s"
 msgstr "Dupliceer"
 
 #: app/assets/javascripts/app/controllers/_application_controller/_modal_generic_description.coffee:4
@@ -4226,6 +4322,12 @@ msgstr "Kleurweergave van de open ticket-indicator in de zijbalk."
 msgid "Combined subscription URL"
 msgstr "Gecombineerd abonnement URL"
 
+#: db/seeds/settings.rb:5817
+msgid ""
+"Comma-separated list of trusted proxy IP addresses or CIDR ranges for SSO "
+"header acceptance."
+msgstr ""
+
 #: app/models/tag/item.rb:4
 #, fuzzy
 #| msgid "spaces are not allowed"
@@ -4267,7 +4369,7 @@ msgstr ""
 
 #: app/assets/javascripts/app/lib/app_post/two_factor_methods/security_keys.coffee:6
 #: app/frontend/shared/entities/two-factor/plugins/security-keys.ts:10
-#: db/seeds/settings.rb:5866
+#: db/seeds/settings.rb:5890
 msgid "Complete the sign-in with your security key."
 msgstr "Voltooi de aanmelding met je beveiligingssleutel."
 
@@ -4809,7 +4911,7 @@ msgstr "Land"
 #: app/assets/javascripts/app/views/getting_started/admin.jst.eco:9
 #: app/assets/javascripts/app/views/profile/token_access.jst.eco:8
 #: app/assets/javascripts/app/views/widget/shared_draft.jst.eco:4
-#: app/frontend/apps/desktop/components/Form/fields/FieldGroupPermissions/FieldGroupPermissionsInput.vue:43
+#: app/frontend/apps/desktop/components/Form/fields/FieldGroupPermissions/FieldGroupPermissionsInput.vue:42
 #: app/frontend/apps/desktop/entities/user/composables/useUserCreate.ts:78
 #: app/frontend/apps/desktop/pages/personal-setting/components/PersonalSettingNewAccessTokenFlyout.vue:114
 #: app/frontend/apps/desktop/pages/ticket/components/TicketCreate/TicketCreateContent.vue:298
@@ -5196,7 +5298,7 @@ msgstr "Aangepaste Payload"
 msgid "Custom Translation"
 msgstr "Aangepaste vertaling"
 
-#: app/assets/javascripts/app/controllers/_manage/knowledge_base.coffee:127
+#: app/assets/javascripts/app/controllers/_manage/knowledge_base.coffee:134
 #: app/assets/javascripts/app/models/knowledge_base.coffee:290
 msgid "Custom URL"
 msgstr "Custom URL"
@@ -5829,7 +5931,7 @@ msgstr "Stel in of de applicatie in 'init'-mode staat."
 msgid "Defines if application is used as online service."
 msgstr "Stel in of de applicatie als online service wordt gebruikt."
 
-#: db/seeds/settings.rb:5817
+#: db/seeds/settings.rb:5841
 msgid ""
 "Defines if calendar weeks are shown in the picker of date/datetime fields to "
 "easily select the correct date."
@@ -5841,7 +5943,7 @@ msgstr ""
 msgid "Defines if generic CTI integration is enabled or not."
 msgstr "Zet de generieke CTI-integratie aan of uit."
 
-#: db/seeds/settings.rb:5909
+#: db/seeds/settings.rb:5933
 msgid ""
 "Defines if recovery codes can be used by users in the event they lose access "
 "to other two-factor authentication methods."
@@ -5854,7 +5956,7 @@ msgstr ""
 msgid "Defines if sipgate.io (http://www.sipgate.io) is enabled or not."
 msgstr "Zet desipgate.io-integratie (http://www.sipgate.io) aan of uit."
 
-#: db/seeds/settings.rb:6054
+#: db/seeds/settings.rb:6078
 #, fuzzy
 #| msgid "The setting 'storage_provider' was not configured."
 msgid "Defines if the AI provider is configured."
@@ -5890,13 +5992,13 @@ msgstr ""
 "Zet de applicatie in ontwikkelaarsmodus (alle gebruikers hebben hetzelfde "
 "wachtwoord, en wachtwoord resets versturen geen e-mail)."
 
-#: db/seeds/settings.rb:6145
+#: db/seeds/settings.rb:6169
 msgid ""
 "Defines if the bubble menu feature of the richtext editor is enabled. Note "
 "that this setting will be ignored if the writing assistant is turned on."
 msgstr ""
 
-#: db/seeds/settings.rb:5961
+#: db/seeds/settings.rb:5985
 msgid ""
 "Defines if the change of the primary organization of a user will update the "
 "100 most recent tickets for this user as well."
@@ -5950,14 +6052,14 @@ msgstr ""
 msgid "Defines if the time accounting types are enabled."
 msgstr "Bepaalt of de tijdsverantwoording types ingeschakeld zijn."
 
-#: db/seeds/settings.rb:5877
+#: db/seeds/settings.rb:5901
 msgid ""
 "Defines if the two-factor authentication method authenticator app is enabled "
 "or not."
 msgstr ""
 "Zet de verificatie-app voor authenticatie met twee factoren aan of uit."
 
-#: db/seeds/settings.rb:5845
+#: db/seeds/settings.rb:5869
 msgid ""
 "Defines if the two-factor authentication method security keys is enabled or "
 "not."
@@ -6297,7 +6399,7 @@ msgstr ""
 "Stel de duur in van de klantactiviteit (in seconden) tijdens een gesprek "
 "totdat het dialoogvenster met het gebruikersprofiel wordt weergegeven."
 
-#: db/seeds/settings.rb:6131
+#: db/seeds/settings.rb:6155
 msgid ""
 "Defines the fixed instructions that guide the AI Writing Assistant on e.g. "
 "how to format its output."
@@ -6516,7 +6618,7 @@ msgstr ""
 msgid "Defines which parameters are allowed to be submitted via the form API."
 msgstr ""
 
-#: db/seeds/settings.rb:6045
+#: db/seeds/settings.rb:6069
 msgid "Defines which roles are allowed to access the desktop BETA UI switch."
 msgstr ""
 
@@ -6536,7 +6638,7 @@ msgstr ""
 #: app/assets/javascripts/app/controllers/_application_controller/_modal_generic_confirm_delete.coffee:4
 #: app/assets/javascripts/app/controllers/_application_controller/_modal_generic_destroy_confirm.coffee:4
 #: app/assets/javascripts/app/controllers/_application_controller/table.coffee:715
-#: app/assets/javascripts/app/controllers/_manage/knowledge_base.coffee:118
+#: app/assets/javascripts/app/controllers/_manage/knowledge_base.coffee:125
 #: app/assets/javascripts/app/controllers/data_privacy.coffee:188
 #: app/assets/javascripts/app/controllers/knowledge_base/delete_action.coffee:9
 #: app/assets/javascripts/app/controllers/package.coffee:54
@@ -6799,17 +6901,17 @@ msgstr "Ontwerper"
 msgid "Desktop"
 msgstr "Desktop"
 
-#: db/seeds/settings.rb:6024
+#: db/seeds/settings.rb:6048
 #, fuzzy
 #| msgid "New tab"
 msgid "Desktop BETA UI Switch"
 msgstr "Nieuwe tab"
 
-#: db/seeds/settings.rb:6033
+#: db/seeds/settings.rb:6057
 msgid "Desktop BETA UI Switch Admin Menu"
 msgstr ""
 
-#: db/seeds/settings.rb:6042
+#: db/seeds/settings.rb:6066
 msgid "Desktop BETA UI Switch Roles"
 msgstr ""
 
@@ -7078,7 +7180,7 @@ msgstr "E-mail niet versleutelen"
 msgid "Do not sign email"
 msgstr "E-mail niet ondertekenen"
 
-#: db/seeds/settings.rb:5971
+#: db/seeds/settings.rb:5995
 msgid "Do not update any tickets."
 msgstr "Tickets niet updaten."
 
@@ -7568,7 +7670,7 @@ msgstr "Email Account"
 msgid "Email address"
 msgstr "Email adres"
 
-#: app/models/user.rb:669
+#: app/models/user.rb:672
 msgid "Email address '%{email}' is already used for another user."
 msgstr "E-mailadres '%{email}' is al in gebruik voor een andere gebruiker."
 
@@ -7705,7 +7807,7 @@ msgstr ""
 "wachtwoord). Iedere gebruiker moet een eigen Access Token in hun "
 "gebruikersprofiel opnemen."
 
-#: db/seeds/settings.rb:5906
+#: db/seeds/settings.rb:5930
 msgid "Enable Recovery Codes"
 msgstr "Herstelcodes inschakelen"
 
@@ -7731,7 +7833,7 @@ msgstr ""
 "Schakel automatisch toewijzen in zodra een behandelaar een ticket de eerste "
 "keer opent."
 
-#: db/seeds/settings.rb:5989
+#: db/seeds/settings.rb:6013
 msgid "Enable checklists."
 msgstr "Checklists inschakelen."
 
@@ -7758,7 +7860,7 @@ msgstr ""
 "gewoon een bepaalde zin wilt aanhalen, markeer dan de tekst en druk op "
 "Antwoord (deze functie is altijd beschikbaar)."
 
-#: db/seeds/settings.rb:6016
+#: db/seeds/settings.rb:6040
 msgid ""
 "Enable or disable self-shutdown of Zammad processes after significant "
 "configuration changes. This should only be used if the controlling process "
@@ -7789,11 +7891,11 @@ msgstr ""
 "ingeschakeld is worden alle niet-administrators uitgelogd en alleen "
 "administrators kunnen een nieuwe sessie starten."
 
-#: db/seeds/settings.rb:6084
+#: db/seeds/settings.rb:6108
 msgid "Enable or disable the ticket summary."
 msgstr ""
 
-#: db/seeds/settings.rb:6117
+#: db/seeds/settings.rb:6141
 msgid "Enable or disable the writing assistant text tools."
 msgstr ""
 
@@ -7837,10 +7939,10 @@ msgstr ""
 #: db/seeds/settings.rb:5787
 msgid ""
 "Enables button for user authentication via %s. The button will redirect to /"
-"auth/sso on user interaction."
+"auth/sso on user interaction. Configure trusted proxy IP addresses or CIDR "
+"ranges from which authentication headers (%s, %s, %s) are accepted. Leave "
+"empty to accept from any IP (not recommended for production)."
 msgstr ""
-"Activeer de knop voor gebruik authenticatie via %s. De knop zal "
-"doorverwijzen naar /auth/sso bij gebruikersinteractie."
 
 #: app/assets/javascripts/app/controllers/_channel/chat.coffee:62
 msgid "Enables console logging."
@@ -7965,6 +8067,19 @@ msgstr "Encryptie error"
 msgid "Encryption:"
 msgstr "Versleuteling:"
 
+#: app/assets/javascripts/app/views/generic/calender_preview.jst.eco:15
+#: app/assets/javascripts/app/views/profile/out_of_office.jst.eco:22
+#, fuzzy
+#| msgid "Change date"
+msgid "End date"
+msgstr "Wijzig datum"
+
+#: app/assets/javascripts/app/views/generic/business_hours.jst.eco:24
+#, fuzzy
+#| msgid "Accounted Time"
+msgid "End time"
+msgstr "Verantwoorde tijd"
+
 #: app/assets/javascripts/app/models/webhook.coffee:8
 #: app/assets/javascripts/app/views/integration/check_mk.jst.eco:16
 #: app/assets/javascripts/app/views/integration/cti.jst.eco:3
@@ -7983,11 +8098,11 @@ msgstr "Eindpunt"
 msgid "Endpoint Settings"
 msgstr "Endpoint insellingen"
 
-#: db/seeds/settings.rb:5933
+#: db/seeds/settings.rb:5957
 msgid "Enforce the setup of the two-factor authentication"
 msgstr "Twee-factor authenticatie afdwingen"
 
-#: db/seeds/settings.rb:5940
+#: db/seeds/settings.rb:5964
 msgid "Enforced for user roles"
 msgstr "Verplicht voor gebruikersrollen"
 
@@ -8535,7 +8650,7 @@ msgstr "Uitgebreid zoeken"
 msgid "External data source field"
 msgstr "Extern gegevensbronveld"
 
-#: lib/search_index_backend.rb:754
+#: lib/search_index_backend.rb:756
 msgid "Extract zammad-attachment information from arrays"
 msgstr "Extraheer zammad-bijlage-informatie uit arrays"
 
@@ -8544,7 +8659,7 @@ msgstr "Extraheer zammad-bijlage-informatie uit arrays"
 #: app/assets/javascripts/app/views/facebook/index.jst.eco:3
 #: app/assets/javascripts/app/views/facebook/list.jst.eco:3
 #: app/controllers/first_steps_controller.rb:27
-#: app/frontend/shared/composables/authentication/useThirdPartyAuthentication.ts:18
+#: app/frontend/shared/composables/authentication/useThirdPartyAuthentication.ts:35
 #: app/frontend/shared/entities/ticket-article/action/plugins/facebook.ts:43
 #: db/seeds/permissions.rb:167 db/seeds/settings.rb:1411
 msgid "Facebook"
@@ -8678,7 +8793,7 @@ msgstr "februari"
 msgid "Feedback"
 msgstr "Feedback"
 
-#: app/assets/javascripts/app/controllers/_ai/provider.coffee:15
+#: app/assets/javascripts/app/controllers/_ai/provider.coffee:22
 #, fuzzy
 #| msgid "Feedback Form"
 msgid "Feedback & Logs"
@@ -8702,7 +8817,7 @@ msgstr "Bestand '%s' wordt geüpload"
 msgid "File format is not allowed: %s"
 msgstr "Bestandsformaat is niet toegestaan: %s"
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:894
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:906
 #: app/frontend/shared/components/Form/fields/FieldFile/composable/useFileValidation.ts:22
 #: lib/validations/ticket_article_validator/whatsapp_message.rb:38
 msgid "File is too big. %s has to be %s or smaller."
@@ -8750,7 +8865,7 @@ msgstr "Vind wat je zoekt, bijvoorbeeld \"zoekwoord\""
 msgid "Fingerprint"
 msgstr "Fingerprint"
 
-#: app/assets/javascripts/app/controllers/_channel/whatsapp.coffee:260
+#: app/assets/javascripts/app/controllers/_channel/whatsapp.coffee:263
 #: app/assets/javascripts/app/views/clues/clues_content.jst.eco:17
 #: app/assets/javascripts/app/views/getting_started/email_pre_configured.jst.eco:17
 #: app/frontend/apps/desktop/pages/guided-setup/views/GuidedSetupManual/GuidedSetupManualChannelEmailPreConfigured.vue:73
@@ -9083,9 +9198,6 @@ msgstr "vrijdag"
 #: app/assets/javascripts/app/controllers/_ui_element/postmaster_match.coffee:10
 #: app/assets/javascripts/app/models/ticket_article.coffee:7
 #: app/assets/javascripts/app/views/cti/caller_log.jst.eco:13
-#: app/assets/javascripts/app/views/generic/business_hours.jst.eco:21
-#: app/assets/javascripts/app/views/generic/calender_preview.jst.eco:11
-#: app/assets/javascripts/app/views/profile/out_of_office.jst.eco:18
 #: app/assets/javascripts/app/views/ticket_zoom/article_view.jst.eco:16
 #: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/ArticleMeta/useArticleMeta.ts:65
 #: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/ArticleMetadataDialog.vue:87
@@ -9099,7 +9211,7 @@ msgstr "Frontend"
 
 #: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:514
 #: app/assets/javascripts/app/models/group.coffee:48
-#: app/frontend/apps/desktop/components/Form/fields/FieldGroupPermissions/FieldGroupPermissionsInput.vue:55
+#: app/frontend/apps/desktop/components/Form/fields/FieldGroupPermissions/FieldGroupPermissionsInput.vue:54
 msgid "Full"
 msgstr "Volledig"
 
@@ -9198,7 +9310,7 @@ msgstr "Ermee beginnen"
 
 #: app/assets/javascripts/app/lib/app_post/two_factor_methods/authenticator_app.coffee:6
 #: app/frontend/shared/entities/two-factor/plugins/authenticator-app.ts:10
-#: db/seeds/settings.rb:5898
+#: db/seeds/settings.rb:5922
 msgid "Get the security code from the authenticator app on your device."
 msgstr "Haal de beveiligingscode op via de authenticator-app op je apparaat."
 
@@ -9215,7 +9327,7 @@ msgstr "Sleutel informatie ophalen uit de browser…"
 #: app/assets/javascripts/app/controllers/_profile/linked_accounts.coffee:81
 #: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarExternalReferences/TicketSidebarExternalIssueTracker/useTicketExternalIssueTracker.ts:47
 #: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/plugins/github.ts:11
-#: app/frontend/shared/composables/authentication/useThirdPartyAuthentication.ts:39
+#: app/frontend/shared/composables/authentication/useThirdPartyAuthentication.ts:56
 #: db/seeds/settings.rb:1607
 msgid "GitHub"
 msgstr "GitHub"
@@ -9248,7 +9360,7 @@ msgstr "GitHub: Link issue"
 #: app/assets/javascripts/app/controllers/_profile/linked_accounts.coffee:86
 #: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarExternalReferences/TicketSidebarExternalIssueTracker/useTicketExternalIssueTracker.ts:48
 #: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/plugins/gitlab.ts:11
-#: app/frontend/shared/composables/authentication/useThirdPartyAuthentication.ts:46
+#: app/frontend/shared/composables/authentication/useThirdPartyAuthentication.ts:63
 #: db/seeds/settings.rb:1672
 msgid "GitLab"
 msgstr "GitLab"
@@ -9338,7 +9450,7 @@ msgid "Goodbye message"
 msgstr "Vaarwel bericht"
 
 #: app/assets/javascripts/app/controllers/_profile/linked_accounts.coffee:96
-#: app/frontend/shared/composables/authentication/useThirdPartyAuthentication.ts:60
+#: app/frontend/shared/composables/authentication/useThirdPartyAuthentication.ts:77
 #: db/seeds/settings.rb:1477
 msgid "Google"
 msgstr "Google"
@@ -9374,10 +9486,8 @@ msgstr "Google E-mail"
 #: app/assets/javascripts/app/controllers/_plugin/navigation.coffee:188
 #: app/assets/javascripts/app/views/clues/clues_content.jst.eco:17
 #: app/frontend/apps/desktop/components/BetaUi/composables/useBetaUi.ts:87
-#, fuzzy
-#| msgid "Got it!"
 msgid "Got it"
-msgstr "Ik snap het!"
+msgstr "Ik snap het"
 
 #: app/assets/javascripts/app/controllers/ticket_zoom/highlighter.coffee:16
 msgid "Green"
@@ -9657,7 +9767,7 @@ msgstr "Help"
 
 #: db/seeds/community_user_resources.rb:26
 msgid "Help me! I am an example ticket 🎓"
-msgstr ""
+msgstr "Help mij! Ik ben een voorbeeldticket 🎓"
 
 #: app/assets/javascripts/app/controllers/_plugin/translation_support.coffee:39
 msgid "Help to improve Zammad!"
@@ -9665,7 +9775,7 @@ msgstr "Help Zammad te verbeteren!"
 
 #: app/frontend/apps/desktop/components/BetaUi/BetaUiFeedbackConsentDialog.vue:99
 msgid "Help us shape the future of Zammad!"
-msgstr ""
+msgstr "Help ons de toekomst van Zammad vorm te geven!"
 
 #: app/assets/javascripts/app/views/knowledge_base/public_menu_manager.jst.eco:6
 msgid ""
@@ -10584,10 +10694,8 @@ msgid "Invalid 'direction'!"
 msgstr "Ongeldige 'direction'!"
 
 #: lib/ai/provider/concerns/handles_response.rb:9
-#, fuzzy
-#| msgid "Invalid token, please contact your admin!"
 msgid "Invalid API key - please check your configuration"
-msgstr "Ongeldig token, neem contact op met de beheerder!"
+msgstr "Ongeldige API-sleutel - check uw configuratie"
 
 #: app/controllers/application_controller/authenticates.rb:57
 msgid "Invalid BasicAuth credentials"
@@ -10617,6 +10725,12 @@ msgstr "Ongeldige GitLab configuratie (endpoint of api_token ontbreekt)."
 msgid "Invalid GitLab issue link format"
 msgstr "Ongeldig GitLab issue link format"
 
+#: lib/external_credential/exchange.rb:43
+#: lib/external_credential/facebook.rb:42 lib/external_credential/google.rb:39
+#: lib/external_credential/microsoft_base.rb:67
+msgid "Invalid OAuth state parameter."
+msgstr ""
+
 #: app/services/service/system/run_auto_wizard.rb:11
 msgid "Invalid auto wizard file."
 msgstr "Ongeldig auto-assistent bestand."
@@ -10629,7 +10743,7 @@ msgstr "Ongeldig client_id in ontvangstlus!"
 msgid "Invalid client_id received!"
 msgstr "Ongeldig client_id ontvangen!"
 
-#: app/models/user.rb:608
+#: app/models/user.rb:611
 msgid "Invalid email '%{email}'"
 msgstr "Ongeldig e-mailadres '%{email}'"
 
@@ -10923,7 +11037,7 @@ msgstr ""
 "Klik gewoon op het gemarkeerde gebied en update de woorden direct op de "
 "plaats. Veel plezier!"
 
-#: app/frontend/apps/desktop/components/BetaUi/FeedbackDialog/SwitchBackFeedbackDialog.vue:94
+#: app/frontend/apps/desktop/components/BetaUi/FeedbackDialog/SwitchBackFeedbackDialog.vue:96
 msgid "Just switch back"
 msgstr ""
 
@@ -11049,7 +11163,7 @@ msgstr "Taal"
 msgid "Language Detection Service"
 msgstr "Taaldetectieservice"
 
-#: app/assets/javascripts/app/controllers/_manage/knowledge_base.coffee:108
+#: app/assets/javascripts/app/controllers/_manage/knowledge_base.coffee:115
 #: app/assets/javascripts/app/models/knowledge_base.coffee:278
 msgid "Languages"
 msgstr "Talen"
@@ -11165,21 +11279,17 @@ msgstr "Layout"
 msgid "Layout Reference"
 msgstr "Lay-outreferentie"
 
-#: app/assets/javascripts/app/views/navigation/desktop-beta-switch.jst.eco:5
-msgid "Learn More"
-msgstr ""
-
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingNewBetaUi.vue:40
 msgid "Leave BETA UI feedback program?"
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/_ai/provider.coffee:207
+#: app/assets/javascripts/app/controllers/_ai/provider.coffee:252
 #, fuzzy
 #| msgid "%s (option)"
 msgid "Leave empty to use URL (Completions)"
 msgstr "%s (optie)"
 
-#: app/assets/javascripts/app/controllers/_ai/provider.coffee:197
+#: app/assets/javascripts/app/controllers/_ai/provider.coffee:242
 msgid "Leave empty to use the base model"
 msgstr ""
 
@@ -11372,7 +11482,7 @@ msgid "Linked accounts"
 msgstr "Gekoppelde accounts"
 
 #: app/assets/javascripts/app/controllers/_profile/linked_accounts.coffee:76
-#: app/frontend/shared/composables/authentication/useThirdPartyAuthentication.ts:32
+#: app/frontend/shared/composables/authentication/useThirdPartyAuthentication.ts:49
 #: db/seeds/settings.rb:1542
 msgid "LinkedIn"
 msgstr "LinkedIn"
@@ -11427,7 +11537,7 @@ msgstr "Meer laden"
 msgid "Loading content"
 msgstr "Content laden"
 
-#: app/views/init/spinner-loading.html.erb:257
+#: app/views/init/spinner-loading.html.erb:264
 msgid "Loading failed, please try again later."
 msgstr "Laden mislukt, probeer het later opnieuw."
 
@@ -11451,7 +11561,7 @@ msgstr "Laden mislukt."
 #: app/frontend/apps/desktop/components/Form/fields/FieldEditor/FieldEditorSuggestionList.vue:65
 #: app/frontend/apps/mobile/components/Form/fields/FieldEditor/FieldEditorSuggestionList.vue:52
 #: app/frontend/shared/form/i18n/locales.ts:57
-#: app/views/init/spinner-loading.html.erb:254
+#: app/views/init/spinner-loading.html.erb:261
 msgid "Loading…"
 msgstr "Bezig met laden…"
 
@@ -11534,10 +11644,8 @@ msgid "Lost Password"
 msgstr "Wachtwoord vergeten"
 
 #: app/frontend/apps/desktop/components/ConnectionLostDialog/ConnectionLostDialog.vue:10
-#, fuzzy
-#| msgid "Lost network connection!"
 msgid "Lost network connection"
-msgstr "Netwerkverbinding verbroken!"
+msgstr "Netwerkverbinding verbroken"
 
 #: app/assets/javascripts/app/lib/app_post/websocket.coffee:351
 msgid "Lost network connection!"
@@ -12217,7 +12325,7 @@ msgid "Method (AJAX endpoint)"
 msgstr "Methode (AJAX endpoint)"
 
 #: app/assets/javascripts/app/controllers/_profile/linked_accounts.coffee:91
-#: app/frontend/shared/composables/authentication/useThirdPartyAuthentication.ts:53
+#: app/frontend/shared/composables/authentication/useThirdPartyAuthentication.ts:70
 #: db/seeds/settings.rb:1744
 msgid "Microsoft"
 msgstr "Microsoft"
@@ -12230,19 +12338,15 @@ msgstr "Microsoft 365 App Credentials"
 #: app/assets/javascripts/app/views/microsoft_graph/index.jst.eco:4
 #: app/assets/javascripts/app/views/microsoft_graph/list.jst.eco:3
 #: db/seeds/permissions.rb:161
-#, fuzzy
-#| msgid "Microsoft 365"
 msgid "Microsoft 365 Graph Email"
-msgstr "Microsoft 365"
+msgstr "Microsoft 365 Graph Email"
 
 #: app/assets/javascripts/app/controllers/_channel/microsoft365.coffee:3
 #: app/assets/javascripts/app/views/microsoft365/index.jst.eco:3
 #: app/assets/javascripts/app/views/microsoft365/list.jst.eco:3
 #: db/seeds/permissions.rb:155
-#, fuzzy
-#| msgid "Microsoft 365"
 msgid "Microsoft 365 IMAP Email"
-msgstr "Microsoft 365"
+msgstr "Microsoft 365 IMAP Email"
 
 #: db/seeds/settings.rb:1745
 msgid "Microsoft Application Registration Portal"
@@ -12340,7 +12444,7 @@ msgstr "Mobiel"
 msgid "Mode"
 msgstr "Modus"
 
-#: app/assets/javascripts/app/controllers/_ai/provider.coffee:143
+#: app/assets/javascripts/app/controllers/_ai/provider.coffee:188
 #, fuzzy
 #| msgid "Mode"
 msgid "Model"
@@ -12397,7 +12501,7 @@ msgstr "Stemming"
 msgid "More information can be found here."
 msgstr "Meer informatie is hier te vinden."
 
-#: app/models/user.rb:688
+#: app/models/user.rb:691
 msgid "More than 250 secondary organizations are not allowed."
 msgstr "Meer dan 250 secundaire organisaties zijn niet toegestaan."
 
@@ -12502,7 +12606,7 @@ msgstr "Nagios integratie"
 #: app/assets/javascripts/app/controllers/_ui_element/object_attribute_options_context.coffee:21
 #: app/assets/javascripts/app/controllers/chat.coffee:559
 #: app/assets/javascripts/app/controllers/widget/two_factor_configuration/modal/security_keys.coffee:58
-#: app/assets/javascripts/app/models/_application_model.coffee:158
+#: app/assets/javascripts/app/models/_application_model.coffee:160
 #: app/assets/javascripts/app/models/ai_agent.coffee:6
 #: app/assets/javascripts/app/models/ai_text_tool.coffee:6
 #: app/assets/javascripts/app/models/application.coffee:7
@@ -12624,17 +12728,13 @@ msgstr "Session_id nodig."
 msgid "Need user_id or organization_id as param"
 msgstr "User_id of Organization_id nodig als parameter"
 
-#: db/seeds/settings.rb:2193
-msgid "Needed"
-msgstr "Nodig"
-
 #: app/frontend/apps/desktop/components/CommonAIFeedback/CommonAIFeedback.vue:95
 #, fuzzy
 #| msgid "Feedback"
 msgid "Negative feedback"
 msgstr "Feedback"
 
-#: app/controllers/sessions_controller.rb:56
+#: app/controllers/sessions_controller.rb:58
 msgid ""
 "Neither an SSO environment variable 'REMOTE_USER' nor a 'X-Forwarded-User' "
 "header could be found."
@@ -12933,10 +13033,8 @@ msgstr "Nieuw ticket: %s"
 
 #: app/frontend/apps/desktop/entities/user/composables/useUserCreate.ts:69
 #: app/frontend/apps/desktop/pages/organization/components/OrganizationDetailTopBar/actions/newUser.ts:13
-#, fuzzy
-#| msgid "New user?"
 msgid "New user"
-msgstr "Nieuwe gebruiker?"
+msgstr "Nieuwe gebruiker"
 
 #: app/frontend/apps/desktop/pages/authentication/views/Login.vue:224
 #: app/frontend/apps/mobile/pages/authentication/components/LoginCredentialsForm.vue:144
@@ -12973,10 +13071,8 @@ msgid "Next month"
 msgstr "Volgende maand"
 
 #: app/assets/javascripts/app/views/generic/table_pager.jst.eco:20
-#, fuzzy
-#| msgid "Next State"
 msgid "Next page"
-msgstr "Volgende Status"
+msgstr "Volgende pagina"
 
 #: app/frontend/shared/components/Form/fields/FieldDate/useDateTime.ts:90
 msgid "Next year"
@@ -13059,10 +13155,8 @@ msgid "No Microsoft 365 app configured!"
 msgstr "Geen Microsoft 365-app geconfigureerd!"
 
 #: lib/external_credential/microsoft_graph.rb:9
-#, fuzzy
-#| msgid "No Microsoft 365 app configured!"
 msgid "No Microsoft Graph app configured!"
-msgstr "Geen Microsoft 365-app geconfigureerd!"
+msgstr "Geen Microsoft Graph-app geconfigureerd!"
 
 #: db/seeds/settings.rb:577
 msgid "No Proxy"
@@ -13190,10 +13284,8 @@ msgid "No linked issues"
 msgstr "Geen gekoppelde tickets"
 
 #: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarInformation/TicketSidebarInformationContent/TicketLinks.vue:153
-#, fuzzy
-#| msgid "No tags added yet."
 msgid "No links added yet."
-msgstr "Nog geen tags toegevoegd."
+msgstr "Nog geen links toegevoegd."
 
 #: app/assets/javascripts/app/views/ticket_overview/batch_overlay_macro.jst.eco:4
 msgid "No macros available."
@@ -13223,10 +13315,8 @@ msgid "No proxy for the following hosts."
 msgstr "Geen Proxy voor de volgende hosts."
 
 #: app/frontend/apps/mobile/pages/search/views/SearchOverview.vue:260
-#, fuzzy
-#| msgid "No previous searches"
 msgid "No recent searches"
-msgstr "Geen voorgaande zoekopdrachten"
+msgstr "Geen recente zoekopdrachten"
 
 #: lib/whatsapp/webhook/message/reaction.rb:13
 msgid "No related article found to process the reaction message on."
@@ -13242,7 +13332,7 @@ msgstr "Geen gerelateerd artikel gevonden om de statusmelding op te verwerken."
 msgid "No results for this query."
 msgstr "Geen resultaten gevonden"
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:715
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:716
 #: app/frontend/apps/desktop/components/CommonSelect/CommonSelect.vue:305
 #: app/frontend/apps/desktop/components/CommonSimpleEntityList/plugins/ticket.ts:8
 #: app/frontend/apps/desktop/components/Form/fields/FieldEditor/FieldEditorSuggestionList.vue:66
@@ -13304,10 +13394,8 @@ msgid "No template created yet."
 msgstr "Er is nog geen sjabloon gemaakt."
 
 #: app/frontend/apps/desktop/pages/ticket-overviews/components/TicketList.vue:426
-#, fuzzy
-#| msgid "Match tickets in following states"
 msgid "No tickets in this state."
-msgstr "Match tickets met de volgende statussen"
+msgstr "Geen tickets met deze status."
 
 #: app/controllers/users_controller.rb:254
 msgid "No token!"
@@ -13326,10 +13414,8 @@ msgid "No unread notifications for you. :)"
 msgstr "Je hebt geen ongelezen notificaties. :)"
 
 #: app/frontend/apps/desktop/components/layout/LayoutSidebar/LeftSidebar/LeftSidebarHeader/OnlineNotification/NotificationPopover/NotificationList.vue:22
-#, fuzzy
-#| msgid "Unread notifications"
 msgid "No unread notifications."
-msgstr "Ongelezen notificaties"
+msgstr "Geen ongelezen notificaties."
 
 #: db/seeds/settings.rb:1300
 msgid "No user creation on logon"
@@ -13615,7 +13701,7 @@ msgstr "OAuth URLs zijn:"
 msgid "OAuth2 token is expired!"
 msgstr "OAuth2-token is verlopen!"
 
-#: app/assets/javascripts/app/controllers/_ai/provider.coffee:190
+#: app/assets/javascripts/app/controllers/_ai/provider.coffee:235
 #, fuzzy
 #| msgid "Mode"
 msgid "OCR Model"
@@ -13684,10 +13770,8 @@ msgid "Object Manager Attributes"
 msgstr "Object beheerder"
 
 #: app/services/service/history/list.rb:52
-#, fuzzy
-#| msgid "Given object does not support selector"
 msgid "Object does not support history"
-msgstr "Het gegeven object ondersteunt geen selector"
+msgstr "Het gegeven object ondersteunt geen geschiedenis"
 
 #: app/frontend/apps/desktop/components/layout/LayoutTaskbarTabContent.vue:73
 #, fuzzy
@@ -13727,7 +13811,7 @@ msgstr "Ok"
 msgid "Ollama"
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_action/email_reply.coffee:437
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_action/email_reply.coffee:496
 #: app/frontend/shared/entities/ticket-article/action/plugins/email/selection.ts:29
 msgid "On %s, %s wrote:"
 msgstr "Op %s schreef %s:"
@@ -13773,7 +13857,7 @@ msgstr "Online Service"
 msgid "Only %s attachment allowed"
 msgstr "Alleen %s bijlage toegestaan"
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:859
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:871
 msgid "Only %s attachment allowed."
 msgstr "Alleen %s bijlage toegestaan."
 
@@ -13955,7 +14039,7 @@ msgid "OpenAI"
 msgstr "Open"
 
 #: app/assets/javascripts/app/controllers/_profile/linked_accounts.coffee:116
-#: app/frontend/shared/composables/authentication/useThirdPartyAuthentication.ts:90
+#: app/frontend/shared/composables/authentication/useThirdPartyAuthentication.ts:107
 #: db/seeds/settings.rb:2037
 #, fuzzy
 #| msgid "Connect"
@@ -14007,8 +14091,8 @@ msgstr "Of migreer van een ander systeem"
 msgid "Or migrate from another system."
 msgstr "Of migreer van een ander systeem."
 
-#: app/frontend/apps/desktop/pages/authentication/components/LoginThirdParty.vue:22
-#: app/frontend/apps/mobile/pages/authentication/components/LoginThirdParty.vue:22
+#: app/frontend/apps/desktop/pages/authentication/components/LoginThirdParty.vue:19
+#: app/frontend/apps/mobile/pages/authentication/components/LoginThirdParty.vue:19
 msgid "Or sign in using"
 msgstr "Of login met"
 
@@ -14270,7 +14354,7 @@ msgstr "Gebruikersmenu"
 #: app/assets/javascripts/app/controllers/overview.coffee:3
 #: app/assets/javascripts/app/models/group.coffee:47
 #: app/assets/javascripts/app/models/user_overview_sorting.coffee:7
-#: app/frontend/apps/desktop/components/Form/fields/FieldGroupPermissions/FieldGroupPermissionsInput.vue:51
+#: app/frontend/apps/desktop/components/Form/fields/FieldGroupPermissions/FieldGroupPermissionsInput.vue:50
 msgid "Overview"
 msgstr "Overzicht"
 
@@ -14462,7 +14546,7 @@ msgstr "Wachtwoord login"
 
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingPassword.vue:32
 msgid "Password change has been disabled by the administrator."
-msgstr ""
+msgstr "Wachtwoord wijzigen is uitgeschakeld door de beheerder."
 
 #: app/assets/javascripts/app/controllers/_profile/password.coffee:125
 msgid "Password changed successfully!"
@@ -14702,6 +14786,8 @@ msgid ""
 "Please add an account with a different mailbox or consider removing the "
 "duplicate first."
 msgstr ""
+"Voeg een account toe met een andere mailbox of overweeg eerst het duplicaat "
+"te verwijderen."
 
 #: app/assets/javascripts/app/controllers/checklist_template.coffee:56
 msgid "Please add at least one item to the checklist."
@@ -14746,7 +14832,7 @@ msgstr ""
 "Schakel de functie execution_time in om deze te gebruiken (momenteel alleen "
 "toegestaan voor triggers en taakplanners)"
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:376
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:383
 msgid "Please enter a text."
 msgstr "Voer een tekst in."
 
@@ -14803,7 +14889,7 @@ msgstr ""
 msgid "Please proceed to login"
 msgstr "Ga verder met inloggen"
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_action/email_reply.coffee:407
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_action/email_reply.coffee:466
 msgid "Please provide a recipient in \"TO\" or \"CC\"."
 msgstr "Ontvanger nodig in \"TO\" of \"CC\"."
 
@@ -14844,10 +14930,8 @@ msgid "Please select at least one ticket overview"
 msgstr "Selecteer ten minste één ticketoverzicht"
 
 #: app/frontend/shared/components/Form/fields/FieldEditor/features/ai-assistant-text-tools/AiAssistantTextTools/AiAssistantTextTools.vue:84
-#, fuzzy
-#| msgid "Please fill also some text in!"
 msgid "Please select some text first."
-msgstr "Vult u alstublieft wat tekst in!"
+msgstr "Vult u alstublieft wat tekst in."
 
 #: app/assets/javascripts/app/views/integration/exchange.jst.eco:5
 msgid ""
@@ -14856,6 +14940,10 @@ msgid ""
 msgstr ""
 "Selecteer de authenticatiemethode die moet worden gebruikt om de verbinding "
 "met de Exchange-server tot stand te brengen."
+
+#: app/assets/javascripts/app/controllers/_ai/provider.coffee:54
+msgid "Please set up the provider before proceeding under the settings tab."
+msgstr ""
 
 #: app/assets/javascripts/app/views/microsoft365/user_mismatch.jst.eco:4
 msgid ""
@@ -14872,7 +14960,7 @@ msgstr "Gebruik de opgegeven URL."
 
 #: app/frontend/apps/desktop/components/CommonSkeleton/CommonSkeleton.vue:30
 msgid "Please wait until content is loaded"
-msgstr ""
+msgstr "Even wachten tot de inhoud is geladen"
 
 #: app/assets/javascripts/app/views/exchange/admin_consent.jst.eco:3
 #: app/assets/javascripts/app/views/microsoft365/admin_consent.jst.eco:3
@@ -15135,6 +15223,8 @@ msgid ""
 "Proof Key for Code Exchange is currently only supporting SHA256 as code "
 "challenge method."
 msgstr ""
+"Proof Key voor Code Exchange ondersteunt momenteel alleen SHA256 als code-"
+"uitdagingsmethode."
 
 #: app/assets/javascripts/app/views/channel/email_account_overview.jst.eco:76
 msgid "Protocol"
@@ -15213,7 +15303,7 @@ msgstr "Publieke link"
 msgid "Public Links"
 msgstr "Publieke links"
 
-#: app/assets/javascripts/app/controllers/_manage/knowledge_base.coffee:113
+#: app/assets/javascripts/app/controllers/_manage/knowledge_base.coffee:120
 #: app/assets/javascripts/app/views/knowledge_base/public_menu_manager.jst.eco:2
 msgid "Public Menu"
 msgstr "Publiekelijk Menu"
@@ -15293,7 +15383,7 @@ msgid "Reacted with %s to message %s from %s"
 msgstr "reageerde met een %s op bericht van %s '%s'"
 
 #: app/assets/javascripts/app/models/group.coffee:44
-#: app/frontend/apps/desktop/components/Form/fields/FieldGroupPermissions/FieldGroupPermissionsInput.vue:39
+#: app/frontend/apps/desktop/components/Form/fields/FieldGroupPermissions/FieldGroupPermissionsInput.vue:38
 msgid "Read"
 msgstr "Lezen"
 
@@ -15309,7 +15399,7 @@ msgstr "Real-time"
 msgid "Reason for absence"
 msgstr "Reden voor afwezigheid"
 
-#: app/frontend/apps/desktop/components/BetaUi/FeedbackDialog/SwitchBackFeedbackDialog.vue:78
+#: app/frontend/apps/desktop/components/BetaUi/FeedbackDialog/SwitchBackFeedbackDialog.vue:80
 msgid "Reason to switch back"
 msgstr ""
 
@@ -15385,7 +15475,7 @@ msgstr "Onlangs bekeken"
 msgid "Recently closed items were cleared successfully."
 msgstr "Ticket is succesvol aangemaakt."
 
-#: app/assets/javascripts/app/controllers/_plugin/navigation.coffee:525
+#: app/assets/javascripts/app/controllers/_plugin/navigation.coffee:526
 msgid "Recently viewed"
 msgstr "Onlangs bekeken"
 
@@ -15400,7 +15490,7 @@ msgstr "Recent Bekeken Tickets"
 msgid "Recipient"
 msgstr "Ontvanger"
 
-#: app/assets/javascripts/app/controllers/_ai/provider.coffee:181
+#: app/assets/javascripts/app/controllers/_ai/provider.coffee:226
 msgid "Recognize image text (OCR)"
 msgstr ""
 
@@ -15560,7 +15650,7 @@ msgstr "Remote"
 #: app/assets/javascripts/app/views/object_manager/attribute/select.jst.eco:25
 #: app/assets/javascripts/app/views/profile/devices.jst.eco:15
 #: app/assets/javascripts/app/views/profile/password.jst.eco:81
-#: app/frontend/apps/desktop/components/Form/fields/FieldGroupPermissions/FieldGroupPermissionsInput.vue:255
+#: app/frontend/apps/desktop/components/Form/fields/FieldGroupPermissions/FieldGroupPermissionsInput.vue:254
 #: app/frontend/apps/desktop/components/TwoFactor/TwoFactorConfiguration/TwoFactorConfigurationPasswordCheck.vue:59
 #: app/frontend/apps/desktop/components/TwoFactor/TwoFactorConfiguration/TwoFactorConfigurationSecurityKeys.vue:147
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingTwoFactorAuth.vue:177
@@ -15802,7 +15892,7 @@ msgstr "Vereiste parameter 'profiel' ontbreekt."
 msgid "Requirements"
 msgstr "Verplichtingen"
 
-#: db/seeds/settings.rb:5936
+#: db/seeds/settings.rb:5960
 msgid ""
 "Requires the setup of the two-factor authentication for certain user roles."
 msgstr ""
@@ -15996,10 +16086,8 @@ msgid "Restrict to only the following users"
 msgstr "Beperk to slechts de volgende gebruikers"
 
 #: app/assets/javascripts/app/views/generic/text_tools_modal.jst.eco:17
-#, fuzzy
-#| msgid "Result:"
 msgid "Result"
-msgstr "Resultaat:"
+msgstr "Resultaat"
 
 #: app/models/ai/agent/type/custom_ai_agent.rb:43
 #, fuzzy
@@ -16048,7 +16136,7 @@ msgstr ""
 msgid "Rewrite complex section and make it easy to understand"
 msgstr ""
 
-#: db/seeds/settings.rb:6142
+#: db/seeds/settings.rb:6166
 msgid "Richtext Bubble Menu"
 msgstr ""
 
@@ -16155,7 +16243,7 @@ msgid "S/MIME integration"
 msgstr "S/MIME integratie"
 
 #: app/assets/javascripts/app/controllers/_profile/linked_accounts.coffee:106
-#: app/frontend/shared/composables/authentication/useThirdPartyAuthentication.ts:74
+#: app/frontend/shared/composables/authentication/useThirdPartyAuthentication.ts:91
 #: db/seeds/settings.rb:1879
 msgid "SAML"
 msgstr "SAML"
@@ -16249,10 +16337,14 @@ msgid "SSL/STARTTLS"
 msgstr "SSL/STARTTLS"
 
 #: app/assets/javascripts/app/controllers/_profile/linked_accounts.coffee:111
-#: app/frontend/shared/composables/authentication/useThirdPartyAuthentication.ts:81
+#: app/frontend/shared/composables/authentication/useThirdPartyAuthentication.ts:98
 #: db/seeds/settings.rb:5805
 msgid "SSO"
 msgstr "SSO"
+
+#: app/controllers/sessions_controller.rb:262
+msgid "SSO request from untrusted IP address."
+msgstr ""
 
 #: app/assets/javascripts/app/controllers/_channel/email.coffee:419
 #: app/assets/javascripts/app/controllers/_integration/ldap.coffee:206
@@ -16366,7 +16458,7 @@ msgstr "Opgeslagen voorwaarden"
 #: app/assets/javascripts/app/controllers/_integration/github.coffee:63
 #: app/assets/javascripts/app/controllers/_integration/gitlab.coffee:80
 #: app/assets/javascripts/app/controllers/_integration/idoit.coffee:93
-#: app/assets/javascripts/app/controllers/ticket_zoom.coffee:1211
+#: app/assets/javascripts/app/controllers/ticket_zoom.coffee:1209
 msgid "Saving failed."
 msgstr "Opslaan mislukt."
 
@@ -16447,6 +16539,12 @@ msgstr "Zoek URL is ongeldig."
 #: lib/external_data_source/errors.rb:34
 msgid "Search URL is missing."
 msgstr "Zoek URL ontbreekt."
+
+#: lib/external_data_source/errors.rb:46
+#, fuzzy
+#| msgid "Search URL is invalid."
+msgid "Search URL is unsafe."
+msgstr "Zoek URL is ongeldig."
 
 #: app/frontend/apps/desktop/pages/organization/components/OrganizationDetailViewContent.vue:145
 #: app/frontend/apps/desktop/pages/organization/components/OrganizationRelatedTickets/OrganizationTicketList.vue:100
@@ -16596,7 +16694,7 @@ msgstr "Zoek naar gebruiker of e-mailadres…"
 msgid "Search or enter phone number…"
 msgstr "Zoek naar of voer een telefoonnummer in…"
 
-#: lib/external_data_source/errors.rb:108
+#: lib/external_data_source/errors.rb:114
 msgid ""
 "Search result label is not a string, a number or a boolean. Please provide "
 "search result label key."
@@ -16608,13 +16706,13 @@ msgstr ""
 msgid "Search result label key"
 msgstr "Labelsleutel zoekresultaat"
 
-#: lib/external_data_source/errors.rb:111
+#: lib/external_data_source/errors.rb:117
 msgid "Search result label key \"%s\" is not a string, number or boolean."
 msgstr ""
 "De labelsleutel van het zoekresultaat \"%s\" is geen tekenreeks, getal of "
 "booleaan."
 
-#: lib/external_data_source/errors.rb:101
+#: lib/external_data_source/errors.rb:107
 msgid "Search result label key \"%s\" was not found."
 msgstr "Zoekresultaat labelsleutel \"%s\" is niet gevonden."
 
@@ -16622,7 +16720,7 @@ msgstr "Zoekresultaat labelsleutel \"%s\" is niet gevonden."
 msgid "Search result list"
 msgstr "Lijst met zoekresultaten"
 
-#: lib/external_data_source/errors.rb:76
+#: lib/external_data_source/errors.rb:82
 msgid ""
 "Search result list is not an array. Please provide search result list key."
 msgstr ""
@@ -16633,11 +16731,11 @@ msgstr ""
 msgid "Search result list key"
 msgstr "Lijst met zoekresultaten sleutel"
 
-#: lib/external_data_source/errors.rb:79
+#: lib/external_data_source/errors.rb:85
 msgid "Search result list key \"%s\" is not an array."
 msgstr "Zoekresultatenlijst sleutel \"%s\" is geen array."
 
-#: lib/external_data_source/errors.rb:69
+#: lib/external_data_source/errors.rb:75
 msgid "Search result list key \"%s\" was not found."
 msgstr "Zoekresultatenlijst sleutel \"%s\" is niet gevonden."
 
@@ -16645,7 +16743,7 @@ msgstr "Zoekresultatenlijst sleutel \"%s\" is niet gevonden."
 msgid "Search result response"
 msgstr "Antwoord zoekresultaat"
 
-#: lib/external_data_source/errors.rb:92
+#: lib/external_data_source/errors.rb:98
 msgid ""
 "Search result value is not a string, a number or a boolean. Please provide "
 "search result value key."
@@ -16657,12 +16755,12 @@ msgstr ""
 msgid "Search result value key"
 msgstr "Zoekresultaat value key"
 
-#: lib/external_data_source/errors.rb:95
+#: lib/external_data_source/errors.rb:101
 msgid "Search result value key \"%s\" is not a string, number or boolean."
 msgstr ""
 "Zoekresultaat key sleutel \"%s\" is geen tekenreeks, getal of booleaan."
 
-#: lib/external_data_source/errors.rb:85
+#: lib/external_data_source/errors.rb:91
 msgid "Search result value key \"%s\" was not found."
 msgstr "Zoekresultaat value key \"%s\" is niet gevonden."
 
@@ -16689,7 +16787,7 @@ msgstr "Zoeken…"
 msgid "Secondary organizations"
 msgstr "Secundaire organisaties"
 
-#: app/models/user.rb:676
+#: app/models/user.rb:679
 msgid ""
 "Secondary organizations are only allowed when the primary organization is "
 "given."
@@ -16697,7 +16795,7 @@ msgstr ""
 "Secundaire organisaties zijn alleen toegestaan als de primaire organisatie "
 "is opgegeven."
 
-#: app/models/user.rb:682
+#: app/models/user.rb:685
 #, fuzzy
 #| msgid ""
 #| "Secondary organizations are only allowed when the primary organization is "
@@ -16740,7 +16838,7 @@ msgstr "Veiligheidssleutel"
 
 #: app/assets/javascripts/app/controllers/widget/two_factor_configuration/modal/security_keys.coffee:4
 #: app/assets/javascripts/app/lib/app_post/two_factor_methods/security_keys.coffee:5
-#: db/seeds/settings.rb:5842
+#: db/seeds/settings.rb:5866
 msgid "Security Keys"
 msgstr "Veiligheidssleutels"
 
@@ -16989,19 +17087,19 @@ msgstr "Stuur e-mail"
 msgid "Send email: %s"
 msgstr "Stuur e-mail: %s"
 
-#: app/frontend/apps/desktop/components/BetaUi/FeedbackDialog/FeedbackDialog.vue:121
+#: app/frontend/apps/desktop/components/BetaUi/FeedbackDialog/FeedbackDialog.vue:123
 #, fuzzy
 #| msgid "Feedback"
 msgid "Send feedback"
 msgstr "Feedback"
 
-#: app/frontend/apps/desktop/components/BetaUi/FeedbackDialog/SwitchBackFeedbackDialog.vue:93
+#: app/frontend/apps/desktop/components/BetaUi/FeedbackDialog/SwitchBackFeedbackDialog.vue:95
 #, fuzzy
 #| msgid "Feedback"
 msgid "Send feedback & switch back"
 msgstr "Feedback"
 
-#: app/frontend/apps/desktop/components/BetaUi/FeedbackDialog/FeedbackDialog.vue:121
+#: app/frontend/apps/desktop/components/BetaUi/FeedbackDialog/FeedbackDialog.vue:123
 #, fuzzy
 #| msgid "Feedback"
 msgid "Send feedback on the BETA UI"
@@ -17078,6 +17176,12 @@ msgstr "Email adres"
 #: app/models/ticket/article.rb:324
 msgid "Sending an email without a valid recipient is not possible."
 msgstr "Een e-mail versturen zonder geldige ontvanger is niet mogelijk."
+
+#: app/services/service/beta_ui/send_feedback.rb:98
+#, fuzzy
+#| msgid "Loading failed, please try again later."
+msgid "Sending feedback failed, please try again later."
+msgstr "Laden mislukt, probeer het later opnieuw."
 
 #: app/assets/javascripts/app/views/widget/invite_user.jst.eco:35
 msgid "Sending…"
@@ -17281,7 +17385,7 @@ msgstr ""
 "header. Handig om de juiste klant in te stellen als e-mail wordt ontvangen "
 "van een systeem van een derde partij namens een klant."
 
-#: app/assets/javascripts/app/controllers/_ai/provider.coffee:10
+#: app/assets/javascripts/app/controllers/_ai/provider.coffee:17
 #: app/assets/javascripts/app/controllers/_channel/email.coffee:26
 #: app/assets/javascripts/app/controllers/_channel/google.coffee:26
 #: app/assets/javascripts/app/controllers/_channel/microsoft365.coffee:26
@@ -17427,7 +17531,7 @@ msgstr "Toon alles…"
 msgid "Show authenticator app secret"
 msgstr "Toon authenticator-app-geheim"
 
-#: db/seeds/settings.rb:5814
+#: db/seeds/settings.rb:5838
 msgid "Show calendar weeks in the picker of date/datetime fields"
 msgstr "Toon kalenderweken in de kiezer van datum/tijd-velden"
 
@@ -17591,8 +17695,8 @@ msgid "Sign in"
 msgstr "Inloggen"
 
 #: app/assets/javascripts/app/views/login.jst.eco:71
-#: app/frontend/apps/desktop/pages/authentication/components/LoginThirdParty.vue:22
-#: app/frontend/apps/mobile/pages/authentication/components/LoginThirdParty.vue:22
+#: app/frontend/apps/desktop/pages/authentication/components/LoginThirdParty.vue:19
+#: app/frontend/apps/mobile/pages/authentication/components/LoginThirdParty.vue:19
 msgid "Sign in using"
 msgstr "Aanmelden met"
 
@@ -17726,7 +17830,7 @@ msgstr "Site"
 #: app/assets/javascripts/app/views/channel/email_account_wizard.jst.eco:127
 #: app/assets/javascripts/app/views/getting_started/channel.jst.eco:21
 #: app/assets/javascripts/app/views/getting_started/email_notification.jst.eco:17
-#: app/frontend/apps/desktop/components/BetaUi/FeedbackDialog/FeedbackDialog.vue:131
+#: app/frontend/apps/desktop/components/BetaUi/FeedbackDialog/FeedbackDialog.vue:133
 #: app/frontend/apps/desktop/pages/guided-setup/components/GuidedSetupActionFooter.vue:94
 #: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/TimeAccountingFlyout.vue:130
 msgid "Skip"
@@ -17762,14 +17866,9 @@ msgstr ""
 "Wacht tot Zammad weer terug online is."
 
 #: app/assets/javascripts/app/controllers/_plugin/maintenance.coffee:78
-#, fuzzy
-#| msgid ""
-#| "Some system settings have changed, Zammad is restarting. Please wait "
-#| "until Zammad is back again."
 msgid "Some system settings have changed, please restart all Zammad processes!"
 msgstr ""
-"Sommige systeeminstellingen zijn gewijzigd, Zammad wordt opnieuw opgestart. "
-"Wacht tot Zammad weer terug online is."
+"Sommige systeeminstellingen zijn gewijzigd, herstart alle Zammad-processen!"
 
 #: app/frontend/shared/errors/useErrorHandler.ts:35
 msgid "Something went wrong."
@@ -17860,6 +17959,13 @@ msgstr "Begin met bewerken"
 msgid "Start and end date"
 msgstr "Begin- en einddatum"
 
+#: app/assets/javascripts/app/views/generic/calender_preview.jst.eco:11
+#: app/assets/javascripts/app/views/profile/out_of_office.jst.eco:18
+#, fuzzy
+#| msgid "Start new"
+msgid "Start date"
+msgstr "Start nieuw"
+
 #: app/frontend/apps/desktop/components/CommonInlineEdit/CommonInlineEdit.vue:67
 #, fuzzy
 #| msgid "Start Editing"
@@ -17898,6 +18004,12 @@ msgstr "Start nieuw"
 msgid "Start new conversation"
 msgstr "Nieuw gesprek starten"
 
+#: app/assets/javascripts/app/views/generic/business_hours.jst.eco:21
+#, fuzzy
+#| msgid "Start new"
+msgid "Start time"
+msgstr "Start nieuw"
+
 #: app/frontend/apps/desktop/components/Search/QuickSearch/QuickSearch.vue:231
 msgid "Start typing e.g. the name of a ticket, an organization or a user."
 msgstr ""
@@ -17919,7 +18031,7 @@ msgstr "Begin te typen om de zoekresultaten te krijgen."
 msgid "Start typing to search for text modules…"
 msgstr "Start met typen om gebruikers te zoeken…"
 
-#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:762
+#: app/assets/javascripts/app/lib/base/jquery.textmodule.js:763
 #: app/frontend/apps/desktop/components/Form/fields/FieldEditor/FieldEditorSuggestionList.vue:69
 #: app/frontend/apps/mobile/components/Form/fields/FieldEditor/FieldEditorSuggestionList.vue:56
 msgid "Start typing to search for users…"
@@ -18072,7 +18184,7 @@ msgstr "Opslagmethode"
 msgid "Store"
 msgstr "Winkel"
 
-#: db/seeds/settings.rb:6068
+#: db/seeds/settings.rb:6092
 #, fuzzy
 #| msgid "Stores the GitHub configuration."
 msgid "Stores the AI provider configuration."
@@ -18086,7 +18198,7 @@ msgstr "Slaat de GitHub-configuratie op."
 msgid "Stores the GitLab configuration."
 msgstr "Slaat de GitLab-configuratie op."
 
-#: db/seeds/settings.rb:6098
+#: db/seeds/settings.rb:6122
 msgid ""
 "Stores the ticket summarization options (e.g. which content is visible)."
 msgstr ""
@@ -18223,10 +18335,8 @@ msgstr "Beelddienst"
 
 #: app/assets/javascripts/app/views/ticket_zoom/sidebar_ticket_summary.jst.eco:53
 #: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarSummary/TicketSidebarSummaryContent.vue:139
-#, fuzzy
-#| msgid "The new ticket number could not be generated."
 msgid "Summary is being generated…"
-msgstr "Het nieuwe ticketnummer kon niet worden gegenereerd."
+msgstr "Samenvatting wordt gegenereerd…"
 
 #: app/assets/javascripts/app/models/user.coffee:336
 msgid "Summer holiday"
@@ -18518,8 +18628,8 @@ msgstr "Tekstbewerking"
 msgid "Text field"
 msgstr "Tekstveld"
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_action/email_reply.coffee:403
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:372
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_action/email_reply.coffee:462
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:379
 msgid "Text missing"
 msgstr "Tekst ontbreekt"
 
@@ -18536,7 +18646,7 @@ msgstr "Tekst modules"
 msgid "Text modules are …"
 msgstr "Tekst modules zijn…"
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_action/email_reply.coffee:421
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_action/email_reply.coffee:480
 msgid "Text needed"
 msgstr "Tekst benodigd"
 
@@ -18739,7 +18849,7 @@ msgid "The WhatsApp channel webhook configuration could not be verified."
 msgstr ""
 "De webhookconfiguratie van het WhatsApp-kanaal kon niet worden geverifieerd."
 
-#: app/assets/javascripts/app/controllers/_channel/whatsapp.coffee:156
+#: app/assets/javascripts/app/controllers/_channel/whatsapp.coffee:159
 msgid "The WhatsApp connection could not be saved."
 msgstr "De WhatsApp-verbinding kon niet worden opgeslagen."
 
@@ -19066,8 +19176,8 @@ msgid "The divider between TicketHook and ticket number. E. g. ': '."
 msgstr ""
 "Het koppelteken tussen de Ticket-hook en Ticket-nummer. Bijvoorbeeld ':'."
 
-#: app/assets/javascripts/app/controllers/_ai/provider.coffee:92
-#: app/assets/javascripts/app/lib/app_post/utils.coffee:1691
+#: app/assets/javascripts/app/controllers/_ai/provider.coffee:137
+#: app/assets/javascripts/app/lib/app_post/utils.coffee:1674
 #, fuzzy
 #| msgid "Media download failed. Please try again later."
 msgid "The download could not be started. Please try again later."
@@ -19143,7 +19253,7 @@ msgstr "Het bestand kon niet worden geupload."
 msgid "The file does not belong to the specified article."
 msgstr "Het bestand behoort niet tot de opgegeven notitie."
 
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:888
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:900
 #: app/frontend/shared/components/Form/fields/FieldFile/features/filesTypeError.ts:19
 msgid "The file type %s is not allowed."
 msgstr "Het bestandstype %s is niet toegestaan."
@@ -19166,7 +19276,7 @@ msgstr "De volgende wijzigingen worden uitgevoerd:"
 
 #: app/assets/javascripts/app/views/system_report.jst.eco:13
 msgid "The following contents are provided in the system report:"
-msgstr ""
+msgstr "Het systeemrapport bevat de volgende inhoud:"
 
 #: app/assets/javascripts/app/controllers/_application_controller/_modal.coffee:202
 msgid ""
@@ -19357,7 +19467,7 @@ msgstr "Het object kon niet worden gevonden."
 
 #: app/assets/javascripts/app/controllers/_application_controller/_modal_generic_edit.coffee:69
 #: app/assets/javascripts/app/controllers/_channel/sms.coffee:265
-#: app/assets/javascripts/app/controllers/_settings/area_switch.coffee:93
+#: app/assets/javascripts/app/controllers/_settings/area_switch.coffee:102
 #: app/assets/javascripts/app/controllers/_settings/area_ticket_number.coffee:134
 #: app/assets/javascripts/app/controllers/_settings/form.coffee:91
 #: app/assets/javascripts/app/controllers/object_manager.coffee:331
@@ -19443,7 +19553,7 @@ msgstr ""
 msgid "The product version could not be fetched."
 msgstr "De productversie kon niet worden opgehaald."
 
-#: app/models/webhook.rb:69
+#: app/models/webhook.rb:77
 #, fuzzy
 #| msgid "The provided token is invalid."
 msgid "The provided HTTP method is invalid."
@@ -19469,6 +19579,29 @@ msgstr "De verstrekte credentials zijn ongeldig."
 msgid "The provided email account is already in use."
 msgstr "De opgegeven e-mailaccount is al in gebruik."
 
+#: app/models/webhook.rb:57
+#, fuzzy
+#| msgid ""
+#| "The provided endpoint is invalid, no http or https protocol was specified."
+msgid ""
+"The provided endpoint is invalid, it could not be resolved to a safe IP "
+"address."
+msgstr ""
+"Het verstrekte endpoint is ongeldig, er is geen HTTP- of HTTPS -protocol "
+"opgegeven."
+
+#: app/models/webhook.rb:55
+#, fuzzy
+#| msgid "The provided endpoint is invalid, no hostname was specified."
+msgid "The provided endpoint is invalid, it points to a link-local IP address."
+msgstr "Het verstrekte endpoint is ongeldig, er is geen hostnaam opgegeven."
+
+#: app/models/webhook.rb:53
+#, fuzzy
+#| msgid "The provided endpoint is invalid, no hostname was specified."
+msgid "The provided endpoint is invalid, it points to a loopback IP address."
+msgstr "Het verstrekte endpoint is ongeldig, er is geen hostnaam opgegeven."
+
 #: app/models/webhook.rb:47
 msgid "The provided endpoint is invalid, no hostname was specified."
 msgstr "Het verstrekte endpoint is ongeldig, er is geen hostnaam opgegeven."
@@ -19480,7 +19613,7 @@ msgstr ""
 "Het verstrekte endpoint is ongeldig, er is geen HTTP- of HTTPS -protocol "
 "opgegeven."
 
-#: app/models/webhook.rb:49
+#: app/models/webhook.rb:51
 msgid "The provided endpoint is invalid."
 msgstr "Het verstrekte endpoint is ongeldig."
 
@@ -19492,7 +19625,7 @@ msgstr "De verstrekte vergelijkingsoperator ontbreekt of is foutief."
 msgid "The provided password is incorrect."
 msgstr "Het opgegeven wachtwoord is onjuist."
 
-#: app/models/webhook.rb:58
+#: app/models/webhook.rb:66
 msgid "The provided payload is invalid. Please check your syntax."
 msgstr "De opgegeven payload is ongeldig. Controleer uw syntaxis."
 
@@ -19507,7 +19640,7 @@ msgstr "Het verstrekte token is ongeldig."
 
 #: app/assets/javascripts/app/views/ai/missing_provider_alert.jst.eco:2
 msgid ""
-"The provider configuration is missing. Please set up the provider before "
+"The provider configuration is disabled. Please set up the provider before "
 "proceeding in |AI > Providers|."
 msgstr ""
 
@@ -19606,8 +19739,8 @@ msgstr "De vereiste parameter 'client_id' ontbreekt."
 msgid "The required parameter 'client_secret' is missing."
 msgstr "De vereiste parameter 'client_secret' ontbreekt."
 
-#: lib/external_credential/exchange.rb:43 lib/external_credential/google.rb:39
-#: lib/external_credential/microsoft_base.rb:67
+#: lib/external_credential/exchange.rb:47 lib/external_credential/google.rb:43
+#: lib/external_credential/microsoft_base.rb:71
 msgid "The required parameter 'code' is missing."
 msgstr "De vereiste parameter 'code' ontbreekt."
 
@@ -19623,7 +19756,7 @@ msgstr "De vereiste parameter 'group_id' ontbreekt."
 msgid "The required parameter 'id' is missing."
 msgstr "De vereiste parameter 'id' ontbreekt."
 
-#: lib/search_index_backend.rb:677
+#: lib/search_index_backend.rb:679
 msgid "The required parameter 'key' is missing."
 msgstr "De vereiste parameter 'key' ontbreekt."
 
@@ -19681,7 +19814,7 @@ msgstr "De vereiste parameter 'ticket_number' ontbreekt."
 msgid "The required parameter 'user_id' is missing."
 msgstr "De vereiste parameter 'user_id' ontbreekt."
 
-#: lib/search_index_backend.rb:678
+#: lib/search_index_backend.rb:680
 msgid "The required parameter 'value' is missing."
 msgstr "De vereiste parameter 'value' ontbreekt."
 
@@ -19932,7 +20065,7 @@ msgid "The two-factor authentication method \"%s\" was removed for this user."
 msgstr ""
 "De twee-factor-authenticatiemethode %s van deze gebruiker is verwijderd."
 
-#: app/controllers/sessions_controller.rb:249
+#: app/controllers/sessions_controller.rb:251
 #: app/graphql/gql/mutations/two_factor_method_initiate_authentication.rb:32
 #: app/services/service/user/two_factor/initiate_method_configuration.rb:6
 #: app/services/service/user/two_factor/verify_method_configuration.rb:15
@@ -19963,14 +20096,14 @@ msgstr "Het gebruikersaccount bestaat niet. Neem contact op met de beheerder."
 msgid "The user token could not be generated."
 msgstr "Het token voor de gebruiker kon niet worden gegenereerd."
 
-#: lib/external_credential/exchange.rb:51
-#: lib/external_credential/microsoft_base.rb:75
+#: lib/external_credential/exchange.rb:55
+#: lib/external_credential/microsoft_base.rb:79
 msgid "The user's 'preferred_username' could not be extracted from 'id_token'."
 msgstr ""
 "De 'preferred_username' van de gebruiker kan niet worden geëxtraheerd uit "
 "'id_token'."
 
-#: app/controllers/sessions_controller.rb:245
+#: app/controllers/sessions_controller.rb:247
 #: app/graphql/gql/mutations/two_factor_method_initiate_authentication.rb:27
 msgid "The username or password is incorrect."
 msgstr "De gebruikersnaam of het wachtwoord is niet correct."
@@ -20035,7 +20168,7 @@ msgstr "De overlay van de jaarplanner"
 msgid "Their tickets"
 msgstr "Hun tickets"
 
-#: app/assets/javascripts/app/controllers/_manage/knowledge_base.coffee:63
+#: app/assets/javascripts/app/controllers/_manage/knowledge_base.coffee:70
 #: app/assets/javascripts/app/views/profile/appearance.jst.eco:12
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingAppearance.vue:63
 msgid "Theme"
@@ -20067,7 +20200,7 @@ msgstr "Er zijn geen kantooruren geconfigureerd."
 
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingLinkedAccounts.vue:38
 msgid "There are no enabled third-party authentication providers."
-msgstr ""
+msgstr "Er zijn geen verificatieproviders van derden ingeschakeld."
 
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingTwoFactorAuth.vue:39
 #, fuzzy
@@ -20272,7 +20405,7 @@ msgstr ""
 "Deze klasse wordt toegevoegd aan de knop bij initialisatie en wordt "
 "verwijderd zodra de chatverbinding tot stand is gebracht."
 
-#: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingDevices.vue:153
+#: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingDevices.vue:154
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingTokenAccess.vue:206
 msgid "This device"
 msgstr "Dit apparaat"
@@ -20507,7 +20640,7 @@ msgstr ""
 #: app/frontend/apps/desktop/components/CommonSelect/CommonSelectItem.vue:69
 #: app/frontend/apps/desktop/components/Form/fields/FieldTreeSelect/FieldTreeSelectInputDropdownItem.vue:89
 msgid "This item expands to show more options"
-msgstr ""
+msgstr "Dit item is uitklapbaar om meer opties te tonen"
 
 #: app/models/channel/email_parser.rb:11
 msgid ""
@@ -20632,13 +20765,13 @@ msgstr ""
 msgid "This service allows you to connect %s with %s."
 msgstr "Met deze service kun je %s met %s verbinden."
 
-#: app/assets/javascripts/app/controllers/_ai/provider.coffee:25
+#: app/assets/javascripts/app/controllers/_ai/provider.coffee:70
 #, fuzzy
 #| msgid "This service allows you to connect %s with %s."
 msgid "This service allows you to connect Zammad with an AI provider."
 msgstr "Met deze service kun je %s met %s verbinden."
 
-#: app/assets/javascripts/app/controllers/_ai/provider.coffee:43
+#: app/assets/javascripts/app/controllers/_ai/provider.coffee:88
 msgid ""
 "This service allows you to download feedback agents provide on AI features "
 "and error details about failed AI requests."
@@ -20922,7 +21055,7 @@ msgstr "Ticketnummer via datum"
 msgid "Ticket Number ignore system_id"
 msgstr "Ticketnummer negeert system_id"
 
-#: db/seeds/settings.rb:5958
+#: db/seeds/settings.rb:5982
 msgid "Ticket Organization Reassignment"
 msgstr "Ticket Organisatie opnieuw toewijzen"
 
@@ -20990,13 +21123,13 @@ msgstr "Ticket Abonnementen"
 
 #: app/assets/javascripts/app/controllers/_ai/ticket_summary.coffee:2
 #: app/assets/javascripts/app/views/ai/ticket_summary.jst.eco:7
-#: db/seeds/permissions.rb:239 db/seeds/settings.rb:6081
+#: db/seeds/permissions.rb:239 db/seeds/settings.rb:6105
 #, fuzzy
 #| msgid "Event Summary"
 msgid "Ticket Summary"
 msgstr "Evenement Samenvatting"
 
-#: db/seeds/settings.rb:6095
+#: db/seeds/settings.rb:6119
 #, fuzzy
 #| msgid "Ticket Count"
 msgid "Ticket Summary Config"
@@ -21359,12 +21492,6 @@ msgstr "Tickets met \"%s\""
 msgid "Tickets with the same attributes were found."
 msgstr "Er werden tickets met dezelfde attributen gevonden."
 
-#: app/assets/javascripts/app/views/generic/business_hours.jst.eco:23
-#: app/assets/javascripts/app/views/generic/calender_preview.jst.eco:15
-#: app/assets/javascripts/app/views/profile/out_of_office.jst.eco:22
-msgid "Till"
-msgstr "Tot"
-
 #: app/assets/javascripts/app/views/cti/caller_log.jst.eco:39
 #: app/assets/javascripts/app/views/generic/sla_times.jst.eco:6
 msgid "Time"
@@ -21636,7 +21763,7 @@ msgstr "Toggle header rij"
 msgid "Toggle the overlay"
 msgstr "Toggle de overlay"
 
-#: app/assets/javascripts/app/controllers/_ai/provider.coffee:133
+#: app/assets/javascripts/app/controllers/_ai/provider.coffee:178
 #: app/assets/javascripts/app/controllers/api.coffee:11
 #: app/assets/javascripts/app/views/channel/sms_account_overview.jst.eco:48
 #: app/models/channel/driver/sms/massenversand.rb:44
@@ -21681,7 +21808,7 @@ msgstr "Token ongeldig!"
 
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingTokenAccess.vue:43
 msgid "Token-based API access has been disabled by the administrator."
-msgstr ""
+msgstr "Op Token gebaseerde API-toegang is uitgeschakeld door de beheerder."
 
 #: lib/user_agent.rb:240
 msgid "Too many redirections for the original URL, halting."
@@ -21818,6 +21945,10 @@ msgstr ""
 "door tijdgebeurtenissen worden uitgevoerd wanneer bepaalde tijden worden "
 "bereikt (bijvoorbeeld wachttijd, escalatie)."
 
+#: db/seeds/settings.rb:5814
+msgid "Trusted SSO Proxy IPs"
+msgstr ""
+
 #: app/assets/javascripts/app/views/widget/two_factor_login/try_another_method.jst.eco:2
 msgid "Try Another Method"
 msgstr "Probeer een andere methode"
@@ -21866,9 +21997,9 @@ msgstr "dinsdag"
 msgid "Turn chat into ticket"
 msgstr "Verander chat in ticket"
 
-#: app/views/init/index.html.erb app/views/init/spinner-loading.html.erb
+#: app/views/init/index.html.erb:41 app/views/init/spinner-loading.html.erb:272
 msgid "Turn on JavaScript to use Zammad."
-msgstr ""
+msgstr "Schakel JavaScript in om Zammad te gebruiken."
 
 #: app/assets/javascripts/app/controllers/webhook.coffee:280
 #: app/assets/javascripts/app/views/channel/email_account_wizard.jst.eco:89
@@ -21889,7 +22020,7 @@ msgstr ""
 "tijdelijk gebruikt worden. Gebruik deze optie op eigen risico!"
 
 #: app/assets/javascripts/app/controllers/_profile/linked_accounts.coffee:71
-#: app/frontend/shared/composables/authentication/useThirdPartyAuthentication.ts:25
+#: app/frontend/shared/composables/authentication/useThirdPartyAuthentication.ts:42
 #: db/seeds/settings.rb:1347
 msgid "Twitter"
 msgstr "Twitter"
@@ -22028,7 +22159,7 @@ msgstr "UID-Attribuutnaam"
 msgid "UID Field"
 msgstr "Datum veld"
 
-#: app/assets/javascripts/app/controllers/_ai/provider.coffee:153
+#: app/assets/javascripts/app/controllers/_ai/provider.coffee:198
 #: app/assets/javascripts/app/views/api.jst.eco:63
 #: app/assets/javascripts/app/views/integration/check_mk.jst.eco:12
 #: app/assets/javascripts/app/views/integration/cti.jst.eco:12
@@ -22045,17 +22176,17 @@ msgstr "URL"
 msgid "URL (AJAX endpoint)"
 msgstr "URL (AJAX endpoint)"
 
-#: app/assets/javascripts/app/controllers/_ai/provider.coffee:163
+#: app/assets/javascripts/app/controllers/_ai/provider.coffee:208
 #, fuzzy
 #| msgid "%s (option)"
 msgid "URL (Completions)"
 msgstr "%s (optie)"
 
-#: app/assets/javascripts/app/controllers/_ai/provider.coffee:172
+#: app/assets/javascripts/app/controllers/_ai/provider.coffee:217
 msgid "URL (Embeddings)"
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/_ai/provider.coffee:201
+#: app/assets/javascripts/app/controllers/_ai/provider.coffee:246
 msgid "URL (OCR)"
 msgstr ""
 
@@ -22266,13 +22397,14 @@ msgstr ""
 msgid "Update shared draft"
 msgstr "Gedeeld concept bijwerken"
 
+#: app/assets/javascripts/app/controllers/_ai/provider.coffee:347
 #: app/assets/javascripts/app/controllers/_profile/calendar_subscriptions.coffee:81
 #: app/assets/javascripts/app/controllers/_profile/language.coffee:64
 #: app/assets/javascripts/app/controllers/_profile/linked_accounts.coffee:48
 #: app/assets/javascripts/app/controllers/_profile/notification.coffee:171
 #: app/assets/javascripts/app/controllers/_profile/out_of_office.coffee:134
 #: app/assets/javascripts/app/controllers/_settings/area_logo.coffee:72
-#: app/assets/javascripts/app/controllers/_settings/area_switch.coffee:82
+#: app/assets/javascripts/app/controllers/_settings/area_switch.coffee:91
 #: app/assets/javascripts/app/controllers/_settings/area_ticket_number.coffee:123
 #: app/assets/javascripts/app/controllers/_settings/form.coffee:81
 #: app/assets/javascripts/app/controllers/maintenance.coffee:74
@@ -22280,7 +22412,7 @@ msgstr "Gedeeld concept bijwerken"
 msgid "Update successful."
 msgstr "Update succesvol."
 
-#: db/seeds/settings.rb:5970
+#: db/seeds/settings.rb:5994
 msgid "Update the most recent tickets."
 msgstr "Update de meest recente tickets."
 
@@ -22528,10 +22660,8 @@ msgid "Uploading"
 msgstr "Uploading"
 
 #: app/frontend/shared/components/Form/fields/FieldEditor/features/image-handler/ImageUploadInsideOtherEditor.vue:6
-#, fuzzy
-#| msgid "Uploading"
 msgid "Uploading…"
-msgstr "Uploading"
+msgstr "Uploading…"
 
 #: app/assets/javascripts/app/views/channel/chat.jst.eco:137
 #: app/assets/javascripts/app/views/integration/check_mk.jst.eco:3
@@ -22616,7 +22746,7 @@ msgstr "Overal gebruiken"
 msgid "Used anywhere (admin only)"
 msgstr "Wordt overal gebruikt (alleen beheerders)"
 
-#: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingDevices.vue:144
+#: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingDevices.vue:145
 #, fuzzy
 #| msgid "This device"
 msgid "Used devices"
@@ -22735,7 +22865,7 @@ msgstr "Gebruiker kon niet geüpdatet worden."
 msgid "User documentation"
 msgstr "Gebruikersnaam / e-mailadres"
 
-#: lib/external_credential/google.rb:47
+#: lib/external_credential/google.rb:51
 msgid "User email could not be extracted from 'id_token'."
 msgstr "E -mail voor gebruiker kan niet worden geëxtraheerd uit 'id_token'."
 
@@ -22749,7 +22879,7 @@ msgstr "Gebruikersfilter"
 
 #: app/frontend/shared/composables/useAvatarIndicator.ts:70
 msgid "User has no access"
-msgstr ""
+msgstr "Gebruiker heeft geen toegang"
 
 #: app/assets/javascripts/app/controllers/_integration/ldap.coffee:539
 msgid ""
@@ -23220,7 +23350,7 @@ msgid "Week(s)"
 msgstr "Week/Weken"
 
 #: app/assets/javascripts/app/controllers/_profile/linked_accounts.coffee:101
-#: app/frontend/shared/composables/authentication/useThirdPartyAuthentication.ts:67
+#: app/frontend/shared/composables/authentication/useThirdPartyAuthentication.ts:84
 #: db/seeds/settings.rb:1815
 msgid "Weibo"
 msgstr "Weibo"
@@ -23450,19 +23580,17 @@ msgid "Workflows"
 msgstr "Workflows"
 
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingNewBetaUi.vue:104
-#, fuzzy
-#| msgid "Feedback"
 msgid "Would you like to give us feedback on the BETA UI?"
-msgstr "Feedback"
+msgstr "Zou u ons feedback willen geven over de BETA UI?"
 
 #: app/assets/javascripts/app/controllers/_ai/text_tool.coffee:16
-#: db/seeds/permissions.rb:245 db/seeds/settings.rb:6114
+#: db/seeds/permissions.rb:245 db/seeds/settings.rb:6138
 #, fuzzy
 #| msgid "Waiting in %s"
 msgid "Writing Assistant"
 msgstr "Wachten in %s"
 
-#: db/seeds/settings.rb:6128
+#: db/seeds/settings.rb:6152
 #, fuzzy
 #| msgid "Waiting in %s"
 msgid "Writing Assistant Fixed Instructions"
@@ -23752,7 +23880,7 @@ msgstr "Je kunt jouw wachtwoord aanvragen"
 msgid "You can request your password here."
 msgstr "Jij kunt je wachtwoord hier aanvragen."
 
-#: app/frontend/apps/desktop/components/BetaUi/FeedbackDialog/SwitchBackFeedbackDialog.vue:87
+#: app/frontend/apps/desktop/components/BetaUi/FeedbackDialog/SwitchBackFeedbackDialog.vue:89
 msgid ""
 "You can return to the new BETA UI using the switch at the bottom of your "
 "taskbar or in your profile settings."
@@ -23948,7 +24076,7 @@ msgid "You reached the table limit of %s tickets (%s remaining)."
 msgstr "Limiet van %s toonbare tickets is bereikt (%s resterend)"
 
 #: app/assets/javascripts/app/controllers/agent_ticket_create.coffee:772
-#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:388
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_new.coffee:395
 msgid ""
 "You used %s in the text but no attachment could be found. Do you want to "
 "continue?"
@@ -24357,7 +24485,7 @@ msgstr "om"
 msgid "at least one letter is required"
 msgstr "minimaal één letter is vereist"
 
-#: app/assets/javascripts/app/lib/app_post/utils.coffee:1076
+#: app/assets/javascripts/app/lib/app_post/utils.coffee:1059
 #: app/frontend/shared/composables/form/useCheckBodyAttachmentReference.ts:9
 msgid "attachment,attached,enclosed,enclosure"
 msgstr "bijlage, bijgesloten, ingesloten"
@@ -24954,7 +25082,7 @@ msgid "in process"
 msgstr "In behandeling"
 
 #: app/assets/javascripts/app/controllers/_ui_element/active.coffee:5
-#: app/assets/javascripts/app/lib/app_post/utils.coffee:1451
+#: app/assets/javascripts/app/lib/app_post/utils.coffee:1434
 #: app/assets/javascripts/app/models/webhook.coffee:38
 #: app/assets/javascripts/app/views/generic/object_search/item_object.jst.eco:16
 #: app/assets/javascripts/app/views/generic/object_search/item_organization.jst.eco:4
@@ -25101,7 +25229,7 @@ msgstr "is de verkeerde lengte (moet %{count} tekens zijn)"
 msgid "is the wrong length (should be 1 character)"
 msgstr "is de verkeerde lengte (moet 1 teken zijn)"
 
-#: app/models/user.rb:873
+#: app/models/user.rb:876
 msgid "is too long"
 msgstr "is te lang"
 
@@ -25912,6 +26040,19 @@ msgstr "…van geheel tekstvak"
 #: app/assets/javascripts/app/views/dashboard/stats/ticket_waiting_time.jst.eco:3
 msgid "∅ Waiting time today"
 msgstr "∅ Wachttijd vandaag"
+
+#~ msgid ""
+#~ "Enables button for user authentication via %s. The button will redirect "
+#~ "to /auth/sso on user interaction."
+#~ msgstr ""
+#~ "Activeer de knop voor gebruik authenticatie via %s. De knop zal "
+#~ "doorverwijzen naar /auth/sso bij gebruikersinteractie."
+
+#~ msgid "Till"
+#~ msgstr "Tot"
+
+#~ msgid "Needed"
+#~ msgstr "Nodig"
 
 #~ msgid "admin"
 #~ msgstr "admin"
