@@ -59,8 +59,9 @@ Three layers were updated to recognize shared access:
 - `ticketSharedAccessUnshare(ticketId, userId)`
 
 **Controller policy** (`app/policies/controllers/ticket_shared_accesses_controller_policy.rb`):
-- Agents, the ticket customer, and existing shared users can share.
-- Agents, the ticket customer, and the user being unshared can remove access.
+- Only customers can share/unshare (restricted to `ticket.customer` permission).
+- The ticket owner can share with any customer and remove any shared access.
+- Shared users can only remove their own access (unshare themselves).
 
 ### Notifications
 
@@ -81,7 +82,7 @@ Three layers were updated to recognize shared access:
    - Added initial `fetch()` on widget creation so existing notifications load immediately.
 
 3. **Share button** (`app/assets/javascripts/app/controllers/ticket_zoom/sidebar_ticket.coffee`):
-   - Added "Share" action to the ticket sidebar for both agent and customer views.
+   - Added "Share" action to the ticket sidebar for customer views only.
 
 4. **Share modal** (`app/assets/javascripts/app/controllers/ticket_shared_access.coffee`):
    - New controller with user autocomplete, current shared users list, and remove functionality. Calls the REST API.

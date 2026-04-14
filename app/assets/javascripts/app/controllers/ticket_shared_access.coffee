@@ -68,10 +68,10 @@ class App.TicketSharedAccess extends App.ControllerModal
       displayName = if user then user.displayName() else "User ##{access.user_id}"
       canRemove = isTicketOwner || access.user_id is currentUser.id
       removeBtn = if canRemove
-        "<a href=\"#\" class=\"btn btn--text btn--small js-removeSharedAccess\" data-id=\"#{access.id}\" style=\"color: #e74c3c;\">#{App.i18n.translateContent('Remove')}</a>"
+        "<a href=\"#\" class=\"btn btn--text btn--small btn--danger js-removeSharedAccess\" data-id=\"#{access.id}\">#{App.i18n.translateContent('Remove')}</a>"
       else
         ''
-      html += "<li class=\"shared-user-item\" style=\"padding: 5px 0; display: flex; justify-content: space-between; align-items: center;\">
+      html += "<li class=\"shared-user-item\">
         <span>#{App.Utils.htmlEscape(displayName)}</span>
         #{removeBtn}
       </li>"
@@ -130,9 +130,13 @@ class App.TicketSharedAccess extends App.ControllerModal
         @controller.form.find('[name=customer_id]').val('')
         @controller.form.find('.token').remove()
       error: (xhr) =>
-        data = JSON.parse(xhr.responseText)
+        try
+          data = JSON.parse(xhr.responseText)
+          msg = data.error
+        catch
+          msg = null
         @notify(
           type: 'error'
-          msg:  data.error || App.i18n.translateContent('Failed to share ticket.')
+          msg:  msg || App.i18n.translateContent('Failed to share ticket.')
         )
     )
