@@ -26,6 +26,28 @@ class TicketSharedAccessesController < ApplicationController
     render json: true, status: :ok
   end
 
+  # GET /api/v1/ticket_shared_accesses/search?query=term
+  def search
+    query = params[:query].to_s.strip
+    return render json: { result: [] } if query.length < 2
+
+    users = User.where.not(id: current_user.id)
+                .where('users.firstname ILIKE :q OR users.lastname ILIKE :q OR users.email ILIKE :q', q: "%#{query}%")
+                .where(active: true)
+                .limit(10)
+
+    assets = {}
+    result = users.map do |user|
+      assets = user.assets(assets)
+      { id: user.id, type: 'User' }
+    end
+
+    render json: {
+      result:    result,
+      assets:    assets,
+    }
+  end
+
   private
 
   def ticket

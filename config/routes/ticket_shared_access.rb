@@ -2,6 +2,10 @@
 
 Zammad::Application.routes.draw do
   scope Rails.configuration.api_path do
-    resources :ticket_shared_accesses, only: %i[index create destroy]
+    resources :ticket_shared_accesses, only: %i[index create destroy] do
+      collection do
+        get :search
+      end
+    end
   end
 end

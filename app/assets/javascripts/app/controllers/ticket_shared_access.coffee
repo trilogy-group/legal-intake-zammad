@@ -19,9 +19,10 @@ class App.TicketSharedAccess extends App.ControllerModal
         display: __('Customer')
         tag: 'user_autocompletion'
         null: false
-        placeholder: __('Enter Person')
+        placeholder: __('Enter name or email')
         minLength: 2
         disableCreateObject: true
+        source: "#{App.Config.get('api_path')}/ticket_shared_accesses/search"
       }
     }
 

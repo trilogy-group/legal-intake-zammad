@@ -13,6 +13,10 @@ class Controllers::TicketSharedAccessesControllerPolicy < Controllers::Applicati
     can_unshare?
   end
 
+  def search?
+    customer_only?
+  end
+
   private
 
   def ticket
