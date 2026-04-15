@@ -1,0 +1,139 @@
+name: ecr-release
+
+on:
+  push:
+    branches:
+      - main
+      - feat/ecr-release  # For testing purposes
+
+jobs:
+  ecr-build-image:
+    strategy:
+      matrix:
+        runs-on:
+          - runner: ubuntu-24.04
+            platform: 'amd64'
+          - runner: ['self-hosted', 'arm64']
+            platform: 'arm64'
+    runs-on: ${{ matrix.runs-on.runner }}
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v6
+        with:
+            fetch-depth: 0
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}  # e.g., us-east-1
+
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v2
+
+      - name: Get short SHA
+        id: sha
+        run: echo "short=$(git rev-parse --short=7 HEAD)" >> $GITHUB_OUTPUT
+
+      - name: Get branch name
+        id: branch
+        run: echo "name=$(echo ${GITHUB_REF#refs/heads/} | sed 's/\//-/g')" >> $GITHUB_OUTPUT
+
+      - name: Set image tag
+        id: image-tag
+        run: |
+          ECR_REGISTRY="${{ steps.login-ecr.outputs.registry }}"
+          ECR_REPOSITORY="${{ secrets.ECR_REPOSITORY_NAME }}"  # e.g., legal-intake-zammad or zammad
+          TAG="${{ steps.branch.name }}-${{ steps.sha.short }}-${{ matrix.runs-on.platform }}"
+          echo "tag=${ECR_REGISTRY}/${ECR_REPOSITORY}:${TAG}" >> $GITHUB_OUTPUT
+          echo "registry=${ECR_REGISTRY}" >> $GITHUB_OUTPUT
+          echo "repository=${ECR_REPOSITORY}" >> $GITHUB_OUTPUT
+          echo "version=${TAG}" >> $GITHUB_OUTPUT
+
+      - name: Build and push
+        id: docker_build
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          build-args: |
+            COMMIT_SHA=${{ github.sha }}
+          pull: true
+          push: true
+          tags: ${{ steps.image-tag.outputs.tag }}
+          platforms: linux/${{ matrix.runs-on.platform }}
+
+      - name: Output image details
+        run: |
+          echo "Image pushed: ${{ steps.image-tag.outputs.tag }}"
+          echo "Image digest: ${{ steps.docker_build.outputs.digest }}"
+
+  ecr-create-multiarch-manifest:
+    runs-on: ubuntu-24.04
+    needs:
+      - ecr-build-image
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v6
+        with:
+            fetch-depth: 0
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v2
+
+      - name: Get short SHA
+        id: sha
+        run: echo "short=$(git rev-parse --short=7 HEAD)" >> $GITHUB_OUTPUT
+
+      - name: Get branch name
+        id: branch
+        run: echo "name=$(echo ${GITHUB_REF#refs/heads/} | sed 's/\//-/g')" >> $GITHUB_OUTPUT
+
+      - name: Set image variables
+        id: vars
+        run: |
+          ECR_REGISTRY="${{ steps.login-ecr.outputs.registry }}"
+          ECR_REPOSITORY="${{ secrets.ECR_REPOSITORY_NAME }}"
+          BASE_TAG="${{ steps.branch.name }}-${{ steps.sha.short }}"
+          
+          echo "registry=${ECR_REGISTRY}" >> $GITHUB_OUTPUT
+          echo "repository=${ECR_REPOSITORY}" >> $GITHUB_OUTPUT
+          echo "base_tag=${BASE_TAG}" >> $GITHUB_OUTPUT
+          echo "amd64_tag=${ECR_REGISTRY}/${ECR_REPOSITORY}:${BASE_TAG}-amd64" >> $GITHUB_OUTPUT
+          echo "arm64_tag=${ECR_REGISTRY}/${ECR_REPOSITORY}:${BASE_TAG}-arm64" >> $GITHUB_OUTPUT
+          echo "latest_tag=${ECR_REGISTRY}/${ECR_REPOSITORY}:latest" >> $GITHUB_OUTPUT
+
+      - name: Create and push multiarch manifest with latest tag
+        run: |
+          docker buildx imagetools create \
+            -t ${{ steps.vars.outputs.latest_tag }} \
+            ${{ steps.vars.outputs.amd64_tag }} \
+            ${{ steps.vars.outputs.arm64_tag }}
+
+      - name: Inspect latest image
+        run: |
+          docker buildx imagetools inspect ${{ steps.vars.outputs.latest_tag }}
+
+      - name: Output final tags
+        run: |
+          echo "✅ Successfully pushed images to ECR:"
+          echo "   📦 Latest (multi-arch): ${{ steps.vars.outputs.latest_tag }}"
+          echo ""
+          echo "Architecture-specific tags:"
+          echo "   🔧 AMD64: ${{ steps.vars.outputs.amd64_tag }}"
+          echo "   🔧 ARM64: ${{ steps.vars.outputs.arm64_tag }}"
