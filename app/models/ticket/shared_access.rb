@@ -78,14 +78,14 @@ class Ticket::SharedAccess < ApplicationModel
     ticket.touch # rubocop:disable Rails/SkipsModelValidations
 
     EventBuffer.add('transaction', {
-      object:     'Ticket',
-      type:       'update',
-      data:       ticket,
-      changes:    { 'shared_access_user_ids' => [nil, ticket.shared_accesses.pluck(:user_id)] },
-      id:         ticket_id,
-      user_id:    created_by_id,
-      created_at: Time.zone.now,
-    })
+                      object:     'Ticket',
+                      type:       'update',
+                      data:       ticket,
+                      changes:    { 'shared_access_user_ids' => [nil, ticket.shared_accesses.pluck(:user_id)] },
+                      id:         ticket_id,
+                      user_id:    created_by_id,
+                      created_at: Time.zone.now,
+                    })
   end
 
   def notify_shared_user

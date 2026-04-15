@@ -140,7 +140,7 @@ returns
     end
 
     Ticket.raw_selectors(overview.condition, {
-                           access:       (overview.condition.to_s.include?('ticket.mention_user_ids') || overview.condition.to_s.include?('ticket.shared_access_user_ids')) ? 'read' : 'overview',
+                           access:       overview.condition.to_s.include?('ticket.mention_user_ids') || overview.condition.to_s.include?('ticket.shared_access_user_ids') ? 'read' : 'overview',
                            current_user: user,
                            order_by:     order_clause,
                            locale:       user.preferences['locale'] || Locale.default,

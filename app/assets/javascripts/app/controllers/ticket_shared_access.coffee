@@ -41,7 +41,7 @@ class App.TicketSharedAccess extends App.ControllerModal
 
   loadSharedUsers: =>
     @ajax(
-      id:   "ticket_shared_accesses_#{@ticket_id}"
+      id:   'ticket_shared_accesses_' + @ticket_id
       type: 'GET'
       url:  "#{App.Config.get('api_path')}/ticket_shared_accesses?ticket_id=#{@ticket_id}"
       success: (data) =>
@@ -65,7 +65,7 @@ class App.TicketSharedAccess extends App.ControllerModal
     html = '<ul class="list-unstyled">'
     for access in @sharedUsers
       user = App.User.find(access.user_id)
-      displayName = if user then user.displayName() else "User ##{access.user_id}"
+      displayName = if user then user.displayName() else App.i18n.translateInline('User') + " ##{access.user_id}"
       canRemove = isTicketOwner || access.user_id is currentUser.id
       removeBtn = if canRemove
         "<a href=\"#\" class=\"btn btn--text btn--small btn--danger js-removeSharedAccess\" data-id=\"#{access.id}\">#{App.i18n.translateContent('Remove')}</a>"
@@ -86,7 +86,7 @@ class App.TicketSharedAccess extends App.ControllerModal
 
   removeSharedAccess: (accessId) =>
     @ajax(
-      id:   "ticket_shared_access_remove_#{accessId}"
+      id:   'ticket_shared_access_remove_' + accessId
       type: 'DELETE'
       url:  "#{App.Config.get('api_path')}/ticket_shared_accesses/#{accessId}?ticket_id=#{@ticket_id}"
       success: =>
