@@ -33,9 +33,12 @@ class TicketSharedAccessesController < ApplicationController
 
   # DELETE /api/v1/ticket_shared_accesses/:id
   def destroy
-    # nosemgrep: ruby.rails.security.brakeman.check-unscoped-find.check-unscoped-find
-    # This find is safe: Pundit policy's can_unshare? validates ownership before execution
-    shared_access = Ticket::SharedAccess.find(params[:id])
+    # Scope to shared accesses for tickets the user owns or has access to
+    accessible_ticket_ids = Ticket.where(customer_id: current_user.id)
+                                  .or(Ticket.joins(:shared_accesses).where(ticket_shared_accesses: { user_id: current_user.id }))
+                                  .pluck(:id)
+    
+    shared_access = Ticket::SharedAccess.where(ticket_id: accessible_ticket_ids).find(params[:id])
     shared_access.destroy!
 
     render json: true, status: :ok
@@ -72,17 +75,23 @@ class TicketSharedAccessesController < ApplicationController
   private
 
   def ticket
-    # nosemgrep: ruby.rails.security.brakeman.check-unscoped-find.check-unscoped-find
-    # This find is safe: Pundit policies (ticket_accessible?, can_share?) validate access before use
-    @ticket ||= Ticket.find(params[:ticket_id])
+    # Scope to tickets the user owns or has shared access to
+    @ticket ||= begin
+      accessible_tickets = Ticket.where(customer_id: current_user.id)
+                                 .or(Ticket.joins(:shared_accesses).where(ticket_shared_accesses: { user_id: current_user.id }))
+      accessible_tickets.find(params[:ticket_id])
+    end
   rescue ActiveRecord::RecordNotFound
     raise Exceptions::UnprocessableEntity, __('Ticket not found.')
   end
 
   def target_user
-    # nosemgrep: ruby.rails.security.brakeman.check-unscoped-find.check-unscoped-find
-    # This find is safe: User lookup for sharing is validated by Pundit policy and model validations
-    @target_user ||= User.find(params[:user_id])
+    # Scope to active customer users only
+    @target_user ||= User.joins('INNER JOIN roles_users ON roles_users.user_id = users.id')
+                         .joins('INNER JOIN roles ON roles.id = roles_users.role_id')
+                         .where('roles.name': 'Customer')
+                         .where(active: true)
+                         .find(params[:user_id])
   rescue ActiveRecord::RecordNotFound
     raise Exceptions::UnprocessableEntity, __('User not found.')
   end
