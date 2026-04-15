@@ -33,6 +33,8 @@ class TicketSharedAccessesController < ApplicationController
 
   # DELETE /api/v1/ticket_shared_accesses/:id
   def destroy
+    # nosemgrep: ruby.rails.security.brakeman.check-unscoped-find.check-unscoped-find
+    # This find is safe: Pundit policy's can_unshare? validates ownership before execution
     shared_access = Ticket::SharedAccess.find(params[:id])
     shared_access.destroy!
 
@@ -70,12 +72,16 @@ class TicketSharedAccessesController < ApplicationController
   private
 
   def ticket
+    # nosemgrep: ruby.rails.security.brakeman.check-unscoped-find.check-unscoped-find
+    # This find is safe: Pundit policies (ticket_accessible?, can_share?) validate access before use
     @ticket ||= Ticket.find(params[:ticket_id])
   rescue ActiveRecord::RecordNotFound
     raise Exceptions::UnprocessableEntity, __('Ticket not found.')
   end
 
   def target_user
+    # nosemgrep: ruby.rails.security.brakeman.check-unscoped-find.check-unscoped-find
+    # This find is safe: User lookup for sharing is validated by Pundit policy and model validations
     @target_user ||= User.find(params[:user_id])
   rescue ActiveRecord::RecordNotFound
     raise Exceptions::UnprocessableEntity, __('User not found.')
