@@ -38,7 +38,7 @@ class TicketSharedAccessesController < ApplicationController
                                   .or(Ticket.joins(:shared_accesses).where(ticket_shared_accesses: { user_id: current_user.id }))
                                   .pluck(:id)
     
-    shared_access = Ticket::SharedAccess.where(ticket_id: accessible_ticket_ids).find(params[:id])
+    shared_access = Ticket::SharedAccess.where(ticket_id: accessible_ticket_ids).find_by!(id: params[:id])
     shared_access.destroy!
 
     render json: true, status: :ok
@@ -91,7 +91,7 @@ class TicketSharedAccessesController < ApplicationController
                          .joins('INNER JOIN roles ON roles.id = roles_users.role_id')
                          .where('roles.name': 'Customer')
                          .where(active: true)
-                         .find(params[:user_id])
+                         .find_by!(id: params[:user_id])
   rescue ActiveRecord::RecordNotFound
     raise Exceptions::UnprocessableEntity, __('User not found.')
   end
