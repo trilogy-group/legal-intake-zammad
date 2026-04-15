@@ -30,6 +30,9 @@ class TicketPolicy < ApplicationPolicy
         sql.push('tickets.customer_id = ?')
         bind.push(user.id)
 
+        sql.push('tickets.id IN (SELECT ticket_id FROM ticket_shared_accesses WHERE user_id = ?)')
+        bind.push(user.id)
+
         if user.all_organization_ids.present?
           Organization.where(id: user.all_organization_ids).select(&:shared).each do |organization|
             sql.push('tickets.organization_id = ?')

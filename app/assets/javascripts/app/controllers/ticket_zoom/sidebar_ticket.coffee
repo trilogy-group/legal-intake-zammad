@@ -126,6 +126,13 @@ class SidebarTicket extends App.Controller
           name:     'customer-change'
           callback: @changeCustomer
         )
+    if @ticket.currentView() is 'customer'
+      @item.sidebarActions = @item.sidebarActions || []
+      @item.sidebarActions.push(
+        title:    __('Share')
+        name:     'ticket-share'
+        callback: @showTicketShare
+      )
     @item
 
   reload: (args) =>
@@ -218,6 +225,12 @@ class SidebarTicket extends App.Controller
 
   changeCustomer: =>
     new App.TicketCustomer(
+      ticket_id: @ticket.id
+      container: @el.closest('.content')
+    )
+
+  showTicketShare: =>
+    new App.TicketSharedAccess(
       ticket_id: @ticket.id
       container: @el.closest('.content')
     )

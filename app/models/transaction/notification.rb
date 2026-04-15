@@ -116,6 +116,33 @@ class Transaction::Notification
     end
 
     recipients_reason_by_notifications_settings(possible_recipients)
+
+    add_shared_access_recipients if @item[:type] != 'create'
+  end
+
+  def add_shared_access_recipients
+    shared_users = Ticket::SharedAccess.where(ticket_id: ticket.id).includes(:user).map(&:user)
+    already_added_ids = @recipients_and_channels.map { |r| r[:user].id }.to_set
+
+    shared_users.each do |shared_user|
+      next if already_added_ids.include?(shared_user.id)
+      next if !shared_user.active?
+
+      # Check user's notification preferences
+      result = NotificationFactory::Mailer.notification_settings(shared_user, ticket, @item[:type])
+
+      # If no preferences configured, default to allowing notifications
+      # (shared access is an explicit opt-in, so notifications are expected)
+      if !result
+        result = {
+          user:     shared_user,
+          channels: { 'online' => true, 'email' => true },
+        }
+      end
+
+      @recipients_and_channels.push(result)
+      @recipients_reason[shared_user.id] = __('You are receiving this because this ticket was shared with you.')
+    end
   end
 
   def recipients_reason_by_notifications_settings(possible_recipients)

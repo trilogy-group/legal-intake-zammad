@@ -95,12 +95,17 @@ class TicketPolicy < ApplicationPolicy
   def customer_access?
     return false if !user.permissions?('ticket.customer')
     return customer_field_scope if customer?
+    return customer_field_scope if shared_access?
 
     shared_organization?
   end
 
   def customer?
     record.customer_id == user.id
+  end
+
+  def shared_access?
+    Ticket::SharedAccess.shared_with?(record, user)
   end
 
   def shared_organization?

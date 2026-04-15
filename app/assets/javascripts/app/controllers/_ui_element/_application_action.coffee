@@ -510,6 +510,7 @@ class App.UiElement.ApplicationAction
       'article_last_sender': __('Sender of last article')
       'ticket_owner': __('Owner')
       'ticket_customer': __('Customer')
+      'ticket_shared_access_users': __('Shared Access Users')
       # Small workaround to avoid complicated code changes for placeholder support.
       'ticket_agents': App.i18n.translatePlain('Agents with "%s" permission', App.i18n.translatePlain('Full'))
     }

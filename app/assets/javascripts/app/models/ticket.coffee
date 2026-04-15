@@ -209,6 +209,7 @@ class App.Ticket extends App.Model
   editableByCustomer: (user) ->
     return false if @currentView() != 'customer'
     return true  if @userIsCustomer()
+    return true  if @shared_access_user_ids && _.include(@shared_access_user_ids, user.id)
 
     user.allOrganizationIds().includes(@organization_id)
 

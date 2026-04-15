@@ -54,6 +54,7 @@ class ObjectManager::Element::Ticket < ObjectManager::Element::Backend
   def customer_record_access?
     return false if !customer?
     return true if record.customer == user
+    return true if Ticket::SharedAccess.shared_with?(record, user)
 
     shared_organization_record_access?
   end

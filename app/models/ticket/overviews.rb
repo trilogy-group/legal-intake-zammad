@@ -86,7 +86,7 @@ returns
     overviews.map do |overview|
       db_query_params = _db_query_params(overview, user)
 
-      scope = if overview.condition['ticket.mention_user_ids'].present?
+      scope = if overview.condition['ticket.mention_user_ids'].present? || overview.condition['ticket.shared_access_user_ids'].present?
                 user_scopes[:read]
               else
                 user_scopes[:overview]
@@ -140,7 +140,7 @@ returns
     end
 
     Ticket.raw_selectors(overview.condition, {
-                           access:       overview.condition.to_s.include?('ticket.mention_user_ids') ? 'read' : 'overview',
+                           access:       (overview.condition.to_s.include?('ticket.mention_user_ids') || overview.condition.to_s.include?('ticket.shared_access_user_ids')) ? 'read' : 'overview',
                            current_user: user,
                            order_by:     order_clause,
                            locale:       user.preferences['locale'] || Locale.default,

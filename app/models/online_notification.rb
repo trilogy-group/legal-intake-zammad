@@ -131,9 +131,11 @@ return online notifications of an user.
 
     relation
       .joins("LEFT JOIN tickets ON online_notifications.object_lookup_id = #{ActiveRecord::Base.connection.quote(object_id)} AND tickets.id = online_notifications.o_id")
-      .where('online_notifications.object_lookup_id != :object_id OR (online_notifications.object_lookup_id = :object_id AND tickets.group_id IN (:group_ids))',
+      .joins("LEFT JOIN ticket_shared_accesses ON tickets.id = ticket_shared_accesses.ticket_id AND ticket_shared_accesses.user_id = #{ActiveRecord::Base.connection.quote(user.id)}")
+      .where('online_notifications.object_lookup_id != :object_id OR (online_notifications.object_lookup_id = :object_id AND (tickets.group_id IN (:group_ids) OR tickets.customer_id = :user_id OR ticket_shared_accesses.user_id = :user_id))',
              object_id: object_id,
-             group_ids: user.group_ids_access(access))
+             group_ids: user.group_ids_access(access).presence || [0],
+             user_id:   user.id)
   end
 
 =begin

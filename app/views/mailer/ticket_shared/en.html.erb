@@ -1,0 +1,19 @@
+A ticket has been shared with you (#{ticket.title})
+
+<div>Hi #{recipient.firstname},</div>
+<br>
+<div>
+<b>#{shared_by.fullname}</b> has shared ticket <b>(#{config.ticket_hook}#{ticket.number})</b> with you.
+</div>
+<br>
+<div>You now have access to read and comment on this ticket.</div>
+<br>
+<div>
+Ticket: #{ticket.title}<br>
+State: #{t(ticket.state.name)}<br>
+</div>
+<br>
+<div>
+  To view the ticket, click on the following link:<br>
+  <a href="#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}" target="zammad_app">#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}</a>
+</div>

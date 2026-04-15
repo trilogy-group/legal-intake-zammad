@@ -47,6 +47,7 @@ class User < ApplicationModel
   has_many                :recent_closes,          dependent: :delete_all
   has_many                :data_privacy_tasks,     as: :deletable
   has_many                :ai_analytics_usages,    class_name: 'AI::Analytics::Usage', dependent: :destroy, inverse_of: :user
+  has_many                :ticket_shared_accesses, class_name: 'Ticket::SharedAccess', dependent: :destroy, inverse_of: :user
   belongs_to              :organization,           inverse_of: :members, optional: true
 
   before_validation :check_name, :check_email, :check_login, :ensure_password, :ensure_roles, :ensure_organizations, :ensure_different_organizations, :ensure_organizations_limit
@@ -91,7 +92,8 @@ class User < ApplicationModel
                                  :overviews,
                                  :mentions,
                                  :recent_closes,
-                                 :ai_analytics_usages
+                                 :ai_analytics_usages,
+                                 :ticket_shared_accesses
 
   activity_stream_permission 'admin.user'
 
