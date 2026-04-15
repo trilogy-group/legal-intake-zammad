@@ -34,8 +34,9 @@ class TicketSharedAccessesController < ApplicationController
   # DELETE /api/v1/ticket_shared_accesses/:id
   def destroy
     # Scope to shared accesses for tickets the user owns or has access to
-    accessible_ticket_ids = Ticket.where(customer_id: current_user.id)
-                                  .or(Ticket.joins(:shared_accesses).where(ticket_shared_accesses: { user_id: current_user.id }))
+    accessible_ticket_ids = Ticket.left_joins(:shared_accesses)
+                                  .where('tickets.customer_id = :user_id OR ticket_shared_accesses.user_id = :user_id', user_id: current_user.id)
+                                  .distinct
                                   .pluck(:id)
     
     shared_access = Ticket::SharedAccess.where(ticket_id: accessible_ticket_ids).find_by!(id: params[:id])
@@ -77,8 +78,9 @@ class TicketSharedAccessesController < ApplicationController
   def ticket
     # Scope to tickets the user owns or has shared access to
     @ticket ||= begin
-      accessible_tickets = Ticket.where(customer_id: current_user.id)
-                                 .or(Ticket.joins(:shared_accesses).where(ticket_shared_accesses: { user_id: current_user.id }))
+      accessible_tickets = Ticket.left_joins(:shared_accesses)
+                                 .where('tickets.customer_id = :user_id OR ticket_shared_accesses.user_id = :user_id', user_id: current_user.id)
+                                 .distinct
       accessible_tickets.find(params[:ticket_id])
     end
   rescue ActiveRecord::RecordNotFound
