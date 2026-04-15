@@ -122,7 +122,7 @@ class Transaction::Notification
 
   def add_shared_access_recipients
     shared_users = Ticket::SharedAccess.where(ticket_id: ticket.id).includes(:user).map(&:user)
-    already_added_ids = @recipients_and_channels.map { |r| r[:user].id }.to_set
+    already_added_ids = @recipients_and_channels.to_set { |r| r[:user].id }
 
     shared_users.each do |shared_user|
       next if already_added_ids.include?(shared_user.id)

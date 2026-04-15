@@ -616,8 +616,14 @@ msgstr ""
 msgid "A test ticket has been created, you can find it in your overview \"%s\" %l."
 msgstr ""
 
-#: app/models/ticket.rb:299
+#: app/models/ticket.rb:301
 msgid "A ticket cannot be merged into itself."
+msgstr ""
+
+#. This is the template file app/views/mailer/ticket_shared/en.html.erb in ERB/HTML format.
+#. Please make sure to translate it to a valid corresponding output structure.
+#: app/views/mailer/ticket_shared/en.html.erb
+msgid "A ticket has been shared with you (#{ticket.title})\n\n<div>Hi #{recipient.firstname},</div>\n<br>\n<div>\n<b>#{shared_by.fullname}</b> has shared ticket <b>(#{config.ticket_hook}#{ticket.number})</b> with you.\n</div>\n<br>\n<div>You now have access to read and comment on this ticket.</div>\n<br>\n<div>\nTicket: #{ticket.title}<br>\nState: #{t(ticket.state.name)}<br>\n</div>\n<br>\n<div>\n  To view the ticket, click on the following link:<br>\n  <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\" target=\"zammad_app\">#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}</a>\n</div>\n"
 msgstr ""
 
 #: app/assets/javascripts/app/models/ticket_priority.coffee
@@ -1465,7 +1471,7 @@ msgid "Agent idle timeout"
 msgstr ""
 
 #: app/models/role.rb:151
-#: app/models/user.rb:760
+#: app/models/user.rb:762
 msgid "Agent limit exceeded, please check your account settings."
 msgstr ""
 
@@ -1482,7 +1488,7 @@ msgstr ""
 msgid "Agents"
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:514
+#: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:515
 msgid "Agents with \"%s\" permission"
 msgstr ""
 
@@ -2059,7 +2065,7 @@ msgstr ""
 msgid "Assignment timeout in minutes if assigned agent is not working on it. Ticket will be shown as unassigend."
 msgstr ""
 
-#: app/models/user.rb:662
+#: app/models/user.rb:664
 msgid "At least one identifier (firstname, lastname, phone, mobile or email) for user is required."
 msgstr ""
 
@@ -2072,7 +2078,7 @@ msgid "At least one object must be selected."
 msgstr ""
 
 #: app/models/role.rb:128
-#: app/models/user.rb:739
+#: app/models/user.rb:741
 msgid "At least one user needs to have admin permissions."
 msgstr ""
 
@@ -3912,6 +3918,10 @@ msgstr ""
 msgid "Could not identify the channel mailbox."
 msgstr ""
 
+#: app/assets/javascripts/app/controllers/ticket_shared_access.coffee:52
+msgid "Could not load shared users."
+msgstr ""
+
 #: app/assets/javascripts/app/controllers/user/manage_two_factor.coffee:37
 msgid "Could not load the two-factor authentication configuration for this user."
 msgstr ""
@@ -4245,7 +4255,7 @@ msgstr ""
 msgid "Current Token"
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:778
+#: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:779
 #: app/assets/javascripts/app/models/ai_text_tool.coffee:20
 #: app/assets/javascripts/app/models/signature.coffee:21
 #: app/assets/javascripts/app/models/text_module.coffee:21
@@ -4281,6 +4291,10 @@ msgstr ""
 #: app/frontend/apps/mobile/components/Ticket/TicketItem.vue:35
 #: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketViewersDialog.vue:41
 msgid "Currently processing this ticket…"
+msgstr ""
+
+#: app/assets/javascripts/app/controllers/ticket_shared_access.coffee:37
+msgid "Currently shared with"
 msgstr ""
 
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingOverviews.vue:146
@@ -4328,6 +4342,7 @@ msgstr ""
 #: app/assets/javascripts/app/controllers/_ui_element/object_selector.coffee:14
 #: app/assets/javascripts/app/controllers/agent_ticket_create/sidebar_customer.coffee:8
 #: app/assets/javascripts/app/controllers/ticket_customer.coffee:9
+#: app/assets/javascripts/app/controllers/ticket_shared_access.coffee:19
 #: app/assets/javascripts/app/controllers/ticket_zoom/sidebar_customer.coffee:7
 #: app/assets/javascripts/app/controllers/widget/user.coffee:94
 #: app/assets/javascripts/app/models/ticket.coffee:8
@@ -5781,11 +5796,11 @@ msgstr ""
 msgid "Do not change email address (%s)"
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:654
+#: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:655
 msgid "Do not encrypt email"
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:640
+#: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:641
 msgid "Do not sign email"
 msgstr ""
 
@@ -6243,7 +6258,7 @@ msgstr ""
 msgid "Email address"
 msgstr ""
 
-#: app/models/user.rb:672
+#: app/models/user.rb:674
 msgid "Email address '%{email}' is already used for another user."
 msgstr ""
 
@@ -6507,11 +6522,11 @@ msgstr ""
 msgid "Encrypt"
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:655
+#: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:656
 msgid "Encrypt email (if not possible, discard notification)"
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:656
+#: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:657
 msgid "Encrypt email (if not possible, send notification anyway)"
 msgstr ""
 
@@ -6612,6 +6627,10 @@ msgstr ""
 
 #: app/frontend/apps/mobile/components/Form/fields/FieldEditor/useEditorActions.ts:301
 msgid "Enter link URL"
+msgstr ""
+
+#: app/assets/javascripts/app/controllers/ticket_shared_access.coffee:22
+msgid "Enter name or email"
 msgstr ""
 
 #: app/assets/javascripts/app/lib/app_post/two_factor_methods/recovery_codes.coffee:6
@@ -7052,6 +7071,10 @@ msgstr ""
 msgid "Failed to load content."
 msgstr ""
 
+#: app/assets/javascripts/app/controllers/ticket_shared_access.coffee:101
+msgid "Failed to remove shared access."
+msgstr ""
+
 #: app/assets/javascripts/app/controllers/_channel/google.coffee:223
 #: app/assets/javascripts/app/controllers/_channel/microsoft365.coffee:245
 msgid "Failed to roll back the migration of the channel!"
@@ -7071,6 +7094,10 @@ msgstr ""
 
 #: app/frontend/apps/desktop/components/TwoFactor/TwoFactorConfiguration/TwoFactorConfigurationAuthenticatorApp.vue:188
 msgid "Failed to set up QR code. Please try again."
+msgstr ""
+
+#: app/assets/javascripts/app/controllers/ticket_shared_access.coffee:140
+msgid "Failed to share ticket."
 msgstr ""
 
 #: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarChecklist/TicketSidebarChecklistContent.vue:141
@@ -7507,7 +7534,7 @@ msgstr ""
 msgid "Frontend"
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:514
+#: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:515
 #: app/assets/javascripts/app/models/group.coffee:48
 #: app/frontend/apps/desktop/components/Form/fields/FieldGroupPermissions/FieldGroupPermissionsInput.vue:54
 msgid "Full"
@@ -8506,6 +8533,11 @@ msgstr ""
 msgid "Inactive"
 msgstr ""
 
+#: app/controllers/ticket_shared_accesses_controller.rb:21
+#: app/graphql/gql/mutations/ticket/shared_access/share.rb:45
+msgid "Inactive users cannot be shared on tickets."
+msgstr ""
+
 #: app/assets/javascripts/app/views/channel/email_account_overview.jst.eco:60
 #: app/assets/javascripts/app/views/channel/sms_account_overview.jst.eco:13
 #: app/assets/javascripts/app/views/google/list.jst.eco:44
@@ -8853,7 +8885,7 @@ msgstr ""
 msgid "Invalid client_id received!"
 msgstr ""
 
-#: app/models/user.rb:611
+#: app/models/user.rb:613
 msgid "Invalid email '%{email}'"
 msgstr ""
 
@@ -9020,7 +9052,7 @@ msgstr ""
 msgid "It is not possible to delete your current account."
 msgstr ""
 
-#: app/models/ticket.rb:297
+#: app/models/ticket.rb:299
 msgid "It is not possible to merge into an already merged ticket."
 msgstr ""
 
@@ -9577,6 +9609,10 @@ msgstr ""
 #: app/assets/javascripts/app/controllers/widget/payload_example.coffee:34
 #: app/assets/javascripts/app/models/knowledge_base_answer_translation.coffee:51
 msgid "Loading failed."
+msgstr ""
+
+#: app/assets/javascripts/app/controllers/ticket_shared_access.coffee:38
+msgid "Loading..."
 msgstr ""
 
 #: app/assets/javascripts/app/lib/app_post/task_manager/singleton.coffee:55
@@ -10464,7 +10500,7 @@ msgstr ""
 msgid "More information can be found here."
 msgstr ""
 
-#: app/models/user.rb:691
+#: app/models/user.rb:693
 msgid "More than 250 secondary organizations are not allowed."
 msgstr ""
 
@@ -10517,7 +10553,7 @@ msgstr ""
 msgid "My Assigned Tickets"
 msgstr ""
 
-#: db/seeds/overviews.rb:239
+#: db/seeds/overviews.rb:265
 msgid "My Organization Tickets"
 msgstr ""
 
@@ -11136,7 +11172,7 @@ msgstr ""
 msgid "No file formats allowed."
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/_ui_element/_application_selector.coffee:654
+#: app/assets/javascripts/app/controllers/_ui_element/_application_selector.coffee:663
 #: app/assets/javascripts/app/controllers/_ui_element/_application_selector_expert.coffee:803
 msgid "No filter was configured."
 msgstr ""
@@ -11273,7 +11309,7 @@ msgstr ""
 msgid "No translation for this locale available"
 msgstr ""
 
-#: app/models/ticket.rb:422
+#: app/models/ticket.rb:424
 msgid "No triggers active"
 msgstr ""
 
@@ -11381,6 +11417,10 @@ msgstr ""
 
 #: lib/ai/provider/concerns/handles_response.rb:12
 msgid "Not found - resource not found"
+msgstr ""
+
+#: app/assets/javascripts/app/controllers/ticket_shared_access.coffee:58
+msgid "Not shared with anyone yet."
 msgstr ""
 
 #: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:77
@@ -12629,6 +12669,10 @@ msgstr ""
 msgid "Please select a checklist template."
 msgstr ""
 
+#: app/assets/javascripts/app/controllers/ticket_shared_access.coffee:111
+msgid "Please select a customer to share with."
+msgstr ""
+
 #: app/frontend/apps/mobile/pages/ticket/composable/useTicketsMerge.ts:55
 msgid "Please select a ticket to merge into."
 msgstr ""
@@ -13248,6 +13292,7 @@ msgstr ""
 msgid "Remote"
 msgstr ""
 
+#: app/assets/javascripts/app/controllers/ticket_shared_access.coffee:71
 #: app/assets/javascripts/app/controllers/translation.coffee:108
 #: app/assets/javascripts/app/controllers/widget/two_factor_configuration/modal/security_keys.coffee:51
 #: app/assets/javascripts/app/views/calendar/holiday_selector.jst.eco:23
@@ -14229,11 +14274,11 @@ msgstr ""
 msgid "Secondary organizations"
 msgstr ""
 
-#: app/models/user.rb:679
+#: app/models/user.rb:681
 msgid "Secondary organizations are only allowed when the primary organization is given."
 msgstr ""
 
-#: app/models/user.rb:685
+#: app/models/user.rb:687
 msgid "Secondary organizations cannot include the primary organization."
 msgstr ""
 
@@ -14777,8 +14822,29 @@ msgstr ""
 msgid "Setup finished"
 msgstr ""
 
+#: app/assets/javascripts/app/controllers/ticket_shared_access.coffee:4
+#: app/assets/javascripts/app/controllers/ticket_zoom/sidebar_ticket.coffee:132
+msgid "Share"
+msgstr ""
+
+#: app/assets/javascripts/app/controllers/ticket_shared_access.coffee:5
+msgid "Share Ticket"
+msgstr ""
+
+#: app/assets/javascripts/app/controllers/ticket_shared_access.coffee:14
+msgid "Share this ticket with another customer so they can read and comment on it."
+msgstr ""
+
 #: app/assets/javascripts/app/controllers/_integration/clearbit.coffee:66
 msgid "Shared"
+msgstr ""
+
+#: app/assets/javascripts/app/controllers/_ui_element/_application_selector.coffee:187
+msgid "Shared Access"
+msgstr ""
+
+#: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:513
+msgid "Shared Access Users"
 msgstr ""
 
 #: app/assets/javascripts/app/controllers/agent_ticket_create/sidebar_shared_draft.coffee:12
@@ -14789,6 +14855,15 @@ msgstr ""
 
 #: app/assets/javascripts/app/views/microsoft_graph/list.jst.eco:61
 msgid "Shared Mailbox"
+msgstr ""
+
+#: app/controllers/ticket_shared_accesses_controller.rb:44
+#: app/graphql/gql/mutations/ticket/shared_access/unshare.rb:23
+msgid "Shared access not found."
+msgstr ""
+
+#: app/assets/javascripts/app/controllers/ticket_shared_access.coffee:96
+msgid "Shared access removed."
 msgstr ""
 
 #: app/frontend/apps/desktop/components/CommonHistoryFlyout/utils/historyEventEntityNames.ts:8
@@ -14830,6 +14905,10 @@ msgstr ""
 #: app/assets/javascripts/app/models/organization.coffee:7
 #: db/seeds/object_manager_attributes.rb:1786
 msgid "Shared organization"
+msgstr ""
+
+#: db/seeds/overviews.rb:239
+msgid "Shared with me"
 msgstr ""
 
 #: app/assets/javascripts/app/views/ticket_zoom/attribute_bar.jst.eco:28
@@ -14993,11 +15072,11 @@ msgstr ""
 msgid "Sign"
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:641
+#: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:642
 msgid "Sign email (if not possible, discard notification)"
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:642
+#: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:643
 msgid "Sign email (if not possible, send notification anyway)"
 msgstr ""
 
@@ -17691,6 +17770,11 @@ msgstr ""
 msgid "This user has no access and will not receive notifications."
 msgstr ""
 
+#: app/controllers/ticket_shared_accesses_controller.rb:27
+#: app/graphql/gql/mutations/ticket/shared_access/share.rb:30
+msgid "This user is already shared on this ticket."
+msgstr ""
+
 #: app/assets/javascripts/app/controllers/user.coffee:15
 msgid "This user is currently blocked because of too many failed login attempts."
 msgstr ""
@@ -17909,6 +17993,11 @@ msgstr ""
 msgid "Ticket actions"
 msgstr ""
 
+#: app/controllers/ticket_shared_accesses_controller.rb:20
+#: app/graphql/gql/mutations/ticket/shared_access/share.rb:44
+msgid "Ticket can only be shared with customer users."
+msgstr ""
+
 #: app/frontend/shared/entities/ticket/composables/useTicketCreate.ts:56
 msgid "Ticket could not be created."
 msgstr ""
@@ -17956,8 +18045,16 @@ msgstr ""
 msgid "Ticket merged successfully"
 msgstr ""
 
+#: app/controllers/ticket_shared_accesses_controller.rb:83
+msgid "Ticket not found."
+msgstr ""
+
 #: app/frontend/apps/desktop/components/Form/fields/FieldTicket/FieldTicketWrapper.vue:36
 msgid "Ticket number or title"
+msgstr ""
+
+#: app/controllers/ticket_shared_accesses_controller.rb:29
+msgid "Ticket or user not found."
 msgstr ""
 
 #: app/frontend/apps/mobile/pages/home/routes.ts:28
@@ -17992,6 +18089,10 @@ msgstr ""
 
 #: app/assets/javascripts/app/controllers/_ui_element/_application_selector_expert.coffee:131
 msgid "Ticket selector contains expert conditions. If you turn off the expert mode, it can lead to data loss in your condition attributes."
+msgstr ""
+
+#: app/assets/javascripts/app/controllers/ticket_shared_access.coffee:127
+msgid "Ticket shared successfully!"
 msgstr ""
 
 #: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarInformation/TicketSidebarInformationContent/TicketTags.vue:108
@@ -19315,6 +19416,12 @@ msgstr ""
 msgid "User menu"
 msgstr ""
 
+#: app/controllers/ticket_shared_accesses_controller.rb:94
+#: app/graphql/gql/mutations/ticket/shared_access/share.rb:28
+#: app/graphql/gql/mutations/ticket/shared_access/unshare.rb:30
+msgid "User not found."
+msgstr ""
+
 #: app/assets/javascripts/app/controllers/user.coffee:123
 msgid "User successfully unlocked!"
 msgstr ""
@@ -19432,7 +19539,7 @@ msgstr ""
 msgid "Value"
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:555
+#: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:556
 msgid "Variables"
 msgstr ""
 
@@ -19529,7 +19636,7 @@ msgstr ""
 msgid "Viewing ticket"
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:703
+#: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:704
 #: app/assets/javascripts/app/controllers/knowledge_base/content_can_be_published_dialog.coffee:6
 #: app/assets/javascripts/app/controllers/widget/ticket_bulk_form.coffee:71
 #: app/assets/javascripts/app/models/ticket_article.coffee:14
@@ -19748,7 +19855,7 @@ msgstr ""
 msgid "When you turn on debugging by setting the option §debug§ to §true§ the reason gets printed to the JavaScript console."
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/_ui_element/_application_selector.coffee:679
+#: app/assets/javascripts/app/controllers/_ui_element/_application_selector.coffee:688
 msgid "Where"
 msgstr ""
 
@@ -19891,7 +19998,7 @@ msgstr ""
 
 #: app/assets/javascripts/app/controllers/_application_controller/_modal_generic_confirm.coffee:4
 #: app/assets/javascripts/app/controllers/_manage/ticket_notification.coffee:47
-#: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:614
+#: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:615
 #: app/assets/javascripts/app/controllers/tag.coffee:147
 #: app/assets/javascripts/app/controllers/ticket_shared_draft_modal.coffee:121
 #: app/assets/javascripts/app/views/integration/ldap.jst.eco:100
@@ -19917,6 +20024,14 @@ msgstr ""
 msgid "You are not authorized to open this %s."
 msgstr ""
 
+#: app/graphql/gql/mutations/ticket/shared_access/unshare.rb:39
+msgid "You are not authorized to remove shared access from this ticket."
+msgstr ""
+
+#: app/graphql/gql/mutations/ticket/shared_access/share.rb:39
+msgid "You are not authorized to share this ticket."
+msgstr ""
+
 #: public/assets/chat/views/waiting.eco:8
 msgid "You are on waiting list position <strong>%s</strong>."
 msgstr ""
@@ -19925,11 +20040,15 @@ msgstr ""
 msgid "You are part of the BETA UI feedback program."
 msgstr ""
 
-#: app/models/transaction/notification.rb:111
+#: app/models/transaction/notification.rb:121
+msgid "You are receiving this because this ticket was shared with you."
+msgstr ""
+
+#: app/models/transaction/notification.rb:136
 msgid "You are receiving this because you are a member of the group of this ticket."
 msgstr ""
 
-#: app/models/transaction/notification.rb:192
+#: app/models/transaction/notification.rb:217
 msgid "You are receiving this because you are out-of-office replacement for a participant of this ticket."
 msgstr ""
 
@@ -20081,6 +20200,11 @@ msgstr ""
 
 #: app/assets/javascripts/app/views/integration/check_mk.jst.eco:32
 msgid "You can use the following script to post the data to %s."
+msgstr ""
+
+#: app/controllers/ticket_shared_accesses_controller.rb:19
+#: app/graphql/gql/mutations/ticket/shared_access/share.rb:43
+msgid "You cannot share a ticket with yourself."
 msgstr ""
 
 #: app/assets/javascripts/app/controllers/user.coffee:150
@@ -20572,6 +20696,10 @@ msgstr ""
 msgid "cannot be a subcategory of the parent category"
 msgstr ""
 
+#: app/models/ticket/shared_access.rb:65
+msgid "cannot share ticket with its owner"
+msgstr ""
+
 #: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/article-type/plugins/chat.ts:5
 #: db/seeds/ticket_article_types.rb:5
 msgid "chat"
@@ -20668,13 +20796,13 @@ msgid "created %s"
 msgstr ""
 
 #: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:152
-#: app/assets/javascripts/app/controllers/_ui_element/_application_selector.coffee:544
+#: app/assets/javascripts/app/controllers/_ui_element/_application_selector.coffee:553
 #: app/assets/javascripts/app/controllers/_ui_element/_application_selector_expert.coffee:632
 msgid "current user"
 msgstr ""
 
 #: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:434
-#: app/assets/javascripts/app/controllers/_ui_element/_application_selector.coffee:550
+#: app/assets/javascripts/app/controllers/_ui_element/_application_selector.coffee:559
 #: app/assets/javascripts/app/controllers/_ui_element/_application_selector_expert.coffee:637
 msgid "current user organization"
 msgstr ""
@@ -21085,7 +21213,7 @@ msgstr ""
 msgid "inactive"
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:605
+#: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:606
 #: app/assets/javascripts/app/controllers/knowledge_base/content_can_be_published_form.coffee:91
 msgid "internal"
 msgstr ""
@@ -21217,7 +21345,7 @@ msgstr ""
 msgid "is the wrong length (should be 1 character)"
 msgstr ""
 
-#: app/models/user.rb:876
+#: app/models/user.rb:878
 msgid "is too long"
 msgstr ""
 
@@ -21310,7 +21438,7 @@ msgstr ""
 msgid "merged into"
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:624
+#: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:625
 msgid "message"
 msgstr ""
 
@@ -21333,6 +21461,10 @@ msgid "must be a valid path or domain"
 msgstr ""
 
 msgid "must be accepted"
+msgstr ""
+
+#: app/models/ticket/shared_access.rb:57
+msgid "must be active"
 msgstr ""
 
 msgid "must be an integer"
@@ -21373,6 +21505,10 @@ msgid "must begin with a slash (\"/\")"
 msgstr ""
 
 msgid "must exist"
+msgstr ""
+
+#: app/models/ticket/shared_access.rb:49
+msgid "must have customer permissions"
 msgstr ""
 
 #: app/models/knowledge_base.rb:240
@@ -21464,7 +21600,7 @@ msgstr ""
 msgid "not set"
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/_ui_element/_application_selector.coffee:547
+#: app/assets/javascripts/app/controllers/_ui_element/_application_selector.coffee:556
 #: app/assets/javascripts/app/controllers/_ui_element/_application_selector_expert.coffee:634
 msgid "not set (not defined)"
 msgstr ""
@@ -21545,7 +21681,7 @@ msgstr ""
 msgid "phone"
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:605
+#: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:606
 msgid "public"
 msgstr ""
 
@@ -21754,13 +21890,13 @@ msgid "spaces are not allowed"
 msgstr ""
 
 #: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:435
-#: app/assets/javascripts/app/controllers/_ui_element/_application_selector.coffee:551
+#: app/assets/javascripts/app/controllers/_ui_element/_application_selector.coffee:560
 #: app/assets/javascripts/app/controllers/_ui_element/_application_selector_expert.coffee:638
 msgid "specific organization"
 msgstr ""
 
 #: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:424
-#: app/assets/javascripts/app/controllers/_ui_element/_application_selector.coffee:545
+#: app/assets/javascripts/app/controllers/_ui_element/_application_selector.coffee:554
 #: app/assets/javascripts/app/controllers/_ui_element/_application_selector_expert.coffee:633
 msgid "specific user"
 msgstr ""

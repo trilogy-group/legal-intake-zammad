@@ -241,7 +241,7 @@ Overview.create_if_not_exists(
   prio:      1150,
   role_ids:  [overview_role.id],
   condition: {
-    'ticket.state_id'              => {
+    'ticket.state_id'               => {
       operator: 'is',
       value:    Ticket::State.by_category_ids(:viewable),
     },
