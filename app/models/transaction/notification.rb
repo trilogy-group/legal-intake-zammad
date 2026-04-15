@@ -117,7 +117,7 @@ class Transaction::Notification
 
     recipients_reason_by_notifications_settings(possible_recipients)
 
-    add_shared_access_recipients
+    add_shared_access_recipients if @item[:type] != 'create'
   end
 
   def add_shared_access_recipients

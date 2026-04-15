@@ -1,8 +1,29 @@
 /* Ticket Shared Access Modal Styles */
 
+/* Center the Share Ticket modal */
+.modal.in {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-dialog {
+  margin-left: 0%;
+  margin-right: auto;
+}
+
 .shared-user-item {
   padding: 5px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+}
+
+.shared-user-item span {
+  flex: 0 0 auto;
+}
+
+.shared-user-item .btn {
+  margin-left: auto;
 }
