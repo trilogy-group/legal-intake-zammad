@@ -45,15 +45,18 @@ jobs:
           TAG="${BRANCH_NAME}-${SHORT_SHA}-arm64"
           
           echo "tag=${ECR_REGISTRY}/${ECR_REPOSITORY}:${TAG}" >> $GITHUB_OUTPUT
-          echo "latest_tag=${ECR_REGISTRY}/${ECR_REPOSITORY}:latest" >> $GITHUB_OUTPUT
           echo "registry=${ECR_REGISTRY}" >> $GITHUB_OUTPUT
           echo "repository=${ECR_REPOSITORY}" >> $GITHUB_OUTPUT
           echo "version=${TAG}" >> $GITHUB_OUTPUT
           
           echo "Building tag: ${TAG}"
+          if [ "${BRANCH_NAME}" = "main" ]; then
+            echo "Will also tag as: latest"
+          fi
 
-      - name: Build and push
-        id: docker_build
+      - name: Build and push (main branch with latest tag)
+        if: github.ref == 'refs/heads/main'
+        id: docker_build_main
         uses: docker/build-push-action@v6
         with:
           context: .
@@ -63,16 +66,34 @@ jobs:
           push: true
           tags: |
             ${{ steps.image-tag.outputs.tag }}
-            ${{ steps.image-tag.outputs.latest_tag }}
+            ${{ steps.image-tag.outputs.registry }}/${{ steps.image-tag.outputs.repository }}:latest
+          platforms: linux/arm64
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Build and push (non-main branch, no latest tag)
+        if: github.ref != 'refs/heads/main'
+        id: docker_build_branch
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          build-args: |
+            COMMIT_SHA=${{ github.sha }}
+          pull: true
+          push: true
+          tags: ${{ steps.image-tag.outputs.tag }}
           platforms: linux/arm64
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
       - name: Output image details
         run: |
-          echo "✅ Successfully pushed ARM64 images to ECR:"
+          echo "✅ Successfully pushed ARM64 image(s) to ECR:"
           echo "   📦 Versioned: ${{ steps.image-tag.outputs.tag }}"
-          echo "   📦 Latest: ${{ steps.image-tag.outputs.latest_tag }}"
+          if [ "${{ github.ref }}" = "refs/heads/main" ]; then
+            echo "   📦 Latest: ${{ steps.image-tag.outputs.registry }}/${{ steps.image-tag.outputs.repository }}:latest"
+            echo "Image digest: ${{ steps.docker_build_main.outputs.digest }}"
+          else
+            echo "Image digest: ${{ steps.docker_build_branch.outputs.digest }}"
+          fi
           echo "   🔧 Architecture: ARM64 (for t4g Graviton instances)"
-          echo ""
-          echo "Image digest: ${{ steps.docker_build.outputs.digest }}"
