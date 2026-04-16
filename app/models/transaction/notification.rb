@@ -101,7 +101,7 @@ class Transaction::Notification
     # apply owner
     if ticket.owner_id != 1
       possible_recipients.push ticket.owner
-      @recipients_reason[ticket.owner_id] = __('You are receiving this because you are the owner of this ticket.')
+      @recipients_reason[ticket.owner_id] = __('You are receiving this because you are a member of the group of this ticket.')
     end
 
     # apply ticket customer
