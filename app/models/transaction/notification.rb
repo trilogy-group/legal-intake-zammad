@@ -174,8 +174,6 @@ class Transaction::Notification
   def recipient_myself?(user)
     return false if @params[:interface_handle] != 'application_server'
     
-    # Allow ticket customers to receive creation notifications for their own tickets
-    # This provides confirmation emails in customer-facing systems
     if @item[:type] == 'create' && user.id == ticket.customer_id
       return false
     end
