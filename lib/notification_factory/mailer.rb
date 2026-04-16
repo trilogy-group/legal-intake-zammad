@@ -180,18 +180,26 @@ returns
       return false
     end
 
+    # Build email parameters
+    email_params = {
+      # in_reply_to: in_reply_to,
+      from:         sender,
+      to:           data[:recipient][:email],
+      subject:      data[:subject],
+      message_id:   data[:message_id],
+      references:   data[:references],
+      body:         data[:body],
+      content_type: content_type,
+      attachments:  data[:attachments],
+    }
+
+    # Add CC if provided
+    if data[:cc].present?
+      email_params[:cc] = data[:cc]
+    end
+
     channel.deliver(
-      {
-        # in_reply_to: in_reply_to,
-        from:         sender,
-        to:           data[:recipient][:email],
-        subject:      data[:subject],
-        message_id:   data[:message_id],
-        references:   data[:references],
-        body:         data[:body],
-        content_type: content_type,
-        attachments:  data[:attachments],
-      },
+      email_params,
       true
     )
   end

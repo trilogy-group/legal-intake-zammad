@@ -67,10 +67,15 @@ class Transaction::Notification
 
     prepare_recipients_and_reasons
 
-    # send notifications
-    recipients_and_channels.each do |recipient_settings|
-      ActiveRecord::Base.transaction do
-        send_to_single_recipient(recipient_settings)
+    # For assignment notifications, send ONE email with CC instead of separate emails
+    if @item[:type] == 'update' && @item[:changes]&.key?('owner_id')
+      send_assignment_notification_with_cc
+    else
+      # send notifications
+      recipients_and_channels.each do |recipient_settings|
+        ActiveRecord::Base.transaction do
+          send_to_single_recipient(recipient_settings)
+        end
       end
     end
   end
@@ -103,8 +108,12 @@ class Transaction::Notification
     if ticket.customer_id && ticket.customer_id != 1
       customer = User.find_by(id: ticket.customer_id)
       if customer&.active? && !possible_recipients.include?(customer)
-        possible_recipients.push customer
-        @recipients_reason[ticket.customer_id] = __('You are receiving this because you created this ticket.')
+        # Only add customer for updates, not for creation
+        # Customers shouldn't receive confirmation emails when they create tickets
+        if @item[:type] != 'create'
+          possible_recipients.push customer
+          @recipients_reason[ticket.customer_id] = __('You are receiving this because you created this ticket.')
+        end
       end
     end
 
@@ -182,6 +191,96 @@ class Transaction::Notification
     return true if !article && @item[:user_id] == user.id
 
     false
+  end
+
+  def send_assignment_notification_with_cc
+    return if recipients_and_channels.blank?
+
+    # Find the owner (To:) and others (CC:)
+    owner = ticket.owner
+    owner_recipient = recipients_and_channels.find { |r| r[:user].id == owner.id }
+    
+    # If owner is not in recipients, something went wrong
+    return if !owner_recipient
+
+    # Collect CC recipients (customer + shared customers)
+    cc_recipients = recipients_and_channels.reject { |r| r[:user].id == owner.id }
+    
+    # Send online notifications to all recipients
+    recipients_and_channels.each do |recipient_settings|
+      user = recipient_settings[:user]
+      next if !recipient_settings[:channels]['online']
+      
+      send_to_single_recipient_online(user, ticket, article)
+    end
+
+    # Prepare email recipients
+    # Only send email if owner wants email notifications
+    return if !owner_recipient[:channels]['email']
+
+    # Build CC list from recipients who want email
+    cc_emails = cc_recipients
+      .select { |r| r[:channels]['email'] }
+      .map { |r| r[:user].email }
+      .compact
+      .join(', ')
+
+    # Get template and objects
+    changes = @item[:changes] || {}
+    template = 'ticket_assigned'
+    
+    attachments = []
+    if article
+      attachments = article.attachments_inline
+    end
+
+    # Build email body
+    result = NotificationFactory::Mailer.template(
+      template:   template,
+      locale:     owner[:preferences][:locale],
+      objects:    {
+        ticket:       ticket,
+        article:      article,
+        recipient:    owner,
+        current_user: current_user,
+        changes:      changes,
+        reason:       recipients_reason[owner.id],
+      },
+      standalone: false,
+    )
+
+    # Rebuild subject if needed
+    if ticket.respond_to?(:subject_build)
+      result[:subject] = ticket.subject_build(result[:subject])
+    end
+
+    # Prepare body
+    if result[:body]
+      result[:body] = HtmlSanitizer.adjust_inline_image_size(result[:body])
+      result[:body] = HtmlSanitizer.dynamic_image_size(result[:body])
+    end
+
+    # Send one email with CC
+    NotificationFactory::Mailer.deliver(
+      recipient:    owner,
+      subject:      result[:subject],
+      body:         result[:body],
+      content_type: 'text/html',
+      message_id:   "<notification.#{DateTime.current.to_fs(:number)}.#{ticket.id}.#{owner.id}.#{SecureRandom.uuid}@#{Setting.get('fqdn')}>",
+      references:   ticket.get_references,
+      attachments:  attachments,
+      cc:           cc_emails.present? ? cc_emails : nil,
+    )
+
+    # Add notification history for owner
+    add_recipient_list_to_history(ticket, owner, owner_recipient[:channels].keys, 'update')
+    
+    # Add notification history for CC recipients
+    cc_recipients.each do |r|
+      add_recipient_list_to_history(ticket, r[:user], r[:channels].keys, 'update') if r[:channels]['email']
+    end
+
+    Rails.logger.debug { "sent assignment email to owner (#{ticket.id}/#{owner.email}) with CC (#{cc_emails})" }
   end
 
   def send_to_single_recipient(recipient_settings)
@@ -323,11 +422,6 @@ class Transaction::Notification
                else
                  raise "unknown type for notification #{@item[:type]}"
                end
-
-    # For assignment notifications, use different templates for owner vs customer
-    if template == 'ticket_assigned' && user.id != ticket.owner_id
-      template = 'ticket_assigned_customer'
-    end
 
     attachments = []
     if article

@@ -1,9 +1,9 @@
 New ticket: #{ticket.title}
 
-Hello #{recipient.firstname},
+Hello,
 
-Your ticket "#{ticket.title}" (Ticket ##{ticket.number}) has been received and will be reviewed by our legal team.
-
-You will receive updates as your ticket progresses. To view your ticket or add additional information, click the link below.
+#{ticket.customer.firstname} #{ticket.customer.lastname} has created a ticket "#{ticket.title}". Please review it and assign to the appropriate agent (legal attorney).
 
 View Ticket: #{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}
+
+You are receiving this message because you are the legal admin.
