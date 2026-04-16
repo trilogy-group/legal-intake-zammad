@@ -1,29 +1,38 @@
-Updated ticket (#{ticket.title})
-
-<div>Hi #{recipient.firstname},</div>
-<br>
-<div>
-Ticket (#{ticket.title}) has been updated by "<b>#{current_user.longname}</b>".
-</div>
-<br>
-<% if @objects[:changes].present? %>
-  <div>
-  Changes:<br>
-  <% @objects[:changes].each do |key, value| %>
-    <%= t key %>: <%= h value[0] %> -&gt; <%= h value[1] %><br>
+<div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
+  <div style="text-align: center; margin-bottom: 32px;">
+    <h1 style="font-size: 24px; font-weight: bold; color: #1f2937; margin: 0;">Legal Intake</h1>
+  </div>
+  
+  <p style="font-size: 16px;">Hello <%= d 'recipient.firstname' %>,</p>
+  
+  <p style="font-size: 16px;">
+    Your ticket "<strong><%= d 'ticket.title' %></strong>" has been updated.
+  </p>
+  
+  <% if @objects[:changes].present? %>
+    <div style="background-color: #F3F4F6; border-left: 3px solid #3D99F5; padding: 16px; margin: 24px 0;">
+      <p style="font-size: 14px; font-weight: 600; color: #1f2937; margin: 0 0 8px 0;">Changes:</p>
+      <% @objects[:changes].each do |key, value| %>
+        <p style="font-size: 14px; color: #1f2937; margin: 4px 0;">
+          <strong><%= t key %>:</strong> <%= h value[0] %> → <%= h value[1] %>
+        </p>
+      <% end %>
+    </div>
   <% end %>
+  
+  <p style="font-size: 16px;">
+    You're receiving this notification because <%= c 'reason' %>.
+  </p>
+  
+  <div style="text-align: center; margin: 32px 0;">
+    <a href="<%= c 'config.http_type' %>://<%= c 'config.fqdn' %>/#ticket/zoom/<%= c 'ticket.id' %>" 
+       style="background-color: #3D99F5; color: #ffffff; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 500; display: inline-block;">
+      View Ticket
+    </a>
   </div>
-<% end %>
-<br>
-<% if @objects[:article] %>
-  <div>
-  Information:
-  <blockquote type="cite">
-  #{article.body_as_html}
-  </blockquote>
-  </div>
-<% end %>
-<br>
-<div>
-  <a href="#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}<% if @objects[:article] %>/#{article.id}<% end %>" target="zammad_app">View this in #{config.product_name}</a>
+  
+  <p style="font-size: 14px; color: #6b7280;">
+    If you're unable to click the button above, you can copy and paste this link:<br/>
+    <a href="<%= c 'config.http_type' %>://<%= c 'config.fqdn' %>/#ticket/zoom/<%= c 'ticket.id' %>"><%= c 'config.http_type' %>://<%= c 'config.fqdn' %>/#ticket/zoom/<%= c 'ticket.id' %></a>
+  </p>
 </div>

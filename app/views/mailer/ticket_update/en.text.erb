@@ -1,0 +1,14 @@
+Hello <%= d 'recipient.firstname' %>,
+
+Your ticket "<%= d 'ticket.title' %>" has been updated.
+
+<% if @objects[:changes].present? %>
+Changes:
+<% @objects[:changes].each do |key, value| %>
+- <%= t key %>: <%= h value[0] %> → <%= h value[1] %>
+<% end %>
+<% end %>
+
+You're receiving this notification because <%= c 'reason' %>.
+
+View Ticket: <%= c 'config.http_type' %>://<%= c 'config.fqdn' %>/#ticket/zoom/<%= c 'ticket.id' %>

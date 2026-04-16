@@ -1,0 +1,7 @@
+Hello <%= d 'recipient.firstname' %>,
+
+Your ticket "<%= d 'ticket.title' %>" (Ticket #<%= d 'ticket.number' %>) has been received and will be reviewed by our legal team.
+
+You will receive updates as your ticket progresses. To view your ticket or add additional information, click the link below.
+
+View Ticket: <%= c 'config.http_type' %>://<%= c 'config.fqdn' %>/#ticket/zoom/<%= c 'ticket.id' %>
