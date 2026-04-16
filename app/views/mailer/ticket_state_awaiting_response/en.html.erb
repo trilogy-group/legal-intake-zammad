@@ -1,0 +1,38 @@
+Awaiting Response: #{ticket.title}
+
+<div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
+  <div style="text-align: center; margin-bottom: 32px;">
+    <h1 style="font-size: 24px; font-weight: bold; color: #1f2937; margin: 0;">Legal Intake</h1>
+  </div>
+  
+  <p style="font-size: 16px;">Hello #{recipient.firstname},</p>
+  
+  <p style="font-size: 16px;">
+    The legal team needs additional information regarding your ticket "<strong>#{ticket.title}</strong>" before they can proceed.
+  </p>
+  
+  <% if article && article.body.present? %>
+  <div style="background-color: #f3f4f6; border-left: 4px solid #8b5cf6; padding: 16px; margin: 20px 0; border-radius: 4px;">
+    <p style="font-size: 14px; font-weight: 600; margin: 0 0 8px 0; color: #6b7280;">Latest Comment:</p>
+    <div style="font-size: 14px; color: #374151;">
+      <%= HtmlSanitizer.dynamic_image_size(article.body_as_html).html_safe %>
+    </div>
+  </div>
+  <% end %>
+  
+  <p style="font-size: 16px;">
+    Please review the comment above and provide the requested information. The legal team will be able to continue processing your request once they receive your response.
+  </p>
+  
+  <div style="text-align: center; margin: 32px 0;">
+    <a href="#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}" 
+       style="background-color: #8b5cf6; color: #ffffff; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 500; display: inline-block;">
+      Respond to Legal Team
+    </a>
+  </div>
+  
+  <p style="font-size: 14px; color: #6b7280;">
+    If you're unable to click the button above, you can copy and paste this link:<br/>
+    <a href="#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}">#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}</a>
+  </p>
+</div>

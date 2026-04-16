@@ -65,6 +65,12 @@ class Transaction::Notification
     return if @params[:disable_notification]
     return if !ticket
 
+    # Block ALL notifications (email and in-app) for submitted_to_legal state
+    if ticket.state.name == 'submitted_to_legal'
+      Rails.logger.debug { "Blocking notifications for submitted_to_legal state (ticket #{ticket.id})" }
+      return
+    end
+
     prepare_recipients_and_reasons
 
     # For creation notifications, send ONE email with CC (customer To, agents CC)
@@ -73,6 +79,9 @@ class Transaction::Notification
     # For assignment notifications, send ONE email with CC instead of separate emails
     elsif @item[:type] == 'update' && @item[:changes]&.key?('owner_id')
       send_assignment_notification_with_cc
+    # For specific state changes (awaiting_response, ready_for_signature), use CC
+    elsif @item[:type] == 'update' && @item[:changes]&.key?('state_id') && %w[awaiting_response ready_for_signature].include?(ticket.state.name)
+      send_state_change_notification_with_cc
     else
       # send notifications
       recipients_and_channels.each do |recipient_settings|
@@ -371,6 +380,96 @@ class Transaction::Notification
     Rails.logger.debug { "sent creation email to customer (#{ticket.id}/#{customer.email}) with CC (#{cc_emails})" }
   end
 
+  def send_state_change_notification_with_cc
+    return if recipients_and_channels.blank?
+
+    # Find the customer (To:) and others (CC:)
+    customer = ticket.customer
+    customer_recipient = recipients_and_channels.find { |r| r[:user].id == customer.id }
+    
+    # If customer is not in recipients, something went wrong
+    return if !customer_recipient
+
+    # Collect CC recipients (shared customers + agents with full access)
+    cc_recipients = recipients_and_channels.reject { |r| r[:user].id == customer.id }
+    
+    # Send online notifications to all recipients
+    recipients_and_channels.each do |recipient_settings|
+      user = recipient_settings[:user]
+      next if !recipient_settings[:channels]['online']
+      
+      send_to_single_recipient_online(user, ticket, article)
+    end
+
+    # Prepare email recipients
+    # Only send email if customer wants email notifications
+    return if !customer_recipient[:channels]['email']
+
+    # Build CC list from recipients who want email
+    cc_emails = cc_recipients
+      .select { |r| r[:channels]['email'] }
+      .map { |r| r[:user].email }
+      .compact
+      .join(', ')
+
+    # Get template and objects
+    changes = @item[:changes] || {}
+    template = determine_update_template(ticket, article, changes)
+    
+    attachments = []
+    if article
+      attachments = article.attachments_inline
+    end
+
+    # Build email body
+    result = NotificationFactory::Mailer.template(
+      template:   template,
+      locale:     customer[:preferences][:locale],
+      objects:    {
+        ticket:       ticket,
+        article:      article,
+        recipient:    customer,
+        current_user: current_user,
+        changes:      changes,
+        reason:       recipients_reason[customer.id],
+      },
+      standalone: false,
+    )
+
+    # Rebuild subject if needed
+    if ticket.respond_to?(:subject_build)
+      result[:subject] = ticket.subject_build(result[:subject])
+    end
+
+    # Prepare body
+    if result[:body]
+      result[:body] = HtmlSanitizer.adjust_inline_image_size(result[:body])
+      result[:body] = HtmlSanitizer.dynamic_image_size(result[:body])
+    end
+
+    # Send one email with CC
+    NotificationFactory::Mailer.deliver(
+      recipient:    customer,
+      subject:      result[:subject],
+      body:         result[:body],
+      content_type: 'text/html',
+      message_id:   "<notification.#{DateTime.current.to_fs(:number)}.#{ticket.id}.#{customer.id}.#{SecureRandom.uuid}@#{Setting.get('fqdn')}>",
+      references:   ticket.get_references,
+      attachments:  attachments,
+      cc:           cc_emails.present? ? cc_emails : nil,
+    )
+
+    # Add notification history for customer
+    add_recipient_list_to_history(ticket, customer, customer_recipient[:channels].keys, 'update')
+    
+    # Add notification history for CC recipients
+    cc_recipients.each do |r|
+      add_recipient_list_to_history(ticket, r[:user], r[:channels].keys, 'update') if r[:channels]['email']
+    end
+
+    Rails.logger.debug { "sent state change email (#{ticket.state.name}) to customer (#{ticket.id}/#{customer.email}) with CC (#{cc_emails})" }
+  end
+
   def send_to_single_recipient(recipient_settings)
     user     = recipient_settings[:user]
     channels = recipient_settings[:channels]
@@ -548,8 +647,18 @@ class Transaction::Notification
       new_state_id = changes['state_id'].last
       old_state_id = changes['state_id'].first
       
+      # Get the new state name for specific template matching
+      new_state = Ticket::State.find_by(id: new_state_id)
+      
+      # Custom Legal Intake states
+      if new_state && new_state.name == 'awaiting_response'
+        return 'ticket_state_awaiting_response'
+      elsif new_state && new_state.name == 'ready_for_signature'
+        return 'ticket_state_ready_for_signature'
+      end
+      
       # Check if changed to closed/resolved
-      resolved_states = Ticket::State.where(name: %w[closed merged removed]).pluck(:id)
+      resolved_states = Ticket::State.where(name: %w[closed merged removed resolved]).pluck(:id)
       return 'ticket_state_resolved' if resolved_states.include?(new_state_id)
       
       # Check if reopened (from closed to open)
