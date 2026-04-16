@@ -105,6 +105,16 @@ returns
     channels = data['channel']
     return if !channels
 
+    # Special case: ticket customers should receive 'create' notifications for their own tickets
+    # This is needed for customer-facing systems like Legal Intake where customers expect
+    # confirmation emails when they submit tickets
+    if type == 'create' && user.id == ticket.customer_id
+      return {
+        user:     user,
+        channels: channels
+      }
+    end
+
     if data['criteria']['owned_by_me'] && owned_by_me
       return {
         user:     user,
