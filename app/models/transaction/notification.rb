@@ -99,6 +99,15 @@ class Transaction::Notification
       @recipients_reason[ticket.owner_id] = __('You are receiving this because you are the owner of this ticket.')
     end
 
+    # apply ticket customer
+    if ticket.customer_id && ticket.customer_id != 1
+      customer = User.find_by(id: ticket.customer_id)
+      if customer&.active? && !possible_recipients.include?(customer)
+        possible_recipients.push customer
+        @recipients_reason[ticket.customer_id] = __('You are receiving this because you created this ticket.')
+      end
+    end
+
     # apply out of office agents
     possible_recipients_additions = Set.new
     possible_recipients.each do |user|
