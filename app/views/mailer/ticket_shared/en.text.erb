@@ -1,7 +1,9 @@
-Hello <%= d 'recipient.firstname' %>,
+Ticket shared with you: #{ticket.title}
 
-<%= d 'shared_by.firstname' %> <%= d 'shared_by.lastname' %> has shared the ticket "<%= d 'ticket.title' %>" with you.
+Hello #{recipient.firstname},
+
+#{shared_by.firstname} #{shared_by.lastname} has shared the ticket "#{ticket.title}" with you.
 
 You can now view and collaborate on this ticket through the Legal Intake platform.
 
-View Ticket: <%= c 'config.http_type' %>://<%= c 'config.fqdn' %>/#ticket/zoom/<%= c 'ticket.id' %>
+View Ticket: #{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}
