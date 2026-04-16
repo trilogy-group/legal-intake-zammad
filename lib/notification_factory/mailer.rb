@@ -112,6 +112,13 @@ returns
       }
     end
 
+    if type == 'update' && user.id == ticket.customer_id
+      return {
+        user:     user,
+        channels: channels
+      }
+    end
+
     if data['criteria']['owned_by_me'] && owned_by_me
       return {
         user:     user,
