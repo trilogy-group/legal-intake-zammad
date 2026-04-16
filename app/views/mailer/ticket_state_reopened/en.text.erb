@@ -1,7 +1,9 @@
-Hello <%= d 'recipient.firstname' %>,
+Ticket reopened: #{ticket.title}
 
-Your ticket "<%= d 'ticket.title' %>" (Ticket #<%= d 'ticket.number' %>) has been reopened by <%= d 'current_user.firstname' %> <%= d 'current_user.lastname' %>.
+Hello #{recipient.firstname},
+
+Your ticket "#{ticket.title}" (Ticket ##{ticket.number}) has been reopened by #{current_user.firstname} #{current_user.lastname}.
 
 This ticket requires additional attention. Please review the latest updates and respond if needed.
 
-View Ticket: <%= c 'config.http_type' %>://<%= c 'config.fqdn' %>/#ticket/zoom/<%= c 'ticket.id' %>
+View Ticket: #{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}

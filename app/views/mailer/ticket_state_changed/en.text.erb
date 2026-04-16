@@ -1,7 +1,9 @@
-Hello <%= d 'recipient.firstname' %>,
+Ticket status updated: #{ticket.title}
 
-The status of your ticket "<%= d 'ticket.title' %>" has been updated to <%= d 'ticket.state.name' %>.
+Hello #{recipient.firstname},
+
+The status of your ticket "#{ticket.title}" has been updated to #{ticket.state.name}.
 
 You can view the latest details and any updates on the ticket.
 
-View Ticket: <%= c 'config.http_type' %>://<%= c 'config.fqdn' %>/#ticket/zoom/<%= c 'ticket.id' %>
+View Ticket: #{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}

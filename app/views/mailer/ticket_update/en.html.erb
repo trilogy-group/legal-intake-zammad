@@ -1,12 +1,14 @@
+Ticket updated: #{ticket.title}
+
 <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
   <div style="text-align: center; margin-bottom: 32px;">
     <h1 style="font-size: 24px; font-weight: bold; color: #1f2937; margin: 0;">Legal Intake</h1>
   </div>
   
-  <p style="font-size: 16px;">Hello <%= d 'recipient.firstname' %>,</p>
+  <p style="font-size: 16px;">Hello #{recipient.firstname},</p>
   
   <p style="font-size: 16px;">
-    Your ticket "<strong><%= d 'ticket.title' %></strong>" has been updated.
+    Your ticket "<strong>#{ticket.title}</strong>" has been updated.
   </p>
   
   <% if @objects[:changes].present? %>
@@ -21,11 +23,11 @@
   <% end %>
   
   <p style="font-size: 16px;">
-    You're receiving this notification because <%= c 'reason' %>.
+    You're receiving this notification because #{reason}.
   </p>
   
   <div style="text-align: center; margin: 32px 0;">
-    <a href="<%= c 'config.http_type' %>://<%= c 'config.fqdn' %>/#ticket/zoom/<%= c 'ticket.id' %>" 
+    <a href="#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}" 
        style="background-color: #3D99F5; color: #ffffff; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 500; display: inline-block;">
       View Ticket
     </a>
@@ -33,6 +35,6 @@
   
   <p style="font-size: 14px; color: #6b7280;">
     If you're unable to click the button above, you can copy and paste this link:<br/>
-    <a href="<%= c 'config.http_type' %>://<%= c 'config.fqdn' %>/#ticket/zoom/<%= c 'ticket.id' %>"><%= c 'config.http_type' %>://<%= c 'config.fqdn' %>/#ticket/zoom/<%= c 'ticket.id' %></a>
+    <a href="#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}">#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}</a>
   </p>
 </div>

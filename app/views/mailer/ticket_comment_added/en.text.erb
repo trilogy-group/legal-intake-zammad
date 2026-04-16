@@ -1,12 +1,14 @@
-Hello <%= d 'recipient.firstname' %>,
+New comment: #{ticket.title}
 
-A new comment has been added to your ticket "<%= d 'ticket.title' %>".
+Hello #{recipient.firstname},
+
+A new comment has been added to your ticket "#{ticket.title}".
 
 --- Comment ---
-<%= d 'article.created_by.firstname' %> <%= d 'article.created_by.lastname' %> commented:
-<%= c 'article.body_as_text', 500 %>
+#{article.created_by.firstname} #{article.created_by.lastname} commented:
+#{article.body_as_text}
 ---------------
 
-You're receiving this notification because <%= c 'reason' %>. Join the discussion to stay updated on the latest developments.
+You're receiving this notification because #{reason}. Join the discussion to stay updated on the latest developments.
 
-View Ticket: <%= c 'config.http_type' %>://<%= c 'config.fqdn' %>/#ticket/zoom/<%= c 'ticket.id' %>
+View Ticket: #{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}

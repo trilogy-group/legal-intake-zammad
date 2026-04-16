@@ -1,7 +1,9 @@
-Hello <%= d 'recipient.firstname' %>,
+Ticket resolved: #{ticket.title}
 
-Great news! Your ticket "<%= d 'ticket.title' %>" has been resolved by <%= d 'current_user.firstname' %> <%= d 'current_user.lastname' %>.
+Hello #{recipient.firstname},
+
+Great news! Your ticket "#{ticket.title}" has been resolved by #{current_user.firstname} #{current_user.lastname}.
 
 You can now view the resolution details and any final deliverables on the Legal Intake platform.
 
-View Resolved Ticket: <%= c 'config.http_type' %>://<%= c 'config.fqdn' %>/#ticket/zoom/<%= c 'ticket.id' %>
+View Resolved Ticket: #{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}

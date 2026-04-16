@@ -1,6 +1,8 @@
-Hello <%= d 'recipient.firstname' %>,
+Ticket updated: #{ticket.title}
 
-Your ticket "<%= d 'ticket.title' %>" has been updated.
+Hello #{recipient.firstname},
+
+Your ticket "#{ticket.title}" has been updated.
 
 <% if @objects[:changes].present? %>
 Changes:
@@ -9,6 +11,6 @@ Changes:
 <% end %>
 <% end %>
 
-You're receiving this notification because <%= c 'reason' %>.
+You're receiving this notification because #{reason}.
 
-View Ticket: <%= c 'config.http_type' %>://<%= c 'config.fqdn' %>/#ticket/zoom/<%= c 'ticket.id' %>
+View Ticket: #{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}
