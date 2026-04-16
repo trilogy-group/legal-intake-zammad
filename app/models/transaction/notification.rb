@@ -324,6 +324,11 @@ class Transaction::Notification
                  raise "unknown type for notification #{@item[:type]}"
                end
 
+    # For assignment notifications, use different templates for owner vs customer
+    if template == 'ticket_assigned' && user.id != ticket.owner_id
+      template = 'ticket_assigned_customer'
+    end
+
     attachments = []
     if article
       attachments = article.attachments_inline

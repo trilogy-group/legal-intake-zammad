@@ -1,0 +1,9 @@
+Ticket assigned: #{ticket.title}
+
+Hello #{recipient.firstname},
+
+Your ticket "#{ticket.title}" has been assigned to #{ticket.owner.firstname} #{ticket.owner.lastname}.
+
+They will review and work on your request. You'll receive updates as progress is made.
+
+View Ticket: #{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}
