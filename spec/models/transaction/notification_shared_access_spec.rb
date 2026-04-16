@@ -116,7 +116,23 @@ RSpec.describe Transaction::Notification, 'shared access' do
   describe 'ticket customer always included' do
     let(:new_group)       { create(:group) }
     let(:new_agent)       { create(:agent, groups: [new_group]) }
-    let(:new_customer)    { create(:customer) }
+    let(:new_customer) do
+      create(:customer).tap do |c|
+        c.preferences[:notification_config] = {
+          matrix: {
+            create: {
+              criteria: { owned_by_me: true, owned_by_nobody: true, no: false },
+              channel: { email: true, online: true }
+            },
+            update: {
+              criteria: { owned_by_me: true, owned_by_nobody: true, no: false },
+              channel: { email: true, online: true }
+            }
+          }
+        }
+        c.save!
+      end
+    end
     let(:new_ticket)      { create(:ticket, group: new_group, customer: new_customer) }
 
     it 'includes ticket customer in update notifications' do
