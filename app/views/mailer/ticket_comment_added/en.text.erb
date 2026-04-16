@@ -1,0 +1,12 @@
+Hello <%= d 'recipient.firstname' %>,
+
+A new comment has been added to your ticket "<%= d 'ticket.title' %>".
+
+--- Comment ---
+<%= d 'article.created_by.firstname' %> <%= d 'article.created_by.lastname' %> commented:
+<%= c 'article.body_as_text', 500 %>
+---------------
+
+You're receiving this notification because <%= c 'reason' %>. Join the discussion to stay updated on the latest developments.
+
+View Ticket: <%= c 'config.http_type' %>://<%= c 'config.fqdn' %>/#ticket/zoom/<%= c 'ticket.id' %>

@@ -302,7 +302,7 @@ class Transaction::Notification
                when 'create'
                  'ticket_create'
                when 'update'
-                 'ticket_update'
+                 determine_update_template(ticket, article, changes)
                when 'reminder_reached'
                  'ticket_reminder_reached'
                when 'escalation'
@@ -340,5 +340,38 @@ class Transaction::Notification
       attachments: attachments,
     )
     Rails.logger.debug { "sent ticket email notification to agent (#{@item[:type]}/#{ticket.id}/#{user.email})" }
+  end
+
+  def determine_update_template(ticket, article, changes)
+    # Priority order matters - check most specific conditions first
+    
+    # 1. Comment/Article added (highest priority)
+    return 'ticket_comment_added' if article
+    
+    # 2. State changed to specific values
+    if changes&.key?('state_id')
+      new_state_id = changes['state_id'].last
+      old_state_id = changes['state_id'].first
+      
+      # Check if changed to closed/resolved
+      resolved_states = Ticket::State.where(name: %w[closed merged removed]).pluck(:id)
+      return 'ticket_state_resolved' if resolved_states.include?(new_state_id)
+      
+      # Check if reopened (from closed to open)
+      open_states = Ticket::State.where(name: %w[new open]).pluck(:id)
+      return 'ticket_state_reopened' if resolved_states.include?(old_state_id) && open_states.include?(new_state_id)
+      
+      # Other state changes
+      return 'ticket_state_changed'
+    end
+    
+    # 3. Ownership/Assignment changed
+    return 'ticket_assigned' if changes&.key?('owner_id')
+    
+    # 4. Priority changed
+    return 'ticket_priority_changed' if changes&.key?('priority_id')
+    
+    # 5. Fallback for any other updates
+    'ticket_update'
   end
 end

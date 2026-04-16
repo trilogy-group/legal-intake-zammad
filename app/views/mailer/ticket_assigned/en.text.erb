@@ -1,0 +1,7 @@
+Hello <%= d 'recipient.firstname' %>,
+
+Your ticket "<%= d 'ticket.title' %>" has been assigned to <%= d 'ticket.owner.firstname' %> <%= d 'ticket.owner.lastname' %>.
+
+They will now review and work on your request. You'll receive updates as progress is made.
+
+View Ticket: <%= c 'config.http_type' %>://<%= c 'config.fqdn' %>/#ticket/zoom/<%= c 'ticket.id' %>
