@@ -89,6 +89,7 @@ class Ticket::SharedAccess < ApplicationModel
   end
 
   def notify_shared_user
+    # Notify the newly shared user
     OnlineNotification.add(
       type:          'create',
       object:        'Ticket',
@@ -98,6 +99,26 @@ class Ticket::SharedAccess < ApplicationModel
       user_id:       user_id,
     )
     send_share_email
+
+    # Also notify the ticket owner that their ticket was shared
+    notify_ticket_owner_of_share
+  end
+
+  def notify_ticket_owner_of_share
+    return if ticket.customer_id == created_by_id # Owner shared it themselves
+    return if ticket.customer_id == user_id # Can't happen due to validation, but safety check
+
+    ticket_owner = User.find_by(id: ticket.customer_id)
+    return if ticket_owner.blank? || !ticket_owner.active?
+
+    OnlineNotification.add(
+      type:          'update',
+      object:        'Ticket',
+      o_id:          ticket_id,
+      seen:          false,
+      created_by_id: created_by_id,
+      user_id:       ticket_owner.id,
+    )
   end
 
   def send_share_email
