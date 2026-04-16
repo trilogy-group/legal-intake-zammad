@@ -1,9 +1,9 @@
 New ticket: #{ticket.title}
 
-Hello,
+Hello #{recipient.firstname},
 
-#{ticket.customer.firstname} #{ticket.customer.lastname} has created a ticket "#{ticket.title}". Please review it and assign to the appropriate agent (legal attorney).
+Thank you for your request. We have created a ticket "#{ticket.title}" for your request. Our team will review it shortly.
+
+You can track the status and any updates to your ticket using the link below.
 
 View Ticket: #{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}
-
-You are receiving this message because you are the legal admin.

@@ -5,10 +5,14 @@ New ticket: #{ticket.title}
     <h1 style="font-size: 24px; font-weight: bold; color: #1f2937; margin: 0;">Legal Intake</h1>
   </div>
   
-  <p style="font-size: 16px;">Hello,</p>
+  <p style="font-size: 16px;">Hello #{recipient.firstname},</p>
   
   <p style="font-size: 16px;">
-    <strong>#{ticket.customer.firstname} #{ticket.customer.lastname}</strong> has created a ticket "<strong>#{ticket.title}</strong>". Please review it and assign to the appropriate agent (legal attorney).
+    Thank you for your request. We have created a ticket "<strong>#{ticket.title}</strong>" for your request. Our team will review it shortly.
+  </p>
+  
+  <p style="font-size: 16px;">
+    You can track the status and any updates to your ticket using the link below.
   </p>
   
   <div style="text-align: center; margin: 32px 0;">
@@ -21,9 +25,5 @@ New ticket: #{ticket.title}
   <p style="font-size: 14px; color: #6b7280;">
     If you're unable to click the button above, you can copy and paste this link:<br/>
     <a href="#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}">#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}</a>
-  </p>
-  
-  <p style="font-size: 12px; color: #9ca3af; margin-top: 32px;">
-    You are receiving this message because you are the legal admin.
   </p>
 </div>

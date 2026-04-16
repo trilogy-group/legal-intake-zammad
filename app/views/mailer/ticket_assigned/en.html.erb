@@ -8,17 +8,17 @@ Ticket assigned: #{ticket.title}
   <p style="font-size: 16px;">Hello #{recipient.firstname},</p>
   
   <p style="font-size: 16px;">
-    The request "<strong>#{ticket.title}</strong>" has been assigned to you.
+    The ticket "<strong>#{ticket.title}</strong>" has been assigned to you.
   </p>
   
   <p style="font-size: 16px;">
-    You can now review and work on this request through Zammad platform. Please review the request details and begin processing as needed.
+    You can now review and work on this ticket through the Zammad platform. Please review the ticket details and begin processing as needed.
   </p>
   
   <div style="text-align: center; margin: 32px 0;">
     <a href="#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}" 
        style="background-color: #3D99F5; color: #ffffff; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 500; display: inline-block;">
-      Review Request
+      Review Ticket
     </a>
   </div>
   
