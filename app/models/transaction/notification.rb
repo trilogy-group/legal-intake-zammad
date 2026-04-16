@@ -117,7 +117,9 @@ class Transaction::Notification
 
     recipients_reason_by_notifications_settings(possible_recipients)
 
-    add_shared_access_recipients if @item[:type] != 'create'
+    # Only notify shared customers for actual ticket updates (comments, field changes)
+    # Exclude internal operational events (create, reminders, escalations)
+    add_shared_access_recipients if @item[:type] == 'update'
   end
 
   def add_shared_access_recipients
