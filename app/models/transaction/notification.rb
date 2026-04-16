@@ -350,10 +350,13 @@ class Transaction::Notification
   def determine_update_template(ticket, article, changes)
     # Priority order matters - check most specific conditions first
     
-    # 1. Comment/Article added (highest priority)
+    # 1. Ownership/Assignment changed (check before article to avoid false positive)
+    return 'ticket_assigned' if changes&.key?('owner_id')
+    
+    # 2. Comment/Article added
     return 'ticket_comment_added' if article
     
-    # 2. State changed to specific values
+    # 3. State changed to specific values
     if changes&.key?('state_id')
       new_state_id = changes['state_id'].last
       old_state_id = changes['state_id'].first
@@ -369,9 +372,6 @@ class Transaction::Notification
       # Other state changes
       return 'ticket_state_changed'
     end
-    
-    # 3. Ownership/Assignment changed
-    return 'ticket_assigned' if changes&.key?('owner_id')
     
     # 4. Priority changed
     return 'ticket_priority_changed' if changes&.key?('priority_id')

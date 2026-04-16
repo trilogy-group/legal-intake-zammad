@@ -2,6 +2,10 @@ Ticket assigned: #{ticket.title}
 
 Hello #{recipient.firstname},
 
+<% if recipient.id == ticket.owner_id %>
 Ticket "#{ticket.title}" has been assigned to you.
+<% else %>
+Your ticket "#{ticket.title}" has been assigned to #{ticket.owner.firstname} #{ticket.owner.lastname}.
+<% end %>
 
 View Ticket: #{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}

@@ -7,9 +7,15 @@ Ticket assigned: #{ticket.title}
   
   <p style="font-size: 16px;">Hello #{recipient.firstname},</p>
   
-  <p style="font-size: 16px;">
-    Ticket "<strong>#{ticket.title}</strong>" has been assigned to you.
-  </p>
+  <% if recipient.id == ticket.owner_id %>
+    <p style="font-size: 16px;">
+      Ticket "<strong>#{ticket.title}</strong>" has been assigned to you.
+    </p>
+  <% else %>
+    <p style="font-size: 16px;">
+      Your ticket "<strong>#{ticket.title}</strong>" has been assigned to <strong>#{ticket.owner.firstname} #{ticket.owner.lastname}</strong>.
+    </p>
+  <% end %>
   
   <div style="text-align: center; margin: 32px 0;">
     <a href="#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}" 
