@@ -105,6 +105,20 @@ returns
     channels = data['channel']
     return if !channels
 
+    if type == 'create' && user.id == ticket.customer_id
+      return {
+        user:     user,
+        channels: channels
+      }
+    end
+
+    if type == 'update' && user.id == ticket.customer_id
+      return {
+        user:     user,
+        channels: channels
+      }
+    end
+
     if data['criteria']['owned_by_me'] && owned_by_me
       return {
         user:     user,
@@ -166,18 +180,26 @@ returns
       return false
     end
 
+    # Build email parameters
+    email_params = {
+      # in_reply_to: in_reply_to,
+      from:         sender,
+      to:           data[:recipient][:email],
+      subject:      data[:subject],
+      message_id:   data[:message_id],
+      references:   data[:references],
+      body:         data[:body],
+      content_type: content_type,
+      attachments:  data[:attachments],
+    }
+
+    # Add CC if provided
+    if data[:cc].present?
+      email_params[:cc] = data[:cc]
+    end
+
     channel.deliver(
-      {
-        # in_reply_to: in_reply_to,
-        from:         sender,
-        to:           data[:recipient][:email],
-        subject:      data[:subject],
-        message_id:   data[:message_id],
-        references:   data[:references],
-        body:         data[:body],
-        content_type: content_type,
-        attachments:  data[:attachments],
-      },
+      email_params,
       true
     )
   end

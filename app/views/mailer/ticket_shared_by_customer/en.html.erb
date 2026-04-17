@@ -8,11 +8,11 @@ Ticket shared: #{ticket.title}
   <p style="font-size: 16px;">Hello #{recipient.firstname},</p>
   
   <p style="font-size: 16px;">
-    #{shared_by.firstname} #{shared_by.lastname} has shared the ticket "<strong>#{ticket.title}</strong>" with you.
+    #{shared_by.firstname} #{shared_by.lastname} has shared your ticket "<strong>#{ticket.title}</strong>" with #{shared_with.firstname} #{shared_with.lastname}.
   </p>
   
   <p style="font-size: 16px;">
-    You can now view and collaborate on this ticket through the Zammad platform.
+    #{shared_with.firstname} now has access to view and collaborate on this ticket through the Zammad platform.
   </p>
   
   <div style="text-align: center; margin: 32px 0;">

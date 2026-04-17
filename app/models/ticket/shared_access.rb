@@ -89,6 +89,7 @@ class Ticket::SharedAccess < ApplicationModel
   end
 
   def notify_shared_user
+    # Notify the newly shared user
     OnlineNotification.add(
       type:          'create',
       object:        'Ticket',
@@ -98,8 +99,54 @@ class Ticket::SharedAccess < ApplicationModel
       user_id:       user_id,
     )
     send_share_email
+
+    # Also notify the ticket owner that their ticket was shared
+    notify_ticket_owner_of_share
   rescue => e
     Rails.logger.warn "Failed to send share notification email: #{e.message}"
+  end
+
+  def notify_ticket_owner_of_share
+    return if ticket.customer_id == created_by_id # Owner shared it themselves
+    return if ticket.customer_id == user_id # Can't happen due to validation, but safety check
+
+    ticket_owner = User.find_by(id: ticket.customer_id)
+    return if ticket_owner.blank? || !ticket_owner.active?
+
+    OnlineNotification.add(
+      type:          'update',
+      object:        'Ticket',
+      o_id:          ticket_id,
+      seen:          false,
+      created_by_id: created_by_id,
+      user_id:       ticket_owner.id,
+    )
+    
+    # Send email notification to ticket owner
+    send_owner_notification_email(ticket_owner)
+  end
+  
+  def send_owner_notification_email(ticket_owner)
+    return if ticket_owner.email.blank?
+
+    shared_by = User.find(created_by_id)
+    shared_with = user
+
+    result = NotificationFactory::Mailer.template(
+      template:   'ticket_shared_by_customer',
+      locale:     ticket_owner.preferences[:locale] || Locale.default,
+      objects:    { ticket: ticket, recipient: ticket_owner, shared_by: shared_by, shared_with: shared_with },
+      standalone: true,
+    )
+
+    NotificationFactory::Mailer.deliver(
+      recipient:    ticket_owner,
+      subject:      result[:subject],
+      body:         result[:body],
+      content_type: 'text/html',
+      message_id:   "<ticket_shared_by_customer.#{ticket.id}.#{ticket_owner.id}.#{SecureRandom.uuid}@#{Setting.get('fqdn')}>",
+      references:   ticket.get_references,
+    )
   end
 
   def send_share_email

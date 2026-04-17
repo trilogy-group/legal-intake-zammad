@@ -1,0 +1,14 @@
+Ticket updated: #{ticket.title}
+
+Hello #{recipient.firstname},
+
+Your ticket "#{ticket.title}" has been updated.
+
+<% if @objects[:changes].present? %>
+Changes:
+<% @objects[:changes].each do |key, value| %>
+- <%= t key %>: <%= h value[0] %> → <%= h value[1] %>
+<% end %>
+<% end %>
+
+View Ticket: #{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}

@@ -1,24 +1,29 @@
-New ticket (#{ticket.title})
+New ticket: #{ticket.title}
 
-<div>Hi #{recipient.firstname},</div>
-<br>
-<div>The new ticket (#{ticket.title}) has been created by "<b>#{current_user.longname}</b>".</div>
-<br>
-<div>
-Group: #{ticket.group.name}<br>
-Owner: #{ticket.owner.fullname}<br>
-State: #{t(ticket.state.name)}<br>
-</div>
-<br>
-<% if @objects[:article] %>
-  <div>
-  Information:
-  <blockquote type="cite">
-  #{article.body_as_html}
-  </blockquote>
+<div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
+  <div style="text-align: center; margin-bottom: 32px;">
+    <h1 style="font-size: 24px; font-weight: bold; color: #1f2937; margin: 0;">Legal Intake</h1>
   </div>
-<% end %>
-<br>
-<div>
-  <a href="#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}" target="zammad_app">View this in #{config.product_name}</a>
+  
+  <p style="font-size: 16px;">Hello #{recipient.firstname},</p>
+  
+  <p style="font-size: 16px;">
+    Thank you for your request. We have created a ticket "<strong>#{ticket.title}</strong>" for your request. Our team will review it shortly.
+  </p>
+  
+  <p style="font-size: 16px;">
+    You can track the status and any updates to your ticket using the link below.
+  </p>
+  
+  <div style="text-align: center; margin: 32px 0;">
+    <a href="#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}" 
+       style="background-color: #3D99F5; color: #ffffff; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 500; display: inline-block;">
+      View Ticket
+    </a>
+  </div>
+  
+  <p style="font-size: 14px; color: #6b7280;">
+    If you're unable to click the button above, you can copy and paste this link:<br/>
+    <a href="#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}">#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}</a>
+  </p>
 </div>

@@ -1,0 +1,9 @@
+Ticket resolved: #{ticket.title}
+
+Hello #{recipient.firstname},
+
+Great news! Your ticket "#{ticket.title}" has been resolved by #{current_user.firstname} #{current_user.lastname}.
+
+You can now view the resolution details and any final deliverables on the Legal Intake platform.
+
+View Resolved Ticket: #{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}

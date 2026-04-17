@@ -1,4 +1,4 @@
-Ticket shared: #{ticket.title}
+Ticket status updated: #{ticket.title}
 
 <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
   <div style="text-align: center; margin-bottom: 32px;">
@@ -8,11 +8,11 @@ Ticket shared: #{ticket.title}
   <p style="font-size: 16px;">Hello #{recipient.firstname},</p>
   
   <p style="font-size: 16px;">
-    #{shared_by.firstname} #{shared_by.lastname} has shared the ticket "<strong>#{ticket.title}</strong>" with you.
+    The status of your ticket "<strong>#{ticket.title}</strong>" has been updated to <strong>#{ticket.state.name}</strong>.
   </p>
   
   <p style="font-size: 16px;">
-    You can now view and collaborate on this ticket through the Zammad platform.
+    You can view the latest details and any updates on the ticket.
   </p>
   
   <div style="text-align: center; margin: 32px 0;">

@@ -1,4 +1,4 @@
-Ticket shared: #{ticket.title}
+Sent for Signature: #{ticket.title}
 
 <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
   <div style="text-align: center; margin-bottom: 32px;">
@@ -8,16 +8,16 @@ Ticket shared: #{ticket.title}
   <p style="font-size: 16px;">Hello #{recipient.firstname},</p>
   
   <p style="font-size: 16px;">
-    #{shared_by.firstname} #{shared_by.lastname} has shared the ticket "<strong>#{ticket.title}</strong>" with you.
+    Your ticket "<strong>#{ticket.title}</strong>" has been sent for signature by #{current_user.firstname} #{current_user.lastname}.
   </p>
   
   <p style="font-size: 16px;">
-    You can now view and collaborate on this ticket through the Zammad platform.
+    The documents are currently in the signature process. You will be notified once all signatures have been completed.
   </p>
   
   <div style="text-align: center; margin: 32px 0;">
     <a href="#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}" 
-       style="background-color: #3D99F5; color: #ffffff; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 500; display: inline-block;">
+       style="background-color: #3b82f6; color: #ffffff; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 500; display: inline-block;">
       View Ticket
     </a>
   </div>
@@ -25,5 +25,9 @@ Ticket shared: #{ticket.title}
   <p style="font-size: 14px; color: #6b7280;">
     If you're unable to click the button above, you can copy and paste this link:<br/>
     <a href="#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}">#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}</a>
+  </p>
+  
+  <p style="font-size: 12px; color: #6b7280; margin-top: 32px;">
+    You are receiving this because you are a member of the group of this ticket.
   </p>
 </div>

@@ -1,0 +1,14 @@
+New comment: #{ticket.title}
+
+Hello #{recipient.firstname},
+
+A new comment has been added to your ticket "#{ticket.title}".
+
+--- Comment ---
+#{commenter.firstname} #{commenter.lastname} commented:
+#{article.body_as_text}
+---------------
+
+You're receiving this notification because #{reason}. Join the discussion to stay updated on the latest developments.
+
+View Ticket: #{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}

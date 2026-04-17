@@ -264,6 +264,80 @@ RSpec.describe Transaction::Notification, type: :model do
 
   it_behaves_like 'ChecksHumanChanges'
 
+  describe '#determine_update_template' do
+    let(:group)    { create(:group) }
+    let(:agent)    { create(:agent, groups: [group]) }
+    let(:customer) { create(:customer) }
+    let(:ticket)   { create(:ticket, group: group, customer: customer) }
+
+    it 'returns ticket_comment_added when article present' do
+      article = create(:ticket_article, ticket: ticket, created_by: agent)
+      instance = build(ticket, agent, 'update')
+      template = instance.send(:determine_update_template, ticket, article, {})
+      expect(template).to eq('ticket_comment_added')
+    end
+
+    it 'returns ticket_state_resolved when state changes to closed' do
+      closed_state = Ticket::State.find_by(name: 'closed')
+      open_state = Ticket::State.find_by(name: 'open')
+      changes = { 'state_id' => [open_state.id, closed_state.id] }
+      instance = build(ticket, agent, 'update')
+      template = instance.send(:determine_update_template, ticket, nil, changes)
+      expect(template).to eq('ticket_state_resolved')
+    end
+
+    it 'returns ticket_state_reopened when reopening from closed' do
+      closed_state = Ticket::State.find_by(name: 'closed')
+      open_state = Ticket::State.find_by(name: 'open')
+      changes = { 'state_id' => [closed_state.id, open_state.id] }
+      instance = build(ticket, agent, 'update')
+      template = instance.send(:determine_update_template, ticket, nil, changes)
+      expect(template).to eq('ticket_state_reopened')
+    end
+
+    it 'returns ticket_assigned when owner changes' do
+      another_agent = create(:agent, groups: [group])
+      changes = { 'owner_id' => [agent.id, another_agent.id] }
+      instance = build(ticket, agent, 'update')
+      template = instance.send(:determine_update_template, ticket, nil, changes)
+      expect(template).to eq('ticket_assigned')
+    end
+
+    it 'returns ticket_priority_changed when priority changes' do
+      priority_low = Ticket::Priority.find_by(name: '1 low')
+      priority_high = Ticket::Priority.find_by(name: '3 high')
+      changes = { 'priority_id' => [priority_low.id, priority_high.id] }
+      instance = build(ticket, agent, 'update')
+      template = instance.send(:determine_update_template, ticket, nil, changes)
+      expect(template).to eq('ticket_priority_changed')
+    end
+
+    it 'returns ticket_state_changed for other state changes' do
+      new_state = Ticket::State.find_by(name: 'new')
+      open_state = Ticket::State.find_by(name: 'open')
+      changes = { 'state_id' => [new_state.id, open_state.id] }
+      instance = build(ticket, agent, 'update')
+      template = instance.send(:determine_update_template, ticket, nil, changes)
+      expect(template).to eq('ticket_state_changed')
+    end
+
+    it 'returns ticket_update as fallback' do
+      changes = { 'title' => ['Old', 'New'] }
+      instance = build(ticket, agent, 'update')
+      template = instance.send(:determine_update_template, ticket, nil, changes)
+      expect(template).to eq('ticket_update')
+    end
+
+    it 'prioritizes article over other changes' do
+      article = create(:ticket_article, ticket: ticket, created_by: agent)
+      another_agent = create(:agent, groups: [group])
+      changes = { 'owner_id' => [agent.id, another_agent.id] }
+      instance = build(ticket, agent, 'update')
+      template = instance.send(:determine_update_template, ticket, article, changes)
+      expect(template).to eq('ticket_comment_added')
+    end
+  end
+
   def run(ticket, user, type)
     build(ticket, user, type).perform
   end
