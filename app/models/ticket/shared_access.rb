@@ -102,6 +102,8 @@ class Ticket::SharedAccess < ApplicationModel
 
     # Also notify the ticket owner that their ticket was shared
     notify_ticket_owner_of_share
+  rescue => e
+    Rails.logger.warn "Failed to send share notification email: #{e.message}"
   end
 
   def notify_ticket_owner_of_share

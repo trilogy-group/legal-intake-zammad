@@ -33,13 +33,18 @@ class TicketSharedAccessesController < ApplicationController
 
   # DELETE /api/v1/ticket_shared_accesses/:id
   def destroy
-    # Scope to shared accesses for tickets the user owns or has access to
-    accessible_ticket_ids = Ticket.left_joins(:shared_accesses)
-                                  .where('tickets.customer_id = :user_id OR ticket_shared_accesses.user_id = :user_id', user_id: current_user.id)
-                                  .distinct
-                                  .pluck(:id)
-
-    shared_access = Ticket::SharedAccess.where(ticket_id: accessible_ticket_ids).find(params[:id])
+    if current_user.permissions?('admin')
+      # Admins can remove any shared access (for API/automation purposes)
+      shared_access = Ticket::SharedAccess.find(params[:id])
+    else
+      # Customers can only remove shared accesses for tickets they own or have access to
+      accessible_ticket_ids = Ticket.left_joins(:shared_accesses)
+                                    .where('tickets.customer_id = :user_id OR ticket_shared_accesses.user_id = :user_id', user_id: current_user.id)
+                                    .distinct
+                                    .pluck(:id)
+      shared_access = Ticket::SharedAccess.where(ticket_id: accessible_ticket_ids).find(params[:id])
+    end
+    
     shared_access.destroy!
 
     render json: true, status: :ok
@@ -76,12 +81,17 @@ class TicketSharedAccessesController < ApplicationController
   private
 
   def ticket
-    # Scope to tickets the user owns or has shared access to
     @ticket ||= begin
-      accessible_tickets = Ticket.left_joins(:shared_accesses)
-                                 .where('tickets.customer_id = :user_id OR ticket_shared_accesses.user_id = :user_id', user_id: current_user.id)
-                                 .distinct
-      accessible_tickets.find(params[:ticket_id])
+      # Admins can access any ticket (for API/automation purposes)
+      if current_user.permissions?('admin')
+        Ticket.find(params[:ticket_id])
+      else
+        # Customers can only access tickets they own or have shared access to
+        accessible_tickets = Ticket.left_joins(:shared_accesses)
+                                   .where('tickets.customer_id = :user_id OR ticket_shared_accesses.user_id = :user_id', user_id: current_user.id)
+                                   .distinct
+        accessible_tickets.find(params[:ticket_id])
+      end
     end
   rescue ActiveRecord::RecordNotFound
     raise Exceptions::UnprocessableEntity, __('Ticket not found.')
