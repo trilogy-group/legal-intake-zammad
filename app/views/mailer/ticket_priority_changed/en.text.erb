@@ -1,0 +1,9 @@
+Ticket priority updated: #{ticket.title}
+
+Hello #{recipient.firstname},
+
+The priority of your ticket "#{ticket.title}" has been updated to #{ticket.priority.name}.
+
+You can view the latest details and any updates on the ticket.
+
+View Ticket: #{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}

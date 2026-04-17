@@ -1,0 +1,33 @@
+Documents Signed: #{ticket.title}
+
+<div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
+  <div style="text-align: center; margin-bottom: 32px;">
+    <h1 style="font-size: 24px; font-weight: bold; color: #1f2937; margin: 0;">Legal Intake</h1>
+  </div>
+  
+  <p style="font-size: 16px;">Hello #{recipient.firstname},</p>
+  
+  <p style="font-size: 16px;">
+    Excellent news! All required signatures have been completed for your ticket "<strong>#{ticket.title}</strong>".
+  </p>
+  
+  <p style="font-size: 16px;">
+    You can now download the fully signed documents from the ticket.
+  </p>
+  
+  <div style="text-align: center; margin: 32px 0;">
+    <a href="#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}" 
+       style="background-color: #16a34a; color: #ffffff; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 500; display: inline-block;">
+      Download Signed Documents
+    </a>
+  </div>
+  
+  <p style="font-size: 14px; color: #6b7280;">
+    If you're unable to click the button above, you can copy and paste this link:<br/>
+    <a href="#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}">#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}</a>
+  </p>
+  
+  <p style="font-size: 12px; color: #6b7280; margin-top: 32px;">
+    You are receiving this because you are a member of the group of this ticket.
+  </p>
+</div>

@@ -2,11 +2,11 @@
 
 class CreateTicketSharedAccesses < ActiveRecord::Migration[8.0]
   def change
-    create_table :ticket_shared_accesses do |t|
-      t.references :ticket,       null: false, foreign_key: true
-      t.references :user,         null: false, foreign_key: { to_table: :users }
-      t.references :created_by,   null: false, foreign_key: { to_table: :users }
-      t.references :updated_by,   null: false, foreign_key: { to_table: :users }
+    create_table :ticket_shared_accesses, id: :integer do |t|
+      t.references :ticket,       null: false, foreign_key: true, type: :integer
+      t.references :user,         null: false, foreign_key: { to_table: :users }, type: :integer
+      t.references :created_by,   null: false, foreign_key: { to_table: :users }, type: :integer
+      t.references :updated_by,   null: false, foreign_key: { to_table: :users }, type: :integer
       t.timestamps limit: 3, null: false
     end
 

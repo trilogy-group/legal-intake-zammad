@@ -5,7 +5,7 @@ require 'rails_helper'
 RSpec.describe TicketPolicy, 'shared access' do
   subject(:policy) { described_class.new(user, record) }
 
-  let(:record)   { create(:ticket, customer: ticket_customer) }
+  let(:record)          { create(:ticket, customer: ticket_customer) }
   let(:ticket_customer) { create(:customer) }
 
   context 'when user has shared access to the ticket' do
@@ -23,10 +23,10 @@ RSpec.describe TicketPolicy, 'shared access' do
   end
 
   context 'when user has shared access from a different organization' do
-    let(:org1) { create(:organization) }
-    let(:org2) { create(:organization) }
+    let(:org1)            { create(:organization) }
+    let(:org2)            { create(:organization) }
     let(:ticket_customer) { create(:customer, organization: org1) }
-    let(:user) { create(:customer, organization: org2) }
+    let(:user)            { create(:customer, organization: org2) }
 
     before { Ticket::SharedAccess.share!(record, user, created_by: ticket_customer) }
 

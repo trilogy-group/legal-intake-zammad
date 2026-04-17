@@ -1,0 +1,11 @@
+Ready for Signature: #{ticket.title}
+
+Hello #{recipient.firstname},
+
+Great News! #{current_user.firstname} #{current_user.lastname} has uploaded final documents for the ticket "#{ticket.title}" and marked them ready for signature.
+
+You can now view the final documents in the ticket details.
+
+View Ticket: #{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}
+
+You are receiving this because you are a member of the group of this ticket.

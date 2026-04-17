@@ -1,0 +1,24 @@
+Internal Note: #{ticket.title}
+
+Hello #{recipient.firstname},
+
+#{commenter.firstname} #{commenter.lastname} added an internal note to ticket "#{ticket.title}".
+
+<% if @objects[:article] && @objects[:article].body.present? %>
+---
+Internal Note:
+#{commenter.firstname} #{commenter.lastname} wrote:
+
+<%= @objects[:article].body_as_text %>
+
+<% if @objects[:article].attachments.any? %>
+📎 <%= @objects[:article].attachments.count %> attachment<% if @objects[:article].attachments.count != 1 %>s<% end %>
+<% end %>
+---
+<% end %>
+
+Note: This is an internal note visible only to agents and not visible to customers.
+
+View Ticket: #{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}
+
+You are receiving this because you are a member of the group of this ticket.

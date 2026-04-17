@@ -13,6 +13,7 @@ class TicketPolicy < ApplicationPolicy
       super
     end
 
+    # rubocop:disable Metrics/AbcSize
     def resolve
       raise NoMethodError, <<~ERR.chomp if instance_of?(TicketPolicy::BaseScope)
         specify an access type using a subclass of TicketPolicy::BaseScope
@@ -45,6 +46,7 @@ class TicketPolicy < ApplicationPolicy
 
       scope.where sql.join(' OR '), *bind
     end
+    # rubocop:enable Metrics/AbcSize
 
     # #resolve is UNDEFINED BEHAVIOR for the abstract base class (but not its subclasses)
     def respond_to?(*args)

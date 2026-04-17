@@ -1,0 +1,99 @@
+name: ecr-release
+
+on:
+  push:
+    branches:
+      - main
+      - feat/ecr-release  # For testing purposes
+
+jobs:
+  ecr-build-image:
+    runs-on: ubuntu-24.04-arm
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v6
+        with:
+            fetch-depth: 0
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}  # e.g., us-east-1
+
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v2
+
+      - name: Set image tag
+        id: image-tag
+        run: |
+          ECR_REGISTRY="${{ steps.login-ecr.outputs.registry }}"
+          ECR_REPOSITORY="${{ secrets.ECR_REPOSITORY_NAME }}"
+          
+          # Get short SHA (7 characters)
+          SHORT_SHA=$(git rev-parse --short=7 HEAD)
+          
+          # Get branch name and replace slashes with dashes
+          BRANCH_NAME=$(echo "${GITHUB_REF#refs/heads/}" | sed 's/\//-/g')
+          
+          # Construct tag
+          TAG="${BRANCH_NAME}-${SHORT_SHA}-arm64"
+          
+          echo "tag=${ECR_REGISTRY}/${ECR_REPOSITORY}:${TAG}" >> $GITHUB_OUTPUT
+          echo "registry=${ECR_REGISTRY}" >> $GITHUB_OUTPUT
+          echo "repository=${ECR_REPOSITORY}" >> $GITHUB_OUTPUT
+          echo "version=${TAG}" >> $GITHUB_OUTPUT
+          
+          echo "Building tag: ${TAG}"
+          if [ "${BRANCH_NAME}" = "main" ]; then
+            echo "Will also tag as: latest"
+          fi
+
+      - name: Build and push (main branch with latest tag)
+        if: github.ref == 'refs/heads/main'
+        id: docker_build_main
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          build-args: |
+            COMMIT_SHA=${{ github.sha }}
+          pull: true
+          push: true
+          tags: |
+            ${{ steps.image-tag.outputs.tag }}
+            ${{ steps.image-tag.outputs.registry }}/${{ steps.image-tag.outputs.repository }}:latest
+          platforms: linux/arm64
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Build and push (non-main branch, no latest tag)
+        if: github.ref != 'refs/heads/main'
+        id: docker_build_branch
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          build-args: |
+            COMMIT_SHA=${{ github.sha }}
+          pull: true
+          push: true
+          tags: ${{ steps.image-tag.outputs.tag }}
+          platforms: linux/arm64
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Output image details
+        run: |
+          echo "✅ Successfully pushed ARM64 image(s) to ECR:"
+          echo "   📦 Versioned: ${{ steps.image-tag.outputs.tag }}"
+          if [ "${{ github.ref }}" = "refs/heads/main" ]; then
+            echo "   📦 Latest: ${{ steps.image-tag.outputs.registry }}/${{ steps.image-tag.outputs.repository }}:latest"
+            echo "Image digest: ${{ steps.docker_build_main.outputs.digest }}"
+          else
+            echo "Image digest: ${{ steps.docker_build_branch.outputs.digest }}"
+          fi
+          echo "   🔧 Architecture: ARM64 (for t4g Graviton instances)"

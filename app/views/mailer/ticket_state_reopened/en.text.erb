@@ -1,0 +1,9 @@
+Ticket reopened: #{ticket.title}
+
+Hello #{recipient.firstname},
+
+Your ticket "#{ticket.title}" (Ticket ##{ticket.number}) has been reopened by #{current_user.firstname} #{current_user.lastname}.
+
+This ticket requires additional attention. Please review the latest updates and respond if needed.
+
+View Ticket: #{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}
