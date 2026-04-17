@@ -98,6 +98,8 @@ class Ticket::SharedAccess < ApplicationModel
       user_id:       user_id,
     )
     send_share_email
+  rescue => e
+    Rails.logger.warn "Failed to send share notification email: #{e.message}"
   end
 
   def send_share_email
