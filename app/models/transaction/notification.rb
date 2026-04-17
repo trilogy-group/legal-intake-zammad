@@ -89,12 +89,14 @@ class Transaction::Notification
     end
     
     # Check if this is a regular comment (non-internal)
-    if article
+    # BUT: If this is the first article of a newly created ticket, treat it as creation, not comment
+    if article && @item[:type] == 'update'
       send_comment_notification_with_cc(article)
       return
     end
 
     # For creation notifications, send ONE email with CC (customer To, agents CC)
+    # This handles both: ticket creation without article AND ticket creation with first article
     if @item[:type] == 'create'
       send_creation_notification_with_cc
     # For assignment notifications, send ONE email with CC instead of separate emails
@@ -325,7 +327,9 @@ class Transaction::Notification
     customer_recipient = recipients_and_channels.find { |r| r[:user].id == customer.id }
     
     # If customer is not in recipients, something went wrong
-    return if !customer_recipient
+    if !customer_recipient
+      return
+    end
 
     # Collect CC recipients (agents with full permission)
     cc_recipients = recipients_and_channels.reject { |r| r[:user].id == customer.id }
