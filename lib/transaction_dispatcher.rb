@@ -7,7 +7,6 @@ class TransactionDispatcher
   end
 
   def self.commit(params = {})
-
     # add attribute of interface handle (e. g. to send (no) notifications if a agent
     # is creating a ticket via application_server, but send it if it's created via
     # postmaster)
@@ -121,8 +120,13 @@ class TransactionDispatcher
       article = nil
       if event[:object] == 'Ticket::Article'
         article = Ticket::Article.find_by(id: event[:id])
-        next if !article
-        next if event[:type] == 'update'
+        if !article
+          next
+        end
+        
+        if event[:type] == 'update'
+          next
+        end
 
         # set new event infos
         ticket = Ticket.find_by(id: article.ticket_id)
@@ -192,6 +196,7 @@ class TransactionDispatcher
       created_at: Time.zone.now,
     }
     EventBuffer.add('transaction', e)
+    
     true
   end
 

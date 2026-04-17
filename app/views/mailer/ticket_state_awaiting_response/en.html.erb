@@ -11,23 +11,8 @@ Awaiting Response: #{ticket.title}
     The legal team needs additional information regarding your ticket "<strong>#{ticket.title}</strong>" before they can proceed.
   </p>
   
-  <% if article && article.body.present? %>
-  <div style="background-color: #f3f4f6; border-left: 4px solid #8b5cf6; padding: 16px; margin: 20px 0; border-radius: 4px;">
-    <p style="font-size: 14px; font-weight: 600; margin: 0 0 8px 0; color: #6b7280;">Latest Comment:</p>
-    <p style="font-size: 14px; color: #374151; margin: 0 0 8px 0; line-height: 1.5;">
-      <strong style="color: #8b5cf6;">#{article.created_by.firstname} #{article.created_by.lastname} commented:</strong><br/>
-      <%= HtmlSanitizer.dynamic_image_size(article.body_as_html).html_safe %>
-    </p>
-    <% if article.attachments.any? %>
-    <p style="font-size:12px;line-height:24px;color:#7c3aed;margin:8px 0 0 0;font-weight:500">
-      📎 #{article.attachments.count} attachment<% if article.attachments.count != 1 %>s<% end %>
-    </p>
-    <% end %>
-  </div>
-  <% end %>
-  
   <p style="font-size: 16px;">
-    Please review the comment above and provide the requested information. The legal team will be able to continue processing your ticket once they receive your response.
+    Please review your ticket and provide the requested information. The legal team will be able to continue processing your ticket once they receive your response.
   </p>
   
   <div style="text-align: center; margin: 32px 0;">
@@ -40,5 +25,9 @@ Awaiting Response: #{ticket.title}
   <p style="font-size: 14px; color: #6b7280;">
     If you're unable to click the button above, you can copy and paste this link:<br/>
     <a href="#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}">#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}</a>
+  </p>
+  
+  <p style="font-size: 12px; color: #6b7280; margin-top: 32px;">
+    You are receiving this because you are a member of the group of this ticket.
   </p>
 </div>

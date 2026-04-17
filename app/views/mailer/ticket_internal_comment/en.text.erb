@@ -4,15 +4,15 @@ Hello #{recipient.firstname},
 
 #{commenter.firstname} #{commenter.lastname} added an internal note to ticket "#{ticket.title}".
 
-<% if article && article.body.present? %>
+<% if @objects[:article] && @objects[:article].body.present? %>
 ---
 Internal Note:
 #{commenter.firstname} #{commenter.lastname} wrote:
 
-#{article.body_as_text}
+<%= @objects[:article].body_as_text %>
 
-<% if article.attachments.any? %>
-📎 #{article.attachments.count} attachment<% if article.attachments.count != 1 %>s<% end %>
+<% if @objects[:article].attachments.any? %>
+📎 <%= @objects[:article].attachments.count %> attachment<% if @objects[:article].attachments.count != 1 %>s<% end %>
 <% end %>
 ---
 <% end %>

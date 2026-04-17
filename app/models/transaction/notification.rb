@@ -58,23 +58,31 @@ class Transaction::Notification
   end
 
   def perform
-
     # return if we run import mode
-    return if Setting.get('import_mode')
-    return if %w[Ticket Ticket::Article].exclude?(@item[:object])
-    return if @params[:disable_notification]
-    return if !ticket
+    if Setting.get('import_mode')
+      return
+    end
+    
+    if %w[Ticket Ticket::Article].exclude?(@item[:object])
+      return
+    end
+    
+    if @params[:disable_notification]
+      return
+    end
+    
+    if !ticket
+      return
+    end
 
     # Block ALL notifications (email and in-app) for submitted_to_legal state
     if ticket.state.name == 'submitted_to_legal'
-      Rails.logger.debug { "Blocking notifications for submitted_to_legal state (ticket #{ticket.id})" }
       return
     end
 
     prepare_recipients_and_reasons
     
     # Check if this is an internal comment (agent inter-communication)
-    article = @item[:object] == 'Ticket::Article' ? Ticket::Article.find_by(id: @item[:object_id]) : nil
     if article&.internal
       send_internal_comment_notification(article)
       return
@@ -307,7 +315,6 @@ class Transaction::Notification
       add_recipient_list_to_history(ticket, r[:user], r[:channels].keys, 'update') if r[:channels]['email']
     end
 
-    Rails.logger.debug { "sent assignment email to owner (#{ticket.id}/#{owner.email}) with CC (#{cc_emails})" }
   end
 
   def send_creation_notification_with_cc
@@ -396,7 +403,6 @@ class Transaction::Notification
       add_recipient_list_to_history(ticket, r[:user], r[:channels].keys, 'create') if r[:channels]['email']
     end
 
-    Rails.logger.debug { "sent creation email to customer (#{ticket.id}/#{customer.email}) with CC (#{cc_emails})" }
   end
 
   def send_state_change_notification_with_cc
@@ -407,10 +413,12 @@ class Transaction::Notification
     customer_recipient = recipients_and_channels.find { |r| r[:user].id == customer.id }
     
     # If customer is not in recipients, something went wrong
-    return if !customer_recipient
+    if !customer_recipient
+      return
+    end
 
     # Collect CC recipients (shared customers + agents with full access)
-    cc_recipients = recipients_and_channels.reject { |r| r[:user].id == customer.id }
+    cc_recipients = recipients_and_channels.reject { |r| r[:user].id == customer.id || r[:user].id == current_user.id }
     
     # Send online notifications to all recipients
     recipients_and_channels.each do |recipient_settings|
@@ -422,7 +430,9 @@ class Transaction::Notification
 
     # Prepare email recipients
     # Only send email if customer wants email notifications
-    return if !customer_recipient[:channels]['email']
+    if !customer_recipient[:channels]['email']
+      return
+    end
 
     # Build CC list from recipients who want email
     cc_emails = cc_recipients
@@ -486,7 +496,6 @@ class Transaction::Notification
       add_recipient_list_to_history(ticket, r[:user], r[:channels].keys, 'update') if r[:channels]['email']
     end
 
-    Rails.logger.debug { "sent state change email (#{ticket.state.name}) to customer (#{ticket.id}/#{customer.email}) with CC (#{cc_emails})" }
   end
 
   def send_comment_notification_with_cc(article)
@@ -567,9 +576,11 @@ class Transaction::Notification
       template:   'ticket_comment_added',
       locale:     primary_recipient.preferences[:locale] || Locale.default,
       objects:    {
-        ticket:    ticket,
-        article:   article,
-        recipient: primary_recipient,
+        ticket:       ticket,
+        article:      article,
+        recipient:    primary_recipient,
+        current_user: commenter,
+        commenter:    commenter,
       },
       standalone: false,
     )
@@ -603,7 +614,6 @@ class Transaction::Notification
       add_recipient_list_to_history(ticket, cc_user, ['email'], 'update')
     end
     
-    Rails.logger.debug { "sent comment email to #{primary_recipient.email} with CC (#{cc_emails})" }
   end
 
   def send_under_legal_review_notification_with_cc
@@ -735,7 +745,6 @@ class Transaction::Notification
       add_recipient_list_to_history(ticket, r[:user], r[:channels].keys, 'update')
     end
 
-    Rails.logger.debug { "sent under_legal_review email to #{primary_recipient.email} with CC (#{cc_emails})" }
   end
 
   def send_internal_comment_notification(article)
@@ -743,26 +752,51 @@ class Transaction::Notification
     commenter = article.created_by
     assigned_owner = ticket.owner_id != 1 ? ticket.owner : nil
     
+    
     # Get all agents with full group access (legal admins, system admins, agents with full permission)
     all_agents_with_full_access = User.group_access(ticket.group_id, 'full')
       .select { |u| u.active? && u.permissions?('ticket.agent') }
+    
     
     # Determine recipients based on who commented
     to_recipients = []
     cc_recipients = []
     
     if assigned_owner && commenter.id == assigned_owner.id
-      # Case 1: Assigned owner commented → Send individual emails to ALL legal admins (no CC)
+      # Case 1: Assigned owner commented → Send one email to ALL legal admins (grouped in To:)
       all_agents_with_full_access.each do |agent|
-        next if agent.id == commenter.id # Don't send to commenter themselves
-        next if !can_receive_notification?(agent, 'email')
+        if agent.id == commenter.id
+          next
+        end
         
-        to_recipients << agent
+        can_receive = can_receive_notification?(agent, 'email')
+        
+        if can_receive
+          to_recipients << agent
+        end
       end
       
-      # Send individual emails to each legal admin (To only, no CC)
+      
+      # If no valid recipients, return early
+      if to_recipients.empty?
+        return
+      end
+      
+      # Send one email with all legal admins in To: field
+      # Use the first recipient as primary for template rendering
+      primary_recipient = to_recipients.first
+      
+      # Build To: list with all legal admins
+      to_emails = to_recipients
+        .map { |u| "#{u.firstname} #{u.lastname} <#{u.email}>" }
+        .join(', ')
+      
+      send_internal_comment_email_to_multiple(ticket, article, commenter, to_recipients, to_emails)
+      
+      # Add notification history and in-app notifications for all recipients
       to_recipients.each do |recipient|
-        send_internal_comment_email(ticket, article, commenter, recipient, nil)
+        add_recipient_list_to_history(ticket, recipient, ['email'], 'update')
+        send_to_single_recipient_online(recipient, ticket, article)
       end
     else
       # Case 2: Legal admin (or other agent with full access) commented
@@ -774,9 +808,19 @@ class Transaction::Notification
       end
       
       all_agents_with_full_access.each do |agent|
-        next if agent.id == commenter.id # Don't send to commenter themselves
-        next if assigned_owner && agent.id == assigned_owner.id # Owner is already primary recipient
-        next if !can_receive_notification?(agent, 'email')
+        if agent.id == commenter.id
+          next
+        end
+        
+        if assigned_owner && agent.id == assigned_owner.id
+          next
+        end
+        
+        can_receive = can_receive_notification?(agent, 'email')
+        
+        if !can_receive
+          next
+        end
         
         if primary_recipient.nil?
           primary_recipient = agent
@@ -786,7 +830,10 @@ class Transaction::Notification
       end
       
       # If no valid recipients, return early
-      return if primary_recipient.nil?
+      if primary_recipient.nil?
+        return
+      end
+      
       
       # Prepare CC emails
       cc_emails = cc_recipients
@@ -809,6 +856,7 @@ class Transaction::Notification
   end
   
   def send_internal_comment_email(ticket, article, commenter, recipient, cc_emails)
+    
     # Get attachments
     attachments = article.attachments_inline || []
     
@@ -854,7 +902,52 @@ class Transaction::Notification
     # Send in-app notification
     send_to_single_recipient_online(recipient, ticket, article)
     
-    Rails.logger.debug { "sent internal comment email to #{recipient.email}#{cc_emails.present? ? " with CC (#{cc_emails})" : ""}" }
+  end
+  
+  def send_internal_comment_email_to_multiple(ticket, article, commenter, recipients, to_emails)
+    
+    # Get attachments
+    attachments = article.attachments_inline || []
+    
+    # Use first recipient for template rendering (all will see the same content)
+    primary_recipient = recipients.first
+    
+    # Build email
+    result = NotificationFactory::Mailer.template(
+      template:   'ticket_internal_comment',
+      locale:     primary_recipient.preferences[:locale] || Locale.default,
+      objects:    {
+        ticket:    ticket,
+        article:   article,
+        recipient: primary_recipient,
+        commenter: commenter,
+      },
+      standalone: false,
+    )
+    
+    # Rebuild subject if needed
+    if ticket.respond_to?(:subject_build)
+      result[:subject] = ticket.subject_build(result[:subject])
+    end
+    
+    # Prepare body
+    if result[:body]
+      result[:body] = HtmlSanitizer.adjust_inline_image_size(result[:body])
+      result[:body] = HtmlSanitizer.dynamic_image_size(result[:body])
+    end
+    
+    # Send email with all recipients in To: field
+    NotificationFactory::Mailer.deliver(
+      recipient:    primary_recipient,
+      to:           to_emails,
+      subject:      result[:subject],
+      body:         result[:body],
+      content_type: 'text/html',
+      message_id:   "<notification.internal.#{DateTime.current.to_fs(:number)}.#{ticket.id}.#{SecureRandom.uuid}@#{Setting.get('fqdn')}>",
+      references:   ticket.get_references,
+      attachments:  attachments,
+    )
+    
   end
   
   def can_receive_notification?(user, channel)
@@ -978,7 +1071,6 @@ class Transaction::Notification
       created_by_id: created_by_id,
       user_id:       user.id,
     )
-    Rails.logger.debug { "sent ticket online notification to agent (#{@item[:type]}/#{ticket.id}/#{user.email})" }
   end
 
   def send_to_single_recipient_email(user, ticket, article, changes)
@@ -1025,7 +1117,6 @@ class Transaction::Notification
       main_object: ticket,
       attachments: attachments,
     )
-    Rails.logger.debug { "sent ticket email notification to agent (#{@item[:type]}/#{ticket.id}/#{user.email})" }
   end
 
   def determine_update_template(ticket, article, changes)
