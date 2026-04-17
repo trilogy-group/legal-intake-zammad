@@ -72,6 +72,19 @@ class Transaction::Notification
     end
 
     prepare_recipients_and_reasons
+    
+    # Check if this is an internal comment (agent inter-communication)
+    article = @item[:object] == 'Ticket::Article' ? Ticket::Article.find_by(id: @item[:object_id]) : nil
+    if article&.internal
+      send_internal_comment_notification(article)
+      return
+    end
+    
+    # Check if this is a regular comment (non-internal)
+    if article
+      send_comment_notification_with_cc(article)
+      return
+    end
 
     # For creation notifications, send ONE email with CC (customer To, agents CC)
     if @item[:type] == 'create'
@@ -79,8 +92,14 @@ class Transaction::Notification
     # For assignment notifications, send ONE email with CC instead of separate emails
     elsif @item[:type] == 'update' && @item[:changes]&.key?('owner_id')
       send_assignment_notification_with_cc
-    # For specific state changes (awaiting_response, ready_for_signature), use CC
-    elsif @item[:type] == 'update' && @item[:changes]&.key?('state_id') && %w[awaiting_response ready_for_signature].include?(ticket.state.name)
+    # For under_legal_review state - special CC logic
+    elsif @item[:type] == 'update' && @item[:changes]&.key?('state_id') && ticket.state.name == 'under_legal_review'
+      send_under_legal_review_notification_with_cc
+    # For specific state changes (awaiting_response, ready_for_signature, sent_for_signature, signed, resolved, reopened), use CC
+    elsif @item[:type] == 'update' && @item[:changes]&.key?('state_id') && %w[awaiting_response ready_for_signature sent_for_signature signed resolved].include?(ticket.state.name)
+      send_state_change_notification_with_cc
+    # For reopened state - check from closed states
+    elsif @item[:type] == 'update' && @item[:changes]&.key?('state_id') && is_reopened_state?(ticket, @item[:changes])
       send_state_change_notification_with_cc
     else
       # send notifications
@@ -470,6 +489,382 @@ class Transaction::Notification
     Rails.logger.debug { "sent state change email (#{ticket.state.name}) to customer (#{ticket.id}/#{customer.email}) with CC (#{cc_emails})" }
   end
 
+  def send_comment_notification_with_cc(article)
+    ticket = article.ticket
+    commenter = article.created_by
+    ticket_owner = ticket.owner_id != 1 ? ticket.owner : nil
+    ticket_creator = ticket.customer
+    
+    # Get all legal admins (agents with full group access)
+    all_agents_with_full_access = User.group_access(ticket.group_id, 'full')
+      .select { |u| u.active? && u.permissions?('ticket.agent') }
+    
+    # Get all shared customers
+    shared_customers = ticket.shared_accesses.includes(:user).map(&:user).select(&:active?)
+    
+    # Determine primary recipient (To:) and CC based on who commented
+    primary_recipient = nil
+    cc_user_list = []
+    
+    # Case 1: Ticket creator comments
+    if commenter.id == ticket_creator.id
+      # To: Owner of ticket
+      primary_recipient = ticket_owner
+      # CC: Legal admins + Shared customers
+      cc_user_list = all_agents_with_full_access + shared_customers
+      
+    # Case 2: Shared customer comments
+    elsif shared_customers.any? { |sc| sc.id == commenter.id }
+      # To: Owner of ticket
+      primary_recipient = ticket_owner
+      # CC: Legal admins + Other shared customers + Ticket creator
+      cc_user_list = all_agents_with_full_access + shared_customers.reject { |sc| sc.id == commenter.id }
+      cc_user_list << ticket_creator if ticket_creator && ticket_creator.id != commenter.id
+      
+    # Case 3: Owner of ticket comments
+    elsif ticket_owner && commenter.id == ticket_owner.id
+      # To: Ticket creator
+      primary_recipient = ticket_creator
+      # CC: Shared customers + Legal admins
+      cc_user_list = shared_customers + all_agents_with_full_access.reject { |a| a.id == commenter.id }
+      
+    # Case 4: Legal admin comments
+    elsif all_agents_with_full_access.any? { |a| a.id == commenter.id }
+      # To: Ticket creator
+      primary_recipient = ticket_creator
+      # CC: Owner + Shared customers
+      cc_user_list = shared_customers
+      cc_user_list << ticket_owner if ticket_owner && ticket_owner.id != commenter.id
+    end
+    
+    # If no primary recipient, fallback to standard flow
+    return if !primary_recipient || !primary_recipient.active?
+    
+    # Remove commenter and primary recipient from CC list
+    cc_user_list = cc_user_list.uniq.reject { |u| u.id == commenter.id || u.id == primary_recipient.id }
+    
+    # Filter CC recipients who want email notifications
+    cc_recipients = cc_user_list.select { |u| can_receive_notification?(u, 'email') }
+    
+    # Send in-app notifications to all (primary + CC)
+    [primary_recipient, *cc_recipients].each do |user|
+      send_to_single_recipient_online(user, ticket, article)
+    end
+    
+    # Check if primary recipient wants email
+    return if !can_receive_notification?(primary_recipient, 'email')
+    
+    # Build CC emails
+    cc_emails = cc_recipients
+      .map { |u| "#{u.firstname} #{u.lastname} <#{u.email}>" }
+      .join(', ')
+    
+    # Get attachments
+    attachments = article.attachments_inline || []
+    
+    # Build email
+    result = NotificationFactory::Mailer.template(
+      template:   'ticket_comment_added',
+      locale:     primary_recipient.preferences[:locale] || Locale.default,
+      objects:    {
+        ticket:    ticket,
+        article:   article,
+        recipient: primary_recipient,
+      },
+      standalone: false,
+    )
+    
+    # Rebuild subject if needed
+    if ticket.respond_to?(:subject_build)
+      result[:subject] = ticket.subject_build(result[:subject])
+    end
+    
+    # Prepare body
+    if result[:body]
+      result[:body] = HtmlSanitizer.adjust_inline_image_size(result[:body])
+      result[:body] = HtmlSanitizer.dynamic_image_size(result[:body])
+    end
+    
+    # Send email with CC
+    NotificationFactory::Mailer.deliver(
+      recipient:    primary_recipient,
+      subject:      result[:subject],
+      body:         result[:body],
+      content_type: 'text/html',
+      message_id:   "<notification.comment.#{DateTime.current.to_fs(:number)}.#{ticket.id}.#{primary_recipient.id}.#{SecureRandom.uuid}@#{Setting.get('fqdn')}>",
+      references:   ticket.get_references,
+      attachments:  attachments,
+      cc:           cc_emails.present? ? cc_emails : nil,
+    )
+    
+    # Add notification history
+    add_recipient_list_to_history(ticket, primary_recipient, ['email'], 'update')
+    cc_recipients.each do |cc_user|
+      add_recipient_list_to_history(ticket, cc_user, ['email'], 'update')
+    end
+    
+    Rails.logger.debug { "sent comment email to #{primary_recipient.email} with CC (#{cc_emails})" }
+  end
+
+  def send_under_legal_review_notification_with_cc
+    return if recipients_and_channels.blank?
+
+    # Determine primary recipient (To:)
+    # Primary is the ticket owner (who will be assigned to work on it)
+    owner = ticket.owner_id != 1 ? ticket.owner : nil
+    primary_recipient = owner || ticket.customer
+    
+    primary_recipient_settings = recipients_and_channels.find { |r| r[:user].id == primary_recipient.id }
+    return if !primary_recipient_settings
+
+    # Get who made the change
+    changer = User.find_by(id: @item[:user_id])
+    
+    # Build CC list:
+    # - All legal admins (users with "full" group access)
+    # - All shared customers
+    # BUT exclude:
+    # - The person who made the change (changer)
+    # - The primary recipient (they're in To)
+    
+    all_agents_with_full_access = User.group_access(ticket.group_id, 'full')
+      .select { |u| u.active? && u.permissions?('ticket.agent') }
+    
+    shared_customers = ticket.shared_accesses.includes(:user).map(&:user).select(&:active?)
+    
+    # If ticket creator made the change, include all shared customers in CC
+    # If shared customer made the change, include ticket creator + other shared customers in CC
+    cc_user_list = []
+    
+    # Add legal admins
+    all_agents_with_full_access.each do |agent|
+      next if changer && agent.id == changer.id # Don't include who made the change
+      next if agent.id == primary_recipient.id # Don't include primary recipient
+      cc_user_list << agent
+    end
+    
+    # Add shared customers
+    shared_customers.each do |shared_customer|
+      next if changer && shared_customer.id == changer.id # Don't include who made the change
+      next if shared_customer.id == primary_recipient.id # Don't include primary recipient
+      cc_user_list << shared_customer
+    end
+    
+    # Add ticket creator if not already included
+    if ticket.customer && ticket.customer.id != primary_recipient.id
+      if !changer || ticket.customer.id != changer.id
+        cc_user_list << ticket.customer
+      end
+    end
+    
+    # Remove duplicates
+    cc_user_list = cc_user_list.uniq
+    
+    # Filter CC recipients from recipients_and_channels who want email
+    cc_recipients = recipients_and_channels.select do |r|
+      cc_user_list.any? { |u| u.id == r[:user].id } && r[:channels]['email']
+    end
+    
+    # Send online notifications to all
+    recipients_and_channels.each do |recipient_settings|
+      user = recipient_settings[:user]
+      next if !recipient_settings[:channels]['online']
+      
+      send_to_single_recipient_online(user, ticket, article)
+    end
+
+    # Only send email if primary recipient wants email notifications
+    return if !primary_recipient_settings[:channels]['email']
+
+    # Build CC list
+    cc_emails = cc_recipients
+      .map { |r| "#{r[:user].firstname} #{r[:user].lastname} <#{r[:user].email}>" }
+      .join(', ')
+
+    # Get template and objects
+    changes = @item[:changes] || {}
+    template = determine_update_template(ticket, article, changes)
+    
+    attachments = []
+    if article
+      attachments = article.attachments_inline
+    end
+
+    # Build email body
+    result = NotificationFactory::Mailer.template(
+      template:   template,
+      locale:     primary_recipient.preferences[:locale] || Locale.default,
+      objects:    {
+        ticket:       ticket,
+        article:      article,
+        recipient:    primary_recipient,
+        current_user: current_user,
+        changes:      changes,
+        reason:       recipients_reason[primary_recipient.id],
+      },
+      standalone: false,
+    )
+
+    # Rebuild subject if needed
+    if ticket.respond_to?(:subject_build)
+      result[:subject] = ticket.subject_build(result[:subject])
+    end
+
+    # Prepare body
+    if result[:body]
+      result[:body] = HtmlSanitizer.adjust_inline_image_size(result[:body])
+      result[:body] = HtmlSanitizer.dynamic_image_size(result[:body])
+    end
+
+    # Send one email with CC
+    NotificationFactory::Mailer.deliver(
+      recipient:    primary_recipient,
+      subject:      result[:subject],
+      body:         result[:body],
+      content_type: 'text/html',
+      message_id:   "<notification.#{DateTime.current.to_fs(:number)}.#{ticket.id}.#{primary_recipient.id}.#{SecureRandom.uuid}@#{Setting.get('fqdn')}>",
+      references:   ticket.get_references,
+      attachments:  attachments,
+      cc:           cc_emails.present? ? cc_emails : nil,
+    )
+
+    # Add notification history
+    add_recipient_list_to_history(ticket, primary_recipient, primary_recipient_settings[:channels].keys, 'update')
+    
+    cc_recipients.each do |r|
+      add_recipient_list_to_history(ticket, r[:user], r[:channels].keys, 'update')
+    end
+
+    Rails.logger.debug { "sent under_legal_review email to #{primary_recipient.email} with CC (#{cc_emails})" }
+  end
+
+  def send_internal_comment_notification(article)
+    ticket = article.ticket
+    commenter = article.created_by
+    assigned_owner = ticket.owner_id != 1 ? ticket.owner : nil
+    
+    # Get all agents with full group access (legal admins, system admins, agents with full permission)
+    all_agents_with_full_access = User.group_access(ticket.group_id, 'full')
+      .select { |u| u.active? && u.permissions?('ticket.agent') }
+    
+    # Determine recipients based on who commented
+    to_recipients = []
+    cc_recipients = []
+    
+    if assigned_owner && commenter.id == assigned_owner.id
+      # Case 1: Assigned owner commented → Send individual emails to ALL legal admins (no CC)
+      all_agents_with_full_access.each do |agent|
+        next if agent.id == commenter.id # Don't send to commenter themselves
+        next if !can_receive_notification?(agent, 'email')
+        
+        to_recipients << agent
+      end
+      
+      # Send individual emails to each legal admin (To only, no CC)
+      to_recipients.each do |recipient|
+        send_internal_comment_email(ticket, article, commenter, recipient, nil)
+      end
+    else
+      # Case 2: Legal admin (or other agent with full access) commented
+      # To: Assigned owner, CC: All other legal admins
+      primary_recipient = nil
+      
+      if assigned_owner && assigned_owner.id != commenter.id && can_receive_notification?(assigned_owner, 'email')
+        primary_recipient = assigned_owner
+      end
+      
+      all_agents_with_full_access.each do |agent|
+        next if agent.id == commenter.id # Don't send to commenter themselves
+        next if assigned_owner && agent.id == assigned_owner.id # Owner is already primary recipient
+        next if !can_receive_notification?(agent, 'email')
+        
+        if primary_recipient.nil?
+          primary_recipient = agent
+        else
+          cc_recipients << agent
+        end
+      end
+      
+      # If no valid recipients, return early
+      return if primary_recipient.nil?
+      
+      # Prepare CC emails
+      cc_emails = cc_recipients
+        .map { |u| "#{u.firstname} #{u.lastname} <#{u.email}>" }
+        .join(', ')
+      
+      # Send one email with CC
+      send_internal_comment_email(ticket, article, commenter, primary_recipient, cc_emails)
+      
+      # Add notification history for CC recipients
+      cc_recipients.each do |cc_user|
+        add_recipient_list_to_history(ticket, cc_user, ['email'], 'update')
+      end
+      
+      # Send in-app notifications to CC recipients
+      cc_recipients.each do |user|
+        send_to_single_recipient_online(user, ticket, article)
+      end
+    end
+  end
+  
+  def send_internal_comment_email(ticket, article, commenter, recipient, cc_emails)
+    # Get attachments
+    attachments = article.attachments_inline || []
+    
+    # Build email
+    result = NotificationFactory::Mailer.template(
+      template:   'ticket_internal_comment',
+      locale:     recipient.preferences[:locale] || Locale.default,
+      objects:    {
+        ticket:    ticket,
+        article:   article,
+        recipient: recipient,
+        commenter: commenter,
+      },
+      standalone: false,
+    )
+    
+    # Rebuild subject if needed
+    if ticket.respond_to?(:subject_build)
+      result[:subject] = ticket.subject_build(result[:subject])
+    end
+    
+    # Prepare body
+    if result[:body]
+      result[:body] = HtmlSanitizer.adjust_inline_image_size(result[:body])
+      result[:body] = HtmlSanitizer.dynamic_image_size(result[:body])
+    end
+    
+    # Send email
+    NotificationFactory::Mailer.deliver(
+      recipient:    recipient,
+      subject:      result[:subject],
+      body:         result[:body],
+      content_type: 'text/html',
+      message_id:   "<notification.internal.#{DateTime.current.to_fs(:number)}.#{ticket.id}.#{recipient.id}.#{SecureRandom.uuid}@#{Setting.get('fqdn')}>",
+      references:   ticket.get_references,
+      attachments:  attachments,
+      cc:           cc_emails.present? ? cc_emails : nil,
+    )
+    
+    # Add notification history
+    add_recipient_list_to_history(ticket, recipient, ['email'], 'update')
+    
+    # Send in-app notification
+    send_to_single_recipient_online(recipient, ticket, article)
+    
+    Rails.logger.debug { "sent internal comment email to #{recipient.email}#{cc_emails.present? ? " with CC (#{cc_emails})" : ""}" }
+  end
+  
+  def can_receive_notification?(user, channel)
+    return false if !user.active?
+    return false if user.email.blank? if channel == 'email'
+    
+    # Check user's notification preferences
+    return NotificationFactory::Mailer.notification_settings(user, ticket, @item[:type])
+  end
+
   def send_to_single_recipient(recipient_settings)
     user     = recipient_settings[:user]
     channels = recipient_settings[:channels]
@@ -651,10 +1046,16 @@ class Transaction::Notification
       new_state = Ticket::State.find_by(id: new_state_id)
       
       # Custom Legal Intake states
-      if new_state && new_state.name == 'awaiting_response'
+      if new_state && new_state.name == 'under_legal_review'
+        return 'ticket_state_under_legal_review'
+      elsif new_state && new_state.name == 'awaiting_response'
         return 'ticket_state_awaiting_response'
       elsif new_state && new_state.name == 'ready_for_signature'
         return 'ticket_state_ready_for_signature'
+      elsif new_state && new_state.name == 'sent_for_signature'
+        return 'ticket_state_sent_for_signature'
+      elsif new_state && new_state.name == 'signed'
+        return 'ticket_state_signed'
       end
       
       # Check if changed to closed/resolved
@@ -674,5 +1075,17 @@ class Transaction::Notification
     
     # 5. Fallback for any other updates
     'ticket_update'
+  end
+  
+  def is_reopened_state?(ticket, changes)
+    return false unless changes&.key?('state_id')
+    
+    old_state_id = changes['state_id'].first
+    new_state_id = changes['state_id'].last
+    
+    resolved_states = Ticket::State.where(name: %w[closed merged removed resolved]).pluck(:id)
+    open_states = Ticket::State.where(name: %w[new open]).pluck(:id)
+    
+    resolved_states.include?(old_state_id) && open_states.include?(new_state_id)
   end
 end

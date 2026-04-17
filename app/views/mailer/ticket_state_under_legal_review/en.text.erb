@@ -1,0 +1,11 @@
+Under Legal Review: #{ticket.title}
+
+Hello #{recipient.firstname},
+
+Your ticket "#{ticket.title}" is now under legal review by #{current_user.firstname} #{current_user.lastname}.
+
+The legal team is reviewing your submission and will reach out if any additional information is needed.
+
+View Ticket: #{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}
+
+You are receiving this because you are a member of the group of this ticket.

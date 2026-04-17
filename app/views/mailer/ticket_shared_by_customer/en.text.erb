@@ -1,0 +1,11 @@
+Ticket Shared: #{ticket.title}
+
+Hello #{recipient.firstname},
+
+#{shared_by.firstname} #{shared_by.lastname} has shared your ticket "#{ticket.title}" with #{shared_with.firstname} #{shared_with.lastname}.
+
+#{shared_with.firstname} now has access to view and collaborate on this ticket through the Zammad platform.
+
+View Ticket: #{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}
+
+You are receiving this because you are a member of the group of this ticket.

@@ -2,8 +2,10 @@ Ready for Signature: #{ticket.title}
 
 Hello #{recipient.firstname},
 
-Great news! The legal team has reviewed all documents for your ticket "#{ticket.title}" and it is now ready for signature.
+Great News! #{current_user.firstname} #{current_user.lastname} has uploaded final documents for the ticket "#{ticket.title}" and marked them ready for signature.
 
-All necessary documents have been prepared and are ready for the required signatures. Please review the documents and follow the signature process to complete this request.
+You can now view the final documents in the ticket details.
 
-View Documents: #{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}
+View Ticket: #{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}
+
+You are receiving this because you are a member of the group of this ticket.

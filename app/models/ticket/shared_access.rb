@@ -119,6 +119,32 @@ class Ticket::SharedAccess < ApplicationModel
       created_by_id: created_by_id,
       user_id:       ticket_owner.id,
     )
+    
+    # Send email notification to ticket owner
+    send_owner_notification_email(ticket_owner)
+  end
+  
+  def send_owner_notification_email(ticket_owner)
+    return if ticket_owner.email.blank?
+
+    shared_by = User.find(created_by_id)
+    shared_with = user
+
+    result = NotificationFactory::Mailer.template(
+      template:   'ticket_shared_by_customer',
+      locale:     ticket_owner.preferences[:locale] || Locale.default,
+      objects:    { ticket: ticket, recipient: ticket_owner, shared_by: shared_by, shared_with: shared_with },
+      standalone: true,
+    )
+
+    NotificationFactory::Mailer.deliver(
+      recipient:    ticket_owner,
+      subject:      result[:subject],
+      body:         result[:body],
+      content_type: 'text/html',
+      message_id:   "<ticket_shared_by_customer.#{ticket.id}.#{ticket_owner.id}.#{SecureRandom.uuid}@#{Setting.get('fqdn')}>",
+      references:   ticket.get_references,
+    )
   end
 
   def send_share_email
