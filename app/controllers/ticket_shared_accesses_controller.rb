@@ -44,7 +44,7 @@ class TicketSharedAccessesController < ApplicationController
                                     .pluck(:id)
       shared_access = Ticket::SharedAccess.where(ticket_id: accessible_ticket_ids).find(params[:id])
     end
-    
+
     shared_access.destroy!
 
     render json: true, status: :ok

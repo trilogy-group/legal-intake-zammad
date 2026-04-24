@@ -121,11 +121,11 @@ class Ticket::SharedAccess < ApplicationModel
       created_by_id: created_by_id,
       user_id:       ticket_owner.id,
     )
-    
+
     # Send email notification to ticket owner
     send_owner_notification_email(ticket_owner)
   end
-  
+
   def send_owner_notification_email(ticket_owner)
     return if ticket_owner.email.blank?
 

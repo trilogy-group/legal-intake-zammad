@@ -31,11 +31,11 @@ RSpec.describe Ticket::SharedAccess, type: :model do
             matrix: {
               create: {
                 criteria: { owned_by_me: true, no: false },
-                channel: { email: true, online: true }
+                channel:  { email: true, online: true }
               },
               update: {
                 criteria: { owned_by_me: true, no: false },
-                channel: { email: true, online: true }
+                channel:  { email: true, online: true }
               }
             }
           }

@@ -620,12 +620,6 @@ msgstr ""
 msgid "A ticket cannot be merged into itself."
 msgstr ""
 
-#. This is the template file app/views/mailer/ticket_shared/en.html.erb in ERB/HTML format.
-#. Please make sure to translate it to a valid corresponding output structure.
-#: app/views/mailer/ticket_shared/en.html.erb
-msgid "A ticket has been shared with you (#{ticket.title})\n\n<div>Hi #{recipient.firstname},</div>\n<br>\n<div>\n<b>#{shared_by.fullname}</b> has shared ticket <b>(#{config.ticket_hook}#{ticket.number})</b> with you.\n</div>\n<br>\n<div>You now have access to read and comment on this ticket.</div>\n<br>\n<div>\nTicket: #{ticket.title}<br>\nState: #{t(ticket.state.name)}<br>\n</div>\n<br>\n<div>\n  To view the ticket, click on the following link:<br>\n  <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\" target=\"zammad_app\">#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}</a>\n</div>\n"
-msgstr ""
-
 #: app/assets/javascripts/app/models/ticket_priority.coffee
 msgid "A ticket's priority is simply a ranking of how urgent or important it is. Different priorities allow you to see the importance of your tickets better."
 msgstr ""
@@ -2403,6 +2397,18 @@ msgstr ""
 #: app/assets/javascripts/app/views/dashboard/stats/ticket_in_process.jst.eco:12
 #: app/assets/javascripts/app/views/dashboard/stats/ticket_reopen.jst.eco:12
 msgid "Average: %s%"
+msgstr ""
+
+#. This is the template file app/views/mailer/ticket_state_awaiting_response/en.html.erb in ERB/HTML format.
+#. Please make sure to translate it to a valid corresponding output structure.
+#: app/views/mailer/ticket_state_awaiting_response/en.html.erb
+msgid "Awaiting Response: #{ticket.title}\n\n<div style=\"font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;\">\n  <div style=\"text-align: center; margin-bottom: 32px;\">\n    <h1 style=\"font-size: 24px; font-weight: bold; color: #1f2937; margin: 0;\">Legal Intake</h1>\n  </div>\n  \n  <p style=\"font-size: 16px;\">Hello #{recipient.firstname},</p>\n  \n  <p style=\"font-size: 16px;\">\n    The legal team needs additional information regarding your ticket \"<strong>#{ticket.title}</strong>\" before they can proceed.\n  </p>\n  \n  <p style=\"font-size: 16px;\">\n    Please review your ticket and provide the requested information. The legal team will be able to continue processing your ticket once they receive your response.\n  </p>\n  \n  <div style=\"text-align: center; margin: 32px 0;\">\n    <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\" \n       style=\"background-color: #8b5cf6; color: #ffffff; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 500; display: inline-block;\">\n      Respond to Legal Team\n    </a>\n  </div>\n  \n  <p style=\"font-size: 14px; color: #6b7280;\">\n    If you're unable to click the button above, you can copy and paste this link:<br/>\n    <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\">#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}</a>\n  </p>\n  \n  <p style=\"font-size: 12px; color: #6b7280; margin-top: 32px;\">\n    You are receiving this because you are a member of the group of this ticket.\n  </p>\n</div>\n"
+msgstr ""
+
+#. This is the template file app/views/mailer/ticket_state_awaiting_response/en.text.erb in ERB/ format.
+#. Please make sure to translate it to a valid corresponding output structure.
+#: app/views/mailer/ticket_state_awaiting_response/en.text.erb
+msgid "Awaiting Response: #{ticket.title}\n\nHello #{recipient.firstname},\n\nThe legal team needs additional information regarding your ticket \"#{ticket.title}\" before they can proceed.\n\nPlease check the latest comments on your ticket and provide the requested information. The legal team will be able to continue processing your ticket once they receive your response.\n\nView Ticket: #{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\n\nYou are receiving this because you are a member of the group of this ticket.\n"
 msgstr ""
 
 #: app/assets/javascripts/app/lib/app_post/ai_provider/azure_ai.coffee:3
@@ -5848,6 +5854,18 @@ msgstr ""
 msgid "Document file"
 msgstr ""
 
+#. This is the template file app/views/mailer/ticket_state_signed/en.html.erb in ERB/HTML format.
+#. Please make sure to translate it to a valid corresponding output structure.
+#: app/views/mailer/ticket_state_signed/en.html.erb
+msgid "Documents Signed: #{ticket.title}\n\n<div style=\"font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;\">\n  <div style=\"text-align: center; margin-bottom: 32px;\">\n    <h1 style=\"font-size: 24px; font-weight: bold; color: #1f2937; margin: 0;\">Legal Intake</h1>\n  </div>\n  \n  <p style=\"font-size: 16px;\">Hello #{recipient.firstname},</p>\n  \n  <p style=\"font-size: 16px;\">\n    Excellent news! All required signatures have been completed for your ticket \"<strong>#{ticket.title}</strong>\".\n  </p>\n  \n  <p style=\"font-size: 16px;\">\n    You can now download the fully signed documents from the ticket.\n  </p>\n  \n  <div style=\"text-align: center; margin: 32px 0;\">\n    <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\" \n       style=\"background-color: #16a34a; color: #ffffff; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 500; display: inline-block;\">\n      Download Signed Documents\n    </a>\n  </div>\n  \n  <p style=\"font-size: 14px; color: #6b7280;\">\n    If you're unable to click the button above, you can copy and paste this link:<br/>\n    <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\">#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}</a>\n  </p>\n  \n  <p style=\"font-size: 12px; color: #6b7280; margin-top: 32px;\">\n    You are receiving this because you are a member of the group of this ticket.\n  </p>\n</div>\n"
+msgstr ""
+
+#. This is the template file app/views/mailer/ticket_state_signed/en.text.erb in ERB/ format.
+#. Please make sure to translate it to a valid corresponding output structure.
+#: app/views/mailer/ticket_state_signed/en.text.erb
+msgid "Documents Signed: #{ticket.title}\n\nHello #{recipient.firstname},\n\nExcellent news! All required signatures have been completed for your ticket \"#{ticket.title}\".\n\nYou can now download the fully signed documents from the ticket.\n\nDownload Signed Documents: #{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\n"
+msgstr ""
+
 #: db/seeds/object_manager_attributes.rb:1833
 msgid "Domain"
 msgstr ""
@@ -8812,6 +8830,18 @@ msgstr ""
 msgid "Internal Knowledge Base feed:"
 msgstr ""
 
+#. This is the template file app/views/mailer/ticket_internal_comment/en.html.erb in ERB/HTML format.
+#. Please make sure to translate it to a valid corresponding output structure.
+#: app/views/mailer/ticket_internal_comment/en.html.erb
+msgid "Internal Note: #{ticket.title}\n\n<div style=\"font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;\">\n  <div style=\"text-align: center; margin-bottom: 32px;\">\n    <h1 style=\"font-size: 24px; font-weight: bold; color: #1f2937; margin: 0;\">Legal Intake</h1>\n  </div>\n  \n  <p style=\"font-size: 16px;\">Hello #{recipient.firstname},</p>\n  \n  <p style=\"font-size: 16px;\">\n    #{commenter.firstname} #{commenter.lastname} added an internal note to ticket \"<strong>#{ticket.title}</strong>\".\n  </p>\n  \n  <% if @objects[:article] && @objects[:article].body.present? %>\n  <div style=\"background-color: #fef3c7; border-left: 4px solid #f59e0b; padding: 16px; margin: 20px 0; border-radius: 4px;\">\n    <p style=\"font-size: 14px; font-weight: 600; margin: 0 0 8px 0; color: #92400e;\">\n      Internal Note:\n    </p>\n    <p style=\"font-size: 14px; color: #78350f; margin: 0 0 8px 0; line-height: 1.5;\">\n      <strong style=\"color: #f59e0b;\">#{commenter.firstname} #{commenter.lastname} wrote:</strong><br/>\n      <%= HtmlSanitizer.dynamic_image_size(@objects[:article].body_as_html).html_safe %>\n    </p>\n    <% if @objects[:article].attachments.any? %>\n    <p style=\"font-size: 12px; line-height: 24px; color: #b45309; margin: 8px 0 0 0; font-weight: 500;\">\n      📎 <%= @objects[:article].attachments.count %> attachment<% if @objects[:article].attachments.count != 1 %>s<% end %>\n    </p>\n    <% end %>\n  </div>\n  <% end %>\n  \n  <p style=\"font-size: 14px; color: #6b7280; font-style: italic;\">\n    Note: This is an internal note visible only to agents and not visible to customers.\n  </p>\n  \n  <div style=\"text-align: center; margin: 32px 0;\">\n    <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\" \n       style=\"background-color: #f59e0b; color: #ffffff; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 500; display: inline-block;\">\n      View Ticket\n    </a>\n  </div>\n  \n  <p style=\"font-size: 14px; color: #6b7280;\">\n    If you're unable to click the button above, you can copy and paste this link:<br/>\n    <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\">#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}</a>\n  </p>\n  \n  <p style=\"font-size: 12px; color: #6b7280; margin-top: 32px;\">\n    You are receiving this because you are a member of the group of this ticket.\n  </p>\n</div>\n"
+msgstr ""
+
+#. This is the template file app/views/mailer/ticket_internal_comment/en.text.erb in ERB/ format.
+#. Please make sure to translate it to a valid corresponding output structure.
+#: app/views/mailer/ticket_internal_comment/en.text.erb
+msgid "Internal Note: #{ticket.title}\n\nHello #{recipient.firstname},\n\n#{commenter.firstname} #{commenter.lastname} added an internal note to ticket \"#{ticket.title}\".\n\n<% if @objects[:article] && @objects[:article].body.present? %>\n---\nInternal Note:\n#{commenter.firstname} #{commenter.lastname} wrote:\n\n<%= @objects[:article].body_as_text %>\n\n<% if @objects[:article].attachments.any? %>\n📎 <%= @objects[:article].attachments.count %> attachment<% if @objects[:article].attachments.count != 1 %>s<% end %>\n<% end %>\n---\n<% end %>\n\nNote: This is an internal note visible only to agents and not visible to customers.\n\nView Ticket: #{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\n\nYou are receiving this because you are a member of the group of this ticket.\n"
+msgstr ""
+
 #: app/models/object_manager/attribute.rb:694
 msgid "Internal attributes cannot be deleted"
 msgstr ""
@@ -10050,7 +10080,7 @@ msgstr ""
 msgid "Manage writing assistant text tools of your system."
 msgstr ""
 
-#: app/views/mailer/application.html.erb:47
+#: app/views/mailer/application.html.erb:46
 msgid "Manage your notification settings"
 msgstr ""
 
@@ -10916,6 +10946,18 @@ msgstr ""
 msgid "New Writing Assistant Tool"
 msgstr ""
 
+#. This is the template file app/views/mailer/ticket_comment_added/en.html.erb in ERB/HTML format.
+#. Please make sure to translate it to a valid corresponding output structure.
+#: app/views/mailer/ticket_comment_added/en.html.erb
+msgid "New comment: #{ticket.title}\n\n<div style=\"font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;\">\n  <div style=\"text-align: center; margin-bottom: 32px;\">\n    <h1 style=\"font-size: 24px; font-weight: bold; color: #1f2937; margin: 0;\">Legal Intake</h1>\n  </div>\n  \n  <p style=\"font-size: 16px;\">Hello #{recipient.firstname},</p>\n  \n  <p style=\"font-size: 16px;\">\n    A new comment has been added to your ticket \"<strong>#{ticket.title}</strong>\".\n  </p>\n  \n  <% if @objects[:article] && @objects[:article].body.present? %>\n  <div style=\"background-color: #EBF4FF; border: 1px solid #3D99F5; border-radius: 8px; padding: 16px; margin: 24px 0;\">\n    <p style=\"font-size: 14px; color: #1f2937; margin: 0; line-height: 1.5;\">\n      <strong style=\"color: #3D99F5;\">#{commenter.firstname} #{commenter.lastname} commented:</strong><br/>\n      <%= HtmlSanitizer.dynamic_image_size(@objects[:article].body_as_html).html_safe %>\n    </p>\n  </div>\n  <% end %>\n  \n  <div style=\"text-align: center; margin: 32px 0;\">\n    <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\" \n       style=\"background-color: #3D99F5; color: #ffffff; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 500; display: inline-block;\">\n      View Discussion\n    </a>\n  </div>\n  \n  <p style=\"font-size: 14px; color: #6b7280;\">\n    If you're unable to click the button above, you can copy and paste this link:<br/>\n    <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\">#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}</a>\n  </p>\n  \n  <p style=\"font-size: 12px; color: #6b7280; margin-top: 32px;\">\n    You are receiving this because you are a member of the group of this ticket.\n  </p>\n</div>\n"
+msgstr ""
+
+#. This is the template file app/views/mailer/ticket_comment_added/en.text.erb in ERB/ format.
+#. Please make sure to translate it to a valid corresponding output structure.
+#: app/views/mailer/ticket_comment_added/en.text.erb
+msgid "New comment: #{ticket.title}\n\nHello #{recipient.firstname},\n\nA new comment has been added to your ticket \"#{ticket.title}\".\n\n--- Comment ---\n#{commenter.firstname} #{commenter.lastname} commented:\n#{article.body_as_text}\n---------------\n\nYou're receiving this notification because #{reason}. Join the discussion to stay updated on the latest developments.\n\nView Ticket: #{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\n"
+msgstr ""
+
 #: app/frontend/apps/desktop/components/BetaUi/composables/useBetaUiDisclaimer.ts:42
 msgid "New desktop BETA UI"
 msgstr ""
@@ -10954,7 +10996,13 @@ msgstr ""
 #. This is the template file app/views/mailer/ticket_create/en.html.erb in ERB/HTML format.
 #. Please make sure to translate it to a valid corresponding output structure.
 #: app/views/mailer/ticket_create/en.html.erb
-msgid "New ticket (#{ticket.title})\n\n<div>Hi #{recipient.firstname},</div>\n<br>\n<div>The new ticket (#{ticket.title}) has been created by \"<b>#{current_user.longname}</b>\".</div>\n<br>\n<div>\nGroup: #{ticket.group.name}<br>\nOwner: #{ticket.owner.fullname}<br>\nState: #{t(ticket.state.name)}<br>\n</div>\n<br>\n<% if @objects[:article] %>\n  <div>\n  Information:\n  <blockquote type=\"cite\">\n  #{article.body_as_html}\n  </blockquote>\n  </div>\n<% end %>\n<br>\n<div>\n  <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\" target=\"zammad_app\">View this in #{config.product_name}</a>\n</div>\n"
+msgid "New ticket: #{ticket.title}\n\n<div style=\"font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;\">\n  <div style=\"text-align: center; margin-bottom: 32px;\">\n    <h1 style=\"font-size: 24px; font-weight: bold; color: #1f2937; margin: 0;\">Legal Intake</h1>\n  </div>\n  \n  <p style=\"font-size: 16px;\">Hello #{recipient.firstname},</p>\n  \n  <p style=\"font-size: 16px;\">\n    Thank you for your request. We have created a ticket \"<strong>#{ticket.title}</strong>\" for your request. Our team will review it shortly.\n  </p>\n  \n  <p style=\"font-size: 16px;\">\n    You can track the status and any updates to your ticket using the link below.\n  </p>\n  \n  <div style=\"text-align: center; margin: 32px 0;\">\n    <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\" \n       style=\"background-color: #3D99F5; color: #ffffff; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 500; display: inline-block;\">\n      View Ticket\n    </a>\n  </div>\n  \n  <p style=\"font-size: 14px; color: #6b7280;\">\n    If you're unable to click the button above, you can copy and paste this link:<br/>\n    <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\">#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}</a>\n  </p>\n</div>\n"
+msgstr ""
+
+#. This is the template file app/views/mailer/ticket_create/en.text.erb in ERB/ format.
+#. Please make sure to translate it to a valid corresponding output structure.
+#: app/views/mailer/ticket_create/en.text.erb
+msgid "New ticket: #{ticket.title}\n\nHello #{recipient.firstname},\n\nThank you for your request. We have created a ticket \"#{ticket.title}\" for your request. Our team will review it shortly.\n\nYou can track the status and any updates to your ticket using the link below.\n\nView Ticket: #{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\n"
 msgstr ""
 
 #: app/frontend/apps/desktop/entities/ticket/composables/useTicketCreateTitle.ts:23
@@ -11490,7 +11538,6 @@ msgstr ""
 
 #: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:59
 #: app/assets/javascripts/app/controllers/_ui_element/object_perform_action.coffee:24
-#: app/views/mailer/application.html.erb:36
 msgid "Notification"
 msgstr ""
 
@@ -13096,6 +13143,18 @@ msgstr ""
 msgid "Reader"
 msgstr ""
 
+#. This is the template file app/views/mailer/ticket_state_ready_for_signature/en.html.erb in ERB/HTML format.
+#. Please make sure to translate it to a valid corresponding output structure.
+#: app/views/mailer/ticket_state_ready_for_signature/en.html.erb
+msgid "Ready for Signature: #{ticket.title}\n\n<div style=\"font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;\">\n  <div style=\"text-align: center; margin-bottom: 32px;\">\n    <h1 style=\"font-size: 24px; font-weight: bold; color: #1f2937; margin: 0;\">Legal Intake</h1>\n  </div>\n  \n  <p style=\"font-size: 16px;\">Hello #{recipient.firstname},</p>\n  \n  <p style=\"font-size: 16px;\">\n    Great News! #{current_user.firstname} #{current_user.lastname} has uploaded final documents for the ticket \"<strong>#{ticket.title}</strong>\" and marked them ready for signature.\n  </p>\n  \n  <p style=\"font-size: 16px;\">\n    You can now view the final documents in the ticket details.\n  </p>\n  \n  <div style=\"text-align: center; margin: 32px 0;\">\n    <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\" \n       style=\"background-color: #22c55e; color: #ffffff; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 500; display: inline-block;\">\n      View Ticket\n    </a>\n  </div>\n  \n  <p style=\"font-size: 14px; color: #6b7280;\">\n    If you're unable to click the button above, you can copy and paste this link:<br/>\n    <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\">#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}</a>\n  </p>\n  \n  <p style=\"font-size: 12px; color: #6b7280; margin-top: 32px;\">\n    You are receiving this because you are a member of the group of this ticket.\n  </p>\n</div>\n"
+msgstr ""
+
+#. This is the template file app/views/mailer/ticket_state_ready_for_signature/en.text.erb in ERB/ format.
+#. Please make sure to translate it to a valid corresponding output structure.
+#: app/views/mailer/ticket_state_ready_for_signature/en.text.erb
+msgid "Ready for Signature: #{ticket.title}\n\nHello #{recipient.firstname},\n\nGreat News! #{current_user.firstname} #{current_user.lastname} has uploaded final documents for the ticket \"#{ticket.title}\" and marked them ready for signature.\n\nYou can now view the final documents in the ticket details.\n\nView Ticket: #{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\n\nYou are receiving this because you are a member of the group of this ticket.\n"
+msgstr ""
+
 #: app/assets/javascripts/app/views/report/time_range_picker.jst.eco:6
 msgid "Real-time"
 msgstr ""
@@ -14609,6 +14668,18 @@ msgstr ""
 msgid "Sending…"
 msgstr ""
 
+#. This is the template file app/views/mailer/ticket_state_sent_for_signature/en.html.erb in ERB/HTML format.
+#. Please make sure to translate it to a valid corresponding output structure.
+#: app/views/mailer/ticket_state_sent_for_signature/en.html.erb
+msgid "Sent for Signature: #{ticket.title}\n\n<div style=\"font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;\">\n  <div style=\"text-align: center; margin-bottom: 32px;\">\n    <h1 style=\"font-size: 24px; font-weight: bold; color: #1f2937; margin: 0;\">Legal Intake</h1>\n  </div>\n  \n  <p style=\"font-size: 16px;\">Hello #{recipient.firstname},</p>\n  \n  <p style=\"font-size: 16px;\">\n    Your ticket \"<strong>#{ticket.title}</strong>\" has been sent for signature by #{current_user.firstname} #{current_user.lastname}.\n  </p>\n  \n  <p style=\"font-size: 16px;\">\n    The documents are currently in the signature process. You will be notified once all signatures have been completed.\n  </p>\n  \n  <div style=\"text-align: center; margin: 32px 0;\">\n    <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\" \n       style=\"background-color: #3b82f6; color: #ffffff; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 500; display: inline-block;\">\n      View Ticket\n    </a>\n  </div>\n  \n  <p style=\"font-size: 14px; color: #6b7280;\">\n    If you're unable to click the button above, you can copy and paste this link:<br/>\n    <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\">#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}</a>\n  </p>\n  \n  <p style=\"font-size: 12px; color: #6b7280; margin-top: 32px;\">\n    You are receiving this because you are a member of the group of this ticket.\n  </p>\n</div>\n"
+msgstr ""
+
+#. This is the template file app/views/mailer/ticket_state_sent_for_signature/en.text.erb in ERB/ format.
+#. Please make sure to translate it to a valid corresponding output structure.
+#: app/views/mailer/ticket_state_sent_for_signature/en.text.erb
+msgid "Sent for Signature: #{ticket.title}\n\nHello #{recipient.firstname},\n\nYour ticket \"#{ticket.title}\" has been sent for signature by #{current_user.firstname} #{current_user.lastname}.\n\nThe documents are currently in the signature process. You will be notified once all signatures have been completed.\n\nView Ticket: #{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\n\nYou are receiving this because you are a member of the group of this ticket.\n"
+msgstr ""
+
 #: app/assets/javascripts/app/controllers/maintenance.coffee:99
 msgid "Sent successfully!"
 msgstr ""
@@ -14857,7 +14928,7 @@ msgstr ""
 msgid "Shared Mailbox"
 msgstr ""
 
-#: app/controllers/ticket_shared_accesses_controller.rb:44
+#: app/controllers/ticket_shared_accesses_controller.rb:49
 #: app/graphql/gql/mutations/ticket/shared_access/unshare.rb:23
 msgid "Shared access not found."
 msgstr ""
@@ -17937,6 +18008,12 @@ msgstr ""
 msgid "Ticket Settings"
 msgstr ""
 
+#. This is the template file app/views/mailer/ticket_shared_by_customer/en.text.erb in ERB/ format.
+#. Please make sure to translate it to a valid corresponding output structure.
+#: app/views/mailer/ticket_shared_by_customer/en.text.erb
+msgid "Ticket Shared: #{ticket.title}\n\nHello #{recipient.firstname},\n\n#{shared_by.firstname} #{shared_by.lastname} has shared your ticket \"#{ticket.title}\" with #{shared_with.firstname} #{shared_with.lastname}.\n\n#{shared_with.firstname} now has access to view and collaborate on this ticket through the Zammad platform.\n\nView Ticket: #{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\n\nYou are receiving this because you are a member of the group of this ticket.\n"
+msgstr ""
+
 #: app/assets/javascripts/app/controllers/ticket_state.coffee:3
 msgid "Ticket State"
 msgstr ""
@@ -17993,6 +18070,18 @@ msgstr ""
 msgid "Ticket actions"
 msgstr ""
 
+#. This is the template file app/views/mailer/ticket_assigned/en.html.erb in ERB/HTML format.
+#. Please make sure to translate it to a valid corresponding output structure.
+#: app/views/mailer/ticket_assigned/en.html.erb
+msgid "Ticket assigned: #{ticket.title}\n\n<div style=\"font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;\">\n  <div style=\"text-align: center; margin-bottom: 32px;\">\n    <h1 style=\"font-size: 24px; font-weight: bold; color: #1f2937; margin: 0;\">Legal Intake</h1>\n  </div>\n  \n  <p style=\"font-size: 16px;\">Hello #{recipient.firstname},</p>\n  \n  <p style=\"font-size: 16px;\">\n    The ticket \"<strong>#{ticket.title}</strong>\" has been assigned to you.\n  </p>\n  \n  <p style=\"font-size: 16px;\">\n    You can now review and work on this ticket through the Zammad platform. Please review the ticket details and begin processing as needed.\n  </p>\n  \n  <div style=\"text-align: center; margin: 32px 0;\">\n    <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\" \n       style=\"background-color: #3D99F5; color: #ffffff; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 500; display: inline-block;\">\n      Review Ticket\n    </a>\n  </div>\n  \n  <p style=\"font-size: 14px; color: #6b7280;\">\n    If you're unable to click the button above, you can copy and paste this link:<br/>\n    <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\">#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}</a>\n  </p>\n</div>\n"
+msgstr ""
+
+#. This is the template file app/views/mailer/ticket_assigned/en.text.erb in ERB/ format.
+#. Please make sure to translate it to a valid corresponding output structure.
+#: app/views/mailer/ticket_assigned/en.text.erb
+msgid "Ticket assigned: #{ticket.title}\n\nHello #{recipient.firstname},\n\nThe ticket \"#{ticket.title}\" has been assigned to you.\n\nYou can now review and work on this ticket through the Legal Intake platform.\n\nView Ticket: #{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\n"
+msgstr ""
+
 #: app/controllers/ticket_shared_accesses_controller.rb:20
 #: app/graphql/gql/mutations/ticket/shared_access/share.rb:44
 msgid "Ticket can only be shared with customer users."
@@ -18045,7 +18134,7 @@ msgstr ""
 msgid "Ticket merged successfully"
 msgstr ""
 
-#: app/controllers/ticket_shared_accesses_controller.rb:83
+#: app/controllers/ticket_shared_accesses_controller.rb:93
 msgid "Ticket not found."
 msgstr ""
 
@@ -18071,6 +18160,18 @@ msgstr ""
 msgid "Ticket overviews"
 msgstr ""
 
+#. This is the template file app/views/mailer/ticket_priority_changed/en.html.erb in ERB/HTML format.
+#. Please make sure to translate it to a valid corresponding output structure.
+#: app/views/mailer/ticket_priority_changed/en.html.erb
+msgid "Ticket priority updated: #{ticket.title}\n\n<div style=\"font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;\">\n  <div style=\"text-align: center; margin-bottom: 32px;\">\n    <h1 style=\"font-size: 24px; font-weight: bold; color: #1f2937; margin: 0;\">Legal Intake</h1>\n  </div>\n  \n  <p style=\"font-size: 16px;\">Hello #{recipient.firstname},</p>\n  \n  <p style=\"font-size: 16px;\">\n    The priority of your ticket \"<strong>#{ticket.title}</strong>\" has been updated to <strong>#{ticket.priority.name}</strong>.\n  </p>\n  \n  <p style=\"font-size: 16px;\">\n    You can view the latest details and any updates on the ticket.\n  </p>\n  \n  <div style=\"text-align: center; margin: 32px 0;\">\n    <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\" \n       style=\"background-color: #3D99F5; color: #ffffff; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 500; display: inline-block;\">\n      View Ticket\n    </a>\n  </div>\n  \n  <p style=\"font-size: 14px; color: #6b7280;\">\n    If you're unable to click the button above, you can copy and paste this link:<br/>\n    <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\">#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}</a>\n  </p>\n</div>\n"
+msgstr ""
+
+#. This is the template file app/views/mailer/ticket_priority_changed/en.text.erb in ERB/ format.
+#. Please make sure to translate it to a valid corresponding output structure.
+#: app/views/mailer/ticket_priority_changed/en.text.erb
+msgid "Ticket priority updated: #{ticket.title}\n\nHello #{recipient.firstname},\n\nThe priority of your ticket \"#{ticket.title}\" has been updated to #{ticket.priority.name}.\n\nYou can view the latest details and any updates on the ticket.\n\nView Ticket: #{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\n"
+msgstr ""
+
 #: app/assets/javascripts/app/controllers/_profile/notification.coffee:69
 #: app/assets/javascripts/app/controllers/_ui_element/notification_matrix.coffee:11
 #: app/frontend/apps/desktop/components/Form/fields/FieldNotifications/FieldNotificationsInput.vue:84
@@ -18083,6 +18184,30 @@ msgstr ""
 msgid "Ticket reminder reached (#{ticket.title})\n\n<div>Hi #{recipient.firstname},</div>\n<br>\n<div>A ticket needs attention: reminder reached for (#{ticket.title}) with customer \"<b>#{ticket.customer.longname}</b>\".</div>\n<br>\n<% if @objects[:article] %>\n  <div>\n  Information:\n  <blockquote type=\"cite\">\n  #{article.body_as_html}\n  </blockquote>\n  </div>\n<% end %>\n<br>\n<div>\n  <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\" target=\"zammad_app\">View this in #{config.product_name}</a>\n</div>\n"
 msgstr ""
 
+#. This is the template file app/views/mailer/ticket_state_reopened/en.html.erb in ERB/HTML format.
+#. Please make sure to translate it to a valid corresponding output structure.
+#: app/views/mailer/ticket_state_reopened/en.html.erb
+msgid "Ticket reopened: #{ticket.title}\n\n<div style=\"font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;\">\n  <div style=\"text-align: center; margin-bottom: 32px;\">\n    <h1 style=\"font-size: 24px; font-weight: bold; color: #1f2937; margin: 0;\">Legal Intake</h1>\n  </div>\n  \n  <p style=\"font-size: 16px;\">Hello #{recipient.firstname},</p>\n  \n  <p style=\"font-size: 16px;\">\n    Your ticket \"<strong>#{ticket.title}</strong>\" (Ticket ##{ticket.number}) has been reopened by #{current_user.firstname} #{current_user.lastname}.\n  </p>\n  \n  <p style=\"font-size: 16px;\">\n    This ticket requires additional attention. Please review the latest updates and respond if needed.\n  </p>\n  \n  <div style=\"text-align: center; margin: 32px 0;\">\n    <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\" \n       style=\"background-color: #d97706; color: #ffffff; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 500; display: inline-block;\">\n      View Ticket\n    </a>\n  </div>\n  \n  <p style=\"font-size: 14px; color: #6b7280;\">\n    If you're unable to click the button above, you can copy and paste this link:<br/>\n    <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\">#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}</a>\n  </p>\n  \n  <p style=\"font-size: 12px; color: #6b7280; margin-top: 32px;\">\n    You are receiving this because you are a member of the group of this ticket.\n  </p>\n</div>\n"
+msgstr ""
+
+#. This is the template file app/views/mailer/ticket_state_reopened/en.text.erb in ERB/ format.
+#. Please make sure to translate it to a valid corresponding output structure.
+#: app/views/mailer/ticket_state_reopened/en.text.erb
+msgid "Ticket reopened: #{ticket.title}\n\nHello #{recipient.firstname},\n\nYour ticket \"#{ticket.title}\" (Ticket ##{ticket.number}) has been reopened by #{current_user.firstname} #{current_user.lastname}.\n\nThis ticket requires additional attention. Please review the latest updates and respond if needed.\n\nView Ticket: #{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\n"
+msgstr ""
+
+#. This is the template file app/views/mailer/ticket_state_resolved/en.html.erb in ERB/HTML format.
+#. Please make sure to translate it to a valid corresponding output structure.
+#: app/views/mailer/ticket_state_resolved/en.html.erb
+msgid "Ticket resolved: #{ticket.title}\n\n<div style=\"font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;\">\n  <div style=\"text-align: center; margin-bottom: 32px;\">\n    <h1 style=\"font-size: 24px; font-weight: bold; color: #1f2937; margin: 0;\">Legal Intake</h1>\n  </div>\n  \n  <p style=\"font-size: 16px;\">Hello #{recipient.firstname},</p>\n  \n  <p style=\"font-size: 16px;\">\n    Great news! Your ticket \"<strong>#{ticket.title}</strong>\" has been resolved by #{current_user.firstname} #{current_user.lastname}.\n  </p>\n  \n  <p style=\"font-size: 16px;\">\n    You can now view the resolution details and any final deliverables on the Legal Intake platform.\n  </p>\n  \n  <div style=\"text-align: center; margin: 32px 0;\">\n    <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\" \n       style=\"background-color: #16a34a; color: #ffffff; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 500; display: inline-block;\">\n      View Resolved Ticket\n    </a>\n  </div>\n  \n  <p style=\"font-size: 14px; color: #6b7280;\">\n    If you're unable to click the button above, you can copy and paste this link:<br/>\n    <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\">#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}</a>\n  </p>\n  \n  <p style=\"font-size: 12px; color: #6b7280; margin-top: 32px;\">\n    You are receiving this because you are a member of the group of this ticket.\n  </p>\n</div>\n"
+msgstr ""
+
+#. This is the template file app/views/mailer/ticket_state_resolved/en.text.erb in ERB/ format.
+#. Please make sure to translate it to a valid corresponding output structure.
+#: app/views/mailer/ticket_state_resolved/en.text.erb
+msgid "Ticket resolved: #{ticket.title}\n\nHello #{recipient.firstname},\n\nGreat news! Your ticket \"#{ticket.title}\" has been resolved by #{current_user.firstname} #{current_user.lastname}.\n\nYou can now view the resolution details and any final deliverables on the Legal Intake platform.\n\nView Resolved Ticket: #{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\n"
+msgstr ""
+
 #: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/TicketScreenBehavior/TicketScreenBehavior.vue:56
 msgid "Ticket screen behavior updated successfully"
 msgstr ""
@@ -18093,6 +18218,36 @@ msgstr ""
 
 #: app/assets/javascripts/app/controllers/ticket_shared_access.coffee:127
 msgid "Ticket shared successfully!"
+msgstr ""
+
+#. This is the template file app/views/mailer/ticket_shared/en.html.erb in ERB/HTML format.
+#. Please make sure to translate it to a valid corresponding output structure.
+#: app/views/mailer/ticket_shared/en.html.erb
+msgid "Ticket shared: #{ticket.title}\n\n<div style=\"font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;\">\n  <div style=\"text-align: center; margin-bottom: 32px;\">\n    <h1 style=\"font-size: 24px; font-weight: bold; color: #1f2937; margin: 0;\">Legal Intake</h1>\n  </div>\n  \n  <p style=\"font-size: 16px;\">Hello #{recipient.firstname},</p>\n  \n  <p style=\"font-size: 16px;\">\n    #{shared_by.firstname} #{shared_by.lastname} has shared the ticket \"<strong>#{ticket.title}</strong>\" with you.\n  </p>\n  \n  <p style=\"font-size: 16px;\">\n    You can now view and collaborate on this ticket through the Zammad platform.\n  </p>\n  \n  <div style=\"text-align: center; margin: 32px 0;\">\n    <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\" \n       style=\"background-color: #3D99F5; color: #ffffff; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 500; display: inline-block;\">\n      View Ticket\n    </a>\n  </div>\n  \n  <p style=\"font-size: 14px; color: #6b7280;\">\n    If you're unable to click the button above, you can copy and paste this link:<br/>\n    <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\">#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}</a>\n  </p>\n</div>\n"
+msgstr ""
+
+#. This is the template file app/views/mailer/ticket_shared_by_customer/en.html.erb in ERB/HTML format.
+#. Please make sure to translate it to a valid corresponding output structure.
+#: app/views/mailer/ticket_shared_by_customer/en.html.erb
+msgid "Ticket shared: #{ticket.title}\n\n<div style=\"font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;\">\n  <div style=\"text-align: center; margin-bottom: 32px;\">\n    <h1 style=\"font-size: 24px; font-weight: bold; color: #1f2937; margin: 0;\">Legal Intake</h1>\n  </div>\n  \n  <p style=\"font-size: 16px;\">Hello #{recipient.firstname},</p>\n  \n  <p style=\"font-size: 16px;\">\n    #{shared_by.firstname} #{shared_by.lastname} has shared your ticket \"<strong>#{ticket.title}</strong>\" with #{shared_with.firstname} #{shared_with.lastname}.\n  </p>\n  \n  <p style=\"font-size: 16px;\">\n    #{shared_with.firstname} now has access to view and collaborate on this ticket through the Zammad platform.\n  </p>\n  \n  <div style=\"text-align: center; margin: 32px 0;\">\n    <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\" \n       style=\"background-color: #3D99F5; color: #ffffff; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 500; display: inline-block;\">\n      View Ticket\n    </a>\n  </div>\n  \n  <p style=\"font-size: 14px; color: #6b7280;\">\n    If you're unable to click the button above, you can copy and paste this link:<br/>\n    <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\">#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}</a>\n  </p>\n</div>\n"
+msgstr ""
+
+#. This is the template file app/views/mailer/ticket_shared/en.text.erb in ERB/ format.
+#. Please make sure to translate it to a valid corresponding output structure.
+#: app/views/mailer/ticket_shared/en.text.erb
+msgid "Ticket shared: #{ticket.title}\n\nHello #{recipient.firstname},\n\n#{shared_by.firstname} #{shared_by.lastname} has shared the ticket \"#{ticket.title}\" with you.\n\nYou can now view and collaborate on this ticket through the Zammad platform.\n\nView Ticket: #{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\n"
+msgstr ""
+
+#. This is the template file app/views/mailer/ticket_state_changed/en.html.erb in ERB/HTML format.
+#. Please make sure to translate it to a valid corresponding output structure.
+#: app/views/mailer/ticket_state_changed/en.html.erb
+msgid "Ticket status updated: #{ticket.title}\n\n<div style=\"font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;\">\n  <div style=\"text-align: center; margin-bottom: 32px;\">\n    <h1 style=\"font-size: 24px; font-weight: bold; color: #1f2937; margin: 0;\">Legal Intake</h1>\n  </div>\n  \n  <p style=\"font-size: 16px;\">Hello #{recipient.firstname},</p>\n  \n  <p style=\"font-size: 16px;\">\n    The status of your ticket \"<strong>#{ticket.title}</strong>\" has been updated to <strong>#{ticket.state.name}</strong>.\n  </p>\n  \n  <p style=\"font-size: 16px;\">\n    You can view the latest details and any updates on the ticket.\n  </p>\n  \n  <div style=\"text-align: center; margin: 32px 0;\">\n    <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\" \n       style=\"background-color: #3D99F5; color: #ffffff; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 500; display: inline-block;\">\n      View Ticket\n    </a>\n  </div>\n  \n  <p style=\"font-size: 14px; color: #6b7280;\">\n    If you're unable to click the button above, you can copy and paste this link:<br/>\n    <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\">#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}</a>\n  </p>\n</div>\n"
+msgstr ""
+
+#. This is the template file app/views/mailer/ticket_state_changed/en.text.erb in ERB/ format.
+#. Please make sure to translate it to a valid corresponding output structure.
+#: app/views/mailer/ticket_state_changed/en.text.erb
+msgid "Ticket status updated: #{ticket.title}\n\nHello #{recipient.firstname},\n\nThe status of your ticket \"#{ticket.title}\" has been updated to #{ticket.state.name}.\n\nYou can view the latest details and any updates on the ticket.\n\nView Ticket: #{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\n"
 msgstr ""
 
 #: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarInformation/TicketSidebarInformationContent/TicketTags.vue:108
@@ -18138,6 +18293,18 @@ msgstr ""
 #: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/TicketDetailViewContent.vue:477
 #: app/frontend/apps/mobile/pages/ticket/views/TicketDetailView.vue:158
 msgid "Ticket updated successfully."
+msgstr ""
+
+#. This is the template file app/views/mailer/ticket_update/en.html.erb in ERB/HTML format.
+#. Please make sure to translate it to a valid corresponding output structure.
+#: app/views/mailer/ticket_update/en.html.erb
+msgid "Ticket updated: #{ticket.title}\n\n<div style=\"font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;\">\n  <div style=\"text-align: center; margin-bottom: 32px;\">\n    <h1 style=\"font-size: 24px; font-weight: bold; color: #1f2937; margin: 0;\">Legal Intake</h1>\n  </div>\n  \n  <p style=\"font-size: 16px;\">Hello #{recipient.firstname},</p>\n  \n  <p style=\"font-size: 16px;\">\n    Your ticket \"<strong>#{ticket.title}</strong>\" has been updated.\n  </p>\n  \n  <% if @objects[:changes].present? %>\n    <div style=\"background-color: #F3F4F6; border-left: 3px solid #3D99F5; padding: 16px; margin: 24px 0;\">\n      <p style=\"font-size: 14px; font-weight: 600; color: #1f2937; margin: 0 0 8px 0;\">Changes:</p>\n      <% @objects[:changes].each do |key, value| %>\n        <p style=\"font-size: 14px; color: #1f2937; margin: 4px 0;\">\n          <strong><%= t key %>:</strong> <%= h value[0] %> → <%= h value[1] %>\n        </p>\n      <% end %>\n    </div>\n  <% end %>\n  \n  <div style=\"text-align: center; margin: 32px 0;\">\n    <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\" \n       style=\"background-color: #3D99F5; color: #ffffff; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 500; display: inline-block;\">\n      View Ticket\n    </a>\n  </div>\n  \n  <p style=\"font-size: 14px; color: #6b7280;\">\n    If you're unable to click the button above, you can copy and paste this link:<br/>\n    <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\">#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}</a>\n  </p>\n</div>\n"
+msgstr ""
+
+#. This is the template file app/views/mailer/ticket_update/en.text.erb in ERB/ format.
+#. Please make sure to translate it to a valid corresponding output structure.
+#: app/views/mailer/ticket_update/en.text.erb
+msgid "Ticket updated: #{ticket.title}\n\nHello #{recipient.firstname},\n\nYour ticket \"#{ticket.title}\" has been updated.\n\n<% if @objects[:changes].present? %>\nChanges:\n<% @objects[:changes].each do |key, value| %>\n- <%= t key %>: <%= h value[0] %> → <%= h value[1] %>\n<% end %>\n<% end %>\n\nView Ticket: #{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\n"
 msgstr ""
 
 #: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketViewersDialog.vue:27
@@ -18863,6 +19030,18 @@ msgstr ""
 msgid "Uncheck item"
 msgstr ""
 
+#. This is the template file app/views/mailer/ticket_state_under_legal_review/en.html.erb in ERB/HTML format.
+#. Please make sure to translate it to a valid corresponding output structure.
+#: app/views/mailer/ticket_state_under_legal_review/en.html.erb
+msgid "Under Legal Review: #{ticket.title}\n\n<div style=\"font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;\">\n  <div style=\"text-align: center; margin-bottom: 32px;\">\n    <h1 style=\"font-size: 24px; font-weight: bold; color: #1f2937; margin: 0;\">Legal Intake</h1>\n  </div>\n  \n  <p style=\"font-size: 16px;\">Hello #{recipient.firstname},</p>\n  \n  <p style=\"font-size: 16px;\">\n    Your ticket \"<strong>#{ticket.title}</strong>\" is now under legal review by #{current_user.firstname} #{current_user.lastname}.\n  </p>\n  \n  <p style=\"font-size: 16px;\">\n    The legal team is reviewing your submission and will reach out if any additional information is needed.\n  </p>\n  \n  <div style=\"text-align: center; margin: 32px 0;\">\n    <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\" \n       style=\"background-color: #6366f1; color: #ffffff; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 500; display: inline-block;\">\n      View Ticket\n    </a>\n  </div>\n  \n  <p style=\"font-size: 14px; color: #6b7280;\">\n    If you're unable to click the button above, you can copy and paste this link:<br/>\n    <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\">#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}</a>\n  </p>\n  \n  <p style=\"font-size: 12px; color: #6b7280; margin-top: 32px;\">\n    You are receiving this because you are a member of the group of this ticket.\n  </p>\n</div>\n"
+msgstr ""
+
+#. This is the template file app/views/mailer/ticket_state_under_legal_review/en.text.erb in ERB/ format.
+#. Please make sure to translate it to a valid corresponding output structure.
+#: app/views/mailer/ticket_state_under_legal_review/en.text.erb
+msgid "Under Legal Review: #{ticket.title}\n\nHello #{recipient.firstname},\n\nYour ticket \"#{ticket.title}\" is now under legal review by #{current_user.firstname} #{current_user.lastname}.\n\nThe legal team is reviewing your submission and will reach out if any additional information is needed.\n\nView Ticket: #{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\n\nYou are receiving this because you are a member of the group of this ticket.\n"
+msgstr ""
+
 #: app/assets/javascripts/app/views/time_accounting/settings.jst.eco:12
 msgid "Unit"
 msgstr ""
@@ -19119,12 +19298,6 @@ msgstr ""
 msgid "Updated by"
 msgstr ""
 
-#. This is the template file app/views/mailer/ticket_update/en.html.erb in ERB/HTML format.
-#. Please make sure to translate it to a valid corresponding output structure.
-#: app/views/mailer/ticket_update/en.html.erb
-msgid "Updated ticket (#{ticket.title})\n\n<div>Hi #{recipient.firstname},</div>\n<br>\n<div>\nTicket (#{ticket.title}) has been updated by \"<b>#{current_user.longname}</b>\".\n</div>\n<br>\n<% if @objects[:changes].present? %>\n  <div>\n  Changes:<br>\n  <% @objects[:changes].each do |key, value| %>\n    <%= t key %>: <%= h value[0] %> -&gt; <%= h value[1] %><br>\n  <% end %>\n  </div>\n<% end %>\n<br>\n<% if @objects[:article] %>\n  <div>\n  Information:\n  <blockquote type=\"cite\">\n  #{article.body_as_html}\n  </blockquote>\n  </div>\n<% end %>\n<br>\n<div>\n  <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}<% if @objects[:article] %>/#{article.id}<% end %>\" target=\"zammad_app\">View this in #{config.product_name}</a>\n</div>\n"
-msgstr ""
-
 #. This is the template file app/views/mailer/ticket_article_update_reaction/en.html.erb in ERB/HTML format.
 #. Please make sure to translate it to a valid corresponding output structure.
 #: app/views/mailer/ticket_article_update_reaction/en.html.erb
@@ -19279,6 +19452,7 @@ msgstr ""
 #: app/assets/javascripts/app/controllers/cti.coffee:3
 #: app/assets/javascripts/app/controllers/getting_started/channel_email.coffee:81
 #: app/assets/javascripts/app/controllers/getting_started/email_notification.coffee:70
+#: app/assets/javascripts/app/controllers/ticket_shared_access.coffee:68
 #: app/assets/javascripts/app/controllers/ticket_zoom/sidebar_customer.coffee:86
 #: app/assets/javascripts/app/controllers/user.coffee:3
 #: app/assets/javascripts/app/controllers/user_profile/action_row.coffee:2
@@ -19416,7 +19590,7 @@ msgstr ""
 msgid "User menu"
 msgstr ""
 
-#: app/controllers/ticket_shared_accesses_controller.rb:94
+#: app/controllers/ticket_shared_accesses_controller.rb:104
 #: app/graphql/gql/mutations/ticket/shared_access/share.rb:28
 #: app/graphql/gql/mutations/ticket/shared_access/unshare.rb:30
 msgid "User not found."
@@ -20040,23 +20214,19 @@ msgstr ""
 msgid "You are part of the BETA UI feedback program."
 msgstr ""
 
-#: app/models/transaction/notification.rb:121
+#: app/models/transaction/notification.rb:174
 msgid "You are receiving this because this ticket was shared with you."
 msgstr ""
 
-#: app/models/transaction/notification.rb:136
+#: app/models/transaction/notification.rb:123
 msgid "You are receiving this because you are a member of the group of this ticket."
 msgstr ""
 
-#: app/models/transaction/notification.rb:217
+#: app/models/transaction/notification.rb:902
 msgid "You are receiving this because you are out-of-office replacement for a participant of this ticket."
 msgstr ""
 
-#: app/models/transaction/notification.rb:79
-msgid "You are receiving this because you are the owner of this ticket."
-msgstr ""
-
-#: app/models/transaction/notification.rb:73
+#: app/models/transaction/notification.rb:117
 msgid "You are receiving this because you were mentioned in this ticket."
 msgstr ""
 

@@ -322,7 +322,7 @@ RSpec.describe Transaction::Notification, type: :model do
     end
 
     it 'returns ticket_update as fallback' do
-      changes = { 'title' => ['Old', 'New'] }
+      changes = { 'title' => %w[Old New] }
       instance = build(ticket, agent, 'update')
       template = instance.send(:determine_update_template, ticket, nil, changes)
       expect(template).to eq('ticket_update')

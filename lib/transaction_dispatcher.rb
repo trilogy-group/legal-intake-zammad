@@ -123,7 +123,7 @@ class TransactionDispatcher
         if !article
           next
         end
-        
+
         if event[:type] == 'update'
           next
         end
@@ -196,7 +196,7 @@ class TransactionDispatcher
       created_at: Time.zone.now,
     }
     EventBuffer.add('transaction', e)
-    
+
     true
   end
 

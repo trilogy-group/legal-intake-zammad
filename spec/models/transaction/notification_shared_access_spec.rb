@@ -122,18 +122,18 @@ RSpec.describe Transaction::Notification, 'shared access' do
           matrix: {
             create: {
               criteria: { owned_by_me: true, owned_by_nobody: true, no: false },
-              channel: { email: true, online: true }
+              channel:  { email: true, online: true }
             },
             update: {
               criteria: { owned_by_me: true, owned_by_nobody: true, no: false },
-              channel: { email: true, online: true }
+              channel:  { email: true, online: true }
             }
           }
         }
         c.save!
       end
     end
-    let(:new_ticket)      { create(:ticket, group: new_group, customer: new_customer) }
+    let(:new_ticket) { create(:ticket, group: new_group, customer: new_customer) }
 
     it 'includes ticket customer in update notifications' do
       item = {
