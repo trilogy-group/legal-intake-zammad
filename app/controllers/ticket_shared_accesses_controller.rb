@@ -57,33 +57,8 @@ class TicketSharedAccessesController < ApplicationController
     query = params[:query].to_s.strip
     return render json: { result: [] } if query.length < 2
 
-    # Get ticket owner ID
-    ticket_owner_id = ticket.customer_id if params[:ticket_id].present?
-
-    # Get already shared user IDs
-    shared_user_ids = if params[:ticket_id].present?
-                        Ticket::SharedAccess.where(ticket_id: params[:ticket_id]).pluck(:user_id)
-                      else
-                        []
-                      end
-
-    # Build exclusion list: current user + ticket owner + already shared users
-    excluded_ids = [current_user.id, ticket_owner_id, *shared_user_ids].compact
-
-    users = User.where.not(id: excluded_ids)
-                .where('users.firstname ILIKE :q OR users.lastname ILIKE :q OR users.email ILIKE :q', q: "%#{query}%")
-                .where(active: true)
-                .joins('INNER JOIN roles_users ON roles_users.user_id = users.id')
-                .joins('INNER JOIN roles ON roles.id = roles_users.role_id')
-                .where('roles.name': 'Customer')
-                .distinct
-                .limit(10)
-
-    assets = {}
-    result = users.map do |user|
-      assets = user.assets(assets)
-      { id: user.id, type: 'User' }
-    end
+    users = search_users(query, excluded_user_ids)
+    result, assets = build_search_response(users)
 
     render json: {
       result: result,
@@ -92,6 +67,37 @@ class TicketSharedAccessesController < ApplicationController
   end
 
   private
+
+  def excluded_user_ids
+    excluded = [current_user.id]
+
+    if params[:ticket_id].present?
+      excluded << ticket.customer_id
+      excluded.concat(Ticket::SharedAccess.where(ticket_id: params[:ticket_id]).pluck(:user_id))
+    end
+
+    excluded.compact
+  end
+
+  def search_users(query, excluded_ids)
+    User.where.not(id: excluded_ids)
+        .where('users.firstname ILIKE :q OR users.lastname ILIKE :q OR users.email ILIKE :q', q: "%#{query}%")
+        .where(active: true)
+        .joins('INNER JOIN roles_users ON roles_users.user_id = users.id')
+        .joins('INNER JOIN roles ON roles.id = roles_users.role_id')
+        .where('roles.name': 'Customer')
+        .distinct
+        .limit(10)
+  end
+
+  def build_search_response(users)
+    assets = {}
+    result = users.map do |user|
+      assets = user.assets(assets)
+      { id: user.id, type: 'User' }
+    end
+    [result, assets]
+  end
 
   def ticket
     @ticket ||= begin
