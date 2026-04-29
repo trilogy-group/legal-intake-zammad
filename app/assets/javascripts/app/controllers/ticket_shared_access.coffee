@@ -22,7 +22,7 @@ class App.TicketSharedAccess extends App.ControllerModal
         placeholder: __('Enter name or email')
         minLength: 2
         disableCreateObject: true
-        source: "#{App.Config.get('api_path')}/ticket_shared_accesses/search"
+        source: "#{App.Config.get('api_path')}/ticket_shared_accesses/search?ticket_id=#{@ticket_id}"
       }
     }
 

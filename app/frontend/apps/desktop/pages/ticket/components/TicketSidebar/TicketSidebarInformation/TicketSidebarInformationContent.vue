@@ -31,10 +31,11 @@ const { ticket } = useTicketInformation()
 
 const ticketLinksInstance = useTemplateRef('ticket-links')
 
-const { isTicketAgent, isTicketEditable } = useTicketView(ticket)
+const { isTicketAgent, isTicketCustomer, isTicketEditable } = useTicketView(ticket)
 
 const ticketMergeFlyoutName = 'ticket-merge'
 const ticketChangeCustomerFlyoutName = 'ticket-change-customer'
+const ticketShareFlyoutName = 'ticket-share'
 
 const { openTicketHistoryFlyout } = useTicketHistory()
 
@@ -48,6 +49,12 @@ const { open: openChangeCustomerFlyout } = useFlyout({
   name: ticketChangeCustomerFlyoutName,
   component: () =>
     import('#desktop/pages/ticket/components/TicketDetailView/actions/TicketChangeCustomer/TicketChangeCustomerFlyout.vue'),
+})
+
+const { open: openTicketShareFlyout } = useFlyout({
+  name: ticketShareFlyoutName,
+  component: () =>
+    import('#desktop/pages/ticket/components/TicketDetailView/actions/TicketShare/TicketShareFlyout.vue'),
 })
 
 // :TODO find a way to provide the ticket via prop
@@ -77,6 +84,16 @@ const actions = computed<MenuItem[]>(() => [
     show: () => isTicketAgent.value && isTicketEditable.value,
     onClick: () =>
       openChangeCustomerFlyout({
+        ticket,
+      }),
+  },
+  {
+    key: ticketShareFlyoutName,
+    label: __('Share'),
+    icon: 'user',
+    show: () => isTicketCustomer.value,
+    onClick: () =>
+      openTicketShareFlyout({
         ticket,
       }),
   },

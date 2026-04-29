@@ -31,7 +31,7 @@ const route = useRoute()
 const router = useRouter()
 
 const ticketReactive = toRef(props, 'ticket')
-const { isTicketAgent, isTicketEditable } = useTicketView(ticketReactive)
+const { isTicketAgent, isTicketEditable, isTicketCustomer } = useTicketView(ticketReactive)
 
 const { autocompleteRef, gqlQuery, openMergeTicketsDialog } = useTicketsMerge(ticketReactive, () =>
   closeDialog(props.name),
@@ -39,6 +39,36 @@ const { autocompleteRef, gqlQuery, openMergeTicketsDialog } = useTicketsMerge(ti
 
 const { isSubscribed, isSubscriptionLoading, canManageSubscription, toggleSubscribe } =
   useTicketSubscribe(ticketReactive)
+
+const changeCustomerDialog = useDialog({
+  name: 'ticket-change-customer',
+  component: () =>
+    import('#mobile/pages/ticket/components/TicketDetailView/TicketAction/TicketActionChangeCustomerDialog.vue'),
+})
+
+const shareDialog = useDialog({
+  name: 'ticket-share',
+  component: () =>
+    import('#mobile/pages/ticket/components/TicketDetailView/TicketShareDialog.vue'),
+})
+
+const showChangeCustomer = () => {
+  if (!props.ticket) return
+
+  changeCustomerDialog.open({
+    name: changeCustomerDialog.name,
+    ticket: ticketReactive,
+  })
+}
+
+const showShareTicket = () => {
+  if (!props.ticket) return
+
+  shareDialog.open({
+    name: shareDialog.name,
+    ticket: ticketReactive,
+  })
+}
 
 const topButtons = computed(() =>
   [
@@ -58,6 +88,12 @@ const topButtons = computed(() =>
       onAction: toggleSubscribe,
     },
     {
+      label: __('Share ticket'),
+      icon: 'user',
+      hidden: !isTicketCustomer.value,
+      onAction: showShareTicket,
+    },
+    {
       label: __('Ticket info'),
       icon: 'info',
       onAction() {
@@ -75,21 +111,6 @@ const topButtons = computed(() =>
     },
   ].filter(truthy),
 )
-
-const changeCustomerDialog = useDialog({
-  name: 'ticket-change-customer',
-  component: () =>
-    import('#mobile/pages/ticket/components/TicketDetailView/TicketAction/TicketActionChangeCustomerDialog.vue'),
-})
-
-const showChangeCustomer = () => {
-  if (!props.ticket) return
-
-  changeCustomerDialog.open({
-    name: changeCustomerDialog.name,
-    ticket: ticketReactive,
-  })
-}
 </script>
 
 <template>

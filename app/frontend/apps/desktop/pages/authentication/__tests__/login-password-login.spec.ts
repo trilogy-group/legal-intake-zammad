@@ -132,11 +132,11 @@ describe('password login', () => {
     await view.events.click(view.getByRole('button', { name: 'Sign in' }))
 
     await waitFor(() => {
-      expect(
-        view.getByText(
-          'Login failed. Have you double-checked your credentials and completed the email verification step?',
-        ),
-      ).toHaveRole('alert')
+      const alerts = view.getAllByText(
+        'Login failed. Have you double-checked your credentials and completed the email verification step?',
+      )
+      const alertElement = alerts.find((el) => el.getAttribute('role') === 'alert')
+      expect(alertElement).toBeInTheDocument()
 
       expect(username).toHaveValue('admin@example.com')
       expect(password).toHaveValue('')

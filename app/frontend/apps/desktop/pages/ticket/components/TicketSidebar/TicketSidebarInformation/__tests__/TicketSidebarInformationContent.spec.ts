@@ -132,7 +132,7 @@ describe('TicketSidebarInformationContent', () => {
       expect(wrapper.queryByRole('button', { name: 'Change customer' })).not.toBeInTheDocument()
     })
 
-    it('does not show `Customer change` action if user is customer', () => {
+    it('does not show `Customer change` action if user is customer', async () => {
       mockPermissions(['ticket.customer'])
 
       const wrapper = renderInformationSidebar({
@@ -143,7 +143,16 @@ describe('TicketSidebarInformationContent', () => {
         },
       })
 
-      expect(wrapper.queryByRole('button', { name: 'Action menu button' })).not.toBeInTheDocument()
+      const actionMenuButton = wrapper.getByRole('button', {
+        name: 'Action menu button',
+      })
+
+      await wrapper.events.click(actionMenuButton)
+
+      expect(wrapper.queryByRole('button', { name: 'Change customer' })).not.toBeInTheDocument()
+
+      // But customers should see the Share action
+      expect(wrapper.getByRole('button', { name: 'Share' })).toBeInTheDocument()
     })
 
     it('does not display accounted time if user is customer', () => {

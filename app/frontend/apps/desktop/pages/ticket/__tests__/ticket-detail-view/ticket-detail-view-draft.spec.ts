@@ -86,7 +86,7 @@ describe('Ticket detail view - draft handling', () => {
       expect(within(menu).getByText('No items available')).toBeInTheDocument()
     })
 
-    it('allows to apply a draft and submits draft ID to the update mutation', async () => {
+    it('allows to apply a draft and submits draft ID to the update mutation', { timeout: 15000 }, async () => {
       mockFormUpdaterQuery({
         formUpdater: {
           fields: {

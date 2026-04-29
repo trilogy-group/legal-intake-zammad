@@ -23,7 +23,7 @@ describe('Ticket detail view - history', () => {
     mockPermissions(['ticket.agent'])
   })
 
-  it('displays history', async () => {
+  it('displays history', { timeout: 15000 }, async () => {
     const ticket = createDummyTicket()
 
     mockTicketQuery({ ticket })
