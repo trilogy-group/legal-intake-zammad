@@ -937,7 +937,7 @@ msgid "Accounted Time"
 msgstr ""
 
 #: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/TimeAccountingFlyout.vue:77
-#: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarInformation/TicketSidebarInformationContent.vue:124
+#: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarInformation/TicketSidebarInformationContent.vue:141
 #: app/frontend/shared/entities/ticket/stores/objectAttributes.ts:14
 msgid "Accounted time"
 msgstr ""
@@ -2157,7 +2157,7 @@ msgstr ""
 
 #: app/assets/javascripts/app/controllers/ticket_overview/settings.coffee:31
 #: app/assets/javascripts/app/models/overview.coffee:15
-#: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarInformation/TicketSidebarInformationContent.vue:96
+#: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarInformation/TicketSidebarInformationContent.vue:113
 msgid "Attributes"
 msgstr ""
 
@@ -2814,6 +2814,7 @@ msgstr ""
 #: app/frontend/apps/mobile/pages/search/views/SearchOverview.vue:217
 #: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/ArticleReplyDialog.vue:136
 #: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketAction/TicketActionChangeCustomerDialog.vue:68
+#: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketShareDialog.vue:208
 #: app/frontend/shared/components/Form/fields/FieldEditor/features/ai-assistant-text-tools/AiAssistantLoadingBanner/AiAssistantLoadingBanner.vue:46
 #: app/frontend/shared/components/Form/fields/FieldEditor/features/link/LinkForm.vue:169
 msgid "Cancel"
@@ -2948,9 +2949,9 @@ msgstr ""
 
 #: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/actions/TicketChangeCustomer/TicketChangeCustomerFlyout.vue:51
 #: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarCustomer/TicketSidebarCustomerContent.vue:70
-#: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarInformation/TicketSidebarInformationContent.vue:75
+#: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarInformation/TicketSidebarInformationContent.vue:82
 #: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketAction/TicketActionChangeCustomerDialog.vue:65
-#: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketActionsDialog.vue:127
+#: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketActionsDialog.vue:148
 msgid "Change customer"
 msgstr ""
 
@@ -3603,7 +3604,7 @@ msgstr ""
 msgid "Confirm dialog"
 msgstr ""
 
-#: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketActionsDialog.vue:105
+#: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketActionsDialog.vue:126
 msgid "Confirm merge"
 msgstr ""
 
@@ -4300,6 +4301,8 @@ msgid "Currently processing this ticket…"
 msgstr ""
 
 #: app/assets/javascripts/app/controllers/ticket_shared_access.coffee:37
+#: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/actions/TicketShare/TicketShareFlyout.vue:282
+#: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketShareDialog.vue:286
 msgid "Currently shared with"
 msgstr ""
 
@@ -4361,7 +4364,9 @@ msgstr ""
 #: app/controllers/time_accountings_controller.rb:89
 #: app/frontend/apps/desktop/components/Ticket/TicketPopoverWithTrigger/TicketPopover.vue:93
 #: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/TicketSimpleTable/TicketSimpleTable.vue:35
+#: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/actions/TicketShare/TicketShareFlyout.vue:214
 #: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/plugins/customer.ts:13
+#: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketShareDialog.vue:235
 #: app/frontend/apps/mobile/pages/ticket/views/TicketInformation/plugins/customer.ts:6
 #: app/graphql/gql/types/overview_type.rb:93
 #: db/seeds/object_manager_attributes.rb:63
@@ -6648,6 +6653,8 @@ msgid "Enter link URL"
 msgstr ""
 
 #: app/assets/javascripts/app/controllers/ticket_shared_access.coffee:22
+#: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/actions/TicketShare/TicketShareFlyout.vue:221
+#: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketShareDialog.vue:236
 msgid "Enter name or email"
 msgstr ""
 
@@ -6931,7 +6938,7 @@ msgstr ""
 msgid "Execute changes on objects"
 msgstr ""
 
-#: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketActionsDialog.vue:113
+#: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketActionsDialog.vue:134
 msgid "Execute configured macros"
 msgstr ""
 
@@ -7080,6 +7087,10 @@ msgstr ""
 msgid "Failed to delete checklist item."
 msgstr ""
 
+#: app/frontend/shared/entities/ticket-shared-access/composables/useTicketSharedAccess.ts:74
+msgid "Failed to fetch shared users"
+msgstr ""
+
 #: app/controllers/channels_google_controller.rb:40
 #: app/controllers/channels_microsoft365_controller.rb:40
 msgid "Failed to find backup on channel!"
@@ -7089,7 +7100,12 @@ msgstr ""
 msgid "Failed to load content."
 msgstr ""
 
+#: app/frontend/shared/entities/ticket-shared-access/composables/useTicketSharedAccess.ts:106
+msgid "Failed to load shared users."
+msgstr ""
+
 #: app/assets/javascripts/app/controllers/ticket_shared_access.coffee:101
+#: app/frontend/shared/entities/ticket-shared-access/composables/useTicketSharedAccess.ts:204
 msgid "Failed to remove shared access."
 msgstr ""
 
@@ -7106,6 +7122,16 @@ msgstr ""
 msgid "Failed to save the order of the checklist items. Please try again."
 msgstr ""
 
+#: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/actions/TicketShare/TicketShareFlyout.vue:138
+#: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketShareDialog.vue:139
+msgid "Failed to search for customers. Please try again."
+msgstr ""
+
+#: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/actions/TicketShare/TicketShareFlyout.vue:107
+#: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketShareDialog.vue:108
+msgid "Failed to search users"
+msgstr ""
+
 #: app/frontend/apps/desktop/pages/user/components/UserDetailTopBar/actions/resendVerificationEmail.ts:50
 msgid "Failed to send email to \"%s\". Please contact an administrator."
 msgstr ""
@@ -7115,6 +7141,7 @@ msgid "Failed to set up QR code. Please try again."
 msgstr ""
 
 #: app/assets/javascripts/app/controllers/ticket_shared_access.coffee:140
+#: app/frontend/shared/entities/ticket-shared-access/composables/useTicketSharedAccess.ts:146
 msgid "Failed to share ticket."
 msgstr ""
 
@@ -7214,7 +7241,7 @@ msgstr ""
 msgid "Filter"
 msgstr ""
 
-#: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketActionsDialog.vue:103
+#: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketActionsDialog.vue:124
 msgid "Find a ticket"
 msgstr ""
 
@@ -8182,9 +8209,9 @@ msgstr ""
 #: app/assets/javascripts/app/controllers/user_profile/action_row.coffee:62
 #: app/frontend/apps/desktop/components/CommonHistoryFlyout/CommonHistoryFlyout.vue:77
 #: app/frontend/apps/desktop/pages/organization/components/OrganizationDetailTopBar/actions/history.ts:13
-#: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarInformation/TicketSidebarInformationContent.vue:57
+#: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarInformation/TicketSidebarInformationContent.vue:64
 #: app/frontend/apps/desktop/pages/user/components/UserDetailTopBar/actions/history.ts:13
-#: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketActionsDialog.vue:121
+#: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketActionsDialog.vue:142
 msgid "History"
 msgstr ""
 
@@ -9588,7 +9615,7 @@ msgid "LinkedIn Developer Site"
 msgstr ""
 
 #: app/assets/javascripts/app/views/link/ticket/list.jst.eco:1
-#: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarInformation/TicketSidebarInformationContent.vue:115
+#: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarInformation/TicketSidebarInformationContent.vue:132
 msgid "Links"
 msgstr ""
 
@@ -9639,6 +9666,11 @@ msgstr ""
 #: app/assets/javascripts/app/controllers/widget/payload_example.coffee:34
 #: app/assets/javascripts/app/models/knowledge_base_answer_translation.coffee:51
 msgid "Loading failed."
+msgstr ""
+
+#: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/actions/TicketShare/TicketShareFlyout.vue:285
+#: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketShareDialog.vue:289
+msgid "Loading shared users"
 msgstr ""
 
 #: app/assets/javascripts/app/controllers/ticket_shared_access.coffee:38
@@ -10272,7 +10304,7 @@ msgstr ""
 #: app/assets/javascripts/app/controllers/agent_ticket_merge.coffee:7
 #: app/assets/javascripts/app/controllers/ticket_zoom/sidebar_ticket.coffee:120
 #: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/actions/TicketMerge/TicketMergeFlyout.vue:89
-#: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarInformation/TicketSidebarInformationContent.vue:64
+#: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarInformation/TicketSidebarInformationContent.vue:71
 msgid "Merge"
 msgstr ""
 
@@ -10285,7 +10317,7 @@ msgid "Merge cells"
 msgstr ""
 
 #: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/actions/TicketMerge/TicketMergeFlyout.vue:95
-#: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketActionsDialog.vue:46
+#: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketActionsDialog.vue:76
 msgid "Merge tickets"
 msgstr ""
 
@@ -11468,6 +11500,8 @@ msgid "Not found - resource not found"
 msgstr ""
 
 #: app/assets/javascripts/app/controllers/ticket_shared_access.coffee:58
+#: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/actions/TicketShare/TicketShareFlyout.vue:288
+#: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketShareDialog.vue:292
 msgid "Not shared with anyone yet."
 msgstr ""
 
@@ -13379,6 +13413,8 @@ msgstr ""
 #: app/frontend/apps/desktop/components/TwoFactor/TwoFactorConfiguration/TwoFactorConfigurationPasswordCheck.vue:59
 #: app/frontend/apps/desktop/components/TwoFactor/TwoFactorConfiguration/TwoFactorConfigurationSecurityKeys.vue:147
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingTwoFactorAuth.vue:177
+#: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/actions/TicketShare/TicketShareFlyout.vue:317
+#: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketShareDialog.vue:321
 #: app/frontend/shared/form/i18n/locales.ts:29
 msgid "Remove"
 msgstr ""
@@ -13389,6 +13425,11 @@ msgstr ""
 
 #: app/assets/javascripts/app/controllers/user/manage_two_factor.coffee:53
 msgid "Remove a configured two-factor authentication method"
+msgstr ""
+
+#: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/actions/TicketShare/TicketShareFlyout.vue:317
+#: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketShareDialog.vue:321
+msgid "Remove access for user"
 msgstr ""
 
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingLinkedAccounts.vue:170
@@ -14170,6 +14211,11 @@ msgstr ""
 msgid "Search for checklist templates"
 msgstr ""
 
+#: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/actions/TicketShare/TicketShareFlyout.vue:222
+#: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketShareDialog.vue:237
+msgid "Search for customer to share ticket with"
+msgstr ""
+
 #: app/assets/javascripts/app/controllers/group.coffee:18
 msgid "Search for groups"
 msgstr ""
@@ -14308,6 +14354,16 @@ msgstr ""
 
 #: lib/external_data_source/errors.rb:91
 msgid "Search result value key \"%s\" was not found."
+msgstr ""
+
+#: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/actions/TicketShare/TicketShareFlyout.vue:246
+#: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketShareDialog.vue:250
+msgid "Search results"
+msgstr ""
+
+#: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/actions/TicketShare/TicketShareFlyout.vue:272
+#: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketShareDialog.vue:276
+msgid "Searching..."
 msgstr ""
 
 #: app/assets/javascripts/app/controllers/_ui_element/autocompletion_ajax.coffee:16
@@ -14455,6 +14511,11 @@ msgstr ""
 
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingCalendar.vue:278
 msgid "See your tickets from within your favorite calendar by adding the subscription URL to your calendar app."
+msgstr ""
+
+#: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/actions/TicketShare/TicketShareFlyout.vue:254
+#: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketShareDialog.vue:258
+msgid "Select"
 msgstr ""
 
 #: app/assets/javascripts/app/controllers/_plugin/electron_events.coffee:38
@@ -14895,15 +14956,30 @@ msgstr ""
 
 #: app/assets/javascripts/app/controllers/ticket_shared_access.coffee:4
 #: app/assets/javascripts/app/controllers/ticket_zoom/sidebar_ticket.coffee:132
+#: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/actions/TicketShare/TicketShareFlyout.vue:200
+#: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarInformation/TicketSidebarInformationContent.vue:92
+#: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketShareDialog.vue:205
 msgid "Share"
 msgstr ""
 
 #: app/assets/javascripts/app/controllers/ticket_shared_access.coffee:5
+#: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/actions/TicketShare/TicketShareFlyout.vue:200
+#: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketShareDialog.vue:205
 msgid "Share Ticket"
 msgstr ""
 
 #: app/assets/javascripts/app/controllers/ticket_shared_access.coffee:14
+#: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/actions/TicketShare/TicketShareFlyout.vue:206
+#: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketShareDialog.vue:225
 msgid "Share this ticket with another customer so they can read and comment on it."
+msgstr ""
+
+#: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketActionsDialog.vue:91
+msgid "Share ticket"
+msgstr ""
+
+#: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/actions/TicketShare/TicketShareFlyout.vue:230
+msgid "Share ticket with selected customer"
 msgstr ""
 
 #: app/assets/javascripts/app/controllers/_integration/clearbit.coffee:66
@@ -14929,11 +15005,13 @@ msgid "Shared Mailbox"
 msgstr ""
 
 #: app/controllers/ticket_shared_accesses_controller.rb:49
+#: app/frontend/shared/entities/ticket-shared-access/composables/useTicketSharedAccess.ts:176
 #: app/graphql/gql/mutations/ticket/shared_access/unshare.rb:23
 msgid "Shared access not found."
 msgstr ""
 
 #: app/assets/javascripts/app/controllers/ticket_shared_access.coffee:96
+#: app/frontend/shared/entities/ticket-shared-access/composables/useTicketSharedAccess.ts:196
 msgid "Shared access removed."
 msgstr ""
 
@@ -15082,7 +15160,7 @@ msgstr ""
 msgid "Show the chat when ready."
 msgstr ""
 
-#: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketDetailViewHeader.vue:104
+#: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketDetailViewHeader.vue:101
 #: app/frontend/apps/mobile/pages/ticket/views/TicketInformation/TicketInformationView.vue:78
 msgid "Show ticket actions"
 msgstr ""
@@ -15091,7 +15169,7 @@ msgstr ""
 msgid "Show ticket escalation information"
 msgstr ""
 
-#: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketDetailViewHeader.vue:81
+#: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketDetailViewHeader.vue:79
 msgid "Show ticket viewers"
 msgstr ""
 
@@ -15458,7 +15536,7 @@ msgstr ""
 msgid "Start typing e.g. the name of a ticket, an organization or a user."
 msgstr ""
 
-#: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketActionsDialog.vue:107
+#: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketActionsDialog.vue:128
 msgid "Start typing to find the ticket to merge into."
 msgstr ""
 
@@ -15701,7 +15779,7 @@ msgstr ""
 #: app/assets/javascripts/app/controllers/_ui_element/object_perform_action.coffee:157
 #: app/assets/javascripts/app/controllers/_ui_element/object_selector.coffee:206
 #: app/assets/javascripts/app/views/widget/mention.jst.eco:4
-#: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketActionsDialog.vue:52
+#: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketActionsDialog.vue:82
 msgid "Subscribe"
 msgstr ""
 
@@ -15725,7 +15803,7 @@ msgstr ""
 msgid "Subscribed tickets"
 msgstr ""
 
-#: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarInformation/TicketSidebarInformationContent.vue:133
+#: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarInformation/TicketSidebarInformationContent.vue:150
 #: app/frontend/apps/mobile/pages/ticket/views/TicketInformation/TicketInformationDetails.vue:169
 msgid "Subscribers"
 msgstr ""
@@ -15882,7 +15960,7 @@ msgstr ""
 #: app/assets/javascripts/app/views/popover/kb_generic.jst.eco:41
 #: app/assets/javascripts/app/views/tag/index.jst.eco:3
 #: app/assets/javascripts/app/views/widget/tag.jst.eco:1
-#: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarInformation/TicketSidebarInformationContent.vue:105
+#: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarInformation/TicketSidebarInformationContent.vue:122
 #: app/frontend/apps/mobile/components/Form/fields/FieldTags/FieldTagsDialog.vue:143
 #: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketTags.vue:75
 #: app/frontend/apps/mobile/pages/ticket/views/TicketInformation/TicketInformationDetails.vue:164
@@ -18066,7 +18144,7 @@ msgstr ""
 msgid "Ticket Trigger Loop Protection Articles per Ticket"
 msgstr ""
 
-#: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketActionsDialog.vue:96
+#: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketActionsDialog.vue:117
 msgid "Ticket actions"
 msgstr ""
 
@@ -18113,7 +18191,7 @@ msgstr ""
 msgid "Ticket frequency"
 msgstr ""
 
-#: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketDetailViewHeader.vue:96
+#: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketDetailViewHeader.vue:94
 msgid "Ticket has %s viewers"
 msgstr ""
 
@@ -18121,7 +18199,7 @@ msgstr ""
 msgid "Ticket has been created successfully."
 msgstr ""
 
-#: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketActionsDialog.vue:61
+#: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketActionsDialog.vue:97
 msgid "Ticket info"
 msgstr ""
 
@@ -18134,7 +18212,7 @@ msgstr ""
 msgid "Ticket merged successfully"
 msgstr ""
 
-#: app/controllers/ticket_shared_accesses_controller.rb:93
+#: app/controllers/ticket_shared_accesses_controller.rb:103
 msgid "Ticket not found."
 msgstr ""
 
@@ -18217,6 +18295,7 @@ msgid "Ticket selector contains expert conditions. If you turn off the expert mo
 msgstr ""
 
 #: app/assets/javascripts/app/controllers/ticket_shared_access.coffee:127
+#: app/frontend/shared/entities/ticket-shared-access/composables/useTicketSharedAccess.ts:138
 msgid "Ticket shared successfully!"
 msgstr ""
 
@@ -18968,6 +19047,11 @@ msgstr ""
 msgid "Type"
 msgstr ""
 
+#: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/actions/TicketShare/TicketShareFlyout.vue:238
+#: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketShareDialog.vue:242
+msgid "Type at least 2 characters to search for customers"
+msgstr ""
+
 #: app/assets/javascripts/app/views/ticket_zoom/sidebar_idoit.jst.eco:11
 msgid "Type:"
 msgstr ""
@@ -19109,7 +19193,7 @@ msgstr ""
 #: app/assets/javascripts/app/controllers/_ui_element/_application_action.coffee:157
 #: app/assets/javascripts/app/controllers/_ui_element/object_perform_action.coffee:167
 #: app/assets/javascripts/app/views/widget/mention.jst.eco:7
-#: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketActionsDialog.vue:52
+#: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketActionsDialog.vue:82
 msgid "Unsubscribe"
 msgstr ""
 
@@ -19472,11 +19556,14 @@ msgstr ""
 #: app/frontend/apps/desktop/components/Search/plugins/user.ts:13
 #: app/frontend/apps/desktop/entities/channel-email/composables/useEmailInboundForm.ts:117
 #: app/frontend/apps/desktop/entities/channel-email/composables/useEmailOutboundForm.ts:73
+#: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/actions/TicketShare/TicketShareFlyout.vue:121
 #: app/frontend/apps/desktop/pages/user/components/UserDetailTopBar.vue:31
 #: app/frontend/apps/desktop/pages/user/components/UserDetailViewContent.vue:36
 #: app/frontend/apps/desktop/pages/user/routes.ts:9
+#: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketShareDialog.vue:122
 #: app/frontend/apps/mobile/pages/user/routes.ts:7
 #: app/frontend/apps/mobile/pages/user/views/UserDetailView.vue:32
+#: app/frontend/shared/entities/ticket-shared-access/composables/useTicketSharedAccess.ts:90
 msgid "User"
 msgstr ""
 
@@ -19590,7 +19677,7 @@ msgstr ""
 msgid "User menu"
 msgstr ""
 
-#: app/controllers/ticket_shared_accesses_controller.rb:104
+#: app/controllers/ticket_shared_accesses_controller.rb:114
 #: app/graphql/gql/mutations/ticket/shared_access/share.rb:28
 #: app/graphql/gql/mutations/ticket/shared_access/unshare.rb:30
 msgid "User not found."
@@ -19664,6 +19751,11 @@ msgstr ""
 
 #: app/frontend/apps/mobile/pages/search/plugins/user.ts:10
 msgid "Users with \"%s\""
+msgstr ""
+
+#: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/actions/TicketShare/TicketShareFlyout.vue:291
+#: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketShareDialog.vue:295
+msgid "Users with access to this ticket"
 msgstr ""
 
 #: app/assets/javascripts/app/views/integration/ldap_wizard.jst.eco:236
@@ -20214,19 +20306,19 @@ msgstr ""
 msgid "You are part of the BETA UI feedback program."
 msgstr ""
 
-#: app/models/transaction/notification.rb:174
+#: app/models/transaction/notification.rb:176
 msgid "You are receiving this because this ticket was shared with you."
 msgstr ""
 
-#: app/models/transaction/notification.rb:123
+#: app/models/transaction/notification.rb:125
 msgid "You are receiving this because you are a member of the group of this ticket."
 msgstr ""
 
-#: app/models/transaction/notification.rb:902
+#: app/models/transaction/notification.rb:906
 msgid "You are receiving this because you are out-of-office replacement for a participant of this ticket."
 msgstr ""
 
-#: app/models/transaction/notification.rb:117
+#: app/models/transaction/notification.rb:119
 msgid "You are receiving this because you were mentioned in this ticket."
 msgstr ""
 
@@ -20961,7 +21053,7 @@ msgstr ""
 msgid "created"
 msgstr ""
 
-#: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketDetailViewHeader.vue:70
+#: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketDetailViewHeader.vue:68
 msgid "created %s"
 msgstr ""
 
