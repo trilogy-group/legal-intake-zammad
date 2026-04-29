@@ -3,6 +3,8 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref, toRef } from 'vue'
 
+import { NotificationTypes } from '#shared/components/CommonNotifications/types.ts'
+import { useNotifications } from '#shared/components/CommonNotifications/useNotifications.ts'
 import CommonUserAvatar from '#shared/components/CommonUserAvatar/CommonUserAvatar.vue'
 import type { TicketById } from '#shared/entities/ticket/types.ts'
 import { useTicketSharedAccess } from '#shared/entities/ticket-shared-access/composables/useTicketSharedAccess.ts'
@@ -47,6 +49,8 @@ interface SearchApiResponse {
 
 const props = defineProps<Props>()
 
+const { notify } = useNotifications()
+
 const {
   sharedUsers,
   isLoading,
@@ -62,6 +66,7 @@ const isSearching = ref(false)
 const selectedUserId = ref<string | null>(null)
 const selectedUserLabel = ref<string>('')
 let searchDebounceTimer: ReturnType<typeof setTimeout> | null = null
+let abortController: AbortController | null = null
 
 onMounted(() => {
   fetchSharedUsers()
@@ -71,10 +76,21 @@ onUnmounted(() => {
   if (searchDebounceTimer) {
     clearTimeout(searchDebounceTimer)
   }
+  if (abortController) {
+    abortController.abort()
+  }
 })
 
 const performSearch = async (query: string) => {
   isSearching.value = true
+  
+  // Cancel previous request if still pending
+  if (abortController) {
+    abortController.abort()
+  }
+  
+  abortController = new AbortController()
+  
   try {
     const ticketId = props.ticket?.internalId
     const response = await fetch(
@@ -84,6 +100,7 @@ const performSearch = async (query: string) => {
           'Content-Type': 'application/json',
         },
         credentials: 'same-origin',
+        signal: abortController.signal,
       }
     )
 
@@ -114,15 +131,27 @@ const performSearch = async (query: string) => {
         label: `${__('User')} ${item.id}`,
       }
     })
-  } catch {
+  } catch (error) {
+    if (error instanceof Error && error.name !== 'AbortError') {
+      notify({
+        id: 'ticket-share-search-error',
+        type: NotificationTypes.Error,
+        message: __('Failed to search for customers. Please try again.'),
+      })
+    }
     searchResults.value = []
   } finally {
     isSearching.value = false
+    abortController = null
   }
 }
 
 const searchUsers = () => {
   const query = searchQuery.value.trim()
+  
+  // Clear selected user when query changes
+  selectedUserId.value = null
+  selectedUserLabel.value = ''
   
   // Clear previous timer
   if (searchDebounceTimer) {
@@ -281,7 +310,7 @@ const cancelDialog = () => {
                 }"
                 size="small"
               />
-              <span class="text-sm">{{ sharedUser.user_name || `User #${sharedUser.user_id}` }}</span>
+              <span class="text-sm">{{ sharedUser.user_name || `${__('User')} #${sharedUser.user_id}` }}</span>
             </div>
 
             <CommonButton
