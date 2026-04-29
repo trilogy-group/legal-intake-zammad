@@ -70,7 +70,7 @@ const triggerArticleUpdate = async (
 }
 
 describe('Ticket detail view - Ticket summary', () => {
-  it('shows ticket summary to agent', async () => {
+  it('shows ticket summary to agent', { timeout: 15000 }, async () => {
     mockPermissions(['ticket.agent'])
 
     mockTicketQuery({

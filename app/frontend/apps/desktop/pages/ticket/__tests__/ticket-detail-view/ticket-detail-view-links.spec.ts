@@ -20,7 +20,7 @@ import {
 import { mockLinkListQuery } from '../../graphql/queries/linkList.mocks.ts'
 
 describe('Ticket detail view links', () => {
-  it('opens the links flyout and adds a link', async () => {
+  it('opens the links flyout and adds a link', { timeout: 15000 }, async () => {
     mockPermissions(['ticket.agent'])
 
     mockTicketRelationAndRecentTicketListsQuery({

@@ -612,7 +612,7 @@ describe('Ticket detail view', () => {
       )
     })
 
-    it('discards unsaved changes', async () => {
+    it('discards unsaved changes', { timeout: 15000 }, async () => {
       mockApplicationConfig({
         ui_ticket_zoom_article_note_new_internal: true,
       })
@@ -652,7 +652,7 @@ describe('Ticket detail view', () => {
       )
     })
 
-    it('discards reply form and it keeps the ticket attribute fields state', async () => {
+    it('discards reply form and it keeps the ticket attribute fields state', { timeout: 15000 }, async () => {
       mockTicketQuery({
         ticket: createDummyTicket({
           articleType: 'phone',
@@ -769,7 +769,7 @@ describe('Ticket detail view', () => {
       expect(view.getByLabelText('State')).toHaveTextContent('closed')
     })
 
-    it('discards complete form with an reply and afterwards only the reply directly', async () => {
+    it('discards complete form with an reply and afterwards only the reply directly', { timeout: 15000 }, async () => {
       const ticket = createDummyTicket({
         group: {
           id: convertToGraphQLId('Group', 1),

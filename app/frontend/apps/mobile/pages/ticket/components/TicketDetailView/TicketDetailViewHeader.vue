@@ -5,7 +5,6 @@ import { computed, toRef } from 'vue'
 
 import CommonUserAvatar from '#shared/components/CommonUserAvatar/CommonUserAvatar.vue'
 import type { TicketById, TicketLiveAppUser } from '#shared/entities/ticket/types.ts'
-import { useSessionStore } from '#shared/stores/session.ts'
 
 import AiAgentAvatar from '#mobile/components/AiAgent/AiAgentAvatar.vue'
 import CommonLoader from '#mobile/components/CommonLoader/CommonLoader.vue'
@@ -20,7 +19,6 @@ interface Props {
 }
 
 const props = defineProps<Props>()
-const session = useSessionStore()
 
 const viewersDialog = useDialog({
   name: 'ticket-viewers-dialog',
@@ -99,7 +97,6 @@ const showActions = () => {
           </div>
         </button>
         <button
-          v-if="session.hasPermission('ticket.agent')"
           type="button"
           :aria-label="$t('Show ticket actions')"
           @click="showActions()"

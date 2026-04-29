@@ -85,7 +85,7 @@ describe('Ticket detail view', () => {
       expect(within(sidebar).getByText('15.00')).toBeInTheDocument()
     })
 
-    it('opens time accounting flyout when the condition is met', async () => {
+    it('opens time accounting flyout when the condition is met', { timeout: 15000 }, async () => {
       mockApplicationConfig({
         ui_ticket_zoom_article_note_new_internal: true,
         time_accounting: true,

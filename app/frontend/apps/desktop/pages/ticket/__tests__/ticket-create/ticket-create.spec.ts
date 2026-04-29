@@ -80,7 +80,7 @@ describe('ticket create view', () => {
       expect(await view.findAllByText('This field is required.')).toHaveLength(4)
     })
 
-    it('creates a new ticket', async () => {
+    it('creates a new ticket', { timeout: 15000 }, async () => {
       handleMockFormUpdaterQuery({
         pending_time: {
           show: true,

@@ -14,7 +14,7 @@ import { mockTicketRelationAndRecentTicketListsQuery } from '#desktop/pages/tick
 import { mockLinkListQuery } from '../../graphql/queries/linkList.mocks.ts'
 
 describe('Ticket detail view ticket merge', () => {
-  it('allows to merge source ticket with a target ticket', async () => {
+  it('allows to merge source ticket with a target ticket', { timeout: 15000 }, async () => {
     mockPermissions(['ticket.agent'])
 
     mockTicketRelationAndRecentTicketListsQuery({

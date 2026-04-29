@@ -52,12 +52,25 @@ class TicketSharedAccessesController < ApplicationController
     render json: { error: __('Shared access not found.') }, status: :not_found
   end
 
-  # GET /api/v1/ticket_shared_accesses/search?query=term
+  # GET /api/v1/ticket_shared_accesses/search?query=term&ticket_id=123
   def search
     query = params[:query].to_s.strip
     return render json: { result: [] } if query.length < 2
 
-    users = User.where.not(id: current_user.id)
+    # Get ticket owner ID
+    ticket_owner_id = ticket.customer_id if params[:ticket_id].present?
+
+    # Get already shared user IDs
+    shared_user_ids = if params[:ticket_id].present?
+                        Ticket::SharedAccess.where(ticket_id: params[:ticket_id]).pluck(:user_id)
+                      else
+                        []
+                      end
+
+    # Build exclusion list: current user + ticket owner + already shared users
+    excluded_ids = [current_user.id, ticket_owner_id, *shared_user_ids].compact
+
+    users = User.where.not(id: excluded_ids)
                 .where('users.firstname ILIKE :q OR users.lastname ILIKE :q OR users.email ILIKE :q', q: "%#{query}%")
                 .where(active: true)
                 .joins('INNER JOIN roles_users ON roles_users.user_id = users.id')
