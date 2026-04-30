@@ -24,6 +24,9 @@ class TicketSharedAccessesController < ApplicationController
 
     Ticket::SharedAccess.share!(ticket, target_user, created_by: current_user)
 
+    # Send notifications based on who is sharing
+    send_sharing_notifications(ticket, target_user)
+
     render json: true, status: :created
   rescue ActiveRecord::RecordNotUnique
     render json: { error: __('This user is already shared on this ticket.') }, status: :unprocessable_entity
@@ -67,6 +70,38 @@ class TicketSharedAccessesController < ApplicationController
   end
 
   private
+
+  def send_sharing_notifications(ticket, shared_with_user)
+    ticket_creator = ticket.customer
+    is_creator_sharing = ticket_creator && ticket_creator.id == current_user.id
+
+    # Always send online notification to user being shared with
+    OnlineNotification.add(
+      type: 'added',
+      object: 'Ticket',
+      o_id: ticket.id,
+      seen: false,
+      user_id: shared_with_user.id,
+      created_by_id: current_user.id,
+      updated_by_id: current_user.id,
+    )
+
+    # Shared customers will be notified through the main notification system
+    # when actual ticket updates (comments, state changes) occur
+    
+    # Keep online notification for non-creator sharing
+    if !is_creator_sharing && ticket_creator
+      OnlineNotification.add(
+        type: 'update',
+        object: 'Ticket',
+        o_id: ticket.id,
+        seen: false,
+        user_id: ticket_creator.id,
+        created_by_id: current_user.id,
+        updated_by_id: current_user.id,
+      )
+    end
+  end
 
   def excluded_user_ids
     excluded = [current_user.id]
