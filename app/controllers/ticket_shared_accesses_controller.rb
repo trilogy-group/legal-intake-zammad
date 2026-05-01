@@ -22,10 +22,13 @@ class TicketSharedAccessesController < ApplicationController
     raise Exceptions::UnprocessableEntity, __('Ticket can only be shared with customer users.') if !target_user.permissions?('ticket.customer')
     raise Exceptions::UnprocessableEntity, __('Inactive users cannot be shared on tickets.') if !target_user.active?
 
-    Ticket::SharedAccess.share!(ticket, target_user, created_by: current_user)
+    # Use transaction to ensure share and notifications are atomic
+    ActiveRecord::Base.transaction do
+      Ticket::SharedAccess.share!(ticket, target_user, created_by: current_user)
 
-    # Send notifications based on who is sharing
-    send_sharing_notifications(ticket, target_user)
+      # Send notifications based on who is sharing
+      send_sharing_notifications(ticket, target_user)
+    end
 
     render json: true, status: :created
   rescue ActiveRecord::RecordNotUnique
@@ -90,7 +93,8 @@ class TicketSharedAccessesController < ApplicationController
     # when actual ticket updates (comments, state changes) occur
     
     # Keep online notification for non-creator sharing
-    if !is_creator_sharing && ticket_creator
+    # Don't send duplicate notification if the shared_with_user IS the ticket creator
+    if !is_creator_sharing && ticket_creator && ticket_creator.id != shared_with_user.id
       OnlineNotification.add(
         type: 'update',
         object: 'Ticket',

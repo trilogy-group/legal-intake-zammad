@@ -23,7 +23,7 @@
     "lint:md": "pnpm lint:md:cmd '*.md' '**/*.md' '#node_modules' '#**/node_modules' '#tmp'",
     "lint:md:fix": "pnpm lint:md --fix",
     "lint:md:cmd": "pnpm exec markdownlint-cli2",
-    "test": "CI=true VTL_SKIP_AUTO_CLEANUP=true TZ=utc vitest",
+    "test": "VTL_SKIP_AUTO_CLEANUP=true TZ=utc vitest",
     "test:ct": "cd .dev/cypress; CY_OPEN=true pnpm cypress open --component --project ../../ --config-file .dev/cypress/cypress.config.mjs",
     "test:ci:ct": "cd .dev/cypress; CI=true pnpm cypress run --component --project ../../ --config-file .dev/cypress/cypress.config.mjs --browser electron",
     "cypress:snapshots": "sh .dev/cypress/visual-regression/snapshots.sh",
