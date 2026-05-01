@@ -48,8 +48,7 @@ const changeCustomerDialog = useDialog({
 
 const shareDialog = useDialog({
   name: 'ticket-share',
-  component: () =>
-    import('#mobile/pages/ticket/components/TicketDetailView/TicketShareDialog.vue'),
+  component: () => import('#mobile/pages/ticket/components/TicketDetailView/TicketShareDialog.vue'),
 })
 
 const showChangeCustomer = () => {

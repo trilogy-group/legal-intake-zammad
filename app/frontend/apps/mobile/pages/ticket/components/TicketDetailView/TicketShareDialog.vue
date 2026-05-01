@@ -51,14 +51,8 @@ const props = defineProps<Props>()
 
 const { notify } = useNotifications()
 
-const {
-  sharedUsers,
-  isLoading,
-  fetchSharedUsers,
-  shareTicket,
-  unshareTicket,
-  canRemoveUser,
-} = useTicketSharedAccess(toRef(props, 'ticket'))
+const { sharedUsers, isLoading, fetchSharedUsers, shareTicket, unshareTicket, canRemoveUser } =
+  useTicketSharedAccess(toRef(props, 'ticket'))
 
 const searchQuery = ref('')
 const searchResults = ref<SearchResult[]>([])
@@ -83,14 +77,14 @@ onUnmounted(() => {
 
 const performSearch = async (query: string) => {
   isSearching.value = true
-  
+
   // Cancel previous request if still pending
   if (abortController) {
     abortController.abort()
   }
-  
+
   abortController = new AbortController()
-  
+
   try {
     const ticketId = props.ticket?.internalId
     const response = await fetch(
@@ -101,7 +95,7 @@ const performSearch = async (query: string) => {
         },
         credentials: 'same-origin',
         signal: abortController.signal,
-      }
+      },
     )
 
     if (!response.ok) {
@@ -111,7 +105,7 @@ const performSearch = async (query: string) => {
     const data: SearchApiResponse = await response.json()
     const results = data.result || []
     const assets = data.assets || {}
-    
+
     // Backend already filters out current user, ticket owner, and already shared users
     searchResults.value = results.map((item: SearchApiResult) => {
       const user = assets.User?.[item.id]
@@ -148,11 +142,11 @@ const performSearch = async (query: string) => {
 
 const searchUsers = () => {
   const query = searchQuery.value.trim()
-  
+
   // Clear selected user when query changes
   selectedUserId.value = null
   selectedUserLabel.value = ''
-  
+
   // Clear previous timer
   if (searchDebounceTimer) {
     clearTimeout(searchDebounceTimer)
@@ -166,7 +160,7 @@ const searchUsers = () => {
 
   // Set loading state immediately
   isSearching.value = true
-  
+
   // Debounce the actual search by 300ms
   searchDebounceTimer = setTimeout(() => {
     performSearch(query)
@@ -272,7 +266,12 @@ const cancelDialog = () => {
           </button>
         </div>
 
-        <div v-if="isSearching" class="text-center text-sm text-gray-100" role="status" :aria-live="'polite'">
+        <div
+          v-if="isSearching"
+          class="text-center text-sm text-gray-100"
+          role="status"
+          :aria-live="'polite'"
+        >
           {{ __('Searching...') }}
         </div>
       </div>
@@ -292,7 +291,12 @@ const cancelDialog = () => {
           {{ __('Not shared with anyone yet.') }}
         </div>
 
-        <div v-else class="flex flex-col gap-2" role="list" :aria-label="__('Users with access to this ticket')">
+        <div
+          v-else
+          class="flex flex-col gap-2"
+          role="list"
+          :aria-label="__('Users with access to this ticket')"
+        >
           <div
             v-for="sharedUser in sharedUsers"
             :key="sharedUser.id"
@@ -310,7 +314,9 @@ const cancelDialog = () => {
                 }"
                 size="small"
               />
-              <span class="text-sm">{{ sharedUser.user_name || `${__('User')} #${sharedUser.user_id}` }}</span>
+              <span class="text-sm">{{
+                sharedUser.user_name || `${__('User')} #${sharedUser.user_id}`
+              }}</span>
             </div>
 
             <CommonButton

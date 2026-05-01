@@ -277,10 +277,19 @@ RSpec.describe Transaction::Notification, type: :model do
       expect(template).to eq('ticket_comment_added')
     end
 
-    it 'returns ticket_state_resolved when state changes to closed' do
+    it 'returns ticket_state_closed when state changes to closed' do
       closed_state = Ticket::State.find_by(name: 'closed')
       open_state = Ticket::State.find_by(name: 'open')
       changes = { 'state_id' => [open_state.id, closed_state.id] }
+      instance = build(ticket, agent, 'update')
+      template = instance.send(:determine_update_template, ticket, nil, changes)
+      expect(template).to eq('ticket_state_closed')
+    end
+
+    it 'returns ticket_state_resolved when state changes to resolved' do
+      resolved_state = Ticket::State.find_by(name: 'resolved')
+      open_state = Ticket::State.find_by(name: 'open')
+      changes = { 'state_id' => [open_state.id, resolved_state.id] }
       instance = build(ticket, agent, 'update')
       template = instance.send(:determine_update_template, ticket, nil, changes)
       expect(template).to eq('ticket_state_resolved')

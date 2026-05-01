@@ -22,7 +22,13 @@ class TicketSharedAccessesController < ApplicationController
     raise Exceptions::UnprocessableEntity, __('Ticket can only be shared with customer users.') if !target_user.permissions?('ticket.customer')
     raise Exceptions::UnprocessableEntity, __('Inactive users cannot be shared on tickets.') if !target_user.active?
 
-    Ticket::SharedAccess.share!(ticket, target_user, created_by: current_user)
+    # Use transaction to ensure share and notifications are atomic
+    ActiveRecord::Base.transaction do
+      Ticket::SharedAccess.share!(ticket, target_user, created_by: current_user)
+
+      # Send notifications based on who is sharing
+      send_sharing_notifications(ticket, target_user)
+    end
 
     render json: true, status: :created
   rescue ActiveRecord::RecordNotUnique
@@ -67,6 +73,39 @@ class TicketSharedAccessesController < ApplicationController
   end
 
   private
+
+  def send_sharing_notifications(ticket, shared_with_user)
+    ticket_creator = ticket.customer
+    is_creator_sharing = ticket_creator && ticket_creator.id == current_user.id
+
+    # Always send online notification to user being shared with
+    OnlineNotification.add(
+      type: 'added',
+      object: 'Ticket',
+      o_id: ticket.id,
+      seen: false,
+      user_id: shared_with_user.id,
+      created_by_id: current_user.id,
+      updated_by_id: current_user.id,
+    )
+
+    # Shared customers will be notified through the main notification system
+    # when actual ticket updates (comments, state changes) occur
+    
+    # Keep online notification for non-creator sharing
+    # Don't send duplicate notification if the shared_with_user IS the ticket creator
+    if !is_creator_sharing && ticket_creator && ticket_creator.id != shared_with_user.id
+      OnlineNotification.add(
+        type: 'update',
+        object: 'Ticket',
+        o_id: ticket.id,
+        seen: false,
+        user_id: ticket_creator.id,
+        created_by_id: current_user.id,
+        updated_by_id: current_user.id,
+      )
+    end
+  end
 
   def excluded_user_ids
     excluded = [current_user.id]

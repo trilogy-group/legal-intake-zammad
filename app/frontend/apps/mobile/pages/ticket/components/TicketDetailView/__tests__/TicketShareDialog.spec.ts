@@ -23,7 +23,11 @@ describe('TicketShareDialog', () => {
 
     expect(wrapper.getByRole('dialog', { name: 'Share Ticket' })).toBeInTheDocument()
 
-    expect(wrapper.getByText('Share this ticket with another customer so they can read and comment on it.')).toBeInTheDocument()
+    expect(
+      wrapper.getByText(
+        'Share this ticket with another customer so they can read and comment on it.',
+      ),
+    ).toBeInTheDocument()
 
     expect(wrapper.getByPlaceholderText('Enter name or email')).toBeInTheDocument()
 
@@ -61,7 +65,9 @@ describe('TicketShareDialog', () => {
     })
 
     // Wait for the component to render
-    await wrapper.findByText('Share this ticket with another customer so they can read and comment on it.')
+    await wrapper.findByText(
+      'Share this ticket with another customer so they can read and comment on it.',
+    )
 
     // Verify the search input exists
     const searchInput = wrapper.getByPlaceholderText('Enter name or email')

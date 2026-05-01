@@ -50,6 +50,7 @@ class Transaction::Notification
   end
 
   def article
+    return nil if @suppress_article_for_state_change
     @article ||= article_by_item
   end
 
@@ -75,9 +76,14 @@ class Transaction::Notification
       return
     end
 
-    # Block ALL notifications (email and in-app) for submitted_to_legal state
+    # Block only state change notifications for submitted_to_legal
+    # Allow comment notifications to go through
     if ticket.state.name == 'submitted_to_legal'
-      return
+      # If this is a state change notification (not a comment), block it
+      if @item[:type] == 'update' && @item[:changes]&.key?('state_id')
+        return
+      end
+      # Allow comments and other updates to proceed
     end
 
     prepare_recipients_and_reasons
@@ -92,6 +98,23 @@ class Transaction::Notification
     # BUT: If this is the first article of a newly created ticket, treat it as creation, not comment
     if article && @item[:type] == 'update'
       send_comment_notification_with_cc(article)
+      
+      if @item[:changes]&.key?('state_id')
+        # Suppress article for state change notification so it doesn't get confused with comment notification
+        @suppress_article_for_state_change = true
+        
+        if ticket.state.name == 'under_legal_review'
+          send_under_legal_review_notification_with_cc
+        elsif %w[awaiting_response ready_for_signature sent_for_signature signed resolved closed].include?(ticket.state.name)
+          send_state_change_notification_with_cc
+        elsif reopened_state?(ticket, @item[:changes])
+          send_state_change_notification_with_cc
+        end
+        
+        # Re-enable article access
+        @suppress_article_for_state_change = false
+      end
+      
       return
     end
 
@@ -105,8 +128,8 @@ class Transaction::Notification
     # For under_legal_review state - special CC logic
     elsif @item[:type] == 'update' && @item[:changes]&.key?('state_id') && ticket.state.name == 'under_legal_review'
       send_under_legal_review_notification_with_cc
-    # For specific state changes (awaiting_response, ready_for_signature, sent_for_signature, signed, resolved, reopened), use CC
-    elsif @item[:type] == 'update' && @item[:changes]&.key?('state_id') && %w[awaiting_response ready_for_signature sent_for_signature signed resolved].include?(ticket.state.name)
+    # For specific state changes (awaiting_response, ready_for_signature, sent_for_signature, signed, resolved, closed, reopened), use CC
+    elsif @item[:type] == 'update' && @item[:changes]&.key?('state_id') && %w[awaiting_response ready_for_signature sent_for_signature signed resolved closed].include?(ticket.state.name)
       send_state_change_notification_with_cc
     # For reopened state - check from closed states
     # rubocop:disable Lint/DuplicateBranch
@@ -208,6 +231,15 @@ class Transaction::Notification
     already_checked_recipient_ids = {}
     possible_recipients.each do |user|
       result = NotificationFactory::Mailer.notification_settings(user, ticket, @item[:type])
+      
+      # If no preferences configured and user is a customer, default to allowing notifications
+      if !result && is_customer?(user)
+        result = {
+          user:     user,
+          channels: { 'online' => true, 'email' => true },
+        }
+      end
+      
       next if !result
       next if already_checked_recipient_ids[user.id]
 
@@ -253,13 +285,20 @@ class Transaction::Notification
       send_to_single_recipient_online(user, ticket, article)
     end
 
-    # Prepare email recipients
-    # Only send email if owner wants email notifications
-    return if !owner_recipient[:channels]['email']
-
-    # Build CC list from recipients who want email
-    cc_emails = cc_recipients
-      .select { |r| r[:channels]['email'] }
+    # Build CC list - customers always included, check preferences for agents only
+    cc_recipients_who_want_email = cc_recipients.select do |r|
+      user = r[:user]
+      # Check if user is a customer (ticket creator or shared customer)
+      if is_customer?(user)
+        # Customers always get email
+        user.email.present?
+      else
+        # Check preferences for agents/legal admins
+        r[:channels] && r[:channels]['email']
+      end
+    end
+    
+    cc_emails = cc_recipients_who_want_email
       .filter_map { |r| r[:user].email }
       .join(', ')
 
@@ -275,7 +314,7 @@ class Transaction::Notification
     # Build email body
     result = NotificationFactory::Mailer.template(
       template:   template,
-      locale:     owner[:preferences][:locale],
+      locale:     owner.preferences[:locale] || Locale.default,
       objects:    {
         ticket:       ticket,
         article:      article,
@@ -298,7 +337,7 @@ class Transaction::Notification
       result[:body] = HtmlSanitizer.dynamic_image_size(result[:body])
     end
 
-    # Send one email with CC
+    # Send one email with CC (always send, even if owner has no notification preferences)
     NotificationFactory::Mailer.deliver(
       recipient:    owner,
       subject:      result[:subject],
@@ -311,11 +350,11 @@ class Transaction::Notification
     )
 
     # Add notification history for owner
-    add_recipient_list_to_history(ticket, owner, owner_recipient[:channels].keys, 'update')
+    add_recipient_list_to_history(ticket, owner, ['email'], 'update')
 
     # Add notification history for CC recipients
-    cc_recipients.each do |r|
-      add_recipient_list_to_history(ticket, r[:user], r[:channels].keys, 'update') if r[:channels]['email']
+    cc_recipients_who_want_email.each do |r|
+      add_recipient_list_to_history(ticket, r[:user], ['email'], 'update')
     end
 
   end
@@ -343,13 +382,10 @@ class Transaction::Notification
       send_to_single_recipient_online(user, ticket, article)
     end
 
-    # Prepare email recipients
-    # Only send email if customer wants email notifications
-    return if !customer_recipient[:channels]['email']
-
     # Build CC list from recipients who want email
-    cc_emails = cc_recipients
-      .select { |r| r[:channels]['email'] }
+    cc_recipients_who_want_email = cc_recipients.select { |r| r[:channels]['email'] }
+    
+    cc_emails = cc_recipients_who_want_email
       .filter_map { |r| r[:user].email }
       .join(', ')
 
@@ -364,7 +400,7 @@ class Transaction::Notification
     # Build email body
     result = NotificationFactory::Mailer.template(
       template:   template,
-      locale:     customer[:preferences][:locale],
+      locale:     customer.preferences[:locale] || Locale.default,
       objects:    {
         ticket:       ticket,
         article:      article,
@@ -387,7 +423,7 @@ class Transaction::Notification
       result[:body] = HtmlSanitizer.dynamic_image_size(result[:body])
     end
 
-    # Send one email with CC
+    # Send one email with CC (always send to customer, even if no notification preferences)
     NotificationFactory::Mailer.deliver(
       recipient:    customer,
       subject:      result[:subject],
@@ -400,11 +436,11 @@ class Transaction::Notification
     )
 
     # Add notification history for customer
-    add_recipient_list_to_history(ticket, customer, customer_recipient[:channels].keys, 'create')
+    add_recipient_list_to_history(ticket, customer, ['email'], 'create')
 
     # Add notification history for CC recipients
-    cc_recipients.each do |r|
-      add_recipient_list_to_history(ticket, r[:user], r[:channels].keys, 'create') if r[:channels]['email']
+    cc_recipients_who_want_email.each do |r|
+      add_recipient_list_to_history(ticket, r[:user], ['email'], 'create')
     end
 
   end
@@ -432,15 +468,20 @@ class Transaction::Notification
       send_to_single_recipient_online(user, ticket, article)
     end
 
-    # Prepare email recipients
-    # Only send email if customer wants email notifications
-    if !customer_recipient[:channels]['email']
-      return
+    # Build CC list - customers always included, check preferences for agents only
+    cc_recipients_who_want_email = cc_recipients.select do |r|
+      user = r[:user]
+      # Check if user is a customer (ticket creator or shared customer)
+      if is_customer?(user)
+        # Customers always get email
+        user.email.present?
+      else
+        # Check preferences for agents/legal admins
+        r[:channels] && r[:channels]['email']
+      end
     end
-
-    # Build CC list from recipients who want email
-    cc_emails = cc_recipients
-      .select { |r| r[:channels]['email'] }
+    
+    cc_emails = cc_recipients_who_want_email
       .filter_map { |r| r[:user].email }
       .join(', ')
 
@@ -456,7 +497,7 @@ class Transaction::Notification
     # Build email body
     result = NotificationFactory::Mailer.template(
       template:   template,
-      locale:     customer[:preferences][:locale],
+      locale:     customer.preferences[:locale] || Locale.default,
       objects:    {
         ticket:       ticket,
         article:      article,
@@ -479,7 +520,7 @@ class Transaction::Notification
       result[:body] = HtmlSanitizer.dynamic_image_size(result[:body])
     end
 
-    # Send one email with CC
+    # Send one email with CC (always send to customer, even if no notification preferences)
     NotificationFactory::Mailer.deliver(
       recipient:    customer,
       subject:      result[:subject],
@@ -492,11 +533,11 @@ class Transaction::Notification
     )
 
     # Add notification history for customer
-    add_recipient_list_to_history(ticket, customer, customer_recipient[:channels].keys, 'update')
+    add_recipient_list_to_history(ticket, customer, ['email'], 'update')
 
     # Add notification history for CC recipients
-    cc_recipients.each do |r|
-      add_recipient_list_to_history(ticket, r[:user], r[:channels].keys, 'update') if r[:channels]['email']
+    cc_recipients_who_want_email.each do |r|
+      add_recipient_list_to_history(ticket, r[:user], ['email'], 'update')
     end
 
   end
@@ -544,9 +585,9 @@ class Transaction::Notification
     elsif all_agents_with_full_access.any? { |a| a.id == commenter.id }
       # To: Ticket creator
       primary_recipient = ticket_creator
-      # CC: Owner + Shared customers
-      cc_user_list = shared_customers
-      cc_user_list << ticket_owner if ticket_owner && ticket_owner.id != commenter.id
+      # CC: Shared customers + Other legal admins (excluding commenter)
+      cc_user_list = shared_customers + all_agents_with_full_access.reject { |a| a.id == commenter.id }
+      cc_user_list << ticket_owner if ticket_owner && ticket_owner.id != commenter.id && !cc_user_list.include?(ticket_owner)
     end
 
     # If no primary recipient, fallback to standard flow
@@ -556,7 +597,16 @@ class Transaction::Notification
     cc_user_list = cc_user_list.uniq.reject { |u| u.id == commenter.id || u.id == primary_recipient.id }
 
     # Filter CC recipients who want email notifications
-    cc_recipients = cc_user_list.select { |u| can_receive_notification?(u, 'email') }
+    # Customers (ticket creator + shared customers) always get email, check preferences for agents only
+    cc_recipients = cc_user_list.select do |u|
+      if shared_customers.include?(u) || u.id == ticket_creator.id
+        # Customers always get email notifications
+        u.email.present?
+      else
+        # Only check preferences for agents/legal admins
+        can_receive_notification?(u, 'email')
+      end
+    end
 
     # Send in-app notifications to all (primary + CC)
     [primary_recipient, *cc_recipients].each do |user|
@@ -564,7 +614,10 @@ class Transaction::Notification
     end
 
     # Check if primary recipient wants email
-    return if !can_receive_notification?(primary_recipient, 'email')
+    # Customers always get email, only check preferences for agents
+    if !is_customer?(primary_recipient) && !can_receive_notification?(primary_recipient, 'email')
+      return
+    end
 
     # Build CC emails
     cc_emails = cc_recipients
@@ -673,11 +726,6 @@ class Transaction::Notification
     # Remove duplicates
     cc_user_list = cc_user_list.uniq
 
-    # Filter CC recipients from recipients_and_channels who want email
-    cc_recipients = recipients_and_channels.select do |r|
-      cc_user_list.any? { |u| u.id == r[:user].id } && r[:channels]['email']
-    end
-
     # Send online notifications to all
     recipients_and_channels.each do |recipient_settings|
       user = recipient_settings[:user]
@@ -686,12 +734,21 @@ class Transaction::Notification
       send_to_single_recipient_online(user, ticket, article)
     end
 
-    # Only send email if primary recipient wants email notifications
-    return if !primary_recipient_settings[:channels]['email']
-
-    # Build CC list
-    cc_emails = cc_recipients
-      .map { |r| "#{r[:user].firstname} #{r[:user].lastname} <#{r[:user].email}>" }
+    # Build CC list - customers always included, check preferences for agents only
+    cc_recipients_who_want_email = cc_user_list.select do |user|
+      # Check if user is a customer
+      if is_customer?(user)
+        # Customers always get email
+        user.email.present?
+      else
+        # Check preferences for agents/legal admins
+        recipient_setting = recipients_and_channels.find { |r| r[:user].id == user.id }
+        recipient_setting && recipient_setting[:channels] && recipient_setting[:channels]['email']
+      end
+    end
+    
+    cc_emails = cc_recipients_who_want_email
+      .map { |u| "#{u.firstname} #{u.lastname} <#{u.email}>" }
       .join(', ')
 
     # Get template and objects
@@ -729,7 +786,7 @@ class Transaction::Notification
       result[:body] = HtmlSanitizer.dynamic_image_size(result[:body])
     end
 
-    # Send one email with CC
+    # Send one email with CC (always send to primary recipient, even if no notification preferences)
     NotificationFactory::Mailer.deliver(
       recipient:    primary_recipient,
       subject:      result[:subject],
@@ -742,10 +799,11 @@ class Transaction::Notification
     )
 
     # Add notification history
-    add_recipient_list_to_history(ticket, primary_recipient, primary_recipient_settings[:channels].keys, 'update')
+    add_recipient_list_to_history(ticket, primary_recipient, ['email'], 'update')
 
-    cc_recipients.each do |r|
-      add_recipient_list_to_history(ticket, r[:user], r[:channels].keys, 'update')
+    # Add notification history for CC recipients
+    cc_recipients_who_want_email.each do |user|
+      add_recipient_list_to_history(ticket, user, ['email'], 'update')
     end
 
   end
@@ -962,6 +1020,13 @@ class Transaction::Notification
     NotificationFactory::Mailer.notification_settings(user, ticket, @item[:type])
   end
 
+  def is_customer?(user)
+    # Check if user is the ticket creator or a shared customer
+    return true if user.id == ticket.customer_id
+    
+    Ticket::SharedAccess.exists?(ticket_id: ticket.id, user_id: user.id)
+  end
+
   def send_to_single_recipient(recipient_settings)
     user     = recipient_settings[:user]
     channels = recipient_settings[:channels]
@@ -1151,15 +1216,20 @@ class Transaction::Notification
         return 'ticket_state_sent_for_signature'
       elsif new_state && new_state.name == 'signed'
         return 'ticket_state_signed'
+      elsif new_state && new_state.name == 'resolved'
+        return 'ticket_state_resolved'
+      elsif new_state && new_state.name == 'closed'
+        return 'ticket_state_closed'
       end
 
-      # Check if changed to closed/resolved
-      resolved_states = Ticket::State.where(name: %w[closed merged removed resolved]).pluck(:id)
-      return 'ticket_state_resolved' if resolved_states.include?(new_state_id)
+      # Check if changed to other resolved-type states (merged, removed)
+      resolved_type_states = Ticket::State.where(name: %w[merged removed]).pluck(:id)
+      return 'ticket_state_resolved' if resolved_type_states.include?(new_state_id)
 
-      # Check if reopened (from closed to open)
+      # Check if reopened (from any closed/resolved state to open)
+      all_closed_states = Ticket::State.where(name: %w[closed merged removed resolved]).pluck(:id)
       open_states = Ticket::State.where(name: %w[new open]).pluck(:id)
-      return 'ticket_state_reopened' if resolved_states.include?(old_state_id) && open_states.include?(new_state_id)
+      return 'ticket_state_reopened' if all_closed_states.include?(old_state_id) && open_states.include?(new_state_id)
 
       # Other state changes
       return 'ticket_state_changed'

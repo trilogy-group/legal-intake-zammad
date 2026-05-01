@@ -1,4 +1,4 @@
-Under Legal Review: #{ticket.title}
+Ticket closed: #{ticket.title}
 
 <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
   <div style="text-align: center; margin-bottom: 32px;">
@@ -8,16 +8,16 @@ Under Legal Review: #{ticket.title}
   <p style="font-size: 16px;">Hello #{recipient.firstname},</p>
   
   <p style="font-size: 16px;">
-    The ticket "<strong>#{ticket.title}</strong>" has been assigned to you for review.
+    Your ticket "<strong>#{ticket.title}</strong>" has been closed.
   </p>
   
   <p style="font-size: 16px;">
-    Please review this ticket and reach out to the ticket creator if any additional information is required.
+    You can still view the ticket details and history on the Zammad platform.
   </p>
   
   <div style="text-align: center; margin: 32px 0;">
     <a href="#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}" 
-       style="background-color: #6366f1; color: #ffffff; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 500; display: inline-block;">
+       style="background-color: #6b7280; color: #ffffff; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 500; display: inline-block;">
       View Ticket
     </a>
   </div>
