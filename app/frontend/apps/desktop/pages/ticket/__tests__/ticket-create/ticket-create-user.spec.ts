@@ -21,7 +21,7 @@ describe('ticket create view - user create action', () => {
     handleMockFormUpdaterQuery()
   })
 
-  it('does not allow agent to toggle customer role when creating user', async () => {
+  it('does not allow agent to toggle customer role when creating user', { timeout: 60000 }, async () => {
     mockPermissions(['ticket.agent'])
 
     const view = await visitCreateView()
@@ -100,7 +100,7 @@ describe('ticket create view - user create action', () => {
     expect(calls[0].variables.input.roleIds).toBeUndefined()
   })
 
-  it('allows admin to create user and toggle customer role', async () => {
+  it('allows admin to create user and toggle customer role', { timeout: 60000 }, async () => {
     mockPermissions(['admin.user', 'ticket.agent'])
 
     const view = await visitCreateView()

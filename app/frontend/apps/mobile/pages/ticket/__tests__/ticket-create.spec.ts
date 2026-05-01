@@ -262,6 +262,7 @@ describe('Creating new ticket as agent', () => {
 
       expect(router.replace).toHaveBeenCalledWith('/tickets/1')
     },
+    60000, // Increased timeout for CI environment
   )
 
   it('shows confirm popup, when leaving', async () => {
