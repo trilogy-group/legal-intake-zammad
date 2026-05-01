@@ -22,7 +22,11 @@ describe('TicketShareFlyout', () => {
 
     expect(wrapper.getByRole('heading', { name: 'Share Ticket', level: 2 })).toBeInTheDocument()
 
-    expect(wrapper.getByText('Share this ticket with another customer so they can read and comment on it.')).toBeInTheDocument()
+    expect(
+      wrapper.getByText(
+        'Share this ticket with another customer so they can read and comment on it.',
+      ),
+    ).toBeInTheDocument()
 
     expect(wrapper.getByPlaceholderText('Enter name or email')).toBeInTheDocument()
 

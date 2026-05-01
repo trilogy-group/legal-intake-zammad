@@ -2,8 +2,10 @@
 
 import { computed, ref } from 'vue'
 
-
-import { NotificationTypes, useNotifications } from '#shared/components/CommonNotifications/index.ts'
+import {
+  NotificationTypes,
+  useNotifications,
+} from '#shared/components/CommonNotifications/index.ts'
 import { useTicketView } from '#shared/entities/ticket/composables/useTicketView.ts'
 import type { TicketById } from '#shared/entities/ticket/types.ts'
 import { getIdFromGraphQLId } from '#shared/graphql/utils.ts'
@@ -31,12 +33,15 @@ interface SharedAccessApiResponse {
     ticket_id: number
   }>
   assets: {
-    User?: Record<number, {
-      firstname?: string
-      lastname?: string
-      email?: string
-      image?: string
-    }>
+    User?: Record<
+      number,
+      {
+        firstname?: string
+        lastname?: string
+        email?: string
+        image?: string
+      }
+    >
   }
 }
 
@@ -51,9 +56,7 @@ export const useTicketSharedAccess = (ticket: Ref<TicketById | undefined>) => {
 
   const canManageSharedAccess = computed(() => isTicketCustomer.value)
 
-  const isLoading = computed(
-    () => isLoadingList.value || isLoadingAction.value
-  )
+  const isLoading = computed(() => isLoadingList.value || isLoadingAction.value)
 
   const fetchSharedUsers = async () => {
     if (!ticket.value) return
@@ -67,7 +70,7 @@ export const useTicketSharedAccess = (ticket: Ref<TicketById | undefined>) => {
             'Content-Type': 'application/json',
           },
           credentials: 'same-origin',
-        }
+        },
       )
 
       if (!response.ok) {
@@ -77,7 +80,7 @@ export const useTicketSharedAccess = (ticket: Ref<TicketById | undefined>) => {
       const data: SharedAccessApiResponse = await response.json()
       const accesses = data.shared_accesses || []
       const assets = data.assets || {}
-      
+
       // Process shared accesses to include user info from assets
       sharedUsers.value = accesses.map((access) => {
         const user = assets.User?.[access.user_id]
@@ -116,21 +119,18 @@ export const useTicketSharedAccess = (ticket: Ref<TicketById | undefined>) => {
 
     isLoadingAction.value = true
     try {
-      const response = await fetch(
-        '/api/v1/ticket_shared_accesses',
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'X-CSRF-Token': getCSRFToken() || '',
-          },
-          credentials: 'same-origin',
-          body: JSON.stringify({
-            ticket_id: ticket.value.internalId,
-            user_id: userId,
-          }),
-        }
-      )
+      const response = await fetch('/api/v1/ticket_shared_accesses', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRF-Token': getCSRFToken() || '',
+        },
+        credentials: 'same-origin',
+        body: JSON.stringify({
+          ticket_id: ticket.value.internalId,
+          user_id: userId,
+        }),
+      })
 
       if (response.ok) {
         notify({
@@ -166,10 +166,8 @@ export const useTicketSharedAccess = (ticket: Ref<TicketById | undefined>) => {
     isLoadingAction.value = true
     try {
       // Find the shared access ID for this user
-      const sharedAccess = sharedUsers.value.find(
-        (su) => String(su.user_id) === userId
-      )
-      
+      const sharedAccess = sharedUsers.value.find((su) => String(su.user_id) === userId)
+
       if (!sharedAccess) {
         notify({
           type: NotificationTypes.Error,
@@ -187,7 +185,7 @@ export const useTicketSharedAccess = (ticket: Ref<TicketById | undefined>) => {
             'X-CSRF-Token': getCSRFToken() || '',
           },
           credentials: 'same-origin',
-        }
+        },
       )
 
       if (response.ok) {
@@ -220,12 +218,12 @@ export const useTicketSharedAccess = (ticket: Ref<TicketById | undefined>) => {
 
   const canRemoveUser = (sharedUser: SharedUser) => {
     if (!ticket.value) return false
-    
+
     const currentUserId = getIdFromGraphQLId(session.userId)
-    
+
     // Ticket owner can remove anyone
     if (ticket.value.customer?.internalId === currentUserId) return true
-    
+
     // Shared users can only remove themselves
     return sharedUser.user_id === currentUserId
   }

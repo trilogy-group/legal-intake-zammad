@@ -86,145 +86,149 @@ describe('Ticket detail view - draft handling', () => {
       expect(within(menu).getByText('No items available')).toBeInTheDocument()
     })
 
-    it('allows to apply a draft and submits draft ID to the update mutation', { timeout: 15000 }, async () => {
-      mockFormUpdaterQuery({
-        formUpdater: {
-          fields: {
-            group_id: {
-              options: [
-                {
-                  value: 1,
-                  label: 'Users',
-                },
-                {
-                  value: 2,
-                  label: 'test group',
-                },
-              ],
+    it(
+      'allows to apply a draft and submits draft ID to the update mutation',
+      { timeout: 15000 },
+      async () => {
+        mockFormUpdaterQuery({
+          formUpdater: {
+            fields: {
+              group_id: {
+                options: [
+                  {
+                    value: 1,
+                    label: 'Users',
+                  },
+                  {
+                    value: 2,
+                    label: 'test group',
+                  },
+                ],
+              },
+              owner_id: {
+                options: [
+                  {
+                    value: 3,
+                    label: 'Test Admin Agent',
+                  },
+                ],
+              },
+              state_id: {
+                options: [
+                  {
+                    value: 4,
+                    label: 'closed',
+                  },
+                  {
+                    value: 2,
+                    label: 'open',
+                  },
+                  {
+                    value: 6,
+                    label: 'pending close',
+                  },
+                  {
+                    value: 3,
+                    label: 'pending reminder',
+                  },
+                ],
+              },
+              pending_time: {
+                show: false,
+              },
+              priority_id: {
+                options: [
+                  {
+                    value: 1,
+                    label: '1 low',
+                  },
+                  {
+                    value: 2,
+                    label: '2 normal',
+                  },
+                  {
+                    value: 3,
+                    label: '3 high',
+                  },
+                ],
+              },
             },
-            owner_id: {
-              options: [
-                {
-                  value: 3,
-                  label: 'Test Admin Agent',
-                },
-              ],
-            },
-            state_id: {
-              options: [
-                {
-                  value: 4,
-                  label: 'closed',
-                },
-                {
-                  value: 2,
-                  label: 'open',
-                },
-                {
-                  value: 6,
-                  label: 'pending close',
-                },
-                {
-                  value: 3,
-                  label: 'pending reminder',
-                },
-              ],
-            },
-            pending_time: {
-              show: false,
-            },
-            priority_id: {
-              options: [
-                {
-                  value: 1,
-                  label: '1 low',
-                },
-                {
-                  value: 2,
-                  label: '2 normal',
-                },
-                {
-                  value: 3,
-                  label: '3 high',
-                },
-              ],
+            flags: {
+              hasSharedDraft: true,
+              newArticlePresent: false,
             },
           },
-          flags: {
-            hasSharedDraft: true,
-            newArticlePresent: false,
+        })
+
+        mockMacrosQuery({
+          macros: [],
+        })
+
+        mockTicketQuery({ ticket: createDummyTicket({ sharedDraftZoomId: 123 }) })
+
+        const view = await visitView('/tickets/1')
+
+        const bottomButton = await view.findByRole('button', {
+          name: 'Draft available',
+        })
+
+        await view.events.click(bottomButton)
+
+        mockTicketSharedDraftZoomShowQuery({
+          ticketSharedDraftZoomShow: {
+            id: convertToGraphQLId('Ticket::SharedDraftZoom', 123),
+            ticketId: convertToGraphQLId('Ticket', 1),
+            newArticle: {
+              body: '<p>Test draft content</p>',
+            },
+            ticketAttributes: {},
+            updatedAt: new Date().toISOString(),
+            updatedBy: {
+              id: convertToGraphQLId('User', 1),
+              internalId: 1,
+              firstname: 'Test',
+              lastname: 'User',
+              fullname: 'Test User',
+              email: 'test@example.com',
+              phone: null,
+              image: null,
+              outOfOffice: false,
+              outOfOfficeStartAt: null,
+              outOfOfficeEndAt: null,
+              active: true,
+            },
           },
-        },
-      })
+        })
 
-      mockMacrosQuery({
-        macros: [],
-      })
-
-      mockTicketQuery({ ticket: createDummyTicket({ sharedDraftZoomId: 123 }) })
-
-      const view = await visitView('/tickets/1')
-
-      const bottomButton = await view.findByRole('button', {
-        name: 'Draft available',
-      })
-
-      await view.events.click(bottomButton)
-
-      mockTicketSharedDraftZoomShowQuery({
-        ticketSharedDraftZoomShow: {
-          id: convertToGraphQLId('Ticket::SharedDraftZoom', 123),
-          ticketId: convertToGraphQLId('Ticket', 1),
-          newArticle: {
-            body: '<p>Test draft content</p>',
+        mockFormUpdaterQuery({
+          formUpdater: {
+            fields: { shared_draft_id: { value: 123 } },
+            flags: {
+              hasSharedDraft: true,
+            },
           },
-          ticketAttributes: {},
-          updatedAt: new Date().toISOString(),
-          updatedBy: {
-            id: convertToGraphQLId('User', 1),
-            internalId: 1,
-            firstname: 'Test',
-            lastname: 'User',
-            fullname: 'Test User',
-            email: 'test@example.com',
-            phone: null,
-            image: null,
-            outOfOffice: false,
-            outOfOfficeStartAt: null,
-            outOfOfficeEndAt: null,
-            active: true,
-          },
-        },
-      })
+        })
 
-      mockFormUpdaterQuery({
-        formUpdater: {
-          fields: { shared_draft_id: { value: 123 } },
-          flags: {
-            hasSharedDraft: true,
-          },
-        },
-      })
+        const flyoutButton = await view.findByRole('button', { name: 'Apply' })
 
-      const flyoutButton = await view.findByRole('button', { name: 'Apply' })
+        await view.events.click(flyoutButton)
 
-      await view.events.click(flyoutButton)
+        const updateButton = await view.findByRole('button', { name: 'Update' })
 
-      const updateButton = await view.findByRole('button', { name: 'Update' })
+        await view.events.click(updateButton)
 
-      await view.events.click(updateButton)
+        const calls = await waitForTicketUpdateMutationCalls()
 
-      const calls = await waitForTicketUpdateMutationCalls()
-
-      expect(calls?.at(-1)?.variables).toEqual(
-        expect.objectContaining({
-          input: expect.objectContaining({
-            sharedDraftId: convertToGraphQLId('Ticket::SharedDraftZoom', 123),
+        expect(calls?.at(-1)?.variables).toEqual(
+          expect.objectContaining({
+            input: expect.objectContaining({
+              sharedDraftId: convertToGraphQLId('Ticket::SharedDraftZoom', 123),
+            }),
+            ticketId: convertToGraphQLId('Ticket', 1),
           }),
-          ticketId: convertToGraphQLId('Ticket', 1),
-        }),
-      )
-    })
+        )
+      },
+    )
   })
 
   describe('when user is an customer', () => {

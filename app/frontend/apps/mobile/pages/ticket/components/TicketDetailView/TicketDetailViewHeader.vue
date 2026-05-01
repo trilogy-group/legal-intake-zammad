@@ -96,11 +96,7 @@ const showActions = () => {
             +{{ liveUserList.length - 1 }}
           </div>
         </button>
-        <button
-          type="button"
-          :aria-label="$t('Show ticket actions')"
-          @click="showActions()"
-        >
+        <button type="button" :aria-label="$t('Show ticket actions')" @click="showActions()">
           <CommonIcon name="more" size="base" decorative />
         </button>
       </CommonLoader>

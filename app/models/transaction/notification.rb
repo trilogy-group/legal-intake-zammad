@@ -1223,12 +1223,13 @@ class Transaction::Notification
       end
 
       # Check if changed to other resolved-type states (merged, removed)
-      resolved_states = Ticket::State.where(name: %w[merged removed]).pluck(:id)
-      return 'ticket_state_resolved' if resolved_states.include?(new_state_id)
+      resolved_type_states = Ticket::State.where(name: %w[merged removed]).pluck(:id)
+      return 'ticket_state_resolved' if resolved_type_states.include?(new_state_id)
 
-      # Check if reopened (from closed to open)
+      # Check if reopened (from any closed/resolved state to open)
+      all_closed_states = Ticket::State.where(name: %w[closed merged removed resolved]).pluck(:id)
       open_states = Ticket::State.where(name: %w[new open]).pluck(:id)
-      return 'ticket_state_reopened' if resolved_states.include?(old_state_id) && open_states.include?(new_state_id)
+      return 'ticket_state_reopened' if all_closed_states.include?(old_state_id) && open_states.include?(new_state_id)
 
       # Other state changes
       return 'ticket_state_changed'
