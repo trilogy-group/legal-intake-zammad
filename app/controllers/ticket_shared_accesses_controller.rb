@@ -80,31 +80,31 @@ class TicketSharedAccessesController < ApplicationController
 
     # Always send online notification to user being shared with
     OnlineNotification.add(
-      type: 'added',
-      object: 'Ticket',
-      o_id: ticket.id,
-      seen: false,
-      user_id: shared_with_user.id,
+      type:          'added',
+      object:        'Ticket',
+      o_id:          ticket.id,
+      seen:          false,
+      user_id:       shared_with_user.id,
       created_by_id: current_user.id,
       updated_by_id: current_user.id,
     )
 
     # Shared customers will be notified through the main notification system
     # when actual ticket updates (comments, state changes) occur
-    
+
     # Keep online notification for non-creator sharing
     # Don't send duplicate notification if the shared_with_user IS the ticket creator
-    if !is_creator_sharing && ticket_creator && ticket_creator.id != shared_with_user.id
-      OnlineNotification.add(
-        type: 'update',
-        object: 'Ticket',
-        o_id: ticket.id,
-        seen: false,
-        user_id: ticket_creator.id,
-        created_by_id: current_user.id,
-        updated_by_id: current_user.id,
-      )
-    end
+    return if is_creator_sharing || !ticket_creator || ticket_creator.id == shared_with_user.id
+
+    OnlineNotification.add(
+      type:          'update',
+      object:        'Ticket',
+      o_id:          ticket.id,
+      seen:          false,
+      user_id:       ticket_creator.id,
+      created_by_id: current_user.id,
+      updated_by_id: current_user.id,
+    )
   end
 
   def excluded_user_ids

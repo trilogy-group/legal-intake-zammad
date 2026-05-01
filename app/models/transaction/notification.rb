@@ -51,6 +51,7 @@ class Transaction::Notification
 
   def article
     return nil if @suppress_article_for_state_change
+
     @article ||= article_by_item
   end
 
@@ -78,13 +79,12 @@ class Transaction::Notification
 
     # Block only state change notifications for submitted_to_legal
     # Allow comment notifications to go through
-    if ticket.state.name == 'submitted_to_legal'
-      # If this is a state change notification (not a comment), block it
-      if @item[:type] == 'update' && @item[:changes]&.key?('state_id')
-        return
-      end
-      # Allow comments and other updates to proceed
+    # If this is a state change notification (not a comment), block it
+    if (ticket.state.name == 'submitted_to_legal') && @item[:type] == 'update' && @item[:changes]&.key?('state_id')
+      return
     end
+
+    # Allow comments and other updates to proceed
 
     prepare_recipients_and_reasons
 
@@ -98,23 +98,21 @@ class Transaction::Notification
     # BUT: If this is the first article of a newly created ticket, treat it as creation, not comment
     if article && @item[:type] == 'update'
       send_comment_notification_with_cc(article)
-      
+
       if @item[:changes]&.key?('state_id')
         # Suppress article for state change notification so it doesn't get confused with comment notification
         @suppress_article_for_state_change = true
-        
+
         if ticket.state.name == 'under_legal_review'
           send_under_legal_review_notification_with_cc
-        elsif %w[awaiting_response ready_for_signature sent_for_signature signed resolved closed].include?(ticket.state.name)
-          send_state_change_notification_with_cc
-        elsif reopened_state?(ticket, @item[:changes])
+        elsif %w[awaiting_response ready_for_signature sent_for_signature signed resolved closed].include?(ticket.state.name) || reopened_state?(ticket, @item[:changes])
           send_state_change_notification_with_cc
         end
-        
+
         # Re-enable article access
         @suppress_article_for_state_change = false
       end
-      
+
       return
     end
 
@@ -231,15 +229,15 @@ class Transaction::Notification
     already_checked_recipient_ids = {}
     possible_recipients.each do |user|
       result = NotificationFactory::Mailer.notification_settings(user, ticket, @item[:type])
-      
+
       # If no preferences configured and user is a customer, default to allowing notifications
-      if !result && is_customer?(user)
+      if !result && customer?(user)
         result = {
           user:     user,
           channels: { 'online' => true, 'email' => true },
         }
       end
-      
+
       next if !result
       next if already_checked_recipient_ids[user.id]
 
@@ -289,7 +287,7 @@ class Transaction::Notification
     cc_recipients_who_want_email = cc_recipients.select do |r|
       user = r[:user]
       # Check if user is a customer (ticket creator or shared customer)
-      if is_customer?(user)
+      if customer?(user)
         # Customers always get email
         user.email.present?
       else
@@ -297,7 +295,7 @@ class Transaction::Notification
         r[:channels] && r[:channels]['email']
       end
     end
-    
+
     cc_emails = cc_recipients_who_want_email
       .filter_map { |r| r[:user].email }
       .join(', ')
@@ -384,7 +382,7 @@ class Transaction::Notification
 
     # Build CC list from recipients who want email
     cc_recipients_who_want_email = cc_recipients.select { |r| r[:channels]['email'] }
-    
+
     cc_emails = cc_recipients_who_want_email
       .filter_map { |r| r[:user].email }
       .join(', ')
@@ -472,7 +470,7 @@ class Transaction::Notification
     cc_recipients_who_want_email = cc_recipients.select do |r|
       user = r[:user]
       # Check if user is a customer (ticket creator or shared customer)
-      if is_customer?(user)
+      if customer?(user)
         # Customers always get email
         user.email.present?
       else
@@ -480,7 +478,7 @@ class Transaction::Notification
         r[:channels] && r[:channels]['email']
       end
     end
-    
+
     cc_emails = cc_recipients_who_want_email
       .filter_map { |r| r[:user].email }
       .join(', ')
@@ -587,7 +585,7 @@ class Transaction::Notification
       primary_recipient = ticket_creator
       # CC: Shared customers + Other legal admins (excluding commenter)
       cc_user_list = shared_customers + all_agents_with_full_access.reject { |a| a.id == commenter.id }
-      cc_user_list << ticket_owner if ticket_owner && ticket_owner.id != commenter.id && !cc_user_list.include?(ticket_owner)
+      cc_user_list << ticket_owner if ticket_owner && ticket_owner.id != commenter.id && cc_user_list.exclude?(ticket_owner)
     end
 
     # If no primary recipient, fallback to standard flow
@@ -615,7 +613,7 @@ class Transaction::Notification
 
     # Check if primary recipient wants email
     # Customers always get email, only check preferences for agents
-    if !is_customer?(primary_recipient) && !can_receive_notification?(primary_recipient, 'email')
+    if !customer?(primary_recipient) && !can_receive_notification?(primary_recipient, 'email')
       return
     end
 
@@ -737,7 +735,7 @@ class Transaction::Notification
     # Build CC list - customers always included, check preferences for agents only
     cc_recipients_who_want_email = cc_user_list.select do |user|
       # Check if user is a customer
-      if is_customer?(user)
+      if customer?(user)
         # Customers always get email
         user.email.present?
       else
@@ -746,7 +744,7 @@ class Transaction::Notification
         recipient_setting && recipient_setting[:channels] && recipient_setting[:channels]['email']
       end
     end
-    
+
     cc_emails = cc_recipients_who_want_email
       .map { |u| "#{u.firstname} #{u.lastname} <#{u.email}>" }
       .join(', ')
@@ -1020,10 +1018,10 @@ class Transaction::Notification
     NotificationFactory::Mailer.notification_settings(user, ticket, @item[:type])
   end
 
-  def is_customer?(user)
+  def customer?(user)
     # Check if user is the ticket creator or a shared customer
     return true if user.id == ticket.customer_id
-    
+
     Ticket::SharedAccess.exists?(ticket_id: ticket.id, user_id: user.id)
   end
 
