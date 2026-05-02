@@ -18,7 +18,6 @@ describe('TicketShareDialog', () => {
       dialog: true,
       store: true,
       router: true,
-      form: true,
     })
 
     expect(wrapper.getByRole('dialog', { name: 'Share Ticket' })).toBeInTheDocument()
@@ -45,7 +44,6 @@ describe('TicketShareDialog', () => {
       dialog: true,
       store: true,
       router: true,
-      form: true,
     })
 
     // Initially should show "Not shared with anyone yet"
@@ -61,7 +59,6 @@ describe('TicketShareDialog', () => {
       dialog: true,
       store: true,
       router: true,
-      form: true,
     })
 
     // Wait for the component to render

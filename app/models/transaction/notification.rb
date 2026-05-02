@@ -99,6 +99,7 @@ class Transaction::Notification
     if article && @item[:type] == 'update'
       send_comment_notification_with_cc(article)
 
+      # If state changed along with comment, send separate state change notification
       if @item[:changes]&.key?('state_id')
         # Suppress article for state change notification so it doesn't get confused with comment notification
         @suppress_article_for_state_change = true
@@ -113,6 +114,13 @@ class Transaction::Notification
         @suppress_article_for_state_change = false
       end
 
+      # If owner changed along with comment, send separate assignment notification
+      if @item[:changes]&.key?('owner_id')
+        @suppress_article_for_state_change = true
+        send_assignment_notification_with_cc
+        @suppress_article_for_state_change = false
+      end
+
       return
     end
 
@@ -120,20 +128,21 @@ class Transaction::Notification
     # This handles both: ticket creation without article AND ticket creation with first article
     if @item[:type] == 'create'
       send_creation_notification_with_cc
-    # For assignment notifications, send ONE email with CC instead of separate emails
-    elsif @item[:type] == 'update' && @item[:changes]&.key?('owner_id')
-      send_assignment_notification_with_cc
-    # For under_legal_review state - special CC logic
-    elsif @item[:type] == 'update' && @item[:changes]&.key?('state_id') && ticket.state.name == 'under_legal_review'
-      send_under_legal_review_notification_with_cc
-    # For specific state changes (awaiting_response, ready_for_signature, sent_for_signature, signed, resolved, closed, reopened), use CC
-    elsif @item[:type] == 'update' && @item[:changes]&.key?('state_id') && %w[awaiting_response ready_for_signature sent_for_signature signed resolved closed].include?(ticket.state.name)
-      send_state_change_notification_with_cc
-    # For reopened state - check from closed states
-    # rubocop:disable Lint/DuplicateBranch
-    elsif @item[:type] == 'update' && @item[:changes]&.key?('state_id') && reopened_state?(ticket, @item[:changes])
-      send_state_change_notification_with_cc
-    # rubocop:enable Lint/DuplicateBranch
+    # For updates, handle owner and/or state changes independently so both emails are sent if both change
+    elsif @item[:type] == 'update' && (@item[:changes]&.key?('owner_id') || @item[:changes]&.key?('state_id'))
+      # Send assignment notification if owner changed
+      if @item[:changes]&.key?('owner_id')
+        send_assignment_notification_with_cc
+      end
+
+      # Send state notification if state changed
+      if @item[:changes]&.key?('state_id')
+        if ticket.state.name == 'under_legal_review'
+          send_under_legal_review_notification_with_cc
+        elsif %w[awaiting_response ready_for_signature sent_for_signature signed resolved closed].include?(ticket.state.name) || reopened_state?(ticket, @item[:changes])
+          send_state_change_notification_with_cc
+        end
+      end
     else
       # send notifications
       recipients_and_channels.each do |recipient_settings|
@@ -485,7 +494,9 @@ class Transaction::Notification
 
     # Get template and objects
     changes = @item[:changes] || {}
-    template = determine_update_template(ticket, article, changes)
+    # Remove owner_id from changes when determining template, so it focuses on state change
+    state_only_changes = changes.except('owner_id')
+    template = determine_update_template(ticket, article, state_only_changes)
 
     attachments = []
     if article
@@ -751,7 +762,9 @@ class Transaction::Notification
 
     # Get template and objects
     changes = @item[:changes] || {}
-    template = determine_update_template(ticket, article, changes)
+    # Remove owner_id from changes when determining template, so it focuses on state change
+    state_only_changes = changes.except('owner_id')
+    template = determine_update_template(ticket, article, state_only_changes)
 
     attachments = []
     if article

@@ -82,7 +82,8 @@ const performSearch = async (query: string) => {
     abortController.abort()
   }
 
-  abortController = new AbortController()
+  const currentController = new AbortController()
+  abortController = currentController
 
   try {
     const ticketId = props.ticket?.internalId
@@ -93,7 +94,7 @@ const performSearch = async (query: string) => {
           'Content-Type': 'application/json',
         },
         credentials: 'same-origin',
-        signal: abortController.signal,
+        signal: currentController.signal,
       },
     )
 
@@ -135,7 +136,10 @@ const performSearch = async (query: string) => {
     searchResults.value = []
   } finally {
     isSearching.value = false
-    abortController = null
+    // Only clear if this controller is still the active one
+    if (abortController === currentController) {
+      abortController = null
+    }
   }
 }
 

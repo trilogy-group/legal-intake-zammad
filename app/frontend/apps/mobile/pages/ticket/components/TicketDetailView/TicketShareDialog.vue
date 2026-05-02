@@ -83,7 +83,8 @@ const performSearch = async (query: string) => {
     abortController.abort()
   }
 
-  abortController = new AbortController()
+  const currentController = new AbortController()
+  abortController = currentController
 
   try {
     const ticketId = props.ticket?.internalId
@@ -94,7 +95,7 @@ const performSearch = async (query: string) => {
           'Content-Type': 'application/json',
         },
         credentials: 'same-origin',
-        signal: abortController.signal,
+        signal: currentController.signal,
       },
     )
 
@@ -136,7 +137,10 @@ const performSearch = async (query: string) => {
     searchResults.value = []
   } finally {
     isSearching.value = false
-    abortController = null
+    // Only clear if this controller is still the active one
+    if (abortController === currentController) {
+      abortController = null
+    }
   }
 }
 
@@ -221,17 +225,21 @@ const cancelDialog = () => {
 
       <!-- User Search -->
       <div class="flex flex-col gap-2">
-        <FormKit
-          id="mobile-customer-search"
-          v-model="searchQuery"
-          type="text"
-          name="customer_search"
-          :label="__('Customer')"
-          :placeholder="__('Enter name or email')"
-          :aria-label="__('Search for customer to share ticket with')"
-          :aria-describedby="'mobile-search-description'"
-          @input="searchUsers"
-        />
+        <!-- eslint-disable-next-line vuejs-accessibility/label-has-for -->
+        <label class="flex flex-col gap-1">
+          <span class="text-sm font-semibold">{{ __('Customer') }}</span>
+          <input
+            id="mobile-customer-search"
+            v-model="searchQuery"
+            type="text"
+            name="customer_search"
+            class="w-full rounded border border-gray-300 px-3 py-2.5 text-base focus:border-blue-600 focus:outline-none dark:border-gray-700 dark:bg-gray-500 dark:text-white"
+            :placeholder="__('Enter name or email')"
+            :aria-label="__('Search for customer to share ticket with')"
+            aria-describedby="mobile-search-description"
+            @input="searchUsers"
+          />
+        </label>
         <span id="mobile-search-description" class="sr-only">
           {{ __('Type at least 2 characters to search for customers') }}
         </span>

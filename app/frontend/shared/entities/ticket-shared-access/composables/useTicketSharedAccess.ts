@@ -108,7 +108,7 @@ export const useTicketSharedAccess = (ticket: Ref<TicketById | undefined>) => {
         type: NotificationTypes.Error,
         message: i18n.t('Failed to load shared users.'),
       })
-      sharedUsers.value = []
+      // Keep existing list on error rather than wiping it
     } finally {
       isLoadingList.value = false
     }
