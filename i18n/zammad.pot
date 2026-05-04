@@ -8711,9 +8711,6 @@ msgstr ""
 msgid "Info: %s"
 msgstr ""
 
-#: app/views/mailer/ticket_create/fr.html.erb:15
-#: app/views/mailer/ticket_create/it.html.erb:15
-#: app/views/mailer/ticket_create/zh-cn.html.erb:15
 #: app/views/mailer/ticket_escalation/de.html.erb:9
 #: app/views/mailer/ticket_escalation/fr.html.erb:9
 #: app/views/mailer/ticket_escalation/it.html.erb:9
@@ -8722,8 +8719,6 @@ msgstr ""
 #: app/views/mailer/ticket_escalation_warning/zh-tw.html.erb:9
 #: app/views/mailer/ticket_reminder_reached/zh-cn.html.erb:9
 #: app/views/mailer/ticket_reminder_reached/zh-tw.html.erb:9
-#: app/views/mailer/ticket_update/zh-cn.html.erb:20
-#: app/views/mailer/ticket_update/zh-tw.html.erb:20
 msgid "Information"
 msgstr ""
 
@@ -8866,7 +8861,7 @@ msgstr ""
 #. This is the template file app/views/mailer/ticket_internal_comment/en.text.erb in ERB/ format.
 #. Please make sure to translate it to a valid corresponding output structure.
 #: app/views/mailer/ticket_internal_comment/en.text.erb
-msgid "Internal Note: #{ticket.title}\n\nHello #{recipient.firstname},\n\n#{commenter.firstname} #{commenter.lastname} added an internal note to ticket \"#{ticket.title}\".\n\n<% if @objects[:article] && @objects[:article].body.present? %>\n---\nInternal Note:\n#{commenter.firstname} #{commenter.lastname} wrote:\n\n<%= @objects[:article].body_as_text %>\n\n<% if @objects[:article].attachments.any? %>\n📎 <%= @objects[:article].attachments.count %> attachment<% if @objects[:article].attachments.count != 1 %>s<% end %>\n<% end %>\n---\n<% end %>\n\nNote: This is an internal note visible only to agents and not visible to customers.\n\nView Ticket: #{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\n\nYou are receiving this because you are a member of the group of this ticket.\n"
+msgid "Internal Note: #{ticket.title}\n\nHello #{recipient.firstname},\n\n#{commenter.firstname} #{commenter.lastname} added an internal note to ticket \"#{ticket.title}\".\n\n<% if @objects[:article] && @objects[:article].body.present? %>\n---\nInternal Note:\n#{commenter.firstname} #{commenter.lastname} wrote:\n\n<%= HtmlSanitizer.dynamic_image_size(@objects[:article].body_as_html).html_safe %>\n\n<% if @objects[:article].attachments.any? %>\n📎 <%= @objects[:article].attachments.count %> attachment<% if @objects[:article].attachments.count != 1 %>s<% end %>\n<% end %>\n---\n<% end %>\n\nNote: This is an internal note visible only to agents and not visible to customers.\n\nView Ticket: #{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\n\nYou are receiving this because you are a member of the group of this ticket.\n"
 msgstr ""
 
 #: app/models/object_manager/attribute.rb:694
@@ -10987,7 +10982,7 @@ msgstr ""
 #. This is the template file app/views/mailer/ticket_comment_added/en.text.erb in ERB/ format.
 #. Please make sure to translate it to a valid corresponding output structure.
 #: app/views/mailer/ticket_comment_added/en.text.erb
-msgid "New comment: #{ticket.title}\n\nHello #{recipient.firstname},\n\nA new comment has been added to your ticket \"#{ticket.title}\".\n\n--- Comment ---\n#{commenter.firstname} #{commenter.lastname} commented:\n#{article.body_as_text}\n---------------\n\nYou're receiving this notification because #{reason}. Join the discussion to stay updated on the latest developments.\n\nView Ticket: #{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\n"
+msgid "New comment: #{ticket.title}\n\nHello #{recipient.firstname},\n\nA new comment has been added to your ticket \"#{ticket.title}\".\n\n<% if @objects[:article] && @objects[:article].body.present? %>\n--- Comment ---\n#{commenter.firstname} #{commenter.lastname} commented:\n<%= HtmlSanitizer.dynamic_image_size(@objects[:article].body_as_html).html_safe %>\n---------------\n<% end %>\n\nYou're receiving this notification because #{reason}. Join the discussion to stay updated on the latest developments.\n\nView Ticket: #{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\n"
 msgstr ""
 
 #: app/frontend/apps/desktop/components/BetaUi/composables/useBetaUiDisclaimer.ts:42
@@ -19902,11 +19897,11 @@ msgstr ""
 msgid "View from user's perspective"
 msgstr ""
 
-#: app/views/mailer/ticket_create/zh-cn.html.erb:23
+#: app/views/mailer/ticket_create/zh-cn.html.erb:16
 #: app/views/mailer/ticket_escalation/it.html.erb:17
 #: app/views/mailer/ticket_escalation_warning/zh-cn.html.erb:17
 #: app/views/mailer/ticket_reminder_reached/zh-cn.html.erb:17
-#: app/views/mailer/ticket_update/zh-cn.html.erb:28
+#: app/views/mailer/ticket_update/zh-cn.html.erb:21
 msgid "View this in Zammad"
 msgstr ""
 
