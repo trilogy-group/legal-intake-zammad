@@ -10,14 +10,7 @@
 Состояние: #{t(ticket.state.name)}<br>
 </div>
 <br>
-<% if @objects[:article] %>
-  <div>
-  Информация:
-  <blockquote type="cite">
-  #{article.body_as_html}
-  </blockquote>
-  </div>
-<% end %>
+
 <br>
 <div>
   <a href="#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}" target="zammad_app">Посмотреть это в #{config.product_name}</a>

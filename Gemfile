@@ -219,6 +219,10 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'test-unit'
 
+  # parallel test execution
+  gem 'parallel_tests'
+  gem 'rspec_junit_formatter'
+
   # for testing Pundit authorisation policies in RSpec
   gem 'pundit-matchers'
 

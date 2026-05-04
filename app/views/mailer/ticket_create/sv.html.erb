@@ -10,14 +10,7 @@ Grupp: #{ticket.group.name}<br>
 Status: #{t(ticket.state.name)}<br>
 </div>
 <br>
-<% if @objects[:article] %>
-  <div>
-  Information:
-  <blockquote type="cite">
-  #{article.body_as_html}
-  </blockquote>
-  </div>
-<% end %>
+
 <br>
 <div>
   <a href="#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}" target="zammad_app">Visa ärendet i #{config.product_name}</a>

@@ -10,14 +10,7 @@ Pemilik: #{ticket.owner.fullname}<br>
 Status: #{t(ticket.state.name)}<br>
 </div>
 <br>
-<% if @objects[:article] %>
-  <div>
-  Informasi:
-  <blockquote type="cite">
-  #{article.body_as_html}
-  </blockquote>
-  </div>
-<% end %>
+
 <br>
 <div>
   <a href="#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}" target="zammad_app">Lihat ini di #{config.product_name}</a>

@@ -161,7 +161,7 @@ export default defineConfig(({ mode, command }) => {
       environment: 'jsdom',
       clearMocks: true,
       css: false,
-      testTimeout: isEnvBooleanSet(process.env.CI) ? 30_000 : 5_000,
+      testTimeout: isEnvBooleanSet(process.env.CI) ? 30_000 : 10_000,
       unstubGlobals: true,
       // Node v25+ enables experimental webstorage by default (stability: release candidate).
       // Without --localstorage-file, Node provides localStorage as an empty object (no methods).

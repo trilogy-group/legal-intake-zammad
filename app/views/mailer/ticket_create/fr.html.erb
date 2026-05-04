@@ -10,14 +10,7 @@ Nouveau Ticket (#{ticket.title})
 #{t('State')} : #{t(ticket.state.name)}<br>
 </div>
 <br>
-<% if @objects[:article] %>
-  <div>
-  #{t('Information')} :
-  <blockquote type="cite">
-  #{article.body_as_html}
-  </blockquote>
-  </div>
-<% end %>
+
 <br>
 <div>
   <a href="#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}" target="zammad_app">Voir dans #{config.product_name}</a>

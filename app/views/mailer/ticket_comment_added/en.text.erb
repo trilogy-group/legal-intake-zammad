@@ -4,10 +4,12 @@ Hello #{recipient.firstname},
 
 A new comment has been added to your ticket "#{ticket.title}".
 
+<% if @objects[:article] && @objects[:article].body.present? %>
 --- Comment ---
 #{commenter.firstname} #{commenter.lastname} commented:
-#{article.body_as_text}
+<%= HtmlSanitizer.dynamic_image_size(@objects[:article].body_as_html).html_safe %>
 ---------------
+<% end %>
 
 You're receiving this notification because #{reason}. Join the discussion to stay updated on the latest developments.
 

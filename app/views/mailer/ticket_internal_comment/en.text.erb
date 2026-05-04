@@ -9,7 +9,7 @@ Hello #{recipient.firstname},
 Internal Note:
 #{commenter.firstname} #{commenter.lastname} wrote:
 
-<%= @objects[:article].body_as_text %>
+<%= HtmlSanitizer.dynamic_image_size(@objects[:article].body_as_html).html_safe %>
 
 <% if @objects[:article].attachments.any? %>
 📎 <%= @objects[:article].attachments.count %> attachment<% if @objects[:article].attachments.count != 1 %>s<% end %>

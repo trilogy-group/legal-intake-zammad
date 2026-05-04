@@ -15,15 +15,8 @@ das Ticket (#{ticket.title}) wurde von "<b>#{current_user.longname}</b>" aktuali
   </div>
 <% end %>
 <br>
-<% if @objects[:article] %>
-  <div>
-  Information:
-  <blockquote type="cite">
-  #{article.body_as_html}
-  </blockquote>
-  </div>
-<% end %>
+
 <br>
 <div>
-  <a href="#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}<% if @objects[:article] %>/#{article.id}<% end %>" target="zammad_app">In #{config.product_name} anzeigen</a>
+  <a href="#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}" target="zammad_app">In #{config.product_name} anzeigen</a>
 </div>

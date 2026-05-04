@@ -498,6 +498,8 @@ GEM
       iniparse (~> 1.4)
       rexml (>= 3.3.9)
     parallel (1.27.0)
+    parallel_tests (5.7.0)
+      parallel
     parser (3.3.10.1)
       ast (~> 2.4.1)
       racc
@@ -638,6 +640,8 @@ GEM
     rspec-retry (0.6.2)
       rspec-core (> 3.3)
     rspec-support (3.13.5)
+    rspec_junit_formatter (0.6.0)
+      rspec-core (>= 2, < 4, != 2.12.0)
     rszr (1.5.0)
     rubocop (1.84.1)
       json (~> 2.3)
@@ -926,6 +930,7 @@ DEPENDENCIES
   openssl
   overcommit
   parallel
+  parallel_tests
   pg (~> 1.5, >= 1.5.4)
   pry-byebug
   pry-doc
@@ -946,6 +951,7 @@ DEPENDENCIES
   rotp
   rspec-rails
   rspec-retry
+  rspec_junit_formatter
   rszr
   rubocop
   rubocop-capybara
