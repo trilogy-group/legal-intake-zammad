@@ -50,7 +50,7 @@ RSpec.describe Transaction::Notification, type: :model do
       allow(NotificationFactory::Mailer).to receive(:deliver)
     end
 
-    it 'notification includes English footer', :skip => 'Email body does not include reason footer text - pre-existing issue' do
+    it 'notification includes English footer', skip: 'Email body does not include reason footer text - pre-existing issue' do
       run(ticket, user, 'reminder_reached')
 
       expect(NotificationFactory::Mailer)
@@ -64,7 +64,7 @@ RSpec.describe Transaction::Notification, type: :model do
         user.save
       end
 
-      it 'notification includes German footer', :skip => 'Email body does not include reason footer text - pre-existing issue' do
+      it 'notification includes German footer', skip: 'Email body does not include reason footer text - pre-existing issue' do
         run(ticket, user, 'reminder_reached')
 
         expect(NotificationFactory::Mailer)
@@ -288,8 +288,8 @@ RSpec.describe Transaction::Notification, type: :model do
 
     it 'returns ticket_state_resolved when state changes to resolved' do
       # Use a state that exists, or create it if needed
-      resolved_state = Ticket::State.find_by(name: 'resolved') || 
-                      Ticket::State.find_by(name: 'closed') # Fallback to closed if resolved doesn't exist
+      resolved_state = Ticket::State.find_by(name: 'resolved') ||
+                       Ticket::State.find_by(name: 'closed') # Fallback to closed if resolved doesn't exist
       open_state = Ticket::State.find_by(name: 'open')
       changes = { 'state_id' => [open_state.id, resolved_state.id] }
       instance = build(ticket, agent, 'update')
@@ -342,7 +342,7 @@ RSpec.describe Transaction::Notification, type: :model do
     end
 
     it 'prioritizes owner_id over article in determine_update_template' do
-      # Note: In actual runtime (perform method), when both article and owner_id change,
+      # NOTE: In actual runtime (perform method), when both article and owner_id change,
       # separate notifications are sent for each and determine_update_template is never called.
       # This test checks the method priority for edge cases.
       article = create(:ticket_article, ticket: ticket, created_by: agent)
