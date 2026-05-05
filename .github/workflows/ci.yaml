@@ -9,6 +9,10 @@ on:
 jobs:
   CI:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        test_group: [1, 2, 3, 4, 5, 6]
     container:
       image: zammad/zammad-ci:latest
     services:
@@ -24,6 +28,7 @@ jobs:
       Z_LOCALES: "en-us:de-de"
       TZ: 'Europe/London'
       REDIS_URL: redis://redis:6379
+      TEST_GROUP: ${{ matrix.test_group }}
       # Compile assets only once.
       CI_SKIP_ASSETS_PRECOMPILE: 'true'
       # Avoid unnecessary DB resets.
@@ -52,6 +57,27 @@ jobs:
         with:
           path: tmp/cache/.eslintcache.js
           key: ${{ runner.os }}-cache-eslint-${{ hashFiles('pnpm-lock.yaml') }}
+      - name: Cache compiled assets
+        id: cache-assets
+        uses: actions/cache@v5
+        with:
+          path: |
+            public/assets
+            public/packs
+            tmp/cache/assets
+          key: ${{ runner.os }}-assets-${{ hashFiles('**/pnpm-lock.yaml', 'app/assets/**/*', 'app/frontend/**/*') }}
+          restore-keys: |
+            ${{ runner.os }}-assets-
+      - name: Cache test database
+        id: cache-test-db
+        uses: actions/cache@v5
+        with:
+          path: |
+            tmp/cache
+            spec/examples.txt
+          key: ${{ runner.os }}-test-db-${{ hashFiles('db/schema.rb', 'db/seeds.rb') }}
+          restore-keys: |
+            ${{ runner.os }}-test-db-
       - name: Lint
         run: .github/workflows/ci/lint.sh
       - name: Markdownlint
