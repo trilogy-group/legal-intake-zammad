@@ -145,10 +145,9 @@ class Transaction::Notification
           send_state_change_notification_with_cc
         end
       end
-    else
-      # DISABLED: No email notifications for other field updates (priority, custom fields, group, etc.)
-      # Only send emails for: ticket creation, comments/articles, and state changes
     end
+    # DISABLED: No email notifications for other field updates (priority, custom fields, group, etc.)
+    # Only send emails for: ticket creation, comments/articles, and state changes
   end
 
   def prepare_recipients_and_reasons
