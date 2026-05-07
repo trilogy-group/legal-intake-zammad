@@ -148,7 +148,6 @@ class Transaction::Notification
     else
       # DISABLED: No email notifications for other field updates (priority, custom fields, group, etc.)
       # Only send emails for: ticket creation, comments/articles, and state changes
-      return
     end
   end
 
