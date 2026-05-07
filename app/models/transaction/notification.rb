@@ -115,11 +115,12 @@ class Transaction::Notification
       end
 
       # If owner changed along with comment, send separate assignment notification
-      if @item[:changes]&.key?('owner_id')
-        @suppress_article_for_state_change = true
-        send_assignment_notification_with_cc
-        @suppress_article_for_state_change = false
-      end
+      # DISABLED: No email notifications for owner assignment
+      # if @item[:changes]&.key?('owner_id')
+      #   @suppress_article_for_state_change = true
+      #   send_assignment_notification_with_cc
+      #   @suppress_article_for_state_change = false
+      # end
 
       return
     end
@@ -131,9 +132,10 @@ class Transaction::Notification
     # For updates, handle owner and/or state changes independently so both emails are sent if both change
     elsif @item[:type] == 'update' && (@item[:changes]&.key?('owner_id') || @item[:changes]&.key?('state_id'))
       # Send assignment notification if owner changed
-      if @item[:changes]&.key?('owner_id')
-        send_assignment_notification_with_cc
-      end
+      # DISABLED: No email notifications for owner assignment
+      # if @item[:changes]&.key?('owner_id')
+      #   send_assignment_notification_with_cc
+      # end
 
       # Send state notification if state changed
       if @item[:changes]&.key?('state_id')
@@ -144,12 +146,9 @@ class Transaction::Notification
         end
       end
     else
-      # send notifications
-      recipients_and_channels.each do |recipient_settings|
-        ActiveRecord::Base.transaction do
-          send_to_single_recipient(recipient_settings)
-        end
-      end
+      # DISABLED: No email notifications for other field updates (priority, custom fields, group, etc.)
+      # Only send emails for: ticket creation, comments/articles, and state changes
+      return
     end
   end
 

@@ -26,11 +26,11 @@ fi
 
 echo "Running basic rspec tests in parallel (group ${TEST_GROUP:-1}/6)…"
 bundle exec rake zammad:db:init
-bundle exec parallel_test spec/ \
+bundle exec parallel_rspec spec/ \
   -n 6 \
   --only-group "${TEST_GROUP:-1}" \
   --exclude-pattern "spec/system/**/*_spec.rb" \
-  --test-options '-t ~searchindex -t ~integration -t ~required_envs -t ~pgp'
+  -o '-t ~searchindex -t ~integration -t ~required_envs -t ~pgp'
 
 # Only run minitest on first worker to avoid redundancy
 if [ "${TEST_GROUP:-1}" = "1" ]; then
