@@ -651,12 +651,11 @@ curl "http://localhost/api/v1/users/unsubscribe_notifications?user_id=5&token=ab
     user = User.find_by(id: params[:user_id])
 
     if user.blank? || !user.valid_email_notification_unsubscribe_token?(params[:token])
-      render html: unsubscribe_html_page(
-        title:   'Unsubscribe failed',
-        heading: 'Invalid or expired unsubscribe link.',
-        message: 'This unsubscribe link is invalid or has already been used. Please log in to manage your notification settings.',
-        success: false,
-      ), status: :unprocessable_entity
+      @page_title   = 'Unsubscribe failed'
+      @page_heading = 'Invalid or expired unsubscribe link.'
+      @page_message = 'This unsubscribe link is invalid or has already been used. Please log in to manage your notification settings.'
+      @page_success = false
+      render :email_notifications_unsubscribe, status: :unprocessable_entity
       return
     end
 
@@ -665,12 +664,11 @@ curl "http://localhost/api/v1/users/unsubscribe_notifications?user_id=5&token=ab
       user.save!
     end
 
-    render html: unsubscribe_html_page(
-      title:   'Unsubscribed',
-      heading: 'You have been unsubscribed.',
-      message: 'You will no longer receive email notifications for ticket activity. You can re-enable them at any time from your account settings.',
-      success: true,
-    ), status: :ok
+    @page_title   = 'Unsubscribed'
+    @page_heading = 'You have been unsubscribed.'
+    @page_message = 'You will no longer receive email notifications for ticket activity. You can re-enable them at any time from your account settings.'
+    @page_success = true
+    render :email_notifications_unsubscribe, status: :ok
   end
 
 =begin
@@ -903,43 +901,6 @@ curl http://localhost/api/v1/users/avatar -v -u #{login}:#{password} -H "Content
   end
 
   private
-
-  # Renders a minimal self-contained HTML confirmation page for the
-  # unsubscribe endpoint. Keeps the controller a pure JSON API for all other
-  # actions while giving browser visitors a human-readable response here.
-  def unsubscribe_html_page(title:, heading:, message:, success:)
-    color = success ? '#2563eb' : '#dc2626'
-    icon  = success ? '&#10003;' : '&#10007;'
-    <<~HTML.html_safe
-      <!DOCTYPE html>
-      <html lang="en">
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>#{ERB::Util.html_escape(title)}</title>
-        <style>
-          body { font-family: sans-serif; display: flex; justify-content: center;
-                 align-items: center; min-height: 100vh; margin: 0;
-                 background: #f9fafb; color: #111827; }
-          .card { background: #fff; border-radius: 8px; padding: 40px 48px;
-                  max-width: 480px; width: 100%; box-shadow: 0 1px 3px rgba(0,0,0,.1); }
-          .icon { font-size: 48px; color: #{color}; margin-bottom: 16px; }
-          h1 { font-size: 22px; margin: 0 0 12px; }
-          p { color: #6b7280; line-height: 1.6; margin: 0 0 24px; }
-          a { color: #{color}; text-decoration: none; font-weight: 500; }
-        </style>
-      </head>
-      <body>
-        <div class="card">
-          <div class="icon">#{icon}</div>
-          <h1>#{ERB::Util.html_escape(heading)}</h1>
-          <p>#{ERB::Util.html_escape(message)}</p>
-          <a href="/">Go to #{ERB::Util.html_escape(Setting.get('product_name') || 'Zammad')}</a>
-        </div>
-      </body>
-      </html>
-    HTML
-  end
 
   def password_login?
     return true if Setting.get('user_show_password_login')
