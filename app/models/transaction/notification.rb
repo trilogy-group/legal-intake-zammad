@@ -96,32 +96,11 @@ class Transaction::Notification
 
     # Check if this is a regular comment (non-internal)
     # BUT: If this is the first article of a newly created ticket, treat it as creation, not comment
+    #
+    # Priority rule: Comment > Status > Owner
+    # When a comment is present, only the comment notification fires — no separate state or owner emails.
     if article && @item[:type] == 'update'
       send_comment_notification_with_cc(article)
-
-      # If state changed along with comment, send separate state change notification
-      if @item[:changes]&.key?('state_id')
-        # Suppress article for state change notification so it doesn't get confused with comment notification
-        @suppress_article_for_state_change = true
-
-        if ticket.state.name == 'under_legal_review'
-          send_under_legal_review_notification_with_cc
-        elsif %w[awaiting_response ready_for_signature sent_for_signature signed resolved closed].include?(ticket.state.name) || reopened_state?(ticket, @item[:changes])
-          send_state_change_notification_with_cc
-        end
-
-        # Re-enable article access
-        @suppress_article_for_state_change = false
-      end
-
-      # If owner changed along with comment, send separate assignment notification
-      # DISABLED: No email notifications for owner assignment
-      # if @item[:changes]&.key?('owner_id')
-      #   @suppress_article_for_state_change = true
-      #   send_assignment_notification_with_cc
-      #   @suppress_article_for_state_change = false
-      # end
-
       return
     end
 
@@ -129,25 +108,22 @@ class Transaction::Notification
     # This handles both: ticket creation without article AND ticket creation with first article
     if @item[:type] == 'create'
       send_creation_notification_with_cc
-    # For updates, handle owner and/or state changes independently so both emails are sent if both change
     elsif @item[:type] == 'update' && (@item[:changes]&.key?('owner_id') || @item[:changes]&.key?('state_id'))
-      # Send assignment notification if owner changed
-      # DISABLED: No email notifications for owner assignment
-      # if @item[:changes]&.key?('owner_id')
-      #   send_assignment_notification_with_cc
-      # end
-
-      # Send state notification if state changed
+      # Priority rule (no article present): Status > Owner
+      # If state changed, send state notification only (owner change is lower priority).
+      # If only owner changed (no state change), send assignment notification.
       if @item[:changes]&.key?('state_id')
         if ticket.state.name == 'under_legal_review'
           send_under_legal_review_notification_with_cc
         elsif %w[awaiting_response ready_for_signature sent_for_signature signed resolved closed].include?(ticket.state.name) || reopened_state?(ticket, @item[:changes])
           send_state_change_notification_with_cc
         end
+      elsif @item[:changes]&.key?('owner_id')
+        send_assignment_notification_with_cc
       end
     end
-    # DISABLED: No email notifications for other field updates (priority, custom fields, group, etc.)
-    # Only send emails for: ticket creation, comments/articles, and state changes
+    # No email notifications for other field updates (priority, custom fields, group, etc.)
+    # Only send emails for: ticket creation, comments/articles, state changes, and owner-only assignments.
   end
 
   def prepare_recipients_and_reasons
@@ -289,17 +265,11 @@ class Transaction::Notification
       send_to_single_recipient_online(user, ticket, article)
     end
 
-    # Build CC list - customers always included, check preferences for agents only
-    cc_recipients_who_want_email = cc_recipients.select do |r|
-      user = r[:user]
-      # Check if user is a customer (ticket creator or shared customer)
-      if customer?(user)
-        # Customers always get email
-        user.email.present?
-      else
-        # Check preferences for agents/legal admins
-        r[:channels] && r[:channels]['email']
-      end
+    # Build CC list - only agents with full group access (NOT customers or shared customers)
+    # Per spec: assignment emails go to the new owner (To:) and full-group-access agents only.
+    # Customers and shared customers must NOT receive assignment notifications.
+    cc_recipients_who_want_email = cc_recipients.reject { |r| customer?(r[:user]) }.select do |r|
+      r[:channels] && r[:channels]['email']
     end
 
     cc_emails = cc_recipients_who_want_email
