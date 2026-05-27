@@ -6602,6 +6602,13 @@ export type UserCurrentAppearanceMutationVariables = Exact<{
 
 export type UserCurrentAppearanceMutation = { __typename?: 'Mutations', userCurrentAppearance?: { __typename?: 'UserCurrentAppearancePayload', success: boolean, errors?: Array<{ __typename?: 'UserError', message: string, messagePlaceholder?: Array<string> | null, field?: string | null, exception?: EnumUserErrorException | null }> | null } | null };
 
+export type UserCurrentEmailNotificationsUpdateMutationVariables = Exact<{
+  enabled: Scalars['Boolean']['input'];
+}>;
+
+
+export type UserCurrentEmailNotificationsUpdateMutation = { __typename?: 'Mutations', userCurrentEmailNotificationsUpdate?: { __typename?: 'UserCurrentEmailNotificationsUpdatePayload', success: boolean, errors?: Array<{ __typename?: 'UserError', message: string, messagePlaceholder?: Array<string> | null, field?: string | null, exception?: EnumUserErrorException | null }> | null } | null };
+
 export type UserCurrentAvatarSelectMutationVariables = Exact<{
   id: Scalars['ID']['input'];
 }>;

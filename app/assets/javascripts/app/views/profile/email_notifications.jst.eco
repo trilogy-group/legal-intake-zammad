@@ -1,0 +1,19 @@
+<div class="page-header">
+  <div class="page-header-title">
+    <h1><%- @T('Email Notifications') %></h1>
+  </div>
+</div>
+<div class="page-content">
+  <p><%- @T('Control whether you receive email notifications for ticket activity.') %></p>
+  <p><%- @T('Disabling this will stop all ticket-related emails. You can still view your tickets at any time by logging in.') %></p>
+  <div class="settings-entry">
+    <label class="inline-label">
+      <input
+        type="checkbox"
+        class="js-emailNotificationsToggle"
+        <% if @enabled: %>checked<% end %>
+      />
+      <%- @T('Receive email notifications') %>
+    </label>
+  </div>
+</div>

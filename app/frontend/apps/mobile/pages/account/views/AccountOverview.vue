@@ -11,6 +11,7 @@ import { useForceDesktop } from '#shared/composables/useForceDesktop.ts'
 import { useLocaleUpdate } from '#shared/composables/useLocaleUpdate.ts'
 import { useProductAboutQuery } from '#shared/graphql/queries/about.api.ts'
 import { i18n } from '#shared/i18n.ts'
+import { MutationHandler } from '#shared/server/apollo/handler/index.ts'
 import { QueryHandler } from '#shared/server/apollo/handler/index.ts'
 import { useSessionStore } from '#shared/stores/session.ts'
 import { browser, os } from '#shared/utils/browser.ts'
@@ -21,6 +22,8 @@ import CommonSectionMenuItem from '#mobile/components/CommonSectionMenu/CommonSe
 import CommonSectionMenuLink from '#mobile/components/CommonSectionMenu/CommonSectionMenuLink.vue'
 import CommonSectionPopup from '#mobile/components/CommonSectionPopup/CommonSectionPopup.vue'
 import { useHeader } from '#mobile/composables/useHeader.ts'
+
+import { useUserCurrentEmailNotificationsUpdateMutation } from '#shared/graphql/mutations/userCurrentEmailNotificationsUpdate.api.ts'
 
 const router = useRouter()
 
@@ -40,6 +43,27 @@ const user = toRef(session, 'user')
 const { modelCurrentLocale, localeOptions, isSavingLocale, translation } = useLocaleUpdate()
 
 const hasVersionPermission = session.hasPermission('admin')
+
+// Email notification preference
+const isSavingEmailNotifications = ref(false)
+const emailNotificationsEnabled = computed({
+  get: () => {
+    const pref = user.value?.preferences?.email_notifications_enabled
+    return pref === undefined || pref === null ? true : Boolean(pref)
+  },
+  set: async (enabled: boolean) => {
+    isSavingEmailNotifications.value = true
+    const mutation = new MutationHandler(
+      useUserCurrentEmailNotificationsUpdateMutation({ variables: { enabled } }),
+    )
+    await mutation.send({ enabled }).finally(() => {
+      isSavingEmailNotifications.value = false
+    })
+    if (user.value?.preferences) {
+      user.value.preferences.email_notifications_enabled = enabled
+    }
+  },
+})
 
 const productAboutQuery = new QueryHandler(
   useProductAboutQuery({
@@ -159,6 +183,18 @@ const { forceDesktop } = useForceDesktop()
           {{ $t('You can help translating Zammad.') }}
         </CommonLink>
       </template>
+    </FormGroup>
+
+    <FormGroup v-if="session.hasPermission('user_preferences.email_notifications')">
+      <FormKit
+        v-model="emailNotificationsEnabled"
+        type="toggle"
+        name="email_notifications_enabled"
+        :label="__('Email Notifications')"
+        :help="__('Receive email notifications for ticket activity.')"
+        :disabled="isSavingEmailNotifications"
+        :variants="{ true: __('Enabled'), false: __('Disabled') }"
+      />
     </FormGroup>
 
     <CommonSectionMenu v-if="hasVersionPermission">

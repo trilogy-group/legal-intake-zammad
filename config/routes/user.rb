@@ -34,6 +34,8 @@ Zammad::Application.routes.draw do
   match api_path + '/users/password_check',        to: 'users#password_check',        via: :post
   match api_path + '/users/preferences',           to: 'users#preferences',           via: :put
   match api_path + '/users/preferences_notifications_reset', to: 'users#preferences_notifications_reset', via: :post
+  match api_path + '/users/email_notifications',   to: 'users#email_notifications_update', via: :put
+  match api_path + '/users/unsubscribe_notifications', to: 'users#email_notifications_unsubscribe', via: :get
   match api_path + '/users/out_of_office',         to: 'users#out_of_office',         via: :put
   match api_path + '/users/account',               to: 'users#account_remove',        via: :delete
 

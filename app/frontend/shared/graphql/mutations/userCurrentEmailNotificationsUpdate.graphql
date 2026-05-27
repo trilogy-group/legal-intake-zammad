@@ -1,0 +1,8 @@
+mutation userCurrentEmailNotificationsUpdate($enabled: Boolean!) {
+  userCurrentEmailNotificationsUpdate(enabled: $enabled) {
+    success
+    errors {
+      ...errors
+    }
+  }
+}

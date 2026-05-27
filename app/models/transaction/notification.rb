@@ -397,20 +397,22 @@ class Transaction::Notification
       result[:body] = HtmlSanitizer.dynamic_image_size(result[:body])
     end
 
-    # Send one email with CC (always send to customer, even if no notification preferences)
-    NotificationFactory::Mailer.deliver(
-      recipient:    customer,
-      subject:      result[:subject],
-      body:         result[:body],
-      content_type: 'text/html',
-      message_id:   "<notification.#{DateTime.current.to_fs(:number)}.#{ticket.id}.#{customer.id}.#{SecureRandom.uuid}@#{Setting.get('fqdn')}>",
-      references:   ticket.get_references,
-      attachments:  attachments,
-      cc:           cc_emails.presence,
-    )
+    # Send one email with CC — skip if customer has opted out of email notifications
+    if customer_email_notifications_enabled?(customer)
+      NotificationFactory::Mailer.deliver(
+        recipient:    customer,
+        subject:      result[:subject],
+        body:         result[:body],
+        content_type: 'text/html',
+        message_id:   "<notification.#{DateTime.current.to_fs(:number)}.#{ticket.id}.#{customer.id}.#{SecureRandom.uuid}@#{Setting.get('fqdn')}>",
+        references:   ticket.get_references,
+        attachments:  attachments,
+        cc:           cc_emails.presence,
+      )
 
-    # Add notification history for customer
-    add_recipient_list_to_history(ticket, customer, ['email'], 'create')
+      # Add notification history for customer
+      add_recipient_list_to_history(ticket, customer, ['email'], 'create')
+    end
 
     # Add notification history for CC recipients
     cc_recipients_who_want_email.each do |r|
@@ -442,13 +444,13 @@ class Transaction::Notification
       send_to_single_recipient_online(user, ticket, article)
     end
 
-    # Build CC list - customers always included, check preferences for agents only
+    # Build CC list - customers included only if they want email, check preferences for agents only
     cc_recipients_who_want_email = cc_recipients.select do |r|
       user = r[:user]
       # Check if user is a customer (ticket creator or shared customer)
       if customer?(user)
-        # Customers always get email
-        user.email.present?
+        # Respect customer email notification preference
+        customer_email_notifications_enabled?(user)
       else
         # Check preferences for agents/legal admins
         r[:channels] && r[:channels]['email']
@@ -496,20 +498,22 @@ class Transaction::Notification
       result[:body] = HtmlSanitizer.dynamic_image_size(result[:body])
     end
 
-    # Send one email with CC (always send to customer, even if no notification preferences)
-    NotificationFactory::Mailer.deliver(
-      recipient:    customer,
-      subject:      result[:subject],
-      body:         result[:body],
-      content_type: 'text/html',
-      message_id:   "<notification.#{DateTime.current.to_fs(:number)}.#{ticket.id}.#{customer.id}.#{SecureRandom.uuid}@#{Setting.get('fqdn')}>",
-      references:   ticket.get_references,
-      attachments:  attachments,
-      cc:           cc_emails.presence,
-    )
+    # Send one email with CC — skip if customer has opted out of email notifications
+    if customer_email_notifications_enabled?(customer)
+      NotificationFactory::Mailer.deliver(
+        recipient:    customer,
+        subject:      result[:subject],
+        body:         result[:body],
+        content_type: 'text/html',
+        message_id:   "<notification.#{DateTime.current.to_fs(:number)}.#{ticket.id}.#{customer.id}.#{SecureRandom.uuid}@#{Setting.get('fqdn')}>",
+        references:   ticket.get_references,
+        attachments:  attachments,
+        cc:           cc_emails.presence,
+      )
 
-    # Add notification history for customer
-    add_recipient_list_to_history(ticket, customer, ['email'], 'update')
+      # Add notification history for customer
+      add_recipient_list_to_history(ticket, customer, ['email'], 'update')
+    end
 
     # Add notification history for CC recipients
     cc_recipients_who_want_email.each do |r|
@@ -573,11 +577,11 @@ class Transaction::Notification
     cc_user_list = cc_user_list.uniq.reject { |u| u.id == commenter.id || u.id == primary_recipient.id }
 
     # Filter CC recipients who want email notifications
-    # Customers (ticket creator + shared customers) always get email, check preferences for agents only
+    # Customers (ticket creator + shared customers) get email only if they have not opted out
     cc_recipients = cc_user_list.select do |u|
       if shared_customers.include?(u) || u.id == ticket_creator.id
-        # Customers always get email notifications
-        u.email.present?
+        # Respect customer email notification preference
+        customer_email_notifications_enabled?(u)
       else
         # Only check preferences for agents/legal admins
         can_receive_notification?(u, 'email')
@@ -590,8 +594,10 @@ class Transaction::Notification
     end
 
     # Check if primary recipient wants email
-    # Customers always get email, only check preferences for agents
-    if !customer?(primary_recipient) && !can_receive_notification?(primary_recipient, 'email')
+    # Customers get email only if they have not opted out; check preferences for agents
+    if customer?(primary_recipient)
+      return if !customer_email_notifications_enabled?(primary_recipient)
+    elsif !can_receive_notification?(primary_recipient, 'email')
       return
     end
 
@@ -710,12 +716,12 @@ class Transaction::Notification
       send_to_single_recipient_online(user, ticket, article)
     end
 
-    # Build CC list - customers always included, check preferences for agents only
+    # Build CC list - customers included only if they want email, check preferences for agents only
     cc_recipients_who_want_email = cc_user_list.select do |user|
       # Check if user is a customer
       if customer?(user)
-        # Customers always get email
-        user.email.present?
+        # Respect customer email notification preference
+        customer_email_notifications_enabled?(user)
       else
         # Check preferences for agents/legal admins
         recipient_setting = recipients_and_channels.find { |r| r[:user].id == user.id }
@@ -764,20 +770,24 @@ class Transaction::Notification
       result[:body] = HtmlSanitizer.dynamic_image_size(result[:body])
     end
 
-    # Send one email with CC (always send to primary recipient, even if no notification preferences)
-    NotificationFactory::Mailer.deliver(
-      recipient:    primary_recipient,
-      subject:      result[:subject],
-      body:         result[:body],
-      content_type: 'text/html',
-      message_id:   "<notification.#{DateTime.current.to_fs(:number)}.#{ticket.id}.#{primary_recipient.id}.#{SecureRandom.uuid}@#{Setting.get('fqdn')}>",
-      references:   ticket.get_references,
-      attachments:  attachments,
-      cc:           cc_emails.presence,
-    )
+    # Send one email with CC — for customer primary recipients, respect their email preference
+    if customer?(primary_recipient) && !customer_email_notifications_enabled?(primary_recipient)
+      # Primary is a customer who has opted out; skip email entirely
+    else
+      NotificationFactory::Mailer.deliver(
+        recipient:    primary_recipient,
+        subject:      result[:subject],
+        body:         result[:body],
+        content_type: 'text/html',
+        message_id:   "<notification.#{DateTime.current.to_fs(:number)}.#{ticket.id}.#{primary_recipient.id}.#{SecureRandom.uuid}@#{Setting.get('fqdn')}>",
+        references:   ticket.get_references,
+        attachments:  attachments,
+        cc:           cc_emails.presence,
+      )
 
-    # Add notification history
-    add_recipient_list_to_history(ticket, primary_recipient, ['email'], 'update')
+      # Add notification history
+      add_recipient_list_to_history(ticket, primary_recipient, ['email'], 'update')
+    end
 
     # Add notification history for CC recipients
     cc_recipients_who_want_email.each do |user|
@@ -996,6 +1006,14 @@ class Transaction::Notification
 
     # Check user's notification preferences
     NotificationFactory::Mailer.notification_settings(user, ticket, @item[:type])
+  end
+
+  # Returns true when the customer has not explicitly opted out of email notifications.
+  # Delegates to the HasEmailNotificationPreference concern on User.
+  def customer_email_notifications_enabled?(user)
+    return false if user.email.blank?
+
+    user.email_notifications_enabled?
   end
 
   def customer?(user)
