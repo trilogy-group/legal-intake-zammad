@@ -7,15 +7,16 @@ require 'rails_helper'
 # Priority order: Comment > Status Change > Owner Change
 #
 # Scenario matrix:
-#   1. Status change + Owner change          -> only status notification
+#   1. Status change + Owner change           -> only status notification
 #   2. Status change + Comment + Owner change -> only comment notification
-#   3. Comment + Owner change                -> only comment notification
-#   4. Comment + Status change               -> only comment notification
-#   5. Comment only                          -> comment notification
-#   6. Status only                           -> status notification
-#   7. Owner change only                     -> assignment notification (owner + full-access agents only, NOT customers)
+#   3. Comment + Owner change                 -> only comment notification
+#   4. Comment + Status change                -> only comment notification
+#   5. Comment only                           -> comment notification
+#   6. Status only                            -> status notification
+#   7. Owner change only                      -> assignment notification
+#                                                (owner + full-access agents only, NOT customers)
 #
-RSpec.describe Transaction::Notification, 'email notification priority rules' do
+RSpec.describe Transaction::Notification, 'priority rules' do
   let(:group)           { create(:group) }
   let(:agent_owner)     { create(:agent, groups: [group]) }
   let(:agent_other)     { create(:agent, groups: [group]) }
@@ -35,10 +36,12 @@ RSpec.describe Transaction::Notification, 'email notification priority rules' do
   end
 
   # -------------------------------------------------------------------------
-  # Scenario 1: Status change + Owner change → only status notification
+  # Scenario 1: Status change + Owner change -> only status notification
   # -------------------------------------------------------------------------
   describe 'scenario 1: status change + owner change together' do
-    it 'sends exactly one notification and it is for the state change' do
+    before { ticket.update_column(:state_id, closed_state.id) }
+
+    it 'sends the state notification and not an assignment notification' do
       item = {
         object:    'Ticket',
         type:      'update',
@@ -53,17 +56,33 @@ RSpec.describe Transaction::Notification, 'email notification priority rules' do
 
       expect(NotificationFactory::Mailer).to have_received(:template)
         .with(hash_including(template: 'ticket_state_closed')).once
+    end
+
+    it 'does not send an assignment notification' do
+      item = {
+        object:    'Ticket',
+        type:      'update',
+        object_id: ticket.id,
+        user_id:   agent_other.id,
+        changes:   {
+          'state_id' => [open_state.id, closed_state.id],
+          'owner_id' => [1, agent_owner.id],
+        },
+      }
+      described_class.new(item).perform
+
       expect(NotificationFactory::Mailer).not_to have_received(:template)
         .with(hash_including(template: 'ticket_assigned'))
     end
   end
 
   # -------------------------------------------------------------------------
-  # Scenario 2: Status change + Comment + Owner change → only comment notification
+  # Scenario 2: Status change + Comment + Owner change -> only comment notification
   # -------------------------------------------------------------------------
   describe 'scenario 2: status change + comment + owner change together' do
-    it 'sends exactly one notification and it is for the comment' do
-      article = create(:ticket_article, ticket: ticket, created_by: customer)
+    let(:article) { create(:ticket_article, ticket: ticket, created_by: customer) }
+
+    it 'sends only the comment notification' do
       item = {
         object:     'Ticket',
         type:       'update',
@@ -79,19 +98,52 @@ RSpec.describe Transaction::Notification, 'email notification priority rules' do
 
       expect(NotificationFactory::Mailer).to have_received(:template)
         .with(hash_including(template: 'ticket_comment_added')).once
+    end
+
+    it 'does not send a state notification' do
+      item = {
+        object:     'Ticket',
+        type:       'update',
+        object_id:  ticket.id,
+        article_id: article.id,
+        user_id:    customer.id,
+        changes:    {
+          'state_id' => [open_state.id, closed_state.id],
+          'owner_id' => [1, agent_owner.id],
+        },
+      }
+      described_class.new(item).perform
+
       expect(NotificationFactory::Mailer).not_to have_received(:template)
         .with(hash_including(template: 'ticket_state_closed'))
+    end
+
+    it 'does not send an assignment notification' do
+      item = {
+        object:     'Ticket',
+        type:       'update',
+        object_id:  ticket.id,
+        article_id: article.id,
+        user_id:    customer.id,
+        changes:    {
+          'state_id' => [open_state.id, closed_state.id],
+          'owner_id' => [1, agent_owner.id],
+        },
+      }
+      described_class.new(item).perform
+
       expect(NotificationFactory::Mailer).not_to have_received(:template)
         .with(hash_including(template: 'ticket_assigned'))
     end
   end
 
   # -------------------------------------------------------------------------
-  # Scenario 3: Comment + Owner change → only comment notification
+  # Scenario 3: Comment + Owner change -> only comment notification
   # -------------------------------------------------------------------------
   describe 'scenario 3: comment + owner change together' do
+    let(:article) { create(:ticket_article, ticket: ticket, created_by: customer) }
+
     it 'sends only the comment notification' do
-      article = create(:ticket_article, ticket: ticket, created_by: customer)
       item = {
         object:     'Ticket',
         type:       'update',
@@ -104,17 +156,31 @@ RSpec.describe Transaction::Notification, 'email notification priority rules' do
 
       expect(NotificationFactory::Mailer).to have_received(:template)
         .with(hash_including(template: 'ticket_comment_added')).once
+    end
+
+    it 'does not send an assignment notification' do
+      item = {
+        object:     'Ticket',
+        type:       'update',
+        object_id:  ticket.id,
+        article_id: article.id,
+        user_id:    customer.id,
+        changes:    { 'owner_id' => [1, agent_owner.id] },
+      }
+      described_class.new(item).perform
+
       expect(NotificationFactory::Mailer).not_to have_received(:template)
         .with(hash_including(template: 'ticket_assigned'))
     end
   end
 
   # -------------------------------------------------------------------------
-  # Scenario 4: Comment + Status change → only comment notification
+  # Scenario 4: Comment + Status change -> only comment notification
   # -------------------------------------------------------------------------
   describe 'scenario 4: comment + status change together' do
-    it 'sends only the comment notification, not a separate state notification' do
-      article = create(:ticket_article, ticket: ticket, created_by: customer)
+    let(:article) { create(:ticket_article, ticket: ticket, created_by: customer) }
+
+    it 'sends only one email' do
       item = {
         object:     'Ticket',
         type:       'update',
@@ -126,15 +192,41 @@ RSpec.describe Transaction::Notification, 'email notification priority rules' do
       described_class.new(item).perform
 
       expect(NotificationFactory::Mailer).to have_received(:deliver).once
+    end
+
+    it 'sends only the comment notification' do
+      item = {
+        object:     'Ticket',
+        type:       'update',
+        object_id:  ticket.id,
+        article_id: article.id,
+        user_id:    customer.id,
+        changes:    { 'state_id' => [open_state.id, closed_state.id] },
+      }
+      described_class.new(item).perform
+
       expect(NotificationFactory::Mailer).to have_received(:template)
         .with(hash_including(template: 'ticket_comment_added')).once
+    end
+
+    it 'does not send a state notification' do
+      item = {
+        object:     'Ticket',
+        type:       'update',
+        object_id:  ticket.id,
+        article_id: article.id,
+        user_id:    customer.id,
+        changes:    { 'state_id' => [open_state.id, closed_state.id] },
+      }
+      described_class.new(item).perform
+
       expect(NotificationFactory::Mailer).not_to have_received(:template)
         .with(hash_including(template: 'ticket_state_closed'))
     end
   end
 
   # -------------------------------------------------------------------------
-  # Scenario 5: Comment only → comment notification
+  # Scenario 5: Comment only -> comment notification
   # -------------------------------------------------------------------------
   describe 'scenario 5: comment only' do
     it 'sends a comment notification' do
@@ -155,9 +247,11 @@ RSpec.describe Transaction::Notification, 'email notification priority rules' do
   end
 
   # -------------------------------------------------------------------------
-  # Scenario 6: Status only → status notification
+  # Scenario 6: Status only -> status notification
   # -------------------------------------------------------------------------
   describe 'scenario 6: status change only' do
+    before { ticket.update_column(:state_id, closed_state.id) }
+
     it 'sends a state change notification' do
       item = {
         object:    'Ticket',
@@ -170,23 +264,38 @@ RSpec.describe Transaction::Notification, 'email notification priority rules' do
 
       expect(NotificationFactory::Mailer).to have_received(:template)
         .with(hash_including(template: 'ticket_state_closed')).once
+    end
+
+    it 'does not send an assignment notification' do
+      item = {
+        object:    'Ticket',
+        type:      'update',
+        object_id: ticket.id,
+        user_id:   agent_other.id,
+        changes:   { 'state_id' => [open_state.id, closed_state.id] },
+      }
+      described_class.new(item).perform
+
       expect(NotificationFactory::Mailer).not_to have_received(:template)
         .with(hash_including(template: 'ticket_assigned'))
     end
   end
 
   # -------------------------------------------------------------------------
-  # Scenario 7: Owner change only → assignment notification
+  # Scenario 7: Owner change only -> assignment notification, no customers
   # -------------------------------------------------------------------------
   describe 'scenario 7: owner change only' do
-    it 'sends an assignment notification' do
-      item = {
+    let(:item) do
+      {
         object:    'Ticket',
         type:      'update',
         object_id: ticket.id,
         user_id:   agent_other.id,
         changes:   { 'owner_id' => [1, agent_owner.id] },
       }
+    end
+
+    it 'sends an assignment notification' do
       described_class.new(item).perform
 
       expect(NotificationFactory::Mailer).to have_received(:template)
@@ -194,53 +303,37 @@ RSpec.describe Transaction::Notification, 'email notification priority rules' do
     end
 
     it 'does not send a state notification' do
-      item = {
-        object:    'Ticket',
-        type:      'update',
-        object_id: ticket.id,
-        user_id:   agent_other.id,
-        changes:   { 'owner_id' => [1, agent_owner.id] },
-      }
       described_class.new(item).perform
 
       expect(NotificationFactory::Mailer).not_to have_received(:template)
-        .with(hash_including(template: a_string_matching(/ticket_state/)))
+        .with(hash_including(template: a_string_matching(%r{ticket_state})))
     end
 
     it 'does not include the ticket customer in the assignment email CC' do
-      item = {
-        object:    'Ticket',
-        type:      'update',
-        object_id: ticket.id,
-        user_id:   agent_other.id,
-        changes:   { 'owner_id' => [1, agent_owner.id] },
-      }
       described_class.new(item).perform
 
-      expect(NotificationFactory::Mailer).to have_received(:deliver) do |**kwargs|
-        cc = kwargs[:cc]
-        expect(cc).to satisfy('not include customer email') do |val|
-          val.nil? || val.blank? || !val.include?(customer.email)
-        end
+      expect(NotificationFactory::Mailer).to have_received(:deliver)
+        .with(hash_including(recipient: agent_owner))
+    end
+
+    it 'does not include the ticket customer email in the CC string' do
+      cc_value = nil
+      allow(NotificationFactory::Mailer).to receive(:deliver) do |**kwargs|
+        cc_value = kwargs[:cc].to_s
       end
+      described_class.new(item).perform
+
+      expect(cc_value).not_to include(customer.email)
     end
 
     it 'does not include shared customers in the assignment email CC' do
-      item = {
-        object:    'Ticket',
-        type:      'update',
-        object_id: ticket.id,
-        user_id:   agent_other.id,
-        changes:   { 'owner_id' => [1, agent_owner.id] },
-      }
+      cc_value = nil
+      allow(NotificationFactory::Mailer).to receive(:deliver) do |**kwargs|
+        cc_value = kwargs[:cc].to_s
+      end
       described_class.new(item).perform
 
-      expect(NotificationFactory::Mailer).to have_received(:deliver) do |**kwargs|
-        cc = kwargs[:cc]
-        expect(cc).to satisfy('not include shared customer email') do |val|
-          val.nil? || val.blank? || !val.include?(shared_customer.email)
-        end
-      end
+      expect(cc_value).not_to include(shared_customer.email)
     end
   end
 end
