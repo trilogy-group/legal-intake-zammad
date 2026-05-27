@@ -43,7 +43,11 @@
   <% if @objects[:reason] %>
     <%= t @objects[:reason] %> |
   <% end %>
-  <a href="<%= c 'http_type' %>://<%= c 'fqdn' %>/#profile/notifications"><%= t 'Manage your notification settings' %></a>
+  <% if @objects[:recipient]&.permissions?('ticket.agent') %>
+    <a href="<%= c 'http_type' %>://<%= c 'fqdn' %>/#profile/notifications"><%= t 'Manage your notification settings' %></a>
+  <% else %>
+    <a href="<%= c 'http_type' %>://<%= c 'fqdn' %>/#profile/email-notifications"><%= t 'Manage your notification settings' %></a>
+  <% end %>
   <% if @objects[:unsubscribe_url].present? %>
     | <a href="#{unsubscribe_url}"><%= t 'Unsubscribe from email notifications' %></a>
   <% end %>

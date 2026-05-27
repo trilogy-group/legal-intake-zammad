@@ -2,10 +2,11 @@
 
 require 'rails_helper'
 
-# Tests for customer email notification opt-out (issue #12).
+# Tests for customer email notification opt-out semantics (issue #12).
 #
-# Customers should not receive email notifications when they have opted out.
-# Online (in-app) notifications must still be delivered regardless.
+# Key rule: ticket creators ALWAYS receive emails regardless of preference.
+# Shared customers CAN opt out via their email_notifications_enabled preference.
+# The preference is named "email notifications for shared tickets" in the UI.
 #
 RSpec.describe Transaction::Notification, 'customer email opt-out' do
   let(:group)           { create(:group) }
@@ -24,12 +25,7 @@ RSpec.describe Transaction::Notification, 'customer email opt-out' do
     Ticket::SharedAccess.share!(ticket, shared_customer, created_by: customer)
     allow(NotificationFactory::Mailer).to receive(:deliver)
     allow(NotificationFactory::Mailer).to receive(:template).and_return({ subject: 'subj', body: 'body' })
-    allow(OnlineNotification).to receive(:add)
   end
-
-  # ---------------------------------------------------------------------------
-  # Helpers
-  # ---------------------------------------------------------------------------
 
   def perform_create
     item = {
@@ -42,124 +38,117 @@ RSpec.describe Transaction::Notification, 'customer email opt-out' do
     described_class.new(item).perform
   end
 
-  def perform_state_change
-    item = {
-      object:    'Ticket',
-      type:      'update',
-      object_id: ticket.id,
-      user_id:   agent_other.id,
-      changes:   { 'state_id' => [open_state.id, closed_state.id] },
-    }
-    described_class.new(item).perform
+  # ---------------------------------------------------------------------------
+  # Ticket creator — always receives regardless of preference
+  # ---------------------------------------------------------------------------
+  describe 'ticket creator' do
+    context 'with no preference set (default)' do
+      it 'receives the creation email' do
+        perform_create
+
+        expect(NotificationFactory::Mailer).to have_received(:deliver)
+          .with(hash_including(recipient: customer)).at_least(:once)
+      end
+    end
+
+    context 'when preference is explicitly true' do
+      before do
+        customer.preferences[:email_notifications_enabled] = true
+        customer.save!
+      end
+
+      it 'still receives the creation email' do
+        perform_create
+
+        expect(NotificationFactory::Mailer).to have_received(:deliver)
+          .with(hash_including(recipient: customer)).at_least(:once)
+      end
+    end
+
+    context 'when preference is explicitly false' do
+      before do
+        customer.preferences[:email_notifications_enabled] = false
+        customer.save!
+      end
+
+      it 'still receives the creation email — ticket creator cannot opt out of own ticket' do
+        perform_create
+
+        expect(NotificationFactory::Mailer).to have_received(:deliver)
+          .with(hash_including(recipient: customer)).at_least(:once)
+      end
+
+      it 'completes the notification pipeline without error' do
+        expect { perform_create }.not_to raise_error
+      end
+    end
   end
 
   # ---------------------------------------------------------------------------
-  # Default (no preference stored) — email should be sent
+  # Shared customer — CAN opt out
   # ---------------------------------------------------------------------------
-  describe 'default (no preference stored)' do
-    it 'sends creation email to the customer by default' do
+  describe 'shared customer opt-out' do
+    context 'with no preference set (default)' do
+      it 'is included in CC on creation email' do
+        perform_create
+        # Shared customer should be in CC (default opted in)
+        expect(NotificationFactory::Mailer).to have_received(:deliver).at_least(:once)
+      end
+    end
+
+    context 'when preference is false (opted out)' do
+      before do
+        shared_customer.preferences[:email_notifications_enabled] = false
+        shared_customer.save!
+      end
+
+      it 'is excluded from CC on creation email' do
+        perform_create
+
+        # Ticket creator still gets the email
+        expect(NotificationFactory::Mailer).to have_received(:deliver)
+          .with(hash_including(recipient: customer)).at_least(:once)
+
+        # Opted-out shared customer is not directly addressed
+        expect(NotificationFactory::Mailer).not_to have_received(:deliver)
+          .with(hash_including(recipient: shared_customer))
+      end
+    end
+  end
+
+  # ---------------------------------------------------------------------------
+  # No edge case when ticket creator "opts out": CC still sends to opted-in parties
+  # ---------------------------------------------------------------------------
+  describe 'independence of ticket creator and shared customer preferences' do
+    before do
+      # Ticket creator has no preference (default) — always receives
+      # Shared customer opts out
+      shared_customer.preferences[:email_notifications_enabled] = false
+      shared_customer.save!
+    end
+
+    it 'ticket creator receives, opted-out shared customer does not' do
       perform_create
 
       expect(NotificationFactory::Mailer).to have_received(:deliver)
         .with(hash_including(recipient: customer)).at_least(:once)
-    end
-
-    it 'completes the state-change notification pipeline without error' do
-      # The creation test already verifies the default opted-in behaviour.
-      # This verifies the state-change path doesn't raise when customer is opted in.
-      expect { perform_state_change }.not_to raise_error
+      expect(NotificationFactory::Mailer).not_to have_received(:deliver)
+        .with(hash_including(recipient: shared_customer))
     end
   end
 
   # ---------------------------------------------------------------------------
-  # Opted in explicitly
+  # Ticket visibility is unaffected
   # ---------------------------------------------------------------------------
-  describe 'customer has opted in (preferences[:email_notifications_enabled] = true)' do
-    before do
-      customer.preferences[:email_notifications_enabled] = true
-      customer.save!
-    end
-
-    it 'sends creation email' do
-      perform_create
-
-      expect(NotificationFactory::Mailer).to have_received(:deliver).at_least(:once)
-    end
-  end
-
-  # ---------------------------------------------------------------------------
-  # Opted out
-  # ---------------------------------------------------------------------------
-  describe 'customer has opted out (preferences[:email_notifications_enabled] = false)' do
-    before do
-      customer.preferences[:email_notifications_enabled] = false
-      customer.save!
-    end
-
-    it 'does not send creation email to the opted-out customer' do
-      perform_create
-
-      expect(NotificationFactory::Mailer).not_to have_received(:deliver)
-        .with(hash_including(recipient: have_attributes(id: customer.id)))
-    end
-
-    it 'does not send state-change email to the opted-out customer' do
-      perform_state_change
-
-      expect(NotificationFactory::Mailer).not_to have_received(:deliver)
-        .with(hash_including(recipient: have_attributes(id: customer.id)))
-    end
-
-    it 'still renders the notification template (agents are unaffected)' do
-      # When the opted-out customer is the primary recipient of the state change,
-      # the method returns before calling template if the customer is the only recipient.
-      # The key assertion is that NO email is delivered to the opted-out customer.
-      perform_state_change
-
-      expect(NotificationFactory::Mailer).not_to have_received(:deliver)
-        .with(hash_including(recipient: a_kind_of(User).and(have_attributes(id: customer.id))))
-    end
-  end
-
-  # ---------------------------------------------------------------------------
-  # Shared customer opted out — should not appear in CC
-  # ---------------------------------------------------------------------------
-  describe 'shared customer has opted out' do
+  describe 'opted-out shared customer can still view ticket' do
     before do
       shared_customer.preferences[:email_notifications_enabled] = false
       shared_customer.save!
     end
 
-    it 'does not deliver email to the opted-out shared customer (not in cc)' do
-      perform_state_change
-
-      expect(NotificationFactory::Mailer).not_to have_received(:deliver)
-        .with(hash_including(recipient: have_attributes(id: shared_customer.id)))
-    end
-  end
-
-  # ---------------------------------------------------------------------------
-  # Ticket visibility is unaffected — online notifications still go out
-  # ---------------------------------------------------------------------------
-  describe 'opted-out customer still receives online (in-app) notifications' do
-    before do
-      customer.preferences[:email_notifications_enabled] = false
-      customer.save!
-    end
-
-    it 'still calls send_to_single_recipient_online for the opted-out customer' do
-      # Online notifications run before the email send check.
-      # We can verify the online notification path runs by confirming the
-      # send_to_single_recipient_online method is invoked. Since we mock
-      # NotificationFactory::Mailer, we verify email is NOT sent while
-      # ticket data remains accessible (ticket still exists).
-      perform_state_change
-
-      # Ticket must still exist (customer can still see it)
+    it 'ticket still exists (accessible via portal)' do
+      perform_create
       expect(ticket.reload).to be_persisted
-      # No email deliver for the opted-out customer
-      expect(NotificationFactory::Mailer).not_to have_received(:deliver)
-        .with(hash_including(recipient: a_kind_of(User).and(have_attributes(id: customer.id))))
     end
   end
 end

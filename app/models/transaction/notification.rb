@@ -445,15 +445,18 @@ class Transaction::Notification
       send_to_single_recipient_online(user, ticket, article)
     end
 
-    # Build CC list - customers included only if they want email, check preferences for agents only
+    # Build CC list — ticket creator always gets email; shared customers respect
+    # their preference; agents/legal admins check their notification settings
     cc_recipients_who_want_email = cc_recipients.select do |r|
       user = r[:user]
-      # Check if user is a customer (ticket creator or shared customer)
-      if customer?(user)
-        # Respect customer email notification preference
+      if user.id == ticket.customer_id
+        # Ticket creator always receives — cannot opt out of their own ticket
+        user.email.present?
+      elsif customer?(user)
+        # Shared customer — respect their email notification preference
         customer_email_notifications_enabled?(user)
       else
-        # Check preferences for agents/legal admins
+        # Agents/legal admins — check their notification preferences
         r[:channels] && r[:channels]['email']
       end
     end
@@ -579,13 +582,17 @@ class Transaction::Notification
     cc_user_list = cc_user_list.uniq.reject { |u| u.id == commenter.id || u.id == primary_recipient.id }
 
     # Filter CC recipients who want email notifications
-    # Customers (ticket creator + shared customers) get email only if they have not opted out
+    # Ticket creator always gets email; shared customers respect their preference;
+    # agents/legal admins check their notification settings
     cc_recipients = cc_user_list.select do |u|
-      if shared_customers.include?(u) || u.id == ticket_creator.id
-        # Respect customer email notification preference
+      if u.id == ticket_creator.id
+        # Ticket creator always receives — cannot opt out of their own ticket
+        u.email.present?
+      elsif shared_customers.include?(u)
+        # Shared customer — respect their email notification preference
         customer_email_notifications_enabled?(u)
       else
-        # Only check preferences for agents/legal admins
+        # Agents/legal admins — check their notification preferences
         can_receive_notification?(u, 'email')
       end
     end
@@ -595,9 +602,12 @@ class Transaction::Notification
       send_to_single_recipient_online(user, ticket, article)
     end
 
-    # Check if primary recipient wants email
-    # Customers get email only if they have not opted out; check preferences for agents
-    if customer?(primary_recipient)
+    # Check if primary recipient wants email.
+    # Ticket creator always receives — cannot opt out of their own ticket.
+    # Shared customers respect their preference. Agents check notification settings.
+    if primary_recipient.id == ticket_creator.id
+      return if primary_recipient.email.blank?
+    elsif customer?(primary_recipient)
       return if !customer_email_notifications_enabled?(primary_recipient)
     elsif !can_receive_notification?(primary_recipient, 'email')
       return
@@ -719,14 +729,17 @@ class Transaction::Notification
       send_to_single_recipient_online(user, ticket, article)
     end
 
-    # Build CC list - customers included only if they want email, check preferences for agents only
+    # Build CC list — ticket creator always gets email; shared customers respect
+    # their preference; agents/legal admins check their notification settings
     cc_recipients_who_want_email = cc_user_list.select do |user|
-      # Check if user is a customer
-      if customer?(user)
-        # Respect customer email notification preference
+      if user.id == ticket.customer_id
+        # Ticket creator always receives — cannot opt out of their own ticket
+        user.email.present?
+      elsif customer?(user)
+        # Shared customer — respect their email notification preference
         customer_email_notifications_enabled?(user)
       else
-        # Check preferences for agents/legal admins
+        # Agents/legal admins — check their notification preferences
         recipient_setting = recipients_and_channels.find { |r| r[:user].id == user.id }
         recipient_setting && recipient_setting[:channels] && recipient_setting[:channels]['email']
       end
@@ -774,9 +787,12 @@ class Transaction::Notification
       result[:body] = HtmlSanitizer.dynamic_image_size(result[:body])
     end
 
-    # Send one email with CC — for customer primary recipients, respect their email preference
-    if customer?(primary_recipient) && !customer_email_notifications_enabled?(primary_recipient)
-      # Primary is a customer who has opted out; skip email entirely
+    # Send one email with CC.
+    # Primary recipient is the ticket owner (agent) or, if unassigned, the ticket customer.
+    # When it is the ticket customer, they are the ticket creator — always send.
+    # When it is a shared customer (edge case), respect their preference.
+    if shared_customer_only?(primary_recipient) && !customer_email_notifications_enabled?(primary_recipient)
+      # Shared customer who has opted out — skip email
     else
       NotificationFactory::Mailer.deliver(
         recipient:    primary_recipient,
@@ -1012,21 +1028,38 @@ class Transaction::Notification
     NotificationFactory::Mailer.notification_settings(user, ticket, @item[:type])
   end
 
-  # Returns true when the customer has not explicitly opted out of email notifications.
-  # Delegates to the HasEmailNotificationPreference concern on User.
+  # Returns true when the user should receive email for this ticket.
+  #
+  # Rule: ticket creators always receive email (cannot opt out of their own ticket).
+  # Shared customers (added via Ticket::SharedAccess) can opt out via their
+  # email_notifications_enabled preference. Agents are not affected by this method.
   def customer_email_notifications_enabled?(user)
     return false if user.email.blank?
 
-    user.email_notifications_enabled?
+    # Ticket creator always receives — preference does not apply to their own tickets.
+    return true if user.id == ticket.customer_id
+
+    # Shared customer — respect their preference (default: true).
+    user.shared_ticket_email_notifications_enabled?
   end
 
-  # Builds the one-click unsubscribe URL for a user. Called from template objects
-  # so the URL is pre-computed in Ruby and not interpolated inline inside an ERB
-  # href attribute (avoids semgrep var-in-href). Returns nil when the user has no
-  # email or does not support the unsubscribe token method.
+  # Returns true if the user is a shared customer on this ticket but is NOT
+  # the ticket creator. Used to decide whether to show the unsubscribe link
+  # (ticket creators cannot unsubscribe from their own tickets).
+  def shared_customer_only?(user)
+    return false if user.id == ticket.customer_id
+
+    Ticket::SharedAccess.exists?(ticket_id: ticket.id, user_id: user.id)
+  end
+
+  # Builds the one-click unsubscribe URL for shared customers.
+  # Not generated for ticket creators — they cannot unsubscribe from their own ticket.
+  # Returns nil when the user is a ticket creator, has no email, or the concern
+  # method is unavailable.
   def unsubscribe_url_for(user)
     return nil if user.blank? || user.email.blank?
     return nil unless user.respond_to?(:email_notification_unsubscribe_token)
+    return nil unless shared_customer_only?(user)
 
     "#{Setting.get('http_type')}://#{Setting.get('fqdn')}/api/v1/users/unsubscribe_notifications" \
       "?user_id=#{user.id}&token=#{user.email_notification_unsubscribe_token}"

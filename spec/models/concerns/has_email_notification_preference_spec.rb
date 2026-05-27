@@ -5,10 +5,10 @@ require 'rails_helper'
 RSpec.describe HasEmailNotificationPreference do
   subject(:user) { create(:user, email: 'test@example.com') }
 
-  describe '#email_notifications_enabled?' do
+  describe '#shared_ticket_email_notifications_enabled?' do
     context 'when no preference has been set' do
       it 'defaults to true' do
-        expect(user.email_notifications_enabled?).to be true
+        expect(user.shared_ticket_email_notifications_enabled?).to be true
       end
     end
 
@@ -16,7 +16,7 @@ RSpec.describe HasEmailNotificationPreference do
       before { user.preferences[:email_notifications_enabled] = true }
 
       it 'returns true' do
-        expect(user.email_notifications_enabled?).to be true
+        expect(user.shared_ticket_email_notifications_enabled?).to be true
       end
     end
 
@@ -24,7 +24,7 @@ RSpec.describe HasEmailNotificationPreference do
       before { user.preferences[:email_notifications_enabled] = false }
 
       it 'returns false' do
-        expect(user.email_notifications_enabled?).to be false
+        expect(user.shared_ticket_email_notifications_enabled?).to be false
       end
     end
   end

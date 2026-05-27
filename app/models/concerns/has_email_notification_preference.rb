@@ -2,6 +2,16 @@
 
 # Mixin that provides customer email notification preference helpers and
 # HMAC-based one-click unsubscribe token generation / verification.
+#
+# Semantics of the preference
+# ----------------------------
+# The preference controls whether a user receives emails for tickets they did
+# NOT create — i.e. tickets where they are a shared customer (added via
+# Ticket::SharedAccess). Ticket creators always receive emails for their own
+# tickets regardless of this preference. This avoids the edge case where the
+# primary recipient opts out and CC'd participants also stop receiving email.
+#
+# The preference key is :email_notifications_enabled (default: true).
 module HasEmailNotificationPreference
   extend ActiveSupport::Concern
 
@@ -20,9 +30,9 @@ module HasEmailNotificationPreference
     ActiveSupport::SecurityUtils.secure_compare(expected, token.to_s)
   end
 
-  # Whether the user currently has email notifications enabled.
-  # Defaults to true when no preference has been stored.
-  def email_notifications_enabled?
+  # Whether the user wants to receive email notifications for tickets shared
+  # with them (i.e. tickets they did not create). Defaults to true.
+  def shared_ticket_email_notifications_enabled?
     preferences.fetch(:email_notifications_enabled, true)
   end
 end

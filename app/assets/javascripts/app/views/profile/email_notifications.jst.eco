@@ -4,8 +4,8 @@
   </div>
 </div>
 <div class="page-content">
-  <p><%- @T('Control whether you receive email notifications for ticket activity.') %></p>
-  <p><%- @T('Disabling this will stop all ticket-related emails. You can still view your tickets at any time by logging in.') %></p>
+  <p><%- @T('Control whether you receive email notifications for tickets shared with you.') %></p>
+  <p><%- @T('This setting only applies to tickets you did not create. You will always receive email notifications for tickets you opened yourself.') %></p>
   <div class="settings-entry">
     <label class="inline-label">
       <input
@@ -13,7 +13,7 @@
         class="js-emailNotificationsToggle"
         <% if @enabled: %>checked<% end %>
       />
-      <%- @T('Receive email notifications') %>
+      <%- @T('Receive email notifications for tickets shared with me') %>
     </label>
   </div>
 </div>
