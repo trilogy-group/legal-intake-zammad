@@ -40,9 +40,11 @@ const emailNotificationsEnabled = computed({
       },
     )
 
-    await mutation.send({ enabled }).finally(() => {
+    const result = await mutation.send({ enabled }).finally(() => {
       saving.value = false
     })
+
+    if (!result?.userCurrentEmailNotificationsUpdate?.success) return
 
     // Update the local session preferences so the toggle reflects immediately
     if (user.value?.preferences) {
