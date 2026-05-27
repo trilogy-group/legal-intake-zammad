@@ -47,9 +47,17 @@ RSpec.describe 'Users email notifications', type: :request do
       expect(customer.reload.preferences[:email_notifications_enabled]).to be false
     end
 
-    it 'returns 422 for an invalid token' do
+    it 'renders an HTML confirmation page on success' do
+      get '/api/v1/users/unsubscribe_notifications', params: { user_id: customer.id, token: token }
+      expect(response.content_type).to include('text/html')
+      expect(response.body).to include('You have been unsubscribed')
+    end
+
+    it 'renders an HTML error page for an invalid token' do
       get '/api/v1/users/unsubscribe_notifications', params: { user_id: customer.id, token: 'invalid' }
       expect(response).to have_http_status(:unprocessable_entity)
+      expect(response.content_type).to include('text/html')
+      expect(response.body).to include('Invalid or expired')
     end
 
     it 'returns 422 for a non-existent user_id' do
