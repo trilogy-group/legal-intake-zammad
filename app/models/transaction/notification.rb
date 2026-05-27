@@ -376,12 +376,13 @@ class Transaction::Notification
       template:   template,
       locale:     customer.preferences[:locale] || Locale.default,
       objects:    {
-        ticket:       ticket,
-        article:      article,
-        recipient:    customer,
-        current_user: current_user,
-        changes:      {},
-        reason:       recipients_reason[customer.id],
+        ticket:          ticket,
+        article:         article,
+        recipient:       customer,
+        current_user:    current_user,
+        changes:         {},
+        reason:          recipients_reason[customer.id],
+        unsubscribe_url: unsubscribe_url_for(customer),
       },
       standalone: false,
     )
@@ -477,12 +478,13 @@ class Transaction::Notification
       template:   template,
       locale:     customer.preferences[:locale] || Locale.default,
       objects:    {
-        ticket:       ticket,
-        article:      article,
-        recipient:    customer,
-        current_user: current_user,
-        changes:      changes,
-        reason:       recipients_reason[customer.id],
+        ticket:          ticket,
+        article:         article,
+        recipient:       customer,
+        current_user:    current_user,
+        changes:         changes,
+        reason:          recipients_reason[customer.id],
+        unsubscribe_url: unsubscribe_url_for(customer),
       },
       standalone: false,
     )
@@ -614,11 +616,12 @@ class Transaction::Notification
       template:   'ticket_comment_added',
       locale:     primary_recipient.preferences[:locale] || Locale.default,
       objects:    {
-        ticket:       ticket,
-        article:      article,
-        recipient:    primary_recipient,
-        current_user: commenter,
-        commenter:    commenter,
+        ticket:          ticket,
+        article:         article,
+        recipient:       primary_recipient,
+        current_user:    commenter,
+        commenter:       commenter,
+        unsubscribe_url: unsubscribe_url_for(primary_recipient),
       },
       standalone: false,
     )
@@ -749,12 +752,13 @@ class Transaction::Notification
       template:   template,
       locale:     primary_recipient.preferences[:locale] || Locale.default,
       objects:    {
-        ticket:       ticket,
-        article:      article,
-        recipient:    primary_recipient,
-        current_user: current_user,
-        changes:      changes,
-        reason:       recipients_reason[primary_recipient.id],
+        ticket:          ticket,
+        article:         article,
+        recipient:       primary_recipient,
+        current_user:    current_user,
+        changes:         changes,
+        reason:          recipients_reason[primary_recipient.id],
+        unsubscribe_url: unsubscribe_url_for(primary_recipient),
       },
       standalone: false,
     )
@@ -1014,6 +1018,18 @@ class Transaction::Notification
     return false if user.email.blank?
 
     user.email_notifications_enabled?
+  end
+
+  # Builds the one-click unsubscribe URL for a user. Called from template objects
+  # so the URL is pre-computed in Ruby and not interpolated inline inside an ERB
+  # href attribute (avoids semgrep var-in-href). Returns nil when the user has no
+  # email or does not support the unsubscribe token method.
+  def unsubscribe_url_for(user)
+    return nil if user.blank? || user.email.blank?
+    return nil unless user.respond_to?(:email_notification_unsubscribe_token)
+
+    "#{Setting.get('http_type')}://#{Setting.get('fqdn')}/api/v1/users/unsubscribe_notifications" \
+      "?user_id=#{user.id}&token=#{user.email_notification_unsubscribe_token}"
   end
 
   def customer?(user)

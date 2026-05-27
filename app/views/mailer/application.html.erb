@@ -44,8 +44,8 @@
     <%= t @objects[:reason] %> |
   <% end %>
   <a href="<%= c 'http_type' %>://<%= c 'fqdn' %>/#profile/notifications"><%= t 'Manage your notification settings' %></a>
-  <% if @objects[:recipient] && @objects[:recipient].respond_to?(:email_notification_unsubscribe_token) && @objects[:recipient].email.present? %>
-    | <a href="<%= c 'http_type' %>://<%= c 'fqdn' %>/api/v1/users/unsubscribe_notifications?user_id=<%= @objects[:recipient].id %>&amp;token=<%= @objects[:recipient].email_notification_unsubscribe_token %>"><%= t 'Unsubscribe from email notifications' %></a>
+  <% if @objects[:unsubscribe_url].present? %>
+    | <a href="#{unsubscribe_url}"><%= t 'Unsubscribe from email notifications' %></a>
   <% end %>
   <% if c('organization').present? %>| <%= c 'organization' %><% end %>
 </div>
