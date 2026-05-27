@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   include CanPaginate
 
   prepend_before_action -> { authorize! }, only: %i[import_example import_start search history unlock]
-  prepend_before_action :authentication_check, except: %i[create password_reset_send password_reset_verify image email_verify email_verify_send admin_password_auth_send admin_password_auth_verify]
+  prepend_before_action :authentication_check, except: %i[create password_reset_send password_reset_verify image email_verify email_verify_send admin_password_auth_send admin_password_auth_verify email_notifications_unsubscribe]
   prepend_before_action :authentication_check_only, only: %i[create]
 
   # @path       [GET] /users
@@ -593,6 +593,74 @@ curl http://localhost/api/v1/users/preferences_reset -v -u #{login}:#{password} 
     User.reset_notifications_preferences!(current_user)
 
     render json: { message: 'ok' }, status: :ok
+  end
+
+=begin
+
+Resource:
+PUT /api/v1/users/email_notifications
+
+Payload:
+{
+  "enabled": true
+}
+
+Response:
+{
+  :message => 'ok'
+}
+
+Test:
+curl http://localhost/api/v1/users/email_notifications -v -u #{login}:#{password} -H "Content-Type: application/json" -X PUT -d '{"enabled": true}'
+
+=end
+
+  def email_notifications_update
+    enabled = params[:enabled]
+    if enabled.nil?
+      render json: { error: 'Parameter "enabled" is required.' }, status: :unprocessable_entity
+      return
+    end
+
+    current_user.with_lock do
+      current_user.preferences[:email_notifications_enabled] = ActiveModel::Type::Boolean.new.cast(enabled)
+      current_user.save!
+    end
+
+    render json: { message: 'ok' }, status: :ok
+  end
+
+=begin
+
+Resource:
+GET /api/v1/users/unsubscribe_notifications
+
+Parameters:
+  user_id - the user's ID
+  token   - HMAC verification token
+
+Response:
+Renders confirmation page or error.
+
+Test:
+curl "http://localhost/api/v1/users/unsubscribe_notifications?user_id=5&token=abc123"
+
+=end
+
+  def email_notifications_unsubscribe
+    user = User.find_by(id: params[:user_id])
+
+    if user.blank? || !user.valid_email_notification_unsubscribe_token?(params[:token])
+      render json: { error: 'Invalid or expired unsubscribe link.' }, status: :unprocessable_entity
+      return
+    end
+
+    user.with_lock do
+      user.preferences[:email_notifications_enabled] = false
+      user.save!
+    end
+
+    render json: { message: 'You have been unsubscribed from email notifications.' }, status: :ok
   end
 
 =begin

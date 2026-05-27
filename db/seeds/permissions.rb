@@ -503,6 +503,15 @@ Permission.create_if_not_exists(
   allow_signup: true,
 )
 Permission.create_if_not_exists(
+  name:         'user_preferences.email_notifications',
+  label:        __('Email Notifications'),
+  description:  __('Manage personal email notification preference.'),
+  preferences:  {
+    prio: 1685,
+  },
+  allow_signup: true,
+)
+Permission.create_if_not_exists(
   name:         'user_preferences.overview_sorting',
   label:        __('Overviews'),
   description:  __('Manage personal overviews.'),
@@ -557,4 +566,5 @@ customer.permission_grant('user_preferences.language')
 customer.permission_grant('user_preferences.linked_accounts')
 customer.permission_grant('user_preferences.avatar')
 customer.permission_grant('user_preferences.appearance')
+customer.permission_grant('user_preferences.email_notifications')
 customer.permission_grant('ticket.customer')

@@ -3,7 +3,9 @@
 class User < ApplicationModel
   include CanBeImported
   include HasActivityStreamLog
+  include HasEmailNotificationPreference
   include ChecksClientNotification
+
   include HasHistory
   include HasSearchIndexBackend
   include CanSelector
