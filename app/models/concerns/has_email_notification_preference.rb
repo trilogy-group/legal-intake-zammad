@@ -17,6 +17,11 @@ module HasEmailNotificationPreference
   # Whether the user wants to receive email notifications for tickets shared
   # with them (i.e. tickets they did not create). Defaults to true.
   def shared_ticket_email_notifications_enabled?
-    preferences.fetch(:email_notifications_enabled, true)
+    # preferences may use symbol or string keys depending on how they were stored
+    val = preferences[:email_notifications_enabled]
+    val = preferences['email_notifications_enabled'] if val.nil?
+    return true if val.nil?
+
+    val
   end
 end

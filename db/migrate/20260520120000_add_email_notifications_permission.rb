@@ -7,7 +7,7 @@ class AddEmailNotificationsPermission < ActiveRecord::Migration[6.1]
       name:         'user_preferences.email_notifications',
       label:        'Email Notifications',
       description:  'Manage personal email notification preference.',
-      preferences:  { prio: 1685 },
+      preferences:  { prio: 1685, required: ['ticket.customer'] },
       allow_signup: true,
     )
 

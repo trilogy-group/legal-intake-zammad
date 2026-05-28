@@ -184,7 +184,7 @@ const { forceDesktop } = useForceDesktop()
       </template>
     </FormGroup>
 
-    <FormGroup v-if="session.hasPermission('user_preferences.email_notifications')">
+    <FormGroup v-if="session.hasPermission('user_preferences.email_notifications') && session.hasPermission('ticket.customer')">
       <FormKit
         v-model="emailNotificationsEnabled"
         type="toggle"

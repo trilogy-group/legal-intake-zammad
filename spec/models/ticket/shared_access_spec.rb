@@ -85,4 +85,31 @@ RSpec.describe Ticket::SharedAccess, type: :model do
       expect(duplicate).not_to be_valid
     end
   end
+
+  describe 'share email respects email notification preference' do
+    before do
+      allow(NotificationFactory::Mailer).to receive(:deliver)
+      allow(NotificationFactory::Mailer).to receive(:template).and_return({ subject: 'subj', body: 'body' })
+    end
+
+    context 'when shared customer has email notifications enabled (default)' do
+      it 'sends the share email' do
+        described_class.share!(ticket, customer, created_by: agent)
+        expect(NotificationFactory::Mailer).to have_received(:deliver).at_least(:once)
+      end
+    end
+
+    context 'when shared customer has email notifications disabled' do
+      before do
+        customer.preferences[:email_notifications_enabled] = false
+        customer.save!
+      end
+
+      it 'does not send the share email to the opted-out customer' do
+        described_class.share!(ticket, customer, created_by: agent)
+        expect(NotificationFactory::Mailer).not_to have_received(:deliver)
+          .with(hash_including(recipient: have_attributes(id: customer.id)))
+      end
+    end
+  end
 end
