@@ -901,7 +901,7 @@ msgstr ""
 
 #: app/assets/javascripts/app/views/channel/sms_account_overview.jst.eco:45
 #: app/frontend/apps/mobile/pages/account/routes.ts:8
-#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:35
+#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:34
 msgid "Account"
 msgstr ""
 
@@ -2366,7 +2366,7 @@ msgstr ""
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSetting/plugins/avatar.ts:6
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingAvatar.vue:46
 #: app/frontend/apps/mobile/pages/account/routes.ts:28
-#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:144
+#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:143
 #: app/frontend/apps/mobile/pages/account/views/PersonalSettingAvatar.vue:167
 #: app/frontend/shared/components/CommonUserAvatar/CommonUserAvatar.vue:114
 #: db/seeds/permissions.rb:445
@@ -3789,7 +3789,7 @@ msgstr ""
 msgid "Continue session"
 msgstr ""
 
-#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:161
+#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:160
 #: app/frontend/apps/mobile/pages/authentication/views/Login.vue:165
 msgid "Continue to desktop"
 msgstr ""
@@ -5674,7 +5674,7 @@ msgid "Did you know that system translations can be contributed and shared with 
 msgstr ""
 
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingLocale.vue:31
-#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:181
+#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:180
 msgid "Did you know?"
 msgstr ""
 
@@ -5728,7 +5728,7 @@ msgid "Disable the banner for the BETA switch"
 msgstr ""
 
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingEmailNotifications.vue:80
-#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:196
+#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:195
 msgid "Disabled"
 msgstr ""
 
@@ -6333,7 +6333,7 @@ msgstr ""
 msgid "Email notification preference has been saved."
 msgstr ""
 
-#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:193
+#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:192
 msgid "Email notifications for shared tickets"
 msgstr ""
 
@@ -6489,7 +6489,7 @@ msgstr ""
 
 #: app/assets/javascripts/app/views/customer_chat/setting.jst.eco:37
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingEmailNotifications.vue:80
-#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:196
+#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:195
 msgid "Enabled"
 msgstr ""
 
@@ -8836,7 +8836,7 @@ msgstr ""
 msgid "Inserts text module"
 msgstr ""
 
-#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:152
+#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:151
 msgid "Install App"
 msgstr ""
 
@@ -8991,10 +8991,6 @@ msgstr ""
 
 #: app/models/concerns/checks_condition_validation.rb:12
 msgid "Invalid object selector conditions"
-msgstr ""
-
-#: app/controllers/users_controller.rb:464
-msgid "Invalid or expired unsubscribe link."
 msgstr ""
 
 #: app/assets/javascripts/app/controllers/after_auth/two_factor_configuration.coffee:102
@@ -9323,7 +9319,7 @@ msgstr ""
 #: app/assets/javascripts/app/views/profile/language.jst.eco:3
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSetting/plugins/locale.ts:6
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingLocale.vue:12
-#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:173
+#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:172
 #: db/seeds/permissions.rb:438
 msgid "Language"
 msgstr ""
@@ -11396,7 +11392,7 @@ msgstr ""
 #: app/controllers/text_modules_controller.rb:75
 #: app/controllers/ticket_articles_controller.rb:243
 #: app/controllers/tickets_controller.rb:459
-#: app/controllers/users_controller.rb:617
+#: app/controllers/users_controller.rb:613
 msgid "No source data submitted!"
 msgstr ""
 
@@ -13252,7 +13248,7 @@ msgstr ""
 msgid "Receive email notifications for tickets shared with me"
 msgstr ""
 
-#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:194
+#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:193
 msgid "Receive email notifications for tickets shared with me. Does not affect tickets I created."
 msgstr ""
 
@@ -15306,7 +15302,7 @@ msgstr ""
 
 #: app/assets/javascripts/app/controllers/logout.coffee:6
 #: app/frontend/apps/desktop/components/layout/LayoutSidebar/LeftSidebar/AvatarMenu/plugins/logout.ts:7
-#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:215
+#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:214
 msgid "Sign out"
 msgstr ""
 
@@ -16890,7 +16886,7 @@ msgstr ""
 msgid "The private key is not valid for S/MIME usage. Please check the key format and the secret."
 msgstr ""
 
-#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:73
+#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:72
 msgid "The product version could not be fetched."
 msgstr ""
 
@@ -16999,7 +16995,7 @@ msgstr ""
 msgid "The required PGP passphrase is missing."
 msgstr ""
 
-#: app/controllers/users_controller.rb:716
+#: app/controllers/users_controller.rb:712
 #: app/services/service/user/add_first_admin.rb:12
 msgid "The required attribute 'email' is missing."
 msgstr ""
@@ -17074,7 +17070,7 @@ msgstr ""
 msgid "The required parameter 'group_id' is missing."
 msgstr ""
 
-#: app/controllers/users_controller.rb:558
+#: app/controllers/users_controller.rb:554
 msgid "The required parameter 'id' is missing."
 msgstr ""
 
@@ -17122,7 +17118,7 @@ msgstr ""
 msgid "The required parameter 'permission' is missing."
 msgstr ""
 
-#: app/controllers/users_controller.rb:709
+#: app/controllers/users_controller.rb:705
 msgid "The required parameter 'signup' is missing."
 msgstr ""
 
@@ -17780,7 +17776,7 @@ msgid "This host cannot be reached."
 msgstr ""
 
 #: app/assets/javascripts/app/views/version.jst.eco:6
-#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:202
+#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:201
 msgid "This is Zammad version %s"
 msgstr ""
 
@@ -17961,10 +17957,6 @@ msgstr ""
 
 #: app/models/ai/agent/type/ticket_prioritizer.rb:10
 msgid "This type of AI agent can prioritize incoming tickets based on their content."
-msgstr ""
-
-#: app/controllers/users_controller.rb:465
-msgid "This unsubscribe link is invalid or has already been used. Please log in to manage your notification settings."
 msgstr ""
 
 #: app/policies/ticket/shared_draft_start_policy.rb:26
@@ -18709,7 +18701,7 @@ msgstr ""
 msgid "To find out more about the 24-hour customer service window see %l."
 msgstr ""
 
-#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:100
+#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:99
 msgid "To install %s as an app, press the %s \"Share\" button and then the %s \"Add to Home Screen\" button."
 msgstr ""
 
@@ -19264,18 +19256,6 @@ msgstr ""
 #: app/assets/javascripts/app/views/widget/mention.jst.eco:7
 #: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketActionsDialog.vue:81
 msgid "Unsubscribe"
-msgstr ""
-
-#: app/controllers/users_controller.rb:463
-msgid "Unsubscribe failed"
-msgstr ""
-
-#: app/views/mailer/application.html.erb:52
-msgid "Unsubscribe from email notifications"
-msgstr ""
-
-#: app/controllers/users_controller.rb:476
-msgid "Unsubscribed"
 msgstr ""
 
 #: lib/whatsapp/webhook/payload.rb:46
@@ -19948,7 +19928,7 @@ msgstr ""
 #: app/assets/javascripts/app/controllers/version.coffee:3
 #: app/assets/javascripts/app/views/package.jst.eco:48
 #: app/assets/javascripts/app/views/version.jst.eco:2
-#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:201
+#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:200
 #: lib/excel_sheet/ai/analytics/errors.rb:25
 #: lib/excel_sheet/ai/analytics/with_usage.rb:25
 msgid "Version"
@@ -20396,7 +20376,7 @@ msgstr ""
 msgid "You are receiving this because you are a member of the group of this ticket."
 msgstr ""
 
-#: app/models/transaction/notification.rb:1013
+#: app/models/transaction/notification.rb:997
 msgid "You are receiving this because you are out-of-office replacement for a participant of this ticket."
 msgstr ""
 
@@ -20470,7 +20450,7 @@ msgid "You can generate a personal access token for each application you use tha
 msgstr ""
 
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingLocale.vue:33
-#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:183
+#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:182
 msgid "You can help translating Zammad."
 msgstr ""
 
@@ -20589,10 +20569,6 @@ msgstr ""
 msgid "You have already provided feedback, thank you."
 msgstr ""
 
-#: app/controllers/users_controller.rb:477
-msgid "You have been unsubscribed."
-msgstr ""
-
 #: app/frontend/shared/components/Form/fields/FieldEditor/FieldEditorFooter.vue:54
 msgid "You have exceeded the character limit by %s"
 msgstr ""
@@ -20696,10 +20672,6 @@ msgstr ""
 
 #: app/frontend/apps/desktop/components/BetaUi/BetaUiFeedbackConsentDialog.vue:15
 msgid "You were using the new BETA UI for 5 hours."
-msgstr ""
-
-#: app/controllers/users_controller.rb:478
-msgid "You will no longer receive email notifications for ticket activity. You can re-enable them at any time from your account settings."
 msgstr ""
 
 #: app/assets/javascripts/app/views/login.jst.eco:96
@@ -20831,7 +20803,7 @@ msgstr ""
 #: app/assets/javascripts/app/views/integration/placetel.jst.eco:134
 #: app/assets/javascripts/app/views/integration/sipgate.jst.eco:124
 #: app/frontend/apps/desktop/components/layout/LayoutPublicPage/LayoutPublicPage.vue:90
-#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:102
+#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:101
 #: app/frontend/apps/mobile/pages/authentication/components/LoginFooter.vue:24
 msgid "Zammad"
 msgstr ""

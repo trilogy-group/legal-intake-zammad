@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   include CanPaginate
 
   prepend_before_action -> { authorize! }, only: %i[import_example import_start search history unlock]
-  prepend_before_action :authentication_check, except: %i[create password_reset_send password_reset_verify image email_verify email_verify_send admin_password_auth_send admin_password_auth_verify email_notifications_unsubscribe]
+  prepend_before_action :authentication_check, except: %i[create password_reset_send password_reset_verify image email_verify email_verify_send admin_password_auth_send admin_password_auth_verify]
   prepend_before_action :authentication_check_only, only: %i[create]
 
   # @path       [GET] /users
@@ -628,47 +628,6 @@ curl http://localhost/api/v1/users/email_notifications -v -u #{login}:#{password
     end
 
     render json: { message: 'ok' }, status: :ok
-  end
-
-=begin
-
-Resource:
-GET /api/v1/users/unsubscribe_notifications
-
-Parameters:
-  user_id - the user's ID
-  token   - HMAC verification token
-
-Response:
-Renders confirmation page or error.
-
-Test:
-curl "http://localhost/api/v1/users/unsubscribe_notifications?user_id=5&token=abc123"
-
-=end
-
-  def email_notifications_unsubscribe
-    user = User.find_by(id: params[:user_id])
-
-    if user.blank? || !user.valid_email_notification_unsubscribe_token?(params[:token])
-      @page_title   = __('Unsubscribe failed')
-      @page_heading = __('Invalid or expired unsubscribe link.')
-      @page_message = __('This unsubscribe link is invalid or has already been used. Please log in to manage your notification settings.')
-      @page_success = false
-      render :email_notifications_unsubscribe, status: :unprocessable_entity
-      return
-    end
-
-    user.with_lock do
-      user.preferences[:email_notifications_enabled] = false
-      user.save!
-    end
-
-    @page_title   = __('Unsubscribed')
-    @page_heading = __('You have been unsubscribed.')
-    @page_message = __('You will no longer receive email notifications for ticket activity. You can re-enable them at any time from your account settings.')
-    @page_success = true
-    render :email_notifications_unsubscribe, status: :ok
   end
 
 =begin
