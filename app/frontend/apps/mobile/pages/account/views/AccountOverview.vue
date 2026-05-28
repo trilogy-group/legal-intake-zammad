@@ -9,6 +9,7 @@ import CommonUserAvatar from '#shared/components/CommonUserAvatar/CommonUserAvat
 import FormGroup from '#shared/components/Form/FormGroup.vue'
 import { useForceDesktop } from '#shared/composables/useForceDesktop.ts'
 import { useLocaleUpdate } from '#shared/composables/useLocaleUpdate.ts'
+import { useUserCurrentEmailNotificationsUpdateMutation } from '#shared/graphql/mutations/userCurrentEmailNotificationsUpdate.api.ts'
 import { useProductAboutQuery } from '#shared/graphql/queries/about.api.ts'
 import { i18n } from '#shared/i18n.ts'
 import { MutationHandler } from '#shared/server/apollo/handler/index.ts'
@@ -22,8 +23,6 @@ import CommonSectionMenuItem from '#mobile/components/CommonSectionMenu/CommonSe
 import CommonSectionMenuLink from '#mobile/components/CommonSectionMenu/CommonSectionMenuLink.vue'
 import CommonSectionPopup from '#mobile/components/CommonSectionPopup/CommonSectionPopup.vue'
 import { useHeader } from '#mobile/composables/useHeader.ts'
-
-import { useUserCurrentEmailNotificationsUpdateMutation } from '#shared/graphql/mutations/userCurrentEmailNotificationsUpdate.api.ts'
 
 const router = useRouter()
 

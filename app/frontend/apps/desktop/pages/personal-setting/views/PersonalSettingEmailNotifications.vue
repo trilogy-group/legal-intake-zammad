@@ -8,12 +8,12 @@ import {
   NotificationTypes,
   useNotifications,
 } from '#shared/components/CommonNotifications/index.ts'
+import { useUserCurrentEmailNotificationsUpdateMutation } from '#shared/graphql/mutations/userCurrentEmailNotificationsUpdate.api.ts'
 import { MutationHandler } from '#shared/server/apollo/handler/index.ts'
 import { useSessionStore } from '#shared/stores/session.ts'
 
 import LayoutContent from '#desktop/components/layout/LayoutContent.vue'
 import { useBreadcrumb } from '#desktop/pages/personal-setting/composables/useBreadcrumb.ts'
-import { useUserCurrentEmailNotificationsUpdateMutation } from '#shared/graphql/mutations/userCurrentEmailNotificationsUpdate.api.ts'
 
 const { breadcrumbItems } = useBreadcrumb(__('Email Notifications'))
 

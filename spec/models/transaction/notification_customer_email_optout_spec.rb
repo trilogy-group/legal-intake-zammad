@@ -102,14 +102,16 @@ RSpec.describe Transaction::Notification, 'customer email opt-out' do
         shared_customer.save!
       end
 
-      it 'is excluded from CC on creation email' do
+      it 'still sends to ticket creator when shared customer is excluded' do
         perform_create
 
-        # Ticket creator still gets the email
         expect(NotificationFactory::Mailer).to have_received(:deliver)
           .with(hash_including(recipient: customer)).at_least(:once)
+      end
 
-        # Opted-out shared customer is not directly addressed
+      it 'does not deliver to opted-out shared customer' do
+        perform_create
+
         expect(NotificationFactory::Mailer).not_to have_received(:deliver)
           .with(hash_including(recipient: shared_customer))
       end
@@ -121,17 +123,20 @@ RSpec.describe Transaction::Notification, 'customer email opt-out' do
   # ---------------------------------------------------------------------------
   describe 'independence of ticket creator and shared customer preferences' do
     before do
-      # Ticket creator has no preference (default) — always receives
-      # Shared customer opts out
       shared_customer.preferences[:email_notifications_enabled] = false
       shared_customer.save!
     end
 
-    it 'ticket creator receives, opted-out shared customer does not' do
+    it 'ticket creator receives when shared customer is opted out' do
       perform_create
 
       expect(NotificationFactory::Mailer).to have_received(:deliver)
         .with(hash_including(recipient: customer)).at_least(:once)
+    end
+
+    it 'opted-out shared customer does not receive' do
+      perform_create
+
       expect(NotificationFactory::Mailer).not_to have_received(:deliver)
         .with(hash_including(recipient: shared_customer))
     end
