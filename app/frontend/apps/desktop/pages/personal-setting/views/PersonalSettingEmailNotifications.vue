@@ -40,9 +40,11 @@ const emailNotificationsEnabled = computed({
       },
     )
 
-    await mutation.send({ enabled }).finally(() => {
+    const result = await mutation.send({ enabled }).finally(() => {
       saving.value = false
     })
+
+    if (!result?.userCurrentEmailNotificationsUpdate?.success) return
 
     // Update the local session preferences so the toggle reflects immediately
     if (user.value?.preferences) {
@@ -64,7 +66,7 @@ const emailNotificationsEnabled = computed({
       <p class="text-sm text-stone-200 dark:text-neutral-500">
         {{
           $t(
-            'Control whether you receive email notifications for ticket activity. Disabling this will stop all ticket-related emails. You can still view your tickets at any time by logging in.',
+            'Control whether you receive email notifications for tickets shared with you. This only applies to tickets you did not create — you will always receive notifications for tickets you opened.',
           )
         }}
       </p>
@@ -73,7 +75,7 @@ const emailNotificationsEnabled = computed({
         v-model="emailNotificationsEnabled"
         type="toggle"
         name="email_notifications_enabled"
-        :label="$t('Receive email notifications')"
+        :label="$t('Receive email notifications for tickets shared with me')"
         :disabled="saving"
         :variants="{ true: __('Enabled'), false: __('Disabled') }"
       />

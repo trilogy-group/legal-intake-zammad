@@ -8,7 +8,7 @@ module Gql::Mutations
 
     field :success, Boolean, null: false, description: 'Was the update successful?'
 
-    requires_permission 'user_preferences.language'
+    requires_permission 'user_preferences.email_notifications'
 
     def resolve(enabled:)
       context.current_user.with_lock do

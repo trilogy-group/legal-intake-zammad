@@ -651,7 +651,11 @@ curl "http://localhost/api/v1/users/unsubscribe_notifications?user_id=5&token=ab
     user = User.find_by(id: params[:user_id])
 
     if user.blank? || !user.valid_email_notification_unsubscribe_token?(params[:token])
-      render json: { error: 'Invalid or expired unsubscribe link.' }, status: :unprocessable_entity
+      @page_title   = 'Unsubscribe failed'
+      @page_heading = 'Invalid or expired unsubscribe link.'
+      @page_message = 'This unsubscribe link is invalid or has already been used. Please log in to manage your notification settings.'
+      @page_success = false
+      render :email_notifications_unsubscribe, status: :unprocessable_entity
       return
     end
 
@@ -660,7 +664,11 @@ curl "http://localhost/api/v1/users/unsubscribe_notifications?user_id=5&token=ab
       user.save!
     end
 
-    render json: { message: 'You have been unsubscribed from email notifications.' }, status: :ok
+    @page_title   = 'Unsubscribed'
+    @page_heading = 'You have been unsubscribed.'
+    @page_message = 'You will no longer receive email notifications for ticket activity. You can re-enable them at any time from your account settings.'
+    @page_success = true
+    render :email_notifications_unsubscribe, status: :ok
   end
 
 =begin

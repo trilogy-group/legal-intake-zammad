@@ -190,8 +190,8 @@ const { forceDesktop } = useForceDesktop()
         v-model="emailNotificationsEnabled"
         type="toggle"
         name="email_notifications_enabled"
-        :label="__('Email Notifications')"
-        :help="__('Receive email notifications for ticket activity.')"
+        :label="__('Email notifications for shared tickets')"
+        :help="__('Receive email notifications for tickets shared with me. Does not affect tickets I created.')"
         :disabled="isSavingEmailNotifications"
         :variants="{ true: __('Enabled'), false: __('Disabled') }"
       />
