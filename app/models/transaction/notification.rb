@@ -376,13 +376,12 @@ class Transaction::Notification
       template:   template,
       locale:     customer.preferences[:locale] || Locale.default,
       objects:    {
-        ticket:          ticket,
-        article:         article,
-        recipient:       customer,
-        current_user:    current_user,
-        changes:         {},
-        reason:          recipients_reason[customer.id],
-        unsubscribe_url: unsubscribe_url_for(customer),
+        ticket:       ticket,
+        article:      article,
+        recipient:    customer,
+        current_user: current_user,
+        changes:      {},
+        reason:       recipients_reason[customer.id],
       },
       standalone: false,
     )
@@ -481,13 +480,12 @@ class Transaction::Notification
       template:   template,
       locale:     customer.preferences[:locale] || Locale.default,
       objects:    {
-        ticket:          ticket,
-        article:         article,
-        recipient:       customer,
-        current_user:    current_user,
-        changes:         changes,
-        reason:          recipients_reason[customer.id],
-        unsubscribe_url: unsubscribe_url_for(customer),
+        ticket:       ticket,
+        article:      article,
+        recipient:    customer,
+        current_user: current_user,
+        changes:      changes,
+        reason:       recipients_reason[customer.id],
       },
       standalone: false,
     )
@@ -626,12 +624,11 @@ class Transaction::Notification
       template:   'ticket_comment_added',
       locale:     primary_recipient.preferences[:locale] || Locale.default,
       objects:    {
-        ticket:          ticket,
-        article:         article,
-        recipient:       primary_recipient,
-        current_user:    commenter,
-        commenter:       commenter,
-        unsubscribe_url: unsubscribe_url_for(primary_recipient),
+        ticket:       ticket,
+        article:      article,
+        recipient:    primary_recipient,
+        current_user: commenter,
+        commenter:    commenter,
       },
       standalone: false,
     )
@@ -765,13 +762,12 @@ class Transaction::Notification
       template:   template,
       locale:     primary_recipient.preferences[:locale] || Locale.default,
       objects:    {
-        ticket:          ticket,
-        article:         article,
-        recipient:       primary_recipient,
-        current_user:    current_user,
-        changes:         changes,
-        reason:          recipients_reason[primary_recipient.id],
-        unsubscribe_url: unsubscribe_url_for(primary_recipient),
+        ticket:       ticket,
+        article:      article,
+        recipient:    primary_recipient,
+        current_user: current_user,
+        changes:      changes,
+        reason:       recipients_reason[primary_recipient.id],
       },
       standalone: false,
     )
@@ -1050,19 +1046,6 @@ class Transaction::Notification
     return false if user.id == ticket.customer_id
 
     Ticket::SharedAccess.exists?(ticket_id: ticket.id, user_id: user.id)
-  end
-
-  # Builds the one-click unsubscribe URL for shared customers.
-  # Not generated for ticket creators — they cannot unsubscribe from their own ticket.
-  # Returns nil when the user is a ticket creator, has no email, or the concern
-  # method is unavailable.
-  def unsubscribe_url_for(user)
-    return nil if user.blank? || user.email.blank?
-    return nil if !user.respond_to?(:email_notification_unsubscribe_token)
-    return nil if !shared_customer_only?(user)
-
-    "#{Setting.get('http_type')}://#{Setting.get('fqdn')}/api/v1/users/unsubscribe_notifications" \
-      "?user_id=#{user.id}&token=#{user.email_notification_unsubscribe_token}"
   end
 
   def customer?(user)

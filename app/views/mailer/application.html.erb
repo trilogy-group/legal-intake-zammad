@@ -48,9 +48,6 @@
   <% else %>
     <a href="<%= c 'http_type' %>://<%= c 'fqdn' %>/#profile/email-notifications"><%= t 'Manage your notification settings' %></a>
   <% end %>
-  <% if @objects[:unsubscribe_url].present? %>
-    | <a href="#{unsubscribe_url}"><%= t 'Unsubscribe from email notifications' %></a>
-  <% end %>
   <% if c('organization').present? %>| <%= c 'organization' %><% end %>
 </div>
 <% end %>
