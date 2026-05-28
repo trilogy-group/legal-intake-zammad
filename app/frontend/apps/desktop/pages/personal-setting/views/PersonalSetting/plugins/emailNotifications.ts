@@ -18,7 +18,7 @@ export default <PersonalSettingPlugin>{
     meta: {
       title: __('Email Notifications'),
       requiresAuth: true,
-      requiredPermission: 'user_preferences.email_notifications',
+      requiredPermission: 'user_preferences.email_notifications+ticket.customer',
     },
   },
   order: 1100,

@@ -55,4 +55,4 @@ class ProfileEmailNotifications extends App.ControllerSubContent
       msg:  data.error || data.message
     )
 
-App.Config.set('EmailNotifications', { prio: 1100, name: __('Email Notifications'), parent: '#profile', target: '#profile/email_notifications', controller: ProfileEmailNotifications, permission: ['user_preferences.email_notifications'] }, 'NavBarProfile')
+App.Config.set('EmailNotifications', { prio: 1100, name: __('Email Notifications'), parent: '#profile', target: '#profile/email_notifications', controller: ProfileEmailNotifications, permission: ['user_preferences.email_notifications+ticket.customer'] }, 'NavBarProfile')

@@ -151,6 +151,7 @@ class Ticket::SharedAccess < ApplicationModel
 
   def send_share_email
     return if user.email.blank?
+    return if !user.shared_ticket_email_notifications_enabled?
 
     shared_by = User.find(created_by_id)
 

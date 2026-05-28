@@ -507,7 +507,8 @@ Permission.create_if_not_exists(
   label:        __('Email Notifications'),
   description:  __('Manage personal email notification preference.'),
   preferences:  {
-    prio: 1685,
+    prio:     1685,
+    required: ['ticket.customer'],
   },
   allow_signup: true,
 )
