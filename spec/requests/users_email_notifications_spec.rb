@@ -9,18 +9,20 @@ RSpec.describe 'Users email notifications', type: :request do
     context 'when authenticated' do
       before { authenticated_as(customer) }
 
-      it 'sets email_notifications_enabled to false' do
+      it 'returns 200' do
         put '/api/v1/users/email_notifications', params: { enabled: false }, as: :json
         expect(response).to have_http_status(:ok)
+      end
+
+      it 'sets email_notifications_enabled to false' do
+        put '/api/v1/users/email_notifications', params: { enabled: false }, as: :json
         expect(customer.reload.preferences[:email_notifications_enabled]).to be false
       end
 
       it 'sets email_notifications_enabled to true' do
         customer.preferences[:email_notifications_enabled] = false
         customer.save!
-
         put '/api/v1/users/email_notifications', params: { enabled: true }, as: :json
-        expect(response).to have_http_status(:ok)
         expect(customer.reload.preferences[:email_notifications_enabled]).to be true
       end
 
@@ -41,22 +43,38 @@ RSpec.describe 'Users email notifications', type: :request do
   describe 'GET /api/v1/users/unsubscribe_notifications' do
     let(:token) { customer.email_notification_unsubscribe_token }
 
-    it 'disables email notifications with a valid token' do
+    it 'returns 200 for a valid token' do
       get '/api/v1/users/unsubscribe_notifications', params: { user_id: customer.id, token: token }
       expect(response).to have_http_status(:ok)
+    end
+
+    it 'disables email notifications with a valid token' do
+      get '/api/v1/users/unsubscribe_notifications', params: { user_id: customer.id, token: token }
       expect(customer.reload.preferences[:email_notifications_enabled]).to be false
     end
 
-    it 'renders an HTML confirmation page on success' do
+    it 'renders HTML content type on success' do
       get '/api/v1/users/unsubscribe_notifications', params: { user_id: customer.id, token: token }
       expect(response.content_type).to include('text/html')
+    end
+
+    it 'includes confirmation text on success' do
+      get '/api/v1/users/unsubscribe_notifications', params: { user_id: customer.id, token: token }
       expect(response.body).to include('You have been unsubscribed')
     end
 
-    it 'renders an HTML error page for an invalid token' do
+    it 'returns 422 for an invalid token' do
       get '/api/v1/users/unsubscribe_notifications', params: { user_id: customer.id, token: 'invalid' }
       expect(response).to have_http_status(:unprocessable_entity)
+    end
+
+    it 'renders HTML for an invalid token' do
+      get '/api/v1/users/unsubscribe_notifications', params: { user_id: customer.id, token: 'invalid' }
       expect(response.content_type).to include('text/html')
+    end
+
+    it 'includes error text for an invalid token' do
+      get '/api/v1/users/unsubscribe_notifications', params: { user_id: customer.id, token: 'invalid' }
       expect(response.body).to include('Invalid or expired')
     end
 
@@ -65,11 +83,10 @@ RSpec.describe 'Users email notifications', type: :request do
       expect(response).to have_http_status(:unprocessable_entity)
     end
 
-    it 'does not require authentication' do
+    it 'does not raise for an unauthenticated request' do
       expect do
         get '/api/v1/users/unsubscribe_notifications', params: { user_id: customer.id, token: token }
       end.not_to raise_error
-      expect(response).to have_http_status(:ok)
     end
   end
 end

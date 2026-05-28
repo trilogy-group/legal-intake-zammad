@@ -618,7 +618,7 @@ curl http://localhost/api/v1/users/email_notifications -v -u #{login}:#{password
   def email_notifications_update
     enabled = params[:enabled]
     if enabled.nil?
-      render json: { error: 'Parameter "enabled" is required.' }, status: :unprocessable_entity
+      render json: { error: __('Parameter "enabled" is required.') }, status: :unprocessable_entity
       return
     end
 
@@ -651,9 +651,9 @@ curl "http://localhost/api/v1/users/unsubscribe_notifications?user_id=5&token=ab
     user = User.find_by(id: params[:user_id])
 
     if user.blank? || !user.valid_email_notification_unsubscribe_token?(params[:token])
-      @page_title   = 'Unsubscribe failed'
-      @page_heading = 'Invalid or expired unsubscribe link.'
-      @page_message = 'This unsubscribe link is invalid or has already been used. Please log in to manage your notification settings.'
+      @page_title   = __('Unsubscribe failed')
+      @page_heading = __('Invalid or expired unsubscribe link.')
+      @page_message = __('This unsubscribe link is invalid or has already been used. Please log in to manage your notification settings.')
       @page_success = false
       render :email_notifications_unsubscribe, status: :unprocessable_entity
       return
@@ -664,9 +664,9 @@ curl "http://localhost/api/v1/users/unsubscribe_notifications?user_id=5&token=ab
       user.save!
     end
 
-    @page_title   = 'Unsubscribed'
-    @page_heading = 'You have been unsubscribed.'
-    @page_message = 'You will no longer receive email notifications for ticket activity. You can re-enable them at any time from your account settings.'
+    @page_title   = __('Unsubscribed')
+    @page_heading = __('You have been unsubscribed.')
+    @page_message = __('You will no longer receive email notifications for ticket activity. You can re-enable them at any time from your account settings.')
     @page_success = true
     render :email_notifications_unsubscribe, status: :ok
   end

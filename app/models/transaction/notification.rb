@@ -1058,8 +1058,8 @@ class Transaction::Notification
   # method is unavailable.
   def unsubscribe_url_for(user)
     return nil if user.blank? || user.email.blank?
-    return nil unless user.respond_to?(:email_notification_unsubscribe_token)
-    return nil unless shared_customer_only?(user)
+    return nil if !user.respond_to?(:email_notification_unsubscribe_token)
+    return nil if !shared_customer_only?(user)
 
     "#{Setting.get('http_type')}://#{Setting.get('fqdn')}/api/v1/users/unsubscribe_notifications" \
       "?user_id=#{user.id}&token=#{user.email_notification_unsubscribe_token}"

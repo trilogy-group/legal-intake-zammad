@@ -30,12 +30,14 @@ RSpec.describe HasEmailNotificationPreference do
   end
 
   describe '#email_notification_unsubscribe_token' do
-    it 'returns a hex string' do
-      expect(user.email_notification_unsubscribe_token).to match(/\A[0-9a-f]{64}\z/)
+    it 'returns a 64-character hex string' do
+      expect(user.email_notification_unsubscribe_token).to match(%r{\A[0-9a-f]{64}\z})
     end
 
-    it 'is stable for the same user' do
-      expect(user.email_notification_unsubscribe_token).to eq(user.email_notification_unsubscribe_token)
+    it 'produces the same token on repeated calls' do
+      first  = user.email_notification_unsubscribe_token
+      second = user.email_notification_unsubscribe_token
+      expect(first).to eq(second)
     end
 
     it 'differs between users' do
