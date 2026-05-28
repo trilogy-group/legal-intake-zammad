@@ -901,7 +901,7 @@ msgstr ""
 
 #: app/assets/javascripts/app/views/channel/sms_account_overview.jst.eco:45
 #: app/frontend/apps/mobile/pages/account/routes.ts:8
-#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:35
+#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:34
 msgid "Account"
 msgstr ""
 
@@ -2366,7 +2366,7 @@ msgstr ""
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSetting/plugins/avatar.ts:6
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingAvatar.vue:46
 #: app/frontend/apps/mobile/pages/account/routes.ts:28
-#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:144
+#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:143
 #: app/frontend/apps/mobile/pages/account/views/PersonalSettingAvatar.vue:167
 #: app/frontend/shared/components/CommonUserAvatar/CommonUserAvatar.vue:114
 #: db/seeds/permissions.rb:445
@@ -3789,7 +3789,7 @@ msgstr ""
 msgid "Continue session"
 msgstr ""
 
-#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:161
+#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:160
 #: app/frontend/apps/mobile/pages/authentication/views/Login.vue:165
 msgid "Continue to desktop"
 msgstr ""
@@ -5674,7 +5674,7 @@ msgid "Did you know that system translations can be contributed and shared with 
 msgstr ""
 
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingLocale.vue:31
-#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:181
+#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:180
 msgid "Did you know?"
 msgstr ""
 
@@ -5728,7 +5728,7 @@ msgid "Disable the banner for the BETA switch"
 msgstr ""
 
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingEmailNotifications.vue:80
-#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:196
+#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:195
 msgid "Disabled"
 msgstr ""
 
@@ -6333,7 +6333,7 @@ msgstr ""
 msgid "Email notification preference has been saved."
 msgstr ""
 
-#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:193
+#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:192
 msgid "Email notifications for shared tickets"
 msgstr ""
 
@@ -6489,7 +6489,7 @@ msgstr ""
 
 #: app/assets/javascripts/app/views/customer_chat/setting.jst.eco:37
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingEmailNotifications.vue:80
-#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:196
+#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:195
 msgid "Enabled"
 msgstr ""
 
@@ -8836,7 +8836,7 @@ msgstr ""
 msgid "Inserts text module"
 msgstr ""
 
-#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:152
+#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:151
 msgid "Install App"
 msgstr ""
 
@@ -9323,7 +9323,7 @@ msgstr ""
 #: app/assets/javascripts/app/views/profile/language.jst.eco:3
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSetting/plugins/locale.ts:6
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingLocale.vue:12
-#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:173
+#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:172
 #: db/seeds/permissions.rb:438
 msgid "Language"
 msgstr ""
@@ -13252,7 +13252,7 @@ msgstr ""
 msgid "Receive email notifications for tickets shared with me"
 msgstr ""
 
-#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:194
+#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:193
 msgid "Receive email notifications for tickets shared with me. Does not affect tickets I created."
 msgstr ""
 
@@ -15306,7 +15306,7 @@ msgstr ""
 
 #: app/assets/javascripts/app/controllers/logout.coffee:6
 #: app/frontend/apps/desktop/components/layout/LayoutSidebar/LeftSidebar/AvatarMenu/plugins/logout.ts:7
-#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:215
+#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:214
 msgid "Sign out"
 msgstr ""
 
@@ -16890,7 +16890,7 @@ msgstr ""
 msgid "The private key is not valid for S/MIME usage. Please check the key format and the secret."
 msgstr ""
 
-#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:73
+#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:72
 msgid "The product version could not be fetched."
 msgstr ""
 
@@ -17780,7 +17780,7 @@ msgid "This host cannot be reached."
 msgstr ""
 
 #: app/assets/javascripts/app/views/version.jst.eco:6
-#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:202
+#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:201
 msgid "This is Zammad version %s"
 msgstr ""
 
@@ -18709,7 +18709,7 @@ msgstr ""
 msgid "To find out more about the 24-hour customer service window see %l."
 msgstr ""
 
-#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:100
+#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:99
 msgid "To install %s as an app, press the %s \"Share\" button and then the %s \"Add to Home Screen\" button."
 msgstr ""
 
@@ -19948,7 +19948,7 @@ msgstr ""
 #: app/assets/javascripts/app/controllers/version.coffee:3
 #: app/assets/javascripts/app/views/package.jst.eco:48
 #: app/assets/javascripts/app/views/version.jst.eco:2
-#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:201
+#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:200
 #: lib/excel_sheet/ai/analytics/errors.rb:25
 #: lib/excel_sheet/ai/analytics/with_usage.rb:25
 msgid "Version"
@@ -20396,7 +20396,7 @@ msgstr ""
 msgid "You are receiving this because you are a member of the group of this ticket."
 msgstr ""
 
-#: app/models/transaction/notification.rb:1013
+#: app/models/transaction/notification.rb:1012
 msgid "You are receiving this because you are out-of-office replacement for a participant of this ticket."
 msgstr ""
 
@@ -20470,7 +20470,7 @@ msgid "You can generate a personal access token for each application you use tha
 msgstr ""
 
 #: app/frontend/apps/desktop/pages/personal-setting/views/PersonalSettingLocale.vue:33
-#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:183
+#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:182
 msgid "You can help translating Zammad."
 msgstr ""
 
@@ -20699,7 +20699,7 @@ msgid "You were using the new BETA UI for 5 hours."
 msgstr ""
 
 #: app/controllers/users_controller.rb:478
-msgid "You will no longer receive email notifications for ticket activity. You can re-enable them at any time from your account settings."
+msgid "You will no longer receive email notifications for tickets shared with you. You will still receive notifications for tickets you created yourself."
 msgstr ""
 
 #: app/assets/javascripts/app/views/login.jst.eco:96
@@ -20831,7 +20831,7 @@ msgstr ""
 #: app/assets/javascripts/app/views/integration/placetel.jst.eco:134
 #: app/assets/javascripts/app/views/integration/sipgate.jst.eco:124
 #: app/frontend/apps/desktop/components/layout/LayoutPublicPage/LayoutPublicPage.vue:90
-#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:102
+#: app/frontend/apps/mobile/pages/account/views/AccountOverview.vue:101
 #: app/frontend/apps/mobile/pages/authentication/components/LoginFooter.vue:24
 msgid "Zammad"
 msgstr ""

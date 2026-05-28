@@ -666,7 +666,7 @@ curl "http://localhost/api/v1/users/unsubscribe_notifications?user_id=5&token=ab
 
     @page_title   = __('Unsubscribed')
     @page_heading = __('You have been unsubscribed.')
-    @page_message = __('You will no longer receive email notifications for ticket activity. You can re-enable them at any time from your account settings.')
+    @page_message = __('You will no longer receive email notifications for tickets shared with you. You will still receive notifications for tickets you created yourself.')
     @page_success = true
     render :email_notifications_unsubscribe, status: :ok
   end
