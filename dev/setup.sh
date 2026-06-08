@@ -554,11 +554,7 @@ echo "  Mode        →  $([ "$NATIVE_MODE" = "true" ] && echo "native (bin/dev)
 echo ""
 yellow "  ⚠  First-time only: run DB migration before using custom fields."
 yellow "     Admin → Objects → Execute Migrations  (http://localhost:3001/#system/object-manager)"
-if [ "$NATIVE_MODE" = "true" ]; then
-  yellow "     Then re-run: npm run zammad:local:native:setup"
-else
-  yellow "     Then re-run: npm run zammad:local:setup"
-fi
+yellow "     Then re-run: pnpm run zammad:local:setup"
 echo ""
 echo "  Next step:"
 green "  npm run zammad:local:dev   →  http://localhost:3000"

@@ -66,11 +66,23 @@ pnpm run zammad:local:setup
 This script:
 - Creates the admin and bot users in Zammad
 - Generates API tokens and writes them to `legal-intake/.env`
-- Configures the webhook pointing to `https://host.docker.internal:3000`
+- Configures the webhook pointing to `https://localhost:3000`
 - Applies all config from `zammad-config/local/`
 - Syncs all Supabase users to Zammad as customers/agents
 
-### 5. Start Zammad
+### 5. Run DB migrations (first-time only)
+
+After `setup` applies custom object attributes, Zammad needs a one-time DB migration before those fields are active:
+
+1. Open [http://localhost:3001/#system/object-manager](http://localhost:3001/#system/object-manager) (Admin → Objects)
+2. Click **Execute Migrations**
+3. Re-run setup to finish applying the remaining config:
+
+```bash
+pnpm run zammad:local:setup
+```
+
+### 6. Start Zammad
 
 ```bash
 pnpm run zammad:local:dev
@@ -78,7 +90,7 @@ pnpm run zammad:local:dev
 
 Starts Rails (port 3001), Vite dev server, WebSocket server, and background worker via Procfile.dev.
 
-### 6. Start legal-intake
+### 7. Start legal-intake
 
 ```bash
 cd legal-intake
@@ -161,11 +173,10 @@ Note: code changes require a Docker image rebuild in this mode.
 ## How the webhook works
 
 **Zammad → legal-intake:**
-Zammad POSTs to `https://host.docker.internal:3000/api/zammad/webhook`.
-`host.docker.internal` resolves to your Mac from inside Docker containers.
+Zammad POSTs to `https://localhost:3000/api/webhooks/zammad`. Since Zammad runs natively on the host, it reaches legal-intake directly via localhost. The payload is signed with HMAC-SHA1 using `ZAMMAD_WEBHOOK_SECRET` from `legal-intake/.env`.
 
 **legal-intake → Zammad:**
-`ZAMMAD_URL=http://localhost:3001` in `legal-intake/.env`. Rails listens directly on 3001.
+`ZAMMAD_URL=http://localhost:3001` in `legal-intake/.env`. Zammad Rails listens natively on port 3001.
 
 ---
 
