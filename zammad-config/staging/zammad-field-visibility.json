@@ -1,0 +1,40 @@
+{
+  "fields": {
+    "li_request_ref": {
+      "agent_shown": true,
+      "customer_shown": true
+    },
+    "li_request_number": {
+      "agent_shown": false,
+      "customer_shown": false
+    },
+    "li_original_status": {
+      "agent_shown": false,
+      "customer_shown": false
+    },
+    "li_legal_entity": {
+      "agent_shown": true,
+      "customer_shown": true
+    },
+    "li_product": {
+      "agent_shown": true,
+      "customer_shown": true
+    },
+    "li_business_unit": {
+      "agent_shown": true,
+      "customer_shown": true
+    },
+    "li_assignee": {
+      "agent_shown": false,
+      "customer_shown": false
+    },
+    "li_requires_counterparty_signature": {
+      "agent_shown": true,
+      "customer_shown": true
+    },
+    "li_invoice_reference": {
+      "agent_shown": true,
+      "customer_shown": true
+    }
+  }
+}

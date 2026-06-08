@@ -1,0 +1,224 @@
+{
+  "_comment": "Local Zammad triggers — mirrors prod. setup.sh replaces 4 and 1 before applying. Never apply to staging/prod.",
+  "_local_adaptations": {
+    "state_ids": "Local state IDs: awaiting_response=18, ready_for_signature=19, under_legal_review=17, submission_in_progress=13 (prod used 17,18,16,13).",
+    "email_triggers": "notification.email performs removed — email is not configured locally. State transitions are preserved.",
+    "owner_first_assigned": "li_owner_assigned condition kept — requires object attribute migration to have run (done automatically by setup.sh Phase 1).",
+    "bot_user_id": "4 replaced by setup.sh with the actual local bot user ID.",
+    "webhook_ids": "1 replaced by setup.sh. Prod webhook 2 mapped to the single local webhook."
+  },
+  "triggers": [
+    {
+      "name": "@legal-agent command — invoke webhook (local)",
+      "condition": {
+        "ticket.action": { "operator": "is", "value": "update" },
+        "article.body": { "operator": "contains", "value": "@legal-agent" },
+        "article.internal": { "operator": "is", "value": ["true"] },
+        "article.created_by_id": { "operator": "is not", "value": ["4"] }
+      },
+      "perform": {
+        "notification.webhook": { "webhook_id": "1" }
+      },
+      "disable_notification": true,
+      "localization": "system",
+      "timezone": "system",
+      "note": "LOCAL — fires the webhook when an internal note contains @legal-agent.",
+      "activator": "action",
+      "execution_condition_mode": "selective",
+      "active": true
+    },
+    {
+      "name": "@legal-agent bot — suppress notification emails",
+      "condition": {
+        "ticket.action": { "operator": "is", "value": "update" },
+        "article.created_by_id": { "operator": "is", "value": ["4"] }
+      },
+      "perform": {
+        "ticket.tags": { "operator": "add", "value": "" }
+      },
+      "disable_notification": true,
+      "localization": "system",
+      "timezone": "system",
+      "note": "Suppresses agent/admin notification emails when the Legal Agent bot posts an internal note.",
+      "activator": "action",
+      "execution_condition_mode": "selective",
+      "active": true
+    },
+    {
+      "name": "Triage - Primary Document",
+      "condition": {
+        "ticket.action": { "operator": "is", "value": "create" }
+      },
+      "perform": {
+        "notification.webhook": { "webhook_id": "1" }
+      },
+      "disable_notification": true,
+      "localization": "system",
+      "timezone": "system",
+      "note": "LOCAL — fires the webhook on new ticket creation to trigger primary document triage.",
+      "activator": "action",
+      "execution_condition_mode": "selective",
+      "active": true
+    },
+    {
+      "name": "Auto-transition: Awaiting Response → Under Legal Review",
+      "condition": {
+        "ticket.action": { "operator": "is", "value": "update" },
+        "ticket.state_id": { "operator": "is", "value": ["18"] },
+        "article.sender_id": { "operator": "is", "value": ["2"] },
+        "article.internal": { "operator": "is", "value": ["false"] }
+      },
+      "perform": {
+        "ticket.state_id": { "value": "17" }
+      },
+      "disable_notification": true,
+      "localization": "system",
+      "timezone": "system",
+      "note": "Moves ticket from awaiting_response(18) to under_legal_review(17) when customer posts a public comment. Email omitted locally.",
+      "activator": "action",
+      "execution_condition_mode": "selective",
+      "active": true
+    },
+    {
+      "name": "Auto-transition: Submitted to Legal → Under Legal Review (on owner assignment)",
+      "condition": {
+        "ticket.action": { "operator": "is", "value": "update" },
+        "ticket.state_id": { "operator": "is", "value": ["13"] },
+        "ticket.owner_id": {
+          "operator": "has changed",
+          "pre_condition": "current_user.id",
+          "value": [],
+          "value_completion": ""
+        }
+      },
+      "perform": {
+        "ticket.state_id": { "value": "17" }
+      },
+      "disable_notification": true,
+      "localization": "system",
+      "timezone": "system",
+      "note": "Moves ticket from submission_in_progress(13) to under_legal_review(17) on owner assignment. Email omitted locally.",
+      "activator": "action",
+      "execution_condition_mode": "selective",
+      "active": true
+    },
+    {
+      "name": "Status changed to Ready For Signature",
+      "condition": {
+        "ticket.action": { "operator": "is", "value": "update" },
+        "ticket.state_id": { "operator": "is", "value": ["19"] }
+      },
+      "perform": {
+        "notification.webhook": { "webhook_id": "1" }
+      },
+      "disable_notification": true,
+      "localization": "system",
+      "timezone": "system",
+      "note": "Fires webhook when ticket enters ready_for_signature(19).",
+      "activator": "action",
+      "execution_condition_mode": "selective",
+      "active": true
+    },
+    {
+      "name": "Set li_ready_for_signature_at on Ready for Signature",
+      "condition": {
+        "ticket.action": { "operator": "is", "value": "update" },
+        "ticket.state_id": { "operator": "is", "value": ["19"] }
+      },
+      "perform": {
+        "ticket.li_ready_for_signature_at": { "value": "now()" }
+      },
+      "disable_notification": true,
+      "localization": "system",
+      "timezone": "system",
+      "note": "Records timestamp when ticket enters ready_for_signature(19). Used for Signature Lag metric.",
+      "activator": "action",
+      "execution_condition_mode": "selective",
+      "active": false
+    },
+    {
+      "name": "Set li_owner_assigned_at on Submitted to Legal with Owner",
+      "condition": {
+        "ticket.action": { "operator": "is", "value": "update" },
+        "ticket.state_id": { "operator": "is", "value": ["13"] },
+        "ticket.owner_id": {
+          "operator": "has changed",
+          "pre_condition": "current_user.id",
+          "value": [],
+          "value_completion": ""
+        }
+      },
+      "perform": {
+        "ticket.li_owner_assigned_at": { "value": "now()" },
+        "ticket.li_owner_assigned": { "value": true }
+      },
+      "disable_notification": false,
+      "localization": "system",
+      "timezone": "system",
+      "note": "Records timestamp when owner is first assigned in submission_in_progress(13). Used for Assignment Lag metric.",
+      "activator": "action",
+      "execution_condition_mode": "selective",
+      "active": false
+    },
+    {
+      "name": "Owner First Assigned - invoke webhook",
+      "condition": {
+        "ticket.action": { "operator": "is", "value": "update" },
+        "ticket.owner_id": {
+          "operator": "has changed",
+          "pre_condition": "not_set",
+          "value": [],
+          "value_completion": ""
+        },
+        "ticket.li_owner_assigned": { "operator": "is", "value": false }
+      },
+      "perform": {
+        "notification.webhook": { "webhook_id": "1" }
+      },
+      "disable_notification": true,
+      "localization": "system",
+      "timezone": "system",
+      "note": "Fires webhook when an owner is first assigned to a ticket.",
+      "activator": "action",
+      "execution_condition_mode": "selective",
+      "active": true
+    },
+    {
+      "name": "Public Comment - Agent",
+      "condition": {
+        "ticket.action": { "operator": "is", "value": "update" },
+        "article.sender_id": { "operator": "is", "value": ["1"] },
+        "article.internal": { "operator": "is", "value": ["false"] },
+        "article.created_by_id": { "operator": "is not", "value": ["4"] }
+      },
+      "perform": {
+        "notification.webhook": { "webhook_id": "1" }
+      },
+      "disable_notification": true,
+      "localization": "system",
+      "timezone": "system",
+      "note": "Fires webhook when an agent posts a public reply. Bot excluded.",
+      "activator": "action",
+      "execution_condition_mode": "selective",
+      "active": true
+    },
+    {
+      "name": "Public Comment - Customer",
+      "condition": {
+        "ticket.action": { "operator": "is", "value": "update" },
+        "article.sender_id": { "operator": "is", "value": ["2"] },
+        "article.internal": { "operator": "is", "value": ["false"] }
+      },
+      "perform": {
+        "notification.webhook": { "webhook_id": "1" }
+      },
+      "disable_notification": true,
+      "localization": "system",
+      "timezone": "system",
+      "note": "Fires webhook when a customer posts a public reply.",
+      "activator": "action",
+      "execution_condition_mode": "selective",
+      "active": true
+    }
+  ]
+}

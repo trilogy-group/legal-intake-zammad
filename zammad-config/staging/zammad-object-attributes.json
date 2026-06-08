@@ -1,0 +1,887 @@
+{
+  "attributes": [
+    {
+      "name": "li_request_ref",
+      "display": "Request ID",
+      "data_type": "input",
+      "data_option": {
+        "type": "text",
+        "maxlength": 255,
+        "null": true,
+        "default": "",
+        "options": {},
+        "relation": ""
+      },
+      "data_option_new": {},
+      "editable": true,
+      "internal": false,
+      "active": true,
+      "screens": {
+        "create_middle": {
+          "shown": true,
+          "required": false
+        },
+        "edit": {
+          "shown": true,
+          "required": false,
+          "ticket.agent": {
+            "shown": true
+          },
+          "ticket.customer": {
+            "shown": true
+          }
+        },
+        "view": {
+          "shown": true
+        }
+      },
+      "position": 1600,
+      "object": "Ticket",
+      "deletable": true
+    },
+    {
+      "name": "li_invoice_reference",
+      "display": "Invoice Reference",
+      "data_type": "input",
+      "data_option": {
+        "type": "text",
+        "maxlength": 500,
+        "null": true,
+        "default": "",
+        "options": {},
+        "relation": ""
+      },
+      "data_option_new": {},
+      "editable": true,
+      "internal": false,
+      "active": true,
+      "screens": {
+        "create_middle": {
+          "shown": false
+        },
+        "edit": {
+          "shown": true,
+          "required": false,
+          "ticket.agent": {
+            "shown": true
+          },
+          "ticket.customer": {
+            "shown": true
+          }
+        },
+        "view": {
+          "shown": true
+        }
+      },
+      "position": 1601,
+      "object": "Ticket",
+      "deletable": true
+    },
+    {
+      "name": "li_request_number",
+      "display": "Request Number",
+      "data_type": "integer",
+      "data_option": {
+        "min": 0,
+        "max": 9999999,
+        "null": true,
+        "default": "",
+        "options": {},
+        "relation": ""
+      },
+      "data_option_new": {},
+      "editable": true,
+      "internal": false,
+      "active": true,
+      "screens": {
+        "create_middle": {
+          "shown": true,
+          "required": false
+        },
+        "edit": {
+          "shown": true,
+          "required": false
+        },
+        "view": {
+          "shown": true
+        }
+      },
+      "position": 1602,
+      "object": "Ticket",
+      "deletable": true
+    },
+    {
+      "name": "li_original_status",
+      "display": "Original Status",
+      "data_type": "input",
+      "data_option": {
+        "type": "text",
+        "maxlength": 100,
+        "null": true,
+        "default": "",
+        "options": {},
+        "relation": ""
+      },
+      "data_option_new": {},
+      "editable": true,
+      "internal": false,
+      "active": true,
+      "screens": {
+        "create_middle": {
+          "shown": true,
+          "required": false
+        },
+        "edit": {
+          "shown": true,
+          "required": false
+        },
+        "view": {
+          "shown": true
+        }
+      },
+      "position": 1603,
+      "object": "Ticket",
+      "deletable": true
+    },
+    {
+      "name": "li_legal_entity",
+      "display": "Legal Entity",
+      "data_type": "input",
+      "data_option": {
+        "type": "text",
+        "maxlength": 255,
+        "null": true,
+        "default": "",
+        "options": {},
+        "relation": ""
+      },
+      "data_option_new": {},
+      "editable": true,
+      "internal": false,
+      "active": true,
+      "screens": {
+        "create_middle": {
+          "shown": true,
+          "required": false
+        },
+        "edit": {
+          "shown": true,
+          "required": false,
+          "ticket.agent": {
+            "shown": true
+          },
+          "ticket.customer": {
+            "shown": true
+          }
+        },
+        "view": {
+          "shown": true
+        }
+      },
+      "position": 1604,
+      "object": "Ticket",
+      "deletable": true
+    },
+    {
+      "name": "li_product",
+      "display": "Product",
+      "data_type": "input",
+      "data_option": {
+        "type": "text",
+        "maxlength": 255,
+        "null": true,
+        "default": "",
+        "options": {},
+        "relation": ""
+      },
+      "data_option_new": {},
+      "editable": true,
+      "internal": false,
+      "active": true,
+      "screens": {
+        "create_middle": {
+          "shown": true,
+          "required": false
+        },
+        "edit": {
+          "shown": true,
+          "required": false,
+          "ticket.agent": {
+            "shown": true
+          },
+          "ticket.customer": {
+            "shown": true
+          }
+        },
+        "view": {
+          "shown": true
+        }
+      },
+      "position": 1605,
+      "object": "Ticket",
+      "deletable": true
+    },
+    {
+      "name": "li_business_unit",
+      "display": "Business Unit",
+      "data_type": "input",
+      "data_option": {
+        "type": "text",
+        "maxlength": 255,
+        "null": true,
+        "default": "",
+        "options": {},
+        "relation": ""
+      },
+      "data_option_new": {},
+      "editable": true,
+      "internal": false,
+      "active": true,
+      "screens": {
+        "create_middle": {
+          "shown": true,
+          "required": false
+        },
+        "edit": {
+          "shown": true,
+          "required": false,
+          "ticket.agent": {
+            "shown": true
+          },
+          "ticket.customer": {
+            "shown": true
+          }
+        },
+        "view": {
+          "shown": true
+        }
+      },
+      "position": 1606,
+      "object": "Ticket",
+      "deletable": true
+    },
+    {
+      "name": "li_assignee",
+      "display": "Assignee",
+      "data_type": "input",
+      "data_option": {
+        "type": "text",
+        "maxlength": 255,
+        "null": true,
+        "default": "",
+        "options": {},
+        "relation": ""
+      },
+      "data_option_new": {},
+      "editable": true,
+      "internal": false,
+      "active": true,
+      "screens": {
+        "create_middle": {
+          "shown": true,
+          "required": false
+        },
+        "edit": {
+          "shown": true,
+          "required": false,
+          "ticket.agent": {
+            "shown": false
+          },
+          "ticket.customer": {
+            "shown": false
+          }
+        },
+        "view": {
+          "shown": true
+        }
+      },
+      "position": 1607,
+      "object": "Ticket",
+      "deletable": true
+    },
+    {
+      "name": "li_requires_counterparty_signature",
+      "display": "Requires counterpart signature",
+      "data_type": "boolean",
+      "data_option": {
+        "options": {
+          "false": "No",
+          "true": "Yes"
+        },
+        "null": true,
+        "default": false,
+        "relation": ""
+      },
+      "data_option_new": {},
+      "editable": true,
+      "internal": false,
+      "active": true,
+      "screens": {
+        "create_middle": {
+          "shown": true,
+          "required": false
+        },
+        "edit": {
+          "shown": true,
+          "required": false,
+          "ticket.agent": {
+            "shown": true
+          },
+          "ticket.customer": {
+            "shown": true
+          }
+        },
+        "view": {
+          "shown": true
+        }
+      },
+      "position": 1608,
+      "object": "Ticket",
+      "deletable": true
+    },
+    {
+      "name": "li_ready_for_signature_at",
+      "display": "Ready for Signature At",
+      "data_type": "datetime",
+      "data_option": {
+        "future": true,
+        "past": true,
+        "diff": null,
+        "null": true,
+        "default": "",
+        "options": {},
+        "relation": ""
+      },
+      "data_option_new": {},
+      "editable": true,
+      "internal": false,
+      "active": true,
+      "screens": {
+        "create_middle": {
+          "shown": false
+        },
+        "edit": {
+          "shown": false
+        },
+        "view": {
+          "shown": true
+        }
+      },
+      "position": 1609,
+      "object": "Ticket",
+      "deletable": true
+    },
+    {
+      "name": "li_owner_assigned_at",
+      "display": "Owner Assigned At",
+      "data_type": "datetime",
+      "data_option": {
+        "future": true,
+        "past": true,
+        "diff": null,
+        "null": true,
+        "default": "",
+        "options": {},
+        "relation": ""
+      },
+      "data_option_new": {},
+      "editable": true,
+      "internal": false,
+      "active": true,
+      "screens": {
+        "create_middle": {
+          "shown": false
+        },
+        "edit": {
+          "shown": false
+        },
+        "view": {
+          "shown": true
+        }
+      },
+      "position": 1610,
+      "object": "Ticket",
+      "deletable": true
+    },
+    {
+      "name": "li_owner_assigned",
+      "display": "Owner Assigned",
+      "data_type": "boolean",
+      "data_option": {
+        "options": {
+          "false": "No",
+          "true": "Yes"
+        },
+        "null": false,
+        "default": false,
+        "relation": ""
+      },
+      "data_option_new": {},
+      "editable": true,
+      "internal": false,
+      "active": true,
+      "screens": {
+        "create_middle": {
+          "shown": false
+        },
+        "edit": {
+          "shown": false
+        },
+        "view": {
+          "shown": false
+        }
+      },
+      "position": 1611,
+      "object": "Ticket",
+      "deletable": false,
+      "not_deletable_reason": "This attribute is referenced by Trigger: Owner First Assigned - invoke webhook,Set li_owner_assigned_at on Submitted to Legal with Owner and thus cannot be deleted!"
+    }
+  ],
+  "by_object": {
+    "Ticket": [
+      {
+        "name": "li_request_ref",
+        "display": "Request ID",
+        "data_type": "input",
+        "data_option": {
+          "type": "text",
+          "maxlength": 255,
+          "null": true,
+          "default": "",
+          "options": {},
+          "relation": ""
+        },
+        "data_option_new": {},
+        "editable": true,
+        "internal": false,
+        "active": true,
+        "screens": {
+          "create_middle": {
+            "shown": true,
+            "required": false
+          },
+          "edit": {
+            "shown": true,
+            "required": false,
+            "ticket.agent": {
+              "shown": true
+            },
+            "ticket.customer": {
+              "shown": true
+            }
+          },
+          "view": {
+            "shown": true
+          }
+        },
+        "position": 1600,
+        "object": "Ticket",
+        "deletable": true
+      },
+      {
+        "name": "li_invoice_reference",
+        "display": "Invoice Reference",
+        "data_type": "input",
+        "data_option": {
+          "type": "text",
+          "maxlength": 500,
+          "null": true,
+          "default": "",
+          "options": {},
+          "relation": ""
+        },
+        "data_option_new": {},
+        "editable": true,
+        "internal": false,
+        "active": true,
+        "screens": {
+          "create_middle": {
+            "shown": false
+          },
+          "edit": {
+            "shown": true,
+            "required": false,
+            "ticket.agent": {
+              "shown": true
+            },
+            "ticket.customer": {
+              "shown": true
+            }
+          },
+          "view": {
+            "shown": true
+          }
+        },
+        "position": 1601,
+        "object": "Ticket",
+        "deletable": true
+      },
+      {
+        "name": "li_request_number",
+        "display": "Request Number",
+        "data_type": "integer",
+        "data_option": {
+          "min": 0,
+          "max": 9999999,
+          "null": true,
+          "default": "",
+          "options": {},
+          "relation": ""
+        },
+        "data_option_new": {},
+        "editable": true,
+        "internal": false,
+        "active": true,
+        "screens": {
+          "create_middle": {
+            "shown": true,
+            "required": false
+          },
+          "edit": {
+            "shown": true,
+            "required": false
+          },
+          "view": {
+            "shown": true
+          }
+        },
+        "position": 1602,
+        "object": "Ticket",
+        "deletable": true
+      },
+      {
+        "name": "li_original_status",
+        "display": "Original Status",
+        "data_type": "input",
+        "data_option": {
+          "type": "text",
+          "maxlength": 100,
+          "null": true,
+          "default": "",
+          "options": {},
+          "relation": ""
+        },
+        "data_option_new": {},
+        "editable": true,
+        "internal": false,
+        "active": true,
+        "screens": {
+          "create_middle": {
+            "shown": true,
+            "required": false
+          },
+          "edit": {
+            "shown": true,
+            "required": false
+          },
+          "view": {
+            "shown": true
+          }
+        },
+        "position": 1603,
+        "object": "Ticket",
+        "deletable": true
+      },
+      {
+        "name": "li_legal_entity",
+        "display": "Legal Entity",
+        "data_type": "input",
+        "data_option": {
+          "type": "text",
+          "maxlength": 255,
+          "null": true,
+          "default": "",
+          "options": {},
+          "relation": ""
+        },
+        "data_option_new": {},
+        "editable": true,
+        "internal": false,
+        "active": true,
+        "screens": {
+          "create_middle": {
+            "shown": true,
+            "required": false
+          },
+          "edit": {
+            "shown": true,
+            "required": false,
+            "ticket.agent": {
+              "shown": true
+            },
+            "ticket.customer": {
+              "shown": true
+            }
+          },
+          "view": {
+            "shown": true
+          }
+        },
+        "position": 1604,
+        "object": "Ticket",
+        "deletable": true
+      },
+      {
+        "name": "li_product",
+        "display": "Product",
+        "data_type": "input",
+        "data_option": {
+          "type": "text",
+          "maxlength": 255,
+          "null": true,
+          "default": "",
+          "options": {},
+          "relation": ""
+        },
+        "data_option_new": {},
+        "editable": true,
+        "internal": false,
+        "active": true,
+        "screens": {
+          "create_middle": {
+            "shown": true,
+            "required": false
+          },
+          "edit": {
+            "shown": true,
+            "required": false,
+            "ticket.agent": {
+              "shown": true
+            },
+            "ticket.customer": {
+              "shown": true
+            }
+          },
+          "view": {
+            "shown": true
+          }
+        },
+        "position": 1605,
+        "object": "Ticket",
+        "deletable": true
+      },
+      {
+        "name": "li_business_unit",
+        "display": "Business Unit",
+        "data_type": "input",
+        "data_option": {
+          "type": "text",
+          "maxlength": 255,
+          "null": true,
+          "default": "",
+          "options": {},
+          "relation": ""
+        },
+        "data_option_new": {},
+        "editable": true,
+        "internal": false,
+        "active": true,
+        "screens": {
+          "create_middle": {
+            "shown": true,
+            "required": false
+          },
+          "edit": {
+            "shown": true,
+            "required": false,
+            "ticket.agent": {
+              "shown": true
+            },
+            "ticket.customer": {
+              "shown": true
+            }
+          },
+          "view": {
+            "shown": true
+          }
+        },
+        "position": 1606,
+        "object": "Ticket",
+        "deletable": true
+      },
+      {
+        "name": "li_assignee",
+        "display": "Assignee",
+        "data_type": "input",
+        "data_option": {
+          "type": "text",
+          "maxlength": 255,
+          "null": true,
+          "default": "",
+          "options": {},
+          "relation": ""
+        },
+        "data_option_new": {},
+        "editable": true,
+        "internal": false,
+        "active": true,
+        "screens": {
+          "create_middle": {
+            "shown": true,
+            "required": false
+          },
+          "edit": {
+            "shown": true,
+            "required": false,
+            "ticket.agent": {
+              "shown": false
+            },
+            "ticket.customer": {
+              "shown": false
+            }
+          },
+          "view": {
+            "shown": true
+          }
+        },
+        "position": 1607,
+        "object": "Ticket",
+        "deletable": true
+      },
+      {
+        "name": "li_requires_counterparty_signature",
+        "display": "Requires counterpart signature",
+        "data_type": "boolean",
+        "data_option": {
+          "options": {
+            "false": "No",
+            "true": "Yes"
+          },
+          "null": true,
+          "default": false,
+          "relation": ""
+        },
+        "data_option_new": {},
+        "editable": true,
+        "internal": false,
+        "active": true,
+        "screens": {
+          "create_middle": {
+            "shown": true,
+            "required": false
+          },
+          "edit": {
+            "shown": true,
+            "required": false,
+            "ticket.agent": {
+              "shown": true
+            },
+            "ticket.customer": {
+              "shown": true
+            }
+          },
+          "view": {
+            "shown": true
+          }
+        },
+        "position": 1608,
+        "object": "Ticket",
+        "deletable": true
+      },
+      {
+        "name": "li_ready_for_signature_at",
+        "display": "Ready for Signature At",
+        "data_type": "datetime",
+        "data_option": {
+          "future": true,
+          "past": true,
+          "diff": null,
+          "null": true,
+          "default": "",
+          "options": {},
+          "relation": ""
+        },
+        "data_option_new": {},
+        "editable": true,
+        "internal": false,
+        "active": true,
+        "screens": {
+          "create_middle": {
+            "shown": false
+          },
+          "edit": {
+            "shown": false
+          },
+          "view": {
+            "shown": true
+          }
+        },
+        "position": 1609,
+        "object": "Ticket",
+        "deletable": true
+      },
+      {
+        "name": "li_owner_assigned_at",
+        "display": "Owner Assigned At",
+        "data_type": "datetime",
+        "data_option": {
+          "future": true,
+          "past": true,
+          "diff": null,
+          "null": true,
+          "default": "",
+          "options": {},
+          "relation": ""
+        },
+        "data_option_new": {},
+        "editable": true,
+        "internal": false,
+        "active": true,
+        "screens": {
+          "create_middle": {
+            "shown": false
+          },
+          "edit": {
+            "shown": false
+          },
+          "view": {
+            "shown": true
+          }
+        },
+        "position": 1610,
+        "object": "Ticket",
+        "deletable": true
+      },
+      {
+        "name": "li_owner_assigned",
+        "display": "Owner Assigned",
+        "data_type": "boolean",
+        "data_option": {
+          "options": {
+            "false": "No",
+            "true": "Yes"
+          },
+          "null": false,
+          "default": false,
+          "relation": ""
+        },
+        "data_option_new": {},
+        "editable": true,
+        "internal": false,
+        "active": true,
+        "screens": {
+          "create_middle": {
+            "shown": false
+          },
+          "edit": {
+            "shown": false
+          },
+          "view": {
+            "shown": false
+          }
+        },
+        "position": 1611,
+        "object": "Ticket",
+        "deletable": false,
+        "not_deletable_reason": "This attribute is referenced by Trigger: Owner First Assigned - invoke webhook,Set li_owner_assigned_at on Submitted to Legal with Owner and thus cannot be deleted!"
+      }
+    ]
+  },
+  "metadata": {
+    "total_custom_attributes": 12,
+    "objects": [
+      "Ticket"
+    ],
+    "exported_at": "2026-06-08T10:02:04.833Z"
+  }
+}

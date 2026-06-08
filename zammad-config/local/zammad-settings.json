@@ -1,0 +1,70 @@
+{
+  "_comment": "Local-only Zammad settings. Mirrors prod settings with local overrides (fqdn, http_type, password login). Never apply this to staging or prod.",
+  "settings": {
+    "organization": "Trilogy",
+    "product_name": "Legal Intake",
+    "timezone_default": "America/Chicago",
+    "locale_default": "en-us",
+    "fqdn": "localhost",
+    "http_type": "http",
+    "user_show_password_login": true,
+    "auth_internal": {
+      "priority": 1,
+      "adapter": "Auth::Backend::Internal"
+    },
+    "auth_developer": {
+      "priority": 2,
+      "adapter": "Auth::Backend::Developer"
+    },
+    "auth_google_oauth2": false,
+    "auth_google_oauth2_credentials": {},
+    "auth_third_party_no_create_user": false,
+    "api_token_access": true,
+    "api_password_access": true,
+    "user_create_account": false,
+    "customer_ticket_create": false,
+    "system_init_done": true,
+    "kb_active": false,
+    "kb_multi_lingual_support": false,
+    "pretty_date_format": "timestamp",
+    "ui_ticket_zoom_article_visibility_confirmation_dialog": false,
+    "ui_ticket_zoom_article_note_new_internal": false,
+    "ui_ticket_create_default_type": "phone-in",
+    "ui_ticket_create_available_types": ["phone-in", "phone-out", "email-out"],
+    "ticket_hook": "Ticket#",
+    "ticket_hook_divider": "",
+    "ticket_last_contact_behaviour": "check_if_agent_already_replied",
+    "ticket_allow_expert_conditions": true,
+    "ticket_conditions_allow_regular_expression_operators": true,
+    "ticket_number": "Ticket::Number::Increment",
+    "ticket_number_increment": {
+      "checksum": false,
+      "min_size": "5"
+    },
+    "ticket_number_date": {
+      "checksum": false
+    },
+    "ticket_auto_assignment": false,
+    "password_min_size": 10,
+    "password_min_2_lower_2_upper_characters": true,
+    "password_need_digit": true,
+    "password_need_special_character": true,
+    "password_max_login_failed": 5,
+    "session_timeout": {
+      "default": "2419200",
+      "admin": "2419200",
+      "ticket.agent": "2419200",
+      "ticket.customer": "2419200"
+    },
+    "time_accounting": false,
+    "tag_new": true,
+    "checklist": true,
+    "ai_provider": false,
+    "ai_assistance_text_tools": false,
+    "ai_assistance_ticket_summary": false,
+    "notification_sender": "",
+    "developer_mode": false,
+    "maintenance_mode": false,
+    "system_online_service": false
+  }
+}

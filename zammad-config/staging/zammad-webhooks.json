@@ -1,0 +1,30 @@
+{
+  "webhooks": [
+    {
+      "custom_payload": null,
+      "name": "Legal Agent Commands",
+      "endpoint": "https://staging.legal-intake.ti.trilogy.com/api/webhooks/zammad",
+      "http_method": "post",
+      "ssl_verify": true,
+      "basic_auth_username": null,
+      "note": null,
+      "pre_defined_webhook_type": null,
+      "customized_payload": false,
+      "preferences": {},
+      "active": true
+    },
+    {
+      "name": "Ready For Signature",
+      "endpoint": "https://staging.legal-intake.ti.trilogy.com/api/webhooks/zammad",
+      "http_method": "post",
+      "ssl_verify": true,
+      "basic_auth_username": "",
+      "note": "",
+      "pre_defined_webhook_type": null,
+      "customized_payload": false,
+      "custom_payload": null,
+      "active": true,
+      "preferences": {}
+    }
+  ]
+}

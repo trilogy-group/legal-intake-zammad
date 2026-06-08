@@ -1,0 +1,232 @@
+# Local Zammad stack for development.
+# PostgreSQL runs as a container in this stack — no external Supabase CLI needed.
+# Everything is self-contained: only Docker Desktop is required.
+#
+# Prerequisites:
+#   1. Docker Desktop running
+#   2. Copy .env.example → .env and fill in credentials
+#
+# Start:  npm run zammad:local:up
+# Stop:   npm run zammad:local:down
+# Reset:  npm run zammad:local:down -v  (removes volumes for a clean slate)
+#         then re-run: up → setup
+
+x-shared:
+  zammad-service: &zammad-service
+    # Custom image built from legal-intake-zammad (feat/ecr-release) — includes the
+    # ticket_shared_accesses table and shared_access_user_ids feature not in public Zammad.
+    # Build locally: see zammad/local/README.md → "Building the custom image"
+    image: ${ZAMMAD_IMAGE:-zammad-local-custom:latest}
+    restart: unless-stopped
+    environment: &zammad-environment
+      MEMCACHE_SERVERS: ${MEMCACHE_SERVERS:-zammad-memcached:11211}
+
+      POSTGRESQL_DB: ${POSTGRES_DB:-zammad}
+      POSTGRESQL_HOST: ${POSTGRES_HOST:-zammad-postgres}
+      POSTGRESQL_PORT: ${POSTGRES_PORT:-5432}
+      POSTGRESQL_USER: ${POSTGRES_USER:-postgres}
+      POSTGRESQL_PASS: ${POSTGRES_PASS:-postgres}
+      POSTGRESQL_OPTIONS: ${POSTGRESQL_OPTIONS:-?sslmode=disable}
+      POSTGRESQL_DB_CREATE: "true"
+
+      REDIS_URL: ${REDIS_URL:-redis://zammad-redis:6379}
+      REDIS_SENTINELS:
+      REDIS_SENTINEL_NAME:
+      REDIS_USERNAME:
+      REDIS_PASSWORD:
+      REDIS_SENTINEL_USERNAME:
+      REDIS_SENTINEL_PASSWORD:
+
+      S3_URL:
+      TZ: ${TZ:-UTC}
+
+      ELASTICSEARCH_ENABLED: ${ELASTICSEARCH_ENABLED:-true}
+      ELASTICSEARCH_SCHEMA: ${ELASTICSEARCH_SCHEMA:-http}
+      ELASTICSEARCH_HOST: ${ELASTICSEARCH_HOST:-zammad-elasticsearch}
+      ELASTICSEARCH_PORT: ${ELASTICSEARCH_PORT:-9200}
+      ELASTICSEARCH_USER:
+      ELASTICSEARCH_PASS:
+      ELASTICSEARCH_NAMESPACE:
+      ELASTICSEARCH_REINDEX:
+
+      NGINX_PORT: ${NGINX_PORT:-8080}
+      NGINX_CLIENT_MAX_BODY_SIZE:
+      NGINX_SERVER_NAME: ${NGINX_SERVER_NAME:-}
+      NGINX_SERVER_SCHEME: http
+      RAILS_TRUSTED_PROXIES: ${RAILS_TRUSTED_PROXIES:-172.16.0.0/12,10.0.0.0/8}
+      ZAMMAD_HTTP_TYPE: http
+      ZAMMAD_FQDN: localhost
+
+      # Email is intentionally not configured for local dev.
+      # Outbound notifications are silently dropped — no SMTP, no sendmail.
+      ZAMMAD_SENDMAIL_LOCATION: "/usr/bin/true"
+
+      ZAMMAD_WEB_CONCURRENCY:
+      ZAMMAD_MANAGE_SESSIONS_JOBS_WORKERS:
+      ZAMMAD_PROCESS_SESSIONS_JOBS_WORKERS:
+      ZAMMAD_PROCESS_SCHEDULED_JOBS_WORKERS:
+      ZAMMAD_PROCESS_DELAYED_JOBS_WORKERS:
+      ZAMMAD_PROCESS_DELAYED_JOBS_WORKER_THREADS:
+      ZAMMAD_PROCESS_DELAYED_AI_JOBS_WORKERS:
+      ZAMMAD_PROCESS_DELAYED_AI_JOBS_WORKER_THREADS:
+      ZAMMAD_PROCESS_DELAYED_COMMUNICATION_INBOUND_JOBS_WORKERS:
+      ZAMMAD_PROCESS_DELAYED_COMMUNICATION_INBOUND_JOBS_WORKER_THREADS:
+
+      # Admin user is created by setup.sh via `docker exec` + rails runner on first run.
+      # AUTOWIZARD is not used — it has unreliable timing with this image's init order.
+      AUTOWIZARD_JSON:
+      AUTOWIZARD_RELATIVE_PATH:
+
+    volumes:
+      # Bind-mount source directories so edits to app/ and lib/ are reflected
+      # after a container restart — no image rebuild needed.
+      # Gems, compiled assets, and node_modules stay inside the image.
+      - ../app:/opt/zammad/app
+      - ../lib:/opt/zammad/lib
+      - zammad-storage:/opt/zammad/storage
+    depends_on:
+      zammad-memcached:
+        condition: service_started
+      zammad-redis:
+        condition: service_started
+      zammad-elasticsearch:
+        condition: service_healthy
+      zammad-postgres:
+        condition: service_healthy
+    networks:
+      - zammad-net
+    # Allows Zammad containers to reach the host machine (e.g. for webhook delivery).
+    # host-gateway resolves on both Docker Desktop (Mac/Windows) and Linux.
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+services:
+  zammad-postgres:
+    image: postgres:${POSTGRES_VERSION:-17-alpine}
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-zammad}
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASS:-postgres}
+    # Exposed on 5433 to avoid conflict with any native Postgres running on 5432.
+    # Connect via: psql -h 127.0.0.1 -p 5433 -U postgres zammad
+    ports:
+      - "127.0.0.1:${POSTGRES_PORT:-5433}:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-postgres} -d ${POSTGRES_DB:-zammad}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+    networks:
+      - zammad-net
+
+  zammad-elasticsearch:
+    image: elasticsearch:${ELASTICSEARCH_VERSION:-8.17.4}
+    restart: unless-stopped
+    # Exposed to host so native Rails (bin/dev) can reach it directly.
+    ports:
+      - "127.0.0.1:9200:9200"
+    volumes:
+      - elasticsearch-data:/usr/share/elasticsearch/data
+    environment:
+      discovery.type: single-node
+      xpack.security.enabled: "false"
+      # Reduced heap for local development
+      ES_JAVA_OPTS: ${ELASTICSEARCH_JAVA_OPTS:--Xms512m -Xmx512m}
+    healthcheck:
+      test: ["CMD", "curl", "-sf", "http://127.0.0.1:9200/_cluster/health?wait_for_status=yellow&timeout=5s"]
+      interval: 15s
+      timeout: 10s
+      retries: 12
+      start_period: 90s
+    networks:
+      - zammad-net
+
+  zammad-memcached:
+    command: memcached -m 128M
+    image: memcached:${MEMCACHE_VERSION:-1.6.41-alpine}
+    restart: unless-stopped
+    # Exposed to host so native Rails (bin/dev) can reach it directly.
+    ports:
+      - "127.0.0.1:11211:11211"
+    networks:
+      - zammad-net
+
+  zammad-redis:
+    image: redis:${REDIS_VERSION:-8.0.2-alpine}
+    restart: unless-stopped
+    volumes:
+      - redis-data:/data
+    networks:
+      - zammad-net
+
+  zammad-init:
+    <<: *zammad-service
+    command: ["zammad-init"]
+    restart: on-failure
+    user: 0:0
+
+  zammad-railsserver:
+    <<: *zammad-service
+    command: ["zammad-railsserver"]
+    depends_on:
+      zammad-memcached:
+        condition: service_started
+      zammad-redis:
+        condition: service_started
+      zammad-elasticsearch:
+        condition: service_healthy
+      zammad-init:
+        condition: service_completed_successfully
+
+  zammad-websocket:
+    <<: *zammad-service
+    command: ["zammad-websocket"]
+    depends_on:
+      zammad-memcached:
+        condition: service_started
+      zammad-redis:
+        condition: service_started
+      zammad-elasticsearch:
+        condition: service_healthy
+      zammad-init:
+        condition: service_completed_successfully
+
+  zammad-scheduler:
+    <<: *zammad-service
+    command: ["zammad-scheduler"]
+    depends_on:
+      zammad-memcached:
+        condition: service_started
+      zammad-redis:
+        condition: service_started
+      zammad-elasticsearch:
+        condition: service_healthy
+      zammad-init:
+        condition: service_completed_successfully
+
+  zammad-nginx:
+    <<: *zammad-service
+    command: ["zammad-nginx"]
+    ports:
+      - "3001:8080"
+    depends_on:
+      zammad-railsserver:
+        condition: service_started
+
+networks:
+  zammad-net:
+    name: zammad-local-net
+
+volumes:
+  postgres-data:
+    driver: local
+  elasticsearch-data:
+    driver: local
+  redis-data:
+    driver: local
+  zammad-storage:
+    driver: local

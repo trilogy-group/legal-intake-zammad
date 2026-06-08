@@ -1,0 +1,64 @@
+{
+  "groups": [
+    {
+      "signature_id": 1,
+      "email_address_id": null,
+      "name": "Users",
+      "name_last": "Users",
+      "parent_id": null,
+      "assignment_timeout": null,
+      "follow_up_possible": "reject",
+      "reopen_time_in_days": null,
+      "follow_up_assignment": true,
+      "active": true,
+      "shared_drafts": true,
+      "summary_generation": "global_default",
+      "note": "Standard Group/Pool for Tickets."
+    },
+    {
+      "signature_id": null,
+      "email_address_id": null,
+      "name": "Existing Vendor Intake",
+      "name_last": "Existing Vendor Intake",
+      "parent_id": null,
+      "assignment_timeout": null,
+      "follow_up_possible": "yes",
+      "reopen_time_in_days": null,
+      "follow_up_assignment": true,
+      "active": true,
+      "shared_drafts": true,
+      "summary_generation": "global_default",
+      "note": "This is the preferred method to sign up additional work for a vendor.  You will upload and existing vendor contract and answer a few questions.  "
+    },
+    {
+      "signature_id": null,
+      "email_address_id": null,
+      "name": "Property Leases",
+      "name_last": "Property Leases",
+      "parent_id": null,
+      "assignment_timeout": null,
+      "follow_up_possible": "yes",
+      "reopen_time_in_days": null,
+      "follow_up_assignment": true,
+      "active": true,
+      "shared_drafts": true,
+      "summary_generation": "global_default",
+      "note": "This is an intake system to initially review leases or subleases prior to submitting to legal."
+    },
+    {
+      "signature_id": null,
+      "email_address_id": null,
+      "name": "Software Development Vendor Intake",
+      "name_last": "Software Development Vendor Intake",
+      "parent_id": null,
+      "assignment_timeout": null,
+      "follow_up_possible": "yes",
+      "reopen_time_in_days": null,
+      "follow_up_assignment": true,
+      "active": true,
+      "shared_drafts": true,
+      "summary_generation": "global_default",
+      "note": "This is the preferred method to sign up new or additional work from a software or other IP producing vendor.  You will upload proposed forms from the vendor and existing vendor contract and answer a few questions.  If they are willing to use our form"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "organizations": [
+    {
+      "name": "Clone: Zammad Foundation",
+      "shared": true,
+      "domain": "",
+      "domain_assignment": false,
+      "active": false,
+      "vip": false,
+      "note": "",
+      "secondary_member_ids": []
+    },
+    {
+      "name": "test",
+      "shared": true,
+      "domain": "",
+      "domain_assignment": false,
+      "active": false,
+      "vip": false,
+      "note": "",
+      "secondary_member_ids": []
+    },
+    {
+      "name": "test2",
+      "shared": true,
+      "domain": "",
+      "domain_assignment": false,
+      "active": false,
+      "vip": false,
+      "note": "",
+      "secondary_member_ids": [5, 112]
+    }
+  ]
+}

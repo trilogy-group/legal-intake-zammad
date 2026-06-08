@@ -1,0 +1,550 @@
+{
+  "schedulers": [
+    {
+      "name": "Reminder for the Ticket",
+      "timeplan": {
+        "days": {
+          "Mon": true,
+          "Tue": true,
+          "Wed": true,
+          "Thu": true,
+          "Fri": true,
+          "Sat": true,
+          "Sun": true
+        },
+        "hours": {
+          "0": false,
+          "1": false,
+          "2": false,
+          "3": false,
+          "4": false,
+          "5": false,
+          "6": false,
+          "7": false,
+          "8": false,
+          "9": false,
+          "10": false,
+          "11": true,
+          "12": false,
+          "13": false,
+          "14": false,
+          "15": false,
+          "16": false,
+          "17": false,
+          "18": false,
+          "19": false,
+          "20": false,
+          "21": false,
+          "22": false,
+          "23": false
+        },
+        "minutes": {
+          "0": true,
+          "10": false,
+          "20": false,
+          "30": false,
+          "40": false,
+          "50": false
+        }
+      },
+      "object": "Ticket",
+      "condition": {
+        "ticket.state_id": {
+          "operator": "is",
+          "value": ["17"]
+        },
+        "ticket.pending_time": {
+          "operator": "after (relative)",
+          "value": "3",
+          "range": "day"
+        }
+      },
+      "perform": {
+        "notification.email": {
+          "body": "<div style=\"font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;\">\n  <div style=\"text-align: center; margin-bottom: 32px;\">\n    <h1 style=\"font-size: 24px; font-weight: bold; color: #1f2937; margin: 0;\">Legal Intake</h1>\n  </div>\n  \n  <p style=\"font-size: 16px;\">Hello #{ticket.customer.firstname},</p>\n  \n  <p style=\"font-size: 16px;\">\n    This is a reminder regarding your request \"<strong>#{ticket.title}</strong>\" (Request ##{ticket.number}).\n  </p>\n  \n  <p style=\"font-size: 16px;\">\n    We're waiting for your response to proceed with this request. Please review and respond when possible.\n  </p>\n  \n  <div style=\"text-align: center; margin: 32px 0;\">\n    <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\" style=\"background-color: #f59e0b; color: #ffffff; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 500; display: inline-block;\">\n      View and Respond\n    </a>\n  </div>\n  \n  <p style=\"font-size: 14px; color: #6b7280;\">\n    If you're unable to click the button above, you can copy and paste this link:<br>\n    <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\">#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}</a>\n  </p>\n</div>",
+          "internal": "false",
+          "recipient": ["ticket_customer"],
+          "subject": "Reminder: Your request \"#{ticket.title}\"",
+          "include_attachments": "false"
+        },
+        "ticket.state_id": {
+          "value": "16"
+        }
+      },
+      "disable_notification": false,
+      "pid": null,
+      "localization": "system",
+      "timezone": "system",
+      "note": "Please review the ticket.",
+      "active": false
+    },
+    {
+      "name": "Auto-close inactive tickets after 30 days",
+      "timeplan": {
+        "days": {
+          "Mon": true,
+          "Tue": true,
+          "Wed": true,
+          "Thu": true,
+          "Fri": true,
+          "Sat": true,
+          "Sun": true
+        },
+        "hours": {
+          "0": false,
+          "1": false,
+          "2": false,
+          "3": false,
+          "4": false,
+          "5": false,
+          "6": false,
+          "7": false,
+          "8": false,
+          "9": false,
+          "10": false,
+          "11": true,
+          "12": false,
+          "13": false,
+          "14": false,
+          "15": false,
+          "16": false,
+          "17": false,
+          "18": false,
+          "19": false,
+          "20": false,
+          "21": false,
+          "22": false,
+          "23": false
+        },
+        "minutes": {
+          "0": true,
+          "10": false,
+          "20": false,
+          "30": false,
+          "40": false,
+          "50": false
+        }
+      },
+      "object": "Ticket",
+      "condition": {
+        "ticket.state_id": {
+          "operator": "is not",
+          "value": ["4", "5", "14"]
+        },
+        "ticket.last_contact_at": {
+          "operator": "before (relative)",
+          "value": "30",
+          "range": "day"
+        }
+      },
+      "perform": {
+        "notification.email": {
+          "body": "<div style=\"font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;\">\n  <div style=\"text-align: center; margin-bottom: 32px;\">\n    <h1 style=\"font-size: 24px; font-weight: bold; color: #1f2937; margin: 0;\">Legal Intake</h1>\n  </div>\n  \n  <p style=\"font-size: 16px;\">Hello,</p>\n  \n  <p style=\"font-size: 16px;\">\n    Your legal intake request \"<strong>#{ticket.title}</strong>\" (Request ##{ticket.number}) has been automatically closed due to 30 days of inactivity.\n  </p>\n  \n  <div style=\"background-color: #FEF3C7; border: 1px solid #F59E0B; border-radius: 8px; padding: 16px; margin: 24px 0;\">\n    <p style=\"font-size: 14px; color: #92400E; margin: 0 0 12px 0; font-weight: 600;\">Need to reopen this request?</p>\n    <p style=\"font-size: 14px; color: #78350F; margin: 0;\">Simply reply to this email with your update, and we'll reopen your case immediately.</p>\n  </div>\n  \n  <p style=\"font-size: 16px;\">\n    If you have a new legal matter, please submit a new request through our intake system.\n  </p>\n  \n  <div style=\"text-align: center; margin: 32px 0;\">\n    <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\" style=\"background-color: #6B7280; color: #ffffff; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 500; display: inline-block;\">\n      View Closed Request\n    </a>\n  </div>\n  \n  <p style=\"font-size: 14px; color: #6b7280;\">\n    If you're unable to click the button above, you can copy and paste this link:<br>\n    <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\">#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}</a>\n  </p>\n  \n  <p style=\"font-size: 14px; color: #6b7280; margin-top: 32px;\">\n    Best regards,<br>\n    Legal Intake Team\n  </p>\n</div>",
+          "internal": "false",
+          "recipient": ["ticket_customer"],
+          "subject": "Request closed due to inactivity : \"#{ticket.title}\"",
+          "include_attachments": "false"
+        },
+        "ticket.state_id": {
+          "value": "4"
+        }
+      },
+      "disable_notification": false,
+      "pid": null,
+      "localization": "system",
+      "timezone": "system",
+      "note": "Automatically closes tickets that have been inactive (no updates) for 30 days or more",
+      "active": false
+    },
+    {
+      "name": "Customer Reminder - 3 days (awaiting response)",
+      "timeplan": {
+        "days": {
+          "Mon": true,
+          "Tue": true,
+          "Wed": true,
+          "Thu": true,
+          "Fri": true,
+          "Sat": true,
+          "Sun": true
+        },
+        "hours": {
+          "0": false,
+          "1": false,
+          "2": false,
+          "3": false,
+          "4": false,
+          "5": false,
+          "6": false,
+          "7": false,
+          "8": false,
+          "9": false,
+          "10": false,
+          "11": true,
+          "12": false,
+          "13": false,
+          "14": false,
+          "15": false,
+          "16": false,
+          "17": false,
+          "18": false,
+          "19": false,
+          "20": false,
+          "21": false,
+          "22": false,
+          "23": false
+        },
+        "minutes": {
+          "0": true,
+          "10": false,
+          "20": false,
+          "30": false,
+          "40": false,
+          "50": false
+        }
+      },
+      "object": "Ticket",
+      "condition": {
+        "ticket.state_id": {
+          "operator": "is",
+          "value": ["17"]
+        },
+        "ticket.last_contact_customer_at": {
+          "operator": "before (relative)",
+          "value": "3",
+          "range": "day"
+        }
+      },
+      "perform": {
+        "notification.email": {
+          "body": "<div style=\"font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;\">\n  <div style=\"text-align: center; margin-bottom: 32px;\">\n    <h1 style=\"font-size: 24px; font-weight: bold; color: #1f2937; margin: 0;\">Legal Intake</h1>\n  </div>\n  \n  <p style=\"font-size: 16px;\">Hello #{ticket.customer.firstname},<br><br></p>\n  \n  <p style=\"font-size: 16px;\">\n    This is a reminder regarding your request \"<strong>#{ticket.title}</strong>\" (Request ##{ticket.number}).\n  <br><br></p>\n  \n  <p style=\"font-size: 16px;\">\n    We're waiting for your response to proceed with this request. Please review and respond as soon as possible.\n  </p>\n  \n  <div style=\"text-align: center; margin: 32px 0;\">\n    <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\" style=\"background-color: #f59e0b; color: #ffffff; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 500; display: inline-block;\">\n      View and Respond\n    </a>\n  </div>\n  \n  <p style=\"font-size: 14px; color: #6b7280;\">\n    If you're unable to click the button above, you can copy and paste this link:<br>\n    <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\">#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}</a>\n  </p>\n</div>",
+          "internal": "false",
+          "recipient": [
+            "ticket_owner",
+            "ticket_customer",
+            "ticket_shared_access_users"
+          ],
+          "subject": "Action Required: Please respond to your request \"#{ticket.title}\"",
+          "include_attachments": "false"
+        }
+      },
+      "disable_notification": false,
+      "pid": null,
+      "localization": "system",
+      "timezone": "system",
+      "note": "Reminds customer after 3 days when ticket is in awaiting_response status with no updates",
+      "active": true
+    },
+    {
+      "name": "Attorney Reminder - 3 days (last comment from customer)",
+      "timeplan": {
+        "days": {
+          "Mon": true,
+          "Tue": true,
+          "Wed": true,
+          "Thu": true,
+          "Fri": true,
+          "Sat": true,
+          "Sun": true
+        },
+        "hours": {
+          "0": false,
+          "1": false,
+          "2": false,
+          "3": false,
+          "4": false,
+          "5": false,
+          "6": false,
+          "7": false,
+          "8": false,
+          "9": false,
+          "10": false,
+          "11": true,
+          "12": false,
+          "13": false,
+          "14": false,
+          "15": false,
+          "16": false,
+          "17": false,
+          "18": false,
+          "19": false,
+          "20": false,
+          "21": false,
+          "22": false,
+          "23": false
+        },
+        "minutes": {
+          "0": true,
+          "10": false,
+          "20": false,
+          "30": false,
+          "40": false,
+          "50": false
+        }
+      },
+      "object": "Ticket",
+      "condition": {
+        "ticket.state_id": {
+          "operator": "is not",
+          "value": ["17"]
+        },
+        "ticket.last_contact_agent_at": {
+          "operator": "before (relative)",
+          "value": "3",
+          "range": "day"
+        }
+      },
+      "perform": {
+        "notification.email": {
+          "body": "<div style=\"font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;\">\n  <div style=\"text-align: center; margin-bottom: 32px;\">\n    <h1 style=\"font-size: 24px; font-weight: bold; color: #1f2937; margin: 0;\">Legal Intake</h1>\n  </div>\n  \n  <p style=\"font-size: 16px;\">Hello #{ticket.owner.firstname},<br><br></p>\n  \n  <p style=\"font-size: 16px;\">\n    This is a reminder regarding the request \"<strong>#{ticket.title}</strong>\" (Request ##{ticket.number}).\n  <br><br></p>\n  \n  <p style=\"font-size: 16px;\">\n    The customer has responded and is waiting for your review. Please review the ticket and respond to the customer as soon as possible.\n  </p>\n  \n  <div style=\"text-align: center; margin: 32px 0;\">\n    <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\" style=\"background-color: #f59e0b; color: #ffffff; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 500; display: inline-block;\">\n      View Ticket\n    </a>\n  </div>\n  \n  <p style=\"font-size: 14px; color: #6b7280;\">\n    If you're unable to click the button above, you can copy and paste this link:<br>\n    <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\">#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}</a>\n  </p>\n</div>",
+          "internal": "false",
+          "recipient": [
+            "ticket_owner",
+            "ticket_customer",
+            "ticket_shared_access_users"
+          ],
+          "subject": "Reminder: Customer waiting for response - \"#{ticket.title}\"",
+          "include_attachments": "false"
+        }
+      },
+      "disable_notification": false,
+      "pid": null,
+      "localization": "system",
+      "timezone": "system",
+      "note": "Reminds attorney after 3 days when ticket is in under_legal_review status with no updates",
+      "active": true
+    },
+    {
+      "name": "Inactivity Warning - 13 days (awaiting response)",
+      "timeplan": {
+        "days": {
+          "Mon": true,
+          "Tue": true,
+          "Wed": true,
+          "Thu": true,
+          "Fri": true,
+          "Sat": true,
+          "Sun": true
+        },
+        "hours": {
+          "0": false,
+          "1": false,
+          "2": false,
+          "3": false,
+          "4": false,
+          "5": false,
+          "6": false,
+          "7": false,
+          "8": false,
+          "9": false,
+          "10": false,
+          "11": true,
+          "12": false,
+          "13": false,
+          "14": false,
+          "15": false,
+          "16": false,
+          "17": false,
+          "18": false,
+          "19": false,
+          "20": false,
+          "21": false,
+          "22": false,
+          "23": false
+        },
+        "minutes": {
+          "0": true,
+          "10": false,
+          "20": false,
+          "30": false,
+          "40": false,
+          "50": false
+        }
+      },
+      "object": "Ticket",
+      "condition": {
+        "ticket.state_id": {
+          "operator": "is",
+          "value": ["17"]
+        },
+        "ticket.last_contact_customer_at": {
+          "operator": "before (relative)",
+          "value": "13",
+          "range": "day"
+        }
+      },
+      "perform": {
+        "notification.email": {
+          "body": "<div style=\"font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;\">\n  <div style=\"text-align: center; margin-bottom: 32px;\">\n    <h1 style=\"font-size: 24px; font-weight: bold; color: #1f2937; margin: 0;\">Legal Intake</h1>\n  </div>\n  \n  <p style=\"font-size: 16px;\">Hello #{ticket.customer.firstname},<br><br></p>\n  \n  <p style=\"font-size: 16px;\">\n    This is an important reminder regarding your request \"<strong>#{ticket.title}</strong>\" (Request ##{ticket.number}).\n  </p>\n  \n  <div style=\"background-color: #FEF3C7; border: 1px solid #F59E0B; border-radius: 8px; padding: 16px; margin: 24px 0;\">\n    <p style=\"font-size: 14px; color: #92400E; margin: 0 0 12px 0; font-weight: 600;\">⚠️ Action Required</p>\n    <p style=\"font-size: 14px; color: #78350F; margin: 0;\">If we don't receive a response within the next 48 hours, this request will be automatically closed due to inactivity.</p>\n  </div>\n  \n  <p style=\"font-size: 16px;\">\n    Please respond to keep this request active.\n  </p>\n  \n  <div style=\"text-align: center; margin: 32px 0;\">\n    <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\" style=\"background-color: #f59e0b; color: #ffffff; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 500; display: inline-block;\">\n      View and Respond\n    </a>\n  </div>\n  \n  <p style=\"font-size: 14px; color: #6b7280;\">\n    If you're unable to click the button above, you can copy and paste this link:<br>\n    <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\">#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}</a>\n  </p>\n</div>",
+          "internal": "false",
+          "recipient": [
+            "ticket_owner",
+            "ticket_customer",
+            "ticket_shared_access_users"
+          ],
+          "subject": "⚠️ Action Required: Your request will be closed in 48 hours - \"#{ticket.title}\"",
+          "include_attachments": "false"
+        }
+      },
+      "disable_notification": false,
+      "pid": null,
+      "localization": "system",
+      "timezone": "system",
+      "note": "Warns customer at 13 days that ticket will be closed in 48 hours if no updates (awaiting_response status)",
+      "active": true
+    },
+    {
+      "name": "Auto-close inactive tickets after 15 days (awaiting response)",
+      "timeplan": {
+        "days": {
+          "Mon": true,
+          "Tue": true,
+          "Wed": true,
+          "Thu": true,
+          "Fri": true,
+          "Sat": true,
+          "Sun": true
+        },
+        "hours": {
+          "0": false,
+          "1": false,
+          "2": false,
+          "3": false,
+          "4": false,
+          "5": false,
+          "6": false,
+          "7": false,
+          "8": false,
+          "9": false,
+          "10": false,
+          "11": true,
+          "12": false,
+          "13": false,
+          "14": false,
+          "15": false,
+          "16": false,
+          "17": false,
+          "18": false,
+          "19": false,
+          "20": false,
+          "21": false,
+          "22": false,
+          "23": false
+        },
+        "minutes": {
+          "0": true,
+          "10": false,
+          "20": false,
+          "30": false,
+          "40": false,
+          "50": false
+        }
+      },
+      "object": "Ticket",
+      "condition": {
+        "ticket.state_id": {
+          "operator": "is",
+          "value": ["17"]
+        },
+        "ticket.last_contact_customer_at": {
+          "operator": "before (relative)",
+          "value": "15",
+          "range": "day"
+        }
+      },
+      "perform": {
+        "notification.email": {
+          "body": "<div style=\"font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;\">\n  <div style=\"text-align: center; margin-bottom: 32px;\">\n    <h1 style=\"font-size: 24px; font-weight: bold; color: #1f2937; margin: 0;\">Legal Intake</h1>\n  </div>\n  \n  <p style=\"font-size: 16px; margin-bottom: 24px;\">Hello #{ticket.customer.firstname},</p>\n  \n  <p style=\"font-size: 16px;\">\n    Your legal intake request \"<strong>#{ticket.title}</strong>\" (Request ##{ticket.number}) has been automatically closed due to 15 days of inactivity.\n  </p><p style=\"font-size: 16px;\"><br></p>\n  \n  <p style=\"font-size: 16px;\">\n    If you have a new legal matter, please submit a new request through our intake system.\n  </p>\n  \n  <div style=\"text-align: center; margin: 32px 0;\">\n    <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\" style=\"background-color: #6B7280; color: #ffffff; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 500; display: inline-block;\">\n      View Closed Request\n    </a>\n  </div>\n  \n  <p style=\"font-size: 14px; color: #6b7280;\">\n    If you're unable to click the button above, you can copy and paste this link:<br>\n    <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\">#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}</a>\n  </p>\n  \n  <p style=\"font-size: 14px; color: #6b7280; margin-top: 32px;\">\n    Best regards,<br>\n    Legal Intake Team\n  </p>\n</div>",
+          "internal": "false",
+          "recipient": [
+            "ticket_owner",
+            "ticket_customer",
+            "ticket_shared_access_users"
+          ],
+          "subject": "Request closed due to inactivity: \"#{ticket.title}\"",
+          "include_attachments": "false"
+        },
+        "ticket.state_id": {
+          "value": "4"
+        }
+      },
+      "disable_notification": false,
+      "pid": null,
+      "localization": "system",
+      "timezone": "system",
+      "note": "Automatically closes tickets that have been in awaiting_response status with no updates for 15 days or more",
+      "active": true
+    },
+    {
+      "name": "Auto Close tickets in submission in progress state for >12 hours",
+      "timeplan": {
+        "days": {
+          "Mon": true,
+          "Tue": true,
+          "Wed": true,
+          "Thu": true,
+          "Fri": true,
+          "Sat": true,
+          "Sun": true
+        },
+        "hours": {
+          "0": true,
+          "1": false,
+          "2": false,
+          "3": false,
+          "4": false,
+          "5": false,
+          "6": false,
+          "7": false,
+          "8": false,
+          "9": false,
+          "10": false,
+          "11": false,
+          "12": false,
+          "13": false,
+          "14": false,
+          "15": false,
+          "16": false,
+          "17": false,
+          "18": false,
+          "19": false,
+          "20": false,
+          "21": false,
+          "22": false,
+          "23": false
+        },
+        "minutes": {
+          "0": true,
+          "10": false,
+          "20": false,
+          "30": false,
+          "40": false,
+          "50": false
+        }
+      },
+      "object": "Ticket",
+      "condition": {
+        "ticket.state_id": {
+          "operator": "is",
+          "value": ["22"]
+        },
+        "ticket.created_at": {
+          "operator": "before (relative)",
+          "value": "12",
+          "range": "hour"
+        }
+      },
+      "perform": {
+        "ticket.state_id": {
+          "value": "4"
+        }
+      },
+      "disable_notification": true,
+      "pid": null,
+      "localization": "system",
+      "timezone": "system",
+      "note": "",
+      "active": true
+    }
+  ]
+}

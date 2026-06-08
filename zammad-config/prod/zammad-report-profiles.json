@@ -1,0 +1,10 @@
+{
+  "report_profiles": [
+    {
+      "name": "-all-",
+      "condition": {},
+      "active": true,
+      "role_ids": []
+    }
+  ]
+}

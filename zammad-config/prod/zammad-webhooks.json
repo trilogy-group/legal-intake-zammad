@@ -1,0 +1,30 @@
+{
+  "webhooks": [
+    {
+      "name": "Legal Agent - @legal-agent commands",
+      "endpoint": "https://legal-intake.ti.trilogy.com/api/webhooks/zammad",
+      "http_method": "post",
+      "ssl_verify": true,
+      "basic_auth_username": "",
+      "note": "Fires on internal notes containing @legal-agent. Secret must match ZAMMAD_WEBHOOK_SECRET in Amplify prod env vars.",
+      "pre_defined_webhook_type": null,
+      "customized_payload": false,
+      "custom_payload": null,
+      "active": true,
+      "preferences": {}
+    },
+    {
+      "name": "Ready for Signature",
+      "endpoint": "https://legal-intake.ti.trilogy.com/api/webhooks/zammad",
+      "http_method": "post",
+      "ssl_verify": true,
+      "basic_auth_username": "",
+      "note": "",
+      "pre_defined_webhook_type": null,
+      "customized_payload": false,
+      "custom_payload": null,
+      "preferences": {},
+      "active": true
+    }
+  ]
+}

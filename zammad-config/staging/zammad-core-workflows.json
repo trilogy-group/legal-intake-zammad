@@ -1,0 +1,546 @@
+{
+  "core_workflows": [
+    {
+      "name": "Legal Admin Capabilities : Allow editing Owner field",
+      "object": "Ticket",
+      "active": true,
+      "stop_after_match": false,
+      "changeable": true,
+      "priority": 1000,
+      "preferences": {
+        "screen": []
+      },
+      "condition_saved": {},
+      "condition_selected": {
+        "session.role_ids": {
+          "operator": "is",
+          "value": ["4"]
+        }
+      },
+      "perform": {
+        "ticket.owner_id": {
+          "operator": "show",
+          "show": "true"
+        }
+      }
+    },
+    {
+      "name": "Make ticket fields read-only for customers",
+      "object": "Ticket",
+      "active": true,
+      "stop_after_match": false,
+      "changeable": true,
+      "priority": 900,
+      "preferences": {},
+      "condition_saved": {},
+      "condition_selected": {
+        "session.role_ids": {
+          "operator": "is",
+          "value": ["3"]
+        }
+      },
+      "perform": {
+        "ticket.state_id": {
+          "operator": "set_readonly",
+          "set_readonly": true
+        },
+        "ticket.li_request_ref": {
+          "operator": "set_readonly",
+          "set_readonly": true
+        },
+        "ticket.li_legal_entity": {
+          "operator": "set_readonly",
+          "set_readonly": true
+        },
+        "ticket.li_product": {
+          "operator": "set_readonly",
+          "set_readonly": true
+        },
+        "ticket.li_business_unit": {
+          "operator": "set_readonly",
+          "set_readonly": true
+        },
+        "ticket.li_assignee": {
+          "operator": "remove",
+          "remove": true
+        },
+        "ticket.li_requires_counterparty_signature": {
+          "operator": "set_readonly",
+          "set_readonly": true
+        },
+        "ticket.li_invoice_reference": {
+          "operator": "set_readonly",
+          "set_readonly": true
+        }
+      }
+    },
+    {
+      "name": "Hide customer creation fields for agents",
+      "object": "User",
+      "active": true,
+      "stop_after_match": false,
+      "changeable": true,
+      "priority": 500,
+      "preferences": {
+        "screen": ["create", "edit"]
+      },
+      "condition_saved": {},
+      "condition_selected": {
+        "session.role_ids": {
+          "operator": "is",
+          "value": ["2", "3", "4"]
+        }
+      },
+      "perform": {
+        "customer.firstname": {
+          "operator": "set_readonly",
+          "set_readonly": "true"
+        },
+        "customer.lastname": {
+          "operator": "set_readonly",
+          "set_readonly": "true"
+        },
+        "customer.email": {
+          "operator": "set_readonly",
+          "set_readonly": "true"
+        },
+        "customer.web": {
+          "operator": "remove",
+          "remove": "true"
+        },
+        "customer.phone": {
+          "operator": "remove",
+          "remove": "true"
+        },
+        "customer.mobile": {
+          "operator": "remove",
+          "remove": "true"
+        },
+        "customer.fax": {
+          "operator": "remove",
+          "remove": "true"
+        }
+      }
+    },
+    {
+      "name": "Agent restrictions: Hide Priority and Request ID",
+      "object": "Ticket",
+      "active": true,
+      "stop_after_match": false,
+      "changeable": true,
+      "priority": 800,
+      "preferences": {},
+      "condition_saved": {},
+      "condition_selected": {
+        "session.role_ids": {
+          "operator": "is",
+          "value": ["2", "4"]
+        }
+      },
+      "perform": {
+        "ticket.priority_id": {
+          "operator": "remove",
+          "remove": true
+        },
+        "ticket.li_request_ref": {
+          "operator": "remove",
+          "remove": true
+        }
+      }
+    },
+    {
+      "name": "Agent restrictions: Make customer read-only",
+      "object": "Ticket",
+      "active": true,
+      "stop_after_match": false,
+      "changeable": true,
+      "priority": 790,
+      "preferences": {},
+      "condition_saved": {},
+      "condition_selected": {
+        "session.role_ids": {
+          "operator": "is",
+          "value": ["2", "4"]
+        }
+      },
+      "perform": {
+        "ticket.customer_id": {
+          "operator": "set_readonly",
+          "set_readonly": true
+        }
+      }
+    },
+    {
+      "name": "Agent restrictions: Make metadata read-only except tags and state",
+      "object": "Ticket",
+      "active": true,
+      "stop_after_match": false,
+      "changeable": true,
+      "priority": 780,
+      "preferences": {},
+      "condition_saved": {},
+      "condition_selected": {
+        "session.role_ids": {
+          "operator": "is",
+          "value": ["2"]
+        }
+      },
+      "perform": {
+        "ticket.type": {
+          "operator": "set_readonly",
+          "set_readonly": true
+        },
+        "ticket.group_id": {
+          "operator": "set_readonly",
+          "set_readonly": true
+        },
+        "ticket.li_legal_entity": {
+          "operator": "set_readonly",
+          "set_readonly": true
+        },
+        "ticket.li_product": {
+          "operator": "set_readonly",
+          "set_readonly": true
+        },
+        "ticket.li_business_unit": {
+          "operator": "set_readonly",
+          "set_readonly": true
+        },
+        "ticket.li_assignee": {
+          "operator": "remove",
+          "remove": true
+        },
+        "ticket.li_requires_counterparty_signature": {
+          "operator": "set_readonly",
+          "set_readonly": true
+        },
+        "ticket.li_invoice_reference": {
+          "operator": "set_readonly",
+          "set_readonly": true
+        }
+      }
+    },
+    {
+      "name": "Agent restrictions: Hide phone/call article type",
+      "object": "Ticket",
+      "active": true,
+      "stop_after_match": false,
+      "changeable": true,
+      "priority": 770,
+      "preferences": {},
+      "condition_saved": {},
+      "condition_selected": {
+        "session.role_ids": {
+          "operator": "is",
+          "value": ["2", "4"]
+        }
+      },
+      "perform": {
+        "article.type_id": {
+          "operator": "remove_option",
+          "remove_option": "5"
+        }
+      }
+    },
+    {
+      "name": "Customer restrictions: Force articles to be public",
+      "object": "Ticket",
+      "active": true,
+      "stop_after_match": false,
+      "changeable": true,
+      "priority": 760,
+      "preferences": {
+        "screen": ["create_middle", "edit"]
+      },
+      "condition_saved": {},
+      "condition_selected": {
+        "session.role_ids": {
+          "operator": "is",
+          "value": ["3"]
+        }
+      },
+      "perform": {
+        "article.internal": {
+          "operator": "remove",
+          "remove": true
+        }
+      }
+    },
+    {
+      "name": "Restrictions : Disallow editing owner field",
+      "object": "Ticket",
+      "active": true,
+      "stop_after_match": false,
+      "changeable": true,
+      "priority": 500,
+      "preferences": {
+        "screen": []
+      },
+      "condition_saved": {},
+      "condition_selected": {
+        "session.role_ids": {
+          "operator": "is",
+          "value": ["1", "3"]
+        }
+      },
+      "perform": {
+        "ticket.owner_id": {
+          "operator": "set_readonly",
+          "set_readonly": "true"
+        }
+      }
+    },
+    {
+      "name": "Agent & Legal Admin Capabilities : Allow editing Owner field",
+      "object": "Ticket",
+      "active": true,
+      "stop_after_match": false,
+      "changeable": true,
+      "priority": 1000,
+      "preferences": {
+        "screen": []
+      },
+      "condition_saved": {},
+      "condition_selected": {
+        "session.role_ids": {
+          "operator": "is",
+          "value": ["2", "4"]
+        }
+      },
+      "perform": {
+        "ticket.owner_id": {
+          "operator": "show",
+          "show": "true"
+        }
+      }
+    },
+    {
+      "name": "Agent restrictions: Make user profile fields read-only",
+      "object": "User",
+      "active": true,
+      "stop_after_match": false,
+      "changeable": true,
+      "priority": 500,
+      "preferences": {
+        "screen": ["create", "edit"]
+      },
+      "condition_saved": {},
+      "condition_selected": {
+        "session.role_ids": {
+          "operator": "is",
+          "value": ["2"]
+        }
+      },
+      "perform": {
+        "customer.firstname": {
+          "operator": "set_readonly",
+          "set_readonly": "true"
+        },
+        "customer.lastname": {
+          "operator": "set_readonly",
+          "set_readonly": "true"
+        },
+        "customer.email": {
+          "operator": "set_readonly",
+          "set_readonly": "true"
+        },
+        "customer.organization_id": {
+          "operator": "set_readonly",
+          "set_readonly": "true"
+        },
+        "customer.organization_ids": {
+          "operator": "set_readonly",
+          "set_readonly": "true"
+        },
+        "customer.department": {
+          "operator": "set_readonly",
+          "set_readonly": "true"
+        },
+        "customer.address": {
+          "operator": "set_readonly",
+          "set_readonly": "true"
+        },
+        "customer.note": {
+          "operator": "set_readonly",
+          "set_readonly": "true"
+        },
+        "customer.vip": {
+          "operator": "set_readonly",
+          "set_readonly": "true"
+        },
+        "customer.active": {
+          "operator": "set_readonly",
+          "set_readonly": "true"
+        },
+        "customer.web": {
+          "operator": "remove",
+          "remove": "true"
+        },
+        "customer.phone": {
+          "operator": "remove",
+          "remove": "true"
+        },
+        "customer.mobile": {
+          "operator": "remove",
+          "remove": "true"
+        },
+        "customer.fax": {
+          "operator": "remove",
+          "remove": "true"
+        }
+      }
+    },
+    {
+      "name": "Legal Admin restrictions: Make user profile fields read-only except Active",
+      "object": "User",
+      "active": true,
+      "stop_after_match": false,
+      "changeable": true,
+      "priority": 501,
+      "preferences": {
+        "screen": ["create", "edit"]
+      },
+      "condition_saved": {},
+      "condition_selected": {
+        "session.role_ids": {
+          "operator": "is",
+          "value": ["4"]
+        }
+      },
+      "perform": {
+        "customer.firstname": {
+          "operator": "set_readonly",
+          "set_readonly": "true"
+        },
+        "customer.lastname": {
+          "operator": "set_readonly",
+          "set_readonly": "true"
+        },
+        "customer.email": {
+          "operator": "set_readonly",
+          "set_readonly": "true"
+        },
+        "customer.organization_id": {
+          "operator": "set_readonly",
+          "set_readonly": "true"
+        },
+        "customer.organization_ids": {
+          "operator": "set_readonly",
+          "set_readonly": "true"
+        },
+        "customer.department": {
+          "operator": "set_readonly",
+          "set_readonly": "true"
+        },
+        "customer.address": {
+          "operator": "set_readonly",
+          "set_readonly": "true"
+        },
+        "customer.note": {
+          "operator": "set_readonly",
+          "set_readonly": "true"
+        },
+        "customer.vip": {
+          "operator": "set_readonly",
+          "set_readonly": "true"
+        },
+        "customer.web": {
+          "operator": "remove",
+          "remove": "true"
+        },
+        "customer.phone": {
+          "operator": "remove",
+          "remove": "true"
+        },
+        "customer.mobile": {
+          "operator": "remove",
+          "remove": "true"
+        },
+        "customer.fax": {
+          "operator": "remove",
+          "remove": "true"
+        }
+      }
+    },
+    {
+      "name": "Legal Admin Capabilities : Allow editing custom fields",
+      "object": "Ticket",
+      "active": true,
+      "stop_after_match": false,
+      "changeable": true,
+      "priority": 1000,
+      "preferences": {
+        "screen": []
+      },
+      "condition_saved": {},
+      "condition_selected": {
+        "session.role_ids": {
+          "operator": "is",
+          "value": ["4"]
+        }
+      },
+      "perform": {
+        "ticket.li_legal_entity": {
+          "operator": "show",
+          "show": true
+        },
+        "ticket.li_product": {
+          "operator": "show",
+          "show": true
+        },
+        "ticket.li_business_unit": {
+          "operator": "show",
+          "show": true
+        },
+        "ticket.li_requires_counterparty_signature": {
+          "operator": "show",
+          "show": true
+        }
+      }
+    },
+    {
+      "name": "Invoice Reference: read-only for legal admins",
+      "object": "Ticket",
+      "active": true,
+      "stop_after_match": false,
+      "changeable": true,
+      "priority": 1001,
+      "preferences": {},
+      "condition_saved": {},
+      "condition_selected": {
+        "session.role_ids": {
+          "operator": "is",
+          "value": ["4"]
+        }
+      },
+      "perform": {
+        "ticket.li_invoice_reference": {
+          "operator": "set_readonly",
+          "set_readonly": true
+        }
+      }
+    },
+    {
+      "name": "Invoice Reference: hidden for admins",
+      "object": "Ticket",
+      "active": true,
+      "stop_after_match": false,
+      "changeable": true,
+      "priority": 1001,
+      "preferences": {},
+      "condition_saved": {},
+      "condition_selected": {
+        "session.role_ids": {
+          "operator": "is",
+          "value": ["1"]
+        }
+      },
+      "perform": {
+        "ticket.li_invoice_reference": {
+          "operator": "remove",
+          "remove": true
+        }
+      }
+    }
+  ]
+}

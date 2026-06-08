@@ -1,0 +1,16 @@
+{
+  "report_profiles": [
+    {
+      "name": "Last month tickets",
+      "active": true,
+      "condition": {
+        "ticket.updated_at": {
+          "operator": "before (relative)",
+          "value": "1",
+          "range": "month"
+        }
+      },
+      "role_ids": [4, 1]
+    }
+  ]
+}

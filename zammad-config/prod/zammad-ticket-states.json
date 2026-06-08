@@ -1,0 +1,224 @@
+{
+  "ticket_states": [
+    {
+      "name": "new",
+      "state_type_id": 1,
+      "next_state_id": null,
+      "ignore_escalation": false,
+      "default_create": true,
+      "default_follow_up": false,
+      "note": null,
+      "active": true
+    },
+    {
+      "name": "open",
+      "state_type_id": 2,
+      "next_state_id": null,
+      "ignore_escalation": false,
+      "default_create": false,
+      "default_follow_up": true,
+      "note": null,
+      "active": false
+    },
+    {
+      "name": "pending reminder",
+      "state_type_id": 3,
+      "next_state_id": null,
+      "ignore_escalation": true,
+      "default_create": false,
+      "default_follow_up": false,
+      "note": "",
+      "active": false
+    },
+    {
+      "name": "closed",
+      "state_type_id": 5,
+      "next_state_id": null,
+      "ignore_escalation": true,
+      "default_create": false,
+      "default_follow_up": false,
+      "note": null,
+      "active": true
+    },
+    {
+      "name": "merged",
+      "state_type_id": 6,
+      "next_state_id": null,
+      "ignore_escalation": true,
+      "default_create": false,
+      "default_follow_up": false,
+      "note": null,
+      "active": true
+    },
+    {
+      "name": "pending close",
+      "state_type_id": 4,
+      "next_state_id": 4,
+      "ignore_escalation": true,
+      "default_create": false,
+      "default_follow_up": false,
+      "note": "",
+      "active": false
+    },
+    {
+      "name": "initiated",
+      "state_type_id": 2,
+      "next_state_id": null,
+      "ignore_escalation": false,
+      "default_create": false,
+      "default_follow_up": false,
+      "note": "Legal Intake import: initiated",
+      "active": false
+    },
+    {
+      "name": "documents_uploaded",
+      "state_type_id": 2,
+      "next_state_id": null,
+      "ignore_escalation": false,
+      "default_create": false,
+      "default_follow_up": false,
+      "note": "Legal Intake import: documents_uploaded",
+      "active": false
+    },
+    {
+      "name": "interactive_review",
+      "state_type_id": 2,
+      "next_state_id": null,
+      "ignore_escalation": false,
+      "default_create": false,
+      "default_follow_up": false,
+      "note": "Legal Intake import: interactive_review",
+      "active": false
+    },
+    {
+      "name": "summary_generated",
+      "state_type_id": 2,
+      "next_state_id": null,
+      "ignore_escalation": false,
+      "default_create": false,
+      "default_follow_up": false,
+      "note": "Legal Intake import: summary_generated",
+      "active": false
+    },
+    {
+      "name": "awaiting_counterparty_details",
+      "state_type_id": 2,
+      "next_state_id": null,
+      "ignore_escalation": false,
+      "default_create": false,
+      "default_follow_up": false,
+      "note": "Legal Intake import: awaiting_counterparty_details",
+      "active": false
+    },
+    {
+      "name": "ready_for_submission",
+      "state_type_id": 2,
+      "next_state_id": null,
+      "ignore_escalation": false,
+      "default_create": false,
+      "default_follow_up": false,
+      "note": "Legal Intake import: ready_for_submission",
+      "active": false
+    },
+    {
+      "name": "submission_in_progress",
+      "state_type_id": 2,
+      "next_state_id": null,
+      "ignore_escalation": false,
+      "default_create": false,
+      "default_follow_up": false,
+      "note": "Legal Intake import: submission_in_progress",
+      "active": true
+    },
+    {
+      "name": "submitted_to_legal",
+      "state_type_id": 2,
+      "next_state_id": null,
+      "ignore_escalation": false,
+      "default_create": false,
+      "default_follow_up": false,
+      "note": "Legal Intake import: submitted_to_legal",
+      "active": true
+    },
+    {
+      "name": "resolved",
+      "state_type_id": 5,
+      "next_state_id": null,
+      "ignore_escalation": false,
+      "default_create": false,
+      "default_follow_up": false,
+      "note": "Legal Intake import: resolved",
+      "active": true
+    },
+    {
+      "name": "failed",
+      "state_type_id": 5,
+      "next_state_id": null,
+      "ignore_escalation": false,
+      "default_create": false,
+      "default_follow_up": false,
+      "note": "Legal Intake import: failed",
+      "active": false
+    },
+    {
+      "name": "under_legal_review",
+      "state_type_id": 2,
+      "next_state_id": null,
+      "ignore_escalation": false,
+      "default_create": false,
+      "default_follow_up": false,
+      "note": "Legal Intake import: under_legal_review",
+      "active": true
+    },
+    {
+      "name": "awaiting_response",
+      "state_type_id": 2,
+      "next_state_id": null,
+      "ignore_escalation": false,
+      "default_create": false,
+      "default_follow_up": false,
+      "note": "Legal Intake import: awaiting_response",
+      "active": true
+    },
+    {
+      "name": "ready_for_signature",
+      "state_type_id": 2,
+      "next_state_id": null,
+      "ignore_escalation": false,
+      "default_create": false,
+      "default_follow_up": false,
+      "note": "Legal Intake import: ready_for_signature",
+      "active": true
+    },
+    {
+      "name": "sent_for_signature",
+      "state_type_id": 2,
+      "next_state_id": null,
+      "ignore_escalation": false,
+      "default_create": false,
+      "default_follow_up": false,
+      "note": "Legal Intake import: sent_for_signature",
+      "active": true
+    },
+    {
+      "name": "signed",
+      "state_type_id": 2,
+      "next_state_id": null,
+      "ignore_escalation": false,
+      "default_create": false,
+      "default_follow_up": false,
+      "note": "Legal Intake import: signed",
+      "active": true
+    },
+    {
+      "name": "tnc_documents_extracted",
+      "state_type_id": 2,
+      "next_state_id": null,
+      "ignore_escalation": false,
+      "default_create": false,
+      "default_follow_up": false,
+      "note": "Legal Intake import: tnc_documents_extracted",
+      "active": false
+    }
+  ]
+}

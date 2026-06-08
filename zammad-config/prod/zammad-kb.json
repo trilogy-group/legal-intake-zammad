@@ -1,0 +1,17 @@
+{
+  "knowledge_base": {
+    "iconset": "FontAwesome",
+    "color_highlight": "#38ae6a",
+    "color_header": "#f9fafb",
+    "color_header_link": "hsl(206,8%,50%)",
+    "homepage_layout": "grid",
+    "category_layout": "grid",
+    "active": true,
+    "show_feed_icon": false,
+    "custom_address": null,
+    "permission_ids": [],
+    "permissions_effective": []
+  },
+  "kb_id": 1,
+  "note": "This configuration represents the Knowledge Base settings. The KB must be initialized in Zammad UI before applying this config."
+}

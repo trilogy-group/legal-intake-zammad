@@ -1,0 +1,375 @@
+{
+  "triggers": [
+    {
+      "name": "Auto-transition: Awaiting Response → Under Legal Review",
+      "condition": {
+        "ticket.action": {
+          "operator": "is",
+          "value": "update"
+        },
+        "ticket.state_id": {
+          "operator": "is",
+          "value": [
+            "17"
+          ]
+        },
+        "article.sender_id": {
+          "operator": "is",
+          "value": [
+            "2"
+          ]
+        },
+        "article.internal": {
+          "operator": "is",
+          "value": [
+            "false"
+          ]
+        }
+      },
+      "perform": {
+        "notification.email": {
+          "body": "<div style=\"font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;\">\n  <div style=\"text-align: center; margin-bottom: 32px;\">\n    <h1 style=\"font-size: 24px; font-weight: bold; color: #1f2937; margin: 0;\">Legal Intake</h1>\n  </div>\n  \n  <p style=\"font-size: 16px;\">Hello #{recipient.firstname},<br><br></p>\n  \n  <p style=\"font-size: 16px;\">\n    Your ticket \"<strong>#{ticket.title}</strong>\" is now under legal review by #{current_user.firstname} #{current_user.lastname}.\n  <br><br></p>\n  \n  <p style=\"font-size: 16px;\">\n    The legal team is reviewing your ticket and will reach out if any additional information is needed.\n  </p>\n  \n  <div style=\"text-align: center; margin: 32px 0;\">\n    <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\" style=\"background-color: #6366f1; color: #ffffff; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 500; display: inline-block;\">\n      View Ticket\n    </a>\n  </div>\n  \n  <p style=\"color: rgb(107, 114, 128);\">\n    If you're unable to click the button above, you can copy and paste this link:<br>\n    <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\" style=\"\">#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}<br><span style=\"color: rgb(107, 114, 128); background-color: initial;\"><br><span style=\"font-size: 12px;\">You are receiving this because you are a member of the group of this ticket.</span></span><br></a></p>\n</div>",
+          "internal": "false",
+          "recipient": [
+            "ticket_owner",
+            "ticket_customer",
+            "ticket_shared_access_users"
+          ],
+          "subject": "Under Legal Review: #{ticket.title}",
+          "include_attachments": "false"
+        },
+        "ticket.state_id": {
+          "value": "16"
+        }
+      },
+      "disable_notification": false,
+      "localization": "system",
+      "timezone": "system",
+      "note": "Automatically moves ticket from 'Awaiting Response' to 'Under Legal Review' when customer posts any comment",
+      "activator": "action",
+      "execution_condition_mode": "selective",
+      "active": true
+    },
+    {
+      "name": "@legal-agent command — invoke webhook",
+      "condition": {
+        "ticket.action": {
+          "operator": "is",
+          "value": "update"
+        },
+        "article.body": {
+          "operator": "contains",
+          "value": "@legal-agent"
+        },
+        "article.internal": {
+          "operator": "is",
+          "value": [
+            "true"
+          ]
+        },
+        "article.created_by_id": {
+          "operator": "is not",
+          "value": [
+            "697"
+          ]
+        }
+      },
+      "perform": {
+        "notification.webhook": {
+          "webhook_id": "1"
+        }
+      },
+      "disable_notification": true,
+      "localization": "system",
+      "timezone": "system",
+      "note": "Fires the webhook when an internal note contains @legal-agent (excluding bot replies). Bot user ID: 697, Webhook ID: 1.",
+      "activator": "action",
+      "execution_condition_mode": "selective",
+      "active": true
+    },
+    {
+      "name": "@legal-agent bot — suppress notification emails",
+      "condition": {
+        "ticket.action": {
+          "operator": "is",
+          "value": "update"
+        },
+        "article.created_by_id": {
+          "operator": "is",
+          "value": [
+            "697"
+          ]
+        }
+      },
+      "perform": {
+        "ticket.tags": {
+          "operator": "add",
+          "value": ""
+        }
+      },
+      "disable_notification": true,
+      "localization": "system",
+      "timezone": "system",
+      "note": "Suppresses all agent/admin notification emails when the Legal Agent bot (user 697) posts an internal note.",
+      "activator": "action",
+      "execution_condition_mode": "selective",
+      "active": true
+    },
+    {
+      "name": "Status changed to Ready For Signature",
+      "condition": {
+        "ticket.action": {
+          "operator": "is",
+          "value": "update"
+        },
+        "ticket.state_id": {
+          "operator": "is",
+          "value": [
+            "18"
+          ]
+        }
+      },
+      "perform": {
+        "notification.webhook": {
+          "webhook_id": "2"
+        }
+      },
+      "disable_notification": true,
+      "localization": "system",
+      "timezone": "system",
+      "note": "",
+      "activator": "action",
+      "execution_condition_mode": "selective",
+      "active": true
+    },
+    {
+      "name": "Set li_ready_for_signature_at on Ready for Signature",
+      "disable_notification": true,
+      "localization": "system",
+      "timezone": "system",
+      "note": "Records the timestamp when a ticket enters Ready for Signature state. Used for Signature Lag metric.",
+      "activator": "action",
+      "execution_condition_mode": "selective",
+      "active": false,
+      "condition": {
+        "ticket.action": {
+          "operator": "is",
+          "value": "update"
+        },
+        "ticket.state_id": {
+          "operator": "is",
+          "value": [
+            "18"
+          ]
+        }
+      },
+      "perform": {
+        "ticket.li_ready_for_signature_at": {
+          "value": "now()"
+        }
+      }
+    },
+    {
+      "name": "Triage - Primary Document",
+      "localization": "system",
+      "timezone": "system",
+      "note": "Fires the webhook on new ticket creation to trigger automatic primary document identification and PDF→DOCX conversion.",
+      "activator": "action",
+      "execution_condition_mode": "selective",
+      "active": false,
+      "condition": {
+        "ticket.action": {
+          "operator": "is",
+          "value": "create"
+        }
+      },
+      "perform": {
+        "notification.webhook": {
+          "webhook_id": "2"
+        }
+      },
+      "disable_notification": true
+    },
+    {
+      "name": "Auto-transition: Submitted to Legal → Under Legal Review (on owner assignment)",
+      "condition": {
+        "ticket.action": {
+          "operator": "is",
+          "value": "update"
+        },
+        "ticket.state_id": {
+          "operator": "is",
+          "value": [
+            "13"
+          ]
+        },
+        "ticket.owner_id": {
+          "operator": "has changed",
+          "pre_condition": "current_user.id",
+          "value": [],
+          "value_completion": ""
+        }
+      },
+      "perform": {
+        "notification.email": {
+          "body": "<div style=\"font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;\">\n  <div style=\"text-align: center; margin-bottom: 32px;\">\n    <h1 style=\"font-size: 24px; font-weight: bold; color: #1f2937; margin: 0;\">Legal Intake</h1>\n  </div>\n  \n  <p style=\"font-size: 16px;\">Hello #{recipient.firstname},<br><br></p>\n  \n  <p style=\"font-size: 16px;\">\n    The ticket \"<strong>#{ticket.title}</strong>\" has been assigned to you for review.\n  <br><br></p>\n  \n  <p style=\"font-size: 16px;\">\n    Please review this ticket and reach out to the ticket creator if any additional information is required.\n  </p>\n  \n  <div style=\"text-align: center; margin: 32px 0;\">\n    <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\" style=\"background-color: #6366f1; color: #ffffff; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 500; display: inline-block;\">\n      View Ticket\n    </a>\n  </div>\n  \n  <p style=\"color: rgb(107, 114, 128);\">\n    If you're unable to click the button above, you can copy and paste this link:<br>\n    <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\" style=\"\">#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}<br><span style=\"color: rgb(107, 114, 128); background-color: initial;\"><br><span style=\"font-size: 12px;\">You are receiving this because you are a member of the group of this ticket.</span></span><br></a>\n  </p>\n</div>",
+          "internal": "false",
+          "recipient": [
+            "ticket_owner",
+            "ticket_customer",
+            "ticket_shared_access_users"
+          ],
+          "subject": "Ticket assigned for review: #{ticket.title}",
+          "include_attachments": "false"
+        },
+        "ticket.state_id": {
+          "value": "16"
+        }
+      },
+      "disable_notification": false,
+      "localization": "system",
+      "timezone": "system",
+      "note": "Automatically transitions ticket from Submitted to Legal to Under Legal Review when an owner is assigned.",
+      "activator": "action",
+      "execution_condition_mode": "selective",
+      "active": true
+    },
+    {
+      "name": "Set li_owner_assigned_at on Submitted to Legal with Owner",
+      "disable_notification": false,
+      "localization": "system",
+      "timezone": "system",
+      "note": "Records the timestamp when an owner is first assigned to a ticket in Submitted to Legal state. Fires when owner_id changes while in state 13. State condition prevents re-firing since Trigger #18 changes state to 16. Used for Assignment Lag metric.",
+      "activator": "action",
+      "execution_condition_mode": "selective",
+      "active": false,
+      "condition": {
+        "ticket.action": {
+          "operator": "is",
+          "value": "update"
+        },
+        "ticket.owner_id": {
+          "operator": "is",
+          "pre_condition": "not_set",
+          "value": [],
+          "value_completion": ""
+        },
+        "ticket.li_owner_assigned": {
+          "operator": "is",
+          "value": false
+        }
+      },
+      "perform": {
+        "ticket.li_owner_assigned_at": {
+          "value": "now()"
+        },
+        "ticket.li_owner_assigned": {
+          "value": true
+        }
+      }
+    },
+    {
+      "name": "Owner First Assigned - invoke webhook",
+      "condition": {
+        "ticket.action": {
+          "operator": "is",
+          "value": "update"
+        },
+        "ticket.owner_id": {
+          "operator": "has changed",
+          "pre_condition": "not_set",
+          "value": [],
+          "value_completion": ""
+        },
+        "ticket.li_owner_assigned": {
+          "operator": "is",
+          "value": false
+        }
+      },
+      "perform": {
+        "notification.webhook": {
+          "webhook_id": "1"
+        }
+      },
+      "disable_notification": true,
+      "localization": "system",
+      "timezone": "system",
+      "note": "Fires webhook when an owner is first assigned (li_owner_assigned is false). The webhook handler sets li_owner_assigned_at and li_owner_assigned=true, preventing re-firing on subsequent owner changes.",
+      "activator": "action",
+      "execution_condition_mode": "selective",
+      "active": true
+    },
+    {
+      "name": "Public Comment - Agent",
+      "condition": {
+        "ticket.action": {
+          "operator": "is",
+          "value": "update"
+        },
+        "article.sender_id": {
+          "operator": "is",
+          "value": [
+            "1"
+          ]
+        },
+        "article.internal": {
+          "operator": "is",
+          "value": [
+            "false"
+          ]
+        },
+        "article.created_by_id": {
+          "operator": "is not",
+          "value": [
+            "697"
+          ]
+        }
+      },
+      "perform": {
+        "notification.webhook": {
+          "webhook_id": "1"
+        }
+      },
+      "disable_notification": true,
+      "localization": "system",
+      "timezone": "system",
+      "note": "Fires webhook when an agent posts a public reply. The webhook handler stamps last_contact_agent_at. Bot user ID 697 excluded at trigger level (belt-and-suspenders with the webhook receiver's loop guard).",
+      "activator": "action",
+      "execution_condition_mode": "selective",
+      "active": true
+    },
+    {
+      "name": "Public Comment - Customer",
+      "condition": {
+        "ticket.action": {
+          "operator": "is",
+          "value": "update"
+        },
+        "article.sender_id": {
+          "operator": "is",
+          "value": [
+            "2"
+          ]
+        },
+        "article.internal": {
+          "operator": "is",
+          "value": [
+            "false"
+          ]
+        }
+      },
+      "perform": {
+        "notification.webhook": {
+          "webhook_id": "1"
+        }
+      },
+      "disable_notification": true,
+      "localization": "system",
+      "timezone": "system",
+      "note": "Fires webhook when a customer posts a public reply. The webhook handler stamps last_contact_customer_at.",
+      "activator": "action",
+      "execution_condition_mode": "selective",
+      "active": true
+    }
+  ]
+}
