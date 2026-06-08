@@ -377,12 +377,14 @@ match = [w for w in whs if w.get('name') == '$WEBHOOK_NAME']
 print(match[0]['id'] if match else '')
 " 2>/dev/null)
 
+WH_JSON=$(printf '{"name":"%s","endpoint":"%s","signature_token":"%s","ssl_verify":false,"active":true}' \
+  "$WEBHOOK_NAME" "$WEBHOOK_ENDPOINT" "$ZAMMAD_WEBHOOK_SECRET")
+
 if [ -n "$WEBHOOK_ID" ]; then
-  yellow "  Webhook '$WEBHOOK_NAME' already exists (id=$WEBHOOK_ID) — skipping."
+  api PUT "/api/v1/webhooks/$WEBHOOK_ID" "$WH_JSON" > /dev/null
+  green "  Webhook updated (id=$WEBHOOK_ID) → $WEBHOOK_ENDPOINT"
 else
   echo "  Creating webhook pointing to $WEBHOOK_ENDPOINT..."
-  WH_JSON=$(printf '{"name":"%s","endpoint":"%s","token":"%s","ssl_verify":false,"active":true}' \
-    "$WEBHOOK_NAME" "$WEBHOOK_ENDPOINT" "$ZAMMAD_WEBHOOK_SECRET")
   CREATE_WH=$(api POST /api/v1/webhooks "$WH_JSON")
   WEBHOOK_ID=$(json_field "$CREATE_WH" "id")
   [ -n "$WEBHOOK_ID" ] || die "Failed to create webhook. Response: $CREATE_WH"
