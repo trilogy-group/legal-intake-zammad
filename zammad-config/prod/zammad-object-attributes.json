@@ -52,11 +52,13 @@
         "relation": ""
       },
       "data_option_new": {},
-      "editable": false,
+      "editable": true,
       "internal": false,
       "active": true,
       "screens": {
-        "create_middle": { "shown": false },
+        "create_middle": {
+          "shown": false
+        },
         "edit": {
           "shown": true,
           "required": false,
@@ -67,7 +69,9 @@
             "shown": true
           }
         },
-        "view": { "shown": true }
+        "view": {
+          "shown": true
+        }
       },
       "position": 1601,
       "object": "Ticket",
@@ -454,13 +458,19 @@
         "relation": ""
       },
       "data_option_new": {},
-      "editable": false,
-      "internal": true,
+      "editable": true,
+      "internal": false,
       "active": true,
       "screens": {
-        "create_middle": { "shown": false },
-        "edit": { "shown": false },
-        "view": { "shown": true }
+        "create_middle": {
+          "shown": false
+        },
+        "edit": {
+          "shown": false
+        },
+        "view": {
+          "shown": true
+        }
       },
       "position": 1612,
       "object": "Ticket",
@@ -480,13 +490,19 @@
         "relation": ""
       },
       "data_option_new": {},
-      "editable": false,
-      "internal": true,
+      "editable": true,
+      "internal": false,
       "active": true,
       "screens": {
-        "create_middle": { "shown": false },
-        "edit": { "shown": false },
-        "view": { "shown": true }
+        "create_middle": {
+          "shown": false
+        },
+        "edit": {
+          "shown": false
+        },
+        "view": {
+          "shown": true
+        }
       },
       "position": 1614,
       "object": "Ticket",
@@ -506,17 +522,24 @@
         "relation": ""
       },
       "data_option_new": {},
-      "editable": false,
-      "internal": true,
+      "editable": true,
+      "internal": false,
       "active": true,
       "screens": {
-        "create_middle": { "shown": false },
-        "edit": { "shown": false },
-        "view": { "shown": false }
+        "create_middle": {
+          "shown": false
+        },
+        "edit": {
+          "shown": false
+        },
+        "view": {
+          "shown": false
+        }
       },
       "position": 1615,
       "object": "Ticket",
-      "deletable": true
+      "deletable": false,
+      "not_deletable_reason": "This attribute is referenced by Trigger: Owner First Assigned - invoke webhook and thus cannot be deleted!"
     }
   ],
   "by_object": {
@@ -573,11 +596,13 @@
           "relation": ""
         },
         "data_option_new": {},
-        "editable": false,
+        "editable": true,
         "internal": false,
         "active": true,
         "screens": {
-          "create_middle": { "shown": false },
+          "create_middle": {
+            "shown": false
+          },
           "edit": {
             "shown": true,
             "required": false,
@@ -588,7 +613,9 @@
               "shown": true
             }
           },
-          "view": { "shown": true }
+          "view": {
+            "shown": true
+          }
         },
         "position": 1601,
         "object": "Ticket",
@@ -975,13 +1002,19 @@
           "relation": ""
         },
         "data_option_new": {},
-        "editable": false,
-        "internal": true,
+        "editable": true,
+        "internal": false,
         "active": true,
         "screens": {
-          "create_middle": { "shown": false },
-          "edit": { "shown": false },
-          "view": { "shown": true }
+          "create_middle": {
+            "shown": false
+          },
+          "edit": {
+            "shown": false
+          },
+          "view": {
+            "shown": true
+          }
         },
         "position": 1612,
         "object": "Ticket",
@@ -1001,13 +1034,19 @@
           "relation": ""
         },
         "data_option_new": {},
-        "editable": false,
-        "internal": true,
+        "editable": true,
+        "internal": false,
         "active": true,
         "screens": {
-          "create_middle": { "shown": false },
-          "edit": { "shown": false },
-          "view": { "shown": true }
+          "create_middle": {
+            "shown": false
+          },
+          "edit": {
+            "shown": false
+          },
+          "view": {
+            "shown": true
+          }
         },
         "position": 1614,
         "object": "Ticket",
@@ -1027,23 +1066,30 @@
           "relation": ""
         },
         "data_option_new": {},
-        "editable": false,
-        "internal": true,
+        "editable": true,
+        "internal": false,
         "active": true,
         "screens": {
-          "create_middle": { "shown": false },
-          "edit": { "shown": false },
-          "view": { "shown": false }
+          "create_middle": {
+            "shown": false
+          },
+          "edit": {
+            "shown": false
+          },
+          "view": {
+            "shown": false
+          }
         },
         "position": 1615,
         "object": "Ticket",
-        "deletable": true
+        "deletable": false,
+        "not_deletable_reason": "This attribute is referenced by Trigger: Owner First Assigned - invoke webhook and thus cannot be deleted!"
       }
     ]
   },
   "metadata": {
     "total_custom_attributes": 15,
     "objects": ["Ticket"],
-    "exported_at": "2026-05-20T08:18:30.478Z"
+    "exported_at": "2026-06-10T08:35:27.758Z"
   }
 }

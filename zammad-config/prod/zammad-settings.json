@@ -462,7 +462,6 @@
     "auth_third_party_auto_link_at_inital_login": true,
     "product_logo": 1775484330,
     "user_create_account": false,
-    "ai_assistance_ticket_summary": true,
     "ai_assistance_ticket_summary_config": {
       "open_questions": true,
       "upcoming_events": false,
@@ -472,8 +471,9 @@
     "system_id": 11,
     "check_mk_token": "420c1eff91b979423b80cc6417259c78",
     "customer_ticket_create": false,
+    "app_version": "20260529102344",
     "send_no_auto_response_reg_exp": "(?!.*)",
-    "app_version": "20260428052627",
+    "ai_assistance_ticket_summary": false,
     "ticket_agent_default_notifications": {
       "create": {
         "criteria": {

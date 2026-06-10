@@ -4,6 +4,10 @@
       "agent_shown": true,
       "customer_shown": true
     },
+    "li_invoice_reference": {
+      "agent_shown": true,
+      "customer_shown": true
+    },
     "li_request_number": {
       "agent_shown": false,
       "customer_shown": false
@@ -44,9 +48,17 @@
       "agent_shown": false,
       "customer_shown": false
     },
-    "li_invoice_reference": {
-      "agent_shown": true,
-      "customer_shown": true
+    "li_ready_for_signature_at": {
+      "agent_shown": false,
+      "customer_shown": false
+    },
+    "li_owner_assigned_at": {
+      "agent_shown": false,
+      "customer_shown": false
+    },
+    "li_owner_assigned": {
+      "agent_shown": false,
+      "customer_shown": false
     }
   }
 }

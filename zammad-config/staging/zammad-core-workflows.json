@@ -3,10 +3,6 @@
     {
       "name": "Legal Admin Capabilities : Allow editing Owner field",
       "object": "Ticket",
-      "active": true,
-      "stop_after_match": false,
-      "changeable": true,
-      "priority": 1000,
       "preferences": {
         "screen": []
       },
@@ -22,15 +18,15 @@
           "operator": "show",
           "show": "true"
         }
-      }
+      },
+      "active": true,
+      "stop_after_match": false,
+      "changeable": true,
+      "priority": 1000
     },
     {
       "name": "Make ticket fields read-only for customers",
       "object": "Ticket",
-      "active": true,
-      "stop_after_match": false,
-      "changeable": true,
-      "priority": 900,
       "preferences": {},
       "condition_saved": {},
       "condition_selected": {
@@ -72,15 +68,15 @@
           "operator": "set_readonly",
           "set_readonly": true
         }
-      }
+      },
+      "active": true,
+      "stop_after_match": false,
+      "changeable": true,
+      "priority": 900
     },
     {
       "name": "Hide customer creation fields for agents",
       "object": "User",
-      "active": true,
-      "stop_after_match": false,
-      "changeable": true,
-      "priority": 500,
       "preferences": {
         "screen": ["create", "edit"]
       },
@@ -120,15 +116,15 @@
           "operator": "remove",
           "remove": "true"
         }
-      }
+      },
+      "active": true,
+      "stop_after_match": false,
+      "changeable": true,
+      "priority": 500
     },
     {
       "name": "Agent restrictions: Hide Priority and Request ID",
       "object": "Ticket",
-      "active": true,
-      "stop_after_match": false,
-      "changeable": true,
-      "priority": 800,
       "preferences": {},
       "condition_saved": {},
       "condition_selected": {
@@ -146,15 +142,15 @@
           "operator": "remove",
           "remove": true
         }
-      }
+      },
+      "active": true,
+      "stop_after_match": false,
+      "changeable": true,
+      "priority": 800
     },
     {
       "name": "Agent restrictions: Make customer read-only",
       "object": "Ticket",
-      "active": true,
-      "stop_after_match": false,
-      "changeable": true,
-      "priority": 790,
       "preferences": {},
       "condition_saved": {},
       "condition_selected": {
@@ -168,15 +164,15 @@
           "operator": "set_readonly",
           "set_readonly": true
         }
-      }
+      },
+      "active": true,
+      "stop_after_match": false,
+      "changeable": true,
+      "priority": 790
     },
     {
       "name": "Agent restrictions: Make metadata read-only except tags and state",
       "object": "Ticket",
-      "active": true,
-      "stop_after_match": false,
-      "changeable": true,
-      "priority": 780,
       "preferences": {},
       "condition_saved": {},
       "condition_selected": {
@@ -218,15 +214,15 @@
           "operator": "set_readonly",
           "set_readonly": true
         }
-      }
+      },
+      "active": true,
+      "stop_after_match": false,
+      "changeable": true,
+      "priority": 780
     },
     {
       "name": "Agent restrictions: Hide phone/call article type",
       "object": "Ticket",
-      "active": true,
-      "stop_after_match": false,
-      "changeable": true,
-      "priority": 770,
       "preferences": {},
       "condition_saved": {},
       "condition_selected": {
@@ -240,15 +236,15 @@
           "operator": "remove_option",
           "remove_option": "5"
         }
-      }
+      },
+      "active": true,
+      "stop_after_match": false,
+      "changeable": true,
+      "priority": 770
     },
     {
       "name": "Customer restrictions: Force articles to be public",
       "object": "Ticket",
-      "active": true,
-      "stop_after_match": false,
-      "changeable": true,
-      "priority": 760,
       "preferences": {
         "screen": ["create_middle", "edit"]
       },
@@ -264,15 +260,15 @@
           "operator": "remove",
           "remove": true
         }
-      }
+      },
+      "active": true,
+      "stop_after_match": false,
+      "changeable": true,
+      "priority": 760
     },
     {
       "name": "Restrictions : Disallow editing owner field",
       "object": "Ticket",
-      "active": true,
-      "stop_after_match": false,
-      "changeable": true,
-      "priority": 500,
       "preferences": {
         "screen": []
       },
@@ -288,15 +284,15 @@
           "operator": "set_readonly",
           "set_readonly": "true"
         }
-      }
+      },
+      "active": true,
+      "stop_after_match": false,
+      "changeable": true,
+      "priority": 500
     },
     {
       "name": "Agent & Legal Admin Capabilities : Allow editing Owner field",
       "object": "Ticket",
-      "active": true,
-      "stop_after_match": false,
-      "changeable": true,
-      "priority": 1000,
       "preferences": {
         "screen": []
       },
@@ -312,15 +308,15 @@
           "operator": "show",
           "show": "true"
         }
-      }
+      },
+      "active": true,
+      "stop_after_match": false,
+      "changeable": true,
+      "priority": 1000
     },
     {
       "name": "Agent restrictions: Make user profile fields read-only",
       "object": "User",
-      "active": true,
-      "stop_after_match": false,
-      "changeable": true,
-      "priority": 500,
       "preferences": {
         "screen": ["create", "edit"]
       },
@@ -388,15 +384,15 @@
           "operator": "remove",
           "remove": "true"
         }
-      }
+      },
+      "active": true,
+      "stop_after_match": false,
+      "changeable": true,
+      "priority": 500
     },
     {
       "name": "Legal Admin restrictions: Make user profile fields read-only except Active",
       "object": "User",
-      "active": true,
-      "stop_after_match": false,
-      "changeable": true,
-      "priority": 501,
       "preferences": {
         "screen": ["create", "edit"]
       },
@@ -460,15 +456,15 @@
           "operator": "remove",
           "remove": "true"
         }
-      }
+      },
+      "active": true,
+      "stop_after_match": false,
+      "changeable": true,
+      "priority": 501
     },
     {
       "name": "Legal Admin Capabilities : Allow editing custom fields",
       "object": "Ticket",
-      "active": true,
-      "stop_after_match": false,
-      "changeable": true,
-      "priority": 1000,
       "preferences": {
         "screen": []
       },
@@ -496,15 +492,15 @@
           "operator": "show",
           "show": true
         }
-      }
+      },
+      "active": true,
+      "stop_after_match": false,
+      "changeable": true,
+      "priority": 1000
     },
     {
       "name": "Invoice Reference: read-only for legal admins",
       "object": "Ticket",
-      "active": true,
-      "stop_after_match": false,
-      "changeable": true,
-      "priority": 1001,
       "preferences": {},
       "condition_saved": {},
       "condition_selected": {
@@ -518,15 +514,15 @@
           "operator": "set_readonly",
           "set_readonly": true
         }
-      }
+      },
+      "active": true,
+      "stop_after_match": false,
+      "changeable": true,
+      "priority": 1001
     },
     {
       "name": "Invoice Reference: hidden for admins",
       "object": "Ticket",
-      "active": true,
-      "stop_after_match": false,
-      "changeable": true,
-      "priority": 1001,
       "preferences": {},
       "condition_saved": {},
       "condition_selected": {
@@ -540,7 +536,11 @@
           "operator": "remove",
           "remove": true
         }
-      }
+      },
+      "active": true,
+      "stop_after_match": false,
+      "changeable": true,
+      "priority": 1001
     }
   ]
 }

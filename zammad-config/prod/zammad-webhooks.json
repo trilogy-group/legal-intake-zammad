@@ -10,8 +10,8 @@
       "pre_defined_webhook_type": null,
       "customized_payload": false,
       "custom_payload": null,
-      "active": true,
-      "preferences": {}
+      "preferences": {},
+      "active": true
     },
     {
       "name": "Ready for Signature",

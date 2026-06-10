@@ -1,7 +1,6 @@
 {
   "webhooks": [
     {
-      "custom_payload": null,
       "name": "Legal Agent Commands",
       "endpoint": "https://staging.legal-intake.ti.trilogy.com/api/webhooks/zammad",
       "http_method": "post",
@@ -10,6 +9,7 @@
       "note": null,
       "pre_defined_webhook_type": null,
       "customized_payload": false,
+      "custom_payload": null,
       "preferences": {},
       "active": true
     },
@@ -23,8 +23,8 @@
       "pre_defined_webhook_type": null,
       "customized_payload": false,
       "custom_payload": null,
-      "active": true,
-      "preferences": {}
+      "preferences": {},
+      "active": true
     }
   ]
 }

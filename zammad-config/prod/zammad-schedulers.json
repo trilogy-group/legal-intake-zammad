@@ -158,6 +158,12 @@
     },
     {
       "name": "Customer Reminder - 3 days (awaiting response)",
+      "object": "Ticket",
+      "disable_notification": false,
+      "localization": "system",
+      "timezone": "system",
+      "note": "Reminds customer after 3 days when ticket is in awaiting_response status with no updates",
+      "active": true,
       "timeplan": {
         "days": {
           "Mon": true,
@@ -203,13 +209,12 @@
           "50": false
         }
       },
-      "object": "Ticket",
       "condition": {
         "ticket.state_id": {
           "operator": "is",
           "value": ["17"]
         },
-        "ticket.last_contact_customer_at": {
+        "ticket.updated_at": {
           "operator": "before (relative)",
           "value": "3",
           "range": "day"
@@ -230,15 +235,16 @@
           "include_attachments": "false"
         }
       },
-      "disable_notification": false,
-      "pid": null,
-      "localization": "system",
-      "timezone": "system",
-      "note": "Reminds customer after 3 days when ticket is in awaiting_response status with no updates",
-      "active": true
+      "pid": null
     },
     {
       "name": "Attorney Reminder - 3 days (last comment from customer)",
+      "object": "Ticket",
+      "disable_notification": false,
+      "localization": "system",
+      "timezone": "system",
+      "note": "Reminds attorney after 3 days when ticket is in under_legal_review status with no updates",
+      "active": true,
       "timeplan": {
         "days": {
           "Mon": true,
@@ -284,13 +290,12 @@
           "50": false
         }
       },
-      "object": "Ticket",
       "condition": {
         "ticket.state_id": {
           "operator": "is",
           "value": ["16"]
         },
-        "ticket.last_contact_agent_at": {
+        "ticket.updated_at": {
           "operator": "before (relative)",
           "value": "3",
           "range": "day"
@@ -311,12 +316,7 @@
           "include_attachments": "false"
         }
       },
-      "disable_notification": false,
-      "pid": null,
-      "localization": "system",
-      "timezone": "system",
-      "note": "Reminds attorney after 3 days when ticket is in under_legal_review status with no updates",
-      "active": true
+      "pid": null
     },
     {
       "name": "Inactivity Warning - 13 days (awaiting response)",
@@ -371,7 +371,7 @@
           "operator": "is",
           "value": ["17"]
         },
-        "ticket.last_contact_customer_at": {
+        "ticket.updated_at": {
           "operator": "before (relative)",
           "value": "13",
           "range": "day"
@@ -452,7 +452,7 @@
           "operator": "is",
           "value": ["17"]
         },
-        "ticket.last_contact_customer_at": {
+        "ticket.updated_at": {
           "operator": "before (relative)",
           "value": "15",
           "range": "day"

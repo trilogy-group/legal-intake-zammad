@@ -37,13 +37,13 @@
         ]
       },
       "active": true,
-      "role_ids": [4, 2],
+      "role_ids": [2, 4],
       "user_ids": []
     },
     {
       "name": "Unassigned & Open Tickets",
+      "link": "all_unassigned",
       "prio": 1,
-      "active": false,
       "condition": {
         "ticket.state_id": {
           "operator": "is",
@@ -58,17 +58,17 @@
         "by": "created_at",
         "direction": "ASC"
       },
+      "group_by": null,
+      "group_direction": null,
+      "organization_shared": false,
+      "out_of_office": false,
       "view": {
         "d": ["title", "customer", "group", "created_at"],
         "s": ["title", "customer", "group", "created_at"],
         "m": ["number", "title", "customer", "group", "created_at"],
         "view_mode_default": "s"
       },
-      "link": "all_unassigned",
-      "group_by": null,
-      "group_direction": null,
-      "organization_shared": false,
-      "out_of_office": false,
+      "active": false,
       "role_ids": [2],
       "user_ids": []
     },
@@ -111,8 +111,8 @@
     },
     {
       "name": "My Subscribed Tickets",
+      "link": "my_subscribed_tickets",
       "prio": 3,
-      "active": true,
       "condition": {
         "ticket.mention_user_ids": {
           "operator": "is",
@@ -129,6 +129,10 @@
         "by": "updated_at",
         "direction": "DESC"
       },
+      "group_by": null,
+      "group_direction": null,
+      "organization_shared": false,
+      "out_of_office": false,
       "view": {
         "s": [
           "number",
@@ -141,11 +145,7 @@
           "updated_at"
         ]
       },
-      "link": "my_subscribed_tickets",
-      "group_by": null,
-      "group_direction": null,
-      "organization_shared": false,
-      "out_of_office": false,
+      "active": true,
       "role_ids": [4, 2],
       "user_ids": []
     },
@@ -221,7 +221,7 @@
     {
       "name": "Escalated Tickets",
       "link": "all_escalated",
-      "prio": 24,
+      "prio": 23,
       "condition": {
         "ticket.escalation_at": {
           "operator": "till (relative)",
@@ -250,7 +250,7 @@
     {
       "name": "My Replacement Tickets",
       "link": "my_replacement_tickets",
-      "prio": 28,
+      "prio": 26,
       "condition": {
         "ticket.state_id": {
           "operator": "is",
@@ -321,7 +321,7 @@
     {
       "name": "Shared with me",
       "link": "shared_with_me",
-      "prio": 26,
+      "prio": 24,
       "condition": {
         "ticket.state_id": {
           "operator": "is",
@@ -352,8 +352,8 @@
     },
     {
       "name": "My Organization Tickets",
-      "link": "my_organization_tickets",
       "prio": 27,
+      "active": false,
       "condition": {
         "ticket.state_id": {
           "operator": "is",
@@ -368,10 +368,6 @@
         "by": "created_at",
         "direction": "DESC"
       },
-      "group_by": null,
-      "group_direction": null,
-      "organization_shared": true,
-      "out_of_office": false,
       "view": {
         "d": ["title", "customer", "organization", "state", "created_at"],
         "s": [
@@ -392,7 +388,11 @@
         ],
         "view_mode_default": "s"
       },
-      "active": false,
+      "link": "my_organization_tickets",
+      "group_by": null,
+      "group_direction": null,
+      "organization_shared": true,
+      "out_of_office": false,
       "role_ids": [3],
       "user_ids": []
     },
@@ -511,8 +511,8 @@
     },
     {
       "name": "Tickets Shared With Me",
+      "link": "tickets_shared_with_me",
       "prio": 5,
-      "active": true,
       "condition": {
         "ticket.state_id": {
           "operator": "is",
@@ -529,6 +529,10 @@
         "by": "created_at",
         "direction": "DESC"
       },
+      "group_by": null,
+      "group_direction": null,
+      "organization_shared": false,
+      "out_of_office": false,
       "view": {
         "s": [
           "number",
@@ -541,18 +545,14 @@
           "updated_at"
         ]
       },
-      "link": "tickets_shared_with_me",
-      "group_by": null,
-      "group_direction": null,
-      "organization_shared": false,
-      "out_of_office": false,
+      "active": true,
       "role_ids": [3],
       "user_ids": []
     },
     {
       "name": "Tickets Waiting on Me",
+      "link": "tickets_waiting_on_me",
       "prio": 6,
-      "active": true,
       "condition": {
         "ticket.state_id": {
           "operator": "is",
@@ -569,6 +569,10 @@
         "by": "updated_at",
         "direction": "DESC"
       },
+      "group_by": null,
+      "group_direction": null,
+      "organization_shared": false,
+      "out_of_office": false,
       "view": {
         "s": [
           "number",
@@ -581,11 +585,7 @@
           "updated_at"
         ]
       },
-      "link": "tickets_waiting_on_me",
-      "group_by": null,
-      "group_direction": null,
-      "organization_shared": false,
-      "out_of_office": false,
+      "active": true,
       "role_ids": [2],
       "user_ids": []
     },
@@ -741,8 +741,8 @@
     },
     {
       "name": "Resolved Ticket(s)",
-      "link": "resolved_ticket_s",
       "prio": 12,
+      "active": true,
       "condition": {
         "ticket.state_id": {
           "operator": "is",
@@ -759,10 +759,6 @@
         "by": "updated_at",
         "direction": "DESC"
       },
-      "group_by": null,
-      "group_direction": null,
-      "organization_shared": false,
-      "out_of_office": false,
       "view": {
         "s": [
           "number",
@@ -776,14 +772,18 @@
           "updated_at"
         ]
       },
-      "active": true,
+      "link": "resolved_ticket_s",
+      "group_by": null,
+      "group_direction": null,
+      "organization_shared": false,
+      "out_of_office": false,
       "role_ids": [2],
       "user_ids": []
     },
     {
       "name": "Closed Ticket(s)",
-      "link": "closed_ticket_s",
       "prio": 13,
+      "active": true,
       "condition": {
         "ticket.state_id": {
           "operator": "is",
@@ -800,10 +800,6 @@
         "by": "updated_at",
         "direction": "DESC"
       },
-      "group_by": null,
-      "group_direction": null,
-      "organization_shared": false,
-      "out_of_office": false,
       "view": {
         "s": [
           "number",
@@ -817,7 +813,11 @@
           "updated_at"
         ]
       },
-      "active": true,
+      "link": "closed_ticket_s",
+      "group_by": null,
+      "group_direction": null,
+      "organization_shared": false,
+      "out_of_office": false,
       "role_ids": [2],
       "user_ids": []
     },
@@ -862,8 +862,8 @@
     },
     {
       "name": "Response Pending Ticket(s)",
-      "link": "response_pending_ticket_s",
       "prio": 11,
+      "active": true,
       "condition": {
         "ticket.state_id": {
           "operator": "is",
@@ -885,10 +885,6 @@
         "by": "updated_at",
         "direction": "DESC"
       },
-      "group_by": null,
-      "group_direction": null,
-      "organization_shared": false,
-      "out_of_office": false,
       "view": {
         "s": [
           "number",
@@ -901,14 +897,18 @@
           "updated_at"
         ]
       },
-      "active": true,
+      "link": "response_pending_ticket_s",
+      "group_by": null,
+      "group_direction": null,
+      "organization_shared": false,
+      "out_of_office": false,
       "role_ids": [2],
       "user_ids": []
     },
     {
       "name": "Tickets Ready for Signature",
+      "link": "tickets_ready_for_signature",
       "prio": 7,
-      "active": true,
       "condition": {
         "ticket.state_id": {
           "operator": "is",
@@ -919,6 +919,10 @@
         "by": "updated_at",
         "direction": "DESC"
       },
+      "group_by": null,
+      "group_direction": null,
+      "organization_shared": false,
+      "out_of_office": false,
       "view": {
         "s": [
           "number",
@@ -931,44 +935,7 @@
           "updated_at"
         ]
       },
-      "link": "tickets_ready_for_signature",
-      "group_by": null,
-      "group_direction": null,
-      "organization_shared": false,
-      "out_of_office": false,
-      "role_ids": [4],
-      "user_ids": []
-    },
-    {
-      "name": "Tickets Sent for Signature",
-      "prio": 8,
       "active": true,
-      "condition": {
-        "ticket.state_id": {
-          "operator": "is",
-          "value": ["19"]
-        }
-      },
-      "order": {
-        "by": "updated_at",
-        "direction": "DESC"
-      },
-      "view": {
-        "s": [
-          "number",
-          "title",
-          "customer",
-          "owner",
-          "state",
-          "created_at",
-          "updated_at"
-        ]
-      },
-      "link": "tickets_sent_for_signature",
-      "group_by": null,
-      "group_direction": null,
-      "organization_shared": false,
-      "out_of_office": false,
       "role_ids": [4],
       "user_ids": []
     },
@@ -1011,8 +978,41 @@
       "user_ids": []
     },
     {
+      "name": "Tickets Sent for Signature",
+      "link": "tickets_sent_for_signature",
+      "prio": 8,
+      "condition": {
+        "ticket.state_id": {
+          "operator": "is",
+          "value": ["19"]
+        }
+      },
+      "order": {
+        "by": "updated_at",
+        "direction": "DESC"
+      },
+      "group_by": null,
+      "group_direction": null,
+      "organization_shared": false,
+      "out_of_office": false,
+      "view": {
+        "s": [
+          "number",
+          "title",
+          "customer",
+          "owner",
+          "state",
+          "created_at",
+          "updated_at"
+        ]
+      },
+      "active": true,
+      "role_ids": [4],
+      "user_ids": []
+    },
+    {
       "name": "All Open Tickets",
-      "link": "all_open_tickets_admin",
+      "link": "all_open_tickets",
       "prio": 23,
       "condition": {
         "ticket.state_id": {

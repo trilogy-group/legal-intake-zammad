@@ -9,21 +9,15 @@
         },
         "ticket.state_id": {
           "operator": "is",
-          "value": [
-            "17"
-          ]
+          "value": ["17"]
         },
         "article.sender_id": {
           "operator": "is",
-          "value": [
-            "2"
-          ]
+          "value": ["2"]
         },
         "article.internal": {
           "operator": "is",
-          "value": [
-            "false"
-          ]
+          "value": ["false"]
         }
       },
       "perform": {
@@ -63,15 +57,11 @@
         },
         "article.internal": {
           "operator": "is",
-          "value": [
-            "true"
-          ]
+          "value": ["true"]
         },
         "article.created_by_id": {
           "operator": "is not",
-          "value": [
-            "697"
-          ]
+          "value": ["697"]
         }
       },
       "perform": {
@@ -96,9 +86,7 @@
         },
         "article.created_by_id": {
           "operator": "is",
-          "value": [
-            "697"
-          ]
+          "value": ["697"]
         }
       },
       "perform": {
@@ -124,9 +112,7 @@
         },
         "ticket.state_id": {
           "operator": "is",
-          "value": [
-            "18"
-          ]
+          "value": ["18"]
         }
       },
       "perform": {
@@ -144,13 +130,6 @@
     },
     {
       "name": "Set li_ready_for_signature_at on Ready for Signature",
-      "disable_notification": true,
-      "localization": "system",
-      "timezone": "system",
-      "note": "Records the timestamp when a ticket enters Ready for Signature state. Used for Signature Lag metric.",
-      "activator": "action",
-      "execution_condition_mode": "selective",
-      "active": false,
       "condition": {
         "ticket.action": {
           "operator": "is",
@@ -158,25 +137,24 @@
         },
         "ticket.state_id": {
           "operator": "is",
-          "value": [
-            "18"
-          ]
+          "value": ["18"]
         }
       },
       "perform": {
         "ticket.li_ready_for_signature_at": {
           "value": "now()"
         }
-      }
+      },
+      "disable_notification": true,
+      "localization": "system",
+      "timezone": "system",
+      "note": "Records the timestamp when a ticket enters Ready for Signature state. Used for Signature Lag metric.",
+      "activator": "action",
+      "execution_condition_mode": "selective",
+      "active": false
     },
     {
       "name": "Triage - Primary Document",
-      "localization": "system",
-      "timezone": "system",
-      "note": "Fires the webhook on new ticket creation to trigger automatic primary document identification and PDF→DOCX conversion.",
-      "activator": "action",
-      "execution_condition_mode": "selective",
-      "active": false,
       "condition": {
         "ticket.action": {
           "operator": "is",
@@ -188,7 +166,13 @@
           "webhook_id": "2"
         }
       },
-      "disable_notification": true
+      "disable_notification": true,
+      "localization": "system",
+      "timezone": "system",
+      "note": "Fires the webhook on new ticket creation to trigger automatic primary document identification and PDF→DOCX conversion.",
+      "activator": "action",
+      "execution_condition_mode": "selective",
+      "active": false
     },
     {
       "name": "Auto-transition: Submitted to Legal → Under Legal Review (on owner assignment)",
@@ -199,9 +183,7 @@
         },
         "ticket.state_id": {
           "operator": "is",
-          "value": [
-            "13"
-          ]
+          "value": ["13"]
         },
         "ticket.owner_id": {
           "operator": "has changed",
@@ -236,13 +218,6 @@
     },
     {
       "name": "Set li_owner_assigned_at on Submitted to Legal with Owner",
-      "disable_notification": false,
-      "localization": "system",
-      "timezone": "system",
-      "note": "Records the timestamp when an owner is first assigned to a ticket in Submitted to Legal state. Fires when owner_id changes while in state 13. State condition prevents re-firing since Trigger #18 changes state to 16. Used for Assignment Lag metric.",
-      "activator": "action",
-      "execution_condition_mode": "selective",
-      "active": false,
       "condition": {
         "ticket.action": {
           "operator": "is",
@@ -266,7 +241,14 @@
         "ticket.li_owner_assigned": {
           "value": true
         }
-      }
+      },
+      "disable_notification": false,
+      "localization": "system",
+      "timezone": "system",
+      "note": "Records the timestamp when an owner is first assigned to a ticket in Submitted to Legal state. Fires when owner_id changes while in state 13. State condition prevents re-firing since Trigger #18 changes state to 16. Used for Assignment Lag metric.",
+      "activator": "action",
+      "execution_condition_mode": "selective",
+      "active": false
     },
     {
       "name": "Owner First Assigned - invoke webhook",
@@ -308,21 +290,15 @@
         },
         "article.sender_id": {
           "operator": "is",
-          "value": [
-            "1"
-          ]
+          "value": ["1"]
         },
         "article.internal": {
           "operator": "is",
-          "value": [
-            "false"
-          ]
+          "value": ["false"]
         },
         "article.created_by_id": {
           "operator": "is not",
-          "value": [
-            "697"
-          ]
+          "value": ["697"]
         }
       },
       "perform": {
@@ -347,15 +323,11 @@
         },
         "article.sender_id": {
           "operator": "is",
-          "value": [
-            "2"
-          ]
+          "value": ["2"]
         },
         "article.internal": {
           "operator": "is",
-          "value": [
-            "false"
-          ]
+          "value": ["false"]
         }
       },
       "perform": {

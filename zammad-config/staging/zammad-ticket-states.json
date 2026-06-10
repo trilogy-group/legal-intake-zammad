@@ -121,16 +121,6 @@
       "active": false
     },
     {
-      "name": "submission_in_progress",
-      "state_type_id": 2,
-      "next_state_id": null,
-      "ignore_escalation": false,
-      "default_create": false,
-      "default_follow_up": false,
-      "note": "Legal Intake import: submission_in_progress",
-      "active": true
-    },
-    {
       "name": "submitted_to_legal",
       "state_type_id": 2,
       "next_state_id": null,
@@ -219,6 +209,16 @@
       "default_follow_up": false,
       "note": "Legal Intake import: tnc_documents_extracted",
       "active": false
+    },
+    {
+      "name": "submission_in_progress",
+      "state_type_id": 2,
+      "next_state_id": null,
+      "ignore_escalation": false,
+      "default_create": false,
+      "default_follow_up": false,
+      "note": "Legal Intake import: submission_in_progress",
+      "active": true
     }
   ]
 }

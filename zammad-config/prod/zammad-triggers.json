@@ -189,12 +189,6 @@
     },
     {
       "name": "Triage - Primary Document",
-      "localization": "system",
-      "timezone": "system",
-      "note": "Fires the webhook on new ticket creation to trigger automatic primary document identification and PDF→DOCX conversion.",
-      "activator": "action",
-      "execution_condition_mode": "selective",
-      "active": false,
       "condition": {
         "ticket.action": {
           "operator": "is",
@@ -206,7 +200,13 @@
           "webhook_id": "2"
         }
       },
-      "disable_notification": true
+      "disable_notification": true,
+      "localization": "system",
+      "timezone": "system",
+      "note": "Fires the webhook on new ticket creation to trigger automatic primary document identification and PDF→DOCX conversion.",
+      "activator": "action",
+      "execution_condition_mode": "selective",
+      "active": false
     },
     {
       "name": "Auto-transition: Submitted to Legal → Under Legal Review (on owner assignment)",

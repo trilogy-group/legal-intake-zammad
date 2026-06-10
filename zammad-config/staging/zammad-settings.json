@@ -39,11 +39,7 @@
     "ui_ticket_zoom_sidebar_article_attachments": false,
     "ui_ticket_create_notes": {},
     "ui_ticket_create_default_type": "phone-in",
-    "ui_ticket_create_available_types": [
-      "phone-in",
-      "phone-out",
-      "email-out"
-    ],
+    "ui_ticket_create_available_types": ["phone-in", "phone-out", "email-out"],
     "ui_sidebar_open_ticket_indicator_colored": false,
     "ui_table_group_by_show_count": false,
     "ui_ticket_priority_icons": false,
@@ -77,13 +73,8 @@
       "uid": "mail",
       "base": "dc=example,dc=org",
       "always_filter": "",
-      "always_roles": [
-        "Admin",
-        "Agent"
-      ],
-      "always_groups": [
-        "Users"
-      ],
+      "always_roles": ["Admin", "Agent"],
+      "always_groups": ["Users"],
       "sync_params": {
         "firstname": "sn",
         "lastname": "givenName",
@@ -139,9 +130,7 @@
     "ticket_duplicate_detection_attributes": [],
     "ticket_duplicate_detection_title": "Similar tickets found",
     "ticket_duplicate_detection_body": "Tickets with the same attributes were found.",
-    "ticket_duplicate_detection_role_ids": [
-      2
-    ],
+    "ticket_duplicate_detection_role_ids": [2],
     "ticket_duplicate_detection_show_tickets": true,
     "ticket_duplicate_detection_permission_level": "user",
     "ticket_duplicate_detection_search": "all",
@@ -175,9 +164,7 @@
     "ticket_define_email_from": "AgentNameSystemAddressName",
     "ticket_define_email_from_separator": "via",
     "postmaster_max_size": 10,
-    "postmaster_follow_up_search_in": [
-      "subject_references"
-    ],
+    "postmaster_follow_up_search_in": ["subject_references"],
     "postmaster_sender_based_on_reply_to": [],
     "postmaster_sender_is_agent_search_for_customer": true,
     "postmaster_send_reject_if_mail_too_large": true,
@@ -224,10 +211,7 @@
     "import_kayako_endpoint": "https://yours.kayako.com/api/v1",
     "import_kayako_endpoint_username": "",
     "import_kayako_endpoint_password": "**********",
-    "import_backends": [
-      "Import::Ldap",
-      "Import::Exchange"
-    ],
+    "import_backends": ["Import::Ldap", "Import::Exchange"],
     "sequencer_log_level": {
       "sequence": {
         "start_finish": "debug",
@@ -446,9 +430,7 @@
     "two_factor_authentication_method_security_keys": false,
     "two_factor_authentication_method_authenticator_app": false,
     "two_factor_authentication_recovery_codes": true,
-    "two_factor_authentication_enforce_role_ids": [
-      2
-    ],
+    "two_factor_authentication_enforce_role_ids": [2],
     "ticket_organization_reassignment": true,
     "checklist": true,
     "auto_shutdown": true,
