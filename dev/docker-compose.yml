@@ -158,6 +158,9 @@ services:
   zammad-redis:
     image: redis:${REDIS_VERSION:-8.0.2-alpine}
     restart: unless-stopped
+    # Exposed to host so native Rails (bin/dev) can reach it directly.
+    ports:
+      - "127.0.0.1:6379:6379"
     volumes:
       - redis-data:/data
     networks:
