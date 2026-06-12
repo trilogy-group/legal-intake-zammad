@@ -236,7 +236,7 @@ set -a; source .env; set +a; bundle exec rails console
 pnpm run zammad:local:down
 
 # Full reset (wipes DB + all data, then re-run init + setup)
-pnpm run zammad:local:down -- -v
+docker compose -f dev/docker-compose.yml down -v   # -v removes the volumes
 pnpm run zammad:local:up
 # then repeat First-time setup steps 4, 5, 6, 7
 ```

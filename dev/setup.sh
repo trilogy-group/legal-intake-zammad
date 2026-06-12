@@ -489,9 +489,16 @@ for u in users:
   lastname = parts[1] if len(parts) > 1 else ''
   role_ids = ROLE_MAP.get(u.get('role', 'end_user'), [role_customer])
 
-  if u.get('zammad_user_id'):
-    print(f'  already synced: {email} (zammad_id={u[\"zammad_user_id\"]})')
-    continue
+  mapped_id = u.get('zammad_user_id')
+  if mapped_id:
+    # Verify the mapped user still exists. After a DB reset the Zammad ids are
+    # gone but Supabase keeps the old mapping; without this check the user is
+    # never recreated and legal-intake references a non-existent Zammad user.
+    check = zammad_req('GET', f'/api/v1/users/{mapped_id}')
+    if isinstance(check, dict) and check.get('id'):
+      print(f'  already synced: {email} (zammad_id={mapped_id})')
+      continue
+    print(f'  stale mapping: {email} (zammad_id={mapped_id} missing) — re-syncing')
 
   # Check if user already exists in Zammad
   import urllib.parse

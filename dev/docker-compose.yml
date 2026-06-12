@@ -8,8 +8,12 @@
 #
 # Start:  npm run zammad:local:up
 # Stop:   npm run zammad:local:down
-# Reset:  npm run zammad:local:down -v  (removes volumes for a clean slate)
-#         then re-run: up → setup
+# Reset:  docker compose -f dev/docker-compose.yml down -v  (removes volumes)
+#         then re-run: up → db:init → setup
+
+# Compose project name. Without this, Compose names the project after the
+# containing folder ("dev"), producing vague container names like dev-zammad-*.
+name: legal-intake-zammad
 
 x-shared:
   zammad-service: &zammad-service
