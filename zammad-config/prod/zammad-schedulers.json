@@ -158,12 +158,6 @@
     },
     {
       "name": "Customer Reminder - 3 days (awaiting response)",
-      "object": "Ticket",
-      "disable_notification": false,
-      "localization": "system",
-      "timezone": "system",
-      "note": "Reminds customer after 3 days when ticket is in awaiting_response status with no updates",
-      "active": true,
       "timeplan": {
         "days": {
           "Mon": true,
@@ -209,6 +203,7 @@
           "50": false
         }
       },
+      "object": "Ticket",
       "condition": {
         "ticket.state_id": {
           "operator": "is",
@@ -235,16 +230,15 @@
           "include_attachments": "false"
         }
       },
-      "pid": null
+      "disable_notification": false,
+      "pid": null,
+      "localization": "system",
+      "timezone": "system",
+      "note": "Reminds customer after 3 days when ticket is in awaiting_response status with no updates",
+      "active": true
     },
     {
       "name": "Attorney Reminder - 3 days (last comment from customer)",
-      "object": "Ticket",
-      "disable_notification": false,
-      "localization": "system",
-      "timezone": "system",
-      "note": "Reminds attorney after 3 days when ticket is in under_legal_review status with no updates",
-      "active": true,
       "timeplan": {
         "days": {
           "Mon": true,
@@ -290,6 +284,7 @@
           "50": false
         }
       },
+      "object": "Ticket",
       "condition": {
         "ticket.state_id": {
           "operator": "is",
@@ -316,10 +311,21 @@
           "include_attachments": "false"
         }
       },
-      "pid": null
+      "disable_notification": false,
+      "pid": null,
+      "localization": "system",
+      "timezone": "system",
+      "note": "Reminds attorney after 3 days when ticket is in under_legal_review status with no updates",
+      "active": true
     },
     {
       "name": "Inactivity Warning - 13 days (awaiting response)",
+      "object": "Ticket",
+      "disable_notification": false,
+      "localization": "system",
+      "timezone": "system",
+      "note": "Warns customer at 13 days that ticket will be closed in 48 hours if no updates (awaiting_response status)",
+      "active": true,
       "timeplan": {
         "days": {
           "Mon": true,
@@ -365,7 +371,6 @@
           "50": false
         }
       },
-      "object": "Ticket",
       "condition": {
         "ticket.state_id": {
           "operator": "is",
@@ -375,6 +380,11 @@
           "operator": "before (relative)",
           "value": "13",
           "range": "day"
+        },
+        "ticket.group_id": {
+          "operator": "is not",
+          "value": ["4", "6"],
+          "value_completion": ""
         }
       },
       "perform": {
@@ -392,15 +402,16 @@
           "include_attachments": "false"
         }
       },
-      "disable_notification": false,
-      "pid": null,
-      "localization": "system",
-      "timezone": "system",
-      "note": "Warns customer at 13 days that ticket will be closed in 48 hours if no updates (awaiting_response status)",
-      "active": true
+      "pid": null
     },
     {
       "name": "Auto-close inactive tickets after 15 days (awaiting response)",
+      "object": "Ticket",
+      "disable_notification": false,
+      "localization": "system",
+      "timezone": "system",
+      "note": "Automatically closes tickets that have been in awaiting_response status with no updates for 15 days or more",
+      "active": true,
       "timeplan": {
         "days": {
           "Mon": true,
@@ -446,7 +457,6 @@
           "50": false
         }
       },
-      "object": "Ticket",
       "condition": {
         "ticket.state_id": {
           "operator": "is",
@@ -456,6 +466,11 @@
           "operator": "before (relative)",
           "value": "15",
           "range": "day"
+        },
+        "ticket.group_id": {
+          "operator": "is not",
+          "value": ["4", "6"],
+          "value_completion": ""
         }
       },
       "perform": {
@@ -476,12 +491,7 @@
           "value": "4"
         }
       },
-      "disable_notification": false,
-      "pid": null,
-      "localization": "system",
-      "timezone": "system",
-      "note": "Automatically closes tickets that have been in awaiting_response status with no updates for 15 days or more",
-      "active": true
+      "pid": null
     },
     {
       "name": "Auto Close tickets in \"submission_in_progress\" state for >12 hours",
