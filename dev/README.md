@@ -190,18 +190,43 @@ npm run dev
 
 ## Daily workflow
 
+Make sure **Docker Desktop is running** first. Then:
+
 ```bash
-# Terminal 1 — infra
+# Step 0 — legal-intake's local Supabase (Docker; returns once started, no dedicated terminal needed)
+cd legal-intake && supabase start
+
+# Terminal 1 — Zammad infra: Postgres, Elasticsearch, Redis, Memcached (Docker)
 cd legal-intake-zammad && pnpm run zammad:local:up
 
-# Terminal 2 — Zammad (native Rails + Vite + worker)
+# Terminal 2 — Zammad app: native Rails web + background worker + websocket + Vite (keep running)
 cd legal-intake-zammad && pnpm run zammad:local:dev
 
-# Terminal 3 — legal-intake on 3000
+# Terminal 3 — legal-intake on 3000 (keep running)
 cd legal-intake && npm run dev
 ```
 
+> **Start order matters:** let the Zammad infra (Terminal 1) report healthy before launching
+> `zammad:local:dev`, otherwise Rails can't reach Postgres on boot.
+
 Re-run `pnpm run zammad:local:setup` any time you want to re-apply config (it's idempotent).
+
+### Stopping
+
+```bash
+# Stop the foreground apps: Ctrl-C in the Terminal 2 (Zammad) and Terminal 3 (legal-intake) windows
+pnpm run zammad:local:down          # stop Zammad infra containers   (from legal-intake-zammad)
+cd legal-intake && supabase stop    # stop legal-intake's Supabase containers
+```
+
+### What persists across a reboot?
+
+- **Native processes** (`zammad:local:dev`, `npm run dev`) do **not** auto-start — always relaunch them by hand.
+- **Docker containers** (Zammad infra + Supabase) use `restart: unless-stopped`, so they come back **only if Docker
+  Desktop launches on login**. If it doesn't, re-run `zammad:local:up` and `supabase start`.
+- **Gotcha:** if Docker restarts while `zammad:local:dev` is running, it kills `forego` and the Zammad background
+  worker, leaving orphaned `puma`/`websocket` processes. Webhooks/triggers silently stop firing. Fix: stop the
+  stragglers (`pkill -f "puma 7|websocket-server"`) and restart `pnpm run zammad:local:dev`.
 
 ---
 
