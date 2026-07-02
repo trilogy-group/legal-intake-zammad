@@ -120,6 +120,23 @@
       "active": true
     },
     {
+      "name": "Status changed to Sent For Signature",
+      "condition": {
+        "ticket.action": { "operator": "is", "value": "update" },
+        "ticket.state_id": { "operator": "is", "value": ["20"] }
+      },
+      "perform": {
+        "notification.webhook": { "webhook_id": "1" }
+      },
+      "disable_notification": true,
+      "localization": "system",
+      "timezone": "system",
+      "note": "Fires webhook when ticket enters sent_for_signature(20). Drives the counterparty-signature reminder note.",
+      "activator": "action",
+      "execution_condition_mode": "selective",
+      "active": true
+    },
+    {
       "name": "Set li_ready_for_signature_at on Ready for Signature",
       "condition": {
         "ticket.action": { "operator": "is", "value": "update" },
