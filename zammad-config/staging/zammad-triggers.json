@@ -24,11 +24,7 @@
         "notification.email": {
           "body": "<div style=\"font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;\">\n  <div style=\"text-align: center; margin-bottom: 32px;\">\n    <h1 style=\"font-size: 24px; font-weight: bold; color: #1f2937; margin: 0;\">Legal Intake</h1>\n  </div>\n  \n  <p style=\"font-size: 16px;\">Hello #{recipient.firstname},<br><br></p>\n  \n  <p style=\"font-size: 16px;\">\n    Your ticket \"<strong>#{ticket.title}</strong>\" is now under legal review by #{current_user.firstname} #{current_user.lastname}.\n  <br><br></p>\n  \n  <p style=\"font-size: 16px;\">\n    The legal team is reviewing your ticket and will reach out if any additional information is needed.\n  </p>\n  \n  <div style=\"text-align: center; margin: 32px 0;\">\n    <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\" style=\"background-color: #6366f1; color: #ffffff; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 500; display: inline-block;\">\n      View Ticket\n    </a>\n  </div>\n  \n  <p style=\"color: rgb(107, 114, 128);\">\n    If you're unable to click the button above, you can copy and paste this link:<br>\n    <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\" style=\"\">#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}<br><span style=\"color: rgb(107, 114, 128); background-color: initial;\"><br><span style=\"font-size: 12px;\">You are receiving this because you are a member of the group of this ticket.</span></span><br></a></p>\n</div>",
           "internal": "false",
-          "recipient": [
-            "ticket_owner",
-            "ticket_customer",
-            "ticket_shared_access_users"
-          ],
+          "recipient": ["ticket_owner", "ticket_customer", "ticket_shared_access_users"],
           "subject": "Under Legal Review: #{ticket.title}",
           "include_attachments": "false"
         },
@@ -129,6 +125,31 @@
       "active": true
     },
     {
+      "name": "Status changed to Sent For Signature",
+      "condition": {
+        "ticket.action": {
+          "operator": "is",
+          "value": "update"
+        },
+        "ticket.state_id": {
+          "operator": "is",
+          "value": ["19"]
+        }
+      },
+      "perform": {
+        "notification.webhook": {
+          "webhook_id": "2"
+        }
+      },
+      "disable_notification": true,
+      "localization": "system",
+      "timezone": "system",
+      "note": "Sends webhook event when ticket status is changed to : \"sent_for_signature\"",
+      "activator": "action",
+      "execution_condition_mode": "selective",
+      "active": true
+    },
+    {
       "name": "Set li_ready_for_signature_at on Ready for Signature",
       "condition": {
         "ticket.action": {
@@ -196,11 +217,7 @@
         "notification.email": {
           "body": "<div style=\"font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;\">\n  <div style=\"text-align: center; margin-bottom: 32px;\">\n    <h1 style=\"font-size: 24px; font-weight: bold; color: #1f2937; margin: 0;\">Legal Intake</h1>\n  </div>\n  \n  <p style=\"font-size: 16px;\">Hello #{recipient.firstname},<br><br></p>\n  \n  <p style=\"font-size: 16px;\">\n    The ticket \"<strong>#{ticket.title}</strong>\" has been assigned to you for review.\n  <br><br></p>\n  \n  <p style=\"font-size: 16px;\">\n    Please review this ticket and reach out to the ticket creator if any additional information is required.\n  </p>\n  \n  <div style=\"text-align: center; margin: 32px 0;\">\n    <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\" style=\"background-color: #6366f1; color: #ffffff; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 500; display: inline-block;\">\n      View Ticket\n    </a>\n  </div>\n  \n  <p style=\"color: rgb(107, 114, 128);\">\n    If you're unable to click the button above, you can copy and paste this link:<br>\n    <a href=\"#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}\" style=\"\">#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}<br><span style=\"color: rgb(107, 114, 128); background-color: initial;\"><br><span style=\"font-size: 12px;\">You are receiving this because you are a member of the group of this ticket.</span></span><br></a>\n  </p>\n</div>",
           "internal": "false",
-          "recipient": [
-            "ticket_owner",
-            "ticket_customer",
-            "ticket_shared_access_users"
-          ],
+          "recipient": ["ticket_owner", "ticket_customer", "ticket_shared_access_users"],
           "subject": "Ticket assigned for review: #{ticket.title}",
           "include_attachments": "false"
         },
