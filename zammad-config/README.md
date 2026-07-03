@@ -42,6 +42,38 @@ pnpm run zammad:prod:configure-all
 
 Scripts are **idempotent** — re-running reports `unchanged` for anything already in the desired state, and only pushes real diffs.
 
+## ⚠️ Object-attribute changes require a migration step
+
+Zammad does **not** apply object-attribute changes (adding/removing custom fields, changing `position`, or editing the `screens` visibility config) to the live database immediately. The `configure-object-attributes` script writes the change into Zammad's "pending" object-manager state, but the field will **not appear or reorder in the ticket UI** until you run the object-manager **migration**.
+
+The `configure-object-attributes` script prints a reminder when it finishes, but does **not** run the migration for you.
+
+### Apply order (when a change touches object attributes)
+
+Run these in order — object-attributes **first**, then the migration, then the rest:
+
+```bash
+# 1. Push the attribute definitions (positions, screens, new fields)
+pnpm run zammad:<env>:configure-object-attributes
+
+# 2. Execute the object-manager migration so the changes go live.
+#    Either click Admin → Objects → "Execute Migrations" in the Zammad UI,
+#    OR fire the API endpoint directly (uses the same ZAMMAD_URL / ZAMMAD_TOKEN):
+curl -s -X POST \
+  -H "Authorization: Token token=$ZAMMAD_TOKEN" \
+  "$ZAMMAD_URL/api/v1/object_manager_attributes_execute_migrations"
+
+# 3. Now apply the rest (these take effect immediately — no migration needed)
+pnpm run zammad:<env>:configure-field-visibility
+pnpm run zammad:<env>:configure-core-workflows
+pnpm run zammad:<env>:configure-triggers
+```
+
+**Why order matters:** `configure-object-attributes` PUTs the *entire* attribute — including its `screens` block — so if you run `configure-field-visibility` **first** and `configure-object-attributes` **second**, the object-attributes push can overwrite the visibility change (the two files must stay in sync on the `screens` sub-keys). Keep `zammad-object-attributes.json` and `zammad-field-visibility.json` consistent, apply object-attributes first, then run the migration, then field-visibility.
+
+`configure-field-visibility`, `configure-core-workflows`, and `configure-triggers` apply to the live DB immediately and do **not** need a migration.
+
+
 ## Making a config change
 
 1. Edit the JSON file in the appropriate `zammad-config/{env}/` directory
