@@ -129,6 +129,31 @@
       "active": true
     },
     {
+      "name": "Status changed to Sent For Signature",
+      "condition": {
+        "ticket.action": {
+          "operator": "is",
+          "value": "update"
+        },
+        "ticket.state_id": {
+          "operator": "is",
+          "value": ["19"]
+        }
+      },
+      "perform": {
+        "notification.webhook": {
+          "webhook_id": "2"
+        }
+      },
+      "disable_notification": true,
+      "localization": "system",
+      "timezone": "system",
+      "note": "Sends webhook event when ticket status is changed to : \"sent_for_signature\"",
+      "activator": "action",
+      "execution_condition_mode": "selective",
+      "active": true
+    },
+    {
       "name": "Set li_ready_for_signature_at on Ready for Signature",
       "condition": {
         "ticket.action": {

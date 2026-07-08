@@ -295,7 +295,7 @@
           "shown": true
         }
       },
-      "position": 1607,
+      "position": 1613,
       "object": "Ticket",
       "deletable": true
     },
@@ -335,7 +335,7 @@
           "shown": true
         }
       },
-      "position": 1608,
+      "position": 1609,
       "object": "Ticket",
       "deletable": true
     },
@@ -362,13 +362,19 @@
         },
         "edit": {
           "shown": true,
-          "required": false
+          "required": false,
+          "ticket.agent": {
+            "shown": true
+          },
+          "ticket.customer": {
+            "shown": true
+          }
         },
         "view": {
           "shown": true
         }
       },
-      "position": 1609,
+      "position": 1608,
       "object": "Ticket",
       "deletable": true
     },
@@ -407,13 +413,13 @@
           "shown": true
         }
       },
-      "position": 1610,
+      "position": 1607,
       "object": "Ticket",
       "deletable": true
     },
     {
       "name": "li_counterparty_contacts",
-      "display": "Counterparty contacts (JSON)",
+      "display": "Counterparty contacts",
       "data_type": "textarea",
       "data_option": {
         "rows": 8,
@@ -434,13 +440,19 @@
         },
         "edit": {
           "shown": true,
-          "required": false
+          "required": false,
+          "ticket.agent": {
+            "shown": true
+          },
+          "ticket.customer": {
+            "shown": true
+          }
         },
         "view": {
           "shown": true
         }
       },
-      "position": 1611,
+      "position": 1610,
       "object": "Ticket",
       "deletable": true
     },
@@ -839,7 +851,7 @@
             "shown": true
           }
         },
-        "position": 1607,
+        "position": 1613,
         "object": "Ticket",
         "deletable": true
       },
@@ -879,7 +891,7 @@
             "shown": true
           }
         },
-        "position": 1608,
+        "position": 1609,
         "object": "Ticket",
         "deletable": true
       },
@@ -906,13 +918,19 @@
           },
           "edit": {
             "shown": true,
-            "required": false
+            "required": false,
+            "ticket.agent": {
+              "shown": true
+            },
+            "ticket.customer": {
+              "shown": true
+            }
           },
           "view": {
             "shown": true
           }
         },
-        "position": 1609,
+        "position": 1608,
         "object": "Ticket",
         "deletable": true
       },
@@ -951,13 +969,13 @@
             "shown": true
           }
         },
-        "position": 1610,
+        "position": 1607,
         "object": "Ticket",
         "deletable": true
       },
       {
         "name": "li_counterparty_contacts",
-        "display": "Counterparty contacts (JSON)",
+        "display": "Counterparty contacts",
         "data_type": "textarea",
         "data_option": {
           "rows": 8,
@@ -978,13 +996,19 @@
           },
           "edit": {
             "shown": true,
-            "required": false
+            "required": false,
+            "ticket.agent": {
+              "shown": true
+            },
+            "ticket.customer": {
+              "shown": true
+            }
           },
           "view": {
             "shown": true
           }
         },
-        "position": 1611,
+        "position": 1610,
         "object": "Ticket",
         "deletable": true
       },

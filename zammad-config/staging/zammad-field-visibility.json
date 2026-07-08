@@ -36,6 +36,18 @@
       "agent_shown": true,
       "customer_shown": true
     },
+    "li_counterparty_entity_name": {
+      "agent_shown": true,
+      "customer_shown": true
+    },
+    "li_business_approver": {
+      "agent_shown": true,
+      "customer_shown": true
+    },
+    "li_counterparty_contacts": {
+      "agent_shown": true,
+      "customer_shown": true
+    },
     "li_ready_for_signature_at": {
       "agent_shown": false,
       "customer_shown": false

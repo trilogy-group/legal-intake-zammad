@@ -295,7 +295,7 @@
           "shown": true
         }
       },
-      "position": 1607,
+      "position": 1613,
       "object": "Ticket",
       "deletable": true
     },
@@ -335,7 +335,124 @@
           "shown": true
         }
       },
+      "position": 1609,
+      "object": "Ticket",
+      "deletable": true
+    },
+    {
+      "name": "li_counterparty_entity_name",
+      "display": "Counterparty entity name",
+      "data_type": "input",
+      "data_option": {
+        "type": "text",
+        "maxlength": 500,
+        "null": true,
+        "default": "",
+        "options": {},
+        "relation": ""
+      },
+      "data_option_new": {},
+      "editable": true,
+      "internal": false,
+      "active": true,
+      "screens": {
+        "create_middle": {
+          "shown": true,
+          "required": false
+        },
+        "edit": {
+          "shown": true,
+          "required": false,
+          "ticket.agent": {
+            "shown": true
+          },
+          "ticket.customer": {
+            "shown": true
+          }
+        },
+        "view": {
+          "shown": true
+        }
+      },
       "position": 1608,
+      "object": "Ticket",
+      "deletable": true
+    },
+    {
+      "name": "li_business_approver",
+      "display": "Business approver",
+      "data_type": "input",
+      "data_option": {
+        "type": "text",
+        "maxlength": 255,
+        "null": true,
+        "default": "",
+        "options": {},
+        "relation": ""
+      },
+      "data_option_new": {},
+      "editable": true,
+      "internal": false,
+      "active": true,
+      "screens": {
+        "create_middle": {
+          "shown": true,
+          "required": false
+        },
+        "edit": {
+          "shown": true,
+          "required": false,
+          "ticket.agent": {
+            "shown": true
+          },
+          "ticket.customer": {
+            "shown": true
+          }
+        },
+        "view": {
+          "shown": true
+        }
+      },
+      "position": 1607,
+      "object": "Ticket",
+      "deletable": true
+    },
+    {
+      "name": "li_counterparty_contacts",
+      "display": "Counterparty contacts",
+      "data_type": "textarea",
+      "data_option": {
+        "rows": 8,
+        "maxlength": 10000,
+        "null": true,
+        "default": "",
+        "options": {},
+        "relation": ""
+      },
+      "data_option_new": {},
+      "editable": true,
+      "internal": false,
+      "active": true,
+      "screens": {
+        "create_middle": {
+          "shown": true,
+          "required": false
+        },
+        "edit": {
+          "shown": true,
+          "required": false,
+          "ticket.agent": {
+            "shown": true
+          },
+          "ticket.customer": {
+            "shown": true
+          }
+        },
+        "view": {
+          "shown": true
+        }
+      },
+      "position": 1610,
       "object": "Ticket",
       "deletable": true
     },
@@ -367,7 +484,7 @@
           "shown": true
         }
       },
-      "position": 1609,
+      "position": 1612,
       "object": "Ticket",
       "deletable": true
     },
@@ -399,7 +516,7 @@
           "shown": true
         }
       },
-      "position": 1610,
+      "position": 1614,
       "object": "Ticket",
       "deletable": true
     },
@@ -431,7 +548,7 @@
           "shown": false
         }
       },
-      "position": 1611,
+      "position": 1615,
       "object": "Ticket",
       "deletable": false,
       "not_deletable_reason": "This attribute is referenced by Trigger: Owner First Assigned - invoke webhook,Set li_owner_assigned_at on Submitted to Legal with Owner and thus cannot be deleted!"
@@ -734,7 +851,7 @@
             "shown": true
           }
         },
-        "position": 1607,
+        "position": 1613,
         "object": "Ticket",
         "deletable": true
       },
@@ -774,7 +891,124 @@
             "shown": true
           }
         },
+        "position": 1609,
+        "object": "Ticket",
+        "deletable": true
+      },
+      {
+        "name": "li_counterparty_entity_name",
+        "display": "Counterparty entity name",
+        "data_type": "input",
+        "data_option": {
+          "type": "text",
+          "maxlength": 500,
+          "null": true,
+          "default": "",
+          "options": {},
+          "relation": ""
+        },
+        "data_option_new": {},
+        "editable": true,
+        "internal": false,
+        "active": true,
+        "screens": {
+          "create_middle": {
+            "shown": true,
+            "required": false
+          },
+          "edit": {
+            "shown": true,
+            "required": false,
+            "ticket.agent": {
+              "shown": true
+            },
+            "ticket.customer": {
+              "shown": true
+            }
+          },
+          "view": {
+            "shown": true
+          }
+        },
         "position": 1608,
+        "object": "Ticket",
+        "deletable": true
+      },
+      {
+        "name": "li_business_approver",
+        "display": "Business approver",
+        "data_type": "input",
+        "data_option": {
+          "type": "text",
+          "maxlength": 255,
+          "null": true,
+          "default": "",
+          "options": {},
+          "relation": ""
+        },
+        "data_option_new": {},
+        "editable": true,
+        "internal": false,
+        "active": true,
+        "screens": {
+          "create_middle": {
+            "shown": true,
+            "required": false
+          },
+          "edit": {
+            "shown": true,
+            "required": false,
+            "ticket.agent": {
+              "shown": true
+            },
+            "ticket.customer": {
+              "shown": true
+            }
+          },
+          "view": {
+            "shown": true
+          }
+        },
+        "position": 1607,
+        "object": "Ticket",
+        "deletable": true
+      },
+      {
+        "name": "li_counterparty_contacts",
+        "display": "Counterparty contacts",
+        "data_type": "textarea",
+        "data_option": {
+          "rows": 8,
+          "maxlength": 10000,
+          "null": true,
+          "default": "",
+          "options": {},
+          "relation": ""
+        },
+        "data_option_new": {},
+        "editable": true,
+        "internal": false,
+        "active": true,
+        "screens": {
+          "create_middle": {
+            "shown": true,
+            "required": false
+          },
+          "edit": {
+            "shown": true,
+            "required": false,
+            "ticket.agent": {
+              "shown": true
+            },
+            "ticket.customer": {
+              "shown": true
+            }
+          },
+          "view": {
+            "shown": true
+          }
+        },
+        "position": 1610,
         "object": "Ticket",
         "deletable": true
       },
@@ -806,7 +1040,7 @@
             "shown": true
           }
         },
-        "position": 1609,
+        "position": 1612,
         "object": "Ticket",
         "deletable": true
       },
@@ -838,7 +1072,7 @@
             "shown": true
           }
         },
-        "position": 1610,
+        "position": 1614,
         "object": "Ticket",
         "deletable": true
       },
@@ -870,7 +1104,7 @@
             "shown": false
           }
         },
-        "position": 1611,
+        "position": 1615,
         "object": "Ticket",
         "deletable": false,
         "not_deletable_reason": "This attribute is referenced by Trigger: Owner First Assigned - invoke webhook,Set li_owner_assigned_at on Submitted to Legal with Owner and thus cannot be deleted!"
@@ -878,8 +1112,8 @@
     ]
   },
   "metadata": {
-    "total_custom_attributes": 12,
+    "total_custom_attributes": 15,
     "objects": ["Ticket"],
-    "exported_at": "2026-06-10T08:34:40.067Z"
+    "exported_at": "2026-06-10T08:35:27.758Z"
   }
 }

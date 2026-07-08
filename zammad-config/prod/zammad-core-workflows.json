@@ -60,10 +60,6 @@
           "operator": "remove",
           "remove": true
         },
-        "ticket.li_requires_counterparty_signature": {
-          "operator": "set_readonly",
-          "set_readonly": true
-        },
         "ticket.li_invoice_reference": {
           "operator": "set_readonly",
           "set_readonly": true
@@ -541,6 +537,50 @@
       "stop_after_match": false,
       "changeable": true,
       "priority": 1001
+    },
+    {
+      "name": "Counterparty Contacts: show only when signature required",
+      "object": "Ticket",
+      "active": true,
+      "stop_after_match": false,
+      "changeable": true,
+      "priority": 1100,
+      "preferences": {},
+      "condition_saved": {},
+      "condition_selected": {
+        "ticket.li_requires_counterparty_signature": {
+          "operator": "is",
+          "value": true
+        }
+      },
+      "perform": {
+        "ticket.li_counterparty_contacts": {
+          "operator": "show",
+          "show": true
+        }
+      }
+    },
+    {
+      "name": "Counterparty Contacts: hide when signature not required",
+      "object": "Ticket",
+      "active": true,
+      "stop_after_match": false,
+      "changeable": true,
+      "priority": 1101,
+      "preferences": {},
+      "condition_saved": {},
+      "condition_selected": {
+        "ticket.li_requires_counterparty_signature": {
+          "operator": "is not",
+          "value": true
+        }
+      },
+      "perform": {
+        "ticket.li_counterparty_contacts": {
+          "operator": "remove",
+          "remove": true
+        }
+      }
     }
   ]
 }
