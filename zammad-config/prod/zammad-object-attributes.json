@@ -419,7 +419,7 @@
     },
     {
       "name": "li_counterparty_contacts",
-      "display": "Counterparty contacts (JSON)",
+      "display": "Counterparty contacts",
       "data_type": "textarea",
       "data_option": {
         "rows": 8,
@@ -975,7 +975,7 @@
       },
       {
         "name": "li_counterparty_contacts",
-        "display": "Counterparty contacts (JSON)",
+        "display": "Counterparty contacts",
         "data_type": "textarea",
         "data_option": {
           "rows": 8,
