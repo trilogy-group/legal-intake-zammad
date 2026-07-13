@@ -35,10 +35,19 @@ concurrency:
 
 permissions:
   contents: read
+  deployments: write   # auto-create GitHub Deployment records via the `environment:` key below
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-24.04-arm
+    # Declaring an environment makes GitHub auto-create a Deployment record
+    # (status in_progress → success/failure) → populates the repo "Deployments"
+    # widget + per-environment history. main → production, staging → staging.
+    # These environments have no protection rules (pure tracking), matching the
+    # legal-intake app repo; add required-reviewers here later for a prod gate.
+    environment:
+      name: ${{ github.ref_name == 'main' && 'production' || 'staging' }}
+      url: ${{ github.ref_name == 'main' && 'https://tickets.legal-intake.ti.trilogy.com' || 'https://staging-tickets.legal-intake.ti.trilogy.com' }}
     steps:
       - name: Checkout Code
         uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5
