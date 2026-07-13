@@ -36,7 +36,7 @@
     "ui_ticket_zoom_article_email_full_quote": false,
     "ui_ticket_zoom_article_email_full_quote_header": true,
     "ui_ticket_zoom_attachments_preview": true,
-    "ui_ticket_zoom_sidebar_article_attachments": false,
+    "ui_ticket_zoom_sidebar_article_attachments": true,
     "ui_ticket_create_notes": {},
     "ui_ticket_create_default_type": "phone-in",
     "ui_ticket_create_available_types": ["phone-in", "phone-out", "email-out"],
@@ -471,7 +471,6 @@
     "system_id": 11,
     "check_mk_token": "420c1eff91b979423b80cc6417259c78",
     "customer_ticket_create": false,
-    "app_version": "20260529102344",
     "send_no_auto_response_reg_exp": "(?!.*)",
     "ai_assistance_ticket_summary": false,
     "ticket_agent_default_notifications": {

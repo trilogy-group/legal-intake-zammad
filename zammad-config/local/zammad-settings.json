@@ -29,6 +29,8 @@
     "pretty_date_format": "timestamp",
     "ui_ticket_zoom_article_visibility_confirmation_dialog": false,
     "ui_ticket_zoom_article_note_new_internal": false,
+    "ui_ticket_zoom_attachments_preview": true,
+    "ui_ticket_zoom_sidebar_article_attachments": true,
     "ui_ticket_create_default_type": "phone-in",
     "ui_ticket_create_available_types": ["phone-in", "phone-out", "email-out"],
     "ticket_hook": "Ticket#",

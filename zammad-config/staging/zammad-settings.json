@@ -36,7 +36,7 @@
     "ui_ticket_zoom_article_email_full_quote": false,
     "ui_ticket_zoom_article_email_full_quote_header": true,
     "ui_ticket_zoom_attachments_preview": true,
-    "ui_ticket_zoom_sidebar_article_attachments": false,
+    "ui_ticket_zoom_sidebar_article_attachments": true,
     "ui_ticket_create_notes": {},
     "ui_ticket_create_default_type": "phone-in",
     "ui_ticket_create_available_types": ["phone-in", "phone-out", "email-out"],
@@ -445,7 +445,6 @@
     "http_type": "https",
     "es_url": "http://zammad-elasticsearch:9200",
     "product_logo": 1775484330,
-    "app_version": "20260529102029",
     "auth_google_oauth2_credentials": {
       "client_id": "691919791881-9j3q2joi2oaeni7vaumjn1rsmr6u0oqg.apps.googleusercontent.com",
       "client_secret": "**********"
