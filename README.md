@@ -1,3 +1,57 @@
+# Legal Intake — Zammad (Trilogy fork)
+
+> This is **`trilogy-group/legal-intake-zammad`**, a customized fork of
+> [`zammad/zammad`](https://github.com/zammad/zammad) that powers the attorney help desk for the
+> **Legal Intake** platform. The upstream Zammad README follows below; **this section is the
+> Trilogy-specific bit you need first.** Deeper agent/contributor detail is in
+> [`AGENTS.md`](./AGENTS.md); local setup is in [`dev/README.md`](./dev/README.md).
+
+## Branching convention
+
+| Branch | Role | Deployed to |
+|---|---|---|
+| `main` | **production** | `zammad-prod` → https://tickets.legal-intake.ti.trilogy.com |
+| `staging` | staging | `zammad-staging` → https://staging-tickets.legal-intake.ti.trilogy.com |
+
+- Both branches are **persistent and protected** (PR required, **squash-only**, required checks:
+  `Dockerfile check`, `Zammad config validate`, `Semgrep`).
+- **Upstream Zammad** is tracked via the `upstream` git remote only — it is **never** merged into
+  `main` automatically. Do **not** click GitHub's "Sync fork" button (it would drop hundreds of
+  upstream commits onto our production line). Pull upstream deliberately into a throwaway branch and
+  cherry-pick.
+- `develop` / `stable-*` are upstream Zammad's own branches — ignore them for Trilogy work.
+
+## How to make changes
+
+1. **Branch off `staging`:** `git checkout staging && git pull && git checkout -b feat/my-change`
+2. Make your change, open a **PR into `staging`** — it's merged with **squash**. The required checks
+   run automatically; a merge to `staging` **auto-deploys to the staging box**.
+3. Verify on staging (https://staging-tickets.legal-intake.ti.trilogy.com).
+4. **Promote to production:** open a PR from `staging` → `main`, titled
+   **`[Promote to Main]: <short scope>`**, with the body listing each included PR. Squash-merge it —
+   the merge **auto-deploys to production**.
+
+**What "a change" means here — two distinct kinds:**
+- **App/image code** (Ruby/Rails, Vue frontends, Dockerfile): ships in the Docker image built by
+  `.github/workflows/deploy.yaml` and deployed via SSM on merge. DB migrations ride along
+  automatically (the `zammad-init` container runs `rails db:migrate` on deploy).
+- **Runtime config** (triggers, roles, settings, object-attributes, overviews, webhooks, …): these
+  are live DB rows, **not** image code. They live as JSON under `zammad-config/{local,staging,prod}/`
+  and are applied idempotently with `pnpm run zammad:<env>:configure-*` (see
+  [`zammad-config/README.md`](./zammad-config/README.md)). A Docker deploy does NOT apply them.
+
+## Deploy & infrastructure
+
+- **Auto-deploy on merge** — no manual step. GitHub Actions builds the arm64 image → pushes to ECR
+  → deploys to the matching EC2 box via **AWS SSM RunCommand** (`docker compose pull && up -d`) →
+  health-checks. See [`AGENTS.md`](./AGENTS.md) for the full pipeline + gotchas.
+- The EC2 boxes, ECR repo, and SSM parameters are provisioned by the **`legal-intake-iac`** repo
+  (AWS CDK) — a separate, manually-deployed repo.
+- `gh` note: this repo has an `upstream` remote, so always pass
+  `--repo trilogy-group/legal-intake-zammad` to `gh` commands (bare `gh` resolves to `zammad/zammad`).
+
+---
+
 # Welcome to Zammad
 
 Are you juggling countless customer inquiries across multiple channels?
