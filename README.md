@@ -36,9 +36,12 @@
   `.github/workflows/deploy.yaml` and deployed via SSM on merge. DB migrations ride along
   automatically (the `zammad-init` container runs `rails db:migrate` on deploy).
 - **Runtime config** (triggers, roles, settings, object-attributes, overviews, webhooks, …): these
-  are live DB rows, **not** image code. They live as JSON under `zammad-config/{local,staging,prod}/`
-  and are applied idempotently with `pnpm run zammad:<env>:configure-*` (see
-  [`zammad-config/README.md`](./zammad-config/README.md)). A Docker deploy does NOT apply them.
+  are live DB rows, **not** image code. They live as JSON under `zammad-config/{local,staging,prod}/`.
+  **Merging a change to `zammad-config/<env>/*.json` auto-applies it to that env's live Zammad**
+  (after deploy, via `scripts/ci-apply-all-config.sh` — full ordered, non-destructive apply). A
+  config-only merge **skips the image build** and just applies the config. Manual apply is still
+  available for one-offs: `pnpm run zammad:<env>:configure-*` (see
+  [`zammad-config/README.md`](./zammad-config/README.md)).
 
 ## Deploy & infrastructure
 
