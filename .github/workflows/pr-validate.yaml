@@ -47,12 +47,18 @@ jobs:
         with:
           node-version: 22
       # The zammad-config/ TS scripts import only dotenv, zod and node builtins
-      # (verified: zero cross-file imports), so we can typecheck them standalone
-      # without a full monorepo pnpm install.
-      - name: Install minimal typecheck deps
-        run: npm install --no-save typescript@5 @types/node@22 zod dotenv tsx
-      - name: Typecheck config scripts
-        run: npx tsc --noEmit --project scripts/tsconfig.ci.json
+      # (verified: zero cross-file imports), so we typecheck them standalone in an
+      # isolated dir. We do NOT install in the repo root — the monorepo package.json
+      # would make npm resolve the whole (peer-conflicting) tree.
+      - name: Typecheck config scripts (isolated)
+        run: |
+          set -euo pipefail
+          WORK="$(mktemp -d)"
+          cp scripts/*.ts scripts/tsconfig.ci.json "$WORK/"
+          cd "$WORK"
+          npm install --no-save --no-package-lock \
+            typescript@5.9.3 @types/node@22 zod@4.4.3 dotenv
+          npx tsc --noEmit --project tsconfig.ci.json
       # Every zammad-config/**/*.json must be valid JSON — a corrupt config file
       # would make the configure-* apply step fail mid-deploy.
       - name: Validate config JSON is parseable
