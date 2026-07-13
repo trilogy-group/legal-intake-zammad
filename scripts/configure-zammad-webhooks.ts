@@ -38,7 +38,7 @@ const webhookSchema = z.object({
   customized_payload: z.boolean().default(false),
   custom_payload: z.string().nullable().optional(),
   basic_auth_username: z.string().nullable().optional(),
-  preferences: z.record(z.unknown()).default({}),
+  preferences: z.record(z.string(), z.unknown()).default({}),
 });
 
 const configSchema = z.object({
