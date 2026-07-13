@@ -1,0 +1,222 @@
+name: build-and-deploy
+
+# Builds the arm64 Zammad image on push to staging/main, pushes to ECR, then
+# deploys it in-place to the matching EC2 box via SSM RunCommand and persists the
+# tag to /intake/<env>/zammad/version so a future instance replacement boots the
+# same image.
+#
+#   push to staging -> tag staging-<sha>-arm64        -> deploy to zammad-staging
+#   push to main    -> tag main-<sha>-arm64 + :latest -> deploy to zammad-prod
+#
+# Migrations ride along: `docker compose up -d` starts the zammad-init container
+# which runs `rails db:migrate` automatically. There is NO separate migration step.
+#
+# Replaces the old ecr-release.yaml (build-only, manual VERSION bump on the box).
+
+on:
+  push:
+    branches:
+      - main
+      - staging
+
+# One deploy at a time per environment. A second push to the same branch waits
+# for the first to finish instead of racing the same box (the Zammad analogue of
+# the app repo's CloudFormation stack-lock race). We do NOT cancel-in-progress:
+# a half-finished container swap should complete, not be killed mid-flight.
+concurrency:
+  group: zammad-deploy-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-24.04-arm
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@8d2750c68a42422c14e847fe6c8ac0403b4cbd6f # v3
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@7474bc4690e29a8392af63c5b98e7449536d5c3a # v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@d539f0932e70871a027e9d5a9d8fc38589180a64 # v2
+
+      - name: Resolve environment + image tag
+        id: vars
+        run: |
+          set -euo pipefail
+          ECR_REGISTRY="${{ steps.login-ecr.outputs.registry }}"
+          ECR_REPOSITORY="${{ secrets.ECR_REPOSITORY_NAME }}"
+          SHORT_SHA="$(git rev-parse --short=7 HEAD)"
+          BRANCH_NAME="$(echo "${GITHUB_REF#refs/heads/}" | sed 's/\//-/g')"
+          TAG="${BRANCH_NAME}-${SHORT_SHA}-arm64"
+
+          # Branch -> environment + instance Name tag mapping.
+          if [ "${GITHUB_REF}" = "refs/heads/main" ]; then
+            ENV_NAME="prod"
+            INSTANCE_TAG="zammad-prod"
+          else
+            ENV_NAME="staging"
+            INSTANCE_TAG="zammad-staging"
+          fi
+
+          {
+            echo "image_uri=${ECR_REGISTRY}/${ECR_REPOSITORY}:${TAG}"
+            echo "registry=${ECR_REGISTRY}"
+            echo "repository=${ECR_REPOSITORY}"
+            echo "tag=${TAG}"
+            echo "env_name=${ENV_NAME}"
+            echo "instance_tag=${INSTANCE_TAG}"
+          } >> "$GITHUB_OUTPUT"
+          echo "Building ${TAG} for ${ENV_NAME} (${INSTANCE_TAG})"
+
+      - name: Build and push (main → versioned + latest)
+        if: github.ref == 'refs/heads/main'
+        uses: docker/build-push-action@10e90e3645eae34f1e60eeb005ba3a3d33f178e8 # v6
+        with:
+          context: .
+          build-args: |
+            COMMIT_SHA=${{ github.sha }}
+          pull: true
+          push: true
+          tags: |
+            ${{ steps.vars.outputs.image_uri }}
+            ${{ steps.vars.outputs.registry }}/${{ steps.vars.outputs.repository }}:latest
+          platforms: linux/arm64
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Build and push (staging → versioned only)
+        if: github.ref != 'refs/heads/main'
+        uses: docker/build-push-action@10e90e3645eae34f1e60eeb005ba3a3d33f178e8 # v6
+        with:
+          context: .
+          build-args: |
+            COMMIT_SHA=${{ github.sha }}
+          pull: true
+          push: true
+          tags: ${{ steps.vars.outputs.image_uri }}
+          platforms: linux/arm64
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Persist image tag to SSM version param
+        run: |
+          set -euo pipefail
+          aws ssm put-parameter \
+            --name "/intake/${{ steps.vars.outputs.env_name }}/zammad/version" \
+            --type String --overwrite \
+            --value "${{ steps.vars.outputs.tag }}" \
+            --region "${{ secrets.AWS_REGION }}"
+          echo "Persisted /intake/${{ steps.vars.outputs.env_name }}/zammad/version = ${{ steps.vars.outputs.tag }}"
+
+      - name: Resolve target instance id
+        id: target
+        run: |
+          set -euo pipefail
+          IID="$(aws ec2 describe-instances \
+            --region "${{ secrets.AWS_REGION }}" \
+            --filters "Name=tag:Name,Values=${{ steps.vars.outputs.instance_tag }}" \
+                      "Name=instance-state-name,Values=running" \
+            --query "Reservations[].Instances[].InstanceId" --output text)"
+          if [ -z "$IID" ] || [ "$(echo "$IID" | wc -w)" -ne 1 ]; then
+            echo "::error::Expected exactly one running ${{ steps.vars.outputs.instance_tag }} instance, got: '$IID'"
+            exit 1
+          fi
+          echo "instance_id=${IID}" >> "$GITHUB_OUTPUT"
+          echo "Target instance: ${IID}"
+
+      - name: Deploy via SSM RunCommand
+        id: ssm
+        env:
+          TAG: ${{ steps.vars.outputs.tag }}
+          REPO: ${{ steps.vars.outputs.registry }}/${{ steps.vars.outputs.repository }}
+          REGION: ${{ secrets.AWS_REGION }}
+          IID: ${{ steps.target.outputs.instance_id }}
+        run: |
+          set -euo pipefail
+          # Remote script run on the box. Logs into ECR, pulls the exact tag,
+          # recreates containers (zammad-init runs migrations), prunes old images.
+          read -r -d '' REMOTE <<EOF || true
+          set -euo pipefail
+          cd /opt/intake-zammad
+          export VERSION="${TAG}"
+          aws ecr get-login-password --region ${REGION} | docker login --username AWS --password-stdin ${REPO%/*}
+          docker compose pull zammad-railsserver zammad-init zammad-scheduler zammad-websocket zammad-nginx
+          docker compose up -d
+          docker image prune -f
+          EOF
+
+          CMD_ID="$(aws ssm send-command \
+            --region "${REGION}" \
+            --instance-ids "${IID}" \
+            --document-name "AWS-RunShellScript" \
+            --comment "Deploy Zammad ${TAG}" \
+            --parameters commands="$(printf '%s' "$REMOTE" | jq -Rs '[.]')" \
+            --timeout-seconds 900 \
+            --query "Command.CommandId" --output text)"
+          echo "SSM command: ${CMD_ID}"
+          echo "command_id=${CMD_ID}" >> "$GITHUB_OUTPUT"
+
+          # Poll until the command reaches a terminal state (max ~15 min).
+          for i in $(seq 1 90); do
+            sleep 10
+            STATUS="$(aws ssm get-command-invocation \
+              --region "${REGION}" --command-id "${CMD_ID}" --instance-id "${IID}" \
+              --query "Status" --output text 2>/dev/null || echo "Pending")"
+            echo "  [$i] status=${STATUS}"
+            case "${STATUS}" in
+              Success) echo "SSM command succeeded"; break ;;
+              Failed|Cancelled|TimedOut)
+                echo "::error::SSM deploy ended: ${STATUS}"
+                aws ssm get-command-invocation --region "${REGION}" \
+                  --command-id "${CMD_ID}" --instance-id "${IID}" \
+                  --query "StandardErrorContent" --output text || true
+                exit 1 ;;
+            esac
+            if [ "$i" -eq 90 ]; then echo "::error::SSM deploy timed out"; exit 1; fi
+          done
+
+      - name: Health check
+        env:
+          REGION: ${{ secrets.AWS_REGION }}
+          IID: ${{ steps.target.outputs.instance_id }}
+        run: |
+          set -euo pipefail
+          # Poll the nginx container inside the box for HTTP < 500 (Rails up).
+          read -r -d '' HC <<'EOF' || true
+          set -euo pipefail
+          cd /opt/intake-zammad
+          for i in $(seq 1 30); do
+            CODE=$(docker compose exec -T zammad-nginx curl -s -o /dev/null -w "%{http_code}" --max-time 5 http://localhost:8080/ 2>/dev/null || echo "000")
+            if [ "$CODE" -ge 200 ] && [ "$CODE" -lt 500 ]; then echo "healthy: HTTP $CODE"; exit 0; fi
+            echo "  health $i/30: HTTP $CODE"; sleep 10
+          done
+          echo "unhealthy after 5min"; exit 1
+          EOF
+          CMD_ID="$(aws ssm send-command --region "${REGION}" --instance-ids "${IID}" \
+            --document-name "AWS-RunShellScript" --comment "Zammad health check" \
+            --parameters commands="$(printf '%s' "$HC" | jq -Rs '[.]')" \
+            --timeout-seconds 600 --query "Command.CommandId" --output text)"
+          for i in $(seq 1 40); do
+            sleep 10
+            STATUS="$(aws ssm get-command-invocation --region "${REGION}" \
+              --command-id "${CMD_ID}" --instance-id "${IID}" --query "Status" --output text 2>/dev/null || echo "Pending")"
+            case "${STATUS}" in
+              Success) echo "Health check passed"; exit 0 ;;
+              Failed|Cancelled|TimedOut) echo "::error::Health check ${STATUS}"; exit 1 ;;
+            esac
+          done
+          echo "::error::Health check poll timed out"; exit 1
