@@ -37,6 +37,30 @@ Trilogy-specific:
 - **AWS auth:** account `791359514580`, profile `legalintake`, via `saml2aws login --profile=legalintake`
   (KeyCloak SAML, ~1h sessions), NOT AWS SSO.
 
+### The platform: three repos
+This help desk is one of three sibling repos (clone side-by-side under one parent dir):
+| Repo | Role |
+|---|---|
+| **legal-intake** | Next.js intake app (raises tickets here via REST + receives our webhooks). See its `AGENTS.md`. |
+| **legal-intake-zammad** (this) | Customized Zammad help desk — attorney ticketing + contract-review workflow. |
+| **legal-intake-iac** | AWS CDK for THIS repo's EC2 boxes, ECR, SSM params, the version-param bootstrap. See its `AGENTS.md`. |
+
+### Local development
+Full setup — running Zammad natively wired to a local legal-intake — is in **`dev/README.md`**
+(don't duplicate it). Essentials:
+- Clone `legal-intake` + `legal-intake-zammad` as **siblings**; `dev/setup.sh` finds the app at
+  `../../legal-intake` (or set `LEGAL_INTAKE_DIR`).
+- Deps: Docker, rbenv + Ruby 3.4.9, forego, Node 22+, pnpm 10+, libpq.
+- `pnpm run zammad:local:up` (Postgres/ES/Redis/Memcached in Docker) → `pnpm run zammad:local:setup`
+  → `pnpm run zammad:local:dev` (Rails+Vite native via `bin/dev`). Zammad on **http://localhost:3001**,
+  legal-intake on **https://localhost:3000** (not interchangeable — webhook + API wiring depends on them).
+- Local Zammad DB: `docker exec legal-intake-zammad-zammad-postgres-1 psql -U postgres -d zammad`
+  (DB name is `zammad`, NOT `zammad_production`; role `zammad` doesn't exist — use `postgres`).
+- After a role/core-workflow/object-attribute change, flush caches
+  (`echo flush_all | nc -w1 localhost 11211` + `redis-cli FLUSHDB`) then re-login — Core Workflow
+  eval is bound to the session's cached role_ids.
+- Apply config locally with `pnpm run zammad:local:configure-*` (see `zammad-config/README.md`).
+
 ## Summary
 
 - Zammad is an open-source helpdesk/customer support platform.
