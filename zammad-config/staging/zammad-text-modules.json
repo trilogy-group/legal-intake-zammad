@@ -4,7 +4,7 @@
       "name": "cnr - I could not reach you...",
       "keywords": "",
       "content": "I could not reach you by phone. Could you please send me a short email and let me know when you will be available again?",
-      "note": "",
+      "note": "CI auto-apply rehearsal v2 (fixed script: poll+order) — revert after",
       "active": true,
       "group_ids": []
     },
