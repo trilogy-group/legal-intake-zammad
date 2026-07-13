@@ -73,6 +73,20 @@ execute_object_manager_migrations() {
     head -c 400 /tmp/ci-objmgr-migrate.json >&2 || true
     exit 1
   fi
+  # Trap 5 (from the deploy skill): the migration restarts Zammad's workers to
+  # rebuild the ticket model, so the WHOLE API can 502 for ~10s afterward. Poll a
+  # cheap authenticated endpoint until it recovers BEFORE the next configure step,
+  # or that step fails spuriously. Not fatal — just wait it out.
+  echo "    waiting for API to recover post-migration..."
+  local i rc
+  for i in $(seq 1 20); do
+    rc=$(curl -s -o /dev/null -w "%{http_code}" --max-time 10 \
+      -H "Authorization: Bearer $ZAMMAD_TOKEN" "$ZAMMAD_URL/api/v1/ticket_states" || echo "000")
+    if [ "$rc" = "200" ]; then echo "    API healthy (attempt $i)"; return 0; fi
+    echo "      attempt $i: HTTP $rc — retrying in 3s"; sleep 3
+  done
+  echo "ERROR: Zammad API did not recover within ~60s after migration." >&2
+  exit 1
 }
 
 # --- Canonical dependency order -------------------------------------------------
@@ -89,8 +103,9 @@ run_if_present "zammad-ticket-states.json"   "configure-zammad-ticket-states.ts"
 run_if_present "zammad-organizations.json"   "configure-zammad-organizations.ts"
 
 # 3. Field-dependent config (references the custom fields migrated above).
-run_if_present "zammad-core-workflows.json"  "configure-zammad-core-workflows.ts"
+#    Order matches the proven manual recipe: field-visibility BEFORE core-workflows.
 run_if_present "zammad-field-visibility.json" "configure-zammad-field-visibility.ts"
+run_if_present "zammad-core-workflows.json"  "configure-zammad-core-workflows.ts"
 run_if_present "zammad-overviews.json"       "configure-zammad-overviews.ts"
 run_if_present "zammad-text-modules.json"    "configure-zammad-text-modules.ts"
 run_if_present "zammad-report-profiles.json" "configure-zammad-report-profiles.ts"
