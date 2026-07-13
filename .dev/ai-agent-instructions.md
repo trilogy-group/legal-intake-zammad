@@ -22,8 +22,11 @@ Trilogy-specific:
 - **Feature work:** branch off `staging` → PR into `staging` (squash) → promote `staging`→`main`
   via a PR titled `[Promote to Main]: <scope>` listing each included PR.
 - **Runtime config as code** (`zammad-config/{local,staging,prod}/*.json` + `scripts/`): triggers,
-  roles, settings, object-attributes etc. are live DB rows, applied idempotently via
-  `pnpm run zammad:<env>:configure-*` (NOT baked into the image). `export-*` dumps, `configure-*` sets.
+  roles, settings, object-attributes etc. are live DB rows (NOT baked into the image). **A merge that
+  changes `zammad-config/<env>/*.json` AUTO-APPLIES it to that env's live Zammad** after deploy, via
+  `scripts/ci-apply-all-config.sh` (full ordered, NON-destructive — never sets `DELETE_UNLISTED_*`;
+  object-attributes + object-manager migration first). A config-only merge SKIPS the image build.
+  Manual apply still works for one-offs: `pnpm run zammad:<env>:configure-*`. `export-*` dumps.
 - **Gotchas:**
   - `gh` has an `upstream` remote → bare `gh run/api` resolve to `zammad/zammad` and 404. Always pass
     `--repo trilogy-group/legal-intake-zammad`.
