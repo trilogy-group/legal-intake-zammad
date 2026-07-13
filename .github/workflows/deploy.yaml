@@ -18,6 +18,12 @@ on:
     branches:
       - main
       - staging
+    # Docs-only changes must not trigger an image rebuild + prod redeploy.
+    paths-ignore:
+      - '**/*.md'
+      - 'AGENTS.md'
+      - '.dev/ai-agent-instructions.md'
+      - 'docs/**'
 
 # One deploy at a time per environment. A second push to the same branch waits
 # for the first to finish instead of racing the same box (the Zammad analogue of
