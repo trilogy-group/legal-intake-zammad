@@ -87,6 +87,20 @@ jobs:
             INSTANCE_TAG="zammad-staging"
           fi
 
+          # Detect whether any runtime-config JSON for THIS env changed in the
+          # pushed range → gates the post-deploy auto-apply step. Non-fatal: if
+          # the diff base is unavailable, default to applying (safe: idempotent).
+          CONFIG_CHANGED=false
+          BEFORE="${{ github.event.before }}"
+          if [ -n "${BEFORE}" ] && [ "${BEFORE}" != "0000000000000000000000000000000000000000" ] && git cat-file -e "${BEFORE}" 2>/dev/null; then
+            if git diff --name-only "${BEFORE}" "${GITHUB_SHA}" | grep -qE "^zammad-config/${ENV_NAME}/.*\.json$"; then
+              CONFIG_CHANGED=true
+            fi
+          else
+            echo "No usable diff base (${BEFORE}) — will apply config to be safe."
+            CONFIG_CHANGED=true
+          fi
+
           {
             echo "image_uri=${ECR_REGISTRY}/${ECR_REPOSITORY}:${TAG}"
             echo "registry=${ECR_REGISTRY}"
@@ -94,8 +108,9 @@ jobs:
             echo "tag=${TAG}"
             echo "env_name=${ENV_NAME}"
             echo "instance_tag=${INSTANCE_TAG}"
+            echo "config_changed=${CONFIG_CHANGED}"
           } >> "$GITHUB_OUTPUT"
-          echo "Building ${TAG} for ${ENV_NAME} (${INSTANCE_TAG})"
+          echo "Building ${TAG} for ${ENV_NAME} (${INSTANCE_TAG}); config_changed=${CONFIG_CHANGED}"
 
       - name: Build and push (main → versioned + latest)
         if: github.ref == 'refs/heads/main'
@@ -254,3 +269,36 @@ jobs:
             esac
           done
           echo "::error::Health check poll timed out"; exit 1
+
+      # --- Auto-apply runtime config (config-as-code) -------------------------
+      # Runs ONLY when a zammad-config/<env>/*.json changed in this push. Applies
+      # the FULL ordered, NON-DESTRUCTIVE config set to the just-deployed box via
+      # scripts/ci-apply-all-config.sh (object-attributes + object-manager
+      # migration first, then the rest in dependency order). Credentials come
+      # from the GitHub Environment secrets (auto-selected by the job's
+      # environment: key). Idempotent — reports "unchanged" where nothing moved.
+      - name: Set up pnpm
+        if: steps.vars.outputs.config_changed == 'true'
+        uses: pnpm/action-setup@b906affcce14559ad1aafd4ab0e942779e9f58b1 # v4
+        # version omitted → action-setup uses the packageManager pin in package.json (pnpm@10.x)
+
+      - name: Set up Node
+        if: steps.vars.outputs.config_changed == 'true'
+        uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5
+        with:
+          node-version: 22
+          package-manager-cache: false
+
+      - name: Install config-script deps
+        if: steps.vars.outputs.config_changed == 'true'
+        run: pnpm install --frozen-lockfile --prefer-offline
+
+      - name: Apply Zammad runtime config
+        if: steps.vars.outputs.config_changed == 'true'
+        env:
+          ZAMMAD_URL: ${{ secrets.ZAMMAD_URL }}
+          ZAMMAD_TOKEN: ${{ secrets.ZAMMAD_TOKEN }}
+        run: |
+          set -euo pipefail
+          echo "Config changed for ${{ steps.vars.outputs.env_name }} — applying (non-destructive)."
+          bash scripts/ci-apply-all-config.sh "${{ steps.vars.outputs.env_name }}"
