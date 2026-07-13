@@ -46,8 +46,11 @@ jobs:
     # These environments have no protection rules (pure tracking), matching the
     # legal-intake app repo; add required-reviewers here later for a prod gate.
     environment:
+      # name only — no `url:`. GitHub refuses to render a computed (expression)
+      # environment URL when the environment holds secrets ("Skip setting
+      # environment url ... may contain secret"), so the link never showed anyway.
+      # The Deployments widget + per-env history still work from the name alone.
       name: ${{ github.ref_name == 'main' && 'production' || 'staging' }}
-      url: ${{ github.ref_name == 'main' && 'https://tickets.legal-intake.ti.trilogy.com' || 'https://staging-tickets.legal-intake.ti.trilogy.com' }}
     steps:
       - name: Checkout Code
         uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5
@@ -87,6 +90,32 @@ jobs:
             INSTANCE_TAG="zammad-staging"
           fi
 
+          # Detect whether any runtime-config JSON for THIS env changed in the
+          # pushed range → gates the post-deploy auto-apply step. Non-fatal: if
+          # the diff base is unavailable, default to applying (safe: idempotent).
+          CONFIG_CHANGED=false
+          # Detect whether anything IMAGE-relevant changed (anything NOT under
+          # zammad-config/). Config JSON does not ride the Docker image, so a
+          # config-only merge must SKIP the expensive build+push+SSM-deploy and
+          # go straight to the config apply. Default true if no usable diff base.
+          IMAGE_CHANGED=false
+          BEFORE="${{ github.event.before }}"
+          if [ -n "${BEFORE}" ] && [ "${BEFORE}" != "0000000000000000000000000000000000000000" ] && git cat-file -e "${BEFORE}" 2>/dev/null; then
+            CHANGED="$(git diff --name-only "${BEFORE}" "${GITHUB_SHA}")"
+            echo "Changed files:"; echo "${CHANGED}"
+            if echo "${CHANGED}" | grep -qE "^zammad-config/${ENV_NAME}/.*\.json$"; then
+              CONFIG_CHANGED=true
+            fi
+            # image-relevant = any changed file outside zammad-config/
+            if echo "${CHANGED}" | grep -qvE "^zammad-config/"; then
+              IMAGE_CHANGED=true
+            fi
+          else
+            echo "No usable diff base (${BEFORE}) — building + applying config to be safe."
+            CONFIG_CHANGED=true
+            IMAGE_CHANGED=true
+          fi
+
           {
             echo "image_uri=${ECR_REGISTRY}/${ECR_REPOSITORY}:${TAG}"
             echo "registry=${ECR_REGISTRY}"
@@ -94,11 +123,13 @@ jobs:
             echo "tag=${TAG}"
             echo "env_name=${ENV_NAME}"
             echo "instance_tag=${INSTANCE_TAG}"
+            echo "config_changed=${CONFIG_CHANGED}"
+            echo "image_changed=${IMAGE_CHANGED}"
           } >> "$GITHUB_OUTPUT"
-          echo "Building ${TAG} for ${ENV_NAME} (${INSTANCE_TAG})"
+          echo "Building ${TAG} for ${ENV_NAME} (${INSTANCE_TAG}); image_changed=${IMAGE_CHANGED} config_changed=${CONFIG_CHANGED}"
 
       - name: Build and push (main → versioned + latest)
-        if: github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/main' && steps.vars.outputs.image_changed == 'true'
         uses: docker/build-push-action@53b7df96c91f9c12dcc8a07bcb9ccacbed38856a # v7
         with:
           context: .
@@ -114,7 +145,7 @@ jobs:
           cache-to: type=gha,mode=max
 
       - name: Build and push (staging → versioned only)
-        if: github.ref != 'refs/heads/main'
+        if: github.ref != 'refs/heads/main' && steps.vars.outputs.image_changed == 'true'
         uses: docker/build-push-action@53b7df96c91f9c12dcc8a07bcb9ccacbed38856a # v7
         with:
           context: .
@@ -128,6 +159,7 @@ jobs:
           cache-to: type=gha,mode=max
 
       - name: Persist image tag to SSM version param
+        if: steps.vars.outputs.image_changed == 'true'
         run: |
           set -euo pipefail
           aws ssm put-parameter \
@@ -139,6 +171,7 @@ jobs:
 
       - name: Resolve target instance id
         id: target
+        if: steps.vars.outputs.image_changed == 'true'
         run: |
           set -euo pipefail
           IID="$(aws ec2 describe-instances \
@@ -155,6 +188,7 @@ jobs:
 
       - name: Deploy via SSM RunCommand
         id: ssm
+        if: steps.vars.outputs.image_changed == 'true'
         env:
           TAG: ${{ steps.vars.outputs.tag }}
           REGISTRY: ${{ steps.vars.outputs.registry }}
@@ -216,6 +250,7 @@ jobs:
           done
 
       - name: Health check
+        if: steps.vars.outputs.image_changed == 'true'
         env:
           REGION: ${{ secrets.AWS_REGION }}
           IID: ${{ steps.target.outputs.instance_id }}
@@ -254,3 +289,36 @@ jobs:
             esac
           done
           echo "::error::Health check poll timed out"; exit 1
+
+      # --- Auto-apply runtime config (config-as-code) -------------------------
+      # Runs ONLY when a zammad-config/<env>/*.json changed in this push. Applies
+      # the FULL ordered, NON-DESTRUCTIVE config set to the just-deployed box via
+      # scripts/ci-apply-all-config.sh (object-attributes + object-manager
+      # migration first, then the rest in dependency order). Credentials come
+      # from the GitHub Environment secrets (auto-selected by the job's
+      # environment: key). Idempotent — reports "unchanged" where nothing moved.
+      - name: Set up pnpm
+        if: steps.vars.outputs.config_changed == 'true'
+        uses: pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271 # v6 (Node24)
+        # version omitted → action-setup uses the packageManager pin in package.json (pnpm@10.x)
+
+      - name: Set up Node
+        if: steps.vars.outputs.config_changed == 'true'
+        uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5
+        with:
+          node-version: 22
+          package-manager-cache: false
+
+      - name: Install config-script deps
+        if: steps.vars.outputs.config_changed == 'true'
+        run: pnpm install --frozen-lockfile --prefer-offline
+
+      - name: Apply Zammad runtime config
+        if: steps.vars.outputs.config_changed == 'true'
+        env:
+          ZAMMAD_URL: ${{ secrets.ZAMMAD_URL }}
+          ZAMMAD_TOKEN: ${{ secrets.ZAMMAD_TOKEN }}
+        run: |
+          set -euo pipefail
+          echo "Config changed for ${{ steps.vars.outputs.env_name }} — applying (non-destructive)."
+          bash scripts/ci-apply-all-config.sh "${{ steps.vars.outputs.env_name }}"
