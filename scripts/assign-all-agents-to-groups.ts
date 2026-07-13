@@ -104,7 +104,7 @@ async function main() {
 
     // All roles (Admin, Agent, Legal Admin) should have all groups with FULL permissions
     const hasAllGroupsWithFull =
-      groupIds.every((id) => {
+      groupIds.every((id: number) => {
         const perms = currentGroups[id.toString()];
         return perms && perms.includes("full");
       }) && currentGroupCount === groupIds.length;
