@@ -2,6 +2,41 @@
 
 Purpose: Give an AI coding agent a fast, reliable mental model of this repo to ship changes with minimal trial-and-error.
 
+## ⚠️ Trilogy fork — CI/CD, branches & deploy (read FIRST)
+
+This is a **fork of `zammad/zammad`** customized for the Legal Intake platform. The
+generic Zammad onboarding below still applies to app code, but our ship model is
+Trilogy-specific:
+
+- **Branches:** `main` = **production**, `staging` = staging. Both are persistent and
+  protected (rulesets "Protect main" strict / "Protect staging" non-strict; PR required,
+  **squash-only**, required checks: `Dockerfile check`, `Zammad config validate`, `Semgrep`;
+  repo-admin is a bypass actor). Upstream Zammad is tracked via the `upstream` remote only —
+  never let it flow into `main` automatically. `develop`/`stable-*` are upstream's branches; ignore.
+- **Auto-deploy on merge** (`.github/workflows/deploy.yaml`): push to `staging` → build
+  `staging-<sha>-arm64` → deploy to the `zammad-staging` EC2 box; push to `main` →
+  `main-<sha>-arm64` + `:latest` → deploy to `zammad-prod`. Mechanism = GitHub Actions →
+  **AWS SSM RunCommand** (`docker compose pull && up -d`) on the box, resolved by `Name` tag.
+  DB migrations ride along automatically via the `zammad-init` container. Health-checked;
+  per-env concurrency. (The old build-only `ecr-release.yaml` is gone.)
+- **Feature work:** branch off `staging` → PR into `staging` (squash) → promote `staging`→`main`
+  via a PR titled `[Promote to Main]: <scope>` listing each included PR.
+- **Runtime config as code** (`zammad-config/{local,staging,prod}/*.json` + `scripts/`): triggers,
+  roles, settings, object-attributes etc. are live DB rows, applied idempotently via
+  `pnpm run zammad:<env>:configure-*` (NOT baked into the image). `export-*` dumps, `configure-*` sets.
+- **Gotchas:**
+  - `gh` has an `upstream` remote → bare `gh run/api` resolve to `zammad/zammad` and 404. Always pass
+    `--repo trilogy-group/legal-intake-zammad`.
+  - Keep repo setting **`delete_branch_on_merge = false`** — when it was `true`, merging a
+    `staging`→`main` PR auto-deleted the persistent `staging` branch. Recreate if lost:
+    `git branch -f staging origin/main && git push origin staging`.
+  - Deploy runs the remote script under **`/bin/sh` (dash)** — no `set -o pipefail`.
+  - Actions are SHA-pinned with a `# vN` comment (Semgrep `github-actions-mutable-action-tag` requires it).
+  - Infra (EC2 boxes, ECR, SSM params, the version-param bootstrap) lives in the **`legal-intake-iac`**
+    repo — see its `AGENTS.md`.
+- **AWS auth:** account `791359514580`, profile `legalintake`, via `saml2aws login --profile=legalintake`
+  (KeyCloak SAML, ~1h sessions), NOT AWS SSO.
+
 ## Summary
 
 - Zammad is an open-source helpdesk/customer support platform.
