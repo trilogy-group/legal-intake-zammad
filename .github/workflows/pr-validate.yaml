@@ -1,0 +1,75 @@
+name: PR Validate
+
+# Lightweight required gate for PRs into staging/main.
+# Deliberately NOT the upstream Zammad RSpec matrix (slow, tests upstream code we
+# don't modify) and NOT a full image build (that runs post-merge in ecr-release;
+# a bad image simply fails that build and auto-deploy never fires, so the box
+# keeps its old image). This gate catches the two things that actually break OUR
+# changes fast: a malformed Dockerfile and broken/mis-typed config-as-code.
+
+on:
+  pull_request:
+    branches:
+      - main
+      - staging
+
+# One in-flight run per PR; a new push cancels the previous.
+concurrency:
+  group: pr-validate-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  dockerfile-check:
+    name: Dockerfile check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@8d2750c68a42422c14e847fe6c8ac0403b4cbd6f # v3
+      # `docker build --check` runs the BuildKit linter only (no image build).
+      # The root Dockerfile declares `# check=error=true`, so any lint finding
+      # fails the job. Fast (seconds), catches syntax/COPY/stage mistakes.
+      - name: Validate Dockerfile (lint only, no build)
+        run: docker build --check .
+
+  config-validate:
+    name: Zammad config validate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+      - name: Set up Node
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 22
+      # The zammad-config/ TS scripts import only dotenv, zod and node builtins
+      # (verified: zero cross-file imports), so we typecheck them standalone in an
+      # isolated dir. We do NOT install in the repo root — the monorepo package.json
+      # would make npm resolve the whole (peer-conflicting) tree.
+      - name: Typecheck config scripts (isolated)
+        run: |
+          set -euo pipefail
+          WORK="$(mktemp -d)"
+          cp scripts/*.ts scripts/tsconfig.ci.json "$WORK/"
+          cd "$WORK"
+          npm install --no-save --no-package-lock \
+            typescript@5.9.3 @types/node@22 zod@4.4.3 dotenv
+          npx tsc --noEmit --project tsconfig.ci.json
+      # Every zammad-config/**/*.json must be valid JSON — a corrupt config file
+      # would make the configure-* apply step fail mid-deploy.
+      - name: Validate config JSON is parseable
+        run: |
+          set -euo pipefail
+          fail=0
+          while IFS= read -r -d '' f; do
+            if ! node -e "JSON.parse(require('fs').readFileSync('$f','utf8'))" 2>/dev/null; then
+              echo "::error file=$f::Invalid JSON"
+              fail=1
+            fi
+          done < <(find zammad-config -name '*.json' -print0)
+          if [ "$fail" -ne 0 ]; then exit 1; fi
+          echo "All zammad-config JSON files are valid."

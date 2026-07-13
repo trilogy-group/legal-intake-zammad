@@ -35,8 +35,8 @@ const roleSchema = z.object({
   note: z.string().optional(),
   permission_ids: z.array(z.number()).optional(),
   knowledge_base_permission_ids: z.array(z.number()).optional(),
-  group_ids: z.record(z.array(z.string())).optional(),
-  preferences: z.record(z.any()).optional(),
+  group_ids: z.record(z.string(), z.array(z.string())).optional(),
+  preferences: z.record(z.string(), z.any()).optional(),
 });
 
 const configSchema = z.object({
