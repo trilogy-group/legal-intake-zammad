@@ -46,6 +46,10 @@ jobs:
         uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5
         with:
           node-version: 22
+          # v5 defaults package-manager-cache: true → auto-detects the repo's
+          # pnpm lockfile and invokes pnpm (not installed here) → job fails.
+          # We install deps in an isolated dir, so no caching is needed.
+          package-manager-cache: false
       # The zammad-config/ TS scripts import only dotenv, zod and node builtins
       # (verified: zero cross-file imports), so we typecheck them standalone in an
       # isolated dir. We do NOT install in the repo root — the monorepo package.json
