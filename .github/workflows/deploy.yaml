@@ -91,14 +91,26 @@ jobs:
           # pushed range → gates the post-deploy auto-apply step. Non-fatal: if
           # the diff base is unavailable, default to applying (safe: idempotent).
           CONFIG_CHANGED=false
+          # Detect whether anything IMAGE-relevant changed (anything NOT under
+          # zammad-config/). Config JSON does not ride the Docker image, so a
+          # config-only merge must SKIP the expensive build+push+SSM-deploy and
+          # go straight to the config apply. Default true if no usable diff base.
+          IMAGE_CHANGED=false
           BEFORE="${{ github.event.before }}"
           if [ -n "${BEFORE}" ] && [ "${BEFORE}" != "0000000000000000000000000000000000000000" ] && git cat-file -e "${BEFORE}" 2>/dev/null; then
-            if git diff --name-only "${BEFORE}" "${GITHUB_SHA}" | grep -qE "^zammad-config/${ENV_NAME}/.*\.json$"; then
+            CHANGED="$(git diff --name-only "${BEFORE}" "${GITHUB_SHA}")"
+            echo "Changed files:"; echo "${CHANGED}"
+            if echo "${CHANGED}" | grep -qE "^zammad-config/${ENV_NAME}/.*\.json$"; then
               CONFIG_CHANGED=true
             fi
+            # image-relevant = any changed file outside zammad-config/
+            if echo "${CHANGED}" | grep -qvE "^zammad-config/"; then
+              IMAGE_CHANGED=true
+            fi
           else
-            echo "No usable diff base (${BEFORE}) — will apply config to be safe."
+            echo "No usable diff base (${BEFORE}) — building + applying config to be safe."
             CONFIG_CHANGED=true
+            IMAGE_CHANGED=true
           fi
 
           {
@@ -109,11 +121,12 @@ jobs:
             echo "env_name=${ENV_NAME}"
             echo "instance_tag=${INSTANCE_TAG}"
             echo "config_changed=${CONFIG_CHANGED}"
+            echo "image_changed=${IMAGE_CHANGED}"
           } >> "$GITHUB_OUTPUT"
-          echo "Building ${TAG} for ${ENV_NAME} (${INSTANCE_TAG}); config_changed=${CONFIG_CHANGED}"
+          echo "Building ${TAG} for ${ENV_NAME} (${INSTANCE_TAG}); image_changed=${IMAGE_CHANGED} config_changed=${CONFIG_CHANGED}"
 
       - name: Build and push (main → versioned + latest)
-        if: github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/main' && steps.vars.outputs.image_changed == 'true'
         uses: docker/build-push-action@53b7df96c91f9c12dcc8a07bcb9ccacbed38856a # v7
         with:
           context: .
@@ -129,7 +142,7 @@ jobs:
           cache-to: type=gha,mode=max
 
       - name: Build and push (staging → versioned only)
-        if: github.ref != 'refs/heads/main'
+        if: github.ref != 'refs/heads/main' && steps.vars.outputs.image_changed == 'true'
         uses: docker/build-push-action@53b7df96c91f9c12dcc8a07bcb9ccacbed38856a # v7
         with:
           context: .
@@ -143,6 +156,7 @@ jobs:
           cache-to: type=gha,mode=max
 
       - name: Persist image tag to SSM version param
+        if: steps.vars.outputs.image_changed == 'true'
         run: |
           set -euo pipefail
           aws ssm put-parameter \
@@ -154,6 +168,7 @@ jobs:
 
       - name: Resolve target instance id
         id: target
+        if: steps.vars.outputs.image_changed == 'true'
         run: |
           set -euo pipefail
           IID="$(aws ec2 describe-instances \
@@ -170,6 +185,7 @@ jobs:
 
       - name: Deploy via SSM RunCommand
         id: ssm
+        if: steps.vars.outputs.image_changed == 'true'
         env:
           TAG: ${{ steps.vars.outputs.tag }}
           REGISTRY: ${{ steps.vars.outputs.registry }}
@@ -231,6 +247,7 @@ jobs:
           done
 
       - name: Health check
+        if: steps.vars.outputs.image_changed == 'true'
         env:
           REGION: ${{ secrets.AWS_REGION }}
           IID: ${{ steps.target.outputs.instance_id }}
