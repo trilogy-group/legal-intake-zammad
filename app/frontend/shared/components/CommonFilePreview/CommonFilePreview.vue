@@ -169,30 +169,15 @@ const classMap = getFilePreviewClasses()
       </div>
     </Component>
 
-    <div
-      v-if="noRemove && (showPreviewButton || (canDownload && downloadUrl))"
-      class="ms-auto flex shrink-0 items-center gap-2"
+    <button
+      v-if="noRemove && showPreviewButton"
+      v-tooltip="$t('Preview %s', file.name)"
+      type="button"
+      class="ms-auto shrink-0 text-xs text-blue-800 hover:text-blue-850 dark:hover:text-blue-600"
+      @click.stop.prevent="onPreviewClick"
     >
-      <button
-        v-if="showPreviewButton"
-        v-tooltip="$t('Preview %s', file.name)"
-        type="button"
-        class="text-xs text-blue-800 hover:text-blue-850 dark:hover:text-blue-600"
-        @click.stop.prevent="onPreviewClick"
-      >
-        {{ $t('Preview') }}
-      </button>
-      <CommonLink
-        v-if="canDownload && downloadUrl"
-        v-tooltip="$t('Download %s', file.name)"
-        :link="downloadUrl"
-        download
-        class="text-xs text-blue-800 hover:text-blue-850 dark:hover:text-blue-600"
-        @click.stop
-      >
-        {{ $t('Download') }}
-      </CommonLink>
-    </div>
+      {{ $t('Preview') }}
+    </button>
 
     <component
       :is="filePreviewConfig?.buttonComponent"

@@ -6,7 +6,7 @@
   <% end %>
   <% for data in @ticketAttachments: %>
     <% content_type = @ContentOrMimeType(data.attachment) %>
-    <a class="attachment attachment--preview  <%- @ContentTypeIcon(content_type) if @ContentTypeIcon(content_type) %>" data-preview-url="<%= data.attachment.preview_url %>" data-id="<%= data.attachment.id %>" target="_blank" href="<%= App.Config.get('api_path') %>/ticket_attachment/<%= data.article.ticket_id %>/<%= data.article.id %>/<%= data.attachment.id %>?disposition=attachment" data-type="attachment"<% if @canDownload(content_type): %> download<% end %>>
+    <a class="attachment attachment--preview  <%- @ContentTypeIcon(content_type) if @ContentTypeIcon(content_type) %>" data-preview-url="<%= data.attachment.preview_url %>" data-id="<%= data.attachment.id %>" href="<%= App.Config.get('api_path') %>/ticket_attachment/<%= data.article.ticket_id %>/<%= data.article.id %>/<%= data.attachment.id %>?disposition=attachment" data-type="attachment" download>
       <div class="attachment-icon">
       <% if content_type && @ContentTypeIcon(content_type): %>
         <% if @canPreview(content_type) is 'image': %>
@@ -27,10 +27,7 @@
       <% if @ContentTypeIcon(content_type) is 'file-calendar': %>
         <button class="btn js-preview" type="button">Preview</button>
       <% else if previewType and previewType isnt 'image': %>
-        <div class="attachment-controls">
-          <button class="btn btn--action btn--small js-previewAttachment" type="button" title="<%- @T('Preview') %>" data-url="<%= baseUrl %>" data-preview-type="<%= previewType %>" data-filename="<%= data.attachment.filename %>"><%- @Icon('eye') %></button>
-          <a class="btn btn--action btn--small js-downloadAttachment" data-type="attachment" title="<%- @T('Download') %>" href="<%= baseUrl %>?disposition=attachment" download><%- @Icon('download') %></a>
-        </div>
+        <button class="btn btn--action btn--small js-previewAttachment attachment-preview-btn" type="button" title="<%- @T('Preview') %>" data-url="<%= baseUrl %>" data-preview-type="<%= previewType %>" data-filename="<%= data.attachment.filename %>"><%- @Icon('eye') %></button>
       <% end %>
     </a>
   <% end %>

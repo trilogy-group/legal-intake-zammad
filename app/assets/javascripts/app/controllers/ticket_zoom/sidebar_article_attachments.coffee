@@ -52,7 +52,6 @@ class SidebarArticleAttachments extends App.Controller
     @el.find('.js-attachments img').click(@imageView)
     @el.find('.file-calendar .js-preview').click(@calendarView)
     @el.find('.js-previewAttachment').click(@previewAttachment)
-    @el.find('.js-downloadAttachment').click((e) -> e.stopPropagation())
 
   imageView: (e) ->
     e.preventDefault()

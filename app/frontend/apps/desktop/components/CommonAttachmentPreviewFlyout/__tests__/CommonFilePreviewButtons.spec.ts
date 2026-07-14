@@ -32,7 +32,7 @@ describe('CommonFilePreview desktop preview/download buttons', () => {
     })
   })
 
-  it('shows a Preview button and a Download link for a docx in a display context', () => {
+  it('shows a Preview button for a docx in a display context', () => {
     const view = renderFilePreview({
       file: { name: 'contract.docx', type: docxType, size: 2048 },
       downloadUrl: '/api/url',
@@ -40,11 +40,6 @@ describe('CommonFilePreview desktop preview/download buttons', () => {
     })
 
     expect(view.getByRole('button', { name: 'Preview contract.docx' })).toBeInTheDocument()
-    // Two "Download contract.docx" links exist (the whole-row link + the
-    // explicit Download button); both point at the download URL.
-    const downloadLinks = view.getAllByRole('link', { name: 'Download contract.docx' })
-    expect(downloadLinks.length).toBeGreaterThanOrEqual(1)
-    downloadLinks.forEach((link) => expect(link).toHaveAttribute('href', '/api/url'))
   })
 
   it('emits preview with the resolved type on Preview click', async () => {

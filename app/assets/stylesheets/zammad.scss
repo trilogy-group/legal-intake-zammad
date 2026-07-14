@@ -8216,38 +8216,29 @@ a.list-group-item.active > .badge,
   }
 }
 
-// Per-attachment Preview + Download buttons (right side of the row).
-// Icon-only; the label shows as a native tooltip (title attr) on hover.
-.attachment.attachment--preview {
-  flex-wrap: nowrap;
-
-  .attachment-text {
-    flex: 1 1 auto;
-    min-width: 0;
-  }
-}
-
-.attachment .attachment-controls {
-  margin-inline-start: auto;
+// Per-attachment Preview button — icon-only, positioned on the right of the
+// row (absolute, like the delete button). Label shows as a native tooltip.
+.attachment.attachment--preview .attachment-preview-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  inset-inline-end: 8px;
   display: inline-flex;
-  gap: 4px;
   align-items: center;
-  flex-shrink: 0;
-  align-self: center;
-
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 5px;
-    min-width: 0;
-    line-height: 1;
-  }
+  justify-content: center;
+  padding: 5px;
+  min-width: 0;
+  line-height: 1;
 
   .icon {
     vertical-align: middle;
     margin: 0;
   }
+}
+
+// Keep the filename text clear of the absolutely-positioned button.
+.attachment.attachment--preview .attachment-text {
+  padding-inline-end: 34px;
 }
 
 // Attachment preview modal body (docx / pdf / text).

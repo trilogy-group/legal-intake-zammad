@@ -23,7 +23,6 @@ class App.ArticleViewItem extends App.ControllerObserver
     'click .attachments img':                    'imageView'
     'click .file-calendar .js-preview':          'calendarView'
     'click .js-previewAttachment':               'previewAttachment'
-    'click .js-downloadAttachment':              'stopPropagation'
     'click .js-securityRetryProcess':            'retrySecurityProcess'
     'click .js-retryWhatsAppAttachmentDownload': 'retryWhatsAppAttachmentDownload'
     'click .js-fetchOriginalFormatting':         'fetchOriginalFormatting'

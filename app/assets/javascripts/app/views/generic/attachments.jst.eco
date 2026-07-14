@@ -13,7 +13,7 @@
         </div>
       <% else: %>
         <% content_type = @ContentOrMimeType(attachment) %>
-        <a class="attachment attachment--preview <%- @ContentTypeIcon(content_type) if @ContentTypeIcon(content_type) %>" href="<%= attachment.url %>" data-type="attachment" data-preview-url="<%= attachment.preview_url %>" data-id="<%= attachment.id %>" <% if @canDownload(content_type): %> download<% else: %>target="_blank"<% end %>>
+        <a class="attachment attachment--preview <%- @ContentTypeIcon(content_type) if @ContentTypeIcon(content_type) %>" href="<%= attachment.url %>" data-type="attachment" data-preview-url="<%= attachment.preview_url %>" data-id="<%= attachment.id %>" download>
           <div class="attachment-icon js-preview">
           <% if attachment.preferences && content_type && @ContentTypeIcon(content_type): %>
             <% if @canPreview(content_type) is 'image': %>
@@ -34,10 +34,7 @@
             <div class="half-spacer"></div>
             <button class="btn btn--action btn--small  js-preview" type="button"><%- @T('Preview') %></button>
           <% else if previewType and previewType isnt 'image': %>
-            <div class="attachment-controls">
-              <button class="btn btn--action btn--small js-previewAttachment" type="button" title="<%- @T('Preview') %>" data-url="<%= attachment.url %>" data-preview-type="<%= previewType %>" data-filename="<%= attachment.filename %>"><%- @Icon('eye') %></button>
-              <a class="btn btn--action btn--small js-downloadAttachment" data-type="attachment" title="<%- @T('Download') %>" href="<%= attachment.url %>" download><%- @Icon('download') %></a>
-            </div>
+            <button class="btn btn--action btn--small js-previewAttachment attachment-preview-btn" type="button" title="<%- @T('Preview') %>" data-url="<%= attachment.url %>" data-preview-type="<%= previewType %>" data-filename="<%= attachment.filename %>"><%- @Icon('eye') %></button>
           <% end %>
         </a>
       <% end %>
