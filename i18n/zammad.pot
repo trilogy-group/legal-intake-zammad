@@ -4546,7 +4546,7 @@ msgstr ""
 msgid "Decrement seconds value"
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/article_view/item.coffee:297
+#: app/assets/javascripts/app/controllers/article_view/item.coffee:299
 msgid "Decryption failed!"
 msgstr ""
 
@@ -4555,7 +4555,7 @@ msgstr ""
 msgid "Decryption failed! %s"
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/article_view/item.coffee:295
+#: app/assets/javascripts/app/controllers/article_view/item.coffee:297
 #: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/ArticleSecurityBadge.vue:102
 #: app/frontend/shared/composables/useArticleSecurity.ts:110
 msgid "Decryption was successful."
@@ -5912,13 +5912,18 @@ msgstr ""
 msgid "Done"
 msgstr ""
 
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_attachment_preview.coffee:12
 #: app/assets/javascripts/app/controllers/ticket_zoom/article_image_view.coffee:4
+#: app/assets/javascripts/app/views/generic/attachments.jst.eco:6
 #: app/assets/javascripts/app/views/system_report.jst.eco:20
+#: app/assets/javascripts/app/views/ticket_zoom/sidebar_article_attachment.jst.eco:4
+#: app/frontend/apps/desktop/components/CommonAttachmentPreviewFlyout/CommonAttachmentPreviewFlyout.vue:82
 #: app/frontend/apps/desktop/components/CommonCalendarPreviewFlyout/CommonCalendarPreviewFlyout.vue:87
+#: app/frontend/shared/components/CommonFilePreview/CommonFilePreview.vue:83
 msgid "Download"
 msgstr ""
 
-#: app/frontend/shared/components/CommonFilePreview/CommonFilePreview.vue:68
+#: app/frontend/shared/components/CommonFilePreview/CommonFilePreview.vue:83
 msgid "Download %s"
 msgstr ""
 
@@ -5953,6 +5958,8 @@ msgstr ""
 msgid "Download Public Key"
 msgstr ""
 
+#: app/assets/javascripts/app/views/generic/attachments.jst.eco:6
+#: app/assets/javascripts/app/views/ticket_zoom/sidebar_article_attachment.jst.eco:4
 #: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/ArticleBubble/ArticleBubbleFooter.vue:48
 #: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarAttachment/TicketSidebarAttachmentContent.vue:59
 msgid "Download all"
@@ -5975,7 +5982,7 @@ msgstr ""
 msgid "Download raw email"
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/article_view/item.coffee:323
+#: app/assets/javascripts/app/controllers/article_view/item.coffee:325
 msgid "Downloading attachments…"
 msgstr ""
 
@@ -7239,7 +7246,7 @@ msgstr ""
 msgid "Field that uniquely identifies the user. If unset, \"sub\" is used."
 msgstr ""
 
-#: app/frontend/shared/components/CommonFilePreview/CommonFilePreview.vue:135
+#: app/frontend/shared/components/CommonFilePreview/CommonFilePreview.vue:156
 msgid "File '%s' is uploading"
 msgstr ""
 
@@ -8500,7 +8507,7 @@ msgstr ""
 msgid "Image file size is too large, please try inserting a smaller file."
 msgstr ""
 
-#: app/frontend/shared/components/CommonFilePreview/CommonFilePreview.vue:105
+#: app/frontend/shared/components/CommonFilePreview/CommonFilePreview.vue:126
 msgid "Image of %s"
 msgstr ""
 
@@ -9703,6 +9710,10 @@ msgstr ""
 #: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/actions/TicketShare/TicketShareFlyout.vue:288
 #: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/TicketShareDialog.vue:296
 msgid "Loading shared users"
+msgstr ""
+
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_attachment_preview.coffee:28
+msgid "Loading …"
 msgstr ""
 
 #: app/assets/javascripts/app/controllers/ticket_shared_access.coffee:38
@@ -11395,7 +11406,7 @@ msgstr ""
 
 #: app/controllers/organizations_controller.rb:107
 #: app/controllers/text_modules_controller.rb:75
-#: app/controllers/ticket_articles_controller.rb:265
+#: app/controllers/ticket_articles_controller.rb:269
 #: app/controllers/tickets_controller.rb:459
 #: app/controllers/users_controller.rb:591
 msgid "No source data submitted!"
@@ -11894,7 +11905,7 @@ msgstr ""
 msgid "Open"
 msgstr ""
 
-#: app/frontend/shared/components/CommonFilePreview/CommonFilePreview.vue:69
+#: app/frontend/shared/components/CommonFilePreview/CommonFilePreview.vue:84
 msgid "Open %s"
 msgstr ""
 
@@ -12173,7 +12184,7 @@ msgstr ""
 msgid "Origin By"
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/article_view/item.coffee:92
+#: app/assets/javascripts/app/controllers/article_view/item.coffee:94
 msgid "Original Formatting"
 msgstr ""
 
@@ -12922,15 +12933,17 @@ msgstr ""
 #: app/assets/javascripts/app/views/channel/chat.jst.eco:20
 #: app/assets/javascripts/app/views/channel/form.jst.eco:135
 #: app/assets/javascripts/app/views/generic/application_selector.jst.eco:15
-#: app/assets/javascripts/app/views/generic/attachments.jst.eco:31
+#: app/assets/javascripts/app/views/generic/attachments.jst.eco:35
 #: app/assets/javascripts/app/views/profile/imageCropper.jst.eco:5
 #: app/assets/javascripts/app/views/settings/ticket_number.jst.eco:13
 #: app/assets/javascripts/app/views/system_report.jst.eco:20
+#: app/assets/javascripts/app/views/ticket_zoom/sidebar_article_attachment.jst.eco:31
 #: app/assets/javascripts/app/views/widget/text_module.jst.eco:16
+#: app/frontend/shared/components/CommonFilePreview/CommonFilePreview.vue:114
 msgid "Preview"
 msgstr ""
 
-#: app/frontend/shared/components/CommonFilePreview/CommonFilePreview.vue:93
+#: app/frontend/shared/components/CommonFilePreview/CommonFilePreview.vue:114
 msgid "Preview %s"
 msgstr ""
 
@@ -12940,6 +12953,11 @@ msgstr ""
 
 #: app/frontend/apps/desktop/components/CommonCalendarPreviewFlyout/CommonCalendarPreviewFlyout.vue:85
 msgid "Preview calendar"
+msgstr ""
+
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_attachment_preview.coffee:70
+#: app/frontend/apps/desktop/components/CommonAttachmentPreviewFlyout/CommonAttachmentPreviewFlyout.vue:92
+msgid "Preview could not be generated."
 msgstr ""
 
 #: app/assets/javascripts/app/views/data_privacy/preview.jst.eco:6
@@ -12953,6 +12971,11 @@ msgstr ""
 #: app/frontend/apps/desktop/pages/ticket/components/TicketSharedDraftFlyout.vue:158
 #: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarSharedDraftStart/TicketSidebarSharedDraftStartContent.vue:187
 msgid "Preview shared draft"
+msgstr ""
+
+#: app/assets/javascripts/app/controllers/ticket_zoom/article_attachment_preview.coffee:22
+#: app/frontend/apps/desktop/components/CommonAttachmentPreviewFlyout/CommonAttachmentPreviewFlyout.vue:80
+msgid "Preview – %s"
 msgstr ""
 
 #: app/assets/javascripts/app/views/clues/clues_content.jst.eco:11
@@ -13195,7 +13218,7 @@ msgstr ""
 msgid "Rating can only be set once"
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/article_view/item.coffee:71
+#: app/assets/javascripts/app/controllers/article_view/item.coffee:73
 #: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/ArticleMetadataDialog.vue:43
 msgid "Raw"
 msgstr ""
@@ -13468,7 +13491,7 @@ msgstr ""
 msgid "Remove"
 msgstr ""
 
-#: app/frontend/shared/components/CommonFilePreview/CommonFilePreview.vue:160
+#: app/frontend/shared/components/CommonFilePreview/CommonFilePreview.vue:206
 msgid "Remove %s"
 msgstr ""
 
@@ -14535,7 +14558,7 @@ msgid "See HTTPLog for details."
 msgstr ""
 
 #: app/assets/javascripts/app/controllers/_ui_element/ticket_duplicate_detection.coffee:71
-#: app/assets/javascripts/app/controllers/article_view/item.coffee:451
+#: app/assets/javascripts/app/controllers/article_view/item.coffee:453
 #: app/assets/javascripts/app/controllers/data_privacy.coffee:111
 #: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/ArticleBubble/ArticleBubbleBody.vue:132
 #: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/ArticleBubble.vue:268
@@ -14543,7 +14566,7 @@ msgid "See less"
 msgstr ""
 
 #: app/assets/javascripts/app/controllers/_ui_element/ticket_duplicate_detection.coffee:68
-#: app/assets/javascripts/app/controllers/article_view/item.coffee:447
+#: app/assets/javascripts/app/controllers/article_view/item.coffee:449
 #: app/assets/javascripts/app/controllers/data_privacy.coffee:108
 #: app/assets/javascripts/app/views/data_privacy/tasks.jst.eco:41
 #: app/assets/javascripts/app/views/generic/ticket_duplicate_detection/warning.jst.eco:21
@@ -15331,7 +15354,7 @@ msgstr ""
 msgid "Signature"
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/article_view/item.coffee:286
+#: app/assets/javascripts/app/controllers/article_view/item.coffee:288
 msgid "Signature verification failed!"
 msgstr ""
 
@@ -16871,7 +16894,7 @@ msgstr ""
 msgid "The personal access token could not be deleted."
 msgstr ""
 
-#: app/controllers/ticket_articles_controller.rb:320
+#: app/controllers/ticket_articles_controller.rb:338
 msgid "The preview cannot be generated. The format is corrupted or not supported."
 msgstr ""
 
@@ -17147,11 +17170,11 @@ msgstr ""
 msgid "The response could not be processed."
 msgstr ""
 
-#: app/controllers/ticket_articles_controller.rb:296
+#: app/controllers/ticket_articles_controller.rb:300
 msgid "The retried attachment download failed."
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/article_view/item.coffee:306
+#: app/assets/javascripts/app/controllers/article_view/item.coffee:308
 #: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/ArticleSecurityBadge.vue:62
 #: app/frontend/shared/composables/useArticleSecurity.ts:75
 msgid "The retried security process failed!"
@@ -17216,7 +17239,7 @@ msgstr ""
 msgid "The signature part of this PGP email is missing or has a wrong content type according to RFC 3156."
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/article_view/item.coffee:284
+#: app/assets/javascripts/app/controllers/article_view/item.coffee:286
 #: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/ArticleSecurityBadge.vue:85
 #: app/frontend/shared/composables/useArticleSecurity.ts:94
 msgid "The signature was successfully verified."
@@ -17421,7 +17444,7 @@ msgstr ""
 msgid "There are more than 1000 tickets in the Zendesk system. Due to API rate limit restrictions, Zammad can't get the exact number of tickets yet and has to fetch them in batches of 1000. This might take some time, better grab a cup of coffee. The total number of tickets gets updated as soon as the currently known number is surpassed."
 msgstr ""
 
-#: app/controllers/ticket_articles_controller.rb:303
+#: app/controllers/ticket_articles_controller.rb:321
 msgid "There are no attachments to download."
 msgstr ""
 
@@ -17578,7 +17601,7 @@ msgstr ""
 msgid "This Writing Assistant Tool translates the selected text into English."
 msgstr ""
 
-#: app/controllers/ticket_articles_controller.rb:217
+#: app/controllers/ticket_articles_controller.rb:221
 msgid "This article does not have a raw copy available."
 msgstr ""
 
@@ -18532,7 +18555,7 @@ msgstr ""
 msgid "Tickets bulk edit"
 msgstr ""
 
-#: app/controllers/ticket_articles_controller.rb:258
+#: app/controllers/ticket_articles_controller.rb:262
 #: app/controllers/tickets_controller.rb:452
 msgid "Tickets can only be imported if system is in import mode."
 msgstr ""
@@ -21188,7 +21211,7 @@ msgstr ""
 msgid "delete"
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/article_view/item.coffee:156
+#: app/assets/javascripts/app/controllers/article_view/item.coffee:158
 #: app/frontend/shared/entities/ticket/channel/composables/useWhatsapp.ts:18
 msgid "delivered to the customer"
 msgstr ""
@@ -22044,7 +22067,7 @@ msgstr ""
 msgid "reacted with a %s to message from %s '%s'"
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/article_view/item.coffee:153
+#: app/assets/javascripts/app/controllers/article_view/item.coffee:155
 #: app/frontend/shared/entities/ticket/channel/composables/useWhatsapp.ts:11
 msgid "read by the customer"
 msgstr ""
@@ -22142,7 +22165,7 @@ msgstr ""
 msgid "select visible options"
 msgstr ""
 
-#: app/assets/javascripts/app/controllers/article_view/item.coffee:159
+#: app/assets/javascripts/app/controllers/article_view/item.coffee:161
 #: app/frontend/shared/entities/ticket/channel/composables/useWhatsapp.ts:22
 msgid "sent to the customer"
 msgstr ""
