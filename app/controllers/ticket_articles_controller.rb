@@ -197,6 +197,30 @@ class TicketArticlesController < ApplicationController
     )
   end
 
+  # GET /ticket_attachment_zip/:ticket_id
+  def attachment_zip
+    ticket = Ticket.find(params[:ticket_id])
+    authorize!(ticket, :show?)
+
+    stores = Service::Ticket::Attachment::List
+      .new(current_user:)
+      .execute(ticket:)
+
+    send_attachment_zip(stores, "ticket-#{ticket.number}-attachments.zip")
+  end
+
+  # GET /ticket_attachment_zip_by_article/:article_id
+  def attachment_zip_by_article
+    article = Ticket::Article.find(params[:article_id])
+    authorize!(article.ticket, :show?)
+
+    stores = Service::Ticket::Attachment::List
+      .new(current_user:)
+      .execute_for_article(article:)
+
+    send_attachment_zip(stores, "ticket-#{article.ticket.number}-article-#{article.id}-attachments.zip")
+  end
+
   # GET /ticket_article_plain/1
   def article_plain
     article = Ticket::Article.find(params[:id])
@@ -290,6 +314,21 @@ class TicketArticlesController < ApplicationController
   end
 
   private
+
+  def send_attachment_zip(stores, filename)
+    if stores.blank?
+      raise Exceptions::UnprocessableEntity, __('There are no attachments to download.')
+    end
+
+    zip = Service::Ticket::Attachment::Zip.new(stores).execute
+
+    send_data(
+      zip,
+      filename:    filename,
+      type:        'application/zip',
+      disposition: 'attachment'
+    )
+  end
 
   def render_calendar_preview
     render json: Service::Calendar::IcsFile::Parse.new(current_user:).execute(file: download_file), status: :ok

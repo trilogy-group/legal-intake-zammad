@@ -10,6 +10,7 @@ import type { ObjectLike } from '#shared/types/utils.ts'
 
 import CommonLoader from '#desktop/components/CommonLoader/CommonLoader.vue'
 import { useFilePreviewViewer } from '#desktop/composables/useFilePreviewViewer.ts'
+import { useTicketInformation } from '#desktop/pages/ticket/composables/useTicketInformation.ts'
 import type { TicketSidebarContentProps } from '#desktop/pages/ticket/types/sidebar.ts'
 
 import TicketSidebarContent from '../TicketSidebarContent.vue'
@@ -28,6 +29,12 @@ const { attachments: attachmentsWithUrls } = useAttachments({
 })
 
 const { showPreview } = useFilePreviewViewer(computed(() => attachmentsWithUrls.value))
+
+const { ticketInternalId } = useTicketInformation()
+
+const downloadAllUrl = computed(
+  () => `/ticket_attachment_zip/${ticketInternalId.value}`,
+)
 </script>
 
 <template>
@@ -39,18 +46,33 @@ const { showPreview } = useFilePreviewViewer(computed(() => attachmentsWithUrls.
     <CommonLoader :loading="loading">
       <div
         v-if="ticketAttachments && ticketAttachments.length > 0"
-        class="flex flex-col rounded-lg bg-blue-200 p-1 text-gray-100 dark:bg-gray-700 dark:text-neutral-400"
+        class="flex flex-col gap-1"
       >
-        <CommonFilePreview
-          v-for="attachment of attachmentsWithUrls"
-          :key="attachment.internalId"
-          :download-url="attachment.downloadUrl"
-          :preview-url="attachment.preview"
-          :file="attachment"
-          :no-preview="!$c.ui_ticket_zoom_attachments_preview"
-          no-remove
-          @preview="($event, type) => showPreview(type, attachment)"
-        />
+        <div class="flex justify-end">
+          <CommonLink
+            :link="downloadAllUrl"
+            rest-api
+            download
+            class="flex items-center gap-1 text-xs text-blue-800 hover:text-blue-850 dark:hover:text-blue-600"
+          >
+            <CommonIcon size="tiny" decorative name="download" />
+            {{ $t('Download all') }}
+          </CommonLink>
+        </div>
+        <div
+          class="flex flex-col rounded-lg bg-blue-200 p-1 text-gray-100 dark:bg-gray-700 dark:text-neutral-400"
+        >
+          <CommonFilePreview
+            v-for="attachment of attachmentsWithUrls"
+            :key="attachment.internalId"
+            :download-url="attachment.downloadUrl"
+            :preview-url="attachment.preview"
+            :file="attachment"
+            :no-preview="!$c.ui_ticket_zoom_attachments_preview"
+            no-remove
+            @preview="($event, type) => showPreview(type, attachment)"
+          />
+        </div>
       </div>
       <CommonLabel v-else>
         {{ $t('No attached files') }}
