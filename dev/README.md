@@ -236,7 +236,14 @@ cd legal-intake && supabase stop    # stop legal-intake's Supabase containers
 Edit any file in `app/frontend/` → Vite hot-reloads the browser instantly. No restart needed.
 
 ### Backend changes (Ruby, ERB)
-Edit any file in `app/`, `lib/` → Rails dev mode reloads on the next browser request. No restart needed.
+Edit any file in `app/`, `lib/` → Rails dev mode reloads on the next browser **request**. No restart
+needed for request-path code (controllers, models, services, views).
+
+⚠️ **Background-job / worker code is the exception.** Code that runs in the `worker` process (triggers,
+notifications, schedulers, `app/jobs`, background services) does **not** reliably hot-reload the way
+the web request cycle does. After editing that class of code, **restart `bin/dev`** (Ctrl-C the Zammad
+terminal and re-run `pnpm run zammad:local:dev`). Same for `config/*`, `config/routes.rb`,
+initializers, and the `Gemfile` — those always need a `bin/dev` restart.
 
 ### Config changes (roles, triggers, settings, etc.)
 Edit `zammad-config/local/<file>.json`, then:
@@ -245,6 +252,25 @@ pnpm run zammad:local:configure-settings     # apply a specific type
 pnpm run zammad:local:configure-all          # apply everything
 ```
 No restart needed — applied via API instantly. (Requires `zammad-config/local/.env`, see step 8.)
+
+### Running from a git worktree (feature-branch dev)
+You can develop a branch in a sibling worktree
+(`../legal-intake-zammad_WORKTREES/legal-intake-zammad-<task>/`) and run it locally — `bin/dev` runs
+natively from whatever directory you invoke it in, so it runs **that worktree's branch code**, and the
+same hot-reload rules above apply. Four things to get right first, because a fresh worktree only has
+the source (deps + env are gitignored, so they're NOT carried over):
+
+1. **Copy the env file:** `cp ../../legal-intake-zammad/.env .` (plus `dev/.env` and
+   `zammad-config/local/.env` if you need setup/config commands in the worktree).
+2. **Install deps in the worktree:** `pnpm install` and `bundle install` (gems + `node_modules` are
+   per-tree, not shared). Symlinking `node_modules` from the main checkout is a fast alternative;
+   gems still need `bundle install`.
+3. **Do NOT start a second set of infra containers.** Postgres/ES/Redis/Memcached from
+   `pnpm run zammad:local:up` bind fixed localhost ports and are **shared** — run `:up` once (from any
+   checkout); the worktree's `bin/dev` connects to the same ones. (Consequence: the local **DB is
+   shared**, so a branch's migration mutates the one local database.)
+4. **Only one `bin/dev` at a time.** The Rails/Vite/websocket ports collide — stop the main checkout's
+   `bin/dev` before starting the worktree's (and vice-versa). You test one app instance at a time.
 
 ---
 

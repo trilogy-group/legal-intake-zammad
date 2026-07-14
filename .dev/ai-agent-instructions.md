@@ -63,6 +63,15 @@ Full setup — running Zammad natively wired to a local legal-intake — is in *
   (`echo flush_all | nc -w1 localhost 11211` + `redis-cli FLUSHDB`) then re-login — Core Workflow
   eval is bound to the session's cached role_ids.
 - Apply config locally with `pnpm run zammad:local:configure-*` (see `zammad-config/README.md`).
+- **Hot-reload:** `zammad:local:dev` runs `bin/dev` natively from the current dir. Vue/TS frontend →
+  Vite HMR (instant); Rails request code (controllers/models/services) → reloads on next request;
+  **background-job/worker code (triggers, notifications, schedulers, `app/jobs`) + `config/*` +
+  Gemfile do NOT hot-reload → restart `bin/dev`.**
+- **Running from a git worktree:** works (`bin/dev` runs that worktree's branch code) — but a fresh
+  worktree lacks the gitignored deps/env, so first `cp ../../legal-intake-zammad/.env .`, then
+  `pnpm install` + `bundle install`. Infra containers + the local DB are **shared** (run
+  `zammad:local:up` once; don't double-start), and only **one `bin/dev` at a time** (ports collide).
+  Full detail in `dev/README.md` → "Running from a git worktree".
 
 ## Summary
 
