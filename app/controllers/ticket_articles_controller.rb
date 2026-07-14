@@ -218,7 +218,7 @@ class TicketArticlesController < ApplicationController
       .new(current_user:)
       .execute_for_article(article:)
 
-    send_attachment_zip(stores, "ticket-#{article.ticket.number}-article-#{article.id}-attachments.zip")
+    send_attachment_zip(stores, "ticket-#{article.ticket.number}-comment-#{article.id}-attachments.zip")
   end
 
   # GET /ticket_article_plain/1
