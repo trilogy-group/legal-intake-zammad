@@ -19,6 +19,7 @@ const ticket = { value: createDummyTicket() }
 vi.mock('#desktop/pages/ticket/composables/useTicketInformation.ts', () => ({
   useTicketInformation: () => ({
     ticketId: computed(() => ticket.value.id),
+    ticketInternalId: computed(() => ticket.value.internalId),
     ticket: computed(() => ticket.value),
   }),
 }))
@@ -91,5 +92,18 @@ describe('TicketSidebarAttachmentContent', () => {
     expect(await wrapper.findByText('image010.jpg')).toBeInTheDocument()
     expect(await wrapper.findByText('Test PDF.pdf')).toBeInTheDocument()
     expect(await wrapper.findByText('Entsorgungstermine.ics')).toBeInTheDocument()
+  })
+
+  it('renders a "Download all" link pointing at the ticket zip endpoint', async () => {
+    const wrapper = renderAttachmentContent()
+
+    const link = await wrapper.findByRole('link', { name: 'Download all' })
+    expect(link).toBeInTheDocument()
+    expect(link).toHaveAttribute(
+      'href',
+      expect.stringContaining(
+        `/ticket_attachment_zip/${ticket.value.internalId}`,
+      ),
+    )
   })
 })

@@ -1,6 +1,8 @@
 <!-- Copyright (C) 2012-2026 Zammad Foundation, https://zammad-foundation.org/ -->
 
 <script setup lang="ts">
+import { computed } from 'vue'
+
 import CommonFilePreview from '#shared/components/CommonFilePreview/CommonFilePreview.vue'
 import { type AttachmentWithUrls } from '#shared/composables/useAttachments.ts'
 import type { TicketArticle } from '#shared/entities/ticket/types.ts'
@@ -11,11 +13,15 @@ interface Props {
   articleAttachments: AttachmentWithUrls[]
 }
 
-defineProps<Props>()
+const props = defineProps<Props>()
 
 defineEmits<{
   preview: [type: FilePreview, image: AttachmentWithUrls]
 }>()
+
+const downloadAllUrl = computed(
+  () => `/ticket_attachment_zip_by_article/${props.article.internalId}`,
+)
 </script>
 
 <template>
@@ -23,7 +29,7 @@ defineEmits<{
     v-if="articleAttachments.length > 0"
     class="flex flex-col gap-1 bg-blue-300 p-3 dark:bg-stone-700"
   >
-    <div class="flex flex-row">
+    <div class="flex flex-row items-center justify-between">
       <CommonLabel prefix-icon="paperclip" size="small">
         {{
           articleAttachments.length === 1
@@ -31,6 +37,16 @@ defineEmits<{
             : $t('%s attached files', articleAttachments.length)
         }}
       </CommonLabel>
+      <CommonLink
+        v-if="articleAttachments.length > 1"
+        :link="downloadAllUrl"
+        rest-api
+        download
+        class="flex items-center gap-1 text-xs text-blue-800 hover:text-blue-850 dark:hover:text-blue-600"
+      >
+        <CommonIcon size="tiny" decorative name="download" />
+        {{ $t('Download all') }}
+      </CommonLink>
     </div>
     <CommonFilePreview
       v-for="attachment of articleAttachments"

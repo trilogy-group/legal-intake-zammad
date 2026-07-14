@@ -10,34 +10,9 @@ module Gql::Queries
     type [Gql::Types::StoredFileType, { null: false }], null: false
 
     def resolve(ticket:)
-      articles = Service::Ticket::Article::List
+      Service::Ticket::Attachment::List
         .new(current_user: context.current_user)
         .execute(ticket:)
-
-      return [] if articles.blank?
-
-      inline_attachments = articles.map { |x| x.attachments_inline.map(&:id) }.flatten.uniq
-
-      articles
-        .map(&:attachments)
-        .flatten
-        .reject { |f| inline_attachment?(inline_attachments, f) || original_format?(f) }
-        .uniq(&:store_file_id)
-        .sort_by(&:created_at).reverse
-    end
-
-    private
-
-    def inline_attachment?(inline_attachments, file)
-      inline_attachments.include?(file.id)
-    end
-
-    def original_format?(file)
-      return false if file.preferences.blank?
-      return false if !file.preferences.key?('original-format')
-      return false if file.preferences['original-format'].blank?
-
-      file.preferences['original-format']
     end
   end
 end

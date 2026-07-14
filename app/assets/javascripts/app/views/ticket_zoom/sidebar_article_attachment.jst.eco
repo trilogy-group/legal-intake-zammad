@@ -1,4 +1,9 @@
 <div class="attachments-block js-attachments">
+  <% if !_.isEmpty(@ticketAttachments) && @ticket: %>
+    <div class="sidebar-block-header">
+      <a class="btn btn--action js-downloadAll" data-type="attachment" href="<%= App.Config.get('api_path') %>/ticket_attachment_zip/<%= @ticket.id %>" download><%- @Icon('download') %><span><%- @T('Download all') %></span></a>
+    </div>
+  <% end %>
   <% for data in @ticketAttachments: %>
     <% content_type = @ContentOrMimeType(data.attachment) %>
     <a class="attachment attachment--preview  <%- @ContentTypeIcon(content_type) if @ContentTypeIcon(content_type) %>" data-preview-url="<%= data.attachment.preview_url %>" data-id="<%= data.attachment.id %>" target="_blank" href="<%= App.Config.get('api_path') %>/ticket_attachment/<%= data.article.ticket_id %>/<%= data.article.id %>/<%= data.attachment.id %>?disposition=attachment" data-type="attachment"<% if @canDownload(content_type): %> download<% end %>>

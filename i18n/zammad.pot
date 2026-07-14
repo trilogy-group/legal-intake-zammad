@@ -172,7 +172,7 @@ msgstr ""
 msgid "%s ago"
 msgstr ""
 
-#: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/ArticleBubble/ArticleBubbleFooter.vue:31
+#: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/ArticleBubble/ArticleBubbleFooter.vue:37
 #: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/ArticleBubble.vue:216
 msgid "%s attached files"
 msgstr ""
@@ -481,7 +481,7 @@ msgstr ""
 msgid "**Service Level Agreements**, abbreviated **SLAs**, help you to meet specific response times for your customers' requests. This way you can define goals such as answering every inquiry within eight hours. If you are at risk of missing this target, Zammad will alert you.\n\nYou can define targets for three different metrics: **response time** (time between the creation of a ticket and the first reaction of an agent), **update time** (time between a customer's request and an agent's reaction), and **solution time** (time between creating and closing a ticket).\n\nAny escalated tickets (i.e. tickets that have missed the defined target) are displayed in a separate view in your overviews. You can also configure **email notifications**."
 msgstr ""
 
-#: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/ArticleBubble/ArticleBubbleFooter.vue:30
+#: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/ArticleBubble/ArticleBubbleFooter.vue:36
 #: app/frontend/apps/mobile/pages/ticket/components/TicketDetailView/ArticleBubble.vue:215
 msgid "1 attached file"
 msgstr ""
@@ -5953,6 +5953,11 @@ msgstr ""
 msgid "Download Public Key"
 msgstr ""
 
+#: app/frontend/apps/desktop/pages/ticket/components/TicketDetailView/ArticleBubble/ArticleBubbleFooter.vue:48
+#: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarAttachment/TicketSidebarAttachmentContent.vue:59
+msgid "Download all"
+msgstr ""
+
 #: app/assets/javascripts/app/views/time_accounting/accounted_time.jst.eco:16
 msgid "Download all records"
 msgstr ""
@@ -9923,7 +9928,7 @@ msgstr ""
 msgid "Manage WhatsApp channel of your system."
 msgstr ""
 
-#: db/seeds/permissions.rb:538
+#: db/seeds/permissions.rb:539
 msgid "Manage access to New BETA UI switch."
 msgstr ""
 
@@ -10007,7 +10012,7 @@ msgstr ""
 msgid "Manage personal avatar settings."
 msgstr ""
 
-#: db/seeds/permissions.rb:527
+#: db/seeds/permissions.rb:528
 msgid "Manage personal calendar."
 msgstr ""
 
@@ -10035,7 +10040,7 @@ msgstr ""
 msgid "Manage personal out of office settings."
 msgstr ""
 
-#: db/seeds/permissions.rb:517
+#: db/seeds/permissions.rb:518
 msgid "Manage personal overviews."
 msgstr ""
 
@@ -10883,7 +10888,7 @@ msgstr ""
 msgid "New BETA UI"
 msgstr ""
 
-#: db/seeds/permissions.rb:537
+#: db/seeds/permissions.rb:538
 msgid "New BETA UI Switch"
 msgstr ""
 
@@ -11209,7 +11214,7 @@ msgstr ""
 msgid "No answers"
 msgstr ""
 
-#: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarAttachment/TicketSidebarAttachmentContent.vue:56
+#: app/frontend/apps/desktop/pages/ticket/components/TicketSidebar/TicketSidebarAttachment/TicketSidebarAttachmentContent.vue:78
 msgid "No attached files"
 msgstr ""
 
@@ -11390,9 +11395,9 @@ msgstr ""
 
 #: app/controllers/organizations_controller.rb:107
 #: app/controllers/text_modules_controller.rb:75
-#: app/controllers/ticket_articles_controller.rb:243
+#: app/controllers/ticket_articles_controller.rb:265
 #: app/controllers/tickets_controller.rb:459
-#: app/controllers/users_controller.rb:613
+#: app/controllers/users_controller.rb:591
 msgid "No source data submitted!"
 msgstr ""
 
@@ -16866,7 +16871,7 @@ msgstr ""
 msgid "The personal access token could not be deleted."
 msgstr ""
 
-#: app/controllers/ticket_articles_controller.rb:283
+#: app/controllers/ticket_articles_controller.rb:320
 msgid "The preview cannot be generated. The format is corrupted or not supported."
 msgstr ""
 
@@ -16995,7 +17000,7 @@ msgstr ""
 msgid "The required PGP passphrase is missing."
 msgstr ""
 
-#: app/controllers/users_controller.rb:712
+#: app/controllers/users_controller.rb:690
 #: app/services/service/user/add_first_admin.rb:12
 msgid "The required attribute 'email' is missing."
 msgstr ""
@@ -17070,7 +17075,7 @@ msgstr ""
 msgid "The required parameter 'group_id' is missing."
 msgstr ""
 
-#: app/controllers/users_controller.rb:554
+#: app/controllers/users_controller.rb:532
 msgid "The required parameter 'id' is missing."
 msgstr ""
 
@@ -17118,7 +17123,7 @@ msgstr ""
 msgid "The required parameter 'permission' is missing."
 msgstr ""
 
-#: app/controllers/users_controller.rb:705
+#: app/controllers/users_controller.rb:683
 msgid "The required parameter 'signup' is missing."
 msgstr ""
 
@@ -17142,7 +17147,7 @@ msgstr ""
 msgid "The response could not be processed."
 msgstr ""
 
-#: app/controllers/ticket_articles_controller.rb:274
+#: app/controllers/ticket_articles_controller.rb:296
 msgid "The retried attachment download failed."
 msgstr ""
 
@@ -17416,6 +17421,10 @@ msgstr ""
 msgid "There are more than 1000 tickets in the Zendesk system. Due to API rate limit restrictions, Zammad can't get the exact number of tickets yet and has to fetch them in batches of 1000. This might take some time, better grab a cup of coffee. The total number of tickets gets updated as soon as the currently known number is surpassed."
 msgstr ""
 
+#: app/controllers/ticket_articles_controller.rb:303
+msgid "There are no attachments to download."
+msgstr ""
+
 #: app/models/calendar.rb:303
 msgid "There are no business hours configured."
 msgstr ""
@@ -17569,7 +17578,7 @@ msgstr ""
 msgid "This Writing Assistant Tool translates the selected text into English."
 msgstr ""
 
-#: app/controllers/ticket_articles_controller.rb:195
+#: app/controllers/ticket_articles_controller.rb:217
 msgid "This article does not have a raw copy available."
 msgstr ""
 
@@ -18523,7 +18532,7 @@ msgstr ""
 msgid "Tickets bulk edit"
 msgstr ""
 
-#: app/controllers/ticket_articles_controller.rb:236
+#: app/controllers/ticket_articles_controller.rb:258
 #: app/controllers/tickets_controller.rb:452
 msgid "Tickets can only be imported if system is in import mode."
 msgstr ""
