@@ -206,7 +206,7 @@ class TicketArticlesController < ApplicationController
       .new(current_user:)
       .execute(ticket:)
 
-    send_attachment_zip(stores, "ticket-#{ticket.number}-attachments.zip")
+    send_attachment_zip(stores, "ticket-#{ticket_sequence_number(ticket)}-attachments.zip")
   end
 
   # GET /ticket_attachment_zip_by_article/:article_id
@@ -218,7 +218,7 @@ class TicketArticlesController < ApplicationController
       .new(current_user:)
       .execute_for_article(article:)
 
-    send_attachment_zip(stores, "ticket-#{article.ticket.number}-comment-#{article.id}-attachments.zip")
+    send_attachment_zip(stores, "ticket-#{ticket_sequence_number(article.ticket)}-comment-#{article.id}-attachments.zip")
   end
 
   # GET /ticket_article_plain/1
@@ -314,6 +314,21 @@ class TicketArticlesController < ApplicationController
   end
 
   private
+
+  # Human-facing sequence number shown in the ticket title (e.g. 923), derived
+  # from ticket.number by removing the system_id prefix that
+  # Ticket::Number::Increment prepends (system_id + zero-padding + counter).
+  # Falls back to the full number if the format is unexpected.
+  def ticket_sequence_number(ticket)
+    number    = ticket.number.to_s
+    system_id = Setting.get('system_id').to_s
+
+    tail = number
+    tail = tail[system_id.length..] if system_id.present? && number.start_with?(system_id)
+    tail = tail.sub(%r{\A0+}, '')
+
+    tail.presence || number
+  end
 
   def send_attachment_zip(stores, filename)
     if stores.blank?

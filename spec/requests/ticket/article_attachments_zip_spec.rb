@@ -62,6 +62,15 @@ RSpec.describe 'Ticket Article Attachments Zip Download', authenticated_as: -> {
       expect(response.headers['Content-Security-Policy']).to eq("default-src 'none'")
     end
 
+    it 'names the file with the ticket sequence number (system_id prefix stripped)' do
+      system_id = Setting.get('system_id').to_s
+      sequence  = ticket.number.to_s.delete_prefix(system_id).sub(%r{\A0+}, '')
+
+      get "/api/v1/ticket_attachment_zip/#{ticket.id}", params: {}
+
+      expect(response.headers['Content-Disposition']).to include("ticket-#{sequence}-attachments.zip")
+    end
+
     context 'when the ticket has no downloadable attachments' do
       let(:empty_ticket) { create(:ticket, group: group) }
 
@@ -120,6 +129,16 @@ RSpec.describe 'Ticket Article Attachments Zip Download', authenticated_as: -> {
       get "/api/v1/ticket_attachment_zip_by_article/#{article1.id}", params: {}
 
       expect(unzip(response.body)).to eq('file1.txt' => 'content of file one')
+    end
+
+    it 'names the file with the ticket sequence number and "comment"' do
+      system_id = Setting.get('system_id').to_s
+      sequence  = ticket.number.to_s.delete_prefix(system_id).sub(%r{\A0+}, '')
+
+      get "/api/v1/ticket_attachment_zip_by_article/#{article1.id}", params: {}
+
+      expect(response.headers['Content-Disposition'])
+        .to include("ticket-#{sequence}-comment-#{article1.id}-attachments.zip")
     end
 
     context 'when the agent has no access to the ticket group' do
