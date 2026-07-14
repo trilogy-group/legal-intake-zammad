@@ -8243,8 +8243,10 @@ a.list-group-item.active > .badge,
 
 // Attachment preview modal (docx / pdf / text) — fixed size, pinned
 // header + footer, scrollable body.
-.modal--attachmentPreview {
+.modal.modal--attachmentPreview {
   .modal-dialog {
+    width: 900px;
+    max-width: calc(100vw - 40px);
     margin-top: 20px;
     margin-bottom: 20px;
   }

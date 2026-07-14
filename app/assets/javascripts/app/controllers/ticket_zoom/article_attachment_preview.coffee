@@ -12,7 +12,8 @@ class App.TicketZoomArticleAttachmentPreview extends App.ControllerModal
   buttonSubmit: __('Download')
   buttonClass:  'btn--success'
   head:         ''
-  veryLarge:    true   # fixed 990px width — consistent for pdf & docx
+  veryLarge:    true   # fixed width — consistent for pdf & docx
+  shown:        false  # defer render until params are set (avoids double render)
 
   constructor: (params) ->
     super
@@ -23,9 +24,9 @@ class App.TicketZoomArticleAttachmentPreview extends App.ControllerModal
     @fileUrl     = (params.fileUrl or '').split('?')[0]
     @fileName    = params.fileName
     @head        = App.i18n.translateInline('Preview – %s', @fileName)
-    @render()
-    # Fixed-height modal with pinned header/footer + scrollable body.
+    # Fixed-size modal with pinned header/footer + scrollable body.
     @el.addClass('modal--attachmentPreview')
+    @render()
     @loadPreview()
 
   content: =>
