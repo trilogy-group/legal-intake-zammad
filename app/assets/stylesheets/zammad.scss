@@ -7633,6 +7633,17 @@ a.list-group-item.active > .badge,
   }
 }
 
+.attachments.attachments--list .js-downloadAllArticle {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+
+  @include phone {
+    top: 12px;
+    right: 15px;
+  }
+}
+
 .attachments > .icon:first-child {
   position: absolute;
   left: 33px;
