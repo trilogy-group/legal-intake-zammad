@@ -8216,6 +8216,51 @@ a.list-group-item.active > .badge,
   }
 }
 
+// Per-attachment Preview + Download buttons (right side of the row).
+.attachment .attachment-controls {
+  margin-inline-start: auto;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  flex-shrink: 0;
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    white-space: nowrap;
+  }
+
+  .icon {
+    vertical-align: middle;
+  }
+}
+
+// Attachment preview modal body (docx / pdf / text).
+.attachment-preview-body {
+  max-height: 80vh;
+  overflow: auto;
+}
+
+.attachment-preview-frame {
+  width: 100%;
+  height: 80vh;
+  border: 0;
+}
+
+.attachment-preview-text {
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: monospace;
+  font-size: 13px;
+}
+
+// docx-preview renders its content into a .docx-wrapper host element.
+.attachment-preview-body .docx-wrapper {
+  background: var(--background-color, #f0f0f0);
+  padding: 16px;
+}
+
 .attachment-icon {
   margin-top: 2px;
   width: 38px;

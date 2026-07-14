@@ -22,6 +22,8 @@ class App.ArticleViewItem extends App.ControllerObserver
     'click .richtext-content img':               'imageView'
     'click .attachments img':                    'imageView'
     'click .file-calendar .js-preview':          'calendarView'
+    'click .js-previewAttachment':               'previewAttachment'
+    'click .js-downloadAttachment':              'stopPropagation'
     'click .js-securityRetryProcess':            'retrySecurityProcess'
     'click .js-retryWhatsAppAttachmentDownload': 'retryWhatsAppAttachmentDownload'
     'click .js-fetchOriginalFormatting':         'fetchOriginalFormatting'
@@ -493,6 +495,16 @@ class App.ArticleViewItem extends App.ControllerObserver
     e.stopPropagation()
     parentElement = $(e.target).closest('.attachment.file-calendar')
     new App.TicketZoomArticleCalendarView(calendar: parentElement.get(0).outerHTML)
+
+  previewAttachment: (e) ->
+    e.preventDefault()
+    e.stopPropagation()
+    el = $(e.currentTarget)
+    new App.TicketZoomArticleAttachmentPreview(
+      previewType: el.data('preview-type')
+      fileUrl:     el.data('url')
+      fileName:    el.data('filename')
+    )
 
   updateFormId: (newFormId) ->
     @articleActions?.form_id = newFormId

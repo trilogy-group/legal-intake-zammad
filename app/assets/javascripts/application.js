@@ -42,6 +42,9 @@
 //= require ./app/lib/rangy/rangy-textrange.js
 //= require ./app/lib/rangy/rangy-highlighter.js
 
+//= require ./app/lib/docx-preview/jszip.min.js
+//= require ./app/lib/docx-preview/docx-preview.min.js
+
 //= require_tree ./app/lib/base
 
 //= require ./app/index.coffee
