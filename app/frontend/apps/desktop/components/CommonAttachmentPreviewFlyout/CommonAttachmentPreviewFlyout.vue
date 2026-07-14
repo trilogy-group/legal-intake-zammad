@@ -1,7 +1,7 @@
 <!-- Copyright (C) 2012-2026 Zammad Foundation, https://zammad-foundation.org/ -->
 
 <script setup lang="ts">
-import { onBeforeUnmount, onMounted, ref, shallowRef, useTemplateRef } from 'vue'
+import { nextTick, onBeforeUnmount, onMounted, ref, shallowRef, useTemplateRef } from 'vue'
 
 import { getAttachmentLinks } from '#shared/composables/getAttachmentLinks.ts'
 import { useApplicationStore } from '#shared/stores/application.ts'
@@ -46,18 +46,24 @@ onMounted(async () => {
       pdfBlobUrl.value = URL.createObjectURL(
         new Blob([blob], { type: 'application/pdf' }),
       )
-    } else if (props.previewType === 'docx') {
+    } else if (props.previewType === 'text') {
+      // text/plain and text/markdown — rendered as plain text (never HTML) to
+      // avoid XSS from untrusted uploaded files.
+      textContent.value = await blob.text()
+    } else {
+      // docx: renderAsync writes into a real DOM node, but that node lives
+      // behind CommonLoader + v-else, so it doesn't exist while loading=true.
+      // Reveal it first (loading=false + nextTick), then render into it.
       const { renderAsync } = await import('docx-preview')
-      await renderAsync(blob, docxTarget.value as HTMLElement, undefined, {
+      loading.value = false
+      await nextTick()
+      if (!docxTarget.value) throw new Error('preview target not available')
+      await renderAsync(blob, docxTarget.value, undefined, {
         inWrapper: true,
         breakPages: true,
         experimental: true, // render tracked changes / comments
         ignoreLastRenderedPageBreak: true,
       })
-    } else {
-      // text/plain and text/markdown — rendered as plain text (never HTML) to
-      // avoid XSS from untrusted uploaded files.
-      textContent.value = await blob.text()
     }
   } catch (error) {
     errorMessage.value = (error as Error).message
