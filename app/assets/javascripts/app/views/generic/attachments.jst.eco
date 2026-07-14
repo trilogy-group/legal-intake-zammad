@@ -2,6 +2,9 @@
   <div class="attachments attachments--list <% if !@has_body: %>attachments--wo-body<% end %>">
     <%- @Icon('paperclip') %>
     <div class="attachments-title"><%- @attachments.length %> <%- @T('Attached Files') %></div>
+    <% if @ticket_id && @article_id && @attachments.length > 1: %>
+      <a class="btn btn--action js-downloadAllArticle" data-type="attachment" href="<%= App.Config.get('api_path') %>/ticket_attachment_zip_by_article/<%= @article_id %>" download><%- @Icon('download') %><span><%- @T('Download all') %></span></a>
+    <% end %>
     <% for attachment in @attachments: %>
       <% if !@C('ui_ticket_zoom_attachments_preview'): %>
         <div class="attachment attachment--row">

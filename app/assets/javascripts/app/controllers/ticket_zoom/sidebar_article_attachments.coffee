@@ -45,6 +45,7 @@ class SidebarArticleAttachments extends App.Controller
 
     html = App.view('ticket_zoom/sidebar_article_attachment')(
       ticketAttachments: ticketAttachments,
+      ticket: @ticket,
     )
 
     @el.html(html)
