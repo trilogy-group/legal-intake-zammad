@@ -17,7 +17,10 @@ class App.TicketZoomArticleAttachmentPreview extends App.ControllerModal
   constructor: (params) ->
     super
     @previewType = params.previewType   # 'pdf' | 'docx' | 'text'
-    @fileUrl     = params.fileUrl        # base attachment url (no query string)
+    # Strip any existing query string: the article-view builds attachment.url
+    # with '?disposition=attachment' already, so appending another query would
+    # produce '...?disposition=attachment?disposition=inline' (unparseable).
+    @fileUrl     = (params.fileUrl or '').split('?')[0]
     @fileName    = params.fileName
     @head        = App.i18n.translateInline('Preview – %s', @fileName)
     @render()
@@ -32,7 +35,9 @@ class App.TicketZoomArticleAttachmentPreview extends App.ControllerModal
     body = @el.find('.js-previewBody')
 
     xhr = new XMLHttpRequest()
-    xhr.open('GET', "#{@fileUrl}?disposition=inline", true)
+    # The attachment endpoint returns the raw bytes regardless of disposition;
+    # we only consume the blob locally, so fetch the clean base URL.
+    xhr.open('GET', @fileUrl, true)
     xhr.responseType = 'blob'
     xhr.withCredentials = true
     xhr.onload = =>

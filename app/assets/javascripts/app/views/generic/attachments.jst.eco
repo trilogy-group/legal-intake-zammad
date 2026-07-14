@@ -35,8 +35,8 @@
             <button class="btn btn--action btn--small  js-preview" type="button"><%- @T('Preview') %></button>
           <% else if previewType and previewType isnt 'image': %>
             <div class="attachment-controls">
-              <button class="btn btn--action btn--small js-previewAttachment" type="button" data-url="<%= attachment.url %>" data-preview-type="<%= previewType %>" data-filename="<%= attachment.filename %>"><%- @Icon('eye') %><span><%- @T('Preview') %></span></button>
-              <a class="btn btn--action btn--small js-downloadAttachment" data-type="attachment" href="<%= attachment.url %>" download><%- @Icon('download') %><span><%- @T('Download') %></span></a>
+              <button class="btn btn--action btn--small js-previewAttachment" type="button" title="<%- @T('Preview') %>" data-url="<%= attachment.url %>" data-preview-type="<%= previewType %>" data-filename="<%= attachment.filename %>"><%- @Icon('eye') %></button>
+              <a class="btn btn--action btn--small js-downloadAttachment" data-type="attachment" title="<%- @T('Download') %>" href="<%= attachment.url %>" download><%- @Icon('download') %></a>
             </div>
           <% end %>
         </a>

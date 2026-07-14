@@ -8217,22 +8217,36 @@ a.list-group-item.active > .badge,
 }
 
 // Per-attachment Preview + Download buttons (right side of the row).
+// Icon-only; the label shows as a native tooltip (title attr) on hover.
+.attachment.attachment--preview {
+  flex-wrap: nowrap;
+
+  .attachment-text {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+}
+
 .attachment .attachment-controls {
   margin-inline-start: auto;
-  display: flex;
-  gap: 6px;
+  display: inline-flex;
+  gap: 4px;
   align-items: center;
   flex-shrink: 0;
+  align-self: center;
 
   .btn {
     display: inline-flex;
     align-items: center;
-    gap: 4px;
-    white-space: nowrap;
+    justify-content: center;
+    padding: 5px;
+    min-width: 0;
+    line-height: 1;
   }
 
   .icon {
     vertical-align: middle;
+    margin: 0;
   }
 }
 
