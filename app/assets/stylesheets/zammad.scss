@@ -8216,6 +8216,85 @@ a.list-group-item.active > .badge,
   }
 }
 
+// Per-attachment Preview button — icon-only, positioned on the right of the
+// row (absolute, like the delete button). Label shows as a native tooltip.
+.attachment.attachment--preview .attachment-preview-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  inset-inline-end: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  min-width: 0;
+  line-height: 1;
+
+  .icon {
+    vertical-align: middle;
+    margin: 0;
+  }
+}
+
+// Keep the filename text clear of the absolutely-positioned button.
+.attachment.attachment--preview .attachment-text {
+  padding-inline-end: 34px;
+}
+
+// Attachment preview modal (docx / pdf / text) — fixed size, pinned
+// header + footer, scrollable body.
+.modal.modal--attachmentPreview {
+  .modal-dialog {
+    width: 900px;
+    max-width: calc(100vw - 40px);
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 40px);
+  }
+
+  .modal-header,
+  .modal-footer {
+    flex: 0 0 auto;
+  }
+
+  .modal-body {
+    flex: 1 1 auto;
+    overflow: auto;
+    min-height: 0;
+  }
+
+  .attachment-preview-body {
+    height: 100%;
+    min-height: 0;
+  }
+}
+
+.attachment-preview-frame {
+  width: 100%;
+  height: 100%;
+  min-height: 60vh;
+  border: 0;
+  display: block;
+}
+
+.attachment-preview-text {
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: monospace;
+  font-size: 13px;
+}
+
+// docx-preview renders its content into a .docx-wrapper host element.
+.attachment-preview-body .docx-wrapper {
+  background: var(--background-color, #f0f0f0);
+  padding: 16px;
+}
+
 .attachment-icon {
   margin-top: 2px;
   width: 38px;

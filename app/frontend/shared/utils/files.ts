@@ -7,7 +7,10 @@ import log from './log.ts'
 
 import type { Except } from 'type-fest'
 
-export type FilePreview = 'image' | 'calendar'
+export type FilePreview = 'image' | 'calendar' | 'pdf' | 'docx' | 'text'
+
+export const DOCX_CONTENT_TYPE =
+  'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
 
 export interface ImageFileData {
   name: string
@@ -221,6 +224,14 @@ export const canPreviewFile = (type?: Maybe<string>): FilePreview | false => {
 
   if (allowedImageTypes().includes(contentType)) return 'image'
   if (contentType === 'text/calendar') return 'calendar'
+
+  // Match against the raw type: sanitizedContentType() truncates multi-dot
+  // subtypes (e.g. the docx type collapses to "application/vnd"), so it can't
+  // be used for these. Strip only MIME parameters after ';'.
+  const rawType = type.split(';')[0].trim().toLowerCase()
+  if (rawType === 'application/pdf') return 'pdf'
+  if (rawType === DOCX_CONTENT_TYPE) return 'docx'
+  if (rawType === 'text/plain' || rawType === 'text/markdown') return 'text'
 
   return false
 }

@@ -170,4 +170,20 @@ describe('preview file component', () => {
 
     expect(view.queryByRole('button', { name: 'Remove name.word' })).not.toBeInTheDocument()
   })
+
+  it('does not show the desktop preview/download buttons in the mobile context', () => {
+    const view = renderFilePreview({
+      file: {
+        name: 'contract.docx',
+        type: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+        size: 2048,
+      },
+      downloadUrl: '/api/url',
+      noRemove: true,
+    })
+
+    // This shared spec runs in the mobile harness; the explicit Preview button
+    // is desktop-only, so it must not appear here.
+    expect(view.queryByRole('button', { name: /^Preview$/i })).not.toBeInTheDocument()
+  })
 })

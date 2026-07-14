@@ -56,6 +56,21 @@ const canPreview = computed(() => {
   return type
 })
 
+// Resolved preview type independent of previewUrl (pdf/docx/text render from
+// the raw bytes, so they don't need a server-side preview thumbnail URL).
+const previewType = computed(() => canPreviewFile(props.file.type))
+
+// Explicit right-side "Preview" button — shown only in display contexts
+// (noRemove) for document/text/pdf types. Images keep their existing
+// left-side thumbnail preview; calendar keeps its own inline button.
+const showPreviewButton = computed(() => {
+  if (props.noPreview) return false
+  const type = previewType.value
+  if (!type) return false
+  if (appName === 'mobile') return false
+  return type === 'pdf' || type === 'docx' || type === 'text'
+})
+
 const canDownload = computed(() => canDownloadFile(props.file.type))
 const icon = computed(() => getIconByContentType(props.file.type))
 
@@ -71,8 +86,14 @@ const ariaLabel = computed(() => {
 })
 
 const onPreviewClick = (event: Event) => {
+  // Right-side button (pdf/docx/text): emit the resolved type — these render
+  // from raw bytes and have no previewUrl.
+  if (showPreviewButton.value && previewType.value) {
+    emit('preview', event, previewType.value)
+    return
+  }
+  // Left-side thumbnail (image/calendar): needs canPreview (previewUrl present).
   if (!canPreview.value) return
-
   emit('preview', event, canPreview.value)
 }
 
@@ -147,6 +168,16 @@ const classMap = getFilePreviewClasses()
         </span>
       </div>
     </Component>
+
+    <button
+      v-if="noRemove && showPreviewButton"
+      v-tooltip="$t('Preview %s', file.name)"
+      type="button"
+      class="ms-auto shrink-0 text-xs text-blue-800 hover:text-blue-850 dark:hover:text-blue-600"
+      @click.stop.prevent="onPreviewClick"
+    >
+      {{ $t('Preview') }}
+    </button>
 
     <component
       :is="filePreviewConfig?.buttonComponent"
