@@ -44,10 +44,16 @@ Rails.application.config.content_security_policy do |policy| # rubocop:disable M
   policy.default_src :self, :ws, :wss, 'https://images.zammad.com'
   policy.font_src    :self, :data
   policy.img_src     '*', :data, :blob
-  policy.object_src  :none
+  policy.object_src  :self, :blob
   policy.script_src  :self, :unsafe_eval
   policy.style_src   :self, :unsafe_inline
-  policy.frame_src   'www.youtube.com', 'player.vimeo.com'
+  # 'blob:' lets the in-app attachment preview render a client-side blob-URL
+  # PDF in an <iframe>/<object>. Blob URLs are same-origin and only creatable
+  # by our own already-running scripts, so this is a narrow, safe allowance
+  # (does not permit external framing). Required in production, where CSP is
+  # enforced (in development it is report-only, which is why preview worked
+  # locally but was blocked on staging/prod).
+  policy.frame_src   :self, :blob, 'www.youtube.com', 'player.vimeo.com'
 
   if Rails.env.development?
     websocket_uris = proc do

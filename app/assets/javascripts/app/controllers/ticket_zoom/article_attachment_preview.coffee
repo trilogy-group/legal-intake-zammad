@@ -29,7 +29,7 @@ class App.TicketZoomArticleAttachmentPreview extends App.ControllerModal
     @render()
     @loadPreview()
 
-  content: =>
+  content: ->
     $('<div class="attachment-preview-body js-previewBody"></div>').append(
       App.i18n.translateInline('Loading …')
     )
@@ -66,7 +66,7 @@ class App.TicketZoomArticleAttachmentPreview extends App.ControllerModal
           promise.catch(=> @showError(body))
         else # text / markdown — plain text only (never HTML), XSS-safe
           reader = new FileReader()
-          reader.onload = =>
+          reader.onload = ->
             pre = $('<pre class="attachment-preview-text"></pre>')
             pre.text(reader.result)   # .text() escapes — no HTML injection
             body.empty().append(pre)
@@ -74,7 +74,7 @@ class App.TicketZoomArticleAttachmentPreview extends App.ControllerModal
     xhr.onerror = => @showError(body)
     xhr.send()
 
-  showError: (body) =>
+  showError: (body) ->
     body.text(App.i18n.translateInline('Preview could not be generated.'))
 
   onSubmit: =>
