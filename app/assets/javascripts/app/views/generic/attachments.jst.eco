@@ -2,6 +2,9 @@
   <div class="attachments attachments--list <% if !@has_body: %>attachments--wo-body<% end %>">
     <%- @Icon('paperclip') %>
     <div class="attachments-title"><%- @attachments.length %> <%- @T('Attached Files') %></div>
+    <% if @ticket_id && @article_id && @attachments.length > 1: %>
+      <a class="btn btn--action js-downloadAllArticle" data-type="attachment" href="<%= App.Config.get('api_path') %>/ticket_attachment_zip_by_article/<%= @article_id %>" download><%- @Icon('download') %><span><%- @T('Download all') %></span></a>
+    <% end %>
     <% for attachment in @attachments: %>
       <% if !@C('ui_ticket_zoom_attachments_preview'): %>
         <div class="attachment attachment--row">
@@ -10,10 +13,10 @@
         </div>
       <% else: %>
         <% content_type = @ContentOrMimeType(attachment) %>
-        <a class="attachment attachment--preview <%- @ContentTypeIcon(content_type) if @ContentTypeIcon(content_type) %>" href="<%= attachment.url %>" data-type="attachment" data-preview-url="<%= attachment.preview_url %>" data-id="<%= attachment.id %>" <% if @canDownload(content_type): %> download<% else: %>target="_blank"<% end %>>
+        <a class="attachment attachment--preview <%- @ContentTypeIcon(content_type) if @ContentTypeIcon(content_type) %>" href="<%= attachment.url %>" data-type="attachment" data-preview-url="<%= attachment.preview_url %>" data-id="<%= attachment.id %>" download>
           <div class="attachment-icon js-preview">
           <% if attachment.preferences && content_type && @ContentTypeIcon(content_type): %>
-            <% if @canPreview(content_type): %>
+            <% if @canPreview(content_type) is 'image': %>
               <img src="<%= attachment.preview_url %>">
             <% else: %>
               <%- @Icon( @ContentTypeIcon(content_type) ) %>
@@ -26,9 +29,12 @@
             <span class="attachment-name u-highlight"><%= attachment.filename %></span>
             <div class="attachment-size"><%- @humanFileSize(attachment.size) %></div>
           </div>
+          <% previewType = @canPreview(content_type) %>
           <% if @ContentTypeIcon(content_type) is 'file-calendar': %>
             <div class="half-spacer"></div>
             <button class="btn btn--action btn--small  js-preview" type="button"><%- @T('Preview') %></button>
+          <% else if previewType and previewType isnt 'image': %>
+            <button class="btn btn--action btn--small js-previewAttachment attachment-preview-btn" type="button" title="<%- @T('Preview') %>" data-url="<%= attachment.url %>" data-preview-type="<%= previewType %>" data-filename="<%= attachment.filename %>"><%- @Icon('eye') %></button>
           <% end %>
         </a>
       <% end %>

@@ -267,7 +267,14 @@ App.ViewHelpers =
 
   canPreview: (contentType) ->
     return false if _.isEmpty(contentType)
-    return true if contentType.match(/image\/(png|jpg|jpeg|gif|webp)/i)
+    return 'image' if contentType.match(/image\/(png|jpg|jpeg|gif|webp)/i)
+    # Match docx/pdf/text against the RAW content type: contentTypeCleanup()
+    # collapses the multi-dot docx subtype to "application/vnd", so it can't be
+    # used here. Strip only MIME parameters after ';'.
+    rawType = contentType.split(';')[0].trim().toLowerCase()
+    return 'pdf'  if rawType is 'application/pdf'
+    return 'docx' if rawType is 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+    return 'text' if rawType is 'text/plain' or rawType is 'text/markdown'
     false
 
   unique_avatar: (seed, text, size = 40) ->

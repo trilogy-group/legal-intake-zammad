@@ -16,6 +16,7 @@ interface ImagePreview {
 
 export interface ViewerFile {
   id?: string
+  internalId?: number
   name?: string
   content?: string
   preview?: string
@@ -44,6 +45,14 @@ export const useFilePreviewViewer = (viewFiles: MaybeRef<ViewerFile[]>) => {
       import('#desktop/components/CommonCalendarPreviewFlyout/CommonCalendarPreviewFlyout.vue'),
   })
 
+  const attachmentPreviewFlyout = useFlyout({
+    name: 'common-attachment-preview',
+    component: () =>
+      import(
+        '#desktop/components/CommonAttachmentPreviewFlyout/CommonAttachmentPreviewFlyout.vue'
+      ),
+  })
+
   const showPreview = (type: FilePreview, filePreviewfile: ViewerFile) => {
     if (type === 'image') {
       showImage(filePreviewfile)
@@ -54,6 +63,15 @@ export const useFilePreviewViewer = (viewFiles: MaybeRef<ViewerFile[]>) => {
         fileId: filePreviewfile.id,
         fileType: filePreviewfile.type,
         fileName: filePreviewfile.name,
+      })
+    }
+
+    if (type === 'pdf' || type === 'docx' || type === 'text') {
+      attachmentPreviewFlyout.open({
+        fileInternalId: filePreviewfile.internalId,
+        fileType: filePreviewfile.type,
+        fileName: filePreviewfile.name,
+        previewType: type,
       })
     }
   }

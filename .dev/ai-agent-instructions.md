@@ -9,10 +9,13 @@ generic Zammad onboarding below still applies to app code, but our ship model is
 Trilogy-specific:
 
 - **Branches:** `main` = **production**, `staging` = staging. Both are persistent and
-  protected (rulesets "Protect main" strict / "Protect staging" non-strict; PR required,
-  **squash-only**, required checks: `Dockerfile check`, `Zammad config validate`, `Semgrep`;
-  repo-admin is a bypass actor). Upstream Zammad is tracked via the `upstream` remote only —
-  never let it flow into `main` automatically. `develop`/`stable-*` are upstream's branches; ignore.
+  protected (rulesets "Protect main" strict / "Protect staging" non-strict; PR required;
+  required checks: `Dockerfile check`, `Zammad config validate`, `Semgrep`;
+  repo-admin is a bypass actor). **Merge methods differ per branch (deliberate): `staging`
+  is squash-only (collapse feature noise into one commit); `main` is merge-commit-only
+  (promotions preserve staging's ancestry so the two long-lived branches never diverge —
+  never squash a `staging`→`main` promotion).** Upstream Zammad is tracked via the `upstream`
+  remote only — never let it flow into `main` automatically. `develop`/`stable-*` are upstream's branches; ignore.
 - **Auto-deploy on merge** (`.github/workflows/deploy.yaml`): push to `staging` → build
   `staging-<sha>-arm64` → deploy to the `zammad-staging` EC2 box; push to `main` →
   `main-<sha>-arm64` + `:latest` → deploy to `zammad-prod`. Mechanism = GitHub Actions →
