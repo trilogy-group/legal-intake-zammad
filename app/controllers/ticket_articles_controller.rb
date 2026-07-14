@@ -199,7 +199,9 @@ class TicketArticlesController < ApplicationController
 
   # GET /ticket_attachment_zip/:ticket_id
   def attachment_zip
-    ticket = Ticket.find(params[:ticket_id])
+    # Not an IDOR: access is enforced by authorize!(:show?) on the next line
+    # (Zammad's Pundit-based group/role model, not relational ownership scoping).
+    ticket = Ticket.find(params[:ticket_id]) # nosemgrep: ruby.rails.security.brakeman.check-unscoped-find.check-unscoped-find
     authorize!(ticket, :show?)
 
     stores = Service::Ticket::Attachment::List
@@ -211,7 +213,9 @@ class TicketArticlesController < ApplicationController
 
   # GET /ticket_attachment_zip_by_article/:article_id
   def attachment_zip_by_article
-    article = Ticket::Article.find(params[:article_id])
+    # Not an IDOR: access is enforced by authorize!(:show?) on the ticket below
+    # (Zammad's Pundit-based group/role model, not relational ownership scoping).
+    article = Ticket::Article.find(params[:article_id]) # nosemgrep: ruby.rails.security.brakeman.check-unscoped-find.check-unscoped-find
     authorize!(article.ticket, :show?)
 
     stores = Service::Ticket::Attachment::List
