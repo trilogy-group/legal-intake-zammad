@@ -8241,16 +8241,43 @@ a.list-group-item.active > .badge,
   padding-inline-end: 34px;
 }
 
-// Attachment preview modal body (docx / pdf / text).
-.attachment-preview-body {
-  max-height: 80vh;
-  overflow: auto;
+// Attachment preview modal (docx / pdf / text) — fixed size, pinned
+// header + footer, scrollable body.
+.modal--attachmentPreview {
+  .modal-dialog {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    max-height: calc(100vh - 40px);
+  }
+
+  .modal-header,
+  .modal-footer {
+    flex: 0 0 auto;
+  }
+
+  .modal-body {
+    flex: 1 1 auto;
+    overflow: auto;
+    min-height: 0;
+  }
+
+  .attachment-preview-body {
+    height: 100%;
+    min-height: 0;
+  }
 }
 
 .attachment-preview-frame {
   width: 100%;
-  height: 80vh;
+  height: 100%;
+  min-height: 60vh;
   border: 0;
+  display: block;
 }
 
 .attachment-preview-text {
