@@ -142,6 +142,28 @@ describe('files utility', () => {
       const result = canPreviewFile(type)
       expect(result).toBe(false)
     })
+
+    it('returns "pdf" for a PDF', () => {
+      expect(canPreviewFile('application/pdf')).toBe('pdf')
+    })
+
+    it('returns "docx" for an OOXML Word document', () => {
+      expect(
+        canPreviewFile(
+          'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+        ),
+      ).toBe('docx')
+    })
+
+    it('returns "text" for plain text and markdown', () => {
+      expect(canPreviewFile('text/plain')).toBe('text')
+      expect(canPreviewFile('text/plain; charset=UTF-8')).toBe('text')
+      expect(canPreviewFile('text/markdown')).toBe('text')
+    })
+
+    it('does not preview legacy .doc (application/msword)', () => {
+      expect(canPreviewFile('application/msword')).toBe(false)
+    })
   })
 
   describe('allowedImageTypes', () => {
