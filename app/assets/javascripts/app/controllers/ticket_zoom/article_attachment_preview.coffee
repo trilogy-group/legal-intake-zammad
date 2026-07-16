@@ -1,11 +1,11 @@
 # Copyright (C) 2012-2026 Zammad Foundation, https://zammad-foundation.org/
 
 # Client-side attachment preview modal for the legacy desktop app.
-# Renders docx (via the vendored docx-preview UMD), pdf (via a blob-url iframe),
-# and plain text / markdown (as plain text) — all in the browser, reusing the
-# bytes the browser already fetches for download. No backend change: the
-# server's Content-Disposition is irrelevant because we consume the blob
-# locally, so inline PDF serving stays disabled (keeps the #4479 hardening).
+# Renders docx (via the vendored docx-preview UMD), pdf (via PDF.js rendered to
+# <canvas>), and plain text / markdown (as plain text) — all in the browser,
+# reusing the bytes the browser already fetches for download. No backend change.
+# PDF is drawn to a canvas with PDF.js (not an <iframe>/native plugin), so it is
+# immune to browsers/Chrome policies that block embedded/blob PDFs.
 class App.TicketZoomArticleAttachmentPreview extends App.ControllerModal
   buttonClose:  true
   buttonCancel: true
@@ -49,10 +49,7 @@ class App.TicketZoomArticleAttachmentPreview extends App.ControllerModal
       blob = xhr.response
       switch @previewType
         when 'pdf'
-          @pdfBlobUrl = window.URL.createObjectURL(new Blob([blob], type: 'application/pdf'))
-          iframe = $('<iframe class="attachment-preview-frame"></iframe>')
-          iframe.attr('src', @pdfBlobUrl)
-          body.empty().append(iframe)
+          @renderPdf(blob, body)
         when 'docx'
           body.empty()
           # window.docx = vendored docx-preview UMD; experimental renders
@@ -73,6 +70,39 @@ class App.TicketZoomArticleAttachmentPreview extends App.ControllerModal
           reader.readAsText(blob)
     xhr.onerror = => @showError(body)
     xhr.send()
+
+  # Render every page of the PDF to a <canvas> via PDF.js. Canvas rendering
+  # needs no <iframe>, native PDF plugin, or 'blob:' frame — so it works
+  # regardless of the user's browser PDF settings / managed policies.
+  renderPdf: (blob, body) =>
+    pdfjsLib = window.pdfjsLib
+    return @showError(body) if !pdfjsLib
+    onError = => @showError(body)
+    # The worker is served same-origin from public/assets/ (nginx serves
+    # /assets/* statically; covered by CSP script-src 'self').
+    pdfjsLib.GlobalWorkerOptions.workerSrc = '/assets/pdfjs/pdf.worker.min.js'
+
+    container = $('<div class="attachment-preview-pdf"></div>')
+    body.empty().append(container)
+
+    blob.arrayBuffer().then((buffer) ->
+      loadingTask = pdfjsLib.getDocument(data: new Uint8Array(buffer))
+      loadingTask.promise.then((pdf) ->
+        renderPage = (pageNum) ->
+          pdf.getPage(pageNum).then((page) ->
+            viewport = page.getViewport(scale: 1.5)
+            canvas = document.createElement('canvas')
+            canvas.className = 'attachment-preview-pdf-page'
+            canvas.width = viewport.width
+            canvas.height = viewport.height
+            container.append(canvas)
+            page.render(canvasContext: canvas.getContext('2d'), viewport: viewport).promise.then(->
+              renderPage(pageNum + 1) if pageNum < pdf.numPages
+            )
+          )
+        renderPage(1)
+      ).catch(onError)
+    ).catch(onError)
 
   showError: (body) ->
     body.text(App.i18n.translateInline('Preview could not be generated.'))
