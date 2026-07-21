@@ -116,5 +116,11 @@ run_if_present "zammad-triggers.json"        "configure-zammad-triggers.ts"
 run_if_present "zammad-schedulers.json"      "configure-zammad-schedulers.ts"
 run_if_present "zammad-webhooks.json"        "configure-zammad-webhooks.ts"
 
+# 5. Inbound email channel settings (active/group). Channel CREATION is a
+#    one-time bootstrap (scripts/bootstrap-inbound-email-channel.rb) — this
+#    only syncs mutable settings and skips (with a notice) if the channel
+#    doesn't exist yet.
+run_if_present "zammad-email-channels.json"  "configure-inbound-email.ts"
+
 echo ""
 echo "=== Config apply complete ($ENV) ==="
