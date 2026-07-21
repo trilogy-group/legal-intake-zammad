@@ -122,5 +122,9 @@ run_if_present "zammad-webhooks.json"        "configure-zammad-webhooks.ts"
 #    doesn't exist yet.
 run_if_present "zammad-email-channels.json"  "configure-inbound-email.ts"
 
+# 6. Postmaster filters (e.g. mark redline replies internal). Ordered after the
+#    email channel so the mailbox exists; idempotent create/update, never deletes.
+run_if_present "zammad-postmaster-filters.json" "configure-postmaster-filters.ts"
+
 echo ""
 echo "=== Config apply complete ($ENV) ==="

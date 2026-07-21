@@ -1,0 +1,20 @@
+{
+  "postmaster_filters": [
+    {
+      "name": "Redline reviewer replies are internal",
+      "active": true,
+      "match": {
+        "to": {
+          "operator": "contains",
+          "value": "redline-inbound-staging@legal-intake.awsapps.com"
+        }
+      },
+      "perform": {
+        "x-zammad-article-internal": {
+          "value": "true"
+        }
+      },
+      "note": "Redline packet replies arrive at the dedicated redline mailbox; mark them internal so the tracked-changes redline lands as an internal note (matches the old API-era behaviour)."
+    }
+  ]
+}
