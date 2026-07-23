@@ -1,0 +1,9 @@
+{
+  "email_channels": [
+    {
+      "user": "redline-inbound-staging@legal-intake.awsapps.com",
+      "active": true,
+      "group": "Users"
+    }
+  ]
+}
