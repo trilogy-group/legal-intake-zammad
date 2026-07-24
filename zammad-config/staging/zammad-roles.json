@@ -6,11 +6,64 @@
       "default_at_signup": false,
       "active": true,
       "note": "To configure your system.",
-      "permission_ids": [1, 61, 62, 63, 65, 66, 67],
-      "knowledge_base_permission_ids": [1],
+      "permission_ids": [
+        1,
+        61,
+        62,
+        63,
+        65,
+        66,
+        67
+      ],
+      "knowledge_base_permission_ids": [
+        1
+      ],
       "group_ids": {
-        "8": ["full"],
-        "11": ["full"]
+        "8": [
+          "full"
+        ],
+        "9": [
+          "full"
+        ],
+        "10": [
+          "full"
+        ],
+        "11": [
+          "full"
+        ],
+        "12": [
+          "full"
+        ],
+        "14": [
+          "full"
+        ],
+        "15": [
+          "full"
+        ],
+        "16": [
+          "full"
+        ],
+        "17": [
+          "full"
+        ],
+        "18": [
+          "full"
+        ],
+        "19": [
+          "full"
+        ],
+        "20": [
+          "full"
+        ],
+        "21": [
+          "full"
+        ],
+        "22": [
+          "full"
+        ],
+        "23": [
+          "full"
+        ]
       }
     },
     {
@@ -19,13 +72,62 @@
       "default_at_signup": false,
       "active": true,
       "note": "To work on Tickets.",
-      "permission_ids": [57, 59, 62, 65, 67],
-      "knowledge_base_permission_ids": [2],
+      "permission_ids": [
+        57,
+        59,
+        62,
+        65,
+        67
+      ],
+      "knowledge_base_permission_ids": [
+        2
+      ],
       "group_ids": {
-        "8": ["full"],
-        "9": ["read", "change", "overview"],
-        "10": ["read", "change", "overview"],
-        "11": ["full"]
+        "8": [
+          "full"
+        ],
+        "9": [
+          "full"
+        ],
+        "10": [
+          "full"
+        ],
+        "11": [
+          "full"
+        ],
+        "12": [
+          "full"
+        ],
+        "14": [
+          "full"
+        ],
+        "15": [
+          "full"
+        ],
+        "16": [
+          "full"
+        ],
+        "17": [
+          "full"
+        ],
+        "18": [
+          "full"
+        ],
+        "19": [
+          "full"
+        ],
+        "20": [
+          "full"
+        ],
+        "21": [
+          "full"
+        ],
+        "22": [
+          "full"
+        ],
+        "23": [
+          "full"
+        ]
       }
     },
     {
@@ -35,9 +137,25 @@
       "active": true,
       "note": "People who create Tickets ask for help.",
       "permission_ids": [
-        62, 66, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 81
+        62,
+        66,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        81
       ],
-      "knowledge_base_permission_ids": [3],
+      "knowledge_base_permission_ids": [
+        3
+      ],
       "group_ids": {}
     },
     {
@@ -46,13 +164,63 @@
       "default_at_signup": false,
       "active": true,
       "note": "Legal Intake migration: legal_admin users; cloned from Agent permissions and group access at creation time.",
-      "permission_ids": [57, 59, 62, 63, 65, 67],
-      "knowledge_base_permission_ids": [4],
+      "permission_ids": [
+        57,
+        59,
+        62,
+        63,
+        65,
+        67
+      ],
+      "knowledge_base_permission_ids": [
+        4
+      ],
       "group_ids": {
-        "8": ["full"],
-        "9": ["full"],
-        "10": ["full"],
-        "11": ["full"]
+        "8": [
+          "full"
+        ],
+        "9": [
+          "full"
+        ],
+        "10": [
+          "full"
+        ],
+        "11": [
+          "full"
+        ],
+        "12": [
+          "full"
+        ],
+        "14": [
+          "full"
+        ],
+        "15": [
+          "full"
+        ],
+        "16": [
+          "full"
+        ],
+        "17": [
+          "full"
+        ],
+        "18": [
+          "full"
+        ],
+        "19": [
+          "full"
+        ],
+        "20": [
+          "full"
+        ],
+        "21": [
+          "full"
+        ],
+        "22": [
+          "full"
+        ],
+        "23": [
+          "full"
+        ]
       }
     }
   ]
